@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Támasz és Ellenállás Magyarázat: Minden Kereskedés Alapja - Signal Pilot Blog</title>
+  <meta name="description" content="A támasz és ellenállás a technikai elemzés alapja. Hogyan azonosítsd a valódi szinteket - és hogyan kereskedj velük.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/hu/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+      <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=beginner foundations">Kezdő Alapok</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
+      <span class="article-category">Kezdő Alapok</span>
+      <h1 class="article-title">Támasz és Ellenállás Magyarázat: Minden Kereskedés Alapja</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span><span>Signal Pilot Csapat</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Támasz és ellenállás szintek vizualizációja"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Minden kereskedési stratégia, bármilyen összetett is, végül egyetlen kérdésre vezethető vissza: hol lépnek be valószínűleg a vevők, és hol jelennek meg valószínűleg az eladók?</p>
+      <p>Ezeket a helyeket támasznak és ellenállásnak hívják. Ha elsajátítod őket, megérted azt a csatateret, ahol minden kereskedés zajlik.</p>
+      <hr>
+      <h2>Az Alapkoncepció</h2>
+      <p><strong>Támasz</strong> olyan árszint, ahol a vételi nyomás várhatóan elég erős ahhoz, hogy megállítsa az esést. Az ár itt korábban pattant, ezért a kereskedők elvárják, hogy újra pattanjon.</p>
+      <p><strong>Ellenállás</strong> olyan árszint, ahol az eladási nyomás várhatóan elég erős ahhoz, hogy megállítsa az emelkedést. Az ár itt korábban megtorpant, ezért a kereskedők elvárják, hogy újra megtorpanjon.</p>
+      <p>Gondolj a támaszra mint padlóra - az ár lepattan róla. Az ellenállás plafon - az ár visszanyomódik tőle.</p>
+      <p>Kulcs felismerés: A támasz és ellenállás működik, mert a kereskedők hiszik, hogy működik. Önbeteljesítőek.</p>
+      <hr>
+      <h2>Hogyan Alakulnak ki a Szintek</h2>
+      <p><strong>Korábbi swing csúcsok és mélypontok.</strong> Ha az ár korábban $50-nál fordult, annak az $50-os szintnek memóriája van.</p>
+      <p><strong>Kerek számok.</strong> A $100, $50, $10 pszichológiai szintek támaszként és ellenállásként működnek.</p>
+      <p><strong>Konszolidációs zónák.</strong> Ahol az ár sok időt töltött oldalazva.</p>
+      <p><strong>Rések kitöltése.</strong> A rések gyakran "kitöltődnek" - az ár visszatér a rés bezárásához.</p>
+      <p><strong>Mozgóátlagok.</strong> Az 50 és 200 napos átlagok dinamikus támasz/ellenállásként működnek.</p>
+      <hr>
+      <h2>Zónák, Nem Vonalak</h2>
+      <p>Az új kereskedők kritikus hibát követnek el: azt hiszik, a támasz és ellenállás pontos árak. Nem azok. Zónák.</p>
+      <p>Gondolkodj területekben: "A $49,50-től $50,50-ig terjedő zóna támasz."</p>
+      <hr>
+      <h2>Szerepcsere</h2>
+      <p>Amikor a támasz törik, gyakran ellenállássá válik. Amikor az ellenállás törik, gyakran támasszá válik. Ez a "polaritás" elv a technikai elemzés egyik legmegbízhatóbb jelensége.</p>
+      <hr>
+      <h2>Tesztek és Erősség</h2>
+      <p>Nem minden szint egyenlő. A szinteket erősebbé tevő tényezők: többszörös érintés, magasabb időkeret, konfluencia, volumen és frissesség.</p>
+      <hr>
+      <h2>Támasz és Ellenállás Kereskedése</h2>
+      <p><strong>Pattanás kereskedés:</strong> Vásárlás a támasznál, eladás az ellenállásnál. Oldalazó piacokon működik.</p>
+      <p><strong>Kitörés kereskedés:</strong> Vásárlás amikor az ellenállás törik, eladás amikor a támasz törik. Trendpiacokon működik.</p>
+      <hr>
+      <h2>Lényeg</h2>
+      <p>A támasz és ellenállás a piac térképe. Megmondják, hol zajlanak a kulcscsaták. Zónákban gondolkodj, ne vonalakban. Tiszteld a szerepcserét. Keresd a konfluenciát.</p>
+      <hr>
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
+        <a href="../../volume-profile-basics/hu/" class="related-card"><span class="related-category">Indikátorok</span><h4>Volumen Profil Alapok</h4></a>
+        <a href="../../stop-loss-placement/hu/" class="related-card"><span class="related-category">Gyakorlati</span><h4>Stop Loss Elhelyezés</h4></a>
+        <a href="../../candlestick-basics/hu/" class="related-card"><span class="related-category">Kezdő</span><h4>Gyertyák Alapjai</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>A Janus Atlas automatikusan rajzol 50+ szinttípust: Volumen Profil POC/VAH/VAL, napi/heti/havi VWAP standard deviációs sávokkal, HTF pivotok, munkamenet határok, és konfluencia zónák. A valóban kereskedett volumenre alapozott szintek.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Intézményi szintek megtekintése →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/hu/">← Vissza a Blogra</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

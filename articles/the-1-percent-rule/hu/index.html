@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Az 1%-os Szabály: Miért Kockáztatnak Ilyen Keveset a Profi Kereskedők - Signal Pilot Blog</title>
+  <meta name="description" content="1%-ot kockáztatni kereskedésenként túlzottan óvatosnak hangzik. Itt van, miért ez valójában a legagresszívebb megközelítés, ami még működik.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/hu/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+      <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=risk">Kockázatkezelés</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
+      <span class="article-category">Kockázatkezelés</span>
+      <h1 class="article-title">Az 1%-os Szabály: Miért Kockáztatnak Ilyen Keveset a Profi Kereskedők</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 perc olvasás</span><span>Signal Pilot Csapat</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Az 1%-os szabály vizualizációja"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>"Soha ne kockáztasd a számlád 1%-ánál többet egyetlen kereskedésen."</p>
+      <p>Hallottad ezt a szabályt. Talán figyelmen kívül hagytad, mert lehetetlenül konzervatívnak tűnik. Egy $10.000-os számlánál az 1% csak $100. Hogyan kellene pénzt keresned $100 kockáztatásával?</p>
+      <p>Itt a lényeg: az 1%-os szabály nem a pénzkeresésről szól. Arról szól, hogy ne veszíts. És paradox módon ez az, ami valójában pénzt termel idővel.</p>
+      <hr>
+      <h2>A Tönkremenetel Matematikája</h2>
+      <p>Tegyük fel, hogy kereskedésenként 10%-ot kockáztatsz 1% helyett. Jobban érződik "igazi" kereskedésnek, igaz?</p>
+      <p>Most képzeld el, hogy veszteségsorozatod van. Nem szokatlan - még egy 60%-os nyerési arány is elég gyakran produkál 5+ egymást követő veszteséget.</p>
+      <p><strong>10% kockázatnál, 5 veszteség után:</strong></p>
+      <p>$10.000 → $9.000 → $8.100 → $7.290 → $6.561 → $5.905</p>
+      <p>A számlád 41%-át elvesztetted. Ahhoz, hogy visszajuss $10.000-ra, 69%-os nyereség kell.</p>
+      <p><strong>1% kockázatnál, 5 veszteség után:</strong></p>
+      <p>$10.000 → $9.900 → $9.801 → $9.703 → $9.606 → $9.510</p>
+      <p>A számlád 4,9%-át elvesztetted. Ahhoz, hogy visszajuss $10.000-ra, 5,2%-os nyereség kell.</p>
+      <p>Az egyik forgatókönyv visszaesés. A másik potenciális halálspirál.</p>
+      <hr>
+      <h2>Az Aszimmetria Problémája</h2>
+      <p>A veszteségek és nyereségek nem szimmetrikusak. Ez a legfontosabb koncepció a kockázatkezelésben.</p>
+      <ul>
+        <li>10%-ot veszítesz, 11,1% kell a helyreálláshoz</li>
+        <li>20%-ot veszítesz, 25% kell a helyreálláshoz</li>
+        <li>30%-ot veszítesz, 42,9% kell a helyreálláshoz</li>
+        <li>50%-ot veszítesz, 100% kell a helyreálláshoz</li>
+        <li>90%-ot veszítesz, 900% kell a helyreálláshoz</li>
+      </ul>
+      <p>Minél nagyobb a veszteség, exponenciálisan nehezebb a helyreállás. Ezért a tőkemegőrzés nem konzervatív - elengedhetetlen.</p>
+      <p>Az 1%-os szabály abban a zónában tart, ahol a helyreállás mindig elérhető.</p>
+      <hr>
+      <h2>"De Nem Tudok Pénzt Keresni 1%-nál"</h2>
+      <p>Ez az ellenvetés félreérti, hogyan működik a professzionális kereskedés.</p>
+      <p>Nem egyetlen kereskedésből keresel pénzt. A kumulált előnyből keresel pénzt több száz vagy ezer kereskedésen keresztül.</p>
+      <p>Tegyük fel, hogy van egy stratégiád, ami az idő 50%-ában nyer 2:1 kockázat-hozam aránnyal. A kereskedésenkénti várakozásod:</p>
+      <p>(0,5 x 2R) - (0,5 x 1R) = 0,5R kereskedésenként</p>
+      <p>1% kockázatnál ez 0,5% várható nyereség kereskedésenként. 100 kereskedésen ez 50% számlanövekedés - kamatos kamat nélkül számolva.</p>
+      <p>10% kockázatnál elméletileg ez kereskedésenként 5%. De nem fogsz túlélni 100 kereskedést. A variancia meg fog semmisíteni egy elkerülhetetlen drawdown során.</p>
+      <p>Az 1%-os szabály hagyja érvényesülni az előnyödet. Magasabb kockázat azt jelenti, hogy az előnyöd sosem kap esélyt.</p>
+      <hr>
+      <h2>A Professzionális Valóság</h2>
+      <p>A hedge fundok, prop cégek és profi kereskedők jellemzően 0,5-2%-ot kockáztatnak kereskedésenként. Sokan még kevesebbet használnak.</p>
+      <p>Miért? Mert értenek valamit, amit a lakossági kereskedők nem: a hosszú élet az előny.</p>
+      <p>A piacok minden nap kínálnak lehetőségeket. Az egyetlen módja, hogy mindet elszalaszd, az a számlád felrobbantása. Amíg van tőkéd, van lehetőséged. Az 1%-os szabály biztosítja, hogy mindig legyen tőkéd.</p>
+      <p>Nem egyetlen kereskedésről szól. Arról szól, hogy ott legyél a következő ezer kereskedéshez.</p>
+      <hr>
+      <h2>Az 1%-os Szabály Alkalmazása</h2>
+      <p>Itt a gyakorlati alkalmazás:</p>
+      <p><strong>1. lépés:</strong> Határozd meg a számla kockázatod. Egy $10.000-os számlánál 1%-on ez $100.</p>
+      <p><strong>2. lépés:</strong> Találd meg a kereskedési beállításod. Azonosítsd a belépést és a stop loss-t a piac struktúrája alapján - nem a számla matematikád alapján.</p>
+      <p><strong>3. lépés:</strong> Számold ki a részvényenkénti kockázatot. Ha $50-on veszel $48-as stoppal, a részvényenkénti kockázatod $2.</p>
+      <p><strong>4. lépés:</strong> Méretezz ennek megfelelően. $100 számla kockázat / $2 részvényenként = 50 részvény.</p>
+      <p>Ha a strukturális stop több kockázatot igényel, mint amit az 1% megenged, két választásod van: kisebben kereskedj, vagy hagyd ki teljesen a kereskedést. Soha nem mozdítod el a stopot, hogy beleférjen a kívánt méret.</p>
+      <hr>
+      <h2>Mikor Állíts</h2>
+      <p>Az 1%-os szabály maximum, nem cél. Fontold meg kevesebb kockáztatását, amikor:</p>
+      <ul>
+        <li><strong>Drawdown-ban vagy.</strong> Néhány kereskedő 0,5%-ra megy le 10%-os számlacsökkenés után.</li>
+        <li><strong>A volatilitás emelkedett.</strong> A stopok nagyobb valószínűséggel szakadnak át volatilis piacokon.</li>
+        <li><strong>Korrelált pozícióid vannak.</strong> Öt 1%-os pozíció tech részvényekben valójában egy 5%-os pozíció a techben.</li>
+        <li><strong>Bizonytalan vagy.</strong> Kevesebb meggyőződés = kisebb méret.</li>
+      </ul>
+      <p>Soha nincs ok 1-2%-nál többet kockáztatni. A "magas meggyőződés" nem változtatja meg a matematikát. Minden felrobbant számla magas meggyőződéssel rendelkezett lefelé menet.</p>
+      <hr>
+      <h2>Lényeg</h2>
+      <p>Az 1%-os szabály nem a félénkségről szól. Arról szól, hogy megértsd: a kereskedés először túlélési játék, a profit másodsorban jön.</p>
+      <p>Kockáztass keveset. Kereskedj gyakran. Hagyd, hogy az előnyöd kamatozzon. Így építenek a profik vagyont a kereskedésből.</p>
+      <p>Azok a kereskedők, akik figyelmen kívül hagyják ezt a tanácsot, azok finanszírozzák azok számláit, akik követik.</p>
+      <hr>
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
+        <a href="../../position-sizing-101/hu/" class="related-card"><span class="related-category">Kockázat</span><h4>Pozícióméretezés 101</h4></a>
+        <a href="../../when-to-cut-losses-early/hu/" class="related-card"><span class="related-category">Kockázat</span><h4>Mikor Vágjuk a Veszteségeket Korán</h4></a>
+        <a href="../../psychology-of-getting-stopped-out/hu/" class="related-card"><span class="related-category">Pszichológia</span><h4>A Kistoppolás Pszichológiája</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>A Harmonikus Oszcillátor csak akkor jelez, amikor négy momentum indikátor egyezik, megbízhatósági csillagokkal értékelve. A Pentarch ciklusfázis-azonosításával kombinálva az 1%-od olyan beállításokra megy, ahol több rendszer egy vonalban van - nem egyetlen indikátor zaj.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Lásd a konfluenciát működés közben →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/hu/">← Vissza a Blogra</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
