@@ -715,6 +715,30 @@ body {
   opacity: 0;
 }
 
+/* Show AI prompt as visible text for image generation */
+.hero-image .ai-prompt {
+  position: absolute;
+  inset: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  border-radius: calc(var(--radius) - 0.5rem);
+  background: rgba(5, 7, 13, 0.6);
+  margin: 0;
+  overflow: auto;
+}
+
+/* Hide prompt when real image exists */
+.hero-image img:not([src="hero.png"]) ~ .ai-prompt {
+  display: none;
+}
+
 .article-header {
   padding: clamp(2rem, 6vw, 3rem) 0 2rem;
   text-align: center;
