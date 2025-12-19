@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kereskedési Napló: A Rendszered Mögötti Rendszer - Signal Pilot Blog</title>
+  <meta name="description" content="Minden professzionális kereskedő naplót vezet. A legtöbb lakossági kereskedő nem. Íme, mit kell nyomon követni, hogyan kell nyomon követni, és miért alakítja át a kereskedésedet.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltása">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld ki ingyen</a>
+          <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Navigáció">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=systems">Kereskedési Rendszerek</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Kereskedési Rendszerek</span>
+          <h1 class="article-title">Kereskedési Napló: A Rendszered Mögötti Rendszer</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Kereskedési napló vizualizáció">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Van egy kereskedési rendszered. Szabályok a belépésre, kilépésre és pozícióméretezésre. De honnan tudod, hogy valóban működik-e? Hogyan fejleszted?</p>
+          <p>A válasz ugyanaz az eszköz, amit minden professzionális kereskedő használ: a kereskedési napló. Nem érzések naplója - egy szisztematikus nyilvántartás, ami adattá alakítja a kereskedésedet.</p>
+          <p>Íme, hogyan építs olyat, ami valóban számít.</p>
+
+          <hr>
+
+          <h2>Miért Buknak el a Legtöbb Naplók</h2>
+          <p>A legtöbb kereskedő, aki naplózással próbálkozik, egy hónapon belül abbahagyja. Miért?</p>
+          <p><strong>Túl sok súrlódás:</strong> Bekezdések írása minden kötés után nem fenntartható. Ha 10 percbe telik egy kötés naplózása, abbahagyod a naplózást.</p>
+          <p><strong>Rossz információ:</strong> Annak rögzítése, hogyan "éreztél" egy kötéssel kapcsolatban, nem mond semmi gyakorlatiast. Adatokra van szükséged, nem terápiára.</p>
+          <p><strong>Nincs felülvizsgálati folyamat:</strong> A napló, amit soha nem elemzel, csak elfoglaltság. Az érték az áttekintés során felfedezett mintákból jön.</p>
+          <p>A megoldás: tervezz naplót minimális bemenetre és maximális betekintésre.</p>
+
+          <hr>
+
+          <h2>Mit Kövess Nyomon: Az Alapok</h2>
+          <p>Minden kötésnek szüksége van ezekre az adatpontokra. Kivétel nélkül.</p>
+          <p><strong>Kötés alapok:</strong></p>
+          <ul>
+            <li>Belépés dátuma és időpontja</li>
+            <li>Szimbólum/instrumentum</li>
+            <li>Irány (long/short)</li>
+            <li>Belépési ár</li>
+            <li>Stop loss ár</li>
+            <li>Cél ár(ak)</li>
+            <li>Pozícióméret</li>
+          </ul>
+          <p><strong>Kötés kimenetel:</strong></p>
+          <ul>
+            <li>Kilépési ár</li>
+            <li>Kilépés dátuma/időpontja</li>
+            <li>N/V dollárban</li>
+            <li>N/V R-ben (kockázat többszörösei)</li>
+            <li>Kilépési ok (cél elérve, stop ki, manuális kilépés, idő stop)</li>
+          </ul>
+          <p><strong>Felállás osztályozás:</strong></p>
+          <ul>
+            <li>Felállás típusa (kitörés, visszahúzás, fordulat, stb.)</li>
+            <li>Időkeret</li>
+            <li>Piaci feltételek (trendel, oldalaz, volatilis)</li>
+          </ul>
+          <p>Ez az alapvető adatod. 60 másodpercet vesz igénybe a naplózás, ha táblázatot vagy dedikált eszközt használsz.</p>
+
+          <hr>
+
+          <h2>Mit Kövess Nyomon: Az Előny Felfedezők</h2>
+          <p>Az alapokon túl kövesd nyomon azokat a tényezőket, amelyek előnyt tárhatnak fel. Nem fogod tudni, melyik számít, amíg nincsenek adataid.</p>
+          <p><strong>Kontextus tényezők:</strong></p>
+          <ul>
+            <li>A hét napja</li>
+            <li>Napszak (piaci időszak)</li>
+            <li>Napok az utolsó kötés óta</li>
+            <li>Aktuális lehívási szint</li>
+            <li>Egymást követő nyerések/veszteségek e kötés előtt</li>
+          </ul>
+          <p><strong>Technikai tényezők:</strong></p>
+          <ul>
+            <li>Magasabb időkeret trend iránya</li>
+            <li>Távolság kulcs szintektől</li>
+            <li>Volumen az átlaghoz képest</li>
+            <li>Konfluens jelek száma</li>
+          </ul>
+          <p><strong>Végrehajtási tényezők:</strong></p>
+          <ul>
+            <li>Csúszás belépéskor</li>
+            <li>Pontosan követted a szabályaidat? (Igen/Nem)</li>
+            <li>Módosítottad a méretet? (Fel/Le/Normál)</li>
+            <li>Képernyőkép mentve? (Igen/Nem)</li>
+          </ul>
+          <p>Ezek közül sok bináris vagy legördülő választás - gyors naplózni, erős elemezni.</p>
+
+          <hr>
+
+          <h2>A Képernyőkép Rendszer</h2>
+          <p>A számok elmondják a történet egy részét. A grafikonok elmondják a többit.</p>
+          <p>Minden kötésnél ments két képernyőképet:</p>
+          <ol>
+            <li><strong>Belépési képernyőkép:</strong> Grafikon a belépés pillanatában, a felállással és megjelölt belépés/stop/céllal</li>
+            <li><strong>Kilépési képernyőkép:</strong> Grafikon kilépéskor, megmutatva, hogyan fejlődött a kötés</li>
+          </ol>
+          <p>Nevezd el őket következetesen: <strong>ÉÉÉÉHHNN_SZIMBÓLUM_Irány_Eredmény.png</strong></p>
+          <p>Példa: 20241215_AAPL_Long_Nyert.png</p>
+          <p>Áttekintés során ezek a képernyőképek olyan mintákat tárnak fel, amiket a számok nem tudnak megragadni: "A kitörési kötéseim kudarcot vallanak, amikor a volumen csökken a kitörési gyertyán" - ezt soha nem vennéd észre puszta statisztikákból.</p>
+
+          <hr>
+
+          <h2>Heti Áttekintési Folyamat</h2>
+          <p>A napló adatokat hoz létre. Az áttekintés értéket nyer ki.</p>
+          <p><strong>Minden héten elemezd:</strong></p>
+          <p><strong>Teljesítmény mutatók:</strong></p>
+          <ul>
+            <li>Összes N/V</li>
+            <li>Nyerési arány</li>
+            <li>Átlagos nyerő vs átlagos vesztes</li>
+            <li>Legnagyobb nyerő és vesztes</li>
+            <li>Várható érték kötésenként</li>
+          </ul>
+          <p><strong>Mintaelemzés:</strong></p>
+          <ul>
+            <li>Melyik felállás típusok teljesítettek legjobban/legrosszabbul?</li>
+            <li>Melyik napok/időpontok hozták a legjobb eredményeket?</li>
+            <li>Hogyan teljesítettek a kötések különböző piaci feltételek mellett?</li>
+            <li>A szabálykövető kötések felülteljesítették a szabályszegő kötéseket?</li>
+          </ul>
+          <p><strong>Végrehajtás áttekintés:</strong></p>
+          <ul>
+            <li>Hány kötés követte pontosan a szabályokat?</li>
+            <li>Mi okozta a szabályszegéseket?</li>
+            <li>Van-e minta a vesztes kötésekben?</li>
+          </ul>
+          <p>A heti áttekintés 30-60 percet vesz igénybe. Itt történik valójában a kereskedési fejlődés.</p>
+
+          <hr>
+
+          <h2>Havi Mélymerülés</h2>
+          <p>Havonta egyszer menj mélyebbre.</p>
+          <p><strong>Statisztikai szignifikancia:</strong></p>
+          <ul>
+            <li>Elég kötésed van következtetések levonásához? (Minimum 30 bármely alcsoporthoz)</li>
+            <li>Konzisztensek-e a minták különböző piaci feltételek között?</li>
+          </ul>
+          <p><strong>Rendszer módosítások:</strong></p>
+          <ul>
+            <li>Ki kell-e törölni valamelyik felállás típust?</li>
+            <li>Változtatni kell-e a pozícióméretezési szabályokon?</li>
+            <li>Vannak-e kerülendő időpontok/feltételek?</li>
+          </ul>
+          <p><strong>Előny evolúció:</strong></p>
+          <ul>
+            <li>Nő, stabil vagy csökken az előnyöd?</li>
+            <li>Mi változott a piacon?</li>
+            <li>Mi változott a végrehajtásodban?</li>
+          </ul>
+          <p>Dokumentáld a megállapításokat. Hozz létre teendő listát. Egyesével valósítsd meg a változtatásokat.</p>
+
+          <hr>
+
+          <h2>A Minimálisan Működőképes Napló</h2>
+          <p>Az egyszerű kezdés jobb, mint nem kezdeni. Íme a minimum:</p>
+          <p><strong>Táblázat oszlopokkal:</strong></p>
+          <ol>
+            <li>Dátum</li>
+            <li>Szimbólum</li>
+            <li>Irány</li>
+            <li>Belépés</li>
+            <li>Kilépés</li>
+            <li>N/V</li>
+            <li>Felállás Típus</li>
+            <li>Szabályok Követve (I/N)</li>
+            <li>Megjegyzések (max egy sor)</li>
+          </ol>
+          <p>Ennyi. Kilenc oszlop. Kötésenként 30 másodpercet vesz igénybe.</p>
+          <p>Ha ez a szokás kialakult, adj hozzá több mezőt. De a következetesség veri a teljességet. Egy egyszerű napló, amit tényleg használsz, veri az összetett naplót, amit elhagysz.</p>
+
+          <hr>
+
+          <h2>Összefoglalás</h2>
+          <p>A kereskedési rendszered egy hipotézis. A naplód a kísérlet. Adatok nélkül találgatod, hogy működik-e a megközelítésed.</p>
+          <p>A legjobb kereskedők ugyanolyan komolyan veszik a naplójukat, mint a kereskedési szabályaikat. Ez nem opcionális - így fedezik fel, tartják karban és fejlesztik az előnyöket.</p>
+          <p>Kezd egyszerűen. Légy következetes. Tekints át hetente. Engedd, hogy az adatok irányítsák a fejlődésedet.</p>
+          <p>Az automatizált eszközök felgyorsíthatják ezt a folyamatot. Amikor a platformod automatikusan követi a ciklus fázisokat, volumen rezsimeket és confluence pontszámokat, a naplód gazdagabb adatokat örököl extra naplózási munka nélkül. Ezután korrelálhatod az eredményeidet olyan piaci feltételekkel, amiket soha nem követnél nyomon manuálisan.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../../system-optimization/hu/" class="related-card">
+                <span class="related-category">Rendszerek</span>
+                <h4>Rendszer Optimalizálás</h4>
+              </a>
+              <a href="../../risk-reward-ratio/hu/" class="related-card">
+                <span class="related-category">Kockázat</span>
+                <h4>Kockázat-Hozam Arány</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../risk-reward-ratio/hu/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Előző</span>
+              <span class="article-nav-title">Kockázat-Hozam Arány</span>
+            </a>
+            <a href="../../system-optimization/hu/" class="article-nav-link next">
+              <span class="article-nav-label">Következő <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">Rendszer Optimalizálás</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Az Augury Grid automatikus kötés naplózást biztosít ciklus kontextussal, confluence pontszámokkal és piaci rezsim adatokkal. A naplód gazdagabb lesz extra munka nélkül - és elemezheted a teljesítményt olyan feltételek között, amiket soha nem követnél nyomon manuálisan.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Automatikus követés megtekintése →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Vissza a Bloghoz</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open')})}
+  </script>
+</body>
+</html>

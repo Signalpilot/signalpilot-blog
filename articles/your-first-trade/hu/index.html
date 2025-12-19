@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Az Első Kötésed: Teljes Útmutató - Signal Pilot Blog</title>
+  <meta name="description" content="Készen állsz az első kötésedre? Íme minden, amit előtte, közben és utána tenned kell - lépésről lépésre útmutató kezdőknek.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltása">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld ki ingyen</a>
+          <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Navigáció">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner">Kezdő Alapok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Kezdő Alapok</span>
+          <h1 class="article-title">Az Első Kötésed: Teljes Útmutató</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Első kötés vizualizáció">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Olvastál a kereskedésről. Tanulmányoztad a grafikonokat. Nyitottál egy számlát. Most szíved hevesen ver, miközben a vétel gombra bámulsz.</p>
+          <p>Az első kötésed mérföldkő. Győződjünk meg róla, hogy jól csinálod - nem kapkodva, nem meggondolatlanul, hanem módszeresen és kontrolláltan.</p>
+          <p>Íme pontosan mit kell tenned, lépésről lépésre.</p>
+
+          <hr>
+
+          <h2>Kereskedés Előtt: Az Előfeltételek</h2>
+          <p>Ne hagyd ki ezeket. Az első kötésednek ezután kell megtörténnie:</p>
+          <p><strong>1. Megfelelően finanszírozd a számládat</strong></p>
+          <p>Csak olyan pénzzel kereskedj, amit megengedhetsz magadnak elveszíteni. Komolyan. Ha ennek a pénznek az elvesztése pénzügyi stresszt okozna, állj meg itt. A kereskedési tőkének valódi kockázati tőkének kell lennie.</p>
+          <p>Kezdj kicsiben. Még a tapasztalt kereskedők is minimális mérettel tesztelik az új megközelítéseket. Kezdőként az első kötéseid tandíjak - fizetsz a tanulásért.</p>
+          <p><strong>2. Előbb gyakorolj papíron</strong></p>
+          <p>A legtöbb bróker kínál papír kereskedést (szimulált kereskedés álpénzzel). Használd. Hajts végre legalább 20-30 papír kötést, amíg a mechanikák természetesnek nem érzik.</p>
+          <p>Azt akarod, hogy az első valódi kötésed a kötésről szóljon, nem a platformmal való bíbelődésről.</p>
+          <p><strong>3. Értsd meg a megbízás típusokat</strong></p>
+          <p>Ismerd a különbséget a piaci megbízások, limit megbízások és stop megbízások között. Tudd, mikor használd mindegyiket. Ez nem opcionális - így kontrollálod a kockázatodat.</p>
+          <p><strong>4. Határozd meg a kockázati szabályaidat</strong></p>
+          <p>Bármilyen kötésbe való belépés előtt tudnod kell: Mennyit veszítek, ha tévedek? Kezdőknek maximum a számla 0,5-1%-át kockáztasd kötésenként.</p>
+
+          <hr>
+
+          <h2>1. Lépés: Találj Egy Felállást</h2>
+          <p>Az első kötésednek oka kell legyen. Nem "Szerintem fel fog menni" - valódi felállás, ami valami azonosíthatóra és ismételhető dologra alapul.</p>
+          <p><strong>Egyszerű felállások kezdőknek:</strong></p>
+          <ul>
+            <li><strong>Kitörés ellenállás felett:</strong> Az ár áttör egy szintet, amit korábban nem tudott átlépni</li>
+            <li><strong>Visszapattanás támaszról:</strong> Az ár megérint egy szintet és visszapattan, megmutatva, hogy a vevők védik azt az árat</li>
+            <li><strong>Mozgóátlag visszapattanás:</strong> Az ár visszahúzódik egy emelkedő mozgóátlaghoz és megtartja</li>
+          </ul>
+          <p>Válassz egy felállás típust. Tanuld meg. Az első kötésednek ezt a felállást kell használnia.</p>
+          <p><strong>Írd le, miért veszed fel ezt a kötést.</strong> "Az ár áttörte az 50$-os ellenállás szintet, ami két hétig tartott, átlag feletti volumennel." Ez a tézised.</p>
+
+          <hr>
+
+          <h2>2. Lépés: Határozd Meg a Stop Lossodat</h2>
+          <p>Mielőtt tudnád a belépésedet, tudnod kell a kilépés-ha-tévedek pontodat.</p>
+          <p><strong>A stop lossod oda kerül, ahol a tézised érvénytelenné válik.</strong></p>
+          <ul>
+            <li>Kitörés kötés: Stop a kitörési szint alá</li>
+            <li>Támasz visszapattanás: Stop a támasz szint alá</li>
+            <li>Mozgóátlag visszapattanás: Stop a mozgóátlag alá</li>
+          </ul>
+          <p>Példa: 50$ feletti kitörést veszel. A stopod 48,50$-ra kerül (a kitörési szint alá). Ha az ár visszaesik 48,50$ alá, a kitörés kudarcot vallott - kiszállsz.</p>
+          <p><strong>Soha ne lépj be kötésbe anélkül, hogy pontosan tudnád, hol szállsz ki, ha tévedsz.</strong></p>
+
+          <hr>
+
+          <h2>3. Lépés: Számold Ki a Pozíció Méretet</h2>
+          <p>Itt megy félre a legtöbb kezdő. A pozíció méret nem önkényes - a kockázatodból számolódik.</p>
+          <p><strong>A képlet:</strong></p>
+          <p>Pozíció Méret = (Számla × Kockázat %) ÷ (Belépés - Stop)</p>
+          <p><strong>Példa:</strong></p>
+          <ul>
+            <li>Számla: 10 000$</li>
+            <li>Kötésenkénti kockázat: 1% = 100$</li>
+            <li>Belépési ár: 50$</li>
+            <li>Stop loss: 48,50$</li>
+            <li>Részvényenkénti kockázat: 50$ - 48,50$ = 1,50$</li>
+            <li>Pozíció méret: 100$ ÷ 1,50$ = 66 részvény</li>
+          </ul>
+          <p>Ha veszel 66 részvényt 50$-on és kistoppolódsz 48,50$-on, 99$-t veszítesz - körülbelül a számlád 1%-át. A matek megvéd.</p>
+
+          <hr>
+
+          <h2>4. Lépés: Határozd Meg a Célodat</h2>
+          <p>Hol veszel fel profitot?</p>
+          <p>Az első kötéseidnél tartsd egyszerűen: célozz legalább 2:1 hozam-kockázatot. Ha részvényenként 1,50$-t kockáztatsz (belépéstől stopig), a célodnak legalább 3,00$ részvényenként kell lennie a belépés felett.</p>
+          <p>Példa: Belépés 50$-on, stop 48,50$-on, cél 53$-on (1,50$-t kockáztatsz 3$-ért).</p>
+          <p>Még jobb, ha a grafikon struktúrája alapján azonosítasz egy logikus célt - egy korábbi ellenállás szint, egy kerek szám vagy egy mért mozgás.</p>
+
+          <hr>
+
+          <h2>5. Lépés: Lépj Be a Kötésbe</h2>
+          <p>Megvan a felállásod, stopod, méreted és célod. Most hajts végre.</p>
+          <p><strong>Kezdőknek használj limit megbízást a belépéshez.</strong> Ez ár kontrollt ad és megelőzi a csúszást.</p>
+          <ol>
+            <li>Nyisd meg a bróker platformodat</li>
+            <li>Írd be a szimbólumot</li>
+            <li>Válaszd a "Vétel" és "Limit Megbízás" opciót</li>
+            <li>Add meg a limit áradat (a kívánt belépésedet)</li>
+            <li>Add meg a pozíció méretedet (a kiszámolt részvényeket)</li>
+            <li>Nézd át mindent beküldés előtt</li>
+            <li>Küldd be a megbízást</li>
+          </ol>
+          <p><strong>Közvetlenül a belépésed teljesülése után helyezd el a stop loss megbízásodat.</strong> Ez nem alku tárgya. A stopodnak aktívnak kell lennie abban a pillanatban, amikor a pozíciód nyitva van.</p>
+
+          <hr>
+
+          <h2>6. Lépés: Kezeld a Kötést</h2>
+          <p>Benne vagy. Most mi van?</p>
+          <p><strong>A kezdő kezelési terve:</strong></p>
+          <ol>
+            <li><strong>Ne bámulj minden tick-et.</strong> Állítsd be a stopodat és célodat. Hadd dolgozzanak. Minden mozgás figyelése érzelmi döntéseket hoz.</li>
+            <li><strong>Ne mozgasd a stopodat távolabbra.</strong> Ha a kötésnek "több helyet" kell adni, rosszul méretezted vagy a stopod rossz helyen volt. Fogadd el a veszteséget, ha jön.</li>
+            <li><strong>Ne adj hozzá veszteséges pozícióhoz.</strong> A leátlagolás az, ahogy a kezdők felrobbantják a számláikat. Ha a kötés rossz, hagyd, hogy kistoppolódjon.</li>
+            <li><strong>Fontold meg a részleges profit felvételt.</strong> Amikor az ár eléri az 1:1-et (annyit nyertél, amennyit kockáztattál), fontold meg a fele eladását és a stopod nullszaldóra mozgatását a maradékon. Ez bezárja a profitot, miközben hagyja futni a nyerőket.</li>
+          </ol>
+
+          <hr>
+
+          <h2>7. Lépés: Lépj Ki a Kötésből</h2>
+          <p>Minden kötés véget ér. Ezek egyike lesz:</p>
+          <p><strong>Kistoppolódtál (veszteség):</strong> Az ár elérte a stopodat. Annyit vesztettél, amennyit terveztél veszíteni. Ez siker - kontrollálted a kockázatot. Logold a kötést, tanulj amit tudsz, menj tovább.</p>
+          <p><strong>Cél elérve (nyereség):</strong> Az ár elérte a profit célodat. Annyit kerestél, amennyit terveztél keresni. Logold a kötést, jegyezd fel, mi működött, menj tovább.</p>
+          <p><strong>Manuális kilépés:</strong> Néha a feltételek változnak. A belépési okod már nem érvényes. Rendben van kilépni a stopod vagy célod előtt. Csak legyen okod.</p>
+
+          <hr>
+
+          <h2>8. Lépés: Logold és Tekintsd Át</h2>
+          <p>Minden kötés után rögzítsd:</p>
+          <ul>
+            <li>Dátum és szimbólum</li>
+            <li>Belépési és kilépési árak</li>
+            <li>N/V dollárban és százalékban</li>
+            <li>Milyen felállást használtál</li>
+            <li>Pontosan követted a tervedet?</li>
+            <li>Mit csinálnál másképp?</li>
+          </ul>
+          <p>Az első kötéseid tanulási tapasztalatok. A napló megragadja, amit tanulsz.</p>
+
+          <hr>
+
+          <h2>Gyakori Első Kötés Hibák</h2>
+          <p><strong>Túl nagy kötés:</strong> Az izgatottság túlméretezéshez vezet. Tartsd magad a pozícióméret számításodhoz, bármilyen magabiztosnak is érzed magad.</p>
+          <p><strong>Nincs stop loss:</strong> "Figyelem majd szorosan" nem kockázatkezelési terv. Mindig legyen aktív stop megbízásod.</p>
+          <p><strong>Stopok mozgatása:</strong> A kötés ellened megy, távolabbra mozgatod a stopodat remélve, hogy helyrejön. Így válnak a kis veszteségek számla gyilkos veszteségekké.</p>
+          <p><strong>Bosszú kereskedés:</strong> Az első kötésed veszteség volt. Azonnal beugrasz egy másik kötésbe, hogy "visszaszerezd". Állj meg. A vesztes kötések normálisak. A következő kötésnek meg kell felelnie minden kritériumodnak, nem az érzelmi helyreállítási igényednek.</p>
+          <p><strong>A terv elhagyása:</strong> Volt belépésed, stopod és célod. Aztán pánikba estél és korán eladtál, vagy áttartottál a stopodon, vagy túl hamar vetted fel a profitot. Bízz a folyamatban.</p>
+
+          <hr>
+
+          <h2>Összefoglalás</h2>
+          <p>Az első kötésed egy utazás kezdete. Csináld jól:</p>
+          <ol>
+            <li>Legyen felállásod világos okkal</li>
+            <li>Tudd a stop lossodat belépés előtt</li>
+            <li>Számolj megfelelő pozícióméretet</li>
+            <li>Határozd meg a profit célodat</li>
+            <li>Hajts végre fegyelmezetten</li>
+            <li>Kezelj érzelmek nélkül</li>
+            <li>Logolj és tanulj</li>
+          </ol>
+          <p>Hogy ez a kötés nyer vagy veszít, kevésbé számít, mint hogy követted-e a folyamatot. A profik nem az egyedi kötések alapján ítélik meg magukat - a folyamat végrehajtás alapján.</p>
+          <p>Kezdd el ezt a szokást most. Az első kötésed meghatározza a tónust minden következő kötéshez.</p>
+          <p>Ahogy haladsz, az eszközök segíthetnek rendszerezni ezt a folyamatot. A confluence pontozás megmutatja, mikor igazodnak össze a tényezők, növelve a bizalmat. A ciklus elemzés feltárja, hogy erőbe vagy gyengeségbe veszel-e. A kockázat kalkulátorok biztosítják, hogy a pozícióméretezés mindig helyes legyen. A folyamat automatikussá válik - és az előnyöd összetett módon növekszik.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../../order-types-explained/hu/" class="related-card">
+                <span class="related-category">Kezdő</span>
+                <h4>Megbízás Típusok</h4>
+              </a>
+              <a href="../../risk-reward-ratio/hu/" class="related-card">
+                <span class="related-category">Kockázat</span>
+                <h4>Kockázat-Hozam Arány</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../order-types-explained/hu/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Előző</span>
+              <span class="article-nav-title">Megbízás Típusok</span>
+            </a>
+            <a href="../../drawdown-management/hu/" class="article-nav-link next">
+              <span class="article-nav-label">Következő <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">Lehívás Kezelése</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>A Signal Pilot világos jeleket biztosít beépített confluence pontozással - így az első kötéseid professzionális szintű kontextussal rendelkeznek. Ismerd a ciklus fázist, volumen rezsimet és többidőtáv-hizálást minden belépés előtt. Kezdj struktúrával, ne találgatással.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Kezdj kontextussal →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Vissza a Bloghoz</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open')})}
+  </script>
+</body>
+</html>

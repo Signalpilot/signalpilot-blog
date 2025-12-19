@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megbízás Típusok: Piaci, Limit és Stop Megbízások - Signal Pilot Blog</title>
+  <meta name="description" content="Piaci megbízások, limit megbízások, stop megbízások - ezek a kereskedés alapvető eszközei. Íme, mit csinál mindegyik, mikor használd őket, és milyen hibákat követnek el a kezdők.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltása">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld ki ingyen</a>
+          <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Navigáció">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner">Kezdő Alapok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Kezdő Alapok</span>
+          <h1 class="article-title">Megbízás Típusok: Piaci, Limit és Stop Megbízások</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Megbízás típusok vizualizáció">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Találtál egy felállást. Tudod, mit akarsz venni. De hogyan veszed meg valójában?</p>
+          <p>A megbízás típusok azok az eszközök, amelyek az elemzésedet valódi pozíciókká alakítják. A rossz használata pénzbe kerül. A helyes használata kontrollt ad a belépéseid és kilépéseid felett.</p>
+          <p>Íme, amit minden kezdőnek tudnia kell.</p>
+
+          <hr>
+
+          <h2>Piaci Megbízások: Vegyél Most, Ár Később</h2>
+          <p>A piaci megbízás azt mondja: "Azonnal akarom ezt a pozíciót. Tölts ki az elérhető áron."</p>
+          <p><strong>Hogyan működik:</strong></p>
+          <ul>
+            <li>Beküldöd a megbízást</li>
+            <li>Azonnal teljesül a legjobb elérhető áron</li>
+            <li>Megkapod a pozíciódat, de nem feltétlenül azon az áron, amit láttál</li>
+          </ul>
+          <p><strong>Mikor használj piaci megbízást:</strong></p>
+          <ul>
+            <li>Azonnal ki kell lépned egy veszteséges pozícióból</li>
+            <li>A piac magas likviditású és a spreadek szűkek</li>
+            <li>A teljesülés fontosabb, mint a tökéletes ár</li>
+            <li>A volumenhez képest kis mérettel kereskedsz</li>
+          </ul>
+          <p><strong>A kockázat - csúszás:</strong></p>
+          <p>A csúszás a különbség az elvárt ár és a kapott ár között. Gyorsan mozgó vagy illikvid piacokon a csúszás jelentős lehet.</p>
+          <p>Példa: A részvényt 100,00$-on látod, beküldöd a piaci vételi megbízást. Mire teljesül, 100,15$-on töltődsz. Ez 0,15% csúszás - és halmozódik.</p>
+
+          <hr>
+
+          <h2>Limit Megbízások: Az Én Áram vagy Semmi</h2>
+          <p>A limit megbízás azt mondja: "Akarom ezt a pozíciót, de csak a megadott áramon vagy jobban."</p>
+          <p><strong>Hogyan működik:</strong></p>
+          <ul>
+            <li>Megadod a maximális árat, amit fizetni fogsz (vételeknél) vagy a minimumot, amit elfogadsz (eladásoknál)</li>
+            <li>A megbízás ül és vár, amíg az árad elérhető</li>
+            <li>Ha az ár soha nem éri el a limitedet, a megbízás soha nem teljesül</li>
+          </ul>
+          <p><strong>Vételi limit:</strong> Az aktuális ár alá állítod. "Veszek, ha 95$-ra esik."</p>
+          <p><strong>Eladási limit:</strong> Az aktuális ár fölé állítod. "Eladok, ha 105$-ra emelkedik."</p>
+          <p><strong>Mikor használj limit megbízást:</strong></p>
+          <ul>
+            <li>Specifikus belépési árat akarsz és tudsz várni rá</li>
+            <li>Profit célokat helyezel el</li>
+            <li>A piac volatilis vagy illikvid</li>
+            <li>"Ajánlatot" akarsz tenni visszahúzás belépéshez</li>
+          </ul>
+          <p><strong>A kockázat - nem teljesül:</strong></p>
+          <p>Az ár talán soha nem éri el a limitedet. A kívánt kötés nélküled történik meg, mert egy kicsit jobb árra vártál. A limitekkel való túl agresszív viselkedés jó kötések kihagyását jelenti.</p>
+
+          <hr>
+
+          <h2>Stop Megbízások: Aktiválás és Végrehajtás</h2>
+          <p>A stop megbízás azt mondja: "Amikor az ár eléri az aktiválási szintemet, alakítsd piaci megbízássá."</p>
+          <p><strong>Hogyan működik:</strong></p>
+          <ul>
+            <li>Beállítasz egy aktiválási árat (a "stop")</li>
+            <li>A megbízás inaktívan ül, amíg az ár el nem éri az aktiválót</li>
+            <li>Aktiváláskor piaci megbízássá válik és azonnal teljesül</li>
+          </ul>
+          <p><strong>Vételi stop:</strong> Az aktuális ár fölé állítod. "Ha áttöri a 105$-t, benne akarok lenni."</p>
+          <p><strong>Eladási stop:</strong> Az aktuális ár alá állítod. "Ha áttöri a 95$-t, vigyél ki."</p>
+          <p><strong>Mikor használj stop megbízást:</strong></p>
+          <ul>
+            <li>Stop loss - automatikusan kilép veszteséges pozíciókból</li>
+            <li>Kitörés belépések - belépés, amikor az ár áttör egy szintet</li>
+            <li>Profitok védelme - követő stopok, amelyek követik az árat felfelé</li>
+          </ul>
+          <p><strong>A kockázat - rések és csúszás:</strong></p>
+          <p>A stop megbízások piaci megbízásokká válnak aktiváláskor. Gyors mozgásokban vagy résekben a teljesülésed messze lehet a stop áradtól.</p>
+          <p>Példa: A stopod 95$-on van. A részvény éjszaka 90$-ra résel. A stopod aktiválódik és 90$-on teljesül, nem 95$-on. Részvényenként 5$-ral többet veszítettél a tervezettnél.</p>
+
+          <hr>
+
+          <h2>Stop-Limit Megbízások: Feltételes Aktiválás</h2>
+          <p>A stop-limit megbízás azt mondja: "Amikor az ár eléri az aktiválót, helyezz el egy limit megbízást a megadott áramon."</p>
+          <p><strong>Hogyan működik:</strong></p>
+          <ul>
+            <li>Beállítasz egy stop árat (aktiváló) és egy limit árat is</li>
+            <li>Amikor a stop aktiválódik, egy limit megbízás kerül elhelyezésre</li>
+            <li>A limit megbízás csak a limit áradon vagy jobban teljesül</li>
+          </ul>
+          <p><strong>Példa:</strong> Stop 95$-on, limit 94,50$-on. Amikor az ár eléri a 95$-t, egy 94,50$-os limit eladás kerül elhelyezésre. 94,50$-on vagy fölötte adsz el, de nem alatta.</p>
+          <p><strong>Mikor használj stop-limit megbízást:</strong></p>
+          <ul>
+            <li>Korlátozni akarod a legrosszabb eset csúszását</li>
+            <li>Gyakran réselő instrumentumokkal kereskedsz</li>
+            <li>Elfogadod, hogy potenciálisan nem teljesülsz</li>
+          </ul>
+          <p><strong>A kockázat - egyáltalán nem teljesül:</strong></p>
+          <p>Ha az ár a stopodon ÉS a limiteden túlra résel, nem teljesülsz. A stop-lossod nem állítja meg a veszteségedet.</p>
+          <p>Példa: Stop 95$-on, limit 94,50$-on. A részvény 93$-ra résel. A 94,50$-os limited soha nem teljesül, mert az ár már alatta van. Még mindig veszteséges pozícióban vagy.</p>
+
+          <hr>
+
+          <h2>Megbízás Időtartam: GTC vs Napi</h2>
+          <p>A megbízás típuson túl meg kell adnod, meddig marad aktív a megbízás.</p>
+          <p><strong>Napi megbízás:</strong> Ha nem teljesül, lejár piaczáráskor. Holnap újra be kell írnod.</p>
+          <p><strong>GTC (Good Till Cancelled - Törlésig Érvényes):</strong> Aktív marad teljesülésig vagy törlésig. Napokig, hetekig, hónapokig tarthat.</p>
+          <p><strong>Mikor használd mindegyiket:</strong></p>
+          <ul>
+            <li><strong>Napi megbízások:</strong> Belépéseknél, ahol a mai felállás talán nem lesz érvényes holnap</li>
+            <li><strong>GTC:</strong> Stop lossokhoz (mindig akarsz védelmet) és hosszabb távú limit megbízásokhoz</li>
+          </ul>
+          <p>Légy óvatos a GTC megbízásokkal - elfelejthetsz egy hetekkel ezelőtti limit megbízást, ami hirtelen teljesül megváltozott piaci feltételekben.</p>
+
+          <hr>
+
+          <h2>Gyakorlati Megbízás Kombinációk</h2>
+          <p><strong>Alap kötés felállás:</strong></p>
+          <ol>
+            <li>Limit megbízás a kívánt áron való belépéshez</li>
+            <li>Stop megbízás a stop losshoz (GTC)</li>
+            <li>Limit megbízás a profit célodhoz (GTC)</li>
+          </ol>
+          <p><strong>Kitörés kötés felállás:</strong></p>
+          <ol>
+            <li>Vételi stop az ellenállás felett a kitörésnél való belépéshez</li>
+            <li>Eladási stop a belépés alatt stop losshoz</li>
+            <li>Eladási limit a célnál profit felvételhez</li>
+          </ol>
+          <p><strong>Sok bróker kínál zárójelezett megbízásokat</strong>, amelyek egyszerre helyezik el a belépést, stop losst és profit célt. Amikor az egyik teljesül, a többi automatikusan aktiválódik vagy törlődik.</p>
+
+          <hr>
+
+          <h2>Gyakori Kezdő Hibák</h2>
+          <p><strong>Piaci megbízás illikvid piacokon:</strong> Széles spreadek és vékony megbízás könyvek hatalmas csúszást jelentenek. Mindig használj limitet alacsony volumenű instrumentumokon.</p>
+          <p><strong>Stop-limit a stop lossokon:</strong> A stop lossod a védelemedre van. Stop-limit használata a védelem kudarcát kockáztatja. Valódi stop lossokhoz a normál stop megbízások általában jobbak.</p>
+          <p><strong>GTC megbízások elfelejtése:</strong> Az a limit megbízás három héttel ezelőttről? Teljesülhet, amikor már elfelejtetted és a felállás már nem érvényes.</p>
+          <p><strong>Piaci megbízással üldözés:</strong> A részvény fut, azonnal benne akarsz lenni, becsapod a piaci megbízást. A csúcson teljesülsz, azonnal megfordul. A fegyelem azt jelenti, hogy limiteket használsz még izgatottan is.</p>
+
+          <hr>
+
+          <h2>Összefoglalás</h2>
+          <p>A megbízás típusok eszközök. A megfelelő eszköz attól függ, mit próbálsz elérni.</p>
+          <ul>
+            <li><strong>Teljesülési bizonyosság kell?</strong> Piaci megbízás</li>
+            <li><strong>Ár bizonyosság kell?</strong> Limit megbízás</li>
+            <li><strong>Automatikus aktiválók kellenek?</strong> Stop megbízás</li>
+            <li><strong>Aktiválás és ár kontroll is kell?</strong> Stop-limit (a kockázataival)</li>
+          </ul>
+          <p>Sajátítsd el ezeket az alapokat, mielőtt összetettebb megbízás típusokhoz nyúlnál. Minden professzionális kereskedő itt kezdte.</p>
+          <p>Ha megértetted a megbízás mechanikákat, arra összpontosíthatsz, ami számít: minőségi felállások azonosítása és a terved végrehajtása. A megfelelő megbízás típus egyszerűen az az eszköz, ami minimális súrlódással és maximális kontrollal hajtja végre a tervedet.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../../your-first-trade/hu/" class="related-card">
+                <span class="related-category">Kezdő</span>
+                <h4>Az Első Kötésed</h4>
+              </a>
+              <a href="../../risk-reward-ratio/hu/" class="related-card">
+                <span class="related-category">Kockázat</span>
+                <h4>Kockázat-Hozam Arány</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../system-optimization/hu/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Előző</span>
+              <span class="article-nav-title">Rendszer Optimalizálás</span>
+            </a>
+            <a href="../../your-first-trade/hu/" class="article-nav-link next">
+              <span class="article-nav-label">Következő <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">Az Első Kötésed</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>A Signal Pilot riasztási rendszere szól, amikor felállások aktiválódnak - te döntöd el, hogyan lépsz be a preferált megbízás típusod és kockázat tűrésed alapján. A jel azonosítja a lehetőséget; a megbízás végrehajtásod határozza meg, hogyan ragadod meg.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Jel riasztások megtekintése →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Vissza a Bloghoz</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open')})}
+  </script>
+</body>
+</html>
