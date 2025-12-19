@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Dagboek: Het Systeem Achter Je Systeem - Signal Pilot Blog</title>
+  <meta name="description" content="Elke professionele trader houdt een dagboek bij. De meeste particuliere traders niet. Hier lees je wat je moet bijhouden, hoe, en waarom het je trading transformeert.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="./">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educatie</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Vertalen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./" class="active"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema wisselen">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Gratis Proberen</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=systems">Trading Systemen</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Artikel</span>
+          </nav>
+          <span class="article-category">Trading Systemen</span>
+          <h1 class="article-title">Trading Dagboek: Het Systeem Achter Je Systeem</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min leestijd</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Delen:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Delen op Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Delen op LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link kopiëren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Trading dagboek visualisatie" data-ai-prompt="Dark themed visualization of an open trading journal or notebook with charts, statistics, and data entries floating above it. Holographic displays showing trade metrics and performance graphs. Pen or stylus nearby. Deep navy background with cyan and gold data elements glowing. Professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed visualization of an open trading journal or notebook with charts, statistics, and data entries floating above it. Holographic displays showing trade metrics and performance graphs. Pen or stylus nearby. Deep navy background with cyan and gold data elements glowing. Professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Je hebt een trading systeem. Regels voor entry, exit en positiegrootte. Maar hoe weet je of het daadwerkelijk werkt? Hoe verbeter je het?</p>
+          <p>Het antwoord is dezelfde tool die elke professionele trader gebruikt: een trading dagboek. Geen dagboek van gevoelens - een systematische registratie die je trading omzet in data.</p>
+          <p>Hier lees je hoe je er een bouwt die er echt toe doet.</p>
+
+          <hr>
+
+          <h2>Waarom De Meeste Dagboeken Falen</h2>
+          <p>De meeste traders die journaling proberen stoppen binnen een maand. Waarom?</p>
+          <p><strong>Te veel wrijving:</strong> Alinea's schrijven na elke trade is niet vol te houden. Als het 10 minuten kost om een trade te loggen, stop je met loggen.</p>
+          <p><strong>Verkeerde informatie:</strong> Vastleggen hoe je je "voelde" over een trade geeft je geen bruikbare informatie. Je hebt data nodig, geen therapie.</p>
+          <p><strong>Geen review proces:</strong> Een dagboek dat je nooit analyseert is gewoon bezigheidstherapie. De waarde komt van patronen ontdekt tijdens review.</p>
+          <p>De oplossing: ontwerp een dagboek voor minimale input en maximaal inzicht.</p>
+
+          <hr>
+
+          <h2>Wat Te Tracken: De Essentials</h2>
+          <p>Elke trade heeft deze datapunten nodig. Geen uitzonderingen.</p>
+          <p><strong>Trade basis:</strong></p>
+          <ul>
+            <li>Datum en tijd van entry</li>
+            <li>Symbool/instrument</li>
+            <li>Richting (long/short)</li>
+            <li>Entry prijs</li>
+            <li>Stop loss prijs</li>
+            <li>Target prijs(en)</li>
+            <li>Positiegrootte</li>
+          </ul>
+          <p><strong>Trade uitkomst:</strong></p>
+          <ul>
+            <li>Exit prijs</li>
+            <li>Exit datum/tijd</li>
+            <li>P&L in euro's</li>
+            <li>P&L in R (veelvouden van risico)</li>
+            <li>Exit reden (target bereikt, uitgestopt, handmatige exit, time stop)</li>
+          </ul>
+          <p><strong>Setup classificatie:</strong></p>
+          <ul>
+            <li>Setup type (breakout, pullback, reversal, etc.)</li>
+            <li>Timeframe</li>
+            <li>Marktomstandigheden (trending, ranging, volatiel)</li>
+          </ul>
+          <p>Dit is je kerndata. Kost 60 seconden om te loggen als je een spreadsheet of dedicated tool gebruikt.</p>
+
+          <hr>
+
+          <h2>Wat Te Tracken: De Edge Vinders</h2>
+          <p>Naast de basis, track factoren die edge kunnen onthullen. Je weet pas welke belangrijk zijn als je data hebt.</p>
+          <p><strong>Context factoren:</strong></p>
+          <ul>
+            <li>Dag van de week</li>
+            <li>Tijd van de dag (marktsessie)</li>
+            <li>Dagen sinds laatste trade</li>
+            <li>Huidige drawdown niveau</li>
+            <li>Opeenvolgende wins/losses vóór deze trade</li>
+          </ul>
+          <p><strong>Technische factoren:</strong></p>
+          <ul>
+            <li>Hogere timeframe trendrichting</li>
+            <li>Afstand tot belangrijke niveaus</li>
+            <li>Volume relatief tot gemiddelde</li>
+            <li>Aantal confluente signalen</li>
+          </ul>
+          <p><strong>Uitvoering factoren:</strong></p>
+          <ul>
+            <li>Slippage bij entry</li>
+            <li>Heb je je regels exact gevolgd? (Ja/Nee)</li>
+            <li>Heb je grootte aangepast? (Omhoog/Omlaag/Normaal)</li>
+            <li>Screenshot opgeslagen? (Ja/Nee)</li>
+          </ul>
+          <p>Veel hiervan zijn binaire of dropdown selecties - snel te loggen, krachtig om te analyseren.</p>
+
+          <hr>
+
+          <h2>Het Screenshot Systeem</h2>
+          <p>Cijfers vertellen een deel van het verhaal. Grafieken vertellen de rest.</p>
+          <p>Voor elke trade, bewaar twee screenshots:</p>
+          <ol>
+            <li><strong>Entry screenshot:</strong> Grafiek op het moment van entry, met je setup en gemarkeerde entry/stop/target</li>
+            <li><strong>Exit screenshot:</strong> Grafiek bij exit, met hoe de trade zich ontwikkelde</li>
+          </ol>
+          <p>Benoem ze consistent: <strong>JJJJMMDD_SYMBOOL_Richting_Resultaat.png</strong></p>
+          <p>Voorbeeld: 20241215_AAPL_Long_Win.png</p>
+          <p>Tijdens review onthullen deze screenshots patronen die cijfers niet kunnen vangen: "Mijn breakout trades falen wanneer volume daalt op de breakout bar" - dit zou je nooit opmerken uit pure statistieken.</p>
+
+          <hr>
+
+          <h2>Wekelijks Review Proces</h2>
+          <p>Het dagboek creëert data. Review haalt waarde eruit.</p>
+          <p><strong>Analyseer elke week:</strong></p>
+          <p><strong>Performance metrics:</strong></p>
+          <ul>
+            <li>Totale P&L</li>
+            <li>Win rate</li>
+            <li>Gemiddelde winnaar vs gemiddelde verliezer</li>
+            <li>Grootste winnaar en verliezer</li>
+            <li>Verwachting per trade</li>
+          </ul>
+          <p><strong>Patroon analyse:</strong></p>
+          <ul>
+            <li>Welke setup types presteerden best/slechtst?</li>
+            <li>Welke dagen/tijden produceerden beste resultaten?</li>
+            <li>Hoe presteerden trades in verschillende marktomstandigheden?</li>
+            <li>Presteerden regel-volgende trades beter dan regel-brekende trades?</li>
+          </ul>
+          <p><strong>Uitvoering review:</strong></p>
+          <ul>
+            <li>Hoeveel trades volgden regels exact?</li>
+            <li>Wat veroorzaakte regelbreuken?</li>
+            <li>Patronen in verliezende trades?</li>
+          </ul>
+          <p>Wekelijkse review kost 30-60 minuten. Dit is waar trading verbetering daadwerkelijk plaatsvindt.</p>
+
+          <hr>
+
+          <h2>Maandelijkse Deep Dive</h2>
+          <p>Een keer per maand, ga dieper.</p>
+          <p><strong>Statistische significantie:</strong></p>
+          <ul>
+            <li>Heb je genoeg trades om conclusies te trekken? (Minimum 30 voor elke subset)</li>
+            <li>Zijn patronen consistent over verschillende marktomstandigheden?</li>
+          </ul>
+          <p><strong>Systeem aanpassingen:</strong></p>
+          <ul>
+            <li>Moeten bepaalde setup types worden geëlimineerd?</li>
+            <li>Moeten positiegrootte regels veranderen?</li>
+            <li>Zijn er tijden/omstandigheden om te vermijden?</li>
+          </ul>
+          <p><strong>Edge evolutie:</strong></p>
+          <ul>
+            <li>Groeit, stabiliseert of daalt je edge?</li>
+            <li>Wat is er veranderd in de markt?</li>
+            <li>Wat is er veranderd in je uitvoering?</li>
+          </ul>
+          <p>Documenteer bevindingen. Maak actiepunten. Implementeer veranderingen één voor één.</p>
+
+          <hr>
+
+          <h2>Het Minimum Viable Dagboek</h2>
+          <p>Simpel beginnen is beter dan niet beginnen. Hier is het absolute minimum:</p>
+          <p><strong>Spreadsheet met kolommen:</strong></p>
+          <ol>
+            <li>Datum</li>
+            <li>Symbool</li>
+            <li>Richting</li>
+            <li>Entry</li>
+            <li>Exit</li>
+            <li>P&L</li>
+            <li>Setup Type</li>
+            <li>Regels Gevolgd (J/N)</li>
+            <li>Notities (max één regel)</li>
+          </ol>
+          <p>Dat is het. Negen kolommen. Kost 30 seconden per trade.</p>
+          <p>Zodra deze gewoonte gevestigd is, voeg meer velden toe. Maar consistentie verslaat volledigheid. Een simpel dagboek dat je daadwerkelijk gebruikt verslaat een complex dagboek dat je opgeeft.</p>
+
+          <hr>
+
+          <h2>De Conclusie</h2>
+          <p>Je trading systeem is een hypothese. Je dagboek is het experiment. Zonder data raad je of je aanpak werkt.</p>
+          <p>De beste traders behandelen hun dagboek net zo serieus als hun trading regels. Het is niet optioneel - het is hoe edges worden ontdekt, onderhouden en verbeterd.</p>
+          <p>Begin simpel. Wees consistent. Review wekelijks. Laat de data je evolutie leiden.</p>
+          <p>Geautomatiseerde tools kunnen dit proces versnellen. Wanneer je platform automatisch cyclusfasen, volumeregimes en confluence scores bijhoudt, erft je dagboek rijkere data zonder extra logwerk. Je kunt dan je resultaten correleren met marktomstandigheden die je nooit handmatig zou tracken.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Gerelateerde Artikelen</h3>
+            <div class="related-grid">
+              <a href="../building-your-first-system/" class="related-card">
+                <span class="related-category">Systemen</span>
+                <h4>Je Eerste Trading Systeem Bouwen</h4>
+              </a>
+              <a href="../backtesting-without-fooling-yourself/" class="related-card">
+                <span class="related-category">Systemen</span>
+                <h4>Backtesten Zonder Jezelf Te Bedriegen</h4>
+              </a>
+              <a href="../rules-based-vs-discretionary/" class="related-card">
+                <span class="related-category">Psychologie</span>
+                <h4>Regel-Gebaseerd vs Discretionair Traden</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../risk-reward-ratio/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Vorige
+              </span>
+              <span class="article-nav-title">Risk-Reward Ratio: De Cijfers Die Echt Tellen</span>
+            </a>
+            <a href="../system-optimization/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Volgende
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Systeem Optimalisatie: Wanneer Aanpassen Over-Fitting Wordt</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Augury Grid biedt automatische trade logging met cycluscontext, confluence scores en marktregime data. Je dagboek wordt rijker zonder extra werk - en je kunt performance analyseren over omstandigheden die je nooit handmatig zou tracken.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Bekijk automatisch tracking →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Terug naar Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatie Hub</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
