@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Döngüler İçinde Döngüler: Piyasaların Fraktal Doğası - Signal Pilot Blog</title>
+  <meta name="description" content="Piyasalar her zaman diliminde eş zamanlı olarak döngüler halinde hareket eder. Döngülerin birbirinin içine nasıl yerleştiğini anlamak, piyasa yapısını okumanın anahtarıdır.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Gezinti">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=cycles">Piyasa Döngüleri</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">Piyasa Döngüleri</span>
+          <h1 class="article-title">Döngüler İçinde Döngüler: Piyasaların Fraktal Doğası</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Paylaş:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitter'da paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedIn'de paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Bağlantıyı kopyala">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Döngüler içinde döngüler görselleştirmesi">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Herhangi bir grafiği yakınlaştırın ve aynı desenlerin tekrarlandığını göreceksiniz. Günlük yükseliş trendi, saatlik yükseliş ve düşüş trendlerinden oluşur. Bu saatlik hareketler 15 dakikalık salınımlardan oluşur. Ve böyle devam eder.</p>
+          <p>Piyasalar fraktaldır - her ölçekte kendine benzer. Döngülerin birbirinin içine nasıl yerleştiğini anlamak, fiyat hareketini okuma şeklinizi dönüştürür.</p>
+
+          <hr>
+
+          <h2>İç İçe Geçmiş Yapı</h2>
+          <p>Döngüleri okyanusdaki dalgalar gibi düşünün:</p>
+          <ul>
+            <li><strong>Kabarma:</strong> Büyük aylık/haftalık döngü - baskın yön</li>
+            <li><strong>Dalgalar:</strong> Kabarmaya binen günlük döngüler - orta vadeli salınımlar</li>
+            <li><strong>Dalgacıklar:</strong> Dalgalara binen gün içi döngüler - kısa vadeli dalgalanmalar</li>
+          </ul>
+          <p>Her seviye altındaki seviyeleri içerir. Haftalık yükseliş trendi, yukarı ve aşağı giden günlük döngüler içerir. Bu günlük döngüler saatlik döngüler içerir. Sonuna kadar döngülerdir.</p>
+          <p>Anahtar içgörü: Düşük zaman dilimi döngüleri, yüksek zaman dilimi döngülerinin yönünde daha kolay hareket eder. Haftalık yükseliş trendi sırasındaki günlük düşüş bir geri çekilmedir - sığ ve kısa olma eğilimindedir. Haftalık düşüş trendi sırasındaki günlük düşüş ana harekettir - derin ve uzun olma eğilimindedir.</p>
+
+          <hr>
+
+          <h2>Döngü Hizalaması</h2>
+          <p>Birden fazla seviyedeki döngüler hizalandığında, hareketler güçlü hale gelir:</p>
+          <p><strong>Boğa hizalaması:</strong> Haftalık, günlük ve saatlik döngülerin hepsi yükseliş aşamasındadır. Fiyat kolayca yükselir, geri çekilmeler küçüktür.</p>
+          <p><strong>Ayı hizalaması:</strong> Haftalık, günlük ve saatlik döngülerin hepsi düşüş aşamasındadır. Fiyat kolayca düşer, ralliler küçüktür.</p>
+          <p><strong>Çatışma:</strong> Yüksek ve düşük zaman dilimi döngüleri zıt yönleri işaret eder. Fiyat dalgalanır, sinyaller başarısız olur, kafa karışıklığı hüküm sürer.</p>
+          <p>En iyi işlemler hizalama sırasında gerçekleşir. En kötü işlemler çatışma sırasında gerçekleşir. Sadece bunu bilmek bile işlem seçimini önemli ölçüde geliştirir.</p>
+
+          <hr>
+
+          <h2>Hiyerarşiyi Okumak</h2>
+          <p>İç içe geçmiş döngüleri okumak için pratik bir çerçeve:</p>
+          <p><strong>Adım 1: Baskın döngüyü belirleyin.</strong> İşlem yaptığınız en büyük zaman dilimi döngüsü nedir? Swing trader'lar için belki haftalık. Günlük trader'lar için belki günlük. Bu yön eğiliminizi belirler.</p>
+          <p><strong>Adım 2: İşlem döngüsünü belirleyin.</strong> Baskın döngünüzün bir seviye altında. Kurulumları burada bulursunuz. Haftalıktan işlem yapan swing trader'lar için günlük işlem döngüsüdür.</p>
+          <p><strong>Adım 3: Tetik döngüsünü belirleyin.</strong> İşlem döngüsünün bir seviye altında. Girişleri burada zamanlarsınız. Swing trader için saatlik tetik olabilir.</p>
+          <p><strong>Uygulama:</strong> Sadece işlem döngüsü baskın döngü trendi içinde geri çekildiğinde işlem yapın. Tetik döngüsü baskın döngü yönüne döndüğünde girin.</p>
+
+          <hr>
+
+          <h2>Kesişimin Gücü</h2>
+          <p>Döngü dipleri zaman dilimleri arasında hizalandığında, güçlü bir şey olur.</p>
+          <p>Hayal edin: Haftalık döngü az önce bir dip yaptı (birikim tamamlandı). Günlük döngü eş zamanlı olarak bir dip yapıyor. 4 saatlik grafik ilk yukarı dönüşü gösteriyor.</p>
+          <p>Bu çoklu zaman dilimi döngü kesişimidir. Takip eden ralli genellikle:</p>
+          <ul>
+            <li>Tek zaman dilimi dönüşlerinden daha güçlü</li>
+            <li>Daha sürdürülebilir (birden fazla döngü seviyesi destekliyor)</li>
+            <li>Daha düşük risk (net geçersizleştirme noktaları)</li>
+          </ul>
+          <p>Bu kesişim noktaları her gün olmaz. Olduğunda, kararlılıkla işlem yapmaya değer.</p>
+
+          <hr>
+
+          <h2>Döngü Hakimiyeti</h2>
+          <p>Tüm döngüler eşit değildir. Yüksek zaman dilimi döngüleri düşük olanları domine eder:</p>
+          <p><strong>Aylık > Haftalık > Günlük > 4-Saat > Saatlik > 15-dk</strong></p>
+          <p>Bu hiyerarşi şu anlama gelir:</p>
+          <p>Haftalık yükselişte ve günlük düşüşteyse, günlük düşüşün sınırlı olmasını bekleyin. Haftalık yükseliş trendi sonunda kendini yeniden ortaya koyacaktır.</p>
+          <p>Haftalık düşüşte ve günlük yükselişteyse, günlük rallinin sınırlı olmasını bekleyin. Haftalık düşüş trendi sonunda kendini yeniden ortaya koyacaktır.</p>
+          <p>Daha yüksek zaman dilimi döngüsüne karşı savaşmak akıntıya karşı yüzmek gibidir. Kısa süreliğine ilerleme kaydedebilirsiniz, ama o yorulmadan önce siz yorulursunuz.</p>
+
+          <hr>
+
+          <h2>Aşama İçinde Aşama</h2>
+          <p>İşte işin ilginçleştiği yer. Her döngü aşaması kendi içinde alt aşamalar içerir:</p>
+          <p><strong>Haftalık yükseliş aşaması</strong> şunları içerebilir:</p>
+          <ul>
+            <li>Günlük birikim (haftalık yükselişin başlangıcı)</li>
+            <li>Günlük yükseliş (haftalık yükselişin ortası)</li>
+            <li>Günlük dağıtım (haftalık yükselişin sonu)</li>
+          </ul>
+          <p>Bu size önemli bir şey söyler: Bir yükseliş trendi içinde bile, alım zamanları (günlük birikim), tutma zamanları (günlük yükseliş) ve dikkatli olma zamanları (günlük dağıtım) vardır.</p>
+          <p>En iyi girişler, düşük zaman dilimi birikim/erken yükselişteyken ve yüksek zaman dilimi yükselişteyken gelir. Büyük döngü arkanızdayken küçük döngüde erken alıyorsunuz.</p>
+
+          <hr>
+
+          <h2>Pratik Uygulama</h2>
+          <p><strong>Giriş bulmak:</strong> Yüksek zaman dilimi trendlerinde geri çekilmeleri işlem yapın. Günlük trend yükselişte ve 4 saatlik döngü bir dibe geri çekildiğinde, bu giriş pencerenizdir.</p>
+          <p><strong>Stop belirleme:</strong> Stopları işlem zaman diliminizin önceki döngü dibine koyun. Bu, işleme döngü yapısı içinde çalışma alanı verir.</p>
+          <p><strong>Kar alma:</strong> İşlem zaman dilimi döngünüz olgunlaştıkça, kar almaya başlayın. Yüksek zaman diliminin dönmesini beklemek genellikle çok geçtir.</p>
+          <p><strong>Dalgalanmadan kaçınma:</strong> Yüksek ve düşük zaman dilimleri çatıştığında, aktiviteyi azaltın. Piyasa hangi yöne gideceğine karar veriyor. Hizalamayı bekleyin.</p>
+
+          <hr>
+
+          <h2>Uyarı İşaretleri</h2>
+          <p>Döngü ilişkilerinin değiştiğine dair bu işaretlere dikkat edin:</p>
+          <p><strong>Yüksek zaman dilimi dönüyor:</strong> Günlük boğa kurulumları işlem yaparken haftalık döngünüz devriliyorsa, artan başarısızlıklar bekleyin.</p>
+          <p><strong>Düşük zaman dilimleri başarısız:</strong> Her 4 saatlik döngü dibi kırılmaya devam ediyorsa, günlük döngü dönüyor olabilir. Düşük zaman dilimi başarısızlıkları genellikle yüksek zaman dilimi dönüşlerinden önce gelir.</p>
+          <p><strong>Döngü sıkışması:</strong> Döngüler birden fazla zaman diliminde daha kısa ve daha volatil hale geldiğinde, muhtemelen önemli bir hareket oluşuyor.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>Piyasalar fraktaldır. Aynı döngü desenleri her zaman diliminde tekrarlanır, büyük döngüler küçükleri içerir.</p>
+          <p>Yüksek zaman dilimi döngüsü yönünde işlem yapın. Düşük zaman dilimi döngüleri yüksek zaman dilimi yönüyle hizalandığında giriş arayın. Zaman dilimleri arasındaki çatışmadan kaçının.</p>
+          <p>Birden fazla zaman dilimi döngüsü diplerde veya tepelerde hizalandığında, özel bir şeyiniz var - onu destekleyen birden fazla döngünün ağırlığıyla yüksek olasılıklı bir kurulum.</p>
+          <p>Kesişim puanlama sistemleri bu hizalamayı ölçer. Üç zaman diliminde döngü aşamasını manuel olarak kontrol etmek yerine, bir kesişim puanı size bir bakışta birden fazla sistemin uyuşup uyuşmadığını söyler. HTF rejim onayı, günlük veya haftalık yapının giriş zaman diliminizi destekleyip desteklemediğini gösterir. Çok dönemli VWAP bantları, farklı ufuklarda değerin nerede olduğunu ortaya koyar. İç içe geçme, manuel bir araya getirme gerektirmek yerine görünür hale gelir.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../multi-timeframe-confirmation/" class="related-card">
+                <span class="related-category">Göstergeler</span>
+                <h4>Çoklu Zaman Dilimi Onayı: Ne Zaman Kullanılır</h4>
+              </a>
+              <a href="../identifying-cycle-length/" class="related-card">
+                <span class="related-category">Döngüler</span>
+                <h4>Döngü Uzunluğunu Belirleme</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">Döngüler</span>
+                <h4>Gerçekten Tekrarlanan Tek Desen</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../the-boredom-trap/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Önceki
+              </span>
+              <span class="article-nav-title">Sıkılma Tuzağı: Neden Hiçbir Şey Yapmamak Genellikle Doğru İşlemdir</span>
+            </a>
+            <a href="../when-to-size-up/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Sonraki
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Ne Zaman Büyütmeli: Pozisyon Boyutunuzu Sorumlu Şekilde Ölçeklendirme</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch herhangi bir zaman diliminde döngü aşamasını tespit eder, döngülerin ne zaman hizalandığını ve ne zaman çatıştığını görmeyi kolaylaştırır - böylece yüksek olasılıklı kurulumlara odaklanabilirsiniz.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Döngü hizalamasını gör →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı dön"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+  </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイクルの中のサイクル：市場のフラクタル的性質 - Signal Pilot Blog</title>
+  <meta name="description" content="市場はすべてのタイムフレームで同時にサイクルで動いています。サイクルがどのように入れ子になっているかを理解することが、市場構造を読む鍵です。">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/" class="active">ブログ</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="翻訳">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/" class="active"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ切替">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料で試す</a>
+          <button class="mobile-menu-btn" aria-label="メニュー">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="パンくずリスト">
+            <a href="/">ブログ</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=cycles">マーケットサイクル</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">記事</span>
+          </nav>
+          <span class="article-category">マーケットサイクル</span>
+          <h1 class="article-title">サイクルの中のサイクル：市場のフラクタル的性質</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読めます</span>
+            <span>Signal Pilot チーム</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">共有：</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitterで共有">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedInで共有">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="リンクをコピー">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="サイクルの中のサイクルの視覚化">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>任意のチャートをズームインすると、同じパターンが繰り返されているのが見えます。日足の上昇トレンドは、時間足の上昇トレンドと下降トレンドで構成されています。それらの時間足の動きは、15分足のスイングで構成されています。そして、これが続きます。</p>
+          <p>市場はフラクタルです - あらゆるスケールで自己相似です。サイクルがどのように入れ子になっているかを理解することで、価格アクションの読み方が変わります。</p>
+
+          <hr>
+
+          <h2>入れ子構造</h2>
+          <p>サイクルを海の波のように想像してください：</p>
+          <ul>
+            <li><strong>うねり：</strong> 大きな月足/週足サイクル - 支配的な方向</li>
+            <li><strong>波：</strong> うねりに乗る日足サイクル - 中期的なスイング</li>
+            <li><strong>さざ波：</strong> 波に乗る日中サイクル - 短期的な変動</li>
+          </ul>
+          <p>各レベルは、その下のレベルを含んでいます。週足の上昇トレンドには、上下する日足サイクルが含まれています。それらの日足サイクルには時間足サイクルが含まれています。それはずっと下までサイクルです。</p>
+          <p>重要な洞察：下位タイムフレームのサイクルは、上位タイムフレームのサイクルの方向により簡単に動きます。週足上昇トレンド中の日足の下落は押し目です - 浅く短い傾向があります。週足下降トレンド中の日足の下落はメインの動きです - 深く長い傾向があります。</p>
+
+          <hr>
+
+          <h2>サイクルの整列</h2>
+          <p>複数のレベルでサイクルが整列すると、動きは強力になります：</p>
+          <p><strong>強気の整列：</strong> 週足、日足、時間足のサイクルがすべて上昇フェーズにあります。価格は簡単に上昇し、押し目は小さいです。</p>
+          <p><strong>弱気の整列：</strong> 週足、日足、時間足のサイクルがすべて下降フェーズにあります。価格は簡単に下落し、反発は小さいです。</p>
+          <p><strong>コンフリクト：</strong> 上位と下位のタイムフレームサイクルが反対方向を指しています。価格は荒れ、シグナルは失敗し、混乱が支配します。</p>
+          <p>最良のトレードは整列中に起こります。最悪のトレードはコンフリクト中に起こります。これだけを知っているだけで、トレード選択が劇的に改善します。</p>
+
+          <hr>
+
+          <h2>階層を読む</h2>
+          <p>入れ子になったサイクルを読むための実践的なフレームワークを紹介します：</p>
+          <p><strong>ステップ1：支配的なサイクルを特定する。</strong> トレードする最大のタイムフレームサイクルは何ですか？スイングトレーダーなら週足かもしれません。デイトレーダーなら日足かもしれません。これがあなたの方向バイアスを設定します。</p>
+          <p><strong>ステップ2：トレーディングサイクルを特定する。</strong> 支配的なサイクルの1レベル下です。ここでセットアップを見つけます。週足からトレードするスイングトレーダーにとって、日足がトレーディングサイクルです。</p>
+          <p><strong>ステップ3：トリガーサイクルを特定する。</strong> トレーディングサイクルの1レベル下です。ここでエントリーのタイミングを取ります。スイングトレーダーにとって、時間足がトリガーかもしれません。</p>
+          <p><strong>適用：</strong> トレーディングサイクルが支配的なサイクルトレンド内で押し目をつけた時のみトレードします。トリガーサイクルが支配的なサイクルの方向に転換した時にエントリーします。</p>
+
+          <hr>
+
+          <h2>コンフルエンスの力</h2>
+          <p>サイクルの底がタイムフレーム間で整列すると、何か強力なことが起こります。</p>
+          <p>想像してください：週足サイクルが底を打ったところです（アキュミュレーション完了）。日足サイクルが同時に底を打ちます。4時間足チャートが最初の上昇転換を示しています。</p>
+          <p>これがマルチタイムフレームサイクルコンフルエンスです。続くラリーは通常：</p>
+          <ul>
+            <li>単一タイムフレームの転換より強い</li>
+            <li>より持続的（複数のサイクルレベルがサポート）</li>
+            <li>リスクが低い（明確な無効化ポイント）</li>
+          </ul>
+          <p>これらのコンフルエンスポイントは毎日起こるわけではありません。起こった時は、確信を持ってトレードする価値があります。</p>
+
+          <hr>
+
+          <h2>サイクルの支配</h2>
+          <p>すべてのサイクルが等しいわけではありません。上位タイムフレームのサイクルが下位を支配します：</p>
+          <p><strong>月足 > 週足 > 日足 > 4時間足 > 時間足 > 15分足</strong></p>
+          <p>この階層が意味すること：</p>
+          <p>週足が上昇で日足が下降なら、日足の下落は限定的だと予想します。週足の上昇トレンドは最終的に再び優勢になります。</p>
+          <p>週足が下降で日足が上昇なら、日足のラリーは限定的だと予想します。週足の下降トレンドは最終的に再び優勢になります。</p>
+          <p>上位タイムフレームのサイクルに逆らうことは、流れに逆らって泳ぐようなものです。一時的に進めるかもしれませんが、あなたの方が先に疲れます。</p>
+
+          <hr>
+
+          <h2>フェーズの中のフェーズ</h2>
+          <p>ここが面白くなるところです。各サイクルフェーズ自体にサブフェーズが含まれています：</p>
+          <p><strong>週足マークアップフェーズ</strong>には以下が含まれる可能性があります：</p>
+          <ul>
+            <li>日足アキュミュレーション（週足マークアップ初期）</li>
+            <li>日足マークアップ（週足マークアップ中期）</li>
+            <li>日足ディストリビューション（週足マークアップ後期）</li>
+          </ul>
+          <p>これは重要なことを教えてくれます：上昇トレンドの中でも、買い時（日足アキュミュレーション）、保持時（日足マークアップ）、慎重になる時（日足ディストリビューション）があります。</p>
+          <p>最良のエントリーは、下位タイムフレームがアキュミュレーション/初期マークアップにあり、上位タイムフレームがマークアップにある時です。大きなサイクルをバックに、小さなサイクルの早期に買っています。</p>
+
+          <hr>
+
+          <h2>実践的な適用</h2>
+          <p><strong>エントリーを見つける：</strong> 上位タイムフレームトレンドでの押し目をトレードします。日足トレンドが上昇で、4時間足サイクルが底まで押したら、それがエントリーウィンドウです。</p>
+          <p><strong>ストップを設定する：</strong> トレーディングタイムフレームの前回のサイクル底にストップを置きます。これにより、サイクル構造内でトレードが機能する余地が生まれます。</p>
+          <p><strong>利益確定：</strong> トレーディングタイムフレームのサイクルが成熟するにつれて、利益確定を始めます。上位タイムフレームが転換するのを待つのは、しばしば遅すぎます。</p>
+          <p><strong>チョップを避ける：</strong> 上位と下位のタイムフレームがコンフリクトしている時は、活動を減らします。市場はどの方向に行くか決めています。整列を待ちます。</p>
+
+          <hr>
+
+          <h2>警告サイン</h2>
+          <p>サイクル関係が変化しているこれらのサインに注意してください：</p>
+          <p><strong>上位タイムフレームが転換中：</strong> 日足の強気セットアップをトレードしている間に週足サイクルが転換している場合、失敗が増えると予想します。</p>
+          <p><strong>下位タイムフレームが失敗：</strong> 4時間足サイクルの底が次々と割れ続ける場合、日足サイクルが転換している可能性があります。下位タイムフレームの失敗は、しばしば上位タイムフレームの転換に先行します。</p>
+          <p><strong>サイクル圧縮：</strong> 複数のタイムフレームでサイクルが短くなり、より激しくなると、重要な動きが形成されている可能性があります。</p>
+
+          <hr>
+
+          <h2>結論</h2>
+          <p>市場はフラクタルです。同じサイクルパターンがすべてのタイムフレームで繰り返され、大きなサイクルが小さなサイクルを含んでいます。</p>
+          <p>上位タイムフレームサイクルの方向でトレードします。下位タイムフレームサイクルが上位タイムフレームの方向と整列した時にエントリーを探します。タイムフレーム間のコンフリクトを避けます。</p>
+          <p>複数のタイムフレームサイクルが底や天井で整列した時、何か特別なものがあります - 複数のサイクルの重みがサポートする高確率のセットアップです。</p>
+          <p>コンフルエンススコアリングシステムはこの整列を定量化します。3つのタイムフレームでサイクルフェーズを手動でチェックする代わりに、コンフルエンススコアが一目で複数のシステムが一致しているかどうかを教えてくれます。HTFレジーム確認は、日足または週足の構造がエントリータイムフレームをサポートしているかどうかを示します。マルチ期間VWAPバンドは、異なるホライズンで価値がどこにあるかを明らかにします。入れ子構造は、手動で組み立てる必要なく、可視化されます。</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>関連記事</h3>
+            <div class="related-grid">
+              <a href="../multi-timeframe-confirmation/" class="related-card">
+                <span class="related-category">インジケーター</span>
+                <h4>マルチタイムフレーム確認：いつ使うか</h4>
+              </a>
+              <a href="../identifying-cycle-length/" class="related-card">
+                <span class="related-category">サイクル</span>
+                <h4>サイクル長の特定</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">サイクル</span>
+                <h4>本当に繰り返される唯一のパターン</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../the-boredom-trap/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                前の記事
+              </span>
+              <span class="article-nav-title">退屈の罠：何もしないことがしばしば正しいトレードである理由</span>
+            </a>
+            <a href="../when-to-size-up/" class="article-nav-link next">
+              <span class="article-nav-label">
+                次の記事
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">サイズアップのタイミング：責任あるポジションサイズのスケーリング</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarchは任意のタイムフレームでサイクルフェーズを検出し、サイクルがいつ整列し、いつコンフリクトしているかを簡単に確認できます - 高確率のセットアップに集中できます。</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">サイクル整列を見る →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育センター</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="トップに戻る"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+  </script>
+</body>
+</html>

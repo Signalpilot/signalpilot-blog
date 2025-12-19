@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciklusok a Ciklusokban: A Piacok Fraktál Természete - Signal Pilot Blog</title>
+  <meta name="description" content="A piacok minden időtávon egyszerre mozognak ciklusokban. Annak megértése, hogy a ciklusok hogyan ágyazódnak egymásba, a piaci struktúra olvasásának kulcsa.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Kezdőlap</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltás">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Navigáció">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=cycles">Piaci Ciklusok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Piaci Ciklusok</span>
+          <h1 class="article-title">Ciklusok a Ciklusokban: A Piacok Fraktál Természete</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Megosztás:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Megosztás Twitteren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Megosztás LinkedInen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link másolása">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Ciklusok a ciklusokban vizualizáció">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Nagyítson rá bármely grafikonra, és ugyanazokat a mintákat fogja látni ismétlődni. A napi emelkedő trend óránkénti emelkedő és csökkenő trendekből áll. Ezek az óránkénti mozgások 15 perces hullámokból állnak. És így tovább.</p>
+          <p>A piacok fraktálok - minden skálán önhasonlóak. Annak megértése, hogy a ciklusok hogyan ágyazódnak egymásba, átalakítja az árfolyam-mozgás olvasásának módját.</p>
+
+          <hr>
+
+          <h2>A Beágyazott Struktúra</h2>
+          <p>Képzelje el a ciklusokat úgy, mint hullámokat az óceánban:</p>
+          <ul>
+            <li><strong>Dagály:</strong> A nagy havi/heti ciklus - a domináns irány</li>
+            <li><strong>Hullámok:</strong> A dagályon lovagló napi ciklusok - középtávú kilengések</li>
+            <li><strong>Fodrozódások:</strong> A hullámokon lovagló napközbeni ciklusok - rövid távú ingadozások</li>
+          </ul>
+          <p>Minden szint tartalmazza az alatta lévő szinteket. Egy heti emelkedő trend fel-le mozgó napi ciklusokat tartalmaz. Ezek a napi ciklusok óránkénti ciklusokat tartalmaznak. Ciklusok végig lefelé.</p>
+          <p>A kulcsfontosságú felismerés: az alacsonyabb időtáv ciklusok könnyebben mozognak a magasabb időtáv ciklusok irányába. A napi csökkenés egy heti emelkedő trend alatt visszahúzás - sekély és rövid szokott lenni. A napi csökkenés egy heti csökkenő trend alatt a fő mozgás - mély és kiterjesztett szokott lenni.</p>
+
+          <hr>
+
+          <h2>Ciklus Összehangolás</h2>
+          <p>Amikor több szinten a ciklusok összehangolódnak, a mozgások erőteljessé válnak:</p>
+          <p><strong>Bika összehangolás:</strong> A heti, napi és óránkénti ciklusok mind az emelkedő fázisban vannak. Az ár könnyen emelkedik, a visszahúzások kisebb méretűek.</p>
+          <p><strong>Medve összehangolás:</strong> A heti, napi és óránkénti ciklusok mind a csökkenő fázisban vannak. Az ár könnyen esik, a rallyk kisebb méretűek.</p>
+          <p><strong>Konfliktus:</strong> A magasabb és alacsonyabb időtáv ciklusok ellentétes irányba mutatnak. Az ár szaggatott, a jelek kudarcot vallanak, zűrzavar uralkodik.</p>
+          <p>A legjobb kereskedések az összehangolás során történnek. A legrosszabb kereskedések a konfliktus során történnek. Ennek ismerete önmagában drámaian javítja a kereskedés kiválasztást.</p>
+
+          <hr>
+
+          <h2>A Hierarchia Olvasása</h2>
+          <p>Itt egy gyakorlati keretrendszer a beágyazott ciklusok olvasásához:</p>
+          <p><strong>1. lépés: Azonosítsa a domináns ciklust.</strong> Mi a legnagyobb időtávú ciklus, amivel kereskedik? Swing kereskedőknek talán heti. Day tradereknek talán napi. Ez határozza meg az iránybeli elfogultságát.</p>
+          <p><strong>2. lépés: Azonosítsa a kereskedési ciklust.</strong> Egy szinttel a domináns ciklusa alatt. Itt találja a felállásokat. A hetiről kereskedő swing kereskedők számára a napi a kereskedési ciklus.</p>
+          <p><strong>3. lépés: Azonosítsa a trigger ciklust.</strong> Egy szinttel a kereskedési ciklus alatt. Itt időzíti a belépéseket. A swing kereskedő számára az óránkénti lehet a trigger.</p>
+          <p><strong>Alkalmazás:</strong> Csak akkor kereskedjen, amikor a kereskedési ciklus visszahúzódik a domináns ciklus trendjén belül. Lépjen be, amikor a trigger ciklus a domináns ciklus irányába fordul.</p>
+
+          <hr>
+
+          <h2>Az Összefolyás Ereje</h2>
+          <p>Amikor a ciklus mélypontok összehangolódnak az időtávakon keresztül, valami erőteljes történik.</p>
+          <p>Képzelje el: a heti ciklus éppen mélypontot ért el (akkumuláció befejeződött). A napi ciklus egyidejűleg mélypontot ér el. A 4 órás grafikon az első felfelé fordulatot mutatja.</p>
+          <p>Ez a több időtávú ciklus összefolyás. Az ezt követő rally általában:</p>
+          <ul>
+            <li>Erősebb, mint az egyetlen időtávú fordulatok</li>
+            <li>Fenntarthatóbb (több ciklusszint támogatja)</li>
+            <li>Alacsonyabb kockázatú (egyértelmű érvénytelenítési pontok)</li>
+          </ul>
+          <p>Ezek az összefolyási pontok nem minden nap történnek meg. Amikor megtörténnek, megéri meggyőződéssel kereskedni velük.</p>
+
+          <hr>
+
+          <h2>Ciklus Dominancia</h2>
+          <p>Nem minden ciklus egyenlő. A magasabb időtáv ciklusok dominálják az alacsonyabbakat:</p>
+          <p><strong>Havi > Heti > Napi > 4-Órás > Óránkénti > 15-perc</strong></p>
+          <p>Ez a hierarchia azt jelenti:</p>
+          <p>Ha a heti emelkedik és a napi csökken, várja, hogy a napi csökkenés korlátozott legyen. A heti emelkedő trend végül újra érvényesülni fog.</p>
+          <p>Ha a heti csökken és a napi emelkedik, várja, hogy a napi rally korlátozott legyen. A heti csökkenő trend végül újra érvényesülni fog.</p>
+          <p>A magasabb időtáv ciklussal szembeni küzdelem olyan, mint az árral szemben úszni. Lehet, hogy rövid időre halad, de hamarabb elfárad, mint az.</p>
+
+          <hr>
+
+          <h2>Fázis a Fázisban</h2>
+          <p>Itt válik érdekessé. Minden ciklusfázis maga is alfázisokat tartalmaz:</p>
+          <p><strong>A heti markup fázis</strong> tartalmazhat:</p>
+          <ul>
+            <li>Napi akkumuláció (a heti markup eleje)</li>
+            <li>Napi markup (a heti markup közepe)</li>
+            <li>Napi disztribúció (a heti markup vége)</li>
+          </ul>
+          <p>Ez valami fontosat mond: még egy emelkedő trenden belül is vannak vásárlási idők (napi akkumuláció), tartási idők (napi markup) és óvatos idők (napi disztribúció).</p>
+          <p>A legjobb belépések akkor jönnek, amikor egy alacsonyabb időtáv akkumulációban/korai markupban van, miközben a magasabb időtáv markupban van. Korán vásárol a kis ciklusban, miközben a nagy ciklus a háta mögött van.</p>
+
+          <hr>
+
+          <h2>Gyakorlati Alkalmazás</h2>
+          <p><strong>Belépések keresése:</strong> Kereskedjen visszahúzásokat a magasabb időtáv trendekben. Amikor a napi trend emelkedik és a 4 órás ciklus visszahúzódik egy mélypontra, ez a belépési ablaka.</p>
+          <p><strong>Stopok beállítása:</strong> Helyezze a stopokat a kereskedési időtávjának előző ciklusmélypontjára. Ez teret ad a kereskedésnek, hogy a ciklusstruktúrán belül működjön.</p>
+          <p><strong>Profit realizálás:</strong> Ahogy a kereskedési időtáv ciklusa érik, kezdjen profitot realizálni. A magasabb időtáv fordulására várni gyakran túl késő.</p>
+          <p><strong>Szaggatottság elkerülése:</strong> Amikor a magasabb és alacsonyabb időtávak konfliktusban vannak, csökkentse az aktivitást. A piac eldönti, melyik irányba menjen. Várjon az összehangolásra.</p>
+
+          <hr>
+
+          <h2>Figyelmeztető Jelek</h2>
+          <p>Figyeljen ezekre a jelekre, hogy a cikluskapcsolatok változnak:</p>
+          <p><strong>Magasabb időtáv fordul:</strong> Ha a heti ciklusa átfordul, miközben napi bika felállásokat kereskedik, növekvő kudarcokra számítson.</p>
+          <p><strong>Alacsonyabb időtávak kudarcot vallanak:</strong> Ha minden 4 órás ciklusmélypont tovább törik, a napi ciklus lehet, hogy fordul. Az alacsonyabb időtáv kudarcok gyakran megelőzik a magasabb időtáv fordulatokat.</p>
+          <p><strong>Ciklus kompresszió:</strong> Amikor a ciklusok rövidebbé és volatilisabbá válnak több időtávon keresztül, valószínűleg jelentős mozgás épül.</p>
+
+          <hr>
+
+          <h2>A Lényeg</h2>
+          <p>A piacok fraktálok. Ugyanazok a ciklusminták ismétlődnek minden időtávon, a nagyobb ciklusok a kisebbeket tartalmazzák.</p>
+          <p>Kereskedjen a magasabb időtáv ciklus irányába. Keressen belépéseket, amikor az alacsonyabb időtáv ciklusok összehangolódnak a magasabb időtáv irányával. Kerülje az időtávak közötti konfliktust.</p>
+          <p>Amikor több időtáv ciklus összehangolódik a mélypontokon vagy csúcsokon, valami különleges van a kezében - egy magas valószínűségű felállás, amelyet több ciklus súlya támogat.</p>
+          <p>Az összefolyás pontozási rendszerek számszerűsítik ezt az összehangolást. Ahelyett, hogy manuálisan ellenőrizné a ciklusfázist három időtávon, egy összefolyás pontszám egy pillantással megmondja, hogy több rendszer egyetért-e. A HTF rezsim megerősítés megmutatja, hogy a napi vagy heti struktúra támogatja-e a belépési időtávját. A több periódusú VWAP sávok felfedik, hol található az érték a különböző horizontokon. A beágyazottság láthatóvá válik, ahelyett, hogy manuális összerakást igényelne.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../multi-timeframe-confirmation/" class="related-card">
+                <span class="related-category">Indikátorok</span>
+                <h4>Több Időtávú Megerősítés: Mikor Használjuk</h4>
+              </a>
+              <a href="../identifying-cycle-length/" class="related-card">
+                <span class="related-category">Ciklusok</span>
+                <h4>Ciklushossz Azonosítása</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">Ciklusok</span>
+                <h4>Az Egyetlen Minta, Ami Tényleg Ismétlődik</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../the-boredom-trap/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Előző
+              </span>
+              <span class="article-nav-title">Az Unalom Csapdája: Miért a Semmittevés Gyakran a Helyes Kereskedés</span>
+            </a>
+            <a href="../when-to-size-up/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Következő
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Mikor Növeljük: Pozícióméret Felelős Skálázása</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>A Pentarch bármely időtávon érzékeli a ciklusfázist, megkönnyítve annak látását, mikor hangolódnak össze a ciklusok és mikor vannak konfliktusban - így a magas valószínűségű felállásokra összpontosíthat.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ciklus összehangolás megtekintése →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Vissza a Blogra</a><a href="https://signalpilot.io">Kezdőlap</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+  </script>
+</body>
+</html>
