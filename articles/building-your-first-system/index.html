@@ -357,16 +357,29 @@
         langDropdown.querySelector('.lang-name').textContent = name;
         
         // Trigger Google Translate
-        // Clear all existing googtrans cookies first
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
+        // Clear ALL googtrans cookies thoroughly
+        const domains = ['', location.hostname, '.' + location.hostname, '.blog.signalpilot.io', 'blog.signalpilot.io'];
+        domains.forEach(d => {
+          const domainStr = d ? '; domain=' + d : '';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/' + domainStr;
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;' + domainStr;
+        });
+        
+        // Also clear via setting empty
+        document.cookie = 'googtrans=';
         
         if (lang !== 'en') {
-          document.cookie = `googtrans=/en/${lang}; path=/`;
-          document.cookie = `googtrans=/en/${lang}; path=/; domain=.${location.hostname}`;
+          document.cookie = 'googtrans=/en/' + lang + '; path=/';
+          document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
         }
-        location.reload();
+        
+        // Force Google Translate to reset by removing its elements
+        const gtFrame = document.querySelector('.goog-te-banner-frame');
+        if (gtFrame) gtFrame.remove();
+        const gtMenu = document.querySelector('.goog-te-menu-frame');
+        if (gtMenu) gtMenu.remove();
+        
+        location.reload(true);
       });
     });
 
