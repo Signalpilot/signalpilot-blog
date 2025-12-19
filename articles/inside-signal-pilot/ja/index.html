@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signal Pilotの内部：7つのインジケーターがどう連携するか - Signal Pilot Blog</title>
+  <meta name="description" content="Signal Pilotの7つのインジケーターの完全解説：各ツールの機能、接続方法、そしてなぜ組み合わせが重要なのか。">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="./">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/ja/" class="active">ブログ</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="翻訳"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="./" class="active"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料体験</a>
+      <button class="mobile-menu-btn" aria-label="メニュー"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=product">製品</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
+      <span class="article-category">製品</span>
+      <h1 class="article-title">Signal Pilotの内部：7つのインジケーターがどう連携するか</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10分で読了</span><span>Signal Pilot チーム</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="7つの統合されたSignal Pilotインジケーター"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>ほとんどのインジケータースイートは関連のないツールのコレクションです。各インジケーターは独立して動作します。</p>
+      <p>Signal Pilotは違います。7つのインジケーターは統合システムとして設計されています。各ツールは特定の質問に答え、その回答が組み合わさって完全な市場像を形成します。</p>
+      <hr>
+      <h2>各インジケーターが答える質問</h2>
+      <ul>
+        <li><strong>Pentarch:</strong> 「市場サイクルのどこにいるか？」</li>
+        <li><strong>Volume Oracle:</strong> 「機関投資家は実際に何をしているか？」</li>
+        <li><strong>Janus Atlas:</strong> 「キーレベルはどこか？」</li>
+        <li><strong>OmniDeck:</strong> 「今どれくらいのコンフルエンスがあるか？」</li>
+        <li><strong>Augury Grid:</strong> 「どの銘柄が最良のセットアップを持っているか？」</li>
+        <li><strong>Harmonic Oscillator:</strong> 「モメンタムは何を示しているか？」</li>
+        <li><strong>Plutus Flow:</strong> 「お金はどこに流れているか？」</li>
+      </ul>
+      <p>重複なし。冗長性なし。7つの質問、7つの回答、1つの完全な像。</p>
+      <hr>
+      <h2>Pentarch：サイクルの基盤</h2>
+      <p>サイクルの5フェーズを識別：Touchdown (TD)、Ignition (IGN)、Climax (CAP)、Warning (WRN)、Breakdown (BDN)。</p>
+      <p>4レイヤーで同時にフェーズを検出。リペイントなし：シグナルはローソク足の終値で確定。</p>
+      <hr>
+      <h2>Volume Oracle：機関投資家の足跡</h2>
+      <p>市場レジームを分類：蓄積（緑）、分配（赤）、弱体化（金）。ボリューム分析を通じて機関投資家の行動を検出。</p>
+      <hr>
+      <h2>Janus Atlas：レベルアーキテクチャ</h2>
+      <p>主要価格レベルをマッピング：ピボット、フィボナッチ、POC・VAH・VAL付きボリュームプロファイル、複数VWAPを含む50以上のレベル。</p>
+      <hr>
+      <h2>OmniDeck：コンフルエンスエンジン</h2>
+      <p>10の異なる分析システムを1-10のコンフルエンススコアに統合。高いスコア = より多くのコンフルエンス。</p>
+      <hr>
+      <h2>Augury Grid：スキャナー</h2>
+      <p>最大40銘柄を同時スキャン、5フィルターシステムで各銘柄をスコアリング。</p>
+      <hr>
+      <h2>Harmonic Oscillator：モメンタムコンセンサス</h2>
+      <p>5つの異なるオシレーター（RSI、ストキャスティクス、CCI、ウィリアムズ%R、MFI）を投票システムで統合。</p>
+      <hr>
+      <h2>Plutus Flow：マネートレイル</h2>
+      <p>トレンドリボンと自動ダイバージェンス検出を備えた高度なOBV。</p>
+      <hr>
+      <h2>リペイントなし、妥協なし</h2>
+      <p>すべてのインジケーターはローソク足の終値でシグナルを確定。履歴で見えるものは、リアルタイムで表示されたものと全く同じ。遡及的な最適化なし。</p>
+      <hr>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+        <a href="../../the-repainting-problem/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>リペイント問題</h4></a>
+        <a href="../../the-only-pattern-that-repeats/ja/" class="related-card"><span class="related-category">サイクル</span><h4>唯一繰り返すパターン</h4></a>
+        <a href="../../accumulation-vs-distribution/ja/" class="related-card"><span class="related-category">サイクル</span><h4>蓄積 vs 分配</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>統合分析がもたらす違いをご覧ください。</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">無料トライアルを開始 →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/ja/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育センター</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="トップへ戻る"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

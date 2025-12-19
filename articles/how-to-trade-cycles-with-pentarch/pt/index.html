@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Operar Ciclos com Pentarch: Um Guia Prático - Signal Pilot Blog</title>
+  <meta name="description" content="Um guia passo a passo para usar Pentarch em trading baseado em ciclos.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="./">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Início</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educação</a><a href="/pt/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduzir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="./" class="active"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Teste Grátis</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=product">Produto</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
+      <span class="article-category">Produto</span>
+      <h1 class="article-title">Como Operar Ciclos com Pentarch: Um Guia Prático</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 min de leitura</span><span>Equipe Signal Pilot</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Cinco fases do ciclo Pentarch"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Os mercados ciclam. Acumulam, sobem, atingem o clímax, distribuem e declinam.</p>
+      <p>Pentarch foi construído para tornar esse ciclo visível.</p>
+      <hr>
+      <h2>Entendendo as Cinco Fases</h2>
+      <p><strong>TD (Touchdown) - Acumulação:</strong> O fundo do ciclo. O dinheiro inteligente está comprando silenciosamente.</p>
+      <p><strong>IGN (Ignition) - Subida:</strong> A fase de rally. A acumulação está completa.</p>
+      <p><strong>CAP (Climax) - Exaustão:</strong> O topo explosivo. As compras se tornam frenéticas.</p>
+      <p><strong>WRN (Warning) - Distribuição:</strong> O dinheiro inteligente está vendendo.</p>
+      <p><strong>BDN (Breakdown) - Declínio:</strong> A distribuição está completa. O preço cai.</p>
+      <hr>
+      <h2>Erros Comuns a Evitar</h2>
+      <ul>
+        <li>Comprar em CAP ou WRN - são zonas de saída</li>
+        <li>Vender a descoberto em TD - você está lutando contra o dinheiro inteligente</li>
+        <li>Ignorar timeframes superiores</li>
+      </ul>
+      <hr>
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
+        <a href="../../the-only-pattern-that-repeats/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>O Único Padrão Que Realmente Se Repete</h4></a>
+        <a href="../../inside-signal-pilot/pt/" class="related-card"><span class="related-category">Produto</span><h4>Dentro do Signal Pilot</h4></a>
+        <a href="../../accumulation-vs-distribution/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>Acumulação vs Distribuição</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Pronto para ver a estrutura do mercado claramente?</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Iniciar Teste Gratuito →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/pt/">← Voltar ao Blog</a><a href="https://signalpilot.io">Início</a><a href="https://docs.signalpilot.io">Documentação</a><a href="https://education.signalpilot.io">Centro de Educação</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos os direitos reservados.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À l'Intérieur de Signal Pilot: Comment les 7 Indicateurs Fonctionnent Ensemble - Signal Pilot Blog</title>
+  <meta name="description" content="Un aperçu complet des 7 indicateurs de Signal Pilot: ce que fait chaque outil, comment ils se connectent et pourquoi la combinaison compte.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="./">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Éducation</a><a href="/fr/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduire"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="./" class="active"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thème"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Essai Gratuit</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=product">Produit</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
+      <span class="article-category">Produit</span>
+      <h1 class="article-title">À l'Intérieur de Signal Pilot: Comment les 7 Indicateurs Fonctionnent Ensemble</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 min de lecture</span><span>Équipe Signal Pilot</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Sept indicateurs Signal Pilot intégrés"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>La plupart des suites d'indicateurs sont des collections - un tas d'outils non liés. Chaque indicateur fonctionne indépendamment.</p>
+      <p>Signal Pilot est différent. Les sept indicateurs ont été conçus comme un système intégré. Chaque outil répond à une question spécifique, et les réponses se combinent en une image complète du marché.</p>
+      <hr>
+      <h2>La Question que Chaque Indicateur Répond</h2>
+      <ul>
+        <li><strong>Pentarch:</strong> "Où sommes-nous dans le cycle du marché?"</li>
+        <li><strong>Volume Oracle:</strong> "Que font réellement les institutions?"</li>
+        <li><strong>Janus Atlas:</strong> "Où sont les niveaux clés?"</li>
+        <li><strong>OmniDeck:</strong> "Combien de confluence existe maintenant?"</li>
+        <li><strong>Augury Grid:</strong> "Quels symboles ont les meilleurs setups?"</li>
+        <li><strong>Harmonic Oscillator:</strong> "Que dit le momentum?"</li>
+        <li><strong>Plutus Flow:</strong> "Où l'argent coule-t-il?"</li>
+      </ul>
+      <p>Pas de chevauchement. Pas de redondance. Sept questions, sept réponses, une image complète.</p>
+      <hr>
+      <h2>Pentarch: La Fondation du Cycle</h2>
+      <p>Identifie les cinq phases du cycle: Touchdown (TD), Ignition (IGN), Climax (CAP), Warning (WRN) et Breakdown (BDN).</p>
+      <p>Détecte les phases sur 4 couches simultanément. Non-repeint: les signaux finalisent à la clôture de la bougie.</p>
+      <hr>
+      <h2>Volume Oracle: Empreintes Institutionnelles</h2>
+      <p>Classe les régimes de marché: Accumulation (vert), Distribution (rouge) ou Affaiblissement (or). Détecte le comportement institutionnel par l'analyse du volume.</p>
+      <hr>
+      <h2>Janus Atlas: L'Architecture des Niveaux</h2>
+      <p>Cartographie les niveaux de prix clés: 50+ niveaux incluant pivots, Fibonacci, Volume Profile avec POC, VAH, VAL et VWAPs multiples.</p>
+      <hr>
+      <h2>OmniDeck: Le Moteur de Confluence</h2>
+      <p>Synthétise 10 systèmes d'analyse différents en un score de confluence de 1-10. Score plus élevé = plus de confluence.</p>
+      <hr>
+      <h2>Augury Grid: Le Scanner</h2>
+      <p>Scanne jusqu'à 40 symboles simultanément, notant chacun avec un système à 5 filtres.</p>
+      <hr>
+      <h2>Harmonic Oscillator: Le Consensus du Momentum</h2>
+      <p>Combine 5 oscillateurs différents (RSI, Stochastique, CCI, Williams %R, MFI) dans un système de vote.</p>
+      <hr>
+      <h2>Plutus Flow: La Trace de l'Argent</h2>
+      <p>OBV avancé avec rubans de tendance et détection automatique des divergences.</p>
+      <hr>
+      <h2>Non-Repeint, Non Négociable</h2>
+      <p>Chaque indicateur finalise les signaux à la clôture de la bougie. Ce que vous voyez dans l'historique est exactement ce qui est apparu en temps réel. Pas d'optimisation rétroactive.</p>
+      <hr>
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
+        <a href="../../the-repainting-problem/fr/" class="related-card"><span class="related-category">Indicateurs</span><h4>Le Problème du Repainting</h4></a>
+        <a href="../../the-only-pattern-that-repeats/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Le Seul Pattern Qui Se Répète</h4></a>
+        <a href="../../accumulation-vs-distribution/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Accumulation vs Distribution</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Voyez la différence que fait l'analyse intégrée.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Démarrer l'Essai Gratuit →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/fr/">← Retour au Blog</a><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Centre d'Éducation</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Tous droits réservés.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

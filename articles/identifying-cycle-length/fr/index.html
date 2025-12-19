@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identifier la Durée du Cycle: Quand Attendre le Prochain Retournement - Signal Pilot Blog</title>
+  <meta name="description" content="Combien durent les cycles de marché? Apprenez à mesurer le rythme de votre marché et utiliser la durée du cycle pour anticiper les retournements.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="./">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Éducation</a><a href="/fr/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduire"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="./" class="active"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thème"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Essai Gratuit</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=cycles">Cycles</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
+      <span class="article-category">Cycles de Marché</span>
+      <h1 class="article-title">Identifier la Durée du Cycle: Quand Attendre le Prochain Retournement</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lecture</span><span>Équipe Signal Pilot</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Visualisation de la durée du cycle"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Les marchés évoluent en cycles. Mais quelle est la durée d'un cycle? Ce rally se termine-t-il dans deux jours ou deux semaines?</p>
+      <p>La durée du cycle n'est pas fixe, mais elle n'est pas aléatoire non plus. Chaque marché développe son propre rythme, et ce rythme est mesurable.</p>
+      <hr>
+      <h2>Ce Qui Détermine la Durée du Cycle</h2>
+      <p><strong>Unité de temps:</strong> Les unités de temps supérieures ont des cycles plus longs. Les cycles journaliers durent des jours à des semaines.</p>
+      <p><strong>Caractère du marché:</strong> Différents instruments ont différentes personnalités. Les actions à haute bêta cyclent plus vite.</p>
+      <p><strong>Régime de volatilité:</strong> Une forte volatilité raccourcit typiquement les cycles. Une faible volatilité les allonge.</p>
+      <p><strong>Phase de marché:</strong> Les marchés haussiers ont souvent des phases de hausse plus longues et des baisses plus courtes.</p>
+      <hr>
+      <h2>Mesurer le Rythme de Votre Marché</h2>
+      <p><strong>Étape 1:</strong> Identifiez les creux clairs du cycle. Cherchez les vallées évidentes où le prix a atteint un bas puis s'est retourné.</p>
+      <p><strong>Étape 2:</strong> Comptez les bougies entre les creux. De vallée à vallée.</p>
+      <p><strong>Étape 3:</strong> Calculez la moyenne. Mesurez au moins 5-10 cycles récents.</p>
+      <p><strong>Étape 4:</strong> Notez la plage. Quel était le cycle le plus court? Le plus long?</p>
+      <hr>
+      <h2>Utiliser la Durée du Cycle</h2>
+      <p><strong>Tôt dans le cycle:</strong> Si vous n'êtes qu'à 5 jours dans un cycle moyen de 14 jours, le marché a probablement encore de la marge.</p>
+      <p><strong>Milieu de cycle:</strong> Vers 7-10 jours, commencez à chercher des signes d'épuisement.</p>
+      <p><strong>Fin de cycle:</strong> À 12-14 jours, vous êtes dans la fenêtre où les retournements sont probables.</p>
+      <hr>
+      <h2>Confluence Temps/Prix</h2>
+      <p><strong>Fenêtre temporelle + niveau de prix = zone de retournement à haute probabilité</strong></p>
+      <p>Si votre cycle est dû pour un retournement ET que le prix est à un niveau significatif de support/résistance, la probabilité de retournement augmente substantiellement.</p>
+      <hr>
+      <h2>Translation et Inversion</h2>
+      <p><strong>Translation droite:</strong> Le sommet du cycle se produit dans la seconde moitié. C'est haussier.</p>
+      <p><strong>Translation gauche:</strong> Le sommet se produit dans la première moitié. C'est baissier.</p>
+      <p><strong>Inversion:</strong> Parfois un cycle qui "devrait" être un creux devient un sommet. Les inversions signalent des changements de tendance.</p>
+      <hr>
+      <h2>Cycles Imbriqués</h2>
+      <p>Les marchés ont des cycles dans les cycles. Quand les creux de cycles sur plusieurs unités de temps s'alignent, des points de retournement puissants se créent.</p>
+      <hr>
+      <h2>L'Essentiel</h2>
+      <p>La durée du cycle est mesurable. Comptez de creux à creux, calculez la moyenne et la plage, et vous saurez approximativement combien durent les cycles dans votre marché.</p>
+      <p>Ce n'est pas de la prédiction - c'est de la probabilité. Et en trading, la probabilité c'est l'avantage.</p>
+      <hr>
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
+        <a href="../../why-markets-move-in-cycles/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Pourquoi les Marchés Évoluent en Cycles</h4></a>
+        <a href="../../cycles-within-cycles/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Cycles Dans les Cycles</h4></a>
+        <a href="../../timeframe-selection/fr/" class="related-card"><span class="related-category">Pratique</span><h4>Sélection de l'Unité de Temps</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Pentarch suit la phase du cycle en temps réel, s'adaptant au rythme de chaque marché.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Voir le cycle →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/fr/">← Retour au Blog</a><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Centre d'Éducation</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Tous droits réservés.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
