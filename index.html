@@ -865,18 +865,30 @@
         langDropdown.querySelector('.lang-toggle .flag').textContent = flag;
         langDropdown.querySelector('.lang-name').textContent = name;
         
-        // Clear ALL cookies thoroughly
-        const expiry = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
-        const paths = ['/', ''];
-        const domains = ['', location.hostname, '.' + location.hostname];
+        // Clear ALL storage
+        try {
+          localStorage.removeItem('googtrans');
+          sessionStorage.clear();
+        } catch(e) {}
         
-        paths.forEach(p => {
-          domains.forEach(d => {
-            const pathStr = p ? '; path=' + p : '';
-            const domainStr = d ? '; domain=' + d : '';
-            document.cookie = 'googtrans=;' + expiry + pathStr + domainStr;
-          });
-        });
+        // Clear ALL cookies - every possible combination
+        const exp = '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        document.cookie = 'googtrans' + exp;
+        document.cookie = 'googtrans' + exp + ';path=/';
+        document.cookie = 'googtrans' + exp + ';path=/;domain=' + location.hostname;
+        document.cookie = 'googtrans' + exp + ';path=/;domain=.' + location.hostname;
+        
+        // Set new language
+        if (lang !== 'en') {
+          const v = '/en/' + lang;
+          document.cookie = 'googtrans=' + v + ';path=/';
+          document.cookie = 'googtrans=' + v + ';path=/;domain=.' + location.hostname;
+        }
+        
+        // Hard reload - bypass all cache
+        location.replace(location.pathname + '?lang=' + lang + '&t=' + Date.now());
+      });
+    });
         
         // Set new language cookie if not English
         if (lang !== 'en') {

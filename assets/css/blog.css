@@ -319,39 +319,29 @@ body {
   font-size: 1.2rem;
 }
 
-/* Completely hide ALL Google Translate UI - we use our own beautiful flag dropdown */
-#google_translate_element,
+/* Hide Google Translate UI completely */
+#google_translate_element {
+  display: none !important;
+}
+
 .goog-te-banner-frame,
+.goog-te-gadget,
 .goog-te-gadget-icon,
 #goog-gt-tt,
 .goog-te-balloon-frame,
-.goog-te-gadget,
-.goog-te-menu-frame,
-.skiptranslate:not(#google_translate_element) {
-  position: absolute !important;
-  left: -9999px !important;
-  top: -9999px !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
+.goog-te-menu-frame {
+  display: none !important;
 }
 
-/* Keep the select accessible for JS but invisible */
-.goog-te-combo {
-  position: absolute !important;
-  left: -9999px !important;
-  opacity: 0 !important;
-}
-
-/* Prevent Google Translate from pushing body down */
 body {
   top: 0 !important;
 }
 
-/* Hide Google Translate top bar */
-.goog-te-banner-frame {
+.skiptranslate {
+  display: none !important;
+}
+
+iframe.goog-te-banner-frame {
   display: none !important;
 }
 
