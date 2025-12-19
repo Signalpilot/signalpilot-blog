@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Signal Pilot ブログ - トレーディング教育と市場分析</title>
+  <meta name="description" content="専門的なトレーディング知識、インジケーター分析、市場心理学、実践的な戦略。トレーディングで本当に機能するものを学びましょう。">
+  <meta name="theme-color" content="#05070d">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+
+  <!-- hreflang tags -->
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="./">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/blog.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Signal Pilot ブログ - トレーディング教育">
+  <meta property="og:description" content="専門的なトレーディング知識、インジケーター分析、市場心理学、実践的な戦略。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blog.signalpilot.io/ja/">
+  <meta property="og:image" content="https://signalpilot.io/assets/og-image.png">
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-aurora"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+
+        <nav class="nav">
+          <a href="https://signalpilot.io">ホーム</a>
+          <a href="https://docs.signalpilot.io">ドキュメント</a>
+          <a href="https://education.signalpilot.io">教育</a>
+          <a href="/ja/" class="active">ブログ</a>
+        </nav>
+
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="./" class="active"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ切替">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料トライアル</a>
+          <button class="mobile-menu-btn" aria-label="メニュー">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">本当に機能するトレーディング知識</h1>
+        <p class="hero-subtitle">水増しなし、誇大広告なし。市場構造と心理学に基づいた実践的なトレーディング教育のみ。</p>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="articles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">最新記事</h2>
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">すべて</button>
+            <button class="filter-btn" data-filter="product">Signal Pilot</button>
+            <button class="filter-btn" data-filter="indicators">インジケーター</button>
+            <button class="filter-btn" data-filter="psychology">心理学</button>
+            <button class="filter-btn" data-filter="cycles">サイクル</button>
+            <button class="filter-btn" data-filter="practical">実践</button>
+            <button class="filter-btn" data-filter="risk">リスク管理</button>
+            <button class="filter-btn" data-filter="systems">システム</button>
+            <button class="filter-btn" data-filter="beginner">初心者</button>
+          </div>
+        </div>
+
+        <div class="articles-grid">
+
+          <a href="../articles/inside-signal-pilot/ja/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Signal Pilotの内部：7つのインジケーターがどのように連携するか</h3>
+              <p class="article-card-excerpt">ほとんどのインジケータースイートは寄せ集めです。Signal Pilotの7つのインジケーターは統合システムとして設計されました。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/free-indicators-vs-professional-tools/ja/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">無料インジケーター vs プロツール：アップグレードすべき時</h3>
+              <p class="article-card-excerpt">無料インジケーターは始めるのに役立ちました。今、足を引っ張っていませんか？無料ツールを卒業する時期を知る方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-to-trade-cycles-with-pentarch/ja/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Pentarchでサイクルをトレードする方法：実践ガイド</h3>
+              <p class="article-card-excerpt">サイクルベースのトレーディングでPentarchを使用するためのステップバイステップガイド。フェーズの特定、エントリーのタイミング、スイートとの組み合わせ。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-your-indicators-keep-failing/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">インジケーターが失敗し続ける理由（そして本当に機能するもの）</h3>
+              <p class="article-card-excerpt">RSI、MACD、ボリンジャーバンド、移動平均線があります。チャートは爆発した虹のようです。それでも負け続けています。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/psychology-of-getting-stopped-out/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ストップアウトの心理学（そしてなぜ繰り返されるのか）</h3>
+              <p class="article-card-excerpt">分析は完璧でした。エントリーはクリーンでした。そして価格は正確にストップに触れて反転しました。個人的に感じます。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-only-pattern-that-repeats/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">市場で本当に繰り返される唯一のパターン</h3>
+              <p class="article-card-excerpt">ヘッドアンドショルダー。ダブルトップ。信頼性がありません。しかし、すべての時間枠で本当に繰り返されるパターンが1つあります。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/3-questions-before-every-trade/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">すべてのトレード前の3つの質問</h3>
+              <p class="article-card-excerpt">インジケーターがシグナルを出しています。指は買いボタンの上にあります。止まってください。まず3つの質問に答える必要があります。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/position-sizing-101/ja/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">リスク管理</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ポジションサイジング101：ゲームに留まるための数学</h3>
+              <p class="article-card-excerpt">ほとんどのトレーダーはエントリーに執着しています。生き残る人はポジションサイジングに執着しています。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/rules-based-vs-discretionary/ja/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">トレーディングシステム</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ルールベース vs 裁量トレード：どちらが機能するか？</h3>
+              <p class="article-card-excerpt">厳格なシステムを信じるトレーダーもいます。直感を信じる人もいます。本当に重要なのはこれです。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/candlestick-basics/ja/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">基礎</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ローソク足の基本：プロのようにプライスアクションを読む</h3>
+              <p class="article-card-excerpt">ローソク足は価格の言語です。読み方—そしてトレーディングで本当に重要なパターンについて。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-repainting-problem/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">リペイント問題：TradingViewインジケーターの多くが嘘をつく方法</h3>
+              <p class="article-card-excerpt">完璧なバックテストを持つそのインジケーター？すべての高値と安値を当てるもの？それは嘘をついています。騙しを見抜く方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-you-break-trading-rules/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">なぜ自分のトレーディングルールを破り続けるのか</h3>
+              <p class="article-card-excerpt">トレーディングプランがあります。書き留めてあります。それでも、してはいけないと分かっていたトレードをしてしまいました。その背後にある神経科学。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-smart-money-moves/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">スマートマネーが実際にどう動くか（そしてそれを見る方法）</h3>
+              <p class="article-card-excerpt">「スマートマネーに従え」。でも実際にはどういう意味？彼らが隠れようとしているときにどうするの？</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/stop-loss-placement/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ストップロスの配置：あなたのはおそらく間違っている理由</h3>
+              <p class="article-card-excerpt">価格が正確にストップに触れ、反転し、あなた抜きでターゲットに達します。陰謀ではありません。方法論に欠陥があります。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-1-percent-rule/ja/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">リスク管理</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">1%ルール：なぜプロトレーダーはこれほど少なくリスクを取るのか</h3>
+              <p class="article-card-excerpt">トレードごとに1%をリスクにさらすのは過度に慎重に聞こえます。実際には、まだ機能する最も積極的なアプローチである理由がここにあります。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-your-first-system/ja/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">トレーディングシステム</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">最初のトレーディングシステムを構築する：ステップバイステップガイド</h3>
+              <p class="article-card-excerpt">ほとんどのトレーダーはセットアップからセットアップへ飛び回ります。システマティックトレーダーは一度構築し、永遠に実行します。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/support-and-resistance-explained/ja/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">基礎</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">サポートとレジスタンスの説明：すべてのトレードの基礎</h3>
+              <p class="article-card-excerpt">サポートとレジスタンスはテクニカル分析の基盤です。本物のレベルを特定し、罠にかからずにトレードする方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-backtesting-results-are-worthless/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">バックテスト結果が無価値な理由（そして何をすべきか）</h3>
+              <p class="article-card-excerpt">78%の勝率を持つインジケーターを見つけました。2年間のバックテスト。そしてライブでトレードすると、すべてが崩壊します。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-traders-blow-first-account/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ほとんどの人が最初の口座を吹き飛ばす本当の理由</h3>
+              <p class="article-card-excerpt">最初の利益、自信の高まり、サイズの増加、そしてすべてを失う。その流れは予測可能です。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-markets-move-in-cycles/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">なぜ市場はサイクルで動くのか（そしてどう利益を得るか）</h3>
+              <p class="article-card-excerpt">市場は20-30%の時間しかトレンドしていません。残りは？サイクルです。なぜかを理解すると、すべてのトレード方法が変わります。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/timeframe-selection/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">タイムフレーム選択：インジケーターより重要な理由</h3>
+              <p class="article-card-excerpt">5分足は買いと言っています。4時間足は売りと言っています。日足は待てと言っています。誰が正しい？</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-cut-losses-early/ja/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">リスク管理</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">早めに損切りすべき時（ストップに触れる前に）</h3>
+              <p class="article-card-excerpt">ストップロスは最大リスクです。しかし、時には早めに出るのが賢明です。その違いを知る方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/backtesting-without-fooling-yourself/ja/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">トレーディングシステム</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">自分を騙さないバックテスト：戦略を正直にテストする方法</h3>
+              <p class="article-card-excerpt">バックテストは80%の勝率を示しています。ライブでトレードすると壊滅します。これが理由—そして正しくテストする方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-is-a-trading-edge/ja/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">基礎</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">トレーディングエッジとは？（そして持っているかどうかの判断方法）</h3>
+              <p class="article-card-excerpt">誰もが「エッジ」について話しています。しかし、それは実際に何を意味するのでしょうか？本当のエッジを理解し、特定し、開発する方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-confirmation-trap/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">確認の罠：インジケーターが多いほど結果が悪くなる理由</h3>
+              <p class="article-card-excerpt">チャートに4つのインジケーターがあります。めったに一致しません。一致するときには、動きはすでに終わっています。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-profitable-traders-know/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">利益を上げるトレーダーが知っていてあなたが知らないこと</h3>
+              <p class="article-card-excerpt">彼らはあなたより賢くありません。より良いインジケーターも持っていません。しかし、トレーディングへのアプローチに何か違いがあります。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/accumulation-vs-distribution/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">蓄積 vs 分配：チャートが示さないことを読む</h3>
+              <p class="article-card-excerpt">2つのチャートは同じように見えます。1つは大規模なラリーに先行し、もう1つは壊滅的な下落に先行します。違いを見分ける方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/tradingview-free-scripts/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">TradingViewが無料スクリプトについて教えてくれないこと</h3>
+              <p class="article-card-excerpt">100,000以上の無料インジケーター。レビューといいねがガイドしてくれます。何がうまくいかないでしょうか？実際には多くのことが。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/volume-profile-basics/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ボリュームプロファイル：隠れた市場構造を読む</h3>
+              <p class="article-card-excerpt">価格チャートは市場がどこにいたかを示します。ボリュームプロファイルは市場が本当にいたかった場所を示します。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/revenge-trading-recovery/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">リベンジトレード：破壊的なサイクルを断ち切る</h3>
+              <p class="article-card-excerpt">損失がありました。取り戻そうとしてもう一つ。そしてもう一つ。穴は深くなりました。サイクルを断ち切る方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycle-failures-and-what-they-mean/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">サイクルの失敗：パターンが崩れるとき（そしてそれが意味すること）</h3>
+              <p class="article-card-excerpt">サイクルが展開することを期待していました。しませんでした。失敗以上に、その崩壊は重要なことを伝えています。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-a-pre-trade-checklist/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">機能するプリトレードチェックリストの構築</h3>
+              <p class="article-card-excerpt">パイロットはチェックリストを使います。外科医はチェックリストを使います。最高のトレーダーはチェックリストを使います。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-ignore-divergence/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ダイバージェンスを無視すべき時（そして本当に重要な時）</h3>
+              <p class="article-card-excerpt">RSIダイバージェンス！MACDダイバージェンス！インジケーターはトレンドが反転すると言っています。ただし...通常はそうなりません。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trading-while-emotional/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">感情的なトレード：隠れた口座キラー</h3>
+              <p class="article-card-excerpt">パートナーとの喧嘩。仕事からの悪いニュース。よく眠れなかった。それでもトレードした。思っている以上にコストがかかっています。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/identifying-cycle-length/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">サイクル長の特定：市場のリズムを測定する方法</h3>
+              <p class="article-card-excerpt">サイクルは繰り返されますが、完璧なタイミングではありません。特定の市場でリズムを測定する方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trade-journaling-that-works/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">機能するトレード日誌：何を追跡し、なぜか</h3>
+              <p class="article-card-excerpt">ほとんどのトレード日誌は無駄な作業です。実際にトレーディングを改善する日誌の作り方。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/multi-timeframe-confirmation/ja/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">インジケーター</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">マルチタイムフレーム確認：上位時間足に壊滅されるのを止める</h3>
+              <p class="article-card-excerpt">5分足は完璧に見えます。しかし日足は別のことを言っています。タイムフレームを連携させる方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-boredom-trap/ja/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">心理学</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">退屈の罠：何もしないことが最も難しいトレードである理由</h3>
+              <p class="article-card-excerpt">セットアップなし。何時間も待機。そして何かを感じるためだけにトレードする。退屈は悪い分析よりも多くの口座を破壊しました。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycles-within-cycles/ja/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">市場サイクル</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">サイクルの中のサイクル：市場のフラクタル性</h3>
+              <p class="article-card-excerpt">サイクルにズームインすると、中にもっと小さなサイクルが見つかります。ズームアウトすると、それを含むもっと大きなサイクルが見つかります。このフラクタル性を活用する方法。</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-size-up/ja/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">実践</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">サイズアップすべき時：責任を持ってポジションをスケールする</h3>
+              <p class="article-card-excerpt">一貫性を保ってきました。口座は成長しています。ポジションサイズを増やす時期はいつか—そして爆発せずにどうやって？</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span>
+                <span>Signal Pilot チーム</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://signalpilot.io">ホーム</a>
+        <a href="https://docs.signalpilot.io">ドキュメント</a>
+        <a href="https://education.signalpilot.io">教育センター</a>
+        <a href="https://signalpilot.io/#pricing">料金</a>
+        <a href="https://signalpilot.io/affiliates.html">アフィリエイト</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2025</span> Signal Pilot. 全著作権所有。</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        articleCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

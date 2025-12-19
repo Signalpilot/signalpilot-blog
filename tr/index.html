@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Signal Pilot Blog - Ticaret Eğitimi ve Piyasa Analizleri</title>
+  <meta name="description" content="Uzman ticaret bilgileri, gösterge analizleri, piyasa psikolojisi ve pratik stratejiler. Ticarette gerçekten işe yarayanları öğrenin.">
+  <meta name="theme-color" content="#05070d">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+
+  <!-- hreflang tags -->
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/blog.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Signal Pilot Blog - Ticaret Eğitimi">
+  <meta property="og:description" content="Uzman ticaret bilgileri, gösterge analizleri, piyasa psikolojisi ve pratik stratejiler.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blog.signalpilot.io/tr/">
+  <meta property="og:image" content="https://signalpilot.io/assets/og-image.png">
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-aurora"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+
+        <nav class="nav">
+          <a href="https://signalpilot.io">Ana Sayfa</a>
+          <a href="https://docs.signalpilot.io">Dokümantasyon</a>
+          <a href="https://education.signalpilot.io">Eğitim</a>
+          <a href="/tr/" class="active">Blog</a>
+        </nav>
+
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Temayı değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Gerçekten İşe Yarayan Ticaret Bilgileri</h1>
+        <p class="hero-subtitle">Dolgu yok, abartı yok. Sadece piyasa yapısı ve psikoloji destekli pratik ticaret eğitimi.</p>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="articles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Son Makaleler</h2>
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="product">Signal Pilot</button>
+            <button class="filter-btn" data-filter="indicators">Göstergeler</button>
+            <button class="filter-btn" data-filter="psychology">Psikoloji</button>
+            <button class="filter-btn" data-filter="cycles">Döngüler</button>
+            <button class="filter-btn" data-filter="practical">Pratik</button>
+            <button class="filter-btn" data-filter="risk">Risk Yönetimi</button>
+            <button class="filter-btn" data-filter="systems">Sistemler</button>
+            <button class="filter-btn" data-filter="beginner">Başlangıç</button>
+          </div>
+        </div>
+
+        <div class="articles-grid">
+
+          <a href="../articles/inside-signal-pilot/tr/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Signal Pilot'ın İçinde: 7 Gösterge Nasıl Birlikte Çalışıyor</h3>
+              <p class="article-card-excerpt">Çoğu gösterge paketi karmakarışık. Signal Pilot'ın 7 göstergesi entegre bir sistem olarak tasarlandı.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/free-indicators-vs-professional-tools/tr/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ücretsiz Göstergeler vs Profesyonel Araçlar: Ne Zaman Yükseltmeli</h3>
+              <p class="article-card-excerpt">Ücretsiz göstergeler başlamanıza yardımcı oldu. Sizi yavaşlatıyorlar mı? Ücretsiz araçları ne zaman aştığınızı anlayın.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-to-trade-cycles-with-pentarch/tr/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Pentarch ile Döngü Ticareti: Pratik Bir Rehber</h3>
+              <p class="article-card-excerpt">Döngü tabanlı ticarette Pentarch kullanımı için adım adım rehber. Fazları belirleyin, girişleri zamanlayın ve tüm paketle birleştirin.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-your-indicators-keep-failing/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Göstergeleriniz Neden Hep Başarısız (Ve Gerçekten Ne İşe Yarıyor)</h3>
+              <p class="article-card-excerpt">RSI, MACD, Bollinger Bantları, belki birkaç hareketli ortalama. Grafiğiniz gökkuşağı patlamış gibi görünüyor. Ve hala kaybediyorsunuz.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/psychology-of-getting-stopped-out/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Stop Yemenin Psikolojisi (Ve Neden Hep Oluyor)</h3>
+              <p class="article-card-excerpt">Analiziniz mükemmeldi. Giriş temizdi. Sonra fiyat tam stop'unuza dokunup döndü. Kişisel gibi hissettiriyor.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-only-pattern-that-repeats/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Piyasalarda Gerçekten Tekrar Eden Tek Patern</h3>
+              <p class="article-card-excerpt">Omuz-baş-omuz. Çift tepe. Güvenilir şekilde çalışmıyorlar. Ama her zaman diliminde gerçekten tekrar eden bir patern var.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/3-questions-before-every-trade/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Her İşlemden Önce 3 Soru</h3>
+              <p class="article-card-excerpt">Göstergeniz sinyal veriyor. Parmağınız al butonunun üzerinde. Durun. Önce üç sorunun cevabı gerekiyor.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/position-sizing-101/tr/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Risk Yönetimi</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Pozisyon Boyutu 101: Sizi Oyunda Tutan Matematik</h3>
+              <p class="article-card-excerpt">Çoğu trader girişlere takıntılı. Hayatta kalanlar pozisyon boyutuna takıntılı.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/rules-based-vs-discretionary/tr/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Ticaret Sistemleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Kurallı vs Takdire Dayalı Ticaret: Hangisi İşe Yarıyor?</h3>
+              <p class="article-card-excerpt">Bazı traderlar katı sistemlere yemin ediyor. Bazıları içgüdülerine güveniyor. İşte gerçekten önemli olan.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/candlestick-basics/tr/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Temel Bilgiler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Mum Grafikleri: Fiyat Hareketini Profesyonel Gibi Okumak</h3>
+              <p class="article-card-excerpt">Mumlar fiyatın dilidir. İşte onları nasıl okuyacağınız - ve ticarette hangi paternlerin gerçekten önemli olduğu.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-repainting-problem/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Yeniden Çizim Sorunu: TradingView Göstergelerinin Çoğu Nasıl Yalan Söylüyor</h3>
+              <p class="article-card-excerpt">Mükemmel backtest'li o gösterge? Her tepe ve dibi yakalayan? Size yalan söylüyor. İşte yalanı nasıl tespit edeceksiniz.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-you-break-trading-rules/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Neden Kendi Ticaret Kurallarınızı Çiğnemeye Devam Ediyorsunuz</h3>
+              <p class="article-card-excerpt">Bir ticaret planınız var. Yazılı. Ve yine de yapmamanız gereken işlemi yaptınız. İşte arkasındaki nörobilim.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-smart-money-moves/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Akıllı Para Gerçekte Nasıl Hareket Ediyor (Ve Nasıl Görülür)</h3>
+              <p class="article-card-excerpt">"Akıllı parayı takip edin." Ama bu gerçekten ne anlama geliyor? Ve saklanmaya çalışırken bunu nasıl yaparsınız?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/stop-loss-placement/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Stop Loss Yerleştirme: Sizinki Muhtemelen Neden Yanlış</h3>
+              <p class="article-card-excerpt">Fiyat tam stop'unuza dokunuyor, dönüyor ve sizin olmadan hedefe ulaşıyor. Bu komplo değil. Metodolojiniz hatalı.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-1-percent-rule/tr/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Risk Yönetimi</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">%1 Kuralı: Profesyonel Traderlar Neden Bu Kadar Az Riske Giriyor</h3>
+              <p class="article-card-excerpt">İşlem başına %1 risk aşırı temkinli görünüyor. İşte neden aslında hala işe yarayan en agresif yaklaşım olduğu.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-your-first-system/tr/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Ticaret Sistemleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">İlk Ticaret Sisteminizi Oluşturmak: Adım Adım Rehber</h3>
+              <p class="article-card-excerpt">Çoğu trader setup'tan setup'a atlar. Sistematik traderlar bir kez kurar ve sonsuza kadar uygular.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/support-and-resistance-explained/tr/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Temel Bilgiler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Destek ve Direnç: Her İşlemin Temeli</h3>
+              <p class="article-card-excerpt">Destek ve direnç teknik analizin temelidir. Gerçek seviyeleri nasıl tanımlayacağınızı ve yakalanmadan nasıl işlem yapacağınızı öğrenin.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-backtesting-results-are-worthless/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Backtest Sonuçları Neden Değersiz (Ve Ne Yapmalı)</h3>
+              <p class="article-card-excerpt">%78 kazanma oranıyla bir gösterge buldunuz. İki yıllık backtest. Sonra canlı işlem yaptınız ve her şey çöktü.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-traders-blow-first-account/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Çoğu Kişinin İlk Hesabını Patlatmasının Gerçek Nedeni</h3>
+              <p class="article-card-excerpt">İlk kazançlar, artan güven, pozisyon büyütme, sonra her şeyi kaybetme. Sıra tahmin edilebilir.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-markets-move-in-cycles/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Piyasalar Neden Döngülerde Hareket Ediyor (Ve Nasıl Fayda Sağlanır)</h3>
+              <p class="article-card-excerpt">Piyasalar zamanın %20-30'unda trend yapar. Gerisi? Döngüler. Nedenini anlamak her şeyi işlem yapma şeklinizi değiştirir.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/timeframe-selection/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Zaman Dilimi Seçimi: Göstergenizden Neden Daha Önemli</h3>
+              <p class="article-card-excerpt">5 dakikalık grafik al diyor. 4 saatlik sat diyor. Günlük bekle diyor. Hangisi doğru?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-cut-losses-early/tr/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Risk Yönetimi</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Zararı Ne Zaman Erken Kesmeli (Stop'a Gelmeden)</h3>
+              <p class="article-card-excerpt">Stop loss maksimum riskinizdir. Ama bazen akıllıca olan dokunmadan önce çıkmaktır. İşte farkı nasıl anlarsınız.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/backtesting-without-fooling-yourself/tr/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Ticaret Sistemleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Kendinizi Kandırmadan Backtest: Stratejileri Dürüstçe Test Etmek</h3>
+              <p class="article-card-excerpt">Backtest'iniz %80 kazanma oranı gösteriyor. Canlıda işlem yapıyorsunuz ve mahvoluyorsunuz. İşte nedeni - ve doğru backtest nasıl yapılır.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-is-a-trading-edge/tr/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Temel Bilgiler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ticaret Avantajı Nedir? (Ve Bir Avantajınız Olup Olmadığını Nasıl Anlarsınız)</h3>
+              <p class="article-card-excerpt">Herkes "avantaj" sahibi olmaktan bahsediyor. Ama bu gerçekten ne anlama geliyor? Gerçek bir avantajı nasıl anlayacağınızı, tanımlayacağınızı ve geliştireceğinizi öğrenin.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-confirmation-trap/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Teyit Tuzağı: Daha Fazla Gösterge Neden Daha Kötü Sonuçlar Demek</h3>
+              <p class="article-card-excerpt">Grafiğinizde dört gösterge var. Nadiren aynı fikirde oluyorlar. Olduklarında hareket çoktan bitmiş oluyor.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-profitable-traders-know/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Karlı Traderların Sizin Bilmediğiniz Şeyler</h3>
+              <p class="article-card-excerpt">Sizden daha akıllı değiller. Daha iyi göstergeleri yok. Ama ticarete yaklaşımlarında farklı bir şey var.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/accumulation-vs-distribution/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Birikim vs Dağıtım: Grafiğin Söylemediğini Okumak</h3>
+              <p class="article-card-excerpt">İki grafik aynı görünüyor. Biri büyük bir ralliden önce, biri yıkıcı bir düşüşten önce. İşte farkı nasıl anlarsınız.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/tradingview-free-scripts/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">TradingView'in Ücretsiz Scriptler Hakkında Söylemediği</h3>
+              <p class="article-card-excerpt">100.000+ ücretsiz gösterge. Seçiminizi yönlendirecek yorumlar ve beğeniler. Ne yanlış gidebilir? Aslında çok şey.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/volume-profile-basics/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Hacim Profili: Piyasanın Gizli Yapısını Okumak</h3>
+              <p class="article-card-excerpt">Fiyat grafikleri piyasanın nereye gittiğini gösterir. Hacim profili piyasanın gerçekte nerede olmak istediğini gösterir.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/revenge-trading-recovery/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">İntikam Ticareti: Yıkıcı Döngüyü Kırmak</h3>
+              <p class="article-card-excerpt">Bir kayıp yaşadınız. Sonra kurtarmaya çalışırken bir tane daha. Sonra bir tane daha. Çukur derinleşti. İşte döngüyü nasıl kırarsınız.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycle-failures-and-what-they-mean/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Döngü Başarısızlıkları: Patern Kırıldığında (Ve Size Ne Söylüyor)</h3>
+              <p class="article-card-excerpt">Döngünün gerçekleşmesini beklediniz. Olmadı. Bir başarısızlıktan daha fazlası olarak, bu kırılma size önemli bir şey söylüyor.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-a-pre-trade-checklist/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">İşe Yarayan Bir İşlem Öncesi Kontrol Listesi Oluşturmak</h3>
+              <p class="article-card-excerpt">Pilotlar kontrol listeleri kullanır. Cerrahlar kontrol listeleri kullanır. En iyi traderlar kontrol listeleri kullanır.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-ignore-divergence/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Uyuşmazlığı Ne Zaman Görmezden Gelmeli (Ve Ne Zaman Gerçekten Önemli)</h3>
+              <p class="article-card-excerpt">RSI uyuşmazlığı! MACD uyuşmazlığı! Gösterge trendin döneceğini söylüyor. Ama... genellikle dönmüyor.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trading-while-emotional/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Duygusal Ticaret: Hesapların Gizli Katili</h3>
+              <p class="article-card-excerpt">Partnerinizle kavga. İşten kötü haberler. İyi uyumadınız. Yine de işlem yaptınız. Bu size düşündüğünüzden daha pahalıya mal oluyor.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/identifying-cycle-length/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Döngü Uzunluğunu Belirleme: Piyasanın Ritmini Nasıl Ölçersiniz</h3>
+              <p class="article-card-excerpt">Döngüler tekrar eder, ama mükemmel bir programda değil. İşte belirli piyasanızdaki ritmi nasıl ölçeceksiniz.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trade-journaling-that-works/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">İşe Yarayan Ticaret Günlüğü: Ne Takip Etmeli ve Neden</h3>
+              <p class="article-card-excerpt">Çoğu ticaret günlüğü gereksiz iştir. İşte ticaretinizi gerçekten iyileştiren bir günlüğü nasıl oluşturursunuz.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/multi-timeframe-confirmation/tr/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Göstergeler</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Çoklu Zaman Dilimi Teyidi: Büyük Zaman Diliminden Ezilmekten Kurtulun</h3>
+              <p class="article-card-excerpt">5 dakikalık grafiğiniz mükemmel görünüyor. Ama günlük başka bir şey söylüyor. Zaman dilimlerini birlikte çalışacak şekilde nasıl hizalarsınız.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-boredom-trap/tr/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Psikoloji</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Sıkılma Tuzağı: Hiçbir Şey Yapmamak Neden En Zor İşlem</h3>
+              <p class="article-card-excerpt">Setup yok. Saatlerce bekleme. Sonra sadece bir şey hissetmek için işlem yapıyorsunuz. Sıkılma kötü analizden daha fazla hesap yok etti.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycles-within-cycles/tr/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piyasa Döngüleri</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Döngü İçinde Döngüler: Piyasaların Fraktal Doğası</h3>
+              <p class="article-card-excerpt">Bir döngüye yakınlaşın ve içinde daha küçük döngüler bulursunuz. Uzaklaşın ve onu içeren daha büyüklerini bulursunuz. İşte bu fraktal doğayı nasıl kullanırsınız.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-size-up/tr/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Pratik</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ne Zaman Büyütmeli: Pozisyonunuzu Sorumlu Bir Şekilde Ölçeklendirmek</h3>
+              <p class="article-card-excerpt">Tutarlı oldunuz. Hesabınız büyüyor. Pozisyon boyutunu artırma zamanı ne zaman - ve patlamadan nasıl yapılır?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+                <span>Signal Pilot Ekibi</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://signalpilot.io">Ana Sayfa</a>
+        <a href="https://docs.signalpilot.io">Dokümantasyon</a>
+        <a href="https://education.signalpilot.io">Eğitim Merkezi</a>
+        <a href="https://signalpilot.io/#pricing">Fiyatlandırma</a>
+        <a href="https://signalpilot.io/affiliates.html">Ortaklık</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2025</span> Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        articleCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

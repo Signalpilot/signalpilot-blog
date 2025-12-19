@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Signal Pilot Blog - Kereskedési Oktatás és Piaci Elemzések</title>
+  <meta name="description" content="Szakértő kereskedési ismeretek, indikátor elemzések, piaci pszichológia és gyakorlati stratégiák. Tanuld meg, mi működik valójában a kereskedésben.">
+  <meta name="theme-color" content="#05070d">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+
+  <!-- hreflang tags -->
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/blog.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Signal Pilot Blog - Kereskedési Oktatás">
+  <meta property="og:description" content="Szakértő kereskedési ismeretek, indikátor elemzések, piaci pszichológia és gyakorlati stratégiák.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blog.signalpilot.io/hu/">
+  <meta property="og:image" content="https://signalpilot.io/assets/og-image.png">
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-aurora"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+
+        <nav class="nav">
+          <a href="https://signalpilot.io">Kezdőlap</a>
+          <a href="https://docs.signalpilot.io">Dokumentáció</a>
+          <a href="https://education.signalpilot.io">Oktatás</a>
+          <a href="/hu/" class="active">Blog</a>
+        </nav>
+
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltás">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Kereskedési Ismeretek, Amik Valóban Működnek</h1>
+        <p class="hero-subtitle">Töltelék nélkül, hype nélkül. Csak gyakorlati kereskedési oktatás, piaci struktúrával és pszichológiával alátámasztva.</p>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="articles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Legújabb Cikkek</h2>
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">Összes</button>
+            <button class="filter-btn" data-filter="product">Signal Pilot</button>
+            <button class="filter-btn" data-filter="indicators">Indikátorok</button>
+            <button class="filter-btn" data-filter="psychology">Pszichológia</button>
+            <button class="filter-btn" data-filter="cycles">Ciklusok</button>
+            <button class="filter-btn" data-filter="practical">Gyakorlati</button>
+            <button class="filter-btn" data-filter="risk">Kockázatkezelés</button>
+            <button class="filter-btn" data-filter="systems">Rendszerek</button>
+            <button class="filter-btn" data-filter="beginner">Kezdő</button>
+          </div>
+        </div>
+
+        <div class="articles-grid">
+
+          <a href="../articles/inside-signal-pilot/hu/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">A Signal Pilot Belülről: Hogyan Működik Együtt a 7 Indikátor</h3>
+              <p class="article-card-excerpt">A legtöbb indikátor csomag összevissza van dobálva. A Signal Pilot 7 indikátora integrált rendszerként lett tervezve.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/free-indicators-vs-professional-tools/hu/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ingyenes Indikátorok vs Profi Eszközök: Mikor Érdemes Váltani</h3>
+              <p class="article-card-excerpt">Az ingyenes indikátorok segítettek elkezdeni. Visszafognak? Így tudod meg, mikor nőttél ki az ingyenes eszközökből.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-to-trade-cycles-with-pentarch/hu/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Hogyan Kereskedj Ciklusokkal a Pentarch Segítségével: Gyakorlati Útmutató</h3>
+              <p class="article-card-excerpt">Lépésről lépésre útmutató a Pentarch használatához ciklus alapú kereskedésben. Azonosítsd a fázisokat, időzítsd a belépéseket és kombináld a teljes csomaggal.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-your-indicators-keep-failing/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Miért Nem Működnek az Indikátoraid (És Mi Működik Valójában)</h3>
+              <p class="article-card-excerpt">Van RSI-d, MACD-d, Bollinger szalagod, talán pár mozgóátlagod. A grafikonod úgy néz ki, mintha felrobbant volna egy szivárvány. És még mindig veszítesz.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/psychology-of-getting-stopped-out/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">A Stoppolás Pszichológiája (És Miért Történik Folyton)</h3>
+              <p class="article-card-excerpt">Az elemzésed tökéletes volt. A belépés tiszta volt. Aztán az ár pontosan a stopodat érintette és megfordult. Személyesnek tűnik.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-only-pattern-that-repeats/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Az Egyetlen Minta, Ami Valóban Ismétlődik a Piacokon</h3>
+              <p class="article-card-excerpt">Fej-váll. Dupla csúcs. Nem működnek megbízhatóan. De van egy minta, ami valóban ismétlődik minden időkeretben.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/3-questions-before-every-trade/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">3 Kérdés Minden Kereskedés Előtt</h3>
+              <p class="article-card-excerpt">Az indikátorod jelet ad. Az ujjad a vétel gombon. Állj. Három kérdésre kell először válaszolni.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/position-sizing-101/hu/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Kockázatkezelés</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Pozícióméretezés 101: A Matematika, Ami Játékban Tart</h3>
+              <p class="article-card-excerpt">A legtöbb kereskedő a belépésekre fókuszál megszállottan. Akik túlélik, a pozícióméretezésre.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/rules-based-vs-discretionary/hu/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Kereskedési Rendszerek</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Szabályalapú vs Diszkrecionális Kereskedés: Melyik Működik?</h3>
+              <p class="article-card-excerpt">Néhány kereskedő esküszik a merev rendszerekre. Mások az ösztöneikre hagyatkoznak. Íme, ami valóban számít.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/candlestick-basics/hu/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Alapok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Japán Gyertyák: Árfolyammozgás Olvasása Profi Módon</h3>
+              <p class="article-card-excerpt">A gyertyák az ár nyelve. Így olvashatod őket - és ezek a minták számítanak valóban a kereskedésben.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-repainting-problem/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Az Újrarajzolás Problémája: Hogyan Hazudnak a TradingView Indikátorok</h3>
+              <p class="article-card-excerpt">Az az indikátor a tökéletes backtesttel? Ami minden csúcsot és mélypontot eltalál? Hazudik neked. Így ismered fel a csalást.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-you-break-trading-rules/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Miért Szegted Meg Folyton a Saját Kereskedési Szabályaidat</h3>
+              <p class="article-card-excerpt">Van egy kereskedési terved. Le van írva. És mégis megnyitottad azt a pozíciót, amiről tudtad, hogy nem kellett volna. Íme az idegtudomány mögötte.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-smart-money-moves/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Hogyan Mozog Valójában az Okos Pénz (És Hogyan Láthatod)</h3>
+              <p class="article-card-excerpt">"Kövesd az okos pénzt." De ez mit jelent valójában? És hogyan teszed, amikor próbálnak elrejtőzni?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/stop-loss-placement/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Stop Loss Elhelyezés: Miért Rossz Valószínűleg a Tiéd</h3>
+              <p class="article-card-excerpt">Az ár pontosan a stopodat éri, megfordul, és eléri a célod nélküled. Ez nem összeesküvés. A módszertanod hibás.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-1-percent-rule/hu/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Kockázatkezelés</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Az 1%-os Szabály: Miért Kockáztatnak Ilyen Keveset a Profi Kereskedők</h3>
+              <p class="article-card-excerpt">Kereskedésenként 1%-ot kockáztatni túl óvatosnak tűnik. Íme, miért ez valójában a legagresszívebb megközelítés, ami még működik.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-your-first-system/hu/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Kereskedési Rendszerek</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Az Első Kereskedési Rendszered Felépítése: Lépésről Lépésre Útmutató</h3>
+              <p class="article-card-excerpt">A legtöbb kereskedő setupról setupra ugrál. A szisztematikus kereskedők egyszer építenek és örökké végrehajtanak.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/support-and-resistance-explained/hu/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Alapok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Támasz és Ellenállás: Minden Kereskedés Alapja</h3>
+              <p class="article-card-excerpt">A támasz és ellenállás a technikai elemzés alapja. Így azonosítod a valódi szinteket és kereskedsz velük anélkül, hogy csapdába esnél.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-backtesting-results-are-worthless/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Miért Értéktelenek a Backtest Eredmények (És Mit Tegyél Helyette)</h3>
+              <p class="article-card-excerpt">Találtál egy indikátort 78%-os nyerési aránnyal. Két év backtest. Aztán élőben kereskedsz és minden összeomlik.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-traders-blow-first-account/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Miért Robbantja Fel a Legtöbb Ember az Első Számláját</h3>
+              <p class="article-card-excerpt">Első nyereségek, növekvő önbizalom, méret növelése, aztán minden elvesztése. A sorrend kiszámítható.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-markets-move-in-cycles/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Miért Mozognak a Piacok Ciklusokban (És Hogyan Profitálj Belőle)</h3>
+              <p class="article-card-excerpt">A piacok az idő 20-30%-ában trendben vannak. A többi? Ciklusok. Ha megérted miért, megváltozik az egész kereskedésed.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/timeframe-selection/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Időkeret Választás: Miért Fontosabb az Indikátorodnál</h3>
+              <p class="article-card-excerpt">Az 5 perces grafikon vételt mond. A 4 órás eladást. A napi várakozást. Melyiknek van igaza?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-cut-losses-early/hu/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Kockázatkezelés</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Mikor Vágd a Veszteséget Korán (Mielőtt a Stopod Beütne)</h3>
+              <p class="article-card-excerpt">A stop loss a maximális kockázatod. De néha az okos dolog kilépni, mielőtt beütne. Így tudod megkülönböztetni.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/backtesting-without-fooling-yourself/hu/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Kereskedési Rendszerek</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Backtest Önámítás Nélkül: Stratégiák Őszinte Tesztelése</h3>
+              <p class="article-card-excerpt">A backtested 80%-os nyerési arányt mutat. Élőben kereskedsz és megsemmisülsz. Íme miért - és hogyan kell helyesen backtestelni.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-is-a-trading-edge/hu/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Alapok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Mi az a Kereskedési Előny? (És Honnan Tudod, Hogy Van-e)</h3>
+              <p class="article-card-excerpt">Mindenki "előnyről" beszél. De ez mit jelent valójában? Így érted meg, azonosítod és fejleszted a valódi előnyt.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-confirmation-trap/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">A Megerősítési Csapda: Miért Jelent Több Indikátor Rosszabb Eredményeket</h3>
+              <p class="article-card-excerpt">Négy indikátor van a grafikonodon. Ritkán egyeznek. Amikor igen, a mozgás már rég véget ért.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-profitable-traders-know/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Amit a Nyereséges Kereskedők Tudnak, Te Pedig Nem</h3>
+              <p class="article-card-excerpt">Nem okosabbak nálad. Nincsenek jobb indikátoraik. De valami más abban, ahogy megközelítik a kereskedést.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/accumulation-vs-distribution/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Akkumuláció vs Disztribúció: Olvasd, Amit a Grafikon Nem Mond El</h3>
+              <p class="article-card-excerpt">Két grafikon ugyanúgy néz ki. Az egyik masszív rally előtt van, a másik pusztító esés előtt. Így különbözteted meg őket.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/tradingview-free-scripts/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Amit a TradingView Nem Mond El az Ingyenes Scriptekről</h3>
+              <p class="article-card-excerpt">100.000+ ingyenes indikátor. Értékelések és lájkok, hogy segítsenek választani. Mi romolhat el? Sok minden, valójában.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/volume-profile-basics/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Volumen Profil: A Piac Rejtett Szerkezetének Olvasása</h3>
+              <p class="article-card-excerpt">Az árgrafikonok megmutatják, hol járt a piac. A volumen profil megmutatja, hol akart valójában lenni.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/revenge-trading-recovery/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Bosszú Kereskedés: A Pusztító Ciklus Megtörése</h3>
+              <p class="article-card-excerpt">Volt egy veszteséged. Aztán még egy, miközben próbáltad visszaszerezni. Aztán még egy. A gödör mélyült. Így töröd meg a ciklust.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycle-failures-and-what-they-mean/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ciklus Kudarcok: Amikor a Minta Megtörik (És Mit Mond Ez Neked)</h3>
+              <p class="article-card-excerpt">Vártad, hogy a ciklus beteljesüljön. Nem történt meg. Több mint kudarc, ez a törés fontos dolgot mond neked.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-a-pre-trade-checklist/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Működő Kereskedés Előtti Ellenőrző Lista Készítése</h3>
+              <p class="article-card-excerpt">A pilóták ellenőrző listákat használnak. A sebészek ellenőrző listákat használnak. A legjobb kereskedők ellenőrző listákat használnak.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-ignore-divergence/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Mikor Hagyd Figyelmen Kívül a Divergenciát (És Mikor Számít Valóban)</h3>
+              <p class="article-card-excerpt">RSI divergencia! MACD divergencia! Az indikátor azt mondja, a trend meg fog fordulni. Kivéve... általában nem fordul.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trading-while-emotional/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Érzelmi Kereskedés: A Számlák Rejtett Gyilkosa</h3>
+              <p class="article-card-excerpt">Összevesztél a pároddal. Rossz hírek a munkából. Nem aludtál jól. Mégis kereskedtél. Ez többe kerül, mint gondolnád.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/identifying-cycle-length/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ciklus Hossz Azonosítása: Hogyan Mérd a Piac Ritmusát</h3>
+              <p class="article-card-excerpt">A ciklusok ismétlődnek, de nem tökéletes ütemezéssel. Így mérheted a ritmust a te specifikus piacodon.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trade-journaling-that-works/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Működő Kereskedési Napló: Mit Kövess és Miért</h3>
+              <p class="article-card-excerpt">A legtöbb kereskedési napló felesleges munka. Így építs egy naplót, ami valóban javítja a kereskedésedet.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/multi-timeframe-confirmation/hu/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Indikátorok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Több Időkeretes Megerősítés: Ne Engedd, Hogy a Nagyobb Időkeret Eltiporjon</h3>
+              <p class="article-card-excerpt">Az 5 perces grafikonod tökéletesen néz ki. De a napi mást mond. Így igazítod össze az időkereteket, hogy együtt működjenek.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-boredom-trap/hu/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Pszichológia</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Az Unalom Csapda: Miért a Semmittevés a Legnehezebb Kereskedés</h3>
+              <p class="article-card-excerpt">Nincs setup. Órákon át várakozás. Aztán kereskedsz, csak hogy érezzél valamit. Az unalom több számlát pusztított el, mint a rossz elemzés.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycles-within-cycles/hu/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Piaci Ciklusok</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ciklusok a Ciklusokon Belül: A Piacok Fraktál Természete</h3>
+              <p class="article-card-excerpt">Közelíts egy ciklusra és kisebb ciklusokat találsz benne. Távolodj és nagyobbakat találsz, amik tartalmazzák. Így használod ezt a fraktál természetet.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-size-up/hu/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Gyakorlati</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Mikor Növeld a Méretet: Pozíciód Felelős Skálázása</h3>
+              <p class="article-card-excerpt">Konzisztens voltál. A számlád növekszik. Mikor jön el az idő a pozícióméret növelésére - és hogyan tedd anélkül, hogy felrobbannál?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+                <span>Signal Pilot Csapat</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://signalpilot.io">Kezdőlap</a>
+        <a href="https://docs.signalpilot.io">Dokumentáció</a>
+        <a href="https://education.signalpilot.io">Oktatási Központ</a>
+        <a href="https://signalpilot.io/#pricing">Árazás</a>
+        <a href="https://signalpilot.io/affiliates.html">Partnerprogram</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2025</span> Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        articleCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
