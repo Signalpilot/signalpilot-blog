@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backtesting Without Fooling Yourself: How to Test Strategies Honestly - Signal Pilot Blog</title>
+  <meta name="description" content="Your backtest shows 80% wins. You trade it live and get destroyed. Here's why - and how to backtest in a way that actually predicts forward performance.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Education</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Try Free</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <span class="article-category">Trading Systems</span>
+          <h1 class="article-title">Backtesting Without Fooling Yourself: How to Test Strategies Honestly</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min read</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>You run a backtest. It shows incredible results - 75% win rate, 3:1 reward-to-risk, smooth equity curve.</p>
+          <p>You trade it live. Within two weeks, you're down 15% and questioning everything.</p>
+          <p>What happened?</p>
+          <p>The backtest lied to you. Or more accurately, you lied to yourself through the backtest. Here's how this happens - and how to prevent it.</p>
+
+          <hr>
+
+          <h2>The Curve-Fitting Trap</h2>
+          <p>This is the most common mistake, and it's insidious because it feels like rigorous research.</p>
+          <p>Here's how it works: You test a strategy. It doesn't perform well. So you add a filter. Better. Add another filter. Better still. Keep tweaking until the backtest looks great.</p>
+          <p>What you've actually done is fit your rules to the specific historical data. You haven't discovered an edge - you've created a system that explains the past perfectly while predicting the future no better than random.</p>
+          <p><strong>Signs of curve-fitting:</strong></p>
+          <ul>
+            <li>Many parameters (more than 3-4 variables)</li>
+            <li>Specific "magic numbers" like RSI(13) instead of RSI(14)</li>
+            <li>Rules added specifically to filter out losing trades you saw in the data</li>
+            <li>Performance that degrades significantly with small parameter changes</li>
+          </ul>
+          <p><strong>The fix:</strong> Define your rules before looking at results. Make one change at a time. Require each rule to have a logical market reason, not just historical improvement.</p>
+
+          <hr>
+
+          <h2>The Look-Ahead Bias</h2>
+          <p>This is using information that wouldn't have been available at the time of the trade.</p>
+          <p><strong>Obvious version:</strong> "If tomorrow's close is higher than today's, buy today." Obviously impossible live - you don't know tomorrow's close today.</p>
+          <p><strong>Subtle version:</strong> Repainting indicators that change historical signals based on future data. That perfect buy signal at the low? It wasn't there when the low was forming. It appeared later, after the indicator saw what happened next.</p>
+          <p><strong>Other examples:</strong></p>
+          <ul>
+            <li>Using adjusted data that reflects stock splits that hadn't happened yet</li>
+            <li>Filtering by metrics (like average volume) calculated over the entire dataset</li>
+            <li>Knowing that a company survived (survivorship bias)</li>
+          </ul>
+          <p><strong>The fix:</strong> At any point in your backtest, ask: "Could I have known this at this moment?" If no, it's look-ahead bias.</p>
+
+          <hr>
+
+          <h2>The Survivorship Bias</h2>
+          <p>Your backtest uses current S&P 500 stocks going back 20 years. Great results!</p>
+          <p>Problem: You're only testing stocks that survived. All the companies that went bankrupt, got delisted, or crashed aren't in your data. Of course your system looks good - you pre-selected winners.</p>
+          <p>This is especially problematic for:</p>
+          <ul>
+            <li>Mean reversion strategies (the stocks that didn't revert are gone)</li>
+            <li>Value strategies (the cheap stocks that went to zero aren't in the data)</li>
+            <li>Long-term tests (more time for companies to disappear)</li>
+          </ul>
+          <p><strong>The fix:</strong> Use survivorship-free data. Test on historical index constituents as they were at each point in time, including companies that later failed.</p>
+
+          <hr>
+
+          <h2>The Transaction Cost Blindness</h2>
+          <p>Your backtest shows 500 trades per year with a small edge per trade. Multiply by 500 and you're rich!</p>
+          <p>Except you didn't account for:</p>
+          <ul>
+            <li><strong>Commissions:</strong> Even at $0 commission brokers, there are SEC fees and other small costs</li>
+            <li><strong>Spread:</strong> You buy at ask, sell at bid. That gap is a cost on every trade</li>
+            <li><strong>Slippage:</strong> Your backtest assumes perfect fills. Reality is messier</li>
+            <li><strong>Market impact:</strong> Your order itself moves the price, especially in less liquid instruments</li>
+          </ul>
+          <p>A strategy that makes 0.1% per trade but costs 0.15% per round-trip is actually losing money.</p>
+          <p><strong>The fix:</strong> Build realistic costs into your backtest. Assume you get filled worse than the price you see. The higher the frequency, the more conservative your cost assumptions should be.</p>
+
+          <hr>
+
+          <h2>The Out-of-Sample Test</h2>
+          <p>Here's the most important technique for honest backtesting: out-of-sample testing.</p>
+          <ol>
+            <li><strong>Divide your data.</strong> Split it into in-sample (say, 70%) and out-of-sample (30%)</li>
+            <li><strong>Develop on in-sample only.</strong> Do all your testing, tweaking, and optimization on the in-sample data</li>
+            <li><strong>Test once on out-of-sample.</strong> When you have a final system, test it on the out-of-sample data you've never looked at</li>
+            <li><strong>One shot.</strong> You only get one chance. If you test on out-of-sample, tweak, and test again, it's no longer out-of-sample</li>
+          </ol>
+          <p>If performance degrades significantly on out-of-sample data, you've overfit. If it holds up, you might have something real.</p>
+
+          <hr>
+
+          <h2>Walk-Forward Analysis</h2>
+          <p>Even better than simple out-of-sample testing is walk-forward analysis:</p>
+          <ol>
+            <li>Optimize on period 1 (say, 2015-2018)</li>
+            <li>Test on period 2 (2019)</li>
+            <li>Record the results</li>
+            <li>Optimize on period 2 (2016-2019)</li>
+            <li>Test on period 3 (2020)</li>
+            <li>Repeat</li>
+          </ol>
+          <p>This simulates what you'd actually do: periodically re-optimize your system using recent data, then trade forward.</p>
+          <p>If the "test" periods consistently perform well, your system is robust. If performance in test periods is much worse than optimization periods, you're curve-fitting.</p>
+
+          <hr>
+
+          <h2>The Monte Carlo Reality Check</h2>
+          <p>Your backtest shows a 25% maximum drawdown. Comfortable, right?</p>
+          <p>But that's just one path through history. Random variation could have produced much worse.</p>
+          <p>Monte Carlo analysis randomizes the order of your trades (or samples with replacement) and runs thousands of simulations. This shows you the range of outcomes that could have occurred with the same trades in different sequences.</p>
+          <p>If your maximum drawdown could have been 50% with different luck, you need to size for 50% drawdown, not 25%.</p>
+
+          <hr>
+
+          <h2>The Bottom Line</h2>
+          <p>Backtesting isn't proof of an edge. It's a way to disprove bad ideas - if you're honest about it.</p>
+          <p>A good backtest:</p>
+          <ul>
+            <li>Uses simple rules with market-based logic</li>
+            <li>Avoids look-ahead and survivorship bias</li>
+            <li>Includes realistic transaction costs</li>
+            <li>Reserves out-of-sample data for final validation</li>
+            <li>Stress-tests with walk-forward and Monte Carlo analysis</li>
+          </ul>
+          <p>The goal isn't a beautiful equity curve. It's a realistic estimate of forward performance. Those are very different things.</p>
+
+          <hr>
+
+          <div class="cta-box">
+            <p>Pentarch's non-repainting signals are designed for honest backtesting - what you see in history is exactly what you would have seen live, with no look-ahead bias.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Test with confidence →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Back to Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Education Hub</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
