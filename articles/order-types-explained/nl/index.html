@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Types Uitgelegd: Market, Limit en Stop Orders - Signal Pilot Blog</title>
+  <meta name="description" content="Market orders, limit orders, stop orders - het zijn de basistools van trading. Hier lees je wat elk type doet, wanneer je ze gebruikt, en de fouten die beginners maken.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="./">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educatie</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Vertalen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./" class="active"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema wisselen">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Gratis Proberen</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">Basis voor Beginners</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Artikel</span>
+          </nav>
+          <span class="article-category">Basis voor Beginners</span>
+          <h1 class="article-title">Order Types Uitgelegd: Market, Limit en Stop Orders</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Delen:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Delen op Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Delen op LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link kopiëren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Order types visualisatie" data-ai-prompt="Dark themed visualization showing three different order types as distinct visual elements - market order as an instant lightning bolt, limit order as a horizontal price line with a waiting indicator, stop order as a trigger point with an arrow. Price chart in background with order execution points marked. Deep navy background with cyan, green, and gold elements. Professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed visualization showing three different order types as distinct visual elements - market order as an instant lightning bolt, limit order as a horizontal price line with a waiting indicator, stop order as a trigger point with an arrow. Price chart in background with order execution points marked. Deep navy background with cyan, green, and gold elements. Professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Je hebt een setup gevonden. Je weet wat je wilt kopen. Maar hoe koop je het daadwerkelijk?</p>
+          <p>Order types zijn de tools die je analyse omzetten in werkelijke posities. De verkeerde gebruiken kost geld. De juiste gebruiken geeft je controle over je entries en exits.</p>
+          <p>Hier is wat elke beginner moet weten.</p>
+
+          <hr>
+
+          <h2>Market Orders: Koop Nu, Prijs Later</h2>
+          <p>Een market order zegt: "Ik wil deze positie direct. Vul me tegen welke prijs dan ook beschikbaar is."</p>
+          <p><strong>Hoe het werkt:</strong></p>
+          <ul>
+            <li>Je plaatst de order</li>
+            <li>Het wordt direct uitgevoerd tegen de beste beschikbare prijs</li>
+            <li>Je krijgt je positie, maar niet noodzakelijk tegen de exacte prijs die je zag</li>
+          </ul>
+          <p><strong>Wanneer market orders te gebruiken:</strong></p>
+          <ul>
+            <li>Je moet een verliesgevende positie onmiddellijk sluiten</li>
+            <li>De markt is zeer liquide en spreads zijn krap</li>
+            <li>Gevuld worden is belangrijker dan de perfecte prijs krijgen</li>
+            <li>Je handelt kleine grootte relatief tot volume</li>
+          </ul>
+          <p><strong>Het risico - slippage:</strong></p>
+          <p>Slippage is het verschil tussen de prijs die je verwachtte en de prijs die je kreeg. In snel bewegende of illiquide markten kan slippage aanzienlijk zijn.</p>
+          <p>Voorbeeld: Je ziet aandeel op €100,00, plaatst een market buy. Tegen de tijd dat het uitgevoerd wordt, ben je gevuld op €100,15. Dat is 0,15% slippage - en het telt op.</p>
+
+          <hr>
+
+          <h2>Limit Orders: Mijn Prijs of Niets</h2>
+          <p>Een limit order zegt: "Ik wil deze positie, maar alleen tegen mijn prijs of beter."</p>
+          <p><strong>Hoe het werkt:</strong></p>
+          <ul>
+            <li>Je specificeert de exacte prijs waartegen je wilt kopen of verkopen</li>
+            <li>De order wacht tot de markt je prijs bereikt</li>
+            <li>Als de markt je prijs nooit bereikt, wordt de order nooit gevuld</li>
+          </ul>
+          <p><strong>Voor kopen:</strong> Limit prijs = maximum dat je wilt betalen. Order wordt gevuld bij je prijs of lager.</p>
+          <p><strong>Voor verkopen:</strong> Limit prijs = minimum dat je wilt ontvangen. Order wordt gevuld bij je prijs of hoger.</p>
+          <p><strong>Wanneer limit orders te gebruiken:</strong></p>
+          <ul>
+            <li>Je wilt op een pullback of specifiek niveau kopen</li>
+            <li>Je bent bereid de trade te missen als je prijs niet geraakt wordt</li>
+            <li>Je handelt illiquide markten waar slippage een zorg is</li>
+            <li>Je wilt winst nemen op specifieke niveaus</li>
+          </ul>
+          <p><strong>Het risico - gemiste trades:</strong></p>
+          <p>De markt kan naar je target niveau racen en je limit missen, dan doorgaan zonder jou. Je hebt de perfecte prijs gepland en de hele move gemist.</p>
+
+          <hr>
+
+          <h2>Stop Orders: Activeer Wanneer Prijs Bereikt Wordt</h2>
+          <p>Een stop order zegt: "Wanneer prijs dit niveau bereikt, plaats mijn order."</p>
+          <p>Stops worden geactiveerd wanneer prijs door je gespecificeerde niveau beweegt. Zodra geactiveerd, worden ze market orders (stop-market) of limit orders (stop-limit).</p>
+          <p><strong>Stop-market orders:</strong></p>
+          <ul>
+            <li>Prijs bereikt je stop niveau</li>
+            <li>Order verandert in een market order</li>
+            <li>Wordt direct gevuld tegen beste beschikbare prijs</li>
+          </ul>
+          <p><strong>Stop-limit orders:</strong></p>
+          <ul>
+            <li>Prijs bereikt je stop niveau</li>
+            <li>Order verandert in een limit order bij je gespecificeerde prijs</li>
+            <li>Wordt alleen gevuld bij je limit prijs of beter</li>
+          </ul>
+          <p><strong>Primaire gebruiken voor stops:</strong></p>
+          <p><strong>1. Stop losses (bescherming):</strong> Plaats een sell stop onder je entry om verlies te beperken als de trade tegen je keert.</p>
+          <p><strong>2. Breakout entries:</strong> Plaats een buy stop boven weerstand om een breakout te betreden als het gebeurt.</p>
+
+          <hr>
+
+          <h2>De Stop Loss: Je Belangrijkste Order</h2>
+          <p>Elke trade die je ooit plaatst moet een stop loss hebben. Dit is niet optioneel.</p>
+          <p><strong>Hoe het werkt:</strong></p>
+          <ul>
+            <li>Je koopt aandeel op €50</li>
+            <li>Je bepaalt dat €48 je invalidatieniveau is (onder steun)</li>
+            <li>Je plaatst een sell stop bij €48</li>
+            <li>Als prijs onder €48 valt, wordt je positie automatisch verkocht</li>
+          </ul>
+          <p><strong>Waarom stop-market vs stop-limit belangrijk is:</strong></p>
+          <p>Stop-market: Garandeert exit maar niet prijs. In een crash kun je significant onder je stop gevuld worden.</p>
+          <p>Stop-limit: Garandeert prijs maar niet exit. Als de markt door je limit gapt, blijf je in de trade zitten.</p>
+          <p>Voor de meeste stop losses worden stop-market orders aanbevolen. Exit krijgen is belangrijker dan exit prijs wanneer je thesis ongeldig is.</p>
+
+          <hr>
+
+          <h2>Gecombineerde Orders</h2>
+          <p>Moderne platforms laten je meerdere orders combineren:</p>
+          <p><strong>OCO (One-Cancels-Other):</strong> Plaats een target en een stop loss. Wanneer één gevuld wordt, wordt de andere automatisch geannuleerd.</p>
+          <p><strong>Bracket Orders:</strong> Entry order plus gekoppelde stop loss en take profit. Alles ingesteld in één commando.</p>
+          <p><strong>Trailing Stops:</strong> Een stop die beweegt met de markt. Als prijs in je voordeel beweegt, beweegt je stop mee terwijl winst beschermd blijft.</p>
+          <p>Deze tools automatiseren uitvoering zodat je niet elke tick hoeft te monitoren. Stel ze in wanneer je de trade plaatst, niet nadat de markt beweegt.</p>
+
+          <hr>
+
+          <h2>Veel Voorkomende Beginners Fouten</h2>
+          <p><strong>Market orders gebruiken in volatiele markten:</strong> Nieuws breekt, je wilt snel erin/eruit, je krijgt verschrikkelijke fills. Gebruik limits of wacht tot volatiliteit afneemt.</p>
+          <p><strong>Stops te strak zetten:</strong> Je stop is 0,5% van entry. Normale marktflutuatie stopt je uit voordat de echte move begint. Geef trades ruimte om te ademen.</p>
+          <p><strong>Stop-limits gebruiken voor stop losses:</strong> Markt gapt door je limit in een selloff. Je stop-limit wordt nooit gevuld. Je blijft in een stortende positie zitten. Gebruik stop-markets voor bescherming.</p>
+          <p><strong>Orders openen laten zonder stops:</strong> "Ik kom snel terug." Markt crasht terwijl je weg bent. Heb altijd stops actief wanneer je niet kijkt.</p>
+          <p><strong>Orders vergeten te annuleren:</strong> Je limit buy van een week geleden vult plotseling. Je bent nu in een trade die je niet meer wilt. Annuleer of update achtergebleven orders.</p>
+
+          <hr>
+
+          <h2>De Conclusie</h2>
+          <p>Order types zijn de mechanica van trading. Begrijpen hoe elk werkt geeft je controle over uitvoering.</p>
+          <ul>
+            <li><strong>Market orders:</strong> Directe uitvoering, prijsonzekerheid</li>
+            <li><strong>Limit orders:</strong> Prijscontrole, geen fill garantie</li>
+            <li><strong>Stop orders:</strong> Triggers bij prijsniveau, dan converteert naar market of limit</li>
+          </ul>
+          <p>Gebruik voor de meeste trades: limit orders voor entry (prijscontrole), stop-market orders voor stop losses (gegarandeerde exit), en limit orders voor targets (gegarandeerde winstprijs).</p>
+          <p>Oefen met kleine posities totdat order uitvoering instinctief aanvoelt. De beste analyse ter wereld doet er niet toe als je de trade verkeerd uitvoert.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Gerelateerde Artikelen</h3>
+            <div class="related-grid">
+              <a href="../your-first-trade/" class="related-card">
+                <span class="related-category">Beginners</span>
+                <h4>Je Eerste Trade: Een Complete Walkthrough</h4>
+              </a>
+              <a href="../position-sizing-101/" class="related-card">
+                <span class="related-category">Risico</span>
+                <h4>Positiegrootte 101: De Wiskunde Die Je in het Spel Houdt</h4>
+              </a>
+              <a href="../stop-loss-placement/" class="related-card">
+                <span class="related-category">Praktisch</span>
+                <h4>Stop Loss Plaatsing: Waarom Die Van Jou Waarschijnlijk Fout Is</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../system-optimization/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Vorige
+              </span>
+              <span class="article-nav-title">Systeem Optimalisatie: Wanneer Aanpassen Over-Fitting Wordt</span>
+            </a>
+            <a href="../your-first-trade/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Volgende
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Je Eerste Trade: Een Complete Walkthrough</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>OmniDeck's signalen komen met specifieke entry niveaus en stop plaatsing, zodat je weet welk order type waar te gebruiken. Gecombineerd met positiegrootte calculators, wordt order uitvoering systematisch in plaats van stressvol.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Bekijk precisie entries →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Terug naar Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatie Hub</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
