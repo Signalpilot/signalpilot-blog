@@ -1,6 +1,48 @@
 {
   "articles": [
     {
+      "title": "Your First Trade: A Complete Walkthrough",
+      "url": "https://blog.signalpilot.io/articles/your-first-trade/",
+      "description": "Ready to place your first trade? Here's everything you need to do before, during, and after - a step-by-step guide for complete beginners.",
+      "tags": ["beginner", "risk-management"],
+      "date": "2024-12-25"
+    },
+    {
+      "title": "Order Types Explained: Market, Limit, and Stop Orders",
+      "url": "https://blog.signalpilot.io/articles/order-types-explained/",
+      "description": "Market orders, limit orders, stop orders - they're the basic tools of trading. Here's what each does, when to use them, and the mistakes beginners make.",
+      "tags": ["beginner", "practical"],
+      "date": "2024-12-24"
+    },
+    {
+      "title": "System Optimization: When Tweaking Becomes Over-Fitting",
+      "url": "https://blog.signalpilot.io/articles/system-optimization/",
+      "description": "Your backtest looked perfect. Live trading was a disaster. Here's how optimization becomes over-fitting - and how to avoid the trap.",
+      "tags": ["backtesting", "intermediate"],
+      "date": "2024-12-23"
+    },
+    {
+      "title": "Trading Journal: The System Behind Your System",
+      "url": "https://blog.signalpilot.io/articles/trading-journal/",
+      "description": "Every professional trader keeps a journal. Most retail traders don't. Here's what to track, how to track it, and why it transforms your trading.",
+      "tags": ["backtesting", "beginner"],
+      "date": "2024-12-22"
+    },
+    {
+      "title": "Risk-Reward Ratio: The Numbers That Actually Matter",
+      "url": "https://blog.signalpilot.io/articles/risk-reward-ratio/",
+      "description": "Everyone talks about 3:1 risk-reward. But the real math is more nuanced. Here's how risk-reward actually works - and when it doesn't matter.",
+      "tags": ["risk-management", "intermediate"],
+      "date": "2024-12-21"
+    },
+    {
+      "title": "Drawdown Management: How to Survive Losing Streaks",
+      "url": "https://blog.signalpilot.io/articles/drawdown-management/",
+      "description": "Every trader faces losing streaks. The ones who survive handle drawdowns differently. Here's the math and psychology of staying in the game.",
+      "tags": ["risk-management", "intermediate"],
+      "date": "2024-12-20"
+    },
+    {
       "title": "Why Your Indicators Keep Failing (And What Actually Works)",
       "url": "https://blog.signalpilot.io/articles/why-your-indicators-keep-failing/",
       "description": "You've got RSI, MACD, Bollinger Bands, maybe a few moving averages. Your chart looks like a rainbow exploded on it. And somehow, you're still getting chopped up.",

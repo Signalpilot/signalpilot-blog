@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Types Explained: Market, Limit, and Stop Orders - Signal Pilot Blog</title>
+  <meta name="description" content="Market orders, limit orders, stop orders - they're the basic tools of trading. Here's what each does, when to use them, and the mistakes beginners make.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="es" href="./es/">
+  <link rel="alternate" hreflang="de" href="./de/">
+  <link rel="alternate" hreflang="fr" href="./fr/">
+  <link rel="alternate" hreflang="it" href="./it/">
+  <link rel="alternate" hreflang="pt" href="./pt/">
+  <link rel="alternate" hreflang="nl" href="./nl/">
+  <link rel="alternate" hreflang="ru" href="./ru/">
+  <link rel="alternate" hreflang="ja" href="./ja/">
+  <link rel="alternate" hreflang="ar" href="./ar/">
+  <link rel="alternate" hreflang="tr" href="./tr/">
+  <link rel="alternate" hreflang="hu" href="./hu/">
+  <link rel="alternate" hreflang="x-default" href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Education</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Translate">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="./" class="active"><span class="flag">🇬🇧</span> English</a>
+                  <a href="./es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="./de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="./fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="./it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="./pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="./ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="./ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="./ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Try Free</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">Beginner Foundations</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Article</span>
+          </nav>
+          <span class="article-category">Beginner Foundations</span>
+          <h1 class="article-title">Order Types Explained: Market, Limit, and Stop Orders</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min read</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Share:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Share on Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Share on LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copy link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="hero.png" alt="Order types visualization" data-ai-prompt="Dark themed visualization showing three different order types as distinct visual elements - market order as an instant lightning bolt, limit order as a horizontal price line with a waiting indicator, stop order as a trigger point with an arrow. Price chart in background with order execution points marked. Deep navy background with cyan, green, and gold elements. Professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed visualization showing three different order types as distinct visual elements - market order as an instant lightning bolt, limit order as a horizontal price line with a waiting indicator, stop order as a trigger point with an arrow. Price chart in background with order execution points marked. Deep navy background with cyan, green, and gold elements. Professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>You found a setup. You know what you want to buy. But how do you actually buy it?</p>
+          <p>Order types are the tools that turn your analysis into actual positions. Using the wrong one costs money. Using the right one gives you control over your entries and exits.</p>
+          <p>Here's what every beginner needs to know.</p>
+
+          <hr>
+
+          <h2>Market Orders: Buy Now, Price Later</h2>
+          <p>A market order says: "I want this position immediately. Fill me at whatever price is available."</p>
+          <p><strong>How it works:</strong></p>
+          <ul>
+            <li>You submit the order</li>
+            <li>It executes instantly at the best available price</li>
+            <li>You get your position, but not necessarily at the exact price you saw</li>
+          </ul>
+          <p><strong>When to use market orders:</strong></p>
+          <ul>
+            <li>You need to exit a losing position immediately</li>
+            <li>The market is highly liquid and spreads are tight</li>
+            <li>Getting filled is more important than getting the perfect price</li>
+            <li>You're trading small size relative to volume</li>
+          </ul>
+          <p><strong>The risk - slippage:</strong></p>
+          <p>Slippage is the difference between the price you expected and the price you got. In fast-moving or illiquid markets, slippage can be significant.</p>
+          <p>Example: You see stock at $100.00, submit a market buy. By the time it executes, you're filled at $100.15. That's 0.15% slippage - and it adds up.</p>
+
+          <hr>
+
+          <h2>Limit Orders: My Price or Nothing</h2>
+          <p>A limit order says: "I want this position, but only at my specified price or better."</p>
+          <p><strong>How it works:</strong></p>
+          <ul>
+            <li>You specify the maximum price you'll pay (for buys) or minimum you'll accept (for sells)</li>
+            <li>The order sits and waits until your price is available</li>
+            <li>If price never reaches your limit, the order never fills</li>
+          </ul>
+          <p><strong>Buy limit:</strong> Set below current price. "I'll buy if it drops to $95."</p>
+          <p><strong>Sell limit:</strong> Set above current price. "I'll sell if it rises to $105."</p>
+          <p><strong>When to use limit orders:</strong></p>
+          <ul>
+            <li>You want a specific entry price and can wait for it</li>
+            <li>You're placing profit targets</li>
+            <li>The market is volatile or illiquid</li>
+            <li>You want to "bid" for a pullback entry</li>
+          </ul>
+          <p><strong>The risk - not getting filled:</strong></p>
+          <p>Price might never reach your limit. The trade you wanted happens without you because you were waiting for a slightly better price. Being too aggressive with limits means missing good trades.</p>
+
+          <hr>
+
+          <h2>Stop Orders: Trigger and Execute</h2>
+          <p>A stop order says: "When price reaches my trigger level, convert this to a market order."</p>
+          <p><strong>How it works:</strong></p>
+          <ul>
+            <li>You set a trigger price (the "stop")</li>
+            <li>Order sits inactive until price reaches the trigger</li>
+            <li>Once triggered, it becomes a market order and fills immediately</li>
+          </ul>
+          <p><strong>Buy stop:</strong> Set above current price. "If it breaks $105, I want in."</p>
+          <p><strong>Sell stop:</strong> Set below current price. "If it breaks $95, get me out."</p>
+          <p><strong>When to use stop orders:</strong></p>
+          <ul>
+            <li>Stop losses - automatically exit losing positions</li>
+            <li>Breakout entries - enter when price breaks a level</li>
+            <li>Protecting profits - trailing stops that follow price up</li>
+          </ul>
+          <p><strong>The risk - gaps and slippage:</strong></p>
+          <p>Stop orders become market orders when triggered. In fast moves or gaps, your fill can be far from your stop price.</p>
+          <p>Example: Your stop is at $95. Stock gaps down overnight to $90. Your stop triggers and fills at $90, not $95. You lost $5 more per share than planned.</p>
+
+          <hr>
+
+          <h2>Stop-Limit Orders: Trigger with Conditions</h2>
+          <p>A stop-limit order says: "When price reaches my trigger, place a limit order at my specified price."</p>
+          <p><strong>How it works:</strong></p>
+          <ul>
+            <li>You set both a stop price (trigger) and a limit price</li>
+            <li>When the stop triggers, a limit order is placed</li>
+            <li>The limit order only fills at your limit price or better</li>
+          </ul>
+          <p><strong>Example:</strong> Stop at $95, limit at $94.50. When price hits $95, a limit sell at $94.50 is placed. You'll sell at $94.50 or higher, but not below.</p>
+          <p><strong>When to use stop-limit orders:</strong></p>
+          <ul>
+            <li>You want to limit worst-case slippage</li>
+            <li>You're trading instruments that gap frequently</li>
+            <li>You're okay with potentially not getting filled</li>
+          </ul>
+          <p><strong>The risk - not getting filled at all:</strong></p>
+          <p>If price gaps past both your stop AND your limit, you don't get filled. Your stop-loss fails to stop your loss.</p>
+          <p>Example: Stop at $95, limit at $94.50. Stock gaps to $93. Your limit at $94.50 never fills because price is already below it. You're still in a losing position.</p>
+
+          <hr>
+
+          <h2>Order Duration: GTC vs Day</h2>
+          <p>Beyond order type, you need to specify how long the order stays active.</p>
+          <p><strong>Day order:</strong> Expires at market close if not filled. Tomorrow you'd need to re-enter it.</p>
+          <p><strong>GTC (Good Till Cancelled):</strong> Stays active until filled or you cancel it. Can last days, weeks, months.</p>
+          <p><strong>When to use each:</strong></p>
+          <ul>
+            <li><strong>Day orders:</strong> For entries where today's setup might not be valid tomorrow</li>
+            <li><strong>GTC:</strong> For stop losses (you want protection always) and longer-term limit orders</li>
+          </ul>
+          <p>Be careful with GTC orders - you might forget about a limit order from weeks ago that suddenly fills in changed market conditions.</p>
+
+          <hr>
+
+          <h2>Practical Order Combinations</h2>
+          <p><strong>Basic trade setup:</strong></p>
+          <ol>
+            <li>Limit order to enter at your desired price</li>
+            <li>Stop order for your stop loss (GTC)</li>
+            <li>Limit order for your profit target (GTC)</li>
+          </ol>
+          <p><strong>Breakout trade setup:</strong></p>
+          <ol>
+            <li>Buy stop above resistance to enter on breakout</li>
+            <li>Sell stop below entry for stop loss</li>
+            <li>Sell limit at target for profit taking</li>
+          </ol>
+          <p><strong>Many brokers offer bracket orders</strong> that place entry, stop loss, and profit target simultaneously. When one fills, the others automatically activate or cancel.</p>
+
+          <hr>
+
+          <h2>Common Beginner Mistakes</h2>
+          <p><strong>Using market orders in illiquid markets:</strong> Wide spreads and thin order books mean massive slippage. Always use limits in low-volume instruments.</p>
+          <p><strong>Stop-limits on stop losses:</strong> Your stop loss exists to protect you. Using a stop-limit risks the protection failing. For true stop losses, regular stop orders are usually better.</p>
+          <p><strong>Forgetting GTC orders:</strong> That limit order from three weeks ago? It might fill when you've forgotten about it and the setup is no longer valid.</p>
+          <p><strong>Chasing with market orders:</strong> Stock is running, you want in NOW, you slam a market order. You get filled at the high, it reverses immediately. Discipline means using limits even when excited.</p>
+
+          <hr>
+
+          <h2>The Bottom Line</h2>
+          <p>Order types are tools. The right tool depends on what you're trying to accomplish.</p>
+          <ul>
+            <li><strong>Need certainty of fill?</strong> Market order</li>
+            <li><strong>Need certainty of price?</strong> Limit order</li>
+            <li><strong>Need automatic triggers?</strong> Stop order</li>
+            <li><strong>Need both trigger and price control?</strong> Stop-limit (with its risks)</li>
+          </ul>
+          <p>Master these basics before touching more complex order types. Every professional trader started here.</p>
+          <p>Once you understand order mechanics, you can focus on what matters: identifying quality setups and executing your plan. The right order type is simply the tool that executes your plan with minimum friction and maximum control.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Related Articles</h3>
+            <div class="related-grid">
+              <a href="../your-first-trade/" class="related-card">
+                <span class="related-category">Beginner</span>
+                <h4>Your First Trade: A Complete Walkthrough</h4>
+              </a>
+              <a href="../candlestick-basics/" class="related-card">
+                <span class="related-category">Beginner</span>
+                <h4>Candlestick Basics: Reading Price Action</h4>
+              </a>
+              <a href="../stop-loss-placement/" class="related-card">
+                <span class="related-category">Practical</span>
+                <h4>Stop Loss Placement: Why Yours Is Probably Wrong</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../system-optimization/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Previous
+              </span>
+              <span class="article-nav-title">System Optimization: When Tweaking Becomes Over-Fitting</span>
+            </a>
+            <a href="../your-first-trade/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Next
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Your First Trade: A Complete Walkthrough</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Signal Pilot's alert system tells you when setups trigger - you decide how to enter based on your preferred order type and risk tolerance. The signal identifies the opportunity; your order execution determines how you capture it.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">See signal alerts →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Back to Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Education Hub</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

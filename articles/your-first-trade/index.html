@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your First Trade: A Complete Walkthrough - Signal Pilot Blog</title>
+  <meta name="description" content="Ready to place your first trade? Here's everything you need to do before, during, and after - a step-by-step guide for complete beginners.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="es" href="./es/">
+  <link rel="alternate" hreflang="de" href="./de/">
+  <link rel="alternate" hreflang="fr" href="./fr/">
+  <link rel="alternate" hreflang="it" href="./it/">
+  <link rel="alternate" hreflang="pt" href="./pt/">
+  <link rel="alternate" hreflang="nl" href="./nl/">
+  <link rel="alternate" hreflang="ru" href="./ru/">
+  <link rel="alternate" hreflang="ja" href="./ja/">
+  <link rel="alternate" hreflang="ar" href="./ar/">
+  <link rel="alternate" hreflang="tr" href="./tr/">
+  <link rel="alternate" hreflang="hu" href="./hu/">
+  <link rel="alternate" hreflang="x-default" href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Education</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Translate">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="./" class="active"><span class="flag">🇬🇧</span> English</a>
+                  <a href="./es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="./de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="./fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="./it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="./pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="./ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="./ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="./ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Try Free</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">Beginner Foundations</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Article</span>
+          </nav>
+          <span class="article-category">Beginner Foundations</span>
+          <h1 class="article-title">Your First Trade: A Complete Walkthrough</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 min read</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Share:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Share on Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Share on LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copy link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="hero.png" alt="First trade visualization" data-ai-prompt="Dark themed visualization of a beginner taking their first step into trading - a figure stepping onto a path made of candlestick charts leading toward a glowing horizon. Checklist or roadmap elements floating nearby. Encouraging but professional aesthetic. Deep navy background with cyan pathway and golden highlights. Clean, welcoming professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed visualization of a beginner taking their first step into trading - a figure stepping onto a path made of candlestick charts leading toward a glowing horizon. Checklist or roadmap elements floating nearby. Encouraging but professional aesthetic. Deep navy background with cyan pathway and golden highlights. Clean, welcoming professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>You've read about trading. You've studied charts. You've opened an account. Now you're staring at the buy button, heart racing.</p>
+          <p>Your first trade is a milestone. Let's make sure you do it right - not rushed, not reckless, but methodical and controlled.</p>
+          <p>Here's exactly what to do, step by step.</p>
+
+          <hr>
+
+          <h2>Before You Trade: The Prerequisites</h2>
+          <p>Don't skip these. Your first trade should happen after you've:</p>
+          <p><strong>1. Funded your account appropriately</strong></p>
+          <p>Only trade money you can afford to lose. Seriously. If losing this money would cause financial stress, stop here. Trading capital should be truly risk capital.</p>
+          <p>Start small. Even experienced traders test new approaches with minimal size. As a beginner, your first trades are tuition - paying to learn.</p>
+          <p><strong>2. Practiced on paper first</strong></p>
+          <p>Most brokers offer paper trading (simulated trading with fake money). Use it. Execute at least 20-30 paper trades until the mechanics feel natural.</p>
+          <p>You want your first real trade to be about the trade, not fumbling with the platform.</p>
+          <p><strong>3. Understood order types</strong></p>
+          <p>Know the difference between market orders, limit orders, and stop orders. Know when to use each. This isn't optional - it's how you control your risk.</p>
+          <p><strong>4. Defined your risk rules</strong></p>
+          <p>Before entering any trade, you must know: How much will I lose if I'm wrong? For beginners, risk 0.5-1% of your account per trade maximum.</p>
+
+          <hr>
+
+          <h2>Step 1: Find a Setup</h2>
+          <p>Your first trade needs a reason. Not "I think it'll go up" - an actual setup based on something you can identify and repeat.</p>
+          <p><strong>Simple setups for beginners:</strong></p>
+          <ul>
+            <li><strong>Breakout above resistance:</strong> Price breaks above a level it previously couldn't pass</li>
+            <li><strong>Bounce off support:</strong> Price touches a level and bounces, showing buyers defending that price</li>
+            <li><strong>Moving average bounce:</strong> Price pulls back to a rising moving average and holds</li>
+          </ul>
+          <p>Pick one setup type. Learn it. Your first trade should use this setup.</p>
+          <p><strong>Write down why you're taking this trade.</strong> "Price broke above the $50 resistance level that has held for two weeks, with above-average volume." This is your thesis.</p>
+
+          <hr>
+
+          <h2>Step 2: Define Your Stop Loss</h2>
+          <p>Before you know your entry, you must know your exit-if-wrong.</p>
+          <p><strong>Your stop loss goes where your thesis is invalidated.</strong></p>
+          <ul>
+            <li>Breakout trade: Stop below the breakout level</li>
+            <li>Support bounce: Stop below the support level</li>
+            <li>Moving average bounce: Stop below the moving average</li>
+          </ul>
+          <p>Example: You're buying a breakout above $50. Your stop goes at $48.50 (below the breakout level). If price falls back below $48.50, the breakout failed - you're out.</p>
+          <p><strong>Never enter a trade without knowing exactly where you'll exit if wrong.</strong></p>
+
+          <hr>
+
+          <h2>Step 3: Calculate Position Size</h2>
+          <p>This is where most beginners go wrong. Position size isn't arbitrary - it's calculated from your risk.</p>
+          <p><strong>The formula:</strong></p>
+          <p>Position Size = (Account × Risk %) ÷ (Entry - Stop)</p>
+          <p><strong>Example:</strong></p>
+          <ul>
+            <li>Account: $10,000</li>
+            <li>Risk per trade: 1% = $100</li>
+            <li>Entry price: $50</li>
+            <li>Stop loss: $48.50</li>
+            <li>Risk per share: $50 - $48.50 = $1.50</li>
+            <li>Position size: $100 ÷ $1.50 = 66 shares</li>
+          </ul>
+          <p>If you buy 66 shares at $50 and get stopped out at $48.50, you lose $99 - approximately 1% of your account. The math protects you.</p>
+
+          <hr>
+
+          <h2>Step 4: Define Your Target</h2>
+          <p>Where will you take profits?</p>
+          <p>For your first trades, keep it simple: aim for at least 2:1 reward-to-risk. If you're risking $1.50 per share (entry to stop), your target should be at least $3.00 per share above entry.</p>
+          <p>Example: Entry at $50, stop at $48.50, target at $53 (risking $1.50 to make $3).</p>
+          <p>Better yet, identify a logical target based on chart structure - a prior resistance level, a round number, or a measured move.</p>
+
+          <hr>
+
+          <h2>Step 5: Enter the Trade</h2>
+          <p>You have your setup, stop, size, and target. Now execute.</p>
+          <p><strong>For beginners, use a limit order to enter.</strong> This gives you price control and prevents slippage.</p>
+          <ol>
+            <li>Open your broker platform</li>
+            <li>Enter the symbol</li>
+            <li>Select "Buy" and "Limit Order"</li>
+            <li>Enter your limit price (your desired entry)</li>
+            <li>Enter your position size (the shares you calculated)</li>
+            <li>Review everything before submitting</li>
+            <li>Submit the order</li>
+          </ol>
+          <p><strong>Immediately after your entry fills, place your stop loss order.</strong> This is non-negotiable. Your stop should be active the moment your position is open.</p>
+
+          <hr>
+
+          <h2>Step 6: Manage the Trade</h2>
+          <p>You're in. Now what?</p>
+          <p><strong>The beginner's management plan:</strong></p>
+          <ol>
+            <li><strong>Don't stare at every tick.</strong> Set your stop and target. Let them work. Watching every movement creates emotional decisions.</li>
+            <li><strong>Don't move your stop further away.</strong> If you need to give the trade "more room," you sized wrong or your stop was in the wrong place. Accept the loss if it comes.</li>
+            <li><strong>Don't add to a losing position.</strong> Averaging down is how beginners blow accounts. If the trade is wrong, let it stop out.</li>
+            <li><strong>Consider taking partial profits.</strong> When price reaches 1:1 (you've gained as much as you risked), consider selling half and moving your stop to breakeven on the rest. This locks in profit while letting winners run.</li>
+          </ol>
+
+          <hr>
+
+          <h2>Step 7: Exit the Trade</h2>
+          <p>Every trade ends. It will be one of these:</p>
+          <p><strong>Stopped out (loss):</strong> Price hit your stop. You lost what you planned to lose. This is success - you controlled risk. Log the trade, learn what you can, move on.</p>
+          <p><strong>Target hit (win):</strong> Price reached your profit target. You made what you planned to make. Log the trade, note what worked, move on.</p>
+          <p><strong>Manual exit:</strong> Sometimes conditions change. The reason you entered no longer applies. It's okay to exit before your stop or target. Just have a reason.</p>
+
+          <hr>
+
+          <h2>Step 8: Log and Review</h2>
+          <p>After every trade, record:</p>
+          <ul>
+            <li>Date and symbol</li>
+            <li>Entry and exit prices</li>
+            <li>P&L in dollars and percentage</li>
+            <li>What setup you used</li>
+            <li>Did you follow your plan exactly?</li>
+            <li>What would you do differently?</li>
+          </ul>
+          <p>Your first trades are learning experiences. The journal captures what you're learning.</p>
+
+          <hr>
+
+          <h2>Common First-Trade Mistakes</h2>
+          <p><strong>Trading too large:</strong> Excitement leads to oversizing. Stick to your position size calculation, no matter how confident you feel.</p>
+          <p><strong>No stop loss:</strong> "I'll watch it closely" is not a risk management plan. Always have a stop order active.</p>
+          <p><strong>Moving stops:</strong> The trade goes against you, you move your stop further away hoping it'll recover. This is how small losses become account-killing losses.</p>
+          <p><strong>Revenge trading:</strong> Your first trade was a loss. You immediately jump into another trade to "make it back." Stop. Losing trades are normal. The next trade should meet all your criteria, not your emotional need for recovery.</p>
+          <p><strong>Abandoning the plan:</strong> You had entry, stop, and target. Then you panicked and sold early, or held through your stop, or took profit too quickly. Trust the process.</p>
+
+          <hr>
+
+          <h2>The Bottom Line</h2>
+          <p>Your first trade is the beginning of a journey. Do it right:</p>
+          <ol>
+            <li>Have a setup with a clear reason</li>
+            <li>Know your stop loss before entering</li>
+            <li>Calculate proper position size</li>
+            <li>Define your profit target</li>
+            <li>Execute with discipline</li>
+            <li>Manage without emotion</li>
+            <li>Log and learn</li>
+          </ol>
+          <p>Whether this trade wins or loses matters less than whether you followed the process. Professionals don't judge themselves by individual trades - they judge themselves by process execution.</p>
+          <p>Start that habit now. Your first trade sets the tone for every trade that follows.</p>
+          <p>As you progress, tools can help systematize this process. Confluence scoring shows when multiple factors align, increasing confidence. Cycle analysis reveals whether you're buying into strength or weakness. Risk calculators ensure position sizing is always correct. The process becomes automatic - and your edge compounds.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Related Articles</h3>
+            <div class="related-grid">
+              <a href="../order-types-explained/" class="related-card">
+                <span class="related-category">Beginner</span>
+                <h4>Order Types Explained: Market, Limit, and Stop Orders</h4>
+              </a>
+              <a href="../position-sizing-101/" class="related-card">
+                <span class="related-category">Risk</span>
+                <h4>Position Sizing 101: The Math That Keeps You in the Game</h4>
+              </a>
+              <a href="../3-questions-before-every-trade/" class="related-card">
+                <span class="related-category">Risk</span>
+                <h4>The 3 Questions to Ask Before Every Trade</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../order-types-explained/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Previous
+              </span>
+              <span class="article-nav-title">Order Types Explained: Market, Limit, and Stop Orders</span>
+            </a>
+            <a href="../candlestick-basics/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Next
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Candlestick Basics: Reading Price Action Like a Pro</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Signal Pilot provides clear signals with built-in confluence scoring - so your first trades have professional-grade context. Know the cycle phase, volume regime, and multi-timeframe alignment before every entry. Start with structure, not guesswork.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Start with context →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Back to Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Education Hub</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
