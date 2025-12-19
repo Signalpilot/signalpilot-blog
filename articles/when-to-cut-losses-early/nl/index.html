@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanneer Verliezen Vroeg Te Kappen (Voordat Je Stop Wordt Geraakt) - Signal Pilot Blog</title>
+  <meta name="description" content="Je stop loss is je maximale risico. Maar soms is de slimme zet om eerder uit te stappen.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="./">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educatie</a><a href="/nl/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Vertalen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="./" class="active"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Gratis Proberen</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/nl/">Blog</a><span class="breadcrumb-sep">›</span><a href="/nl/?filter=risk">Risicobeheer</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
+      <span class="article-category">Risicobeheer</span>
+      <h1 class="article-title">Wanneer Verliezen Vroeg Te Kappen (Voordat Je Stop Wordt Geraakt)</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span><span>Signal Pilot Team</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Visualisatie van vroeg verliezen kappen"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Elk tradingboek zegt dat je je stop loss moet respecteren. Zet hem en vergeet hem. Laat de trade werken.</p>
+      <p>Dit is goed advies - meestal. Maar er zijn momenten waarop de slimme zet is om uit te stappen voordat je stop wordt geraakt. Neem een kleiner verlies. Bewaar kapitaal voor een betere kans.</p>
+      <p>De truc is weten wanneer vroeg uitstappen discipline is en wanneer het angst is vermomd als discipline.</p>
+      <hr>
+      <h2>De These is Veranderd</h2>
+      <p>Je bent een trade ingegaan om een reden. Je zag een patroon, een setup, een katalysator. Je stop werd geplaatst waar die these ongeldig zou worden.</p>
+      <p>Maar markten evolueren. Nieuwe informatie komt. Soms wordt je these ongeldig voordat de prijs je stop bereikt.</p>
+      <p><strong>Voorbeeld:</strong> Je kocht een breakout. De prijs brak door weerstand, je stapte in op de retest. Je stop is onder het breakoutniveau.</p>
+      <p>Maar nu beweegt de prijs zijwaarts. Het volume is opgedroogd. Wat een breakout leek, wordt een mislukte breakout.</p>
+      <hr>
+      <h2>Tijd Invalidatie</h2>
+      <p>Sommige setups hebben een tijdscomponent. Als de verwachte beweging niet binnen een bepaald tijdsvenster plaatsvindt, faalt de setup ook als de prijs niet tegen je bewoog.</p>
+      <p><strong>Momentum trades:</strong> Als je momentum tradeert en de prijs vlak gaat, is momentum weg.</p>
+      <p><strong>Event trades:</strong> Je kocht voor earnings in verwachting van een beweging. Earnings komen, prijs beweegt niet.</p>
+      <hr>
+      <h2>Correlatierisico's Ontstaan</h2>
+      <p>Je nam een trade gebaseerd op individuele analyse. Dan stort de markt in. Of de sector klapt.</p>
+      <p>Je individuele these wordt nu overweldigd door krachten waar je geen rekening mee hield.</p>
+      <hr>
+      <h2>Wanneer NIET Vroeg Uit Te Stappen</h2>
+      <p><strong>Normale pullbacks:</strong> De prijs gaat niet recht naar je doel. Pullbacks binnen je these zijn verwacht.</p>
+      <p><strong>Emotionele reacties:</strong> Als je uitstapt omdat je bang bent, niet omdat iets veranderde, is dat angst, geen discipline.</p>
+      <p><strong>Ruis:</strong> Markten schommelen. De meeste intraday beweging is ruis.</p>
+      <p><strong>De stop is dichtbij:</strong> Als je 80% van de weg naar je stop bent, heb je het meeste verlies al genomen.</p>
+      <hr>
+      <h2>De "Zou Ik Hier Instappen?" Test</h2>
+      <p>Een nuttig mentaal model: bekijk je huidige positie alsof je geen positie had.</p>
+      <p>Als je nu flat was, zou je deze trade nemen op deze prijs met deze stop?</p>
+      <p>Als ja, blijf erin. De trade heeft nog zin.</p>
+      <p>Als nee, vraag jezelf waarom je vasthoudt.</p>
+      <hr>
+      <h2>De Conclusie</h2>
+      <p>Je stop loss is je maximaal toegestane verlies, niet je doelverlies.</p>
+      <p>Stap vroeg uit wanneer:</p>
+      <ul>
+        <li>Je oorspronkelijke these is ongeldig</li>
+        <li>De tijd is verlopen op een tijdgevoelige setup</li>
+        <li>Correlatierisico's de context hebben veranderd</li>
+        <li>Je hier niet zou instappen als je flat was</li>
+      </ul>
+      <p>Blijf wanneer:</p>
+      <ul>
+        <li>Normale pullbacks optreden binnen de these</li>
+        <li>Je emotioneel reageert, niet analytisch</li>
+        <li>De stop al dichtbij is</li>
+      </ul>
+      <hr>
+      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
+        <a href="../../stop-loss-placement/nl/" class="related-card"><span class="related-category">Praktisch</span><h4>Stop Loss Plaatsing</h4></a>
+        <a href="../../cycle-failures-and-what-they-mean/nl/" class="related-card"><span class="related-category">Cycli</span><h4>Cyclusmislukkingen en Wat Ze Betekenen</h4></a>
+        <a href="../../revenge-trading-recovery/nl/" class="related-card"><span class="related-category">Psychologie</span><h4>Herstel van Wraaktrading</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Pentarch's cyclussignalen helpen je normale pullbacks te onderscheiden van echte cyclusovergangen.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Lees de cyclus →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/nl/">← Terug naar Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatie Hub</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Alle rechten voorbehouden.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuándo Cortar Pérdidas Antes (Antes de Que Tu Stop Sea Tocado) - Signal Pilot Blog</title>
+  <meta name="description" content="Tu stop loss es tu riesgo máximo. Pero a veces lo inteligente es salir antes de que sea tocado. Aquí te explicamos cómo saber la diferencia.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traducir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="./" class="active"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+      <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=risk">Gestión de Riesgo</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
+      <span class="article-category">Gestión de Riesgo</span>
+      <h1 class="article-title">Cuándo Cortar Pérdidas Antes (Antes de Que Tu Stop Sea Tocado)</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lectura</span><span>Equipo Signal Pilot</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Visualización de cortar pérdidas temprano"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Cada libro de trading te dice que respetes tu stop loss. Ponlo y olvídalo. Deja que la operación funcione.</p>
+      <p>Este es buen consejo - la mayoría del tiempo. Pero hay momentos cuando lo inteligente es salir antes de que tu stop sea tocado. Tomar una pérdida menor. Preservar capital para una mejor oportunidad.</p>
+      <p>El truco es saber cuándo la salida temprana es disciplina y cuándo es miedo disfrazado de disciplina.</p>
+      <hr>
+      <h2>La Tesis Ha Cambiado</h2>
+      <p>Entraste en una operación por una razón. Viste un patrón, un setup, un catalizador. Tu stop se colocó donde esa tesis quedaría invalidada.</p>
+      <p>Pero los mercados evolucionan. Nueva información llega. A veces tu tesis se invalida antes de que el precio alcance tu stop.</p>
+      <p><strong>Ejemplo:</strong> Compraste una ruptura. El precio rompió resistencia, entraste en el retesteo. Tu stop está debajo del nivel de ruptura.</p>
+      <p>Pero ahora el precio está estancado. El volumen se secó. Lo que parecía una ruptura se está convirtiendo en una ruptura fallida. La tesis - que los compradores impulsarían el precio más alto después de la ruptura - está muriendo aunque tu stop no ha sido tocado.</p>
+      <p>En este caso, la salida temprana no es pánico. Es reconocer que el setup que operaste ya no existe.</p>
+      <hr>
+      <h2>Invalidación por Tiempo</h2>
+      <p>Algunos setups tienen un componente temporal. Si el movimiento esperado no ocurre dentro de cierta ventana, el setup falla aunque el precio no se haya movido en tu contra.</p>
+      <p><strong>Operaciones de momentum:</strong> Si operas momentum y el precio se estanca, el momentum se fue. Esperar a que tu stop sea tocado ata capital en una operación muerta.</p>
+      <p><strong>Operaciones de eventos:</strong> Compraste antes de resultados esperando un movimiento. Los resultados salen, el precio no se mueve. El catalizador se gastó. La operación terminó sin importar dónde esté tu stop.</p>
+      <p><strong>Rupturas de rango de apertura:</strong> Típicamente funcionan en la primera hora o no funcionan. Si todavía estás esperando al mediodía, la operación falló por tiempo, no por precio.</p>
+      <hr>
+      <h2>Emergen Riesgos de Correlación</h2>
+      <p>Tomaste una operación basada en análisis individual. Luego el mercado se desploma. O el sector colapsa. O algún evento macro golpea.</p>
+      <p>Tu tesis individual ahora está abrumada por fuerzas que no consideraste.</p>
+      <p>Tu stop todavía es técnicamente válido - la estructura del activo no se rompió. Pero el contexto cambió completamente. La marea está saliendo y tu bote va con ella.</p>
+      <hr>
+      <h2>Cuándo NO Cortar Temprano</h2>
+      <p><strong>Retrocesos normales:</strong> El precio no va directo a tu objetivo. Los retrocesos dentro de tu tesis son esperados.</p>
+      <p><strong>Reacciones emocionales:</strong> Si sales porque tienes miedo, no porque algo cambió, eso es miedo, no disciplina.</p>
+      <p><strong>Ruido:</strong> Los mercados fluctúan. Las noticias golpean. La mayor parte del movimiento intradía es ruido.</p>
+      <p><strong>El stop está cerca:</strong> Si estás al 80% del camino a tu stop, ya tomaste la mayor parte de la pérdida.</p>
+      <hr>
+      <h2>La Prueba "¿Entraría Aquí?"</h2>
+      <p>Un modelo mental útil: mira tu posición actual como si no tuvieras posición.</p>
+      <p>Si estuvieras plano ahora, ¿entrarías en esta operación a este precio con este stop?</p>
+      <p>Si sí, quédate. La operación todavía tiene sentido.</p>
+      <p>Si no, pregúntate por qué mantienes. La única razón válida es que la tesis de la operación está intacta.</p>
+      <hr>
+      <h2>La Conclusión</h2>
+      <p>Tu stop loss es tu pérdida máxima permitida, no tu pérdida objetivo.</p>
+      <p>Corta temprano cuando:</p>
+      <ul>
+        <li>Tu tesis original está invalidada</li>
+        <li>El tiempo expiró en un setup sensible al tiempo</li>
+        <li>Los riesgos de correlación cambiaron el contexto</li>
+        <li>No entrarías aquí si estuvieras plano</li>
+      </ul>
+      <p>Quédate cuando:</p>
+      <ul>
+        <li>Ocurren retrocesos normales dentro de la tesis</li>
+        <li>Reaccionas emocionalmente, no analíticamente</li>
+        <li>El stop ya está cerca</li>
+      </ul>
+      <hr>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
+        <a href="../../stop-loss-placement/es/" class="related-card"><span class="related-category">Práctico</span><h4>Colocación de Stop Loss</h4></a>
+        <a href="../../cycle-failures-and-what-they-mean/es/" class="related-card"><span class="related-category">Ciclos</span><h4>Fallos de Ciclo y Qué Significan</h4></a>
+        <a href="../../revenge-trading-recovery/es/" class="related-card"><span class="related-category">Psicología</span><h4>Recuperación del Trading de Venganza</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Las señales de ciclo de Pentarch te ayudan a distinguir entre retrocesos normales y transiciones reales de ciclo.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Lee el ciclo →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro de Educación</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
