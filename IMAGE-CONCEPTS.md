@@ -2,6 +2,16 @@
 
 Prompts for generating hero images. Match Signal Pilot's dark, sophisticated aesthetic.
 
+## HOW TO USE
+1. Generate images using the prompts below (DALL-E or Midjourney)
+2. Export as WebP format, ~1600x900px, under 200KB
+3. Save to `/assets/images/` with the filename specified
+4. The HTML already has placeholders pointing to these files
+
+---
+
+## IMAGES NEEDED (with filenames)
+
 ## STYLE GUIDE
 
 **Colors:** Background #05070d (near black), Accents: cyan #00d4ff, blue #0088ff, purple #6366f1, gold #f59e0b, green #10b981, red #ef4444
@@ -10,7 +20,46 @@ Prompts for generating hero images. Match Signal Pilot's dark, sophisticated aes
 
 ---
 
-## TIER 1: EDUCATIONAL (Awareness)
+### PRIORITY IMAGES (already in HTML)
+
+**hero-inside-signal-pilot.webp**
+```
+7 interconnected glowing nodes in hexagonal pattern. Each node different shade of cyan/blue. Futuristic dashboard UI showing integration. Dark #05070d background. Minimalist abstract. --ar 16:9 --style raw --no text
+```
+
+**hero-indicators-failing.webp**
+```
+Multiple conflicting arrows/signals pointing different directions creating visual chaos. Different colors clashing (red, green, yellow, blue). Dark background. Abstract minimalist. --ar 16:9 --style raw --no text
+```
+
+**hero-repainting-problem.webp**
+```
+Candlestick chart with signals visibly shifting - ghostly faded versions showing where signals moved from. Deceptive unsettling feel. Red/amber warning tones. Dark background. --ar 16:9 --style raw --no text
+```
+
+**hero-pentarch-cycles.webp**
+```
+5 cycle phases as geometric shapes transitioning into each other in a flow. First=green, second=cyan, third=gold, fourth=amber, fifth=red. Phases flowing between each other. Dark background. --ar 16:9 --style raw --no text
+```
+
+**hero-free-vs-pro.webp**
+```
+Split image - left side chaotic unaligned signals in clashing colors, right side clean harmonized signals in coordinated cyan. Clear visual contrast between chaos and clarity. Dark background. --ar 16:9 --style raw --no text
+```
+
+**hero-confirmation-trap.webp**
+```
+Trader silhouette trapped in a cage made of glowing indicator signals. Too many inputs creating paralysis. Frozen figure. Dark claustrophobic feel with glowing cyan cage bars. --ar 16:9 --style raw --no text
+```
+
+**hero-blow-account.webp**
+```
+Spiral descending from green at top through gold to red at bottom, ending in darkness. Classic blow-up trajectory. Dramatic but clean geometric spiral. Dark background. --ar 16:9 --style raw --no text
+```
+
+---
+
+## ADDITIONAL IMAGES (for future articles)
 
 ### Psychology
 ```

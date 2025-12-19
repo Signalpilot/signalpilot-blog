@@ -432,8 +432,32 @@ body {
 }
 
 /* Article Page */
+.article-hero {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
 .article-header {
-  padding: clamp(3rem, 8vw, 5rem) 0 2rem;
+  padding: clamp(2rem, 6vw, 3rem) 0 2rem;
   text-align: center;
 }
 
