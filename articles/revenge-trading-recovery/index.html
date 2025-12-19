@@ -316,38 +316,59 @@
     });
     
     langButtons?.forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const lang = btn.dataset.lang;
         langDropdown.classList.remove('active');
-        
+
         // Update our dropdown display
         const flag = btn.querySelector('.flag').textContent;
         const name = lang.toUpperCase().split('-')[0];
         langDropdown.querySelector('.lang-toggle .flag').textContent = flag;
         langDropdown.querySelector('.lang-name').textContent = name;
-        
+
+        // Try to use Google Translate's native select element
+        const gtSelect = document.querySelector('.goog-te-combo');
+        if (gtSelect && gtSelect.options.length > 0) {
+          if (lang === 'en') {
+            // For English, select the first option (original language)
+            gtSelect.selectedIndex = 0;
+          } else {
+            gtSelect.value = lang;
+          }
+          gtSelect.dispatchEvent(new Event('change', { bubbles: true }));
+          return;
+        }
+
+        // Fallback: cookie-based approach with page reload
         // Clear ALL storage
         try {
           localStorage.removeItem('googtrans');
           sessionStorage.clear();
         } catch(e) {}
-        
+
         // Clear ALL cookies - every possible combination
         const exp = '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        const domains = [location.hostname, '.' + location.hostname];
+        const paths = ['/', ''];
+        domains.forEach(d => {
+          paths.forEach(p => {
+            document.cookie = 'googtrans' + exp + ';path=' + (p||'/') + ';domain=' + d;
+          });
+        });
         document.cookie = 'googtrans' + exp;
         document.cookie = 'googtrans' + exp + ';path=/';
-        document.cookie = 'googtrans' + exp + ';path=/;domain=' + location.hostname;
-        document.cookie = 'googtrans' + exp + ';path=/;domain=.' + location.hostname;
-        
-        // Set new language
+
+        // Set new language cookie if not English
         if (lang !== 'en') {
           const v = '/en/' + lang;
           document.cookie = 'googtrans=' + v + ';path=/';
           document.cookie = 'googtrans=' + v + ';path=/;domain=.' + location.hostname;
         }
-        
-        // Hard reload - bypass all cache
-        location.replace(location.pathname + '?lang=' + lang + '&t=' + Date.now());
+
+        // Navigate to clean URL to force fresh page load
+        window.location.href = location.pathname + '?hl=' + lang + '&_=' + Date.now();
       });
     });
 
