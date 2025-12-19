@@ -824,9 +824,15 @@ iframe.goog-te-banner-frame {
   display: block;
 }
 
-/* Hide broken images but keep the placeholder background */
-.hero-image img[src="hero.png"] {
+/* Hero image starts hidden until loaded */
+.hero-image img {
   opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show image once loaded (set by JavaScript) */
+.hero-image img.loaded {
+  opacity: 1;
 }
 
 /* Show AI prompt as visible text for image generation */
@@ -848,8 +854,8 @@ iframe.goog-te-banner-frame {
   overflow: auto;
 }
 
-/* Hide prompt when real image exists */
-.hero-image img:not([src="hero.png"]) ~ .ai-prompt {
+/* Hide prompt when image is loaded */
+.hero-image img.loaded ~ .ai-prompt {
   display: none;
 }
 

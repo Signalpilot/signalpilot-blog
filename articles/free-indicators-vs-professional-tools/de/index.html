@@ -173,6 +173,6 @@
     const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
     window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
     document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
-  </script>
+  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>
