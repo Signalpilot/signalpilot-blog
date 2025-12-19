@@ -184,6 +184,50 @@ body {
 }
 
 /* Google Translate Widget */
+.translate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  position: relative;
+}
+
+.translate-btn:hover {
+  background: var(--bg-soft);
+  border-color: var(--brand);
+  color: var(--text);
+}
+
+.translate-wrapper {
+  position: relative;
+}
+
+.translate-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  z-index: 1000;
+  display: none;
+  min-width: 150px;
+  box-shadow: var(--shadow);
+}
+
+.translate-wrapper.open .translate-dropdown {
+  display: block;
+}
+
 #google_translate_element {
   display: flex;
   align-items: center;
