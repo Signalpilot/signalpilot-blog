@@ -132,33 +132,10 @@
 
           <hr>
 
-          <h2>What Actually Works Instead</h2>
-          <p>If backtesting is broken, what do you do?</p>
-          <p><strong>1. Forward Testing (Paper Trading with Discipline)</strong></p>
-          <p>Trade the strategy in real-time with fake money. Record everything. No cheating - if you would have missed the entry live, mark it as missed.</p>
-          <p>This is slower than backtesting. It's also more honest. You're seeing exactly how the strategy performs on data it's never seen, with execution you'd actually achieve.</p>
-          <p>Minimum viable test: 30-50 trades across different market conditions.</p>
-          <p><strong>2. Out-of-Sample Testing</strong></p>
-          <p>If you must backtest, do this:</p>
-          <ul>
-            <li>Develop the strategy on data from 2018-2020 only</li>
-            <li>Never look at 2021-2023 during development</li>
-            <li>Once the strategy is finalized, test it on 2021-2023</li>
-            <li>No modifications allowed after seeing out-of-sample results</li>
-          </ul>
-          <p>If it holds up on data it was never fitted to, you have something. If it falls apart, you have a curve-fit system.</p>
-          <p><strong>3. Robustness Testing</strong></p>
-          <p>Instead of asking "does this work?", ask "under what conditions does this break?"</p>
-          <ul>
-            <li>Test on multiple assets, not just one</li>
-            <li>Test across different volatility regimes</li>
-            <li>Change parameters slightly - does performance collapse or degrade gracefully?</li>
-            <li>Remove some rules - is the core logic still profitable?</li>
-          </ul>
-          <p>Robust strategies degrade slowly. Curve-fit strategies collapse catastrophically.</p>
-          <p><strong>4. Focus on Logic, Not Results</strong></p>
-          <p>The best filter for a strategy is asking: "Why should this work?"</p>
-          <p>If you can't articulate a logical reason - based on market structure, human psychology, or institutional behavior - the strategy probably doesn't work. Any historical "edge" is likely curve-fitting.</p>
+          <h2>So What Do You Do Instead?</h2>
+          <p>If traditional backtesting is this flawed, is there any way to test strategies honestly?</p>
+          <p>Yes - but it requires fundamentally different approaches. Forward testing on unseen data. Out-of-sample validation. Walk-forward analysis. Monte Carlo stress testing. These methods exist specifically because researchers recognized that simple backtesting creates an illusion of edge where none exists.</p>
+          <p>The goal shifts from "proving a strategy works" to "trying to break it before the market does."</p>
 
           <hr>
 
