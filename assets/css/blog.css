@@ -228,6 +228,117 @@ body {
   display: block;
 }
 
+/* Custom Language Selector */
+.lang-dropdown {
+  position: relative;
+  z-index: 100;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-toggle:hover {
+  border-color: var(--brand);
+  background: var(--bg-elevated);
+}
+
+.lang-toggle .flag {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.lang-toggle .chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+}
+
+.lang-dropdown.active .lang-toggle .chevron {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.lang-dropdown.active .lang-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+}
+
+.lang-menu button:hover {
+  background: rgba(91, 138, 255, 0.1);
+  color: var(--text);
+}
+
+.lang-menu button .flag {
+  font-size: 1.2rem;
+}
+
+/* Hide Google Translate default widget */
+#google_translate_element {
+  display: none !important;
+}
+
+/* Hide all Google Translate UI elements */
+.goog-te-banner-frame,
+.goog-te-gadget-icon,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-te-gadget,
+.skiptranslate {
+  display: none !important;
+}
+
+/* Prevent Google Translate from pushing body down */
+body {
+  top: 0 !important;
+}
+
 #google_translate_element {
   display: flex;
   align-items: center;
