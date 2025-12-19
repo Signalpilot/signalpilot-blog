@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dein erstes Trading-System bauen: Eine Schritt-für-Schritt-Anleitung - Signal Pilot Blog</title>
+  <meta name="description" content="Die meisten Trader springen von Setup zu Setup. Systematische Trader bauen einmal und führen für immer aus. So erstellst du dein erstes echtes Trading-System.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Startseite</a><a href="https://docs.signalpilot.io">Dokumentation</a><a href="https://education.signalpilot.io">Bildung</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Übersetzen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown active" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/" class="active"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema wechseln">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Kostenlos testen</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=systems">Trading-Systeme</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Artikel</span>
+          </nav>
+          <span class="article-category">Trading-Systeme</span>
+          <h1 class="article-title">Dein erstes Trading-System bauen: Eine Schritt-für-Schritt-Anleitung</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 Min. Lesezeit</span>
+            <span>Signal Pilot Team</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Teilen:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Auf Twitter teilen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Auf LinkedIn teilen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link kopieren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Visualisierung des Aufbaus eines Trading-Systems">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Du hast Setups getradet. Manche funktionieren, manche nicht. Du bist dir nicht sicher warum. Jeder Tag fühlt sich an wie ein Neuanfang.</p>
+          <p>Ein Trading-System ändert das. Statt zu improvisieren, führst du aus. Statt zu hoffen, hast du Statistiken. Statt emotionaler Entscheidungen hast du Regeln.</p>
+          <p>So baust du dein erstes.</p>
+
+          <hr>
+
+          <h2>Schritt 1: Definiere deinen Vorteil</h2>
+          <p>Ein System ohne Vorteil ist nur eine strukturierte Art, Geld zu verlieren. Bevor du irgendetwas anderes tust, identifiziere, welches Marktverhalten du ausnutzen willst.</p>
+          <p>Häufige Vorteile sind:</p>
+          <ul>
+            <li><strong>Trendfolge:</strong> Märkte haben mehr Trends als ein Random Walk vermuten lassen würde. Fange erweiterte Bewegungen ein.</li>
+            <li><strong>Mean Reversion:</strong> Erweiterte Bewegungen neigen dazu, zurückzuschnappen. Handel gegen Extreme.</li>
+            <li><strong>Momentum:</strong> Was sich bewegt, tendiert dazu, sich weiterzubewegen. Kaufe Stärke, verkaufe Schwäche.</li>
+            <li><strong>Ausbrüche:</strong> Konsolidierung löst sich mit Richtungsbewegungen auf. Handel die Auflösung.</li>
+            <li><strong>Zyklusphasen:</strong> Märkte bewegen sich durch vorhersehbare Phasen. Handel Phasenübergänge.</li>
+          </ul>
+          <p>Wähle einen. Nur einen. Dein erstes System sollte einen Vorteil klar ausnutzen. Du kannst später zusätzliche Systeme bauen.</p>
+          <p>Frage dich: "Warum existiert dieser Vorteil? Wer ist auf der anderen Seite meines Trades, und warum liegen sie falsch?" Wenn du das nicht beantworten kannst, hast du keinen Vorteil - du hast ein Muster.</p>
+
+          <hr>
+
+          <h2>Schritt 2: Definiere Einstiegskriterien</h2>
+          <p>Jetzt mach es konkret. Wann genau steigst du ein?</p>
+          <p>Deine Einstiegskriterien müssen sein:</p>
+          <ul>
+            <li><strong>Objektiv.</strong> Jemand anderes, der deine Regeln liest, würde die gleichen Setups identifizieren. "Preis sieht gut aus" ist keine Regel. "Preis schließt über dem 20-Tage-Hoch" ist eine.</li>
+            <li><strong>Vollständig.</strong> Decke alle Bedingungen ab. Welche Indikatorwerte? Welche Price Action? Welches Volumen? Welcher Zeitrahmen?</li>
+            <li><strong>Wiederholbar.</strong> Die gleichen Bedingungen sollten regelmäßig genug erscheinen, um zu handeln. Wenn deine Kriterien einmal im Jahr auslösen, hast du kein System.</li>
+          </ul>
+          <p><strong>Beispiel Einstiegsregeln:</strong></p>
+          <ol>
+            <li>Tages-Zeitrahmen</li>
+            <li>Preis ist über dem 50-Tage-Durchschnitt</li>
+            <li>RSI(14) kreuzt über 50</li>
+            <li>Heutiges Volumen ist über dem 20-Tage-Durchschnitt</li>
+            <li>Einstieg bei Eröffnung des nächsten Tages</li>
+          </ol>
+          <p>Schreibe deine Regeln im Wenn-Dann-Format. "WENN Bedingungen X, Y und Z alle wahr sind, DANN einsteigen."</p>
+
+          <hr>
+
+          <h2>Schritt 3: Definiere Ausstiegskriterien</h2>
+          <p>Einstiege bekommen alle Aufmerksamkeit. Ausstiege bestimmen die Rentabilität.</p>
+          <p>Du brauchst drei Arten von Ausstiegen:</p>
+          <p><strong>Stop Loss:</strong> Wo liegt der Trade falsch? Dies sollte auf Marktstruktur basieren, nicht auf willkürlichen Prozentsätzen. "Unter dem kürzlichen Swing-Tief" ist strukturbasiert. "2% unter Einstieg" ist willkürlich.</p>
+          <p><strong>Gewinnziel:</strong> Wo nimmst du Gewinne mit? Optionen sind festes Risiko-Ertrags-Verhältnis (2:1, 3:1), strukturbasierte Ziele (vorheriger Widerstand) oder Trailing Stops.</p>
+          <p><strong>Zeit-Stop:</strong> Wie lange bevor du einen toten Trade beendest? Wenn dein Vorteil auf Momentum basiert und der Trade zwei Wochen lang nirgendwo hingeht, könnte die These gescheitert sein, auch ohne deinen Stop zu treffen.</p>
+          <p><strong>Beispiel Ausstiegsregeln:</strong></p>
+          <ul>
+            <li>Stop Loss: Unter dem Tief der Signalkerze</li>
+            <li>Gewinnziel: 2x das anfängliche Risiko</li>
+            <li>Zeit-Stop: Ausstieg bei Schluss, wenn nach 10 Tagen nicht im Gewinn</li>
+          </ul>
+
+          <hr>
+
+          <h2>Schritt 4: Definiere Positionsgröße</h2>
+          <p>Wie viel du handelst ist nicht diskretionär. Es wird berechnet.</p>
+          <p>Der Standard-Ansatz:</p>
+          <ol>
+            <li>Bestimme dein maximales Risiko pro Trade (1-2% des Kontos)</li>
+            <li>Berechne das Dollar-Risiko pro Aktie (Einstiegspreis minus Stop-Preis)</li>
+            <li>Positionsgröße = Maximales Risiko / Dollar-Risiko pro Aktie</li>
+          </ol>
+          <p><strong>Beispiel:</strong></p>
+          <ul>
+            <li>Konto: $50.000</li>
+            <li>Max. Risiko: 1% = $500</li>
+            <li>Einstieg: $100, Stop: $95</li>
+            <li>Dollar-Risiko: $5/Aktie</li>
+            <li>Position: $500 / $5 = 100 Aktien</li>
+          </ul>
+          <p>Schreibe diese Formel in dein System. Jeder Trade folgt der gleichen Berechnung.</p>
+
+          <hr>
+
+          <h2>Schritt 5: Dokumentiere alles</h2>
+          <p>Dein System existiert nicht, bis es aufgeschrieben ist. Erstelle ein Dokument, das enthält:</p>
+          <ul>
+            <li>Den Vorteil, den du ausnutzt (und warum er funktioniert)</li>
+            <li>Vollständige Einstiegsregeln</li>
+            <li>Vollständige Ausstiegsregeln (Stop, Ziel, Zeit)</li>
+            <li>Formel für Positionsgröße</li>
+            <li>Märkte/Instrumente, die du handelst</li>
+            <li>Tageszeit, zu der du scannst/handelst</li>
+            <li>Maximum Positionen gleichzeitig</li>
+            <li>Bedingungen, wann du nicht handelst (Nachrichtenereignisse etc.)</li>
+          </ul>
+          <p>Dieses Dokument ist dein Trading-Businessplan. Lies es vor jeder Sitzung. Im Zweifelsfall konsultiere das Dokument, nicht deine Gefühle.</p>
+
+          <hr>
+
+          <h2>Schritt 6: Forward-Test</h2>
+          <p>Erwäge, zuerst kein Backtesting zu machen. Backtesting führt oft zu Curve-Fitting, besonders für Anfänger.</p>
+          <p>Stattdessen Forward-Test:</p>
+          <ol>
+            <li>Paper-Trade dein System für mindestens 30 Trades</li>
+            <li>Führe genau so aus, wie deine Regeln es spezifizieren - keine Ausnahmen</li>
+            <li>Zeichne jeden Trade auf: Einstieg, Ausstieg, Grund, Ergebnis</li>
+            <li>Überprüfe wöchentlich - folgst du den Regeln? Produzieren die Regeln das erwartete Verhalten?</li>
+          </ol>
+          <p>Paper-Trading geht nicht darum, Geld zu verdienen. Es geht darum zu validieren, dass dein System handelbar ist und dass du ihm folgen kannst.</p>
+          <p>Erst nach erfolgreichem Paper-Trading solltest du mit echtem Geld testen - und beginne mit minimaler Größe.</p>
+
+          <hr>
+
+          <h2>Schritt 7: Verfeinern (Vorsichtig)</h2>
+          <p>Nach 50+ Live-Trades hast du Daten. Analysiere sie:</p>
+          <ul>
+            <li>Was ist deine tatsächliche Gewinnrate?</li>
+            <li>Was ist dein durchschnittlicher Gewinner vs durchschnittlicher Verlierer?</li>
+            <li>Was ist deine Erwartung pro Trade?</li>
+            <li>Gibt es Muster in deinen Verlierern?</li>
+          </ul>
+          <p>Verfeinerung ist gefährlich, weil es leicht ist, überzuoptimieren. Eine Regel, die vergangene Verlierer herausfiltert, könnte auch zukünftige Gewinner herausfiltern.</p>
+          <p>Mache Änderungen langsam. Eine Variable auf einmal. Teste jede Änderung auf statistische Signifikanz (mindestens 30 Trades) bevor du schlussfolggerst, dass sie funktioniert.</p>
+
+          <hr>
+
+          <h2>Das Fazit</h2>
+          <p>Ein Trading-System ist im Konzept einfach: Definiere wann einsteigen, wann aussteigen und wie viel handeln. Folge den Regeln ohne Ausnahme.</p>
+          <p>Die Schwierigkeit ist nicht, das System zu bauen. Es ist, ihm zu folgen. Deshalb ist Dokumentation wichtig. Deshalb müssen Regeln objektiv sein. Deshalb ist Positionsgröße nicht verhandelbar.</p>
+          <p>Baue einfach. Führe perfekt aus. Verfeinere langsam. So werden Systeme zu Vorteilen.</p>
+          <p>Wenn der Aufbau von Grund auf überwältigend erscheint, können bestehende Analyse-Frameworks als Vorlagen dienen. Systeme, die bereits Zyklus-Erkennung, Volumen-Regime-Analyse, Konfluenz-Scoring und Multi-Timeframe-Ausrichtung integrieren, zeigen, wie professionelle Architektur aussieht. Studiere sie nicht als Black Boxes, sondern als Blaupausen dafür, wie Komponenten zusammenpassen.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Verwandte Artikel</h3>
+            <div class="related-grid">
+              <a href="../rules-based-vs-discretionary/" class="related-card">
+                <span class="related-category">Systeme</span>
+                <h4>Regelbasiertes vs diskretionäres Trading</h4>
+              </a>
+              <a href="../backtesting-without-fooling-yourself/" class="related-card">
+                <span class="related-category">Systeme</span>
+                <h4>Backtesting ohne dich selbst zu täuschen</h4>
+              </a>
+              <a href="../what-is-a-trading-edge/" class="related-card">
+                <span class="related-category">Anfänger</span>
+                <h4>Was ist ein Trading-Vorteil?</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../the-1-percent-rule/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Vorheriger
+              </span>
+              <span class="article-nav-title">Die 1%-Regel: Warum professionelle Trader so wenig riskieren</span>
+            </a>
+            <a href="../support-and-resistance-explained/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Nächster
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Unterstützung und Widerstand erklärt: Die Grundlage jedes Trades</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>OmniDecks zehn Systeme funktionieren bereits als komplettes Trading-System mit Konfluenz-Scoring. Pentarchs Vier-Schicht-Erkennungsarchitektur (Regime, Pilot Line Distanz, NanoFlow Momentum, Bar-Close-Bestätigung) zeigt, wie professionelle Systeme Signale durch mehrere Validierungsschritte filtern. Augury Grid überwacht bis zu 40 Symbole gleichzeitig gegen deine Systemregeln.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Systemarchitektur ansehen →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Zurück zum Blog</a><a href="https://signalpilot.io">Startseite</a><a href="https://docs.signalpilot.io">Dokumentation</a><a href="https://education.signalpilot.io">Bildungszentrum</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Nach oben"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    }
+  </script>
+</body>
+</html>

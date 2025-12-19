@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos de Velas Japonesas: Leer la Acción del Precio Como un Profesional - Signal Pilot Blog</title>
+  <meta name="description" content="Las velas japonesas son el lenguaje del precio. Así es como leerlas - y qué patrones realmente importan para el trading.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traducir">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <button class="lang-toggle" aria-label="Seleccionar idioma">
+                  <span class="flag">🇪🇸</span>
+                  <span class="lang-name">ES</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/" class="active"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+          <button class="mobile-menu-btn" aria-label="Menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Navegación">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">Fundamentos para Principiantes</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Artículo</span>
+          </nav>
+          <span class="article-category">Fundamentos para Principiantes</span>
+          <h1 class="article-title">Fundamentos de Velas Japonesas: Leer la Acción del Precio Como un Profesional</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lectura</span>
+            <span>Equipo Signal Pilot</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Compartir:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Compartir en Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Compartir en LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copiar enlace">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Imagen Principal -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Visualización de fundamentos de velas japonesas" data-ai-prompt="Dark themed artistic rendering of Japanese candlesticks, with one large detailed candlestick in the center showing anatomy - wick, body, shadows. Surrounding smaller candles form a pattern. Glowing green and red elements, professional trading aesthetic with deep navy background.">
+        <figcaption class="ai-prompt">Dark themed artistic rendering of Japanese candlesticks, with one large detailed candlestick in the center showing anatomy - wick, body, shadows. Surrounding smaller candles form a pattern. Glowing green and red elements, professional trading aesthetic with deep navy background.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Abre un gráfico. Esas barras coloridas no son solo decoración - te están contando una historia sobre cada batalla entre compradores y vendedores.</p>
+          <p>Entender las velas japonesas es el primer paso para leer cualquier gráfico. Aquí está todo lo que necesitas saber - y nada que no necesites.</p>
+
+          <hr>
+
+          <h2>Anatomía de una Vela</h2>
+          <p>Cada vela representa un período de tiempo - un minuto, una hora, un día, lo que sea que tu gráfico esté configurado. Muestra cuatro piezas de información:</p>
+          <ul>
+            <li><strong>Apertura:</strong> Donde el precio comenzó cuando el período empezó</li>
+            <li><strong>Máximo:</strong> El precio más alto alcanzado durante el período</li>
+            <li><strong>Mínimo:</strong> El precio más bajo alcanzado durante el período</li>
+            <li><strong>Cierre:</strong> Donde el precio terminó cuando el período cerró</li>
+          </ul>
+          <p>La parte gruesa se llama <strong>cuerpo</strong>. Muestra el rango entre apertura y cierre.</p>
+          <p>Las líneas delgadas arriba y abajo se llaman <strong>mechas</strong> (o sombras). Muestran el rango completo desde máximo a mínimo.</p>
+          <p><strong>Velas verdes/blancas:</strong> El cierre es más alto que la apertura. Los compradores ganaron este período.</p>
+          <p><strong>Velas rojas/negras:</strong> El cierre es más bajo que la apertura. Los vendedores ganaron este período.</p>
+
+          <hr>
+
+          <h2>Qué Te Dice el Cuerpo</h2>
+          <p>El cuerpo muestra convicción. Un cuerpo grande significa movimiento fuerte en una dirección. Un cuerpo pequeño significa indecisión o equilibrio entre compradores y vendedores.</p>
+          <p><strong>Cuerpo verde grande:</strong> Fuerte presión compradora. Los compradores controlaron todo el período. Alcista.</p>
+          <p><strong>Cuerpo rojo grande:</strong> Fuerte presión vendedora. Los vendedores controlaron todo el período. Bajista.</p>
+          <p><strong>Cuerpo pequeño (cualquier color):</strong> Ningún lado dominó. El mercado está indeciso o equilibrado.</p>
+          <p><strong>Doji (casi sin cuerpo):</strong> Apertura y cierre son casi idénticos. Máxima indecisión. A menudo aparece en puntos de giro.</p>
+
+          <hr>
+
+          <h2>Qué Te Dicen las Mechas</h2>
+          <p>Las mechas muestran rechazo. Cuando el precio va a algún lugar y luego es empujado hacia atrás, ves una mecha. Cuanto más larga la mecha, más fuerte el rechazo.</p>
+          <p><strong>Mecha superior larga:</strong> El precio intentó ir más alto pero fue empujado hacia abajo. Los vendedores están activos a precios más altos. Señal bajista.</p>
+          <p><strong>Mecha inferior larga:</strong> El precio intentó ir más bajo pero fue empujado hacia arriba. Los compradores están activos a precios más bajos. Señal alcista.</p>
+          <p><strong>Mechas en ambos lados:</strong> Tanto compradores como vendedores estuvieron activos. Indecisión o volatilidad.</p>
+          <p><strong>Sin mechas:</strong> La apertura/cierre fueron los precios extremos. Muy fuerte convicción en la dirección del cuerpo.</p>
+
+          <hr>
+
+          <h2>Patrones Clave de Una Vela</h2>
+          <p>Olvídate de memorizar 50 nombres de patrones. Estos son los que realmente importan:</p>
+          <p><strong>Martillo / Hombre Colgado:</strong> Cuerpo pequeño arriba, mecha inferior larga. Parece un martillo. Al fondo de una tendencia bajista, es un "martillo" y sugiere reversión alcista. En la cima de una tendencia alcista, es un "hombre colgado" y sugiere reversión bajista. Misma forma, el contexto determina el significado.</p>
+          <p><strong>Martillo Invertido / Estrella Fugaz:</strong> Cuerpo pequeño abajo, mecha superior larga. Al fondo de una tendencia bajista, es un "martillo invertido" (potencial reversión alcista). En la cima de una tendencia alcista, es una "estrella fugaz" (potencial reversión bajista).</p>
+          <p><strong>Doji:</strong> Cuerpo muy pequeño o sin cuerpo. Indecisión. Significativo después de una tendencia fuerte - sugiere que el impulso está disminuyendo.</p>
+          <p><strong>Marubozu:</strong> Todo cuerpo, sin mechas. Máxima convicción. Un marubozu verde después de una caída es muy alcista. Un marubozu rojo después de un rally es muy bajista.</p>
+
+          <hr>
+
+          <h2>Patrones Clave de Múltiples Velas</h2>
+          <p>Algunos patrones requieren dos o tres velas para identificarse:</p>
+          <p><strong>Envolvente:</strong> Una vela grande que cubre completamente (envuelve) el cuerpo de la vela anterior. Envolvente alcista: vela verde envuelve la vela roja anterior. Envolvente bajista: vela roja envuelve la vela verde anterior. Fuerte señal de reversión.</p>
+          <p><strong>Barra Interior:</strong> Una vela cuyo rango completo (máximo a mínimo) está dentro del rango de la vela anterior. Representa consolidación. La dirección de ruptura a menudo continúa.</p>
+          <p><strong>Estrella de la Mañana / Estrella de la Tarde:</strong> Patrón de tres velas. Vela grande, vela pequeña (la "estrella"), vela grande en dirección opuesta. Estrella de la mañana (en fondos) y estrella de la tarde (en techos) son patrones de reversión.</p>
+
+          <hr>
+
+          <h2>El Contexto Es Todo</h2>
+          <p>Esto es lo que la mayoría de cursos de velas no mencionan: el mismo patrón significa cosas diferentes en diferentes contextos.</p>
+          <p>Un martillo al fondo de una larga tendencia bajista, en un nivel de soporte importante, con alto volumen - eso es significativo.</p>
+          <p>Un martillo en medio de un rango, sin nivel particular, con volumen promedio - eso es ruido.</p>
+          <p>Antes de operar cualquier patrón de velas, pregunta:</p>
+          <ul>
+            <li>¿Dónde está en la tendencia? (¿Principio, medio, final?)</li>
+            <li>¿Está en un nivel de precio significativo? (¿Soporte, resistencia, media móvil?)</li>
+            <li>¿El volumen lo confirma? (Alto volumen en velas de reversión es mejor)</li>
+            <li>¿Cuál es el contexto del timeframe superior? (Un martillo de 5 minutos durante una tendencia bajista diaria significa poco)</li>
+          </ul>
+
+          <hr>
+
+          <h2>Los Errores Comunes</h2>
+          <p><strong>Operar cada patrón:</strong> La mayoría de patrones de velas son ruido. Solo opera patrones en niveles significativos con contexto que confirme.</p>
+          <p><strong>Ignorar el cierre:</strong> Un patrón no está confirmado hasta que la vela cierra. Un martillo parece martillo solo al cierre - durante el período, podría convertirse en cualquier cosa.</p>
+          <p><strong>Olvidar la tendencia:</strong> Los patrones de reversión necesitan una tendencia para revertir. Un "envolvente alcista" en una tendencia alcista no es una reversión - es solo continuación.</p>
+          <p><strong>Sin requisito de seguimiento:</strong> Los mejores traders esperan confirmación. Después de un martillo, quieren ver la siguiente vela cerrar en verde antes de entrar.</p>
+
+          <hr>
+
+          <h2>La Conclusión</h2>
+          <p>Las velas japonesas son un lenguaje. El cuerpo te dice quién ganó la batalla. Las mechas te dicen quién intentó y falló. El contexto te dice si algo de eso importa.</p>
+          <p>Aprende los fundamentos aquí, luego enfócate en el contexto. Un patrón simple en el lugar correcto vale más que un patrón complejo en el lugar equivocado.</p>
+          <p>Ese contexto puede ser sistematizado. Conocer la fase actual del ciclo te dice si un patrón de reversión probablemente mantendrá o fallará. La detección de régimen de volumen revela si las instituciones están acumulando o distribuyendo. Un martillo en un fondo de ciclo durante acumulación significa algo completamente diferente al mismo martillo a mitad de tendencia durante distribución.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Artículos Relacionados</h3>
+            <div class="related-grid">
+              <a href="../support-and-resistance-explained/" class="related-card">
+                <span class="related-category">Principiante</span>
+                <h4>Soporte y Resistencia Explicados</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">Ciclos</span>
+                <h4>El Único Patrón Que Realmente Se Repite</h4>
+              </a>
+              <a href="../what-is-a-trading-edge/" class="related-card">
+                <span class="related-category">Principiante</span>
+                <h4>¿Qué Es una Ventaja en Trading?</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../rules-based-vs-discretionary/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Anterior
+              </span>
+              <span class="article-nav-title">Trading Basado en Reglas vs Discrecional: ¿Cuál Funciona Realmente?</span>
+            </a>
+            <a href="../the-repainting-problem/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Siguiente
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">El Problema del Repintado: Cómo Engañan la Mayoría de Indicadores de TradingView</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Un martillo en un fondo de ciclo durante acumulación (rastreado por Pentarch y Volume Oracle) significa algo completamente diferente a un martillo a mitad de tendencia. El contexto transforma el ruido de velas en estructura accionable.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver velas en contexto →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro de Educación</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    const langDropdown = document.getElementById('langDropdown');
+    const langToggle = langDropdown?.querySelector('.lang-toggle');
+
+    if (langToggle) {
+      langToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (langDropdown && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

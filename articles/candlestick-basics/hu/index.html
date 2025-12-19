@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyertyatartó alapok: Árfolyammozgás olvasása profi módon - Signal Pilot Blog</title>
+  <meta name="description" content="A gyertyatartók az ár nyelve. Itt megtudhatod, hogyan olvasd őket - és mely minták számítanak igazán a kereskedésben.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Kezdőlap</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltása">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld ki ingyen</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">Kezdő alapok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Kezdő alapok</span>
+          <h1 class="article-title">Gyertyatartó alapok: Árfolyammozgás olvasása profi módon</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Megosztás:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Megosztás Twitteren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Megosztás LinkedInen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link másolása">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Gyertyatartó alapok vizualizáció" data-ai-prompt="Dark themed artistic rendering of Japanese candlesticks, with one large detailed candlestick in the center showing anatomy - wick, body, shadows. Surrounding smaller candles form a pattern. Glowing green and red elements, professional trading aesthetic with deep navy background.">
+        <figcaption class="ai-prompt">Dark themed artistic rendering of Japanese candlesticks, with one large detailed candlestick in the center showing anatomy - wick, body, shadows. Surrounding smaller candles form a pattern. Glowing green and red elements, professional trading aesthetic with deep navy background.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Nyiss meg egy grafikont. Azok a színes oszlopok nem csak díszítések - elmondják a vevők és eladók közötti minden csata történetét.</p>
+          <p>A gyertyatartók megértése az első lépés bármely grafikon olvasásához. Itt van minden, amit tudnod kell - és semmi, amit nem.</p>
+
+          <hr>
+
+          <h2>A gyertyatartó anatómiája</h2>
+          <p>Minden gyertyatartó egy időszakot reprezentál - egy perc, egy óra, egy nap, bármire is van beállítva a grafikonod. Négy információt mutat:</p>
+          <ul>
+            <li><strong>Nyitó:</strong> Ahol az ár indult az időszak elején</li>
+            <li><strong>Legmagasabb:</strong> A legmagasabb ár, amit az időszak alatt elértek</li>
+            <li><strong>Legalacsonyabb:</strong> A legalacsonyabb ár, amit az időszak alatt elértek</li>
+            <li><strong>Záró:</strong> Ahol az ár végzett az időszak zárásakor</li>
+          </ul>
+          <p>A vastag részt <strong>testnek</strong> hívják. A nyitó és záró közötti tartományt mutatja.</p>
+          <p>A fent és lent lévő vékony vonalakat <strong>kanócoknak</strong> (vagy árnyékoknak) hívják. A legmagasabb és legalacsonyabb közötti teljes tartományt mutatják.</p>
+          <p><strong>Zöld/fehér gyertyák:</strong> A záró magasabb, mint a nyitó. A vevők nyerték ezt az időszakot.</p>
+          <p><strong>Piros/fekete gyertyák:</strong> A záró alacsonyabb, mint a nyitó. Az eladók nyerték ezt az időszakot.</p>
+
+          <hr>
+
+          <h2>Mit mond a test</h2>
+          <p>A test a meggyőződést mutatja. Egy nagy test erős mozgást jelent egy irányba. Egy kis test bizonytalanságot vagy egyensúlyt jelent a vevők és eladók között.</p>
+          <p><strong>Nagy zöld test:</strong> Erős vételi nyomás. A vevők irányították az egész időszakot. Bullish.</p>
+          <p><strong>Nagy piros test:</strong> Erős eladási nyomás. Az eladók irányították az egész időszakot. Bearish.</p>
+          <p><strong>Kis test (bármilyen színű):</strong> Egyik oldal sem dominált. A piac bizonytalan vagy kiegyensúlyozott.</p>
+          <p><strong>Doji (szinte nincs test):</strong> A nyitó és záró szinte azonos. Maximális bizonytalanság. Gyakran fordulópontokon jelenik meg.</p>
+
+          <hr>
+
+          <h2>Mit mondanak a kanócok</h2>
+          <p>A kanócok az elutasítást mutatják. Amikor az ár valahova mozog, majd visszalökik, kanócot látsz. Minél hosszabb a kanóc, annál erősebb az elutasítás.</p>
+          <p><strong>Hosszú felső kanóc:</strong> Az ár próbált feljebb menni, de visszalökték. Az eladók aktívak magasabb árakon. Bearish jelzés.</p>
+          <p><strong>Hosszú alsó kanóc:</strong> Az ár próbált lejjebb menni, de visszalökték. A vevők aktívak alacsonyabb árakon. Bullish jelzés.</p>
+          <p><strong>Kanócok mindkét oldalon:</strong> Mind a vevők, mind az eladók aktívak voltak. Bizonytalanság vagy volatilitás.</p>
+          <p><strong>Nincs kanóc:</strong> A nyitó/záró voltak a szélső árak. Nagyon erős meggyőződés a test irányába.</p>
+
+          <hr>
+
+          <h2>Kulcsfontosságú egygyertyás minták</h2>
+          <p>Felejtsd el az 50 minta név memorizálását. Ezek azok, amelyek igazán számítanak:</p>
+          <p><strong>Kalapács / Akasztott ember:</strong> Kis test felül, hosszú alsó kanóc. Úgy néz ki, mint egy kalapács. Csökkenő trend alján ez egy "kalapács" és felfelé fordulást sugall. Emelkedő trend tetején ez egy "akasztott ember" és lefelé fordulást sugall. Ugyanaz az alak, a kontextus határozza meg a jelentést.</p>
+          <p><strong>Fordított kalapács / Hulló csillag:</strong> Kis test alul, hosszú felső kanóc. Csökkenő trend alján ez egy "fordított kalapács" (potenciális felfelé fordulás). Emelkedő trend tetején ez egy "hulló csillag" (potenciális lefelé fordulás).</p>
+          <p><strong>Doji:</strong> Nagyon kicsi vagy nincs test. Bizonytalanság. Erős trend után jelentőségteljes - a momentum csökkenését sugallja.</p>
+          <p><strong>Marubozu:</strong> Teljes egészében test, nincs kanóc. Maximális meggyőződés. Egy zöld marubozu esés után nagyon bullish. Egy piros marubozu emelkedés után nagyon bearish.</p>
+
+          <hr>
+
+          <h2>Kulcsfontosságú többgyertyás minták</h2>
+          <p>Néhány minta két vagy három gyertyát igényel az azonosításhoz:</p>
+          <p><strong>Elnyelő:</strong> Egy nagy gyertya, amely teljesen lefedi (elnyeli) az előző gyertya testét. Bullish elnyelő: zöld gyertya elnyeli az előző piros gyertyát. Bearish elnyelő: piros gyertya elnyeli az előző zöld gyertyát. Erős fordulási jelzés.</p>
+          <p><strong>Belső sáv:</strong> Egy gyertya, amelynek teljes tartománya (legmagasabbtól legalacsonyabbig) az előző gyertya tartományán belül van. Konszolidációt képvisel. A kitörés iránya gyakran folytatódik.</p>
+          <p><strong>Reggeli csillag / Esti csillag:</strong> Háromgyertyás minta. Nagy gyertya, kis gyertya (a "csillag"), nagy gyertya ellentétes irányba. A reggeli csillag (aljakon) és az esti csillag (csúcsokon) fordulási minták.</p>
+
+          <hr>
+
+          <h2>A kontextus minden</h2>
+          <p>Itt van, amit a legtöbb gyertyatartó tanfolyam kihagy: ugyanaz a minta különböző kontextusokban különböző dolgokat jelent.</p>
+          <p>Egy kalapács egy hosszú csökkenő trend alján, egy fő támaszszinten, magas volumennel - ez jelentőségteljes.</p>
+          <p>Egy kalapács egy tartomány közepén, semmilyen különleges szinten, átlagos volumennel - ez zaj.</p>
+          <p>Mielőtt bármilyen gyertyamintával kereskedsz, kérdezd meg:</p>
+          <ul>
+            <li>Hol van ez a trendben? (Elején, közepén, végén?)</li>
+            <li>Jelentős árszinten van? (Támasz, ellenállás, mozgóátlag?)</li>
+            <li>A volumen megerősíti? (Magas volumen fordulási gyertyákon jobb)</li>
+            <li>Mi a magasabb időkeret kontextusa? (Egy 5 perces kalapács napi csökkenő trend közben keveset jelent)</li>
+          </ul>
+
+          <hr>
+
+          <h2>A gyakori hibák</h2>
+          <p><strong>Minden mintával kereskedés:</strong> A legtöbb gyertyaminta zaj. Csak jelentős szinteken kereskedj mintákkal, megerősítő kontextussal.</p>
+          <p><strong>A záró figyelmen kívül hagyása:</strong> Egy minta nem megerősített, amíg a gyertya nem zárul. Egy kalapács csak zárókor néz ki kalapácsnak - az időszak alatt bármivé válhat.</p>
+          <p><strong>A trend elfelejtése:</strong> A fordulási mintáknak szükségük van egy trendre, amit megfordítanak. Egy "bullish elnyelő" egy emelkedő trendben nem fordulás - csak folytatás.</p>
+          <p><strong>Nincs követési követelmény:</strong> A legjobb kereskedők megerősítésre várnak. Egy kalapács után látni akarják, hogy a következő gyertya zölden zár, mielőtt belépnek.</p>
+
+          <hr>
+
+          <h2>A lényeg</h2>
+          <p>A gyertyatartók egy nyelv. A test megmondja, ki nyerte a csatát. A kanócok megmondják, ki próbálkozott és vallott kudarcot. A kontextus megmondja, hogy ezeknek bármelyike számít-e.</p>
+          <p>Tanuld meg az alapokat itt, majd koncentrálj a kontextusra. Egy egyszerű minta a megfelelő helyen többet ér, mint egy összetett minta rossz helyen.</p>
+          <p>Ez a kontextus rendszeresíthető. A jelenlegi ciklusfázis ismerete megmondja, hogy egy fordulási minta tartani fog-e vagy kudarcot vall. A volumenrendszer-észlelés feltárja, hogy az intézmények felhalmoznak vagy szétosztanak. Egy kalapács ciklus alján akkumuláció közben (amit a Pentarch és Volume Oracle követ) valami teljesen mást jelent, mint ugyanaz a kalapács trend közepén disztribúció alatt.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó cikkek</h3>
+            <div class="related-grid">
+              <a href="../support-and-resistance-explained/" class="related-card">
+                <span class="related-category">Kezdő</span>
+                <h4>Támasz és ellenállás magyarázat</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">Ciklusok</span>
+                <h4>Az egyetlen minta, ami valóban ismétlődik</h4>
+              </a>
+              <a href="../what-is-a-trading-edge/" class="related-card">
+                <span class="related-category">Kezdő</span>
+                <h4>Mi az a kereskedési előny?</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../rules-based-vs-discretionary/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Előző
+              </span>
+              <span class="article-nav-title">Szabályalapú vs diszkrecionális kereskedés: melyik működik valójában?</span>
+            </a>
+            <a href="../the-repainting-problem/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Következő
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Az újrafestési probléma: hogyan csalnak a legtöbb TradingView indikátorok</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Egy kalapács ciklus alján akkumuláció közben (amit a Pentarch és Volume Oracle követ) valami teljesen mást jelent, mint egy kalapács trend közepén. A kontextus átalakítja a gyertyatartó zajt cselekvésre alkalmas struktúrává.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Nézd meg a gyertyákat kontextusban →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Vissza a Blogra</a><a href="https://signalpilot.io">Kezdőlap</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    }
+  </script>
+</body>
+</html>

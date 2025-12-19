@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自分を騙さないバックテスト：戦略を正直にテストする方法 - Signal Pilot ブログ</title>
+  <meta name="description" content="バックテストが嘘をつくことはご存知でしょう。ここでは戦略を正直にテストする方法をご紹介します - アウトオブサンプル検証、ウォークフォワード分析、モンテカルロストレステスト。">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/" class="active">ブログ</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="翻訳">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-toggle" aria-label="言語を選択">
+              <span class="flag">🇯🇵</span>
+              <span class="lang-name">JA</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="lang-menu">
+              <a href="../"><span class="flag">🇬🇧</span> English</a>
+              <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+              <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+              <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+              <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+              <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+              <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+              <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+              <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+              <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+              <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+              <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+            </div>
+          </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ切替">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料体験</a>
+          <button class="mobile-menu-btn" aria-label="メニュー">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="パンくずリスト">
+            <a href="/">ブログ</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=systems">トレーディングシステム</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">記事</span>
+          </nav>
+          <span class="article-category">トレーディングシステム</span>
+          <h1 class="article-title">自分を騙さないバックテスト：戦略を正直にテストする方法</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読めます</span>
+            <span>Signal Pilot チーム</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">共有：</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitterで共有">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedInで共有">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="リンクをコピー">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="正直なバックテストの視覚化" data-ai-prompt="Dark themed split image - left side showing a beautiful but deceptive equity curve with a subtle crack/fracture, right side showing an honest stepped equity curve with realistic drawdowns. Magnifying glass hovering over the transition. Professional trading aesthetic, deep navy background with golden and red accent lighting.">
+        <figcaption class="ai-prompt">Dark themed split image - left side showing a beautiful but deceptive equity curve with a subtle crack/fracture, right side showing an honest stepped equity curve with realistic drawdowns. Magnifying glass hovering over the transition. Professional trading aesthetic, deep navy background with golden and red accent lighting.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>バックテストは嘘をつきます。カーブフィッティング、先読みバイアス、生存者バイアス、非現実的な執行の仮定 - バックテストがあなたを欺く方法はよく文書化されています。</p>
+          <p>しかし、システマティックトレーディングに真剣に取り組むなら、やはりテストは必要です。問題はバックテストをするかどうかではありません。自分を騙さずにどうやるかです。</p>
+          <p>ここに本当に機能する方法論があります。</p>
+
+          <hr>
+
+          <h2>データではなくロジックから始める</h2>
+          <p>1つのテストを実行する前に、なぜあなたの戦略が機能するはずなのかを明確にしてください。</p>
+          <p>「歴史的に機能したから」ではありません。それは循環論法です。市場に基づいた理由が必要です：機関投資家の行動がこのパターンを作り出す、人間の心理がこの傾向を生み出す、市場構造がこの非効率性を生成する。</p>
+          <p>ロジックを説明できないなら、あなたはデータマイニングをしています。見つけた「エッジ」はおそらくシグナルに見えたノイズです。</p>
+          <p><strong>良い基盤：</strong></p>
+          <ul>
+            <li>サイクルは資本がアキュムレーションとディストリビューションのフェーズを循環するために存在する</li>
+            <li>出来高は機関投資家の意図を明らかにするマネーフローのため方向を確認する</li>
+            <li>コンフルエンスは独立したシステムの一致が誤シグナルを減らすため機能する</li>
+          </ul>
+          <p>テストする前に仮説を書き留めてください。これにより、結果に説明を後付けすることを防ぎます。</p>
+
+          <hr>
+
+          <h2>現実的なコストを組み込む</h2>
+          <p>ほとんどのバックテストは完璧な執行を仮定しています。実際のトレーディングには摩擦があります。</p>
+          <p><strong>すべてのテストに含める：</strong></p>
+          <ul>
+            <li><strong>スプレッド：</strong> アスクで買い、ビッドで売る。これを明示的にモデル化する</li>
+            <li><strong>スリッページ：</strong> シグナル価格より0.1-0.5%悪い約定を想定する</li>
+            <li><strong>手数料：</strong> 「無料」のブローカーでもSEC手数料やペイメント・フォー・オーダーフローのコストがある</li>
+            <li><strong>マーケットインパクト：</strong> あなたの注文は価格を動かす、特に流動性の低い商品では</li>
+          </ul>
+          <p>1取引で0.1%稼ぎ、往復コストが0.15%の戦略は負けです。実際の損失を出す前に今知る方が良いです。</p>
+
+          <hr>
+
+          <h2>アウトオブサンプルプロトコル</h2>
+          <p>正直なバックテストのための最も重要なテクニック：アウトオブサンプルテスト。</p>
+          <ol>
+            <li><strong>データを分割する。</strong> インサンプル（例えば70%）とアウトオブサンプル（30%）に分ける</li>
+            <li><strong>インサンプルでのみ開発する。</strong> すべてのテスト、調整、最適化をインサンプルデータで行う</li>
+            <li><strong>アウトオブサンプルで一度だけテストする。</strong> 最終的なシステムができたら、見たことのないアウトオブサンプルデータでテストする</li>
+            <li><strong>一度きり。</strong> チャンスは一度だけ。アウトオブサンプルでテストし、調整し、再度テストすると、もはやアウトオブサンプルではない</li>
+          </ol>
+          <p>アウトオブサンプルデータでパフォーマンスが大幅に低下したら、オーバーフィットしています。維持できれば、本物かもしれません。</p>
+
+          <hr>
+
+          <h2>ウォークフォワード分析</h2>
+          <p>単純なアウトオブサンプルテストよりさらに良いのがウォークフォワード分析：</p>
+          <ol>
+            <li>期間1で最適化（例えば2015-2018）</li>
+            <li>期間2でテスト（2019）</li>
+            <li>結果を記録</li>
+            <li>期間2で最適化（2016-2019）</li>
+            <li>期間3でテスト（2020）</li>
+            <li>繰り返す</li>
+          </ol>
+          <p>これは実際にやることをシミュレートします：最新のデータを使って定期的にシステムを再最適化し、その後前方にトレードする。</p>
+          <p>「テスト」期間が一貫して良好なパフォーマンスを示せば、システムはロバストです。テスト期間のパフォーマンスが最適化期間よりずっと悪ければ、カーブフィッティングをしています。</p>
+
+          <hr>
+
+          <h2>モンテカルロ現実チェック</h2>
+          <p>バックテストは最大ドローダウン25%を示しています。快適ですよね？</p>
+          <p>しかしそれは歴史を通る一つの経路に過ぎません。ランダムな変動はもっと悪い結果を生み出し得ました。</p>
+          <p>モンテカルロ分析は取引の順序をランダム化（または復元抽出）し、数千のシミュレーションを実行します。これにより、同じ取引で異なる順序だった場合に起こり得た結果の範囲がわかります。</p>
+          <p>異なる運で最大ドローダウンが50%だった可能性があるなら、25%ではなく50%のドローダウンに対してサイジングする必要があります。</p>
+
+          <hr>
+
+          <h2>結論</h2>
+          <p>バックテストはエッジの証明ではありません。悪いアイデアを反証する方法です - 正直にやれば。</p>
+          <p>良いバックテストは：</p>
+          <ul>
+            <li>市場に基づいたロジックを持つシンプルなルールを使用する</li>
+            <li>先読みバイアスと生存者バイアスを避ける</li>
+            <li>現実的な取引コストを含む</li>
+            <li>最終検証のためにアウトオブサンプルデータを確保する</li>
+            <li>ウォークフォワードとモンテカルロ分析でストレステストする</li>
+          </ul>
+          <p>目標は美しいエクイティカーブではありません。将来のパフォーマンスの現実的な推定です。これらは非常に異なるものです。</p>
+          <p>リペイントしないインジケーターは正直なバックテストに不可欠です。テストしているシステムがサイクル分析、ボリュームレジーム検出、モメンタム投票を使用し、すべてがローソク足の終値で確定するなら、履歴レビューはライブで見たであろうものを正確に示します。先読みバイアスなし。ファントムシグナルなし。テストしているものは実際にトレードするものです。</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>関連記事</h3>
+            <div class="related-grid">
+              <a href="../why-backtesting-results-are-worthless/" class="related-card">
+                <span class="related-category">インジケーター</span>
+                <h4>なぜバックテスト結果は無価値なのか</h4>
+              </a>
+              <a href="../the-repainting-problem/" class="related-card">
+                <span class="related-category">インジケーター</span>
+                <h4>リペイント問題：なぜバックテストは嘘をついたのか</h4>
+              </a>
+              <a href="../building-your-first-system/" class="related-card">
+                <span class="related-category">システム</span>
+                <h4>最初のトレーディングシステムを構築する</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../when-to-cut-losses-early/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                前の記事
+              </span>
+              <span class="article-nav-title">いつ損切りを早くすべきか</span>
+            </a>
+            <a href="../what-is-a-trading-edge/" class="article-nav-link next">
+              <span class="article-nav-label">
+                次の記事
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">トレーディングエッジとは何か？</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarchのリペイントしないシグナルは正直なバックテストのために設計されています - 履歴で見るものはライブで見たであろうものと正確に同じで、先読みバイアスはありません。</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">自信を持ってテストする →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育ハブ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="トップに戻る"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

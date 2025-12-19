@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فشل الدورات: ماذا يعني عندما تنكسر الأنماط - مدونة Signal Pilot</title>
+  <meta name="description" content="الأسواق تتحرك في دورات - حتى لا تفعل. إليك ما يعنيه عندما تفشل أنماط الدورات المتوقعة، وكيفية التداول في هذه المواقف القوية لكن الخطيرة.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">التعليم</a><a href="/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="ترجمة">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/" class="active"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرّب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="مسار التنقل">
+            <a href="/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=cycles">دورات السوق</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">المقال</span>
+          </nav>
+          <span class="article-category">دورات السوق</span>
+          <h1 class="article-title">فشل الدورات: ماذا يعني عندما تنكسر الأنماط</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق للقراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="مشاركة على تويتر">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="مشاركة على لينكد إن">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تصوير فشل الدورات" data-ai-prompt="Dark themed image showing a broken or disrupted sine wave cycle - the wave starts normally but then breaks apart with shattered/glitching effect at the failure point. Warning signals and caution indicators. Red and gold accent lighting against deep navy background. Professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed image showing a broken or disrupted sine wave cycle - the wave starts normally but then breaks apart with shattered/glitching effect at the failure point. Warning signals and caution indicators. Red and gold accent lighting against deep navy background. Professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>لقد تعلمت تحديد مراحل الدورة. التراكم يؤدي إلى الصعود الذي يؤدي إلى التوزيع الذي يؤدي إلى الانخفاض. النمط يتكرر.</p>
+          <p>إلا عندما لا يحدث ذلك.</p>
+          <p>أحياناً يفشل التراكم - السعر يكسر للأسفل بدلاً من الأعلى. أحياناً يفشل التوزيع - السعر يكسر للأعلى بدلاً من الأسفل. هذه الإخفاقات ليست عشوائية - إنها معلومات. إليك كيفية قراءتها.</p>
+
+          <hr>
+
+          <h2>ما هو فشل الدورة؟</h2>
+          <p>يحدث فشل الدورة عندما لا تتحقق المرحلة التالية المتوقعة. بدلاً من التقدم عبر التسلسل، تنعكس الدورة أو تتخطى مرحلة.</p>
+          <p><strong>الإخفاقات الشائعة:</strong></p>
+          <ul>
+            <li><strong>التراكم الفاشل:</strong> السعر يبدو متراكماً لكنه يكسر إلى قيعان جديدة بدلاً من بدء الصعود</li>
+            <li><strong>التوزيع الفاشل:</strong> السعر يبدو موزعاً لكنه يكسر إلى قمم جديدة بدلاً من الانخفاض</li>
+            <li><strong>الصعود المبتور:</strong> الصعود ينتهي أبكر بكثير من المتوقع، مع تقدم سعري ضئيل</li>
+            <li><strong>الانخفاض المبتور:</strong> الانخفاض ينتهي أبكر بكثير من المتوقع، مع هبوط سعري ضئيل</li>
+          </ul>
+          <p>هذه الإخفاقات تحاصر المتداولين الذين تموضعوا للمرحلة المتوقعة وتخلق تحركات قوية في الاتجاه المعاكس.</p>
+
+          <hr>
+
+          <h2>لماذا تحدث الإخفاقات</h2>
+          <p><strong>الصدمات الخارجية:</strong> الأخبار، الأرباح، البيانات الاقتصادية، الأحداث الجيوسياسية. السوق كان يتراكم، ثم اندلعت الحرب. الدورة لا تهتم - السعر يهبط.</p>
+          <p><strong>الغلبة من الإطار الزمني الأعلى:</strong> رسمك البياني اليومي يظهر تراكماً. لكن الأسبوعي في اتجاه هبوطي قوي. الاتجاه الأسبوعي يتغلب على النمط اليومي.</p>
+          <p><strong>غياب المتابعة:</strong> التراكم يتطلب من المشترين المتابعة بشراء مستمر. إذا لم يتحقق هذا الطلب، يفشل النمط.</p>
+          <p><strong>إعداد الفخ:</strong> أحياناً ما يبدو تراكماً هو في الواقع توزيع متنكر. الأموال الذكية تستخدم مظهر التراكم للتوزيع بأسعار أفضل.</p>
+
+          <hr>
+
+          <h2>التداول على إخفاقات الدورات</h2>
+          <p>الإخفاقات خطيرة لكن قابلة للتداول إذا احترمتها:</p>
+          <p><strong>الاعتراف السريع.</strong> عندما تفشل دورة، النتيجة المتوقعة خاطئة. اعترف بهذا فوراً. كلما تمسكت بالفرضية الأصلية أكثر، كلما كان الأمر أسوأ.</p>
+          <p><strong>الأنماط الفاشلة تعمل بالعكس.</strong> التراكم الفاشل غالباً يؤدي إلى انخفاضات حادة. التوزيع الفاشل غالباً يؤدي إلى ارتفاعات قوية. المتداولون الذين كانوا متموضعين للحركة المتوقعة الآن محاصرون ويجب أن يخرجوا - مما يغذي الحركة المعاكسة.</p>
+          <p><strong>تجنب محاربته.</strong> إذا كنت متموضعاً للتراكم وفشل، اقطع المركز. الأمل، الإضافة، أو تحريك وقف الخسارة يميل لجعل الأمور أسوأ. الإخفاقات يمكن أن تكون عنيفة.</p>
+          <p><strong>فكر في الانعكاس.</strong> إذا كنت رشيقاً، نمط فاشل يمكن أن يكون إشارة دخول في الاتجاه المعاكس. تراكم فاشل ← بيع. توزيع فاشل ← شراء. لكن فقط مع التأكيد - لا تقفز فوراً.</p>
+
+          <hr>
+
+          <h2>ديناميكية الفخ</h2>
+          <p>إخفاقات الدورات تخلق فخاً نفسياً محدداً:</p>
+          <ol>
+            <li>المتداولون يحددون النمط (تراكم، توزيع، إلخ)</li>
+            <li>يأخذون مراكز وفقاً لذلك</li>
+            <li>النمط يفشل</li>
+            <li>المتداولون المحاصرون الآن في خسارة</li>
+            <li>خروجهم القسري يسرع الحركة ضدهم</li>
+          </ol>
+          <p>فهم هذه الديناميكية يساعد بطريقتين:</p>
+          <p>أولاً، عندما تكون محاصراً، اعترف أن الآخرين كذلك. الحركة ضدك ستستمر على الأرجح حتى يُطرد المتداولون المحاصرون.</p>
+          <p>ثانياً، عندما ترى فشلاً يتطور، يمكنك التموضع للاستفادة من خروج المتداولين المحاصرين.</p>
+
+          <hr>
+
+          <h2>التأكيد يمنع الدخول المبكر</h2>
+          <p>أفضل حماية ضد إخفاقات الدورات هي التأكيد قبل الدخول:</p>
+          <p><strong>للتراكم:</strong> الشراء فقط لأنه يبدو تراكماً سابق لأوانه. انتظر "السبرينج" (كسر كاذب للأسفل ينعكس) أو "علامة القوة" (اختراق فوق النطاق) قبل الالتزام.</p>
+          <p><strong>للتوزيع:</strong> البيع فقط لأنه يبدو توزيعاً سابق لأوانه. انتظر "الأبثرست" (اختراق كاذب للأعلى ينعكس) أو "علامة الضعف" (كسر تحت النطاق) قبل الالتزام.</p>
+          <p>التأكيد يعني أن الدورة تكتمل فعلاً، ليس فقط تبدو كأنها تتشكل. بدون تأكيد، أنت تخمن.</p>
+
+          <hr>
+
+          <h2>الحماية متعددة الأطر الزمنية</h2>
+          <p>كثير من إخفاقات الدورات تحدث لأن المتداولين يتجاهلون الأطر الزمنية الأعلى:</p>
+          <p><strong>القاعدة:</strong> تحقق دائماً من إطار زمني أعلى واحد على الأقل قبل التداول على نمط دورة.</p>
+          <p>إذا كان الإطار الزمني الأعلى في اتجاه قوي معاكس لمرحلة دورتك المتوقعة، كن حذراً جداً. التراكم اليومي في اتجاه هبوطي أسبوعي غالباً يفشل. التوزيع اليومي في اتجاه صعودي أسبوعي غالباً يفشل.</p>
+          <p>الإطار الزمني الأعلى لا يضمن الفشل، لكنه يزيد الاحتمال بشكل كبير. تداول أصغر أو لا تتداول على الإطلاق عندما تتعارض الأطر الزمنية.</p>
+
+          <hr>
+
+          <h2>علامات أن الدورة قد تفشل</h2>
+          <p>راقب هذه العلامات التحذيرية:</p>
+          <ul>
+            <li><strong>الحجم لا يؤكد:</strong> التراكم يجب أن يكون له حجم متزايد على الحركات الصعودية. التوزيع يجب أن يكون له حجم متزايد على الحركات الهبوطية. إذا كان سلوك الحجم خاطئاً، النمط مشبوه.</li>
+            <li><strong>الوقت يمتد:</strong> الأنماط التي تأخذ وقتاً طويلاً للاكتمال غالباً تفشل. الأنماط الجديدة أكثر موثوقية من القديمة.</li>
+            <li><strong>اختبارات متعددة لنفس المستوى:</strong> كل اختبار يضعف المستوى. إذا تم اختبار الدعم خمس مرات، من المرجح أن ينكسر بدلاً من أن يصمد.</li>
+            <li><strong>ضغط الإطار الزمني الأعلى:</strong> كما ناقشنا، الاتجاهات المتعارضة للأطر الزمنية الأعلى تزيد احتمال الفشل.</li>
+            <li><strong>مخاطر الأخبار:</strong> الإعلانات الكبرى يمكن أن تتغلب على أي نمط. قلل التعرض أو اخرج قبل الأحداث المعروفة.</li>
+          </ul>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>إخفاقات الدورات ليست شذوذاً - إنها جزء من سلوك السوق. توقع أن تكتمل الأنماط دائماً غير واقعي.</p>
+          <p>احمِ نفسك بانتظار التأكيد، والتحقق من الأطر الزمنية الأعلى، والقطع سريعاً عندما تتطور الإخفاقات. وإذا كنت رشيقاً، اعترف أن الأنماط الفاشلة تخلق بعض أفضل الصفقات - في الاتجاه المعاكس لما توقعه الجميع.</p>
+          <p>تحليل الحجم غالباً يوفر إنذاراً مبكراً للإخفاقات. إذا بدا السعر تراكماً لكن نظام الحجم يظهر ضعفاً بدلاً من امتصاص مؤسسي، النمط مشبوه. تباعد OBV خلال التراكم المفترض قد يشير إلى أن ضغط الشراء ليس حقيقياً. أنظمة تأكيد متعددة تساعد في التمييز بين الإعدادات الحقيقية والفخاخ.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">الدورات</span>
+                <h4>النمط الوحيد الذي يتكرر فعلاً</h4>
+              </a>
+              <a href="../when-to-cut-losses-early/" class="related-card">
+                <span class="related-category">المخاطر</span>
+                <h4>متى تقطع الخسائر مبكراً</h4>
+              </a>
+              <a href="../multi-timeframe-confirmation/" class="related-card">
+                <span class="related-category">المؤشرات</span>
+                <h4>التأكيد متعدد الأطر الزمنية</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../revenge-trading-recovery/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                السابق
+              </span>
+              <span class="article-nav-title">التداول الانتقامي: كيف تتوقف وتتعافى</span>
+            </a>
+            <a href="../building-a-pre-trade-checklist/" class="article-nav-link next">
+              <span class="article-nav-label">
+                التالي
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">بناء قائمة مراجعة ما قبل التداول التي تعمل فعلاً</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch يكتشف مراحل الدورة في الوقت الفعلي وينبهك عندما لا تتحقق التقدمات المتوقعة - لتتمكن من التكيف قبل أن يأخذ خروج المتداولين المحاصرين أرباحك.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">اكتشف الإخفاقات مبكراً ←</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    }
+  </script>
+</body>
+</html>

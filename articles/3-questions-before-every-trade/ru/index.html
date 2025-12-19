@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Вопроса Перед Каждой Сделкой - Signal Pilot Blog</title>
+  <meta name="description" content="Ваш индикатор дает сигнал. Ваш палец зависает над кнопкой покупки. Стоп. Сначала нужны ответы на три вопроса.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Обучение</a><a href="/" class="active">Блог</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Перевести">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown active" id="langDropdown">
+                <button class="lang-toggle" aria-label="Выбрать язык">
+                  <span class="flag">🇷🇺</span>
+                  <span class="lang-name">RU</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Попробовать</a>
+          <button class="mobile-menu-btn" aria-label="Меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Навигация">
+            <a href="/">Блог</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=practical">Практика</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Статья</span>
+          </nav>
+          <span class="article-category">Практика</span>
+          <h1 class="article-title">3 Вопроса Перед Каждой Сделкой</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 мин чтения</span>
+            <span>Команда Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Поделиться:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Поделиться в Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Поделиться в LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Копировать ссылку">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Визуализация трех вопросов перед торговлей" data-ai-prompt="Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.">
+        <figcaption class="ai-prompt">Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Ваш индикатор дает сигнал. Ваш палец зависает над кнопкой покупки. Вы чувствуете уверенность.</p>
+          <p>Стоп.</p>
+          <p>Перед любой сделкой три вопроса требуют ответов. Пропустите их — и вы играете в азартные игры. Ответьте честно — и вы избежите половины убытков, которые уничтожают счета розничных трейдеров.</p>
+
+          <hr>
+
+          <h2>Вопрос 1: Какова Моя Точка Инвалидации?</h2>
+          <p>Перевод: при какой цене я доказуемо неправ?</p>
+          <p>Это не «где я поставлю стоп-лосс?» Это механическое исполнение. Вопрос глубже: что должно произойти, чтобы моя торговая идея оказалась неверной?</p>
+          <p>Если вы покупаете, потому что видите отскок от поддержки, ваша инвалидация — это пробой этой поддержки. Если цена закроется ниже этого уровня, ваша идея неверна.</p>
+          <p>Точка инвалидации должна быть:</p>
+          <ul>
+            <li><strong>Структурной, не произвольной.</strong> «2% ниже входа» — это не инвалидация. «Ниже зоны накопления» — это инвалидация.</li>
+            <li><strong>Четкой и объективной.</strong> Никаких субъективных суждений, когда вы в позиции и эмоциональны.</li>
+            <li><strong>Соблюдаемой без исключений.</strong> Если достигнута — вы выходите. Точка.</li>
+          </ul>
+          <p>Трейдеры, которые не могут сформулировать свою точку инвалидации, не имеют идеи. У них есть надежда.</p>
+
+          <hr>
+
+          <h2>Вопрос 2: Какова Моя Награда, Если Я Прав?</h2>
+          <p>Перевод: где логическая цель, и стоит ли эта сделка того?</p>
+          <p>Точка инвалидации говорит вам, сколько вы рискуете. Цель говорит, сколько вы пытаетесь заработать. Соотношение определяет, имеет ли сделка смысл.</p>
+          <p>Ваша цель также должна быть структурной: следующий уровень сопротивления для лонгов, следующая поддержка для шортов, предыдущий максимум/минимум, который, вероятно, притянет цену.</p>
+          <p>Сделка 1:1 требует 50% выигрышей для безубыточности. Сделка 1:2 требует только 34%.</p>
+          <p>Большинство розничных трейдеров совершают сделки с ужасным соотношением риска к прибыли. Они рискуют $1, чтобы заработать $0,50, потому что сетап «выглядит хорошо». Даже с 60% выигрышей это проигрышная стратегия.</p>
+          <p>Перед входом знайте цифры. Если соотношение риска к прибыли не имеет смысла, сделка не совершается.</p>
+
+          <hr>
+
+          <h2>Вопрос 3: Почему Сейчас?</h2>
+          <p>Перевод: что делает этот вход лучше, чем ожидание?</p>
+          <p>Этот вопрос ловит импульсивные сделки.</p>
+          <p>«Сетап выглядит хорошо» — это не причина для «сейчас». Сетапы могут выглядеть хорошо часами. Почему нажимать кнопку именно в этот момент?</p>
+          <p><strong>Допустимые ответы на «почему сейчас»:</strong></p>
+          <ul>
+            <li>Цена только что достигла моего заранее определенного уровня входа</li>
+            <li>Подтверждающая свеча только что закрылась</li>
+            <li>Сигнал, которого я ждал, только что сработал</li>
+            <li>Риск теперь определяем (только что сформировалась структура)</li>
+          </ul>
+          <p><strong>Недопустимые ответы на «почему сейчас»:</strong></p>
+          <ul>
+            <li>Движется без меня</li>
+            <li>Я чувствую, что пойдет</li>
+            <li>Мне скучно</li>
+            <li>Мне нужно отбить вчерашний убыток</li>
+          </ul>
+          <p>Вопрос «почему сейчас» ловит 80% сделок мести, FOMO-сделок и сделок от скуки.</p>
+
+          <hr>
+
+          <h2>Предторговый Ритуал</h2>
+          <p>Сделайте эти три вопроса ритуалом. Перед каждой сделкой отвечайте на них вслух или записывайте.</p>
+          <p>«Моя инвалидация — это минимум этой зоны накопления, $142,50. Если закроется ниже, я неправ.»</p>
+          <p>«Моя цель — предыдущий максимум на $168, что дает мне соотношение прибыли к риску 3:1.»</p>
+          <p>«Я вхожу сейчас, потому что спринг только что завершился и подтверждающая свеча закрылась выше диапазона.»</p>
+          <p>Это занимает 30 секунд. Это предотвращает тысячи долларов в плохих сделках.</p>
+
+          <hr>
+
+          <h2>Главное</h2>
+          <p>Три вопроса. Каждая сделка. Без исключений.</p>
+          <ol>
+            <li>Какова моя точка инвалидации?</li>
+            <li>Какова моя награда, если я прав?</li>
+            <li>Почему сейчас?</li>
+          </ol>
+          <p>Не можете ответить на все три? Рассмотрите возможность пропустить сделку. Дисциплина не естественна. Развивайте её всё равно. Ваш счет зависит от этого.</p>
+          <p>Объективные данные делают эти вопросы легче для ответа. Фаза цикла подсказывает, где, вероятно, находится структурная инвалидация. Уровни на основе объема, такие как POC и VAL, предоставляют логические цели. Оценка конфлюэнса показывает, поддерживают ли условия вход сейчас или ожидание. Когда данные ясны, три вопроса практически отвечают сами на себя.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Похожие Статьи</h3>
+            <div class="related-grid">
+              <a href="../../building-a-pre-trade-checklist/ru/" class="related-card">
+                <span class="related-category">Практика</span>
+                <h4>Создание Предторгового Чек-листа</h4>
+              </a>
+              <a href="../../why-you-break-trading-rules/ru/" class="related-card">
+                <span class="related-category">Психология</span>
+                <h4>Почему Вы Продолжаете Нарушать Свои Торговые Правила</h4>
+              </a>
+              <a href="../../stop-loss-placement/ru/" class="related-card">
+                <span class="related-category">Практика</span>
+                <h4>Размещение Стоп-Лосса: Где и Почему</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../the-only-pattern-that-repeats/ru/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Предыдущая
+              </span>
+              <span class="article-nav-title">Единственный Паттерн, Который Действительно Повторяется на Рынках</span>
+            </a>
+            <a href="../../position-sizing-101/ru/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Следующая
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Размер Позиции 101: Математика, Которая Держит Вас в Игре</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch предоставляет четкий контекст цикла, чтобы вы могли отвечать на эти вопросы со структурой, а не догадками. Где мы в цикле? Какова логическая цель? Сейчас подходящий момент?</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Получить ясность →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Вернуться в Блог</a><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Центр Обучения</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Наверх"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    // Language Selector
+    const langDropdown = document.getElementById('langDropdown');
+    const langToggle = langDropdown?.querySelector('.lang-toggle');
+
+    if (langToggle) {
+      langToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (langDropdown && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
