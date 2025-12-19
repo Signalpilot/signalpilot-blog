@@ -349,36 +349,28 @@
         const lang = btn.dataset.lang;
         langDropdown.classList.remove('active');
         
-        // Update display
+        // Update our custom dropdown display
         const flag = btn.querySelector('.flag').textContent;
         const name = lang.toUpperCase().split('-')[0];
         langDropdown.querySelector('.lang-toggle .flag').textContent = flag;
         langDropdown.querySelector('.lang-name').textContent = name;
         
-        // Trigger Google Translate
-        // Clear ALL googtrans cookies thoroughly
-        const domains = ['', location.hostname, '.' + location.hostname, '.blog.signalpilot.io', 'blog.signalpilot.io'];
-        domains.forEach(d => {
-          const domainStr = d ? '; domain=' + d : '';
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/' + domainStr;
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;' + domainStr;
-        });
-        
-        // Also clear via setting empty
-        document.cookie = 'googtrans=';
-        
-        if (lang !== 'en') {
-          document.cookie = 'googtrans=/en/' + lang + '; path=/';
-          document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
+        // Use Google Translate's own mechanism
+        const gtSelect = document.querySelector('.goog-te-combo');
+        if (gtSelect) {
+          gtSelect.value = lang === 'en' ? '' : lang;
+          gtSelect.dispatchEvent(new Event('change'));
+        } else {
+          // Fallback: set cookie and reload
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
+          if (lang !== 'en') {
+            document.cookie = 'googtrans=/en/' + lang + '; path=/';
+            document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
+          }
+          location.reload();
         }
-        
-        // Force Google Translate to reset by removing its elements
-        const gtFrame = document.querySelector('.goog-te-banner-frame');
-        if (gtFrame) gtFrame.remove();
-        const gtMenu = document.querySelector('.goog-te-menu-frame');
-        if (gtMenu) gtMenu.remove();
-        
-        location.reload(true);
       });
     });
 
