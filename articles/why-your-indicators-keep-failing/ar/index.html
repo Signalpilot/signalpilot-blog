@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لماذا مؤشراتك تستمر في الفشل (وما الذي يعمل فعلاً) - Signal Pilot Blog</title>
+  <meta name="description" content="المشكلة ليست أنك اخترت المؤشرات الخاطئة. إنها شيء أكثر جوهرية لن يخبرك به معظم مدربي التداول.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">المستندات</a><a href="https://education.signalpilot.io">التعليم</a><a href="/ar/" class="active">المدونة</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="ترجمة"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown" id="langDropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="./" class="active"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="السمة"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">تجربة مجانية</a>
+      <button class="mobile-menu-btn" aria-label="القائمة"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/ar/">المدونة</a><span class="breadcrumb-sep">›</span><a href="/ar/?filter=indicators">المؤشرات</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">مقال</span></nav>
+      <span class="article-category">المؤشرات</span>
+      <h1 class="article-title">لماذا مؤشراتك تستمر في الفشل (وما الذي يعمل فعلاً)</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 دقائق للقراءة</span><span>فريق Signal Pilot</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="إشارات مؤشرات متضاربة"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>لديك RSI، MACD، شرائط بولينجر، ربما بعض المتوسطات المتحركة. الرسم البياني يبدو وكأن قوس قزح انفجر عليه. ومع ذلك، لا تزال تخسر.</p>
+      <p>يبدو مألوفاً؟</p>
+      <p>المشكلة ليست أنك اخترت المؤشرات الخاطئة. إنها شيء أكثر جوهرية لن يخبرك به معظم مدربي التداول - لأنهم يبيعون لك الإشارة التالية "للكأس المقدسة".</p>
+      <p>دعنا نصلح ذلك.</p>
+      <hr>
+      <h2>فخ التأكيد</h2>
+      <p>هذا ما يحدث عادة: متداول يخسر المال باستخدام مؤشر واحد. لذا يضيف آخر "للتأكيد". ثم آخر. قبل أن يدرك، يحتاج خمسة أضواء خضراء لأخذ صفقة - وبحلول الوقت الذي يتوافق فيه كل شيء، تكون الحركة قد انتهت.</p>
+      <p>أو أسوأ: ثلاثة مؤشرات تقول اشتر، اثنان تقول بع، وهو مشلول.</p>
+      <p>هذا ليس تأكيداً. هذا ارتباك بخطوات إضافية.</p>
+      <p>المشكلة الجوهرية؟ معظم المؤشرات الشائعة مشتقة رياضياً من نفس المدخلات - السعر والحجم. MACD هو مجرد متوسطات متحركة مع هيستوجرام. RSI يقيس نفس الزخم الذي يقيسه الستوكاستك. أنت لا تحصل على تأكيد مستقل. أنت ترى نفس البيانات بملابس مختلفة.</p>
+      <p><strong>ما يعمل فعلاً:</strong> بدلاً من تكديس أدوات مشابهة، افهم نوع المعلومات التي يقدمها كل مؤشر:</p>
+      <ul>
+        <li><em>اتجاه الترند</em> (أين يذهب السعر؟)</li>
+        <li><em>الزخم</em> (ما سرعة حركته؟)</li>
+        <li><em>الإنهاك</em> (هل الحركة تنفد؟)</li>
+        <li><em>البنية</em> (أين المستويات الرئيسية؟)</li>
+      </ul>
+      <p>أداة واحدة لكل فئة. هذا كل شيء. أكثر من ذلك، وأنت تضيف ضوضاء، لا وضوحاً.</p>
+      <hr>
+      <h2>مشكلة إعادة الرسم التي لا يتحدث عنها أحد</h2>
+      <p>هذه حرجة، وهي لماذا يعتقد كثير من المتداولين أنهم وجدوا نظاماً مثالياً - حتى يتداولوه مباشرة.</p>
+      <p>إعادة الرسم تعني أن المؤشر يغير إشاراته التاريخية بعد الحدث. إشارة الشراء "المثالية" التي تراها على الرسم البياني؟ ربما لم تكن موجودة عندما كانت الشمعة تتشكل فعلاً. المؤشر انتظر ليرى ما حدث، ثم رسم الإشارة بأثر رجعي.</p>
+      <p>الباك تست الخاص بك يصبح عديم القيمة. كل إشارة تاريخية تبدو مثالية لأن المؤشر غش - كان يعرف النتيجة مسبقاً.</p>
+      <p><strong>ما يعمل فعلاً:</strong> أصر على مؤشرات تنهي إشاراتها عند إغلاق الشمعة. الإشارة إما تظهر أو لا. لا مراجعات. ما تراه في التاريخ هو بالضبط ما كنت ستراه مباشرة.</p>
+      <hr>
+      <h2>إطار الدورات</h2>
+      <p>الأسواق لا تتحرك عشوائياً. تدور عبر خمس مراحل: التراكم، الصعود، الذروة، التوزيع، والهبوط. هذا النمط يتكرر في كل إطار زمني، كل فئة أصول.</p>
+      <p>معظم المؤشرات لا تأخذ هذا بعين الاعتبار. تعامل كل لحظة كمستقلة، لذا تولد إشارات في منتصف ترند لا يزال لديه مجال، أو في بداية منطقة تذبذب ستوقفك مراراً.</p>
+      <p><strong>ما يعمل فعلاً:</strong> قبل أن تسأل "هل أشتري أم أبيع؟"، اسأل "أين نحن في الدورة؟"</p>
+      <hr>
+      <h2>الخلاصة</h2>
+      <p>المؤشرات ليست المشكلة. كيف يستخدمها المتداولون هو المشكلة.</p>
+      <p>توقف عن تكديس الإشارات. ابدأ ببناء السياق. افهم أين أنت في دورة السوق قبل أن تسأل عن الشراء أو البيع. ولكل ما تضعه على الرسم البياني، تأكد تماماً أنه لا يعيد الرسم.</p>
+      <p>الميزة ليست في رؤية المزيد. إنها في رؤية ما يهم.</p>
+      <hr>
+      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid">
+        <a href="../../the-repainting-problem/ar/" class="related-card"><span class="related-category">المؤشرات</span><h4>مشكلة إعادة الرسم</h4></a>
+        <a href="../../inside-signal-pilot/ar/" class="related-card"><span class="related-category">Signal Pilot</span><h4>داخل Signal Pilot</h4></a>
+        <a href="../../the-only-pattern-that-repeats/ar/" class="related-card"><span class="related-category">الدورات</span><h4>النمط الوحيد الذي يتكرر</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>مستعد لمؤشرات تعمل معاً فعلاً؟</strong> مجموعة Signal Pilot المكونة من 7 مؤشرات صممت كنظام متكامل.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب المجموعة الكاملة مجاناً ←</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/ar/">→ العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
