@@ -9,7 +9,7 @@
   <link rel="icon" href="https://signalpilot.io/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/blog.css">
 </head>
 <body>
@@ -20,12 +20,19 @@
     <div class="container">
       <div class="header-inner">
         <a href="https://signalpilot.io" class="logo">
-          <svg width="140" height="32" viewBox="0 0 196 40" fill="none"><defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#76ddff"/><stop offset="100%" stop-color="#5b8aff"/></linearGradient></defs><circle cx="20" cy="20" r="16" stroke="url(#logoGrad)" stroke-width="3" fill="none"/><circle cx="20" cy="20" r="6" fill="url(#logoGrad)"/><line x1="20" y1="4" x2="20" y2="10" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/><line x1="20" y1="30" x2="20" y2="36" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="20" x2="10" y2="20" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/><line x1="30" y1="20" x2="36" y2="20" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/><text x="48" y="27" fill="#ecf1ff" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700">Signal Pilot</text></svg>
+          <span class="logo-text">SIGNAL PILOT</span>
         </a>
         <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Education</a><a href="/" class="active">Blog</a></nav>
         <div class="header-controls">
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
           <a href="https://signalpilot.io/#trial" class="btn btn-primary">Try Free</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -161,6 +168,25 @@
     const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
     window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
     document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
   </script>
 </body>
 </html>
