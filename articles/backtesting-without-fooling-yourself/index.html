@@ -7,6 +7,19 @@
   <meta name="description" content="You know backtests can lie. Here's how to test strategies honestly - out-of-sample validation, walk-forward analysis, and Monte Carlo stress testing.">
   <meta name="theme-color" content="#05070d">
   <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="es" href="./es/">
+  <link rel="alternate" hreflang="de" href="./de/">
+  <link rel="alternate" hreflang="fr" href="./fr/">
+  <link rel="alternate" hreflang="it" href="./it/">
+  <link rel="alternate" hreflang="pt" href="./pt/">
+  <link rel="alternate" hreflang="nl" href="./nl/">
+  <link rel="alternate" hreflang="ru" href="./ru/">
+  <link rel="alternate" hreflang="ja" href="./ja/">
+  <link rel="alternate" hreflang="ar" href="./ar/">
+  <link rel="alternate" hreflang="tr" href="./tr/">
+  <link rel="alternate" hreflang="hu" href="./hu/">
+  <link rel="alternate" hreflang="x-default" href="./">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
@@ -34,33 +47,21 @@
             </button>
             <div class="translate-dropdown">
               <div class="lang-dropdown" id="langDropdown">
-            <button class="lang-toggle" aria-label="Select language">
-              <span class="flag">🌐</span>
-              <span class="lang-name">EN</span>
-              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="lang-menu">
-              <button data-lang="en"><span class="flag">🇬🇧</span> English</button>
-              <button data-lang="es"><span class="flag">🇪🇸</span> Español</button>
-              <button data-lang="fr"><span class="flag">🇫🇷</span> Français</button>
-              <button data-lang="de"><span class="flag">🇩🇪</span> Deutsch</button>
-              <button data-lang="it"><span class="flag">🇮🇹</span> Italiano</button>
-              <button data-lang="pt"><span class="flag">🇧🇷</span> Português</button>
-              <button data-lang="ru"><span class="flag">🇷🇺</span> Русский</button>
-              <button data-lang="zh-CN"><span class="flag">🇨🇳</span> 中文</button>
-              <button data-lang="ja"><span class="flag">🇯🇵</span> 日本語</button>
-              <button data-lang="ko"><span class="flag">🇰🇷</span> 한국어</button>
-              <button data-lang="ar"><span class="flag">🇸🇦</span> العربية</button>
-              <button data-lang="hi"><span class="flag">🇮🇳</span> हिन्दी</button>
-              <button data-lang="nl"><span class="flag">🇳🇱</span> Nederlands</button>
-              <button data-lang="pl"><span class="flag">🇵🇱</span> Polski</button>
-              <button data-lang="tr"><span class="flag">🇹🇷</span> Türkçe</button>
-              <button data-lang="vi"><span class="flag">🇻🇳</span> Tiếng Việt</button>
-              <button data-lang="th"><span class="flag">🇹🇭</span> ไทย</button>
-              <button data-lang="id"><span class="flag">🇮🇩</span> Indonesia</button>
-            </div>
-          </div>
-          <div id="google_translate_element"></div>
+                <div class="lang-menu">
+                  <a href="./" class="active"><span class="flag">🇬🇧</span> English</a>
+                  <a href="./es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="./de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="./fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="./it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="./pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="./ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="./ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="./ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
             </div>
           </div>
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -280,95 +281,7 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-
-
-    // Language Selector
-    const langDropdown = document.getElementById('langDropdown');
-    const langToggle = langDropdown?.querySelector('.lang-toggle');
-    const langMenu = langDropdown?.querySelector('.lang-menu');
-    const langButtons = langMenu?.querySelectorAll('button');
-    
-    if (langToggle) {
-      langToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        langDropdown.classList.toggle('active');
-      });
-    }
-    
-    document.addEventListener('click', (e) => {
-      if (langDropdown && !langDropdown.contains(e.target)) {
-        langDropdown.classList.remove('active');
-      }
-    });
-    
-    langButtons?.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const lang = btn.dataset.lang;
-        langDropdown.classList.remove('active');
-
-        // Update our dropdown display
-        const flag = btn.querySelector('.flag').textContent;
-        const name = lang.toUpperCase().split('-')[0];
-        langDropdown.querySelector('.lang-toggle .flag').textContent = flag;
-        langDropdown.querySelector('.lang-name').textContent = name;
-
-        // Try to use Google Translate's native select element
-        const gtSelect = document.querySelector('.goog-te-combo');
-        if (gtSelect && gtSelect.options.length > 0) {
-          if (lang === 'en') {
-            // For English, select the first option (original language)
-            gtSelect.selectedIndex = 0;
-          } else {
-            gtSelect.value = lang;
-          }
-          gtSelect.dispatchEvent(new Event('change', { bubbles: true }));
-          return;
-        }
-
-        // Fallback: cookie-based approach with page reload
-        // Clear ALL storage
-        try {
-          localStorage.removeItem('googtrans');
-          sessionStorage.clear();
-        } catch(e) {}
-
-        // Clear ALL cookies - every possible combination
-        const exp = '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        const domains = [location.hostname, '.' + location.hostname];
-        const paths = ['/', ''];
-        domains.forEach(d => {
-          paths.forEach(p => {
-            document.cookie = 'googtrans' + exp + ';path=' + (p||'/') + ';domain=' + d;
-          });
-        });
-        document.cookie = 'googtrans' + exp;
-        document.cookie = 'googtrans' + exp + ';path=/';
-
-        // Set new language cookie if not English
-        if (lang !== 'en') {
-          const v = '/en/' + lang;
-          document.cookie = 'googtrans=' + v + ';path=/';
-          document.cookie = 'googtrans=' + v + ';path=/;domain=.' + location.hostname;
-        }
-
-        // Navigate to clean URL to force fresh page load
-        window.location.href = location.pathname + '?hl=' + lang + '&_=' + Date.now();
-      });
-    });
-
-
-    // Google Translate
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,de,it,pt,ru,zh-CN,zh-TW,ja,ko,ar,hi,nl,pl,tr,vi,th,id,sv,da,fi,no,cs,hu,ro,uk,he,el,bg,hr,sk,sl,et,lv,lt',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
     }
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
