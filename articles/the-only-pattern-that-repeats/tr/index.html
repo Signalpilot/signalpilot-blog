@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piyasalarda Gerçekten Tekrar Eden Tek Pattern - Signal Pilot Blog</title>
+  <meta name="description" content="Omuz baş omuz. İkili tepeler. Güvenilir şekilde çalışmıyorlar. Ama her zaman diliminde, her piyasada gerçekten tekrar eden bir pattern var.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/tr/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+      <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=cycles">Piyasa Döngüleri</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
+      <span class="article-category">Piyasa Döngüleri</span>
+      <h1 class="article-title">Piyasalarda Gerçekten Tekrar Eden Tek Pattern</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span><span>Signal Pilot Ekibi</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Tek tekrar eden pattern"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Omuz baş omuz. İkili tepeler. Boğa bayrakları. Kamalar. Trading kitapları sözde tekrar eden pattern'lerle dolu.</p>
+      <p>İşte sorun: tekrar etmiyorlar. En azından, trade yapmak için yeterince güvenilir değiller.</p>
+      <p>Ama gerçekten tekrar eden bir pattern var. Her zaman diliminde, her piyasada, her dönemde ortaya çıkıyor. Ve grafik pattern'lerinden farklı olarak, neden tekrar etmesi gerektiğinin temel bir nedeni var.</p>
+      <hr>
+      <h2>Döngü Pattern'i</h2>
+      <p>Piyasalar beş farklı aşamadan oluşan döngülerde hareket eder: birikim, yükseliş, zirve, dağıtım ve düşüş.</p>
+      <p>Bu mistik değil. Yapısal. İşte nedeni:</p>
+      <p><strong>Birikim (TD)</strong> akıllı para alım yaptığında gerçekleşir. Ama hepsini bir kerede alamazlar - hacimleri piyasayı aleyhlerine hareket ettirir. Bu yüzden yavaşça alırlar.</p>
+      <p><strong>Yükseliş (IGN)</strong> birikim tamamlandığında gerçekleşir. Arz kurur. Fiyat yükselir, daha fazla alıcı çeker.</p>
+      <p><strong>Zirve (CAP)</strong> tükenme noktasıdır. Alımlar ateşli bir zirveye ulaşır. Almak isteyen herkes almıştır.</p>
+      <p><strong>Dağıtım (WRN)</strong> akıllı para sattığında gerçekleşir. Güç içinde yavaşça satarlar.</p>
+      <p><strong>Düşüş (BDN)</strong> dağıtım tamamlandığında gerçekleşir. Fiyat açıkça aşırı satım bölgesine düşene kadar düşer.</p>
+      <p>Sonra birikim yeniden başlar.</p>
+      <hr>
+      <h2>Neden Grafik Pattern'leri Çalışmıyor (Ama Bu Çalışıyor)</h2>
+      <p>Klasik grafik pattern'leri geometrik şekillerden fiyat hareketini tahmin etmeye çalışır. Ama şekiller yüzeysel gözlemlerdir. Fiyatın neden hareket etmesi gerektiğini açıklamıyorlar.</p>
+      <p>Döngü pattern'leri farklı. Şekillerle ilgili değil. Para akışının temel gerçekliğiyle ilgili.</p>
+      <hr>
+      <h2>Zaman Dilimi Fraktalleri</h2>
+      <p>İşte ilginçleştiği yer: döngüler birbirinin içine yerleşir.</p>
+      <p>Günlük grafik dağıtım gösterebilir, ama 4 saatlik grafik o dağıtımın içinde bir mini birikim gösterir.</p>
+      <p>Her zaman diliminin kendi döngüsü var. Etkileşim halindeler. Üst zaman dilimi döngüleri alt zaman dilimi hareketlerine hakimdir.</p>
+      <hr>
+      <h2>Sonuç</h2>
+      <p>Omuz baş omuzu unut. Üçgenleri ve kamaları unut.</p>
+      <p>Gerçekten tekrar eden pattern beş aşamalı döngüdür: birikim (TD), yükseliş (IGN), zirve (CAP), dağıtım (WRN) ve düşüş (BDN).</p>
+      <p>Döngüleri görmeyi öğren, ve piyasayı görmeyi öğrenirsin. Geri kalan her şey sadece gürültü.</p>
+      <hr>
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
+        <a href="../../why-markets-move-in-cycles/tr/" class="related-card"><span class="related-category">Döngüler</span><h4>Neden Piyasalar Döngülerde Hareket Ediyor</h4></a>
+        <a href="../../why-your-indicators-keep-failing/tr/" class="related-card"><span class="related-category">Göstergeler</span><h4>Neden İndikatörlerin Başarısız Olmaya Devam Ediyor</h4></a>
+      </div></section>
+      <div class="cta-box"><p>Pentarch döngü aşamalarını gerçek zamanlı haritalandırır ve piyasanın yapısal ritminde tam olarak nerede olduğunuzu gösterir.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Döngüyü kendin gör →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/tr/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
