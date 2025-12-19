@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Az Újrafestés Problémája: Hogyan Hazudik a Legtöbb TradingView Indikátor - Signal Pilot Blog</title>
+  <meta name="description" content="Az a tökéletes backtest-tel rendelkező indikátor? Hazudik neked. Tanuld meg, hogyan működik az újrafestés és hogyan védd meg magad.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav">
+          <a href="https://signalpilot.io">Főoldal</a>
+          <a href="https://docs.signalpilot.io">Dokumentáció</a>
+          <a href="https://education.signalpilot.io">Oktatás</a>
+          <a href="/hu/" class="active">Blog</a>
+        </nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltása">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Újrafestő indikátor jelzések">
+      </figure>
+
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/hu/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/hu/?filter=indicators">Indikátorok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Indikátorok</span>
+          <h1 class="article-title">Az Újrafestés Problémája: Hogyan Hazudik a Legtöbb TradingView Indikátor</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Megosztás:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Megosztás Twitteren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Megosztás LinkedInen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link másolása">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Az a tökéletes backtest-tel rendelkező indikátor? Amelyik sebészi pontossággal eltalál minden csúcsot és mélypontot?</p>
+          <p>Hazudik neked.</p>
+          <p>Nem talán. Nem néha. Ha a történelmi jelzések túl jók ahhoz, hogy igazak legyenek, az indikátor szinte biztosan újrafest - és drága leckét fogsz kapni abban a pillanatban, amikor élesben kereskedsz vele.</p>
+
+          <hr>
+
+          <h2>Mit Jelent Valójában az Újrafestés</h2>
+          <p>Az újrafestés az, amikor egy indikátor megváltoztatja a múltbeli jelzéseit az esemény után. Az a vételi nyíl, ami a pontos mélypontban jelenik meg? Nem volt ott, amikor a gyertya formálódott. Az indikátor várt, hogy lássa mi történik, majd utólagosan festette be a jelzést.</p>
+          <p>Gondolj rá úgy, mint egy meteorológusra, aki a tegnapi időjárást "előrejelzi". Könnyű jósolni, ha már ismered az eredményt.</p>
+          <p>Így néz ki a gyakorlatban:</p>
+          <p><strong>A gyertya alatt:</strong> Nincs jelzés. Az ár ingadozik. Nézed, várakozol.</p>
+          <p><strong>Miután a gyertya zárt (az ár emelkedett):</strong> Hirtelen vételi jelzés jelenik meg azon a gyertyán. Az indikátor "tudta" végig.</p>
+          <p><strong>Miután a gyertya zárt (az ár esett):</strong> Nincs jelzés. Az indikátor csendben marad, mintha soha nem fontolgatta volna a vételt.</p>
+          <p>Az indikátor semmit nem jósol. A történelmet írja újra, hogy okosnak tűnjön.</p>
+
+          <hr>
+
+          <h2>Miért Léteznek Újrafestő Indikátorok</h2>
+          <p>Két ok: tudatlanság és megtévesztés.</p>
+          <p><strong>Tudatlanság:</strong> Egyes fejlesztők valóban nem értik a problémát. Építenek egy indikátort, látják a remek történelmi eredményeket, és feltételezik, hogy működik. Nem próbálnak senkit becsapni - egyszerűen nem tudják jobban.</p>
+          <p><strong>Megtévesztés:</strong> Mások pontosan tudják, mit csinálnak. Az újrafestő indikátorokat könnyű marketingelni. A backtest fantasztikusan néz ki. A képernyőképek tökéletes belépéseket mutatnak. Ajánlások jönnek olyan emberektől, akik még nem kereskedtek élesben.</p>
+          <p>Mire a felhasználók rájönnek, a fejlesztő már a következő "forradalmi" rendszerre tért át.</p>
+
+          <hr>
+
+          <h2>Az Újrafestés Három Típusa</h2>
+          <p>Nem minden újrafestés egyenlő. A típusok megértése segít felismerni a problémát:</p>
+          <p><strong>1. Típus: Jelzés Áthelyezés</strong></p>
+          <p>A jelzés megjelenik egy gyertyán, majd átugorhat egy másik gyertyára, amikor több adat érkezik. Az a "tökéletes" belépés, amit tegnap láttál, most három gyertyával korábbra került. A történelem átíródott.</p>
+          <p><strong>2. Típus: Jelzés Eltűnés</strong></p>
+          <p>Az élő kereskedés során megjelenő jelzések egyszerűen eltűnnek a grafikonról. Az indikátor adott neked egy vételi jelzést, beléptél a pozícióba, nem sikerült - és most a jelzés már nincs is ott. Sok sikert ennek elmagyarázásához annak, aki átnézi a kereskedéseidet.</p>
+          <p><strong>3. Típus: Érték Újraszámítás</strong></p>
+          <p>Maguk az indikátor értékek változnak utólagosan. Az oszcillátor, ami túlvett állapotot mutatott, most semlegest mutat. A tegnapi támasz szintek elmozdultak. Az egész történelmi rekord megbízhatatlan.</p>
+
+          <hr>
+
+          <h2>Hogyan Teszteld Bármely Indikátort Újrafestésre</h2>
+          <p>A marketing, képernyőképek és backtest-ek félrevezetőek lehetnek. Teszteld magad.</p>
+          <p><strong>A Képernyőkép Módszer:</strong></p>
+          <ol>
+            <li>Add hozzá az indikátort egy élő grafikonhoz</li>
+            <li>Készíts képernyőképet az utolsó 10-20 gyertyáról a jelzésekkel</li>
+            <li>Várj, amíg 10-20 új gyertya formálódik</li>
+            <li>Készíts újabb képernyőképet ugyanarról a történelmi területről</li>
+            <li>Hasonlítsd össze a két képet</li>
+          </ol>
+          <p>Ha bármi elmozdult, eltűnt vagy megváltozott - újrafest. Pont.</p>
+          <p><strong>Az Élő Megfigyelés Módszer:</strong></p>
+          <ol>
+            <li>Nyiss meg egy grafikont alacsonyabb időkereten (az 5 perces jól működik)</li>
+            <li>Figyeld az indikátort valós időben egy órán keresztül</li>
+            <li>Jegyezd fel minden jelzést, ami megjelenik a gyertya formálódása közben</li>
+            <li>Miután minden gyertya zárt, ellenőrizd, hogy a jelzés még ott van-e</li>
+            <li>A session után görgess vissza és ellenőrizd, hogy minden jelzés egyezik-e azzal, amit feljegyeztél</li>
+          </ol>
+          <p>Ez időt vesz igénybe. Megéri. Egyórányi tesztelés megmenthet hónapnyi frusztrációtól és ezres veszteségektől.</p>
+          <p><strong>A Kérdés Módszer:</strong></p>
+          <p>Kérdezd meg közvetlenül a fejlesztőt: "Ez az indikátor újrafest?"</p>
+          <p>Figyeld a választ gondosan:</p>
+          <ul>
+            <li>"Nem" → Jó kezdet, de azért ellenőrizd</li>
+            <li>"Csak az aktuális gyertyán" → Ez még mindig újrafestés. Az aktuális gyertya az egyetlen, ami számít.</li>
+            <li>"Újraszámít a nagyobb pontosság érdekében" → Újrafest. Ez az, amit az újraszámítás jelent.</li>
+            <li>Nincs válasz / homályos válasz → Újrafest. Elrejtik.</li>
+          </ul>
+
+          <hr>
+
+          <h2>Miért Tönkretesz az "Aktuális Gyertya Újrafestés" Is</h2>
+          <p>Egyes fejlesztők azt állítják, hogy az indikátoruk "csak az aktuális gyertyán fest újra", mintha ez elfogadható lenne. Nem az.</p>
+          <p>Íme, miért:</p>
+          <p>Figyeled a grafikont. Megjelenik egy vételi jelzés. Belépsz a pozícióba. A gyertya zárt - és a jelzés eltűnik. Az indikátor, miután látta a zárást, úgy döntött, hogy valójában nem is volt vételi jelzés.</p>
+          <p>De te már bent vagy a pozícióban.</p>
+          <p>Ez nem apró kellemetlenség. Ez az egész indikátor használhatatlanná tétele élő kereskedésre. Az egyetlen jelzések, amik számítanak, azok, amikre tudsz cselekedni. Ha ezek a jelzések eltűnhetnek, egyikben sem bízhatsz.</p>
+
+          <hr>
+
+          <h2>Hogyan Néz Ki Valójában a Nem-Újrafestés</h2>
+          <p>Egy helyesen megépített indikátor így működik:</p>
+          <ol>
+            <li>A jelzési feltételek a gyertya zárásakor értékelődnek ki</li>
+            <li>Miután egy jelzés megjelenik, örökre megmarad</li>
+            <li>A történelmi jelzések pontosan egyeznek azzal, ami élőben megjelent</li>
+            <li>Nincs újraszámítás, nincs áthelyezés, nincsenek eltűnési trükkök</li>
+          </ol>
+          <p>A jelzés vagy megjelenik, vagy nem. Ha egyszer ott van, állandó. Amit a történelemben látsz, az pontosan az, amit élő kereskedés közben láttál volna.</p>
+          <p>Ez a minimum standard. Nem funkció - követelmény.</p>
+
+          <hr>
+
+          <h2>Ennek Figyelmen Kívül Hagyásának Költsége</h2>
+          <p>A kereskedők, akik tudtukon kívül újrafestő indikátorokat használnak, a következőket tapasztalják:</p>
+          <p><strong>Hamis magabiztosság:</strong> A backtest nyereségesnek tűnik, ezért növelik a pozíció méretüket. Aztán beüt a valóság.</p>
+          <p><strong>Szellem setupok:</strong> Emlékeznek jelzésekre, amik már nincsenek a grafikonon. Beszivárog a kétely. "Csak képzeltem?"</p>
+          <p><strong>Rendszer ugrálás:</strong> Az indikátor "abbahagyja a működést" (soha nem működött), ezért a következőre váltanak. A ciklus ismétlődik.</p>
+          <p><strong>Számla kár:</strong> Valódi pénz veszett olyan jelzésekre, amik valójában soha nem voltak ott.</p>
+          <p>A pszichológiai kár rosszabb lehet, mint a pénzügyi kár. A kereskedők, akiket megégettek az újrafestő indikátorok, gyakran küzdenek azzal, hogy újra megbízzanak bármilyen eszközben - még a legitimekben is.</p>
+
+          <hr>
+
+          <h2>A Lényeg</h2>
+          <p>Mielőtt bármilyen indikátort használnál valódi kereskedéshez, teszteld újrafestésre. Mielőtt bármilyen indikátort vásárolnál, követelj bizonyítékot, hogy nem fest újra. Mielőtt bármilyen backtest-ben megbíznál, ellenőrizd, hogy a jelzések valós időben léteztek.</p>
+          <p>Ez nem opcionális. Nem paranoia. Ez az alapvető követelmény bármilyen eszközhöz, amire pénzt fogsz kockáztatni.</p>
+          <p>A tíz perc, amit teszteléssel töltesz, megmenthet hónapnyi veszteségtől és a kereskedési önbizalmad teljes válságától.</p>
+
+          <hr>
+
+          <h2>Mi Működik Valójában</h2>
+          <p>A nem-újrafestésnek az alapvonalnak kellene lennie, nem a kivételnek. De ez csak a kiindulópont.</p>
+          <p>A legjobb indikátor rendszerek több elemzési dimenziót kombinálnak - ciklus észlelés, volumen elemzés, momentum szavazás, kulcsszintek - és egyikük sem fest újra. Amikor hét független rendszer egyetért egy jelzésben, és egyikük sem tudja utólag megváltoztatni a szavazatát, valami olyat látsz, amiben valóban megbízhatsz.</p>
+          <p>Erre építettük a Signal Pilot-ot: egy csomagra, ahol minden indikátor a gyertya zárásakor véglegesít, ahol a történelmi adatok pontosan egyeznek azzal, ami élőben megjelent, és ahol az egybeesést egyszerre több nem-újrafestő rendszeren mérik.</p>
+          <p>Nem kell a szavunkra hagyatkoznod. Teszteld magad a fent leírt módszerekkel. Ha bármi újrafest, ne használd. Ez a standard ránk is vonatkozik.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../../why-your-indicators-keep-failing/hu/" class="related-card">
+                <span class="related-category">Indikátorok</span>
+                <h4>Miért Kudarcot Vallanak Folyton az Indikátoraid (És Mi Működik Valójában)</h4>
+              </a>
+              <a href="../../why-backtesting-results-are-worthless/hu/" class="related-card">
+                <span class="related-category">Indikátorok</span>
+                <h4>Miért Értéktelenek a Backtest Eredmények</h4>
+              </a>
+              <a href="../../inside-signal-pilot/hu/" class="related-card">
+                <span class="related-category">Signal Pilot</span>
+                <h4>A Signal Pilot Belülről: Hogyan Működik Együtt a 7 Indikátor</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../candlestick-basics/hu/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Előző
+              </span>
+              <span class="article-nav-title">Gyertya Alapok: Árfolyammozgás Olvasása Profiként</span>
+            </a>
+            <a href="../../why-you-break-trading-rules/hu/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Következő
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Miért Szegted Meg Folyton a Saját Kereskedési Szabályaidat</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>Elegem van az újrafestő indikátorokból?</strong> A Signal Pilot teljes 7 indikátoros csomagja a gyertya zárásakor véglegesíti a jelzéseket. Minden indikátor. Minden jelzés. Amit a történelemben látsz, az pontosan az, ami élőben megjelent - garantáljuk.</p>
+            <p>Végezd el a képernyőkép tesztet bármely Signal Pilot indikátoron. Ha bármi újrafest, ne fizess elő. Ennyire biztosak vagyunk benne.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld Ki Ingyen - Nincs Bankkártya →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/hu/">← Vissza a Blogra</a>
+        <a href="https://signalpilot.io">Főoldal</a>
+        <a href="https://docs.signalpilot.io">Dokumentáció</a>
+        <a href="https://education.signalpilot.io">Oktatási Központ</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress').style.width = progress + '%';
+      const btn = document.getElementById('backToTop');
+      if (window.scrollY > 500) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    });
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
