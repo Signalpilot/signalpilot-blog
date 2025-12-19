@@ -259,8 +259,7 @@ body {
 .goog-te-banner-frame,
 .goog-te-gadget-icon,
 #goog-gt-tt,
-.goog-te-balloon-frame,
-.skiptranslate.goog-te-gadget {
+.goog-te-balloon-frame {
   display: none !important;
 }
 
@@ -272,6 +271,11 @@ body {
 .goog-te-gadget .goog-te-combo {
   color: var(--text) !important;
   font-size: 0.85rem !important;
+}
+
+/* Ensure dropdown appears above header */
+.goog-te-menu-frame {
+  z-index: 9999 !important;
 }
 
 body {
