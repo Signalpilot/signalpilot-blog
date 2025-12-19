@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Your First Trading System: A Step-by-Step Guide - Signal Pilot Blog</title>
+  <meta name="description" content="Most traders jump from setup to setup. Systematic traders build once and execute forever. Here's how to create your first real trading system.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Education</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Try Free</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <span class="article-category">Trading Systems</span>
+          <h1 class="article-title">Building Your First Trading System: A Step-by-Step Guide</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 min read</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>You've been trading setups. Some work, some don't. You're not sure why. Every day feels like starting over.</p>
+          <p>A trading system changes this. Instead of improvising, you execute. Instead of hoping, you have statistics. Instead of emotional decisions, you have rules.</p>
+          <p>Here's how to build your first one.</p>
+
+          <hr>
+
+          <h2>Step 1: Define Your Edge</h2>
+          <p>A system without an edge is just a structured way to lose money. Before anything else, identify what market behavior you're trying to exploit.</p>
+          <p>Common edges include:</p>
+          <ul>
+            <li><strong>Trend following:</strong> Markets trend more than random walk would suggest. Capture extended moves.</li>
+            <li><strong>Mean reversion:</strong> Extended moves tend to snap back. Fade extremes.</li>
+            <li><strong>Momentum:</strong> What's moving tends to keep moving. Buy strength, sell weakness.</li>
+            <li><strong>Breakouts:</strong> Consolidation resolves with directional moves. Trade the resolution.</li>
+            <li><strong>Cycle phases:</strong> Markets move through predictable phases. Trade phase transitions.</li>
+          </ul>
+          <p>Pick one. Just one. Your first system should exploit one edge clearly. You can build additional systems later.</p>
+          <p>Ask yourself: "Why does this edge exist? Who is on the other side of my trade, and why are they wrong?" If you can't answer this, you don't have an edge - you have a pattern.</p>
+
+          <hr>
+
+          <h2>Step 2: Define Entry Criteria</h2>
+          <p>Now make it specific. When exactly do you enter?</p>
+          <p>Your entry criteria must be:</p>
+          <ul>
+            <li><strong>Objective.</strong> Someone else reading your rules would identify the same setups. "Price looks good" isn't a rule. "Price closes above the 20-day high" is.</li>
+            <li><strong>Complete.</strong> Cover all conditions. What indicator readings? What price action? What volume? What timeframe?</li>
+            <li><strong>Repeatable.</strong> The same conditions should appear regularly enough to trade. If your criteria trigger once a year, you don't have a system.</li>
+          </ul>
+          <p><strong>Example entry rules:</strong></p>
+          <ol>
+            <li>Daily timeframe</li>
+            <li>Price is above the 50-day moving average</li>
+            <li>RSI(14) crosses above 50</li>
+            <li>Today's volume is above the 20-day average</li>
+            <li>Enter at next day's open</li>
+          </ol>
+          <p>Write your rules in if-then format. "IF conditions X, Y, and Z are all true, THEN enter."</p>
+
+          <hr>
+
+          <h2>Step 3: Define Exit Criteria</h2>
+          <p>Entries get all the attention. Exits determine profitability.</p>
+          <p>You need three types of exits:</p>
+          <p><strong>Stop loss:</strong> Where is the trade wrong? This should be based on market structure, not arbitrary percentages. "Below the recent swing low" is structure-based. "2% below entry" is arbitrary.</p>
+          <p><strong>Profit target:</strong> Where do you take gains? Options include fixed reward-to-risk (2:1, 3:1), structure-based targets (prior resistance), or trailing stops.</p>
+          <p><strong>Time stop:</strong> How long before you exit a dead trade? If your edge relies on momentum and the trade goes nowhere for two weeks, the thesis may have failed even without hitting your stop.</p>
+          <p><strong>Example exit rules:</strong></p>
+          <ul>
+            <li>Stop loss: Below the low of the signal candle</li>
+            <li>Profit target: 2x the initial risk</li>
+            <li>Time stop: Exit at close if not in profit after 10 days</li>
+          </ul>
+
+          <hr>
+
+          <h2>Step 4: Define Position Sizing</h2>
+          <p>How much to trade is not discretionary. It's calculated.</p>
+          <p>The standard approach:</p>
+          <ol>
+            <li>Determine your maximum risk per trade (1-2% of account)</li>
+            <li>Calculate the dollar risk per share (entry price minus stop price)</li>
+            <li>Position size = Maximum risk / Dollar risk per share</li>
+          </ol>
+          <p><strong>Example:</strong></p>
+          <ul>
+            <li>Account: $50,000</li>
+            <li>Max risk: 1% = $500</li>
+            <li>Entry: $100, Stop: $95</li>
+            <li>Dollar risk: $5/share</li>
+            <li>Position: $500 / $5 = 100 shares</li>
+          </ul>
+          <p>Write this formula into your system. Every trade follows the same calculation.</p>
+
+          <hr>
+
+          <h2>Step 5: Document Everything</h2>
+          <p>Your system doesn't exist until it's written down. Create a document that includes:</p>
+          <ul>
+            <li>The edge you're exploiting (and why it works)</li>
+            <li>Complete entry rules</li>
+            <li>Complete exit rules (stop, target, time)</li>
+            <li>Position sizing formula</li>
+            <li>Markets/instruments you'll trade</li>
+            <li>Time of day you'll scan/trade</li>
+            <li>Maximum positions at once</li>
+            <li>Conditions when you won't trade (news events, etc.)</li>
+          </ul>
+          <p>This document is your trading business plan. Read it before every session. When in doubt, consult the document, not your feelings.</p>
+
+          <hr>
+
+          <h2>Step 6: Forward Test</h2>
+          <p>Don't backtest first. Backtesting leads to curve-fitting, especially for beginners.</p>
+          <p>Instead, forward test:</p>
+          <ol>
+            <li>Paper trade your system for at least 30 trades</li>
+            <li>Execute exactly as your rules specify - no exceptions</li>
+            <li>Record every trade: entry, exit, reason, result</li>
+            <li>Review weekly - are you following the rules? Are the rules producing expected behavior?</li>
+          </ol>
+          <p>Paper trading isn't about making money. It's about validating that your system is tradeable and that you can follow it.</p>
+          <p>Only after successful paper trading should you test with real money - and start with minimal size.</p>
+
+          <hr>
+
+          <h2>Step 7: Refine (Carefully)</h2>
+          <p>After 50+ live trades, you'll have data. Analyze it:</p>
+          <ul>
+            <li>What's your actual win rate?</li>
+            <li>What's your average winner vs average loser?</li>
+            <li>What's your expectancy per trade?</li>
+            <li>Are there patterns in your losers?</li>
+          </ul>
+          <p>Refinement is dangerous because it's easy to over-optimize. A rule that filters out past losers might also filter out future winners.</p>
+          <p>Make changes slowly. One variable at a time. Test each change for statistical significance (at least 30 trades) before concluding it works.</p>
+
+          <hr>
+
+          <h2>The Bottom Line</h2>
+          <p>A trading system is simple in concept: define when to enter, when to exit, and how much to trade. Follow the rules without exception.</p>
+          <p>The difficulty isn't building the system. It's following it. That's why documentation matters. That's why rules must be objective. That's why position sizing isn't negotiable.</p>
+          <p>Build simple. Execute perfectly. Refine slowly. That's how systems become edges.</p>
+
+          <hr>
+
+          <div class="cta-box">
+            <p>Pentarch provides systematic cycle detection you can build into your trading system - objective signals that don't repaint and don't require interpretation.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Add cycle context →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Back to Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Education Hub</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
