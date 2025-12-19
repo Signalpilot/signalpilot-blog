@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Órdenes Explicados: Órdenes de Mercado, Límite y Stop - Blog de Signal Pilot</title>
+  <meta name="description" content="Órdenes de mercado, órdenes límite, órdenes stop: son las herramientas básicas del trading. Aquí está lo que hace cada una, cuándo usarlas y los errores que cometen los principiantes.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Education</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Translate">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="./" class="active"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Try Free</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">Fundamentos para Principiantes</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Artículo</span>
+          </nav>
+          <span class="article-category">Fundamentos para Principiantes</span>
+          <h1 class="article-title">Tipos de Órdenes Explicados: Órdenes de Mercado, Límite y Stop</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lectura</span>
+            <span>Equipo de Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Compartir:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Share on Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Share on LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copy link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Visualización de tipos de órdenes" data-ai-prompt="Dark themed visualization showing three different order types as distinct visual elements - market order as an instant lightning bolt, limit order as a horizontal price line with a waiting indicator, stop order as a trigger point with an arrow. Price chart in background with order execution points marked. Deep navy background with cyan, green, and gold elements. Professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed visualization showing three different order types as distinct visual elements - market order as an instant lightning bolt, limit order as a horizontal price line with a waiting indicator, stop order as a trigger point with an arrow. Price chart in background with order execution points marked. Deep navy background with cyan, green, and gold elements. Professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Encontraste una configuración. Sabes lo que quieres comprar. ¿Pero cómo lo compras realmente?</p>
+          <p>Los tipos de órdenes son las herramientas que convierten tu análisis en posiciones reales. Usar la equivocada cuesta dinero. Usar la correcta te da control sobre tus entradas y salidas.</p>
+          <p>Aquí está lo que cada principiante necesita saber.</p>
+
+          <hr>
+
+          <h2>Órdenes de Mercado: Comprar Ahora, Precio Después</h2>
+          <p>Una orden de mercado dice: "Quiero esta posición inmediatamente. Ejecútame al precio que esté disponible."</p>
+          <p><strong>Cómo funciona:</strong></p>
+          <ul>
+            <li>Envías la orden</li>
+            <li>Se ejecuta instantáneamente al mejor precio disponible</li>
+            <li>Obtienes tu posición, pero no necesariamente al precio exacto que viste</li>
+          </ul>
+          <p><strong>Cuándo usar órdenes de mercado:</strong></p>
+          <ul>
+            <li>Necesitas salir de una posición perdedora inmediatamente</li>
+            <li>El mercado es muy líquido y los spreads son ajustados</li>
+            <li>Obtener la ejecución es más importante que obtener el precio perfecto</li>
+            <li>Estás operando con un tamaño pequeño en relación al volumen</li>
+          </ul>
+          <p><strong>El riesgo - deslizamiento:</strong></p>
+          <p>El deslizamiento es la diferencia entre el precio que esperabas y el precio que obtuviste. En mercados que se mueven rápido o ilíquidos, el deslizamiento puede ser significativo.</p>
+          <p>Ejemplo: Ves una acción a $100.00, envías una compra de mercado. Para cuando se ejecuta, te ejecutan a $100.15. Eso es un 0.15% de deslizamiento, y se acumula.</p>
+
+          <hr>
+
+          <h2>Órdenes Límite: Mi Precio o Nada</h2>
+          <p>Una orden límite dice: "Quiero esta posición, pero solo a mi precio especificado o mejor."</p>
+          <p><strong>Cómo funciona:</strong></p>
+          <ul>
+            <li>Especificas el precio máximo que pagarás (para compras) o el mínimo que aceptarás (para ventas)</li>
+            <li>La orden se queda esperando hasta que tu precio esté disponible</li>
+            <li>Si el precio nunca alcanza tu límite, la orden nunca se ejecuta</li>
+          </ul>
+          <p><strong>Límite de compra:</strong> Se establece por debajo del precio actual. "Compraré si baja a $95."</p>
+          <p><strong>Límite de venta:</strong> Se establece por encima del precio actual. "Venderé si sube a $105."</p>
+          <p><strong>Cuándo usar órdenes límite:</strong></p>
+          <ul>
+            <li>Quieres un precio de entrada específico y puedes esperar por él</li>
+            <li>Estás colocando objetivos de ganancias</li>
+            <li>El mercado es volátil o ilíquido</li>
+            <li>Quieres "pujar" por una entrada en un retroceso</li>
+          </ul>
+          <p><strong>El riesgo - no obtener ejecución:</strong></p>
+          <p>El precio podría nunca alcanzar tu límite. El trade que querías ocurre sin ti porque estabas esperando un precio ligeramente mejor. Ser demasiado agresivo con los límites significa perder buenos trades.</p>
+
+          <hr>
+
+          <h2>Órdenes Stop: Activar y Ejecutar</h2>
+          <p>Una orden stop dice: "Cuando el precio alcance mi nivel de activación, convierte esto en una orden de mercado."</p>
+          <p><strong>Cómo funciona:</strong></p>
+          <ul>
+            <li>Estableces un precio de activación (el "stop")</li>
+            <li>La orden permanece inactiva hasta que el precio alcanza la activación</li>
+            <li>Una vez activada, se convierte en una orden de mercado y se ejecuta inmediatamente</li>
+          </ul>
+          <p><strong>Stop de compra:</strong> Se establece por encima del precio actual. "Si rompe $105, quiero entrar."</p>
+          <p><strong>Stop de venta:</strong> Se establece por debajo del precio actual. "Si rompe $95, sácame."</p>
+          <p><strong>Cuándo usar órdenes stop:</strong></p>
+          <ul>
+            <li>Stop loss - salir automáticamente de posiciones perdedoras</li>
+            <li>Entradas en rupturas - entrar cuando el precio rompe un nivel</li>
+            <li>Proteger ganancias - stops móviles que siguen el precio al alza</li>
+          </ul>
+          <p><strong>El riesgo - gaps y deslizamiento:</strong></p>
+          <p>Las órdenes stop se convierten en órdenes de mercado cuando se activan. En movimientos rápidos o gaps, tu ejecución puede estar lejos de tu precio stop.</p>
+          <p>Ejemplo: Tu stop está a $95. La acción abre con gap a la baja a $90. Tu stop se activa y se ejecuta a $90, no a $95. Perdiste $5 más por acción de lo planeado.</p>
+
+          <hr>
+
+          <h2>Órdenes Stop-Límite: Activar con Condiciones</h2>
+          <p>Una orden stop-límite dice: "Cuando el precio alcance mi activación, coloca una orden límite a mi precio especificado."</p>
+          <p><strong>Cómo funciona:</strong></p>
+          <ul>
+            <li>Estableces tanto un precio stop (activación) como un precio límite</li>
+            <li>Cuando el stop se activa, se coloca una orden límite</li>
+            <li>La orden límite solo se ejecuta a tu precio límite o mejor</li>
+          </ul>
+          <p><strong>Ejemplo:</strong> Stop a $95, límite a $94.50. Cuando el precio alcanza $95, se coloca una venta límite a $94.50. Venderás a $94.50 o más alto, pero no más bajo.</p>
+          <p><strong>Cuándo usar órdenes stop-límite:</strong></p>
+          <ul>
+            <li>Quieres limitar el deslizamiento en el peor caso</li>
+            <li>Estás operando instrumentos que tienen gaps frecuentes</li>
+            <li>Estás de acuerdo con potencialmente no obtener ejecución</li>
+          </ul>
+          <p><strong>El riesgo - no obtener ejecución en absoluto:</strong></p>
+          <p>Si el precio hace gap pasando tanto tu stop COMO tu límite, no obtienes ejecución. Tu stop-loss falla en detener tu pérdida.</p>
+          <p>Ejemplo: Stop a $95, límite a $94.50. La acción abre con gap a $93. Tu límite a $94.50 nunca se ejecuta porque el precio ya está por debajo. Todavía estás en una posición perdedora.</p>
+
+          <hr>
+
+          <h2>Duración de la Orden: GTC vs Día</h2>
+          <p>Más allá del tipo de orden, necesitas especificar cuánto tiempo permanece activa la orden.</p>
+          <p><strong>Orden de día:</strong> Expira al cierre del mercado si no se ejecuta. Mañana tendrías que volver a ingresarla.</p>
+          <p><strong>GTC (Good Till Cancelled - Válida Hasta Cancelar):</strong> Permanece activa hasta que se ejecute o la canceles. Puede durar días, semanas, meses.</p>
+          <p><strong>Cuándo usar cada una:</strong></p>
+          <ul>
+            <li><strong>Órdenes de día:</strong> Para entradas donde la configuración de hoy podría no ser válida mañana</li>
+            <li><strong>GTC:</strong> Para stop losses (quieres protección siempre) y órdenes límite a largo plazo</li>
+          </ul>
+          <p>Ten cuidado con las órdenes GTC - podrías olvidar una orden límite de hace semanas que de repente se ejecuta en condiciones de mercado cambiadas.</p>
+
+          <hr>
+
+          <h2>Combinaciones Prácticas de Órdenes</h2>
+          <p><strong>Configuración básica de trade:</strong></p>
+          <ol>
+            <li>Orden límite para entrar a tu precio deseado</li>
+            <li>Orden stop para tu stop loss (GTC)</li>
+            <li>Orden límite para tu objetivo de ganancia (GTC)</li>
+          </ol>
+          <p><strong>Configuración de trade de ruptura:</strong></p>
+          <ol>
+            <li>Stop de compra por encima de la resistencia para entrar en la ruptura</li>
+            <li>Stop de venta por debajo de la entrada para stop loss</li>
+            <li>Límite de venta en el objetivo para toma de ganancias</li>
+          </ol>
+          <p><strong>Muchos brokers ofrecen órdenes bracket</strong> que colocan entrada, stop loss y objetivo de ganancia simultáneamente. Cuando una se ejecuta, las otras se activan o cancelan automáticamente.</p>
+
+          <hr>
+
+          <h2>Errores Comunes de Principiantes</h2>
+          <p><strong>Usar órdenes de mercado en mercados ilíquidos:</strong> Spreads amplios y libros de órdenes delgados significan deslizamiento masivo. Siempre usa límites en instrumentos de bajo volumen.</p>
+          <p><strong>Stop-límites en stop losses:</strong> Tu stop loss existe para protegerte. Usar un stop-límite arriesga que la protección falle. Para verdaderos stop losses, las órdenes stop regulares son generalmente mejores.</p>
+          <p><strong>Olvidar órdenes GTC:</strong> ¿Esa orden límite de hace tres semanas? Podría ejecutarse cuando te has olvidado de ella y la configuración ya no es válida.</p>
+          <p><strong>Perseguir con órdenes de mercado:</strong> La acción está corriendo, quieres entrar AHORA, envías una orden de mercado. Te ejecutan en el máximo, revierte inmediatamente. La disciplina significa usar límites incluso cuando estás emocionado.</p>
+
+          <hr>
+
+          <h2>La Conclusión</h2>
+          <p>Los tipos de órdenes son herramientas. La herramienta correcta depende de lo que estés tratando de lograr.</p>
+          <ul>
+            <li><strong>¿Necesitas certeza de ejecución?</strong> Orden de mercado</li>
+            <li><strong>¿Necesitas certeza de precio?</strong> Orden límite</li>
+            <li><strong>¿Necesitas activaciones automáticas?</strong> Orden stop</li>
+            <li><strong>¿Necesitas tanto activación como control de precio?</strong> Stop-límite (con sus riesgos)</li>
+          </ul>
+          <p>Domina estos fundamentos antes de tocar tipos de órdenes más complejos. Cada trader profesional comenzó aquí.</p>
+          <p>Una vez que entiendas la mecánica de las órdenes, puedes enfocarte en lo que importa: identificar configuraciones de calidad y ejecutar tu plan. El tipo de orden correcto es simplemente la herramienta que ejecuta tu plan con mínima fricción y máximo control.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Artículos Relacionados</h3>
+            <div class="related-grid">
+              <a href="../your-first-trade/" class="related-card">
+                <span class="related-category">Principiante</span>
+                <h4>Tu Primer Trade: Un Recorrido Completo</h4>
+              </a>
+              <a href="../candlestick-basics/" class="related-card">
+                <span class="related-category">Principiante</span>
+                <h4>Fundamentos de Velas: Leyendo la Acción del Precio</h4>
+              </a>
+              <a href="../stop-loss-placement/" class="related-card">
+                <span class="related-category">Práctico</span>
+                <h4>Colocación de Stop Loss: Por Qué el Tuyo Probablemente Está Mal</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../system-optimization/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Anterior
+              </span>
+              <span class="article-nav-title">Optimización de Sistemas: Cuando Ajustar Se Convierte en Sobre-Ajuste</span>
+            </a>
+            <a href="../your-first-trade/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Siguiente
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Tu Primer Trade: Un Recorrido Completo</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>El sistema de alertas de Signal Pilot te dice cuándo se activan las configuraciones - tú decides cómo entrar basándote en tu tipo de orden preferido y tolerancia al riesgo. La señal identifica la oportunidad; tu ejecución de la orden determina cómo la capturas.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver alertas de señales →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro Educativo</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
