@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1%ルール：なぜプロのトレーダーはこれほど少ないリスクを取るのか - Signal Pilot Blog</title>
+  <meta name="description" content="1トレードで1%のリスクは過度に慎重に聞こえます。しかし実際には、まだ機能する最も攻撃的なアプローチである理由を説明します。">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="./">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/ja/" class="active">ブログ</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="翻訳"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="./" class="active"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料で試す</a>
+      <button class="mobile-menu-btn" aria-label="メニュー"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=risk">リスク管理</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
+      <span class="article-category">リスク管理</span>
+      <h1 class="article-title">1%ルール：なぜプロのトレーダーはこれほど少ないリスクを取るのか</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6分で読める</span><span>Signal Pilot チーム</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="1%ルールの視覚化"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>「1回のトレードで口座の1%以上をリスクにさらしてはいけない。」</p>
+      <p>このルールを聞いたことがあるでしょう。おそらく不可能なほど保守的に見えるので無視したかもしれません。$10,000の口座では、1%はわずか$100です。$100のリスクでどうやってお金を稼ぐのですか？</p>
+      <p>ここがポイントです：1%ルールはお金を稼ぐことではありません。お金を失わないことです。そして逆説的に、それが時間をかけて実際にお金を稼ぐのです。</p>
+      <hr>
+      <h2>破産の数学</h2>
+      <p>1%ではなく10%をトレードごとにリスクするとしましょう。「本物の」トレードっぽく感じますよね？</p>
+      <p>今、連敗を想像してください。珍しくありません—60%の勝率でも、5回以上の連続損失はかなり頻繁に発生します。</p>
+      <p><strong>10%リスクで、5回の損失後：</strong></p>
+      <p>$10,000 → $9,000 → $8,100 → $7,290 → $6,561 → $5,905</p>
+      <p>口座の41%を失いました。$10,000に戻るには69%の利益が必要です。</p>
+      <p><strong>1%リスクで、5回の損失後：</strong></p>
+      <p>$10,000 → $9,900 → $9,801 → $9,703 → $9,606 → $9,510</p>
+      <p>口座の4.9%を失いました。$10,000に戻るには5.2%の利益が必要です。</p>
+      <p>一方のシナリオは後退です。もう一方は潜在的な死のスパイラルです。</p>
+      <hr>
+      <h2>非対称性の問題</h2>
+      <p>損失と利益は対称ではありません。これはリスク管理で最も重要な概念です。</p>
+      <ul>
+        <li>10%失うと、回復に11.1%必要</li>
+        <li>20%失うと、回復に25%必要</li>
+        <li>30%失うと、回復に42.9%必要</li>
+        <li>50%失うと、回復に100%必要</li>
+        <li>90%失うと、回復に900%必要</li>
+      </ul>
+      <p>損失が大きいほど、回復は指数関数的に難しくなります。だから資本保全は保守的ではありません—不可欠なのです。</p>
+      <p>1%ルールは、回復が常に達成可能なゾーンにあなたを保ちます。</p>
+      <hr>
+      <h2>「でも1%では稼げない」</h2>
+      <p>この異議はプロのトレーディングがどう機能するかを誤解しています。</p>
+      <p>1回のトレードでお金を稼ぐのではありません。数百または数千のトレードにわたる累積的な優位性でお金を稼ぐのです。</p>
+      <p>50%の勝率で2:1のリスク・リワード比の戦略があるとしましょう。トレードごとの期待値は：</p>
+      <p>(0.5 x 2R) - (0.5 x 1R) = トレードあたり0.5R</p>
+      <p>1%リスクで、これはトレードあたり0.5%の期待利益です。100トレードで、これは50%の口座成長です—複利を計算に入れずに。</p>
+      <p>10%リスクで、理論的にはトレードあたり5%です。しかし100トレードは生き残れません。避けられないドローダウン中に分散があなたを消し去ります。</p>
+      <p>1%ルールはあなたの優位性を発揮させます。より高いリスクは、あなたの優位性が決してチャンスを得られないことを意味します。</p>
+      <hr>
+      <h2>プロの現実</h2>
+      <p>ヘッジファンド、プロップファーム、プロのトレーダーは通常、トレードあたり0.5-2%のリスクを取ります。多くはさらに少なく使います。</p>
+      <p>なぜ？彼らはリテールトレーダーが理解していないことを理解しているからです：長寿が優位性です。</p>
+      <p>市場は毎日機会を提供します。すべてを逃す唯一の方法は口座を吹き飛ばすことです。資本がある限り、機会があります。1%ルールはあなたが常に資本を持つことを保証します。</p>
+      <p>1回のトレードについてではありません。次の1000トレードのためにそこにいることについてです。</p>
+      <hr>
+      <h2>1%ルールの実装</h2>
+      <p>実践的な適用はこちらです：</p>
+      <p><strong>ステップ1：</strong> 口座リスクを定義します。$10,000の口座で1%なら、$100です。</p>
+      <p><strong>ステップ2：</strong> トレードセットアップを見つけます。エントリーとストップロスを市場構造に基づいて特定します—口座の数学ではなく。</p>
+      <p><strong>ステップ3：</strong> 株あたりのリスクを計算します。$50で買い、$48でストップなら、株あたりのリスクは$2です。</p>
+      <p><strong>ステップ4：</strong> 適切にサイジングします。$100の口座リスク / $2株あたり = 50株。</p>
+      <p>構造的ストップが1%が許容するよりも多くのリスクを必要とする場合、2つの選択肢があります：より小さくトレードするか、トレードを完全にスキップするか。希望するサイズに合わせるためにストップを動かすことは決してありません。</p>
+      <hr>
+      <h2>いつ調整するか</h2>
+      <p>1%ルールは最大値であり、目標ではありません。以下の場合はより少なくリスクすることを検討してください：</p>
+      <ul>
+        <li><strong>ドローダウン中。</strong> 一部のトレーダーは口座が10%下落した後0.5%に下げます。</li>
+        <li><strong>ボラティリティが高い。</strong> ストップは変動の激しい市場ではより突破されやすいです。</li>
+        <li><strong>相関ポジションがある。</strong> テック株の5つの1%ポジションは実際にはテックの5%ポジションです。</li>
+        <li><strong>不確実。</strong> 確信が低い = サイズが小さい。</li>
+      </ul>
+      <p>1-2%以上リスクする理由は決してありません。「高い確信」は数学を変えません。すべての吹き飛んだ口座は下落途中で高い確信を持っていました。</p>
+      <hr>
+      <h2>結論</h2>
+      <p>1%ルールは臆病であることではありません。トレーディングはまず生存のゲームであり、利益は二の次であることを理解することです。</p>
+      <p>小さくリスクを取る。頻繁にトレードする。優位性を複利させる。これがプロがトレーディングから富を築く方法です。</p>
+      <p>このアドバイスを無視するトレーダーは、それに従うトレーダーの口座に資金を提供する人たちです。</p>
+      <hr>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+        <a href="../../position-sizing-101/ja/" class="related-card"><span class="related-category">リスク</span><h4>ポジションサイジング101</h4></a>
+        <a href="../../when-to-cut-losses-early/ja/" class="related-card"><span class="related-category">リスク</span><h4>早めに損切りするタイミング</h4></a>
+        <a href="../../psychology-of-getting-stopped-out/ja/" class="related-card"><span class="related-category">心理学</span><h4>ストップアウトの心理学</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>ハーモニックオシレーターは4つのモメンタム指標が一致した時のみ発火し、信頼度の星で評価されます。Pentarchのサイクルフェーズ識別と組み合わせると、あなたの1%は複数のシステムが揃うセットアップに向かいます—単一指標のノイズではなく。</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">コンフルエンスを実際に見る →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/ja/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育ハブ</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="トップへ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
