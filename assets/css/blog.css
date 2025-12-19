@@ -339,6 +339,37 @@ body {
   background: var(--bg-soft);
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Category Placeholder Images */
+.article-card[data-category="indicators"] .article-card-image {
+  background-image: url('/assets/images/categories/indicators.png');
+}
+
+.article-card[data-category="psychology"] .article-card-image {
+  background-image: url('/assets/images/categories/psychology.png');
+}
+
+.article-card[data-category="cycles"] .article-card-image {
+  background-image: url('/assets/images/categories/cycles.png');
+}
+
+.article-card[data-category="practical"] .article-card-image {
+  background-image: url('/assets/images/categories/practical.png');
+}
+
+.article-card[data-category="risk"] .article-card-image {
+  background-image: url('/assets/images/categories/risk.png');
+}
+
+.article-card[data-category="systems"] .article-card-image {
+  background-image: url('/assets/images/categories/systems.png');
+}
+
+.article-card[data-category="beginner"] .article-card-image {
+  background-image: url('/assets/images/categories/beginner.png');
 }
 
 .article-card-image img {
