@@ -304,28 +304,34 @@
         const lang = btn.dataset.lang;
         langDropdown.classList.remove('active');
         
-        // Update our custom dropdown display
+        // Update our dropdown display
         const flag = btn.querySelector('.flag').textContent;
         const name = lang.toUpperCase().split('-')[0];
         langDropdown.querySelector('.lang-toggle .flag').textContent = flag;
         langDropdown.querySelector('.lang-name').textContent = name;
         
-        // Use Google Translate's own mechanism
-        const gtSelect = document.querySelector('.goog-te-combo');
-        if (gtSelect) {
-          gtSelect.value = lang === 'en' ? '' : lang;
-          gtSelect.dispatchEvent(new Event('change'));
-        } else {
-          // Fallback: set cookie and reload
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
-          if (lang !== 'en') {
-            document.cookie = 'googtrans=/en/' + lang + '; path=/';
-            document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + location.hostname;
-          }
-          location.reload();
+        // Clear ALL cookies thoroughly
+        const expiry = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
+        const paths = ['/', ''];
+        const domains = ['', location.hostname, '.' + location.hostname];
+        
+        paths.forEach(p => {
+          domains.forEach(d => {
+            const pathStr = p ? '; path=' + p : '';
+            const domainStr = d ? '; domain=' + d : '';
+            document.cookie = 'googtrans=;' + expiry + pathStr + domainStr;
+          });
+        });
+        
+        // Set new language cookie if not English
+        if (lang !== 'en') {
+          const val = '/en/' + lang;
+          document.cookie = 'googtrans=' + val + '; path=/';
+          document.cookie = 'googtrans=' + val + '; path=/; domain=.' + location.hostname;
         }
+        
+        // Force full page reload from server
+        window.location.href = window.location.pathname + '?_=' + Date.now();
       });
     });
 
