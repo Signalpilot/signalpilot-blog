@@ -334,14 +334,16 @@
         langDropdown.querySelector('.lang-name').textContent = name;
         
         // Trigger Google Translate
-        if (lang === 'en') {
-          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-          location.reload();
-        } else {
+        // Clear all existing googtrans cookies first
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
+        
+        if (lang !== 'en') {
           document.cookie = `googtrans=/en/${lang}; path=/`;
           document.cookie = `googtrans=/en/${lang}; path=/; domain=.${location.hostname}`;
-          location.reload();
         }
+        location.reload();
       });
     });
 
