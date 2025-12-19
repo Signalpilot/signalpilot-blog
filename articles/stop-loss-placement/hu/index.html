@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Loss Elhelyezés: Miért Rossz Valószínűleg a Tiéd - Signal Pilot Blog</title>
+  <meta name="description" content="Az ár pontosan eléri a stopodat, megfordul, és nélküled eléri a célárat. Ez nem összeesküvés. A módszertanod hibás.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/hu/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+      <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=practical">Gyakorlati</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
+      <span class="article-category">Gyakorlati</span>
+      <h1 class="article-title">Stop Loss Elhelyezés: Miért Rossz Valószínűleg a Tiéd</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span><span>Signal Pilot Csapat</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Stop loss elhelyezési stratégia"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Tudod, hogy szükséged van stop loss-ra. Minden kereskedési könyv ezt mondja. Tehát beállítasz egyet.</p>
+      <p>Aztán az ár pontosan eléri - és megfordul. Igazad volt az irányról, tévedtél a végrehajtásban. A stop egy nyerő kereskedésbe került.</p>
+      <p>Ez olyan gyakran történik, hogy a kereskedők gyanakodni kezdenek, hogy a piac vadászik rájuk. Nem teszi (legalábbis nem egyénileg). A probléma alapvetőbb: a stop elhelyezési módszertanod hibás.</p>
+      <hr>
+      <h2>A Két Stop Loss Katasztrófa</h2>
+      <p>A kereskedők általában két csapda egyikébe esnek:</p>
+      <p><strong>1. Csapda: Önkényes stopok.</strong> "A számla 2%-át kockáztatom." Klassz. De hova teszi ez a stopot? Ha a belépés alatt $1,50-ra, mert ez 2%, de a támasz a belépés alatt $2-ra van, a stopodat senki földjére helyezted. Nem piaci struktúrán alapul.</p>
+      <p><strong>2. Csapda: Nyilvánvaló stopok.</strong> "Pont a támasz alá teszem." Mindenki más is így tesz. Ez a stop csomó likviditást hoz létre, amit a nagyobb szereplők vadászni fognak. A "biztonságos" stopod valójában célpont.</p>
+      <p>Mindkét megközelítés kizár a nyerő kereskedésekből. Különböző okok, ugyanaz az eredmény.</p>
+      <hr>
+      <h2>A Piac Nem Ismeri a Számlaméretét</h2>
+      <p>Itt az alapvető probléma az önkényes stopokkal: a piacnak fogalma sincs, mennyit vagy hajlandó kockáztatni.</p>
+      <p>Ha 2%-ot kockáztatsz és ez a stopot $48,50-ra teszi, de a piaci struktúra azt sugallja, hogy $47 a valódi támasz, az ár kereskedhet $48-ig, kiüthet, majd emelkedhet.</p>
+      <p>A stop elhelyezésnek piaci struktúrán kell alapulnia, nem számla matematikán.</p>
+      <p>A helyes műveleti sorrend:</p>
+      <ol>
+        <li>Azonosítsd a strukturális érvénytelenítési pontot (hol téves a tézis?)</li>
+        <li>Helyezd a stopot e pont mögé</li>
+        <li>Számold ki a kockázatot dollárban</li>
+        <li>Méretezd a pozíciót úgy, hogy a dollár kockázat egyenlő legyen a százalékos kockázattal</li>
+      </ol>
+      <p>Ha a strukturális stopod 3%-os kockázatot igényel a normál méretű kereskedéshez, két választásod van: kisebb pozícióméret, vagy kihagyod a kereskedést. Nem mozgatod a stopot, hogy illeszkedjen a számládhoz.</p>
+      <hr>
+      <h2>A Nyilvánvaló Szinten Túl</h2>
+      <p>Ha mindenki ugyanazt a támaszt látja, mindenki stopja ugyanott van. A megoldás nem a stopok elkerülése. Hanem oda helyezni őket, ahol a tömeg nem teszi.</p>
+      <p><strong>Adj neki helyet.</strong> A támasz alatt $0,10 helyett menj $0,50-ra alá. Kereskedj kevesebb részvénnyel, hogy ugyanazt a dollár kockázatot tartsd.</p>
+      <p><strong>Használd a volatilitást.</strong> Az ATR méri, mennyit mozog tipikusan az ár. 1,5-2x ATR stop lélegzőteret ad a normál ingadozásnak.</p>
+      <p><strong>Gondolkodj zónákban, nem vonalakban.</strong> A támasz nem vonal. Terület. A stopodnak a zóna alatt kell lennie, nem a vonal alatt.</p>
+      <hr>
+      <h2>A Nullszaldó Csapda</h2>
+      <p>A stopok nullszaldóba mozgatása felelősségteljesnek tűnik. "Legalább nem veszíthetek."</p>
+      <p>De a korai nullszaldó mozdulatok garantálják, hogy másképp veszítesz: lehetőségköltségen keresztül.</p>
+      <p>Az árnak helyre van szüksége a lélegzéshez. A normál visszahúzások elérik a nullszaldó stopot és kidobnak - pont mielőtt az ár a célhoz menne.</p>
+      <p>A nullszaldó stopok csak akkor van értelmük, amikor:</p>
+      <ul>
+        <li>A kereskedés jelentősen a javadra mozdult (legalább 1R)</li>
+        <li>Van strukturális okod (új támasz alakult ki a belépés felett)</li>
+        <li>Nyereséget védesz, nem csak belépési tőkét</li>
+      </ul>
+      <hr>
+      <h2>A Lényeg</h2>
+      <p>A stop loss-ok megbuknak, amikor önkényesek (számla matematikán alapulnak, nem struktúrán) vagy nyilvánvalóak (ahol mindenki más stopja csoportosul).</p>
+      <p>A jobb stopok:</p>
+      <ul>
+        <li>Strukturális érvénytelenítésen alapulnak</li>
+        <li>A nyilvánvaló szinteken túl vannak</li>
+        <li>Volatilitás szerint méretezettek</li>
+        <li>Előre beállítottak és tiszteletben tartottak</li>
+      </ul>
+      <p>A stopodnak egy kérdést kell megválaszolnia: "Hol bizonyíthatóan téves a tézisem?" Tedd oda a stopot. Kereskedj olyan méretben, ami elfogadhatóvá teszi azt a veszteséget.</p>
+      <p>A volumen alapú szintek informálhatnak a jobb stop elhelyezésről. Amikor látod, hol kereskedtek valódi volumennel - Volumen Profil POC, Value Area határok, VWAP sávok - a stopokat a valódi intézményi aktivitáshoz képest helyezed el, nem önkényes swing pontokhoz. Az olyan szinteken túli stopok, ahol jelentős volumen történt, általában jobban túlélik a zajt.</p>
+      <hr>
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
+        <a href="../../psychology-of-getting-stopped-out/hu/" class="related-card"><span class="related-category">Pszichológia</span><h4>A Kiütés Pszichológiája</h4></a>
+        <a href="../../position-sizing-101/hu/" class="related-card"><span class="related-category">Kockázat</span><h4>Pozícióméretezés 101</h4></a>
+        <a href="../../support-and-resistance-explained/hu/" class="related-card"><span class="related-category">Kezdő</span><h4>Támasz és Ellenállás Magyarázat</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>A Janus Atlas megjeleníti a Volumen Profil POC-t, VAH-t és VAL-t - árszinteket, ahol valódi volumen kereskedett, nem önkényes swing pontokat. Az OmniDeck jelöli az értékelt Kínálat/Kereslet zónákat (⭐⭐⭐ = legmagasabb minőség). A valódi intézményi szinteken túl elhelyezett stopokat ritkábban vadásszák.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Nézd meg, hol kereskedett a volumen →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/hu/">← Vissza a Blogra</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

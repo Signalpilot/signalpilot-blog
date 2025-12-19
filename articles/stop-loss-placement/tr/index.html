@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Loss Yerleştirme: Neden Sizinki Muhtemelen Yanlış - Signal Pilot Blog</title>
+  <meta name="description" content="Fiyat stop'unuza tam olarak ulaşıyor, dönüyor ve hedefinize sizin olmadan ulaşıyor. Bu komplo değil. Metodolojiniz kusurlu.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/tr/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+      <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=practical">Pratik</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
+      <span class="article-category">Pratik</span>
+      <h1 class="article-title">Stop Loss Yerleştirme: Neden Sizinki Muhtemelen Yanlış</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span><span>Signal Pilot Ekibi</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Stop loss yerleştirme stratejisi"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Stop loss'a ihtiyacınız olduğunu biliyorsunuz. Her trading kitabı bunu söylüyor. Bu yüzden bir tane koyuyorsunuz.</p>
+      <p>Sonra fiyat ona tam olarak ulaşıyor - ve dönüyor. Yön konusunda haklıydınız, uygulama konusunda hatalıydınız. Stop size kazanan bir işleme mal oldu.</p>
+      <p>Bu o kadar sık oluyor ki trader'lar piyasanın onları avladığından şüphelenmeye başlıyor. Öyle değil (bireysel olarak, en azından). Sorun daha basit: stop yerleştirme metodolojiniz kusurlu.</p>
+      <hr>
+      <h2>İki Stop Loss Felaketi</h2>
+      <p>Trader'lar genellikle iki tuzaktan birine düşer:</p>
+      <p><strong>Tuzak 1: Keyfi stop'lar.</strong> "Hesabımın %2'sini riske atacağım." Harika. Ama bu stop'u nereye koyuyor? Girişin 1.50$ altındaysa çünkü bu %2, ama destek girişin 2$ altındaysa, stop'unuzu kimsenin olmadığı yere koydunuz. Piyasa yapısına dayalı değil.</p>
+      <p><strong>Tuzak 2: Açık stop'lar.</strong> "Desteğin hemen altına koyacağım." Herkes de öyle yapacak. O stop kümesi, büyük oyuncuların avlayacağı likidite yaratır. "Güvenli" stop'unuz aslında bir hedef.</p>
+      <p>Her iki yaklaşım da sizi kazanan işlemlerden çıkarır. Farklı nedenler, aynı sonuç.</p>
+      <hr>
+      <h2>Piyasa Hesap Büyüklüğünüzü Bilmiyor</h2>
+      <p>Keyfi stop'larla ilgili temel sorun şu: piyasanın ne kadar risk almaya istekli olduğunuz hakkında hiçbir fikri yok.</p>
+      <p>%2 risk alırsanız ve bu stop'unuzu 48.50$'a koyarsa, ama piyasa yapısı 47$'ın gerçek destek olduğunu gösterirse, fiyat 48$'a işlem yapabilir, sizi durdurabilir ve sonra yükselebilir.</p>
+      <p>Stop yerleştirme, hesap matematiğine değil piyasa yapısına dayalı olmalı.</p>
+      <p>Doğru işlem sırası:</p>
+      <ol>
+        <li>Yapısal geçersizlik noktasını belirleyin (tez nerede yanlış?)</li>
+        <li>Stop'unuzu o noktanın ötesine yerleştirin</li>
+        <li>Dolar cinsinden riski hesaplayın</li>
+        <li>Pozisyon büyüklüğünüzü dolar riskinin yüzde riskinize eşit olacağı şekilde belirleyin</li>
+      </ol>
+      <p>Yapısal stop'unuz normal boyutta işlem yapmak için %3 risk gerektiriyorsa, iki seçeneğiniz var: daha küçük pozisyon boyutu veya işlemi atlayın. Stop'u hesabınıza uyacak şekilde hareket ettirmiyorsunuz.</p>
+      <hr>
+      <h2>Açık Seviyenin Ötesinde</h2>
+      <p>Herkes aynı desteği görüyorsa, herkesin stop'u aynı yerde. Çözüm stop'lardan kaçınmak değil. Onları kalabalığın koymadığı yere yerleştirmek.</p>
+      <p><strong>Ona alan verin.</strong> Desteğin 0.10$ altı yerine, 0.50$ altına gidin. Aynı dolar riskini korumak için daha az hisse işlem yapın.</p>
+      <p><strong>Volatiliteyi kullanın.</strong> ATR fiyatın tipik olarak ne kadar hareket ettiğini ölçer. 1.5-2x ATR stop'u normal dalgalanma için nefes alma alanı verir.</p>
+      <p><strong>Çizgiler değil, bölgeler olarak düşünün.</strong> Destek bir çizgi değil. Bir alan. Stop'unuz çizginin altında değil, bölgenin altında olmalı.</p>
+      <hr>
+      <h2>Başabaş Tuzağı</h2>
+      <p>Stop'ları başabaşa taşımak sorumlu hissettiriyor. "En azından kaybetmem."</p>
+      <p>Ama erken başabaş hareketleri başka bir şekilde kaybetmenizi garanti eder: fırsat maliyeti yoluyla.</p>
+      <p>Fiyatın nefes almak için alana ihtiyacı var. Normal geri çekilmeler başabaş stop'una ulaşacak ve sizi dışarı atacak - fiyat hedefe gitmeden hemen önce.</p>
+      <p>Başabaş stop'ları sadece şu durumlarda mantıklı:</p>
+      <ul>
+        <li>İşlem lehinize önemli ölçüde hareket ettiğinde (en az 1R)</li>
+        <li>Yapısal bir nedeniniz olduğunda (girişin üzerinde yeni destek oluştu)</li>
+        <li>Sadece giriş sermayesini değil, kârları koruduğunuzda</li>
+      </ul>
+      <hr>
+      <h2>Sonuç</h2>
+      <p>Stop loss'lar keyfi (hesap matematiğine dayalı, yapıya değil) veya açık (herkesin stop'larının kümelendiği yer) olduğunda başarısız olur.</p>
+      <p>Daha iyi stop'lar:</p>
+      <ul>
+        <li>Yapısal geçersizliğe dayalı</li>
+        <li>Açık seviyelerin ötesinde</li>
+        <li>Volatiliteye göre boyutlandırılmış</li>
+        <li>Önceden belirlenmiş ve saygı gösterilmiş</li>
+      </ul>
+      <p>Stop'unuz bir soruyu yanıtlamalı: "Tezim kanıtlanabilir şekilde nerede yanlış?" Stop'u oraya koyun. O kaybı kabul edilebilir kılan bir boyutta işlem yapın.</p>
+      <p>Hacim tabanlı seviyeler daha iyi stop yerleştirmeyi bilgilendirebilir. Gerçek hacmin nerede işlem gördüğünü görebildiğinizde - Hacim Profili POC, Değer Alanı sınırları, VWAP bantları - keyfi salınım noktaları yerine gerçek kurumsal aktiviteye göre stop'lar yerleştiriyorsunuz. Anlamlı hacmin gerçekleştiği seviyelerin ötesindeki stop'lar gürültüye daha iyi dayanma eğilimindedir.</p>
+      <hr>
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
+        <a href="../../psychology-of-getting-stopped-out/tr/" class="related-card"><span class="related-category">Psikoloji</span><h4>Durdurulmanın Psikolojisi</h4></a>
+        <a href="../../position-sizing-101/tr/" class="related-card"><span class="related-category">Risk</span><h4>Pozisyon Boyutlandırma 101</h4></a>
+        <a href="../../support-and-resistance-explained/tr/" class="related-card"><span class="related-category">Başlangıç</span><h4>Destek ve Direnç Açıklaması</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Janus Atlas Hacim Profili POC, VAH ve VAL gösterir - keyfi salınım noktaları değil, gerçek hacmin işlem gördüğü fiyat seviyeleri. OmniDeck derecelendirilmiş Arz/Talep bölgelerini işaretler (⭐⭐⭐ = en yüksek kalite). Gerçek kurumsal seviyelerin ötesine yerleştirilen stop'lar daha az sıklıkla avlanır.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Hacmin nerede işlem gördüğünü görün →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/tr/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

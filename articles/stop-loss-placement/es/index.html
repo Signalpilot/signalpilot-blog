@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colocación de Stop Loss: Por Qué el Tuyo Probablemente Está Mal - Signal Pilot Blog</title>
+  <meta name="description" content="El precio toca tu stop exactamente, revierte, y alcanza tu objetivo sin ti. No es conspiración. Tu metodología es defectuosa.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traducir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="./" class="active"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+      <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=practical">Práctico</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
+      <span class="article-category">Práctico</span>
+      <h1 class="article-title">Colocación de Stop Loss: Por Qué el Tuyo Probablemente Está Mal</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lectura</span><span>Equipo Signal Pilot</span></div>
+    </div></header>
+
+    <figure class="hero-image"><img src="../hero.png" alt="Estrategia de colocación de stop loss"></figure>
+
+    <div class="article-content"><div class="container-narrow">
+      <p>Sabes que necesitas stop losses. Todos los libros de trading lo dicen. Así que colocas uno.</p>
+      <p>Entonces el precio lo toca - exactamente - y revierte. Tenías razón sobre la dirección, mal sobre la ejecución. El stop te costó una operación ganadora.</p>
+      <p>Esto pasa tan a menudo que los traders empiezan a sospechar que el mercado los está cazando. No es así (no individualmente, al menos). El problema es más básico: tu metodología de colocación de stop es defectuosa.</p>
+      <hr>
+      <h2>Los Dos Desastres del Stop Loss</h2>
+      <p>Los traders usualmente caen en una de dos trampas:</p>
+      <p><strong>Trampa 1: Stops arbitrarios.</strong> "Arriesgaré el 2% de mi cuenta." Genial. Pero ¿dónde pone eso el stop? Si está $1.50 debajo de la entrada porque eso es el 2%, pero el soporte está $2 debajo, has colocado tu stop en tierra de nadie. No está basado en estructura de mercado.</p>
+      <p><strong>Trampa 2: Stops obvios.</strong> "Lo pondré justo debajo del soporte." Todos los demás también. Ese grupo de stops crea liquidez que los jugadores más grandes cazarán. Tu stop "seguro" es en realidad un objetivo.</p>
+      <p>Ambos enfoques te sacan de operaciones ganadoras. Diferentes razones, mismo resultado.</p>
+      <hr>
+      <h2>El Mercado No Conoce el Tamaño de Tu Cuenta</h2>
+      <p>Aquí está el problema fundamental con los stops arbitrarios: el mercado no tiene idea de cuánto estás dispuesto a arriesgar.</p>
+      <p>Si arriesgas el 2% y eso pone tu stop en $48.50, pero la estructura del mercado sugiere que $47 es el verdadero soporte, el precio puede operar hasta $48, sacarte, y luego subir.</p>
+      <p>La colocación del stop debe basarse en la estructura del mercado, no en matemáticas de la cuenta.</p>
+      <p>El orden correcto de operaciones:</p>
+      <ol>
+        <li>Identifica el punto de invalidación estructural (¿dónde está mal tu tesis?)</li>
+        <li>Coloca tu stop más allá de ese punto</li>
+        <li>Calcula el riesgo en dólares</li>
+        <li>Dimensiona tu posición para que el riesgo en dólares iguale tu riesgo porcentual</li>
+      </ol>
+      <p>Si tu stop estructural requiere arriesgar el 3% para operar con tamaño normal, tienes dos opciones: tamaño de posición más pequeño, o saltar la operación. No mueves el stop para ajustarlo a tu cuenta.</p>
+      <hr>
+      <h2>Más Allá del Nivel Obvio</h2>
+      <p>Si todos ven el mismo soporte, el stop de todos está en el mismo lugar. La solución no es evitar los stops. Es colocarlos donde la multitud no lo hace.</p>
+      <p><strong>Dale espacio.</strong> En lugar de $0.10 debajo del soporte, ve $0.50 debajo. Opera menos acciones para mantener el mismo riesgo en dólares.</p>
+      <p><strong>Usa la volatilidad.</strong> El ATR mide cuánto se mueve típicamente el precio. Un stop de 1.5-2x ATR da espacio para la fluctuación normal.</p>
+      <p><strong>Piensa en zonas, no líneas.</strong> El soporte no es una línea. Es un área. Tu stop debe estar debajo de la zona, no debajo de la línea.</p>
+      <hr>
+      <h2>La Trampa del Punto de Equilibrio</h2>
+      <p>Mover los stops al punto de equilibrio se siente responsable. "Al menos no puedo perder."</p>
+      <p>Pero mover prematuramente al punto de equilibrio garantiza que pierdas de otra manera: a través del costo de oportunidad.</p>
+      <p>El precio necesita espacio para respirar. Los retrocesos normales tocarán un stop de punto de equilibrio y te sacarán - justo antes de que el precio vaya al objetivo.</p>
+      <p>Los stops de punto de equilibrio tienen sentido solo cuando:</p>
+      <ul>
+        <li>La operación se ha movido significativamente a tu favor (al menos 1R)</li>
+        <li>Tienes una razón estructural (se ha formado nuevo soporte arriba de la entrada)</li>
+        <li>Estás protegiendo ganancias, no solo capital de entrada</li>
+      </ul>
+      <hr>
+      <h2>La Conclusión</h2>
+      <p>Los stop losses fallan cuando son arbitrarios (basados en matemáticas de cuenta, no estructura) u obvios (donde se agrupan los stops de todos los demás).</p>
+      <p>Mejores stops son:</p>
+      <ul>
+        <li>Basados en invalidación estructural</li>
+        <li>Más allá de niveles obvios</li>
+        <li>Dimensionados por volatilidad</li>
+        <li>Establecidos de antemano y respetados</li>
+      </ul>
+      <p>Tu stop debe responder una pregunta: "¿Dónde está mi tesis probablemente equivocada?" Pon el stop ahí. Opera un tamaño que haga esa pérdida aceptable.</p>
+      <p>Los niveles basados en volumen pueden informar mejor la colocación del stop. Cuando puedes ver dónde se transaccionó volumen real - POC del Perfil de Volumen, límites del Área de Valor, bandas VWAP - estás colocando stops relativos a actividad institucional real en lugar de puntos de swing arbitrarios. Los stops más allá de niveles donde ocurrió volumen significativo tienden a sobrevivir mejor el ruido.</p>
+      <hr>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
+        <a href="../../psychology-of-getting-stopped-out/es/" class="related-card"><span class="related-category">Psicología</span><h4>La Psicología de Ser Sacado por Stop</h4></a>
+        <a href="../../position-sizing-101/es/" class="related-card"><span class="related-category">Riesgo</span><h4>Dimensionamiento de Posición 101</h4></a>
+        <a href="../../support-and-resistance-explained/es/" class="related-card"><span class="related-category">Principiante</span><h4>Soporte y Resistencia Explicados</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Janus Atlas muestra POC del Perfil de Volumen, VAH y VAL - niveles de precio donde se transaccionó volumen real, no puntos de swing arbitrarios. OmniDeck marca zonas de Oferta/Demanda calificadas (⭐⭐⭐ = máxima calidad). Los stops colocados más allá de niveles institucionales reales son cazados con menos frecuencia.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver dónde operó el volumen →</a></div>
+    </div></div>
+  </article></main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro Educativo</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+  </div></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
