@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emir Türleri: Piyasa, Limit ve Stop Emirleri - Signal Pilot Blog</title>
+  <meta name="description" content="Piyasa emirleri, limit emirleri, stop emirleri - bunlar trading'in temel araçlarıdır. İşte her birinin ne işe yaradığı, ne zaman kullanılacağı ve yeni başlayanların yaptığı hatalar.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çeviri">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Sayfa yolu">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner">Başlangıç Temelleri</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">Başlangıç Temelleri</span>
+          <h1 class="article-title">Emir Türleri: Piyasa, Limit ve Stop Emirleri</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Emir türleri görselleştirmesi">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Bir kurulum buldunuz. Ne almak istediğinizi biliyorsunuz. Ama aslında nasıl alacaksınız?</p>
+          <p>Emir türleri, analizinizi gerçek pozisyonlara dönüştüren araçlardır. Yanlış olanı kullanmak para kaybettirir. Doğru olanı kullanmak, giriş ve çıkışlarınız üzerinde kontrol sağlar.</p>
+          <p>İşte her yeni başlayanın bilmesi gerekenler.</p>
+
+          <hr>
+
+          <h2>Piyasa Emirleri: Şimdi Al, Fiyat Sonra</h2>
+          <p>Piyasa emri şunu söyler: "Bu pozisyonu hemen istiyorum. Mevcut fiyattan gerçekleştir."</p>
+          <p><strong>Nasıl çalışır:</strong></p>
+          <ul>
+            <li>Emri gönderirsiniz</li>
+            <li>Mevcut en iyi fiyattan anında gerçekleşir</li>
+            <li>Pozisyonunuzu alırsınız, ancak gördüğünüz fiyattan olmayabilir</li>
+          </ul>
+          <p><strong>Piyasa emrini ne zaman kullanmalı:</strong></p>
+          <ul>
+            <li>Kaybeden bir pozisyondan hemen çıkmanız gerektiğinde</li>
+            <li>Piyasa yüksek likiditeye sahip ve spreadler dar olduğunda</li>
+            <li>Gerçekleşmek, mükemmel fiyat almaktan daha önemli olduğunda</li>
+            <li>Hacme göre küçük boyutta işlem yaptığınızda</li>
+          </ul>
+          <p><strong>Risk - kayma:</strong></p>
+          <p>Kayma, beklediğiniz fiyat ile aldığınız fiyat arasındaki farktır. Hızlı hareket eden veya likit olmayan piyasalarda kayma önemli olabilir.</p>
+          <p>Örnek: Hisse senedini 100,00$'dan görüyorsunuz, piyasa alış emri gönderiyorsunuz. Gerçekleştiğinde 100,15$'dan dolduruluyorsunuz. Bu %0,15 kayma - ve birikir.</p>
+
+          <hr>
+
+          <h2>Limit Emirleri: Benim Fiyatım ya da Hiç</h2>
+          <p>Limit emri şunu söyler: "Bu pozisyonu istiyorum, ama sadece belirttiğim fiyattan veya daha iyisinden."</p>
+          <p><strong>Nasıl çalışır:</strong></p>
+          <ul>
+            <li>Ödeyeceğiniz maksimum fiyatı (alışlar için) veya kabul edeceğiniz minimumu (satışlar için) belirlersiniz</li>
+            <li>Emir fiyatınız uygun olana kadar bekler</li>
+            <li>Fiyat limitinize hiç ulaşmazsa, emir hiç gerçekleşmez</li>
+          </ul>
+          <p><strong>Alış limiti:</strong> Mevcut fiyatın altına ayarlanır. "95$'a düşerse alırım."</p>
+          <p><strong>Satış limiti:</strong> Mevcut fiyatın üstüne ayarlanır. "105$'a çıkarsa satarım."</p>
+          <p><strong>Limit emrini ne zaman kullanmalı:</strong></p>
+          <ul>
+            <li>Belirli bir giriş fiyatı istiyorsanız ve bekleyebiliyorsanız</li>
+            <li>Kâr hedefleri koyarken</li>
+            <li>Piyasa volatil veya likit değilken</li>
+            <li>Geri çekilme girişi için "teklif vermek" istediğinizde</li>
+          </ul>
+          <p><strong>Risk - gerçekleşmemesi:</strong></p>
+          <p>Fiyat limitinize hiç ulaşmayabilir. İstediğiniz işlem, siz biraz daha iyi bir fiyat beklediğiniz için sizin olmadan gerçekleşir. Limitlerle çok agresif olmak, iyi işlemleri kaçırmak demektir.</p>
+
+          <hr>
+
+          <h2>Stop Emirleri: Tetikle ve Gerçekleştir</h2>
+          <p>Stop emri şunu söyler: "Fiyat tetikleme seviyeme ulaştığında, bunu piyasa emrine çevir."</p>
+          <p><strong>Nasıl çalışır:</strong></p>
+          <ul>
+            <li>Bir tetikleme fiyatı ("stop") belirlersiniz</li>
+            <li>Emir, fiyat tetikleyiciye ulaşana kadar aktif olmadan bekler</li>
+            <li>Tetiklendiğinde, piyasa emri olur ve hemen gerçekleşir</li>
+          </ul>
+          <p><strong>Alış stop:</strong> Mevcut fiyatın üstüne ayarlanır. "105$'ı kırarsa içeride olmak istiyorum."</p>
+          <p><strong>Satış stop:</strong> Mevcut fiyatın altına ayarlanır. "95$'ı kırarsa beni çıkar."</p>
+          <p><strong>Stop emrini ne zaman kullanmalı:</strong></p>
+          <ul>
+            <li>Stop loss - kaybeden pozisyonlardan otomatik çıkış</li>
+            <li>Kırılma girişleri - fiyat bir seviyeyi kırdığında giriş</li>
+            <li>Kârları koruma - fiyatı yukarı takip eden takip stop'ları</li>
+          </ul>
+          <p><strong>Risk - boşluklar ve kayma:</strong></p>
+          <p>Stop emirleri tetiklendiğinde piyasa emri olur. Hızlı hareketlerde veya boşluklarda, gerçekleşme stop fiyatınızdan çok uzakta olabilir.</p>
+          <p>Örnek: Stop'unuz 95$'da. Hisse gece boşluk yaparak 90$'a düşüyor. Stop'unuz tetiklenir ve 95$'dan değil 90$'dan gerçekleşir. Planladığınızdan hisse başına 5$ daha fazla kaybettiniz.</p>
+
+          <hr>
+
+          <h2>Stop-Limit Emirleri: Koşullu Tetikleme</h2>
+          <p>Stop-limit emri şunu söyler: "Fiyat tetikleme seviyeme ulaştığında, belirttiğim fiyattan limit emri ver."</p>
+          <p><strong>Nasıl çalışır:</strong></p>
+          <ul>
+            <li>Hem stop fiyatı (tetikleyici) hem de limit fiyatı belirlersiniz</li>
+            <li>Stop tetiklendiğinde, bir limit emri verilir</li>
+            <li>Limit emri sadece limit fiyatınızdan veya daha iyisinden gerçekleşir</li>
+          </ul>
+          <p><strong>Örnek:</strong> Stop 95$'da, limit 94,50$'da. Fiyat 95$'a ulaştığında, 94,50$'dan limit satış emri verilir. 94,50$ veya üzerinden satarsınız, altından değil.</p>
+          <p><strong>Stop-limit emrini ne zaman kullanmalı:</strong></p>
+          <ul>
+            <li>En kötü durum kaymasını sınırlamak istediğinizde</li>
+            <li>Sık boşluk yapan enstrümanlarda işlem yaparken</li>
+            <li>Potansiyel olarak gerçekleşmeme riskini kabul ettiğinizde</li>
+          </ul>
+          <p><strong>Risk - hiç gerçekleşmeme:</strong></p>
+          <p>Fiyat hem stop'unuzu HEM DE limitinizi geçerek boşluk yaparsa, gerçekleşmezsiniz. Stop-loss'unuz kaybınızı durduramaz.</p>
+          <p>Örnek: Stop 95$'da, limit 94,50$'da. Hisse 93$'a boşluk yapar. 94,50$'daki limitiniz hiç gerçekleşmez çünkü fiyat zaten altında. Hâlâ kaybeden bir pozisyondasınız.</p>
+
+          <hr>
+
+          <h2>Emir Süresi: GTC vs Günlük</h2>
+          <p>Emir türünün ötesinde, emrin ne kadar süre aktif kalacağını belirtmeniz gerekir.</p>
+          <p><strong>Günlük emir:</strong> Gerçekleşmezse piyasa kapanışında sona erer. Yarın yeniden girmeniz gerekir.</p>
+          <p><strong>GTC (İptal Edilene Kadar Geçerli):</strong> Gerçekleşene veya iptal edene kadar aktif kalır. Günlerce, haftalarca, aylarca sürebilir.</p>
+          <p><strong>Her birini ne zaman kullanmalı:</strong></p>
+          <ul>
+            <li><strong>Günlük emirler:</strong> Bugünün kurulumunun yarın geçerli olmayabileceği girişler için</li>
+            <li><strong>GTC:</strong> Stop loss'lar (her zaman koruma istersiniz) ve uzun vadeli limit emirleri için</li>
+          </ul>
+          <p>GTC emirlerle dikkatli olun - haftalardır unuttuğunuz bir limit emri, değişen piyasa koşullarında aniden gerçekleşebilir.</p>
+
+          <hr>
+
+          <h2>Pratik Emir Kombinasyonları</h2>
+          <p><strong>Temel işlem kurulumu:</strong></p>
+          <ol>
+            <li>İstediğiniz fiyattan girmek için limit emri</li>
+            <li>Stop loss için stop emri (GTC)</li>
+            <li>Kâr hedefiniz için limit emri (GTC)</li>
+          </ol>
+          <p><strong>Kırılma işlem kurulumu:</strong></p>
+          <ol>
+            <li>Kırılmada girmek için direncin üzerinde alış stop</li>
+            <li>Stop loss için girişin altında satış stop</li>
+            <li>Kâr almak için hedefte satış limit</li>
+          </ol>
+          <p><strong>Birçok broker parantez emirleri sunar</strong> - giriş, stop loss ve kâr hedefini aynı anda yerleştirir. Biri gerçekleştiğinde, diğerleri otomatik olarak aktive olur veya iptal edilir.</p>
+
+          <hr>
+
+          <h2>Yaygın Yeni Başlayan Hataları</h2>
+          <p><strong>Likit olmayan piyasalarda piyasa emri kullanmak:</strong> Geniş spreadler ve ince emir defterleri büyük kayma demektir. Düşük hacimli enstrümanlarda her zaman limit kullanın.</p>
+          <p><strong>Stop loss'larda stop-limit kullanmak:</strong> Stop loss'unuz sizi korumak için vardır. Stop-limit kullanmak, korumanın başarısız olma riskini taşır. Gerçek stop loss'lar için normal stop emirleri genellikle daha iyidir.</p>
+          <p><strong>GTC emirleri unutmak:</strong> Üç hafta önceki limit emriniz mi? Siz unutmuşken ve kurulum artık geçerli değilken gerçekleşebilir.</p>
+          <p><strong>Piyasa emriyle kovalamak:</strong> Hisse koşuyor, şimdi içinde olmak istiyorsunuz, piyasa emri yapıştırıyorsunuz. Zirvede gerçekleşiyorsunuz, hemen tersine dönüyor. Disiplin, heyecanlıyken bile limit kullanmak demektir.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>Emir türleri araçlardır. Doğru araç, neyi başarmaya çalıştığınıza bağlıdır.</p>
+          <ul>
+            <li><strong>Gerçekleşme kesinliği mi gerekiyor?</strong> Piyasa emri</li>
+            <li><strong>Fiyat kesinliği mi gerekiyor?</strong> Limit emri</li>
+            <li><strong>Otomatik tetikleyiciler mi gerekiyor?</strong> Stop emri</li>
+            <li><strong>Hem tetikleme hem fiyat kontrolü mü gerekiyor?</strong> Stop-limit (riskleriyle birlikte)</li>
+          </ul>
+          <p>Daha karmaşık emir türlerine geçmeden önce bu temelleri ustalıkla öğrenin. Her profesyonel trader buradan başladı.</p>
+          <p>Emir mekaniklerini anladığınızda, önemli olana odaklanabilirsiniz: kaliteli kurulumları belirlemek ve planınızı uygulamak. Doğru emir türü, planınızı minimum sürtünme ve maksimum kontrolle uygulayan araçtır.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../../your-first-trade/tr/" class="related-card">
+                <span class="related-category">Başlangıç</span>
+                <h4>İlk İşleminiz: Eksiksiz Bir Rehber</h4>
+              </a>
+              <a href="../../risk-reward-ratio/tr/" class="related-card">
+                <span class="related-category">Risk</span>
+                <h4>Risk-Kazanç Oranı</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../system-optimization/tr/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Önceki</span>
+              <span class="article-nav-title">Sistem Optimizasyonu</span>
+            </a>
+            <a href="../../your-first-trade/tr/" class="article-nav-link next">
+              <span class="article-nav-label">Sonraki <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">İlk İşleminiz</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Signal Pilot'un alarm sistemi kurulumlar tetiklendiğinde size bildirir - tercih ettiğiniz emir türü ve risk toleransınıza göre nasıl gireceğinize siz karar verirsiniz. Sinyal fırsatı belirler; emir uygulamanız onu nasıl yakalayacağınızı belirler.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Sinyal alarmlarını gör →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı çık"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open')})}
+  </script>
+</body>
+</html>

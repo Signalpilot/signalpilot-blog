@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İlk İşleminiz: Eksiksiz Bir Rehber - Signal Pilot Blog</title>
+  <meta name="description" content="İlk işleminizi yapmaya hazır mısınız? İşte öncesinde, sırasında ve sonrasında yapmanız gereken her şey - yeni başlayanlar için adım adım rehber.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çeviri">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Sayfa yolu">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner">Başlangıç Temelleri</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">Başlangıç Temelleri</span>
+          <h1 class="article-title">İlk İşleminiz: Eksiksiz Bir Rehber</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="İlk işlem görselleştirmesi">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Trading hakkında okudunuz. Grafikleri inceldiniz. Bir hesap açtınız. Şimdi kalp atışınız hızlanarak al butonuna bakıyorsunuz.</p>
+          <p>İlk işleminiz bir dönüm noktasıdır. Doğru yapmanızı sağlayalım - aceleye gelmeden, düşüncesizce değil, metodik ve kontrollü.</p>
+          <p>İşte adım adım tam olarak ne yapmanız gerektiği.</p>
+
+          <hr>
+
+          <h2>İşlem Yapmadan Önce: Ön Koşullar</h2>
+          <p>Bunları atlamayın. İlk işleminiz şunları yaptıktan sonra olmalı:</p>
+          <p><strong>1. Hesabınızı uygun şekilde finanse edin</strong></p>
+          <p>Sadece kaybetmeyi göze alabileceğiniz parayla işlem yapın. Ciddiyim. Bu parayı kaybetmek finansal strese neden olacaksa, burada durun. Trading sermayesi gerçek anlamda risk sermayesi olmalı.</p>
+          <p>Küçük başlayın. Deneyimli traderlar bile yeni yaklaşımları minimum boyutla test eder. Yeni başlayan olarak ilk işlemleriniz öğrenim ücretidir - öğrenmek için ödeme.</p>
+          <p><strong>2. Önce kağıt üzerinde pratik yapın</strong></p>
+          <p>Çoğu broker kağıt trading (sahte parayla simüle edilmiş trading) sunar. Kullanın. Mekanikler doğal hissedene kadar en az 20-30 kağıt işlem yapın.</p>
+          <p>İlk gerçek işleminizin işlemin kendisiyle ilgili olmasını istersiniz, platformla uğraşmakla değil.</p>
+          <p><strong>3. Emir türlerini anlayın</strong></p>
+          <p>Piyasa emirleri, limit emirleri ve stop emirleri arasındaki farkı bilin. Her birini ne zaman kullanacağınızı bilin. Bu isteğe bağlı değil - riskinizi böyle kontrol edersiniz.</p>
+          <p><strong>4. Risk kurallarınızı tanımlayın</strong></p>
+          <p>Herhangi bir işleme girmeden önce şunu bilmelisiniz: Yanlışsam ne kadar kaybedeceğim? Yeni başlayanlar için işlem başına hesabınızın maksimum %0,5-1'ini riske atın.</p>
+
+          <hr>
+
+          <h2>Adım 1: Bir Kurulum Bulun</h2>
+          <p>İlk işleminizin bir nedeni olmalı. "Yükseleceğini düşünüyorum" değil - tanımlayıp tekrarlayabileceğiniz bir şeye dayanan gerçek bir kurulum.</p>
+          <p><strong>Yeni başlayanlar için basit kurulumlar:</strong></p>
+          <ul>
+            <li><strong>Direncin üzerinde kırılma:</strong> Fiyat, daha önce geçemediği bir seviyenin üzerine çıkar</li>
+            <li><strong>Destekten sıçrama:</strong> Fiyat bir seviyeye dokunur ve sıçrar, alıcıların o fiyatı savunduğunu gösterir</li>
+            <li><strong>Hareketli ortalama sıçraması:</strong> Fiyat yükselen bir hareketli ortalamaya geri çekilir ve tutar</li>
+          </ul>
+          <p>Bir kurulum türü seçin. Öğrenin. İlk işleminiz bu kurulumu kullanmalı.</p>
+          <p><strong>Bu işlemi neden yaptığınızı yazın.</strong> "Fiyat, iki haftadır tutan 50$ direnç seviyesinin üzerine, ortalamanın üzerinde hacimle kırıldı." Bu sizin teziniz.</p>
+
+          <hr>
+
+          <h2>Adım 2: Stop Loss'unuzu Tanımlayın</h2>
+          <p>Girişinizi bilmeden önce, yanlışsam-çıkış noktanızı bilmelisiniz.</p>
+          <p><strong>Stop loss'unuz tezinizin geçersiz kılındığı yere gider.</strong></p>
+          <ul>
+            <li>Kırılma işlemi: Stop kırılma seviyesinin altına</li>
+            <li>Destek sıçraması: Stop destek seviyesinin altına</li>
+            <li>Hareketli ortalama sıçraması: Stop hareketli ortalamanın altına</li>
+          </ul>
+          <p>Örnek: 50$'ın üzerinde bir kırılma alıyorsunuz. Stop'unuz 48,50$'a gider (kırılma seviyesinin altı). Fiyat 48,50$'ın altına düşerse, kırılma başarısız oldu - çıkıyorsunuz.</p>
+          <p><strong>Yanlışsam nerede çıkacağınızı bilmeden asla bir işleme girmeyin.</strong></p>
+
+          <hr>
+
+          <h2>Adım 3: Pozisyon Boyutunu Hesaplayın</h2>
+          <p>Çoğu yeni başlayanın yanlış yaptığı yer burası. Pozisyon boyutu keyfi değil - riskinizden hesaplanır.</p>
+          <p><strong>Formül:</strong></p>
+          <p>Pozisyon Boyutu = (Hesap × Risk %) ÷ (Giriş - Stop)</p>
+          <p><strong>Örnek:</strong></p>
+          <ul>
+            <li>Hesap: 10.000$</li>
+            <li>İşlem başına risk: %1 = 100$</li>
+            <li>Giriş fiyatı: 50$</li>
+            <li>Stop loss: 48,50$</li>
+            <li>Hisse başına risk: 50$ - 48,50$ = 1,50$</li>
+            <li>Pozisyon boyutu: 100$ ÷ 1,50$ = 66 hisse</li>
+          </ul>
+          <p>66 hisseyi 50$'dan alır ve 48,50$'dan stop olursanız, 99$ kaybedersiniz - hesabınızın yaklaşık %1'i. Matematik sizi korur.</p>
+
+          <hr>
+
+          <h2>Adım 4: Hedefinizi Tanımlayın</h2>
+          <p>Kârı nerede alacaksınız?</p>
+          <p>İlk işlemleriniz için basit tutun: en az 2:1 kazanç-risk oranı hedefleyin. Hisse başına 1,50$ riske ediyorsanız (girişten stop'a), hedefiniz girişin en az 3,00$ üzerinde olmalı.</p>
+          <p>Örnek: Giriş 50$'da, stop 48,50$'da, hedef 53$'da (3$ kazanmak için 1,50$ riske atmak).</p>
+          <p>Daha iyisi, grafik yapısına dayalı mantıklı bir hedef belirleyin - önceki bir direnç seviyesi, yuvarlak bir sayı veya ölçülü bir hareket.</p>
+
+          <hr>
+
+          <h2>Adım 5: İşleme Girin</h2>
+          <p>Kurulumunuz, stop'unuz, boyutunuz ve hedefiniz var. Şimdi uygulayın.</p>
+          <p><strong>Yeni başlayanlar için girmek üzere limit emri kullanın.</strong> Bu size fiyat kontrolü verir ve kaymayı önler.</p>
+          <ol>
+            <li>Broker platformunuzu açın</li>
+            <li>Sembolü girin</li>
+            <li>"Al" ve "Limit Emri" seçin</li>
+            <li>Limit fiyatınızı girin (istediğiniz giriş)</li>
+            <li>Pozisyon boyutunuzu girin (hesapladığınız hisseler)</li>
+            <li>Göndermeden önce her şeyi gözden geçirin</li>
+            <li>Emri gönderin</li>
+          </ol>
+          <p><strong>Girişiniz gerçekleştikten hemen sonra stop loss emrinizi verin.</strong> Bu pazarlık konusu değil. Pozisyonunuz açık olduğu anda stop'unuz aktif olmalı.</p>
+
+          <hr>
+
+          <h2>Adım 6: İşlemi Yönetin</h2>
+          <p>İçeridesiniz. Şimdi ne olacak?</p>
+          <p><strong>Yeni başlayan yönetim planı:</strong></p>
+          <ol>
+            <li><strong>Her tik'e bakmayın.</strong> Stop ve hedefinizi ayarlayın. Çalışmalarına izin verin. Her hareketi izlemek duygusal kararlar yaratır.</li>
+            <li><strong>Stop'unuzu daha uzağa taşımayın.</strong> İşleme "daha fazla alan" vermeniz gerekiyorsa, yanlış boyutlandırdınız veya stop'unuz yanlış yerdeydi. Gelirse kaybı kabul edin.</li>
+            <li><strong>Kaybeden bir pozisyona ekleme yapmayın.</strong> Aşağı ortalama almak, yeni başlayanların hesapları nasıl patlattığıdır. İşlem yanlışsa, stop olmasına izin verin.</li>
+            <li><strong>Kısmi kâr almayı düşünün.</strong> Fiyat 1:1'e ulaştığında (riske attığınız kadar kazandınız), yarısını satmayı ve kalanı için stop'unuzu başabaşa taşımayı düşünün. Bu, kârı kilitlerken kazananların koşmasına izin verir.</li>
+          </ol>
+
+          <hr>
+
+          <h2>Adım 7: İşlemden Çıkın</h2>
+          <p>Her işlem biter. Bunlardan biri olacak:</p>
+          <p><strong>Stop oldunuz (kayıp):</strong> Fiyat stop'unuza ulaştı. Planladığınız kadar kaybettiniz. Bu başarıdır - riski kontrol ettiniz. İşlemi kaydedin, öğrenebileceğinizi öğrenin, devam edin.</p>
+          <p><strong>Hedef tuttu (kazanç):</strong> Fiyat kâr hedefinize ulaştı. Planladığınız kadar kazandınız. İşlemi kaydedin, neyin işe yaradığını not edin, devam edin.</p>
+          <p><strong>Manuel çıkış:</strong> Bazen koşullar değişir. Girme nedeniniz artık geçerli değil. Stop veya hedefinizden önce çıkmak sorun değil. Sadece bir nedeniniz olsun.</p>
+
+          <hr>
+
+          <h2>Adım 8: Kaydedin ve İnceleyin</h2>
+          <p>Her işlemden sonra kaydedin:</p>
+          <ul>
+            <li>Tarih ve sembol</li>
+            <li>Giriş ve çıkış fiyatları</li>
+            <li>K/Z dolar ve yüzde olarak</li>
+            <li>Hangi kurulumu kullandınız</li>
+            <li>Planınızı tam olarak takip ettiniz mi?</li>
+            <li>Neyi farklı yapardınız?</li>
+          </ul>
+          <p>İlk işlemleriniz öğrenme deneyimleridir. Günlük, öğrendiklerinizi yakalar.</p>
+
+          <hr>
+
+          <h2>Yaygın İlk İşlem Hataları</h2>
+          <p><strong>Çok büyük işlem yapmak:</strong> Heyecan aşırı boyutlandırmaya yol açar. Ne kadar güvenli hissetseniz de pozisyon boyutu hesaplamanıza bağlı kalın.</p>
+          <p><strong>Stop loss olmadan:</strong> "Yakından izleyeceğim" bir risk yönetimi planı değildir. Her zaman aktif bir stop emri olsun.</p>
+          <p><strong>Stop'ları taşımak:</strong> İşlem aleyhinize gider, toparlanacağını umarak stop'unuzu daha uzağa taşırsınız. Küçük kayıplar böyle hesap öldüren kayıplara dönüşür.</p>
+          <p><strong>İntikam trading'i:</strong> İlk işleminiz kayıptı. "Geri kazanmak" için hemen başka bir işleme atlarsınız. Durun. Kaybeden işlemler normaldir. Sonraki işlem tüm kriterlerinizi karşılamalı, toparlanma için duygusal ihtiyacınızı değil.</p>
+          <p><strong>Planı terk etmek:</strong> Giriş, stop ve hedefiniz vardı. Sonra panik yaptınız ve erken sattınız, veya stop'unuz boyunca tuttunuz, veya kârı çok çabuk aldınız. Sürece güvenin.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>İlk işleminiz bir yolculuğun başlangıcıdır. Doğru yapın:</p>
+          <ol>
+            <li>Net bir nedeni olan bir kurulumunuz olsun</li>
+            <li>Girmeden önce stop loss'unuzu bilin</li>
+            <li>Uygun pozisyon boyutu hesaplayın</li>
+            <li>Kâr hedefinizi tanımlayın</li>
+            <li>Disiplinle uygulayın</li>
+            <li>Duygusuz yönetin</li>
+            <li>Kaydedin ve öğrenin</li>
+          </ol>
+          <p>Bu işlemin kazanıp kaybetmesi, süreci takip edip etmediğinizden daha az önemlidir. Profesyoneller kendilerini bireysel işlemlerle yargılamazlar - süreç uygulamasıyla yargılarlar.</p>
+          <p>Bu alışkanlığı şimdi başlatın. İlk işleminiz, takip eden her işlemin tonunu belirler.</p>
+          <p>İlerledikçe, araçlar bu süreci sistemleştirmeye yardımcı olabilir. Confluence skorlaması birden fazla faktörün ne zaman uyuştuğunu gösterir, güveni artırır. Döngü analizi güce mi zayıflığa mı aldığınızı ortaya koyar. Risk hesaplayıcıları pozisyon boyutlandırmasının her zaman doğru olmasını sağlar. Süreç otomatik hale gelir - ve avantajınız bileşik olarak artar.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../../order-types-explained/tr/" class="related-card">
+                <span class="related-category">Başlangıç</span>
+                <h4>Emir Türleri: Piyasa, Limit ve Stop Emirleri</h4>
+              </a>
+              <a href="../../risk-reward-ratio/tr/" class="related-card">
+                <span class="related-category">Risk</span>
+                <h4>Risk-Kazanç Oranı</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../order-types-explained/tr/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Önceki</span>
+              <span class="article-nav-title">Emir Türleri</span>
+            </a>
+            <a href="../../drawdown-management/tr/" class="article-nav-link next">
+              <span class="article-nav-label">Sonraki <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">Düşüş Yönetimi</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Signal Pilot, yerleşik confluence skorlamasıyla net sinyaller sağlar - böylece ilk işlemleriniz profesyonel düzey bağlama sahip olur. Her girişten önce döngü fazını, hacim rejimini ve çoklu zaman dilimi hizalamasını bilin. Tahminle değil, yapıyla başlayın.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Bağlamla başla →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı çık"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open')})}
+  </script>
+</body>
+</html>
