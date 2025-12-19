@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة الثلاثة التي يجب طرحها قبل كل صفقة - Signal Pilot Blog</title>
+  <meta name="description" content="مؤشرك يعطي إشارة. إصبعك يحوم فوق زر الشراء. توقف. ثلاثة أسئلة تحتاج إجابات أولاً.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">التعليم</a><a href="/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="ترجمة">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown active" id="langDropdown">
+                <button class="lang-toggle" aria-label="اختر اللغة">
+                  <span class="flag">🇸🇦</span>
+                  <span class="lang-name">AR</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="./"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="مسار التنقل">
+            <a href="/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=practical">عملي</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">مقال</span>
+          </nav>
+          <span class="article-category">عملي</span>
+          <h1 class="article-title">الأسئلة الثلاثة التي يجب طرحها قبل كل صفقة</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 دقائق للقراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="مشاركة على تويتر">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="مشاركة على لينكدإن">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تصور الأسئلة الثلاثة قبل التداول" data-ai-prompt="Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.">
+        <figcaption class="ai-prompt">Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>مؤشرك يعطي إشارة. إصبعك يحوم فوق زر الشراء. تشعر بالثقة.</p>
+          <p>توقف.</p>
+          <p>قبل أي صفقة، ثلاثة أسئلة تحتاج إجابات. تخطيها، وأنت تقامر. أجب عليها بصدق، وستتجنب نصف الخسائر التي تدمر حسابات المتداولين الأفراد.</p>
+
+          <hr>
+
+          <h2>السؤال الأول: ما هي نقطة إبطال صفقتي؟</h2>
+          <p>بمعنى آخر: عند أي سعر أكون مخطئاً بشكل واضح؟</p>
+          <p>هذا ليس "أين سأضع وقف الخسارة؟" هذا هو التنفيذ الميكانيكي. السؤال أعمق: ما الذي يجب أن يحدث لتكون فرضية هذه الصفقة خاطئة؟</p>
+          <p>إذا كنت تشتري لأنك ترى ارتداداً من الدعم، فإن إبطالك هو فشل ذلك الدعم. إذا أغلق السعر تحت ذلك المستوى، فرضيتك خاطئة.</p>
+          <p>نقطة الإبطال يجب أن تكون:</p>
+          <ul>
+            <li><strong>هيكلية، وليست عشوائية.</strong> "2% تحت الدخول" ليست إبطالاً. "تحت نطاق التجميع" هي إبطال.</li>
+            <li><strong>واضحة وموضوعية.</strong> لا أحكام شخصية عندما تكون في الصفقة وعاطفي.</li>
+            <li><strong>محترمة بدون استثناء.</strong> إذا تم الوصول إليها، تخرج. نقطة.</li>
+          </ul>
+          <p>المتداولون الذين لا يستطيعون صياغة نقطة إبطالهم ليس لديهم فرضية. لديهم أمل.</p>
+
+          <hr>
+
+          <h2>السؤال الثاني: ما هي مكافأتي إذا كنت على صواب؟</h2>
+          <p>بمعنى آخر: أين الهدف المنطقي، وهل تستحق هذه الصفقة؟</p>
+          <p>نقطة الإبطال تخبرك كم تخاطر. الهدف يخبرك كم تحاول أن تكسب. النسبة تحدد إذا كانت الصفقة منطقية.</p>
+          <p>هدفك يجب أن يكون هيكلياً أيضاً: مستوى المقاومة التالي للشراء، الدعم التالي للبيع، القمة/القاع السابقة التي من المحتمل أن تجذب السعر.</p>
+          <p>صفقة 1:1 تحتاج معدل ربح 50% للتعادل. صفقة 1:2 تحتاج فقط 34%.</p>
+          <p>معظم المتداولين الأفراد يأخذون صفقات بنسبة مخاطرة/مكافأة سيئة. يخاطرون بدولار واحد ليكسبوا 0.50 دولار لأن الإعداد "يبدو جيداً". حتى مع معدل ربح 60%، هذه استراتيجية خاسرة.</p>
+          <p>قبل الدخول، اعرف الأرقام. إذا لم تكن نسبة المخاطرة/المكافأة منطقية، الصفقة لا تحدث.</p>
+
+          <hr>
+
+          <h2>السؤال الثالث: لماذا الآن؟</h2>
+          <p>بمعنى آخر: ما الذي يجعل هذا الدخول أفضل من الانتظار؟</p>
+          <p>هذا السؤال يلتقط الصفقات الاندفاعية.</p>
+          <p>"الإعداد يبدو جيداً" ليس سبباً للآن. الإعدادات يمكن أن تبدو جيدة لساعات. لماذا تضغط على الزر في هذه اللحظة بالذات؟</p>
+          <p><strong>إجابات صالحة لـ "لماذا الآن":</strong></p>
+          <ul>
+            <li>السعر وصل للتو إلى مستوى دخولي المحدد مسبقاً</li>
+            <li>شمعة التأكيد أغلقت للتو</li>
+            <li>الإشارة التي كنت أنتظرها تفعلت للتو</li>
+            <li>المخاطرة أصبحت قابلة للتحديد الآن (تشكل هيكل للتو)</li>
+          </ul>
+          <p><strong>إجابات غير صالحة لـ "لماذا الآن":</strong></p>
+          <ul>
+            <li>يتحرك بدوني</li>
+            <li>أشعر أنه سيرتفع</li>
+            <li>أنا أشعر بالملل</li>
+            <li>أحتاج لتعويض خسارة الأمس</li>
+          </ul>
+          <p>سؤال "لماذا الآن" يلتقط 80% من صفقات الانتقام، صفقات FOMO، وصفقات الملل.</p>
+
+          <hr>
+
+          <h2>طقس ما قبل الصفقة</h2>
+          <p>اجعل هذه الأسئلة الثلاثة طقساً. قبل كل صفقة، أجب عليها بصوت عالٍ أو اكتبها.</p>
+          <p>"إبطالي هو قاع نطاق التجميع هذا، 142.50 دولار. إذا أغلق تحته، أنا مخطئ."</p>
+          <p>"هدفي هو القمة السابقة عند 168 دولار، مما يعطيني نسبة مكافأة إلى مخاطرة 3:1."</p>
+          <p>"أدخل الآن لأن الـ spring اكتمل للتو وشمعة التأكيد أغلقت فوق النطاق."</p>
+          <p>هذا يستغرق 30 ثانية. يمنع آلاف الدولارات من الصفقات السيئة.</p>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>ثلاثة أسئلة. كل صفقة. بدون استثناءات.</p>
+          <ol>
+            <li>ما هي نقطة إبطال صفقتي؟</li>
+            <li>ما هي مكافأتي إذا كنت على صواب؟</li>
+            <li>لماذا الآن؟</li>
+          </ol>
+          <p>لا تستطيع الإجابة على الثلاثة؟ فكر في تمرير الصفقة. الانضباط ليس طبيعياً. ابنيه على أي حال. حسابك يعتمد عليه.</p>
+          <p>البيانات الموضوعية تجعل هذه الأسئلة أسهل للإجابة. مرحلة الدورة تخبرك أين من المحتمل أن تكون نقطة الإبطال الهيكلية. المستويات القائمة على الحجم مثل POC و VAL توفر أهدافاً منطقية. تقييم التلاقي يشير إلى ما إذا كانت الظروف تدعم الدخول الآن أو الانتظار. عندما تكون البيانات واضحة، الأسئلة الثلاثة تجيب على نفسها عملياً.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../../building-a-pre-trade-checklist/ar/" class="related-card">
+                <span class="related-category">عملي</span>
+                <h4>بناء قائمة تحقق ما قبل الصفقة</h4>
+              </a>
+              <a href="../../why-you-break-trading-rules/ar/" class="related-card">
+                <span class="related-category">علم النفس</span>
+                <h4>لماذا تستمر في كسر قواعد التداول الخاصة بك</h4>
+              </a>
+              <a href="../../stop-loss-placement/ar/" class="related-card">
+                <span class="related-category">عملي</span>
+                <h4>وضع وقف الخسارة: أين ولماذا</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../the-only-pattern-that-repeats/ar/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                السابق
+              </span>
+              <span class="article-nav-title">النمط الوحيد الذي يتكرر فعلاً في الأسواق</span>
+            </a>
+            <a href="../../position-sizing-101/ar/" class="article-nav-link next">
+              <span class="article-nav-label">
+                التالي
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">حجم المركز 101: الرياضيات التي تبقيك في اللعبة</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch يوفر سياق دورة واضح حتى تتمكن من الإجابة على هذه الأسئلة بهيكل، وليس بالتخمين. أين نحن في الدورة؟ ما هو الهدف المنطقي؟ هل الآن هو الوقت المناسب؟</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">احصل على الوضوح ←</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">→ العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    // Language Selector
+    const langDropdown = document.getElementById('langDropdown');
+    const langToggle = langDropdown?.querySelector('.lang-toggle');
+
+    if (langToggle) {
+      langToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (langDropdown && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

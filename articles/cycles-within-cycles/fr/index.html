@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycles dans les Cycles : La Nature Fractale des Marchés - Signal Pilot Blog</title>
+  <meta name="description" content="Les marchés évoluent en cycles sur chaque unité de temps simultanément. Comprendre comment les cycles s'imbriquent les uns dans les autres est la clé pour lire la structure du marché.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Éducation</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduire">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/" class="active"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer de thème">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Essai Gratuit</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=cycles">Cycles de Marché</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Article</span>
+          </nav>
+          <span class="article-category">Cycles de Marché</span>
+          <h1 class="article-title">Cycles dans les Cycles : La Nature Fractale des Marchés</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lecture</span>
+            <span>Équipe Signal Pilot</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Partager :</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Partager sur Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Partager sur LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copier le lien">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Visualisation des cycles dans les cycles">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Zoomez sur n'importe quel graphique et vous verrez les mêmes patterns se répéter. Une tendance haussière journalière est composée de tendances haussières et baissières horaires. Ces mouvements horaires sont composés de swings de 15 minutes. Et ainsi de suite.</p>
+          <p>Les marchés sont fractals - auto-similaires à chaque échelle. Comprendre comment les cycles s'imbriquent les uns dans les autres transforme la façon dont vous lisez l'action des prix.</p>
+
+          <hr>
+
+          <h2>La Structure d'Imbrication</h2>
+          <p>Imaginez les cycles comme des vagues dans l'océan :</p>
+          <ul>
+            <li><strong>La houle :</strong> Le grand cycle mensuel/hebdomadaire - la direction dominante</li>
+            <li><strong>Les vagues :</strong> Les cycles journaliers surfant sur la houle - les oscillations à moyen terme</li>
+            <li><strong>Les ondulations :</strong> Les cycles intraday surfant sur les vagues - les fluctuations à court terme</li>
+          </ul>
+          <p>Chaque niveau contient les niveaux en dessous. Une tendance haussière hebdomadaire contient des cycles journaliers qui montent et descendent. Ces cycles journaliers contiennent des cycles horaires. Ce sont des cycles jusqu'en bas.</p>
+          <p>L'insight clé : les cycles des unités de temps inférieures se déplacent dans la direction des cycles des unités de temps supérieures avec plus de facilité. Une baisse journalière pendant une tendance haussière hebdomadaire est un pullback - elle tend à être peu profonde et courte. Une baisse journalière pendant une tendance baissière hebdomadaire est le mouvement principal - elle tend à être profonde et étendue.</p>
+
+          <hr>
+
+          <h2>Alignement des Cycles</h2>
+          <p>Quand les cycles sur plusieurs niveaux s'alignent, les mouvements deviennent puissants :</p>
+          <p><strong>Alignement haussier :</strong> Les cycles hebdomadaire, journalier et horaire sont tous en phase haussière. Le prix monte facilement, les pullbacks sont mineurs.</p>
+          <p><strong>Alignement baissier :</strong> Les cycles hebdomadaire, journalier et horaire sont tous en phase baissière. Le prix baisse facilement, les rallyes sont mineurs.</p>
+          <p><strong>Conflit :</strong> Les cycles des unités de temps supérieures et inférieures pointent dans des directions opposées. Le prix hache, les signaux échouent, la confusion règne.</p>
+          <p>Les meilleurs trades se produisent pendant l'alignement. Les pires trades se produisent pendant les conflits. Savoir cela seul améliore dramatiquement la sélection des trades.</p>
+
+          <hr>
+
+          <h2>Lire la Hiérarchie</h2>
+          <p>Voici un cadre pratique pour lire les cycles imbriqués :</p>
+          <p><strong>Étape 1 : Identifiez le cycle dominant.</strong> Quelle est la plus grande unité de temps du cycle que vous tradez ? Pour les swing traders, peut-être hebdomadaire. Pour les day traders, peut-être journalier. Cela établit votre biais directionnel.</p>
+          <p><strong>Étape 2 : Identifiez le cycle de trading.</strong> Un niveau en dessous de votre cycle dominant. C'est là que vous trouvez les setups. Pour les swing traders tradant depuis l'hebdomadaire, le journalier est le cycle de trading.</p>
+          <p><strong>Étape 3 : Identifiez le cycle de déclenchement.</strong> Un niveau en dessous du cycle de trading. C'est là que vous timez les entrées. Pour le swing trader, l'horaire pourrait être le déclencheur.</p>
+          <p><strong>Application :</strong> Ne tradez que lorsque le cycle de trading recule dans la tendance du cycle dominant. Entrez quand le cycle de déclenchement tourne dans la direction du cycle dominant.</p>
+
+          <hr>
+
+          <h2>Le Pouvoir de la Confluence</h2>
+          <p>Quand les creux de cycle s'alignent à travers les unités de temps, quelque chose de puissant se produit.</p>
+          <p>Imaginez : le cycle hebdomadaire vient de faire un creux (accumulation terminée). Le cycle journalier fait simultanément un creux. Le graphique 4 heures montre le premier retournement haussier.</p>
+          <p>C'est la confluence de cycles multi-temporelle. Le rallye qui suit tend à être :</p>
+          <ul>
+            <li>Plus fort que les retournements sur une seule unité de temps</li>
+            <li>Plus soutenu (plusieurs niveaux de cycle le soutiennent)</li>
+            <li>À plus faible risque (points d'invalidation clairs)</li>
+          </ul>
+          <p>Ces points de confluence ne se produisent pas tous les jours. Quand ils se produisent, ils valent la peine d'être tradés avec conviction.</p>
+
+          <hr>
+
+          <h2>Dominance des Cycles</h2>
+          <p>Tous les cycles ne sont pas égaux. Les cycles des unités de temps supérieures dominent les inférieures :</p>
+          <p><strong>Mensuel > Hebdomadaire > Journalier > 4-Heures > Horaire > 15-min</strong></p>
+          <p>Cette hiérarchie signifie :</p>
+          <p>Si l'hebdomadaire est haussier et le journalier est baissier, attendez-vous à ce que la baisse journalière soit limitée. La tendance haussière hebdomadaire finira par se réaffirmer.</p>
+          <p>Si l'hebdomadaire est baissier et le journalier est haussier, attendez-vous à ce que le rallye journalier soit limité. La tendance baissière hebdomadaire finira par se réaffirmer.</p>
+          <p>Lutter contre un cycle d'unité de temps supérieure, c'est comme nager contre le courant. Vous pouvez progresser brièvement, mais vous vous fatiguerez avant lui.</p>
+
+          <hr>
+
+          <h2>Phase dans Phase</h2>
+          <p>C'est là que ça devient intéressant. Chaque phase de cycle contient elle-même des sous-phases :</p>
+          <p><strong>La phase de markup hebdomadaire</strong> pourrait contenir :</p>
+          <ul>
+            <li>Accumulation journalière (début du markup hebdomadaire)</li>
+            <li>Markup journalier (milieu du markup hebdomadaire)</li>
+            <li>Distribution journalière (fin du markup hebdomadaire)</li>
+          </ul>
+          <p>Cela vous dit quelque chose d'important : même dans une tendance haussière, il y a des moments pour acheter (accumulation journalière), des moments pour conserver (markup journalier), et des moments pour être prudent (distribution journalière).</p>
+          <p>Les meilleures entrées viennent quand une unité de temps inférieure est en accumulation/markup précoce tandis que l'unité de temps supérieure est en markup. Vous achetez tôt dans le petit cycle avec le grand cycle dans votre dos.</p>
+
+          <hr>
+
+          <h2>Application Pratique</h2>
+          <p><strong>Trouver des entrées :</strong> Tradez les pullbacks dans les tendances des unités de temps supérieures. Quand la tendance journalière est haussière et le cycle 4 heures recule vers un creux, c'est votre fenêtre d'entrée.</p>
+          <p><strong>Placer les stops :</strong> Placez les stops au creux de cycle précédent de votre unité de temps de trading. Cela donne au trade de l'espace pour fonctionner dans la structure du cycle.</p>
+          <p><strong>Prendre des profits :</strong> Quand votre cycle d'unité de temps de trading mûrit, commencez à prendre des profits. Attendre que l'unité de temps supérieure tourne est souvent trop tard.</p>
+          <p><strong>Éviter le hachage :</strong> Quand les unités de temps supérieures et inférieures sont en conflit, réduisez l'activité. Le marché décide quelle direction prendre. Attendez l'alignement.</p>
+
+          <hr>
+
+          <h2>Signes d'Alerte</h2>
+          <p>Surveillez ces signes que les relations de cycle changent :</p>
+          <p><strong>Unité de temps supérieure qui tourne :</strong> Si votre cycle hebdomadaire retourne tandis que vous tradez des setups haussiers journaliers, attendez-vous à des échecs croissants.</p>
+          <p><strong>Unités de temps inférieures qui échouent :</strong> Si chaque creux de cycle 4 heures continue de casser, le cycle journalier pourrait tourner. Les échecs des unités de temps inférieures précèdent souvent les retournements des unités de temps supérieures.</p>
+          <p><strong>Compression de cycle :</strong> Quand les cycles deviennent plus courts et plus volatils à travers plusieurs unités de temps, un mouvement significatif est probablement en train de se construire.</p>
+
+          <hr>
+
+          <h2>Le Résultat Final</h2>
+          <p>Les marchés sont fractals. Les mêmes patterns de cycle se répètent à chaque unité de temps, avec les plus grands cycles contenant les plus petits.</p>
+          <p>Tradez avec la direction du cycle de l'unité de temps supérieure. Cherchez des entrées quand les cycles des unités de temps inférieures s'alignent avec la direction de l'unité de temps supérieure. Évitez les conflits entre unités de temps.</p>
+          <p>Quand plusieurs cycles d'unités de temps s'alignent aux creux ou aux sommets, vous avez quelque chose de spécial - un setup à haute probabilité avec le poids de plusieurs cycles qui le soutiennent.</p>
+          <p>Les systèmes de score de confluence quantifient cet alignement. Au lieu de vérifier manuellement la phase du cycle sur trois unités de temps, un score de confluence vous dit en un coup d'œil si plusieurs systèmes sont d'accord. La confirmation de régime HTF montre si la structure journalière ou hebdomadaire soutient votre unité de temps d'entrée. Les bandes VWAP multi-périodes révèlent où se situe la valeur à travers différents horizons. L'imbrication devient visible plutôt que de nécessiter un assemblage manuel.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Articles Connexes</h3>
+            <div class="related-grid">
+              <a href="../multi-timeframe-confirmation/" class="related-card">
+                <span class="related-category">Indicateurs</span>
+                <h4>Confirmation Multi-Temporelle : Quand l'Utiliser</h4>
+              </a>
+              <a href="../identifying-cycle-length/" class="related-card">
+                <span class="related-category">Cycles</span>
+                <h4>Identifier la Durée du Cycle</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">Cycles</span>
+                <h4>Le Seul Pattern Qui Se Répète Vraiment</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../the-boredom-trap/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Précédent
+              </span>
+              <span class="article-nav-title">Le Piège de l'Ennui : Pourquoi Ne Rien Faire Est Souvent le Bon Trade</span>
+            </a>
+            <a href="../when-to-size-up/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Suivant
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Quand Augmenter la Taille : Adapter Votre Taille de Position de Manière Responsable</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch détecte la phase du cycle sur n'importe quelle unité de temps, facilitant la visualisation de l'alignement et des conflits des cycles - pour que vous puissiez vous concentrer sur les setups à haute probabilité.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Voir l'alignement des cycles →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Retour au Blog</a><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Centre de Formation</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+  </script>
+</body>
+</html>

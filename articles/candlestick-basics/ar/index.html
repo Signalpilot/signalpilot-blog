@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أساسيات الشموع اليابانية: قراءة حركة السعر باحتراف - مدونة Signal Pilot</title>
+  <meta name="description" content="الشموع اليابانية هي لغة السعر. إليك كيفية قراءتها - وأي الأنماط مهمة فعلاً للتداول.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">التعليم</a><a href="/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="ترجمة">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/" class="active"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرّب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="مسار التنقل">
+            <a href="/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=beginner foundations">أساسيات المبتدئين</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">المقال</span>
+          </nav>
+          <span class="article-category">أساسيات المبتدئين</span>
+          <h1 class="article-title">أساسيات الشموع اليابانية: قراءة حركة السعر باحتراف</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق للقراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="مشاركة على تويتر">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="مشاركة على لينكد إن">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تصوير أساسيات الشموع اليابانية" data-ai-prompt="Dark themed artistic rendering of Japanese candlesticks, with one large detailed candlestick in the center showing anatomy - wick, body, shadows. Surrounding smaller candles form a pattern. Glowing green and red elements, professional trading aesthetic with deep navy background.">
+        <figcaption class="ai-prompt">Dark themed artistic rendering of Japanese candlesticks, with one large detailed candlestick in the center showing anatomy - wick, body, shadows. Surrounding smaller candles form a pattern. Glowing green and red elements, professional trading aesthetic with deep navy background.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>افتح رسماً بيانياً. تلك الأعمدة الملونة ليست مجرد زخرفة - إنها تروي لك قصة عن كل معركة بين المشترين والبائعين.</p>
+          <p>فهم الشموع اليابانية هو الخطوة الأولى لقراءة أي رسم بياني. إليك كل ما تحتاج معرفته - ولا شيء لا تحتاجه.</p>
+
+          <hr>
+
+          <h2>تشريح الشمعة</h2>
+          <p>كل شمعة تمثل فترة زمنية واحدة - دقيقة واحدة، ساعة واحدة، يوم واحد، أياً كان ما ضبطت عليه الرسم البياني. تُظهر أربع معلومات:</p>
+          <ul>
+            <li><strong>الافتتاح:</strong> حيث بدأ السعر عند بداية الفترة</li>
+            <li><strong>الأعلى:</strong> أعلى سعر تم الوصول إليه خلال الفترة</li>
+            <li><strong>الأدنى:</strong> أدنى سعر تم الوصول إليه خلال الفترة</li>
+            <li><strong>الإغلاق:</strong> حيث انتهى السعر عند إغلاق الفترة</li>
+          </ul>
+          <p>الجزء السميك يُسمى <strong>الجسم</strong>. يُظهر النطاق بين الافتتاح والإغلاق.</p>
+          <p>الخطوط الرفيعة فوق وتحت تُسمى <strong>الفتائل</strong> (أو الظلال). تُظهر النطاق الكامل من الأعلى إلى الأدنى.</p>
+          <p><strong>الشموع الخضراء/البيضاء:</strong> الإغلاق أعلى من الافتتاح. المشترون فازوا في هذه الفترة.</p>
+          <p><strong>الشموع الحمراء/السوداء:</strong> الإغلاق أقل من الافتتاح. البائعون فازوا في هذه الفترة.</p>
+
+          <hr>
+
+          <h2>ما يخبرك به الجسم</h2>
+          <p>الجسم يُظهر القناعة. جسم كبير يعني حركة قوية في اتجاه واحد. جسم صغير يعني التردد أو التوازن بين المشترين والبائعين.</p>
+          <p><strong>جسم أخضر كبير:</strong> ضغط شراء قوي. المشترون سيطروا على الفترة بأكملها. صعودي.</p>
+          <p><strong>جسم أحمر كبير:</strong> ضغط بيع قوي. البائعون سيطروا على الفترة بأكملها. هبوطي.</p>
+          <p><strong>جسم صغير (أي لون):</strong> لم يهيمن أي طرف. السوق مترددة أو متوازنة.</p>
+          <p><strong>الدوجي (بدون جسم تقريباً):</strong> الافتتاح والإغلاق متطابقان تقريباً. أقصى درجات التردد. غالباً يظهر عند نقاط التحول.</p>
+
+          <hr>
+
+          <h2>ما تخبرك به الفتائل</h2>
+          <p>الفتائل تُظهر الرفض. عندما يتحرك السعر إلى مكان ما ثم يُدفع للخلف، ترى فتيلاً. كلما طالت الفتيلة، كان الرفض أقوى.</p>
+          <p><strong>فتيلة علوية طويلة:</strong> السعر حاول الصعود لكن دُفع للأسفل. البائعون نشطون عند الأسعار الأعلى. إشارة هبوطية.</p>
+          <p><strong>فتيلة سفلية طويلة:</strong> السعر حاول الهبوط لكن دُفع للأعلى. المشترون نشطون عند الأسعار الأدنى. إشارة صعودية.</p>
+          <p><strong>فتائل على كلا الجانبين:</strong> كلا المشترين والبائعين كانوا نشطين. تردد أو تقلب.</p>
+          <p><strong>بدون فتائل:</strong> الافتتاح/الإغلاق كانا الأسعار القصوى. قناعة قوية جداً في اتجاه الجسم.</p>
+
+          <hr>
+
+          <h2>أنماط الشمعة الواحدة الرئيسية</h2>
+          <p>انسَ حفظ ٥٠ اسماً للأنماط. هذه هي الأنماط التي تهم فعلاً:</p>
+          <p><strong>المطرقة / الرجل المشنوق:</strong> جسم صغير في الأعلى، فتيلة سفلية طويلة. تبدو كمطرقة. في أسفل الاتجاه الهبوطي، هي "مطرقة" وتشير إلى انعكاس صعودي. في أعلى الاتجاه الصعودي، هي "رجل مشنوق" وتشير إلى انعكاس هبوطي. نفس الشكل، السياق يحدد المعنى.</p>
+          <p><strong>المطرقة المقلوبة / نجمة الرماية:</strong> جسم صغير في الأسفل، فتيلة علوية طويلة. في أسفل الاتجاه الهبوطي، هي "مطرقة مقلوبة" (انعكاس صعودي محتمل). في أعلى الاتجاه الصعودي، هي "نجمة رماية" (انعكاس هبوطي محتمل).</p>
+          <p><strong>الدوجي:</strong> جسم صغير جداً أو بدون جسم. تردد. ذو معنى بعد اتجاه قوي - يشير إلى تلاشي الزخم.</p>
+          <p><strong>ماروبوزو:</strong> كله جسم، بدون فتائل. أقصى قناعة. ماروبوزو أخضر بعد انخفاض صعودي جداً. ماروبوزو أحمر بعد ارتفاع هبوطي جداً.</p>
+
+          <hr>
+
+          <h2>أنماط الشموع المتعددة الرئيسية</h2>
+          <p>بعض الأنماط تتطلب شمعتين أو ثلاث للتعرف عليها:</p>
+          <p><strong>الابتلاع:</strong> شمعة كبيرة تغطي بالكامل (تبتلع) جسم الشمعة السابقة. ابتلاع صعودي: شمعة خضراء تبتلع الشمعة الحمراء السابقة. ابتلاع هبوطي: شمعة حمراء تبتلع الشمعة الخضراء السابقة. إشارة انعكاس قوية.</p>
+          <p><strong>البار الداخلي:</strong> شمعة نطاقها الكامل (من الأعلى إلى الأدنى) داخل نطاق الشمعة السابقة. يمثل التماسك. اتجاه الاختراق غالباً يستمر.</p>
+          <p><strong>نجمة الصباح / نجمة المساء:</strong> نمط من ثلاث شموع. شمعة كبيرة، شمعة صغيرة ("النجمة")، شمعة كبيرة في الاتجاه المعاكس. نجمة الصباح (في القيعان) ونجمة المساء (في القمم) هي أنماط انعكاس.</p>
+
+          <hr>
+
+          <h2>السياق هو كل شيء</h2>
+          <p>إليك ما تفوته معظم دورات الشموع: نفس النمط يعني أشياء مختلفة في سياقات مختلفة.</p>
+          <p>مطرقة في أسفل اتجاه هبوطي طويل، عند مستوى دعم رئيسي، مع حجم تداول مرتفع - هذا ذو معنى.</p>
+          <p>مطرقة في منتصف نطاق، عند لا مستوى معين، مع حجم تداول متوسط - هذا ضوضاء.</p>
+          <p>قبل التداول على أي نمط شمعة، اسأل:</p>
+          <ul>
+            <li>أين هذا في الاتجاه؟ (بداية، منتصف، نهاية؟)</li>
+            <li>هل هو عند مستوى سعر مهم؟ (دعم، مقاومة، متوسط متحرك؟)</li>
+            <li>هل الحجم يؤكده؟ (حجم مرتفع على شموع الانعكاس أفضل)</li>
+            <li>ما هو سياق الإطار الزمني الأعلى؟ (مطرقة على ٥ دقائق خلال اتجاه يومي هبوطي تعني القليل)</li>
+          </ul>
+
+          <hr>
+
+          <h2>الأخطاء الشائعة</h2>
+          <p><strong>التداول على كل نمط:</strong> معظم أنماط الشموع ضوضاء. تداول فقط على الأنماط عند مستويات مهمة مع سياق مؤكد.</p>
+          <p><strong>تجاهل الإغلاق:</strong> النمط لا يُؤكد حتى تغلق الشمعة. المطرقة تبدو كمطرقة فقط عند الإغلاق - خلال الفترة، يمكن أن تتحول إلى أي شيء.</p>
+          <p><strong>نسيان الاتجاه:</strong> أنماط الانعكاس تحتاج اتجاهاً لتعكسه. "ابتلاع صعودي" في اتجاه صعودي ليس انعكاساً - إنه مجرد استمرار.</p>
+          <p><strong>عدم انتظار المتابعة:</strong> أفضل المتداولين ينتظرون التأكيد. بعد المطرقة، يريدون رؤية الشمعة التالية تغلق خضراء قبل الدخول.</p>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>الشموع اليابانية هي لغة. الجسم يخبرك من فاز المعركة. الفتائل تخبرك من حاول وفشل. السياق يخبرك ما إذا كان أي من ذلك مهماً.</p>
+          <p>تعلم الأساسيات هنا، ثم ركز على السياق. نمط بسيط في المكان الصحيح يساوي أكثر من نمط معقد في المكان الخطأ.</p>
+          <p>هذا السياق يمكن أن يُنظَّم. معرفة مرحلة الدورة الحالية تخبرك ما إذا كان نمط الانعكاس سيصمد أم يفشل. كشف نظام الحجم يكشف ما إذا كانت المؤسسات تتراكم أو توزع. مطرقة في قاع دورة خلال التراكم تعني شيئاً مختلفاً تماماً عن نفس المطرقة في منتصف اتجاه خلال التوزيع.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../support-and-resistance-explained/" class="related-card">
+                <span class="related-category">مبتدئ</span>
+                <h4>شرح الدعم والمقاومة</h4>
+              </a>
+              <a href="../the-only-pattern-that-repeats/" class="related-card">
+                <span class="related-category">الدورات</span>
+                <h4>النمط الوحيد الذي يتكرر فعلاً</h4>
+              </a>
+              <a href="../what-is-a-trading-edge/" class="related-card">
+                <span class="related-category">مبتدئ</span>
+                <h4>ما هي ميزة التداول؟</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../rules-based-vs-discretionary/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                السابق
+              </span>
+              <span class="article-nav-title">التداول القائم على القواعد مقابل التقديري: أيهما يعمل فعلاً؟</span>
+            </a>
+            <a href="../the-repainting-problem/" class="article-nav-link next">
+              <span class="article-nav-label">
+                التالي
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">مشكلة إعادة الرسم: كيف تغش معظم مؤشرات TradingView</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>مطرقة في قاع دورة خلال التراكم (تُتبع بواسطة Pentarch و Volume Oracle) تعني شيئاً مختلفاً تماماً عن مطرقة في منتصف اتجاه. السياق يحول ضوضاء الشموع إلى هيكل قابل للتنفيذ.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">شاهد الشموع في سياقها ←</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Her İşlemden Önce Sorulması Gereken 3 Soru - Signal Pilot Blog</title>
+  <meta name="description" content="Göstergeniz sinyal veriyor. Parmağınız al butonunun üzerinde geziniyor. Durun. Önce üç sorunun cevaplanması gerekiyor.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown active" id="langDropdown">
+                <button class="lang-toggle" aria-label="Dil seçin">
+                  <span class="flag">🇹🇷</span>
+                  <span class="lang-name">TR</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="./"><span class="flag">🇹🇷</span> Türkçe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=practical">Pratik</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">Pratik</span>
+          <h1 class="article-title">Her İşlemden Önce Sorulması Gereken 3 Soru</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Paylaş:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitter'da paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedIn'de paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Bağlantıyı kopyala">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="İşlem öncesi üç soru görselleştirmesi" data-ai-prompt="Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.">
+        <figcaption class="ai-prompt">Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Göstergeniz sinyal veriyor. Parmağınız al butonunun üzerinde geziniyor. Kendinizi güvenli hissediyorsunuz.</p>
+          <p>Durun.</p>
+          <p>Herhangi bir işlemden önce, üç sorunun cevapları gerekiyor. Bunları atlarsanız, kumar oynuyorsunuz. Dürüstçe cevaplarsanız, bireysel trader hesaplarını patlatan kayıpların yarısından kaçınırsınız.</p>
+
+          <hr>
+
+          <h2>Soru 1: Geçersizleştirme Noktam Nerede?</h2>
+          <p>Yani: Hangi fiyatta kanıtlanabilir şekilde yanılıyorum?</p>
+          <p>Bu "stop loss'umu nereye koyacağım?" değil. O mekanik uygulama. Soru daha derin: Bu işlem tezimin yanlış olması için ne olması gerekir?</p>
+          <p>Destek sıçraması gördüğünüz için alıyorsanız, geçersizleştirmeniz o desteğin başarısız olmasıdır. Fiyat o seviyenin altında kapanırsa, teziniz yanlıştır.</p>
+          <p>Geçersizleştirme noktası şunlar olmalı:</p>
+          <ul>
+            <li><strong>Yapısal, keyfi değil.</strong> "Girişin %2 altı" bir geçersizleştirme değildir. "Birikim bölgesinin altı" bir geçersizleştirmedir.</li>
+            <li><strong>Net ve objektif.</strong> İşlemde olduğunuzda ve duygusal olduğunuzda yargı çağrısı yok.</li>
+            <li><strong>İstisnasız saygı gösterilmeli.</strong> Tutarsa, çıkarsınız. Nokta.</li>
+          </ul>
+          <p>Geçersizleştirme noktalarını ifade edemeyen trader'ların bir tezi yoktur. Bir umutları vardır.</p>
+
+          <hr>
+
+          <h2>Soru 2: Haklıysam Ödülüm Ne?</h2>
+          <p>Yani: Mantıksal hedef nerede ve bu işlem almaya değer mi?</p>
+          <p>Geçersizleştirme noktası ne kadar risk aldığınızı söyler. Hedef ne kadar kazanmaya çalıştığınızı söyler. Oran, işlemin mantıklı olup olmadığını belirler.</p>
+          <p>Hedefiniz de yapısal olmalı: long'lar için sonraki direnç seviyesi, short'lar için sonraki destek, fiyatı çekme olasılığı olan önceki yüksek/düşük.</p>
+          <p>1:1 işlem başa baş için %50 kazanç oranı gerektirir. 1:2 işlem sadece %34 gerektirir.</p>
+          <p>Çoğu bireysel trader korkunç risk-ödül oranlarıyla işlem yapar. Setup "iyi göründüğü" için $1 riskle $0.50 kazanmaya çalışırlar. %60 kazanç oranıyla bile, bu kaybeden bir stratejidir.</p>
+          <p>Girmeden önce, rakamları bilin. Risk-ödül mantıklı değilse, işlem yapılmaz.</p>
+
+          <hr>
+
+          <h2>Soru 3: Neden Şimdi?</h2>
+          <p>Yani: Bu girişi beklemekten daha iyi yapan ne?</p>
+          <p>Bu soru dürtüsel işlemleri yakalar.</p>
+          <p>"Setup iyi görünüyor" şimdi için bir sebep değil. Setup'lar saatlerce iyi görünebilir. Bu belirli anda neden butona tıklıyorsunuz?</p>
+          <p><strong>Geçerli "neden şimdi" cevapları:</strong></p>
+          <ul>
+            <li>Fiyat az önce önceden belirlediğim giriş seviyeme ulaştı</li>
+            <li>Onay mumu az önce kapandı</li>
+            <li>Beklediğim sinyal az önce tetiklendi</li>
+            <li>Risk artık tanımlanabilir (yapı az önce oluştu)</li>
+          </ul>
+          <p><strong>Geçersiz "neden şimdi" cevapları:</strong></p>
+          <ul>
+            <li>Bensiz hareket ediyor</li>
+            <li>Gideceğini hissediyorum</li>
+            <li>Canım sıkılıyor</li>
+            <li>Dünkü kaybı telafi etmem gerekiyor</li>
+          </ul>
+          <p>"Neden şimdi" sorusu intikam işlemlerinin, FOMO işlemlerinin ve can sıkıntısı işlemlerinin %80'ini yakalar.</p>
+
+          <hr>
+
+          <h2>İşlem Öncesi Ritüel</h2>
+          <p>Bu üç soruyu bir ritüel haline getirin. Her işlemden önce, yüksek sesle cevaplayın veya yazın.</p>
+          <p>"Geçersizleştirmem bu birikim bölgesinin dibi, $142.50. Altında kapanırsa, yanılıyorum."</p>
+          <p>"Hedefim önceki zirve $168'de, bu bana 3:1 ödül-risk oranı veriyor."</p>
+          <p>"Şimdi giriyorum çünkü spring az önce tamamlandı ve onay mumu bölgenin üzerinde kapandı."</p>
+          <p>Bu 30 saniye sürer. Binlerce dolarlık kötü işlemi önler.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>Üç soru. Her işlem. İstisna yok.</p>
+          <ol>
+            <li>Geçersizleştirme noktam nerede?</li>
+            <li>Haklıysam ödülüm ne?</li>
+            <li>Neden şimdi?</li>
+          </ol>
+          <p>Üçüne de cevap veremez misiniz? İşlemi geçmeyi düşünün. Disiplin doğal değildir. Yine de inşa edin. Hesabınız buna bağlı.</p>
+          <p>Objektif veriler bu soruları cevaplamayı kolaylaştırır. Döngü aşaması yapısal geçersizleştirmenin muhtemelen nerede olduğunu söyler. POC ve VAL gibi hacim tabanlı seviyeler mantıksal hedefler sağlar. Confluance puanlaması koşulların şimdi girmeyi mi yoksa beklemeyi mi desteklediğini gösterir. Veriler net olduğunda, üç soru pratik olarak kendilerini cevaplar.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../../building-a-pre-trade-checklist/tr/" class="related-card">
+                <span class="related-category">Pratik</span>
+                <h4>İşlem Öncesi Kontrol Listesi Oluşturma</h4>
+              </a>
+              <a href="../../why-you-break-trading-rules/tr/" class="related-card">
+                <span class="related-category">Psikoloji</span>
+                <h4>Neden Trading Kurallarınızı Kırmaya Devam Ediyorsunuz</h4>
+              </a>
+              <a href="../../stop-loss-placement/tr/" class="related-card">
+                <span class="related-category">Pratik</span>
+                <h4>Stop Loss Yerleştirme: Nerede ve Neden</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../the-only-pattern-that-repeats/tr/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Önceki
+              </span>
+              <span class="article-nav-title">Piyasalarda Gerçekten Tekrarlanan Tek Formasyon</span>
+            </a>
+            <a href="../../position-sizing-101/tr/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Sonraki
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Pozisyon Boyutlandırma 101: Sizi Oyunda Tutan Matematik</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch, bu soruları tahminle değil yapıyla cevaplayabilmeniz için net döngü bağlamı sağlar. Döngüde neredeyiz? Mantıksal hedef ne? Şimdi doğru zaman mı?</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Netlik kazan →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı dön"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    // Language Selector
+    const langDropdown = document.getElementById('langDropdown');
+    const langToggle = langDropdown?.querySelector('.lang-toggle');
+
+    if (langToggle) {
+      langToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (langDropdown && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
