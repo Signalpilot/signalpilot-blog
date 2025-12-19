@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>مدونة Signal Pilot - تعليم التداول ورؤى السوق</title>
+  <meta name="description" content="معرفة تداول متخصصة، تحليل المؤشرات، علم نفس السوق واستراتيجيات عملية. تعلم ما يعمل حقاً في التداول.">
+  <meta name="theme-color" content="#05070d">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+
+  <!-- hreflang tags -->
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/blog.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="مدونة Signal Pilot - تعليم التداول">
+  <meta property="og:description" content="معرفة تداول متخصصة، تحليل المؤشرات، علم نفس السوق واستراتيجيات عملية.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blog.signalpilot.io/ar/">
+  <meta property="og:image" content="https://signalpilot.io/assets/og-image.png">
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-aurora"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+
+        <nav class="nav">
+          <a href="https://signalpilot.io">الرئيسية</a>
+          <a href="https://docs.signalpilot.io">التوثيق</a>
+          <a href="https://education.signalpilot.io">التعليم</a>
+          <a href="/ar/" class="active">المدونة</a>
+        </nav>
+
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="./" class="active"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تغيير السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">تجربة مجانية</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">معرفة التداول التي تعمل حقاً</h1>
+        <p class="hero-subtitle">بدون حشو، بدون ضجيج. فقط تعليم تداول عملي مبني على هيكل السوق وعلم النفس.</p>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="articles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">أحدث المقالات</h2>
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="product">Signal Pilot</button>
+            <button class="filter-btn" data-filter="indicators">المؤشرات</button>
+            <button class="filter-btn" data-filter="psychology">علم النفس</button>
+            <button class="filter-btn" data-filter="cycles">الدورات</button>
+            <button class="filter-btn" data-filter="practical">عملي</button>
+            <button class="filter-btn" data-filter="risk">إدارة المخاطر</button>
+            <button class="filter-btn" data-filter="systems">الأنظمة</button>
+            <button class="filter-btn" data-filter="beginner">مبتدئ</button>
+          </div>
+        </div>
+
+        <div class="articles-grid">
+
+          <a href="../articles/inside-signal-pilot/ar/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">داخل Signal Pilot: كيف تعمل المؤشرات السبعة معاً</h3>
+              <p class="article-card-excerpt">معظم حزم المؤشرات هي خليط عشوائي. مؤشرات Signal Pilot السبعة صُممت كنظام متكامل.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ١٠ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/free-indicators-vs-professional-tools/ar/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">المؤشرات المجانية مقابل الأدوات الاحترافية: متى تقوم بالترقية</h3>
+              <p class="article-card-excerpt">المؤشرات المجانية ساعدتك في البداية. هل تعيقك الآن؟ هكذا تعرف متى تجاوزت الأدوات المجانية.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٩ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-to-trade-cycles-with-pentarch/ar/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">كيفية تداول الدورات مع Pentarch: دليل عملي</h3>
+              <p class="article-card-excerpt">دليل خطوة بخطوة لاستخدام Pentarch في التداول القائم على الدورات. تحديد المراحل، توقيت الدخول والدمج مع الحزمة.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ١١ دقيقة قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-your-indicators-keep-failing/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">لماذا تستمر مؤشراتك في الفشل (وما الذي يعمل حقاً)</h3>
+              <p class="article-card-excerpt">لديك RSI و MACD وبولينجر باندز وربما بعض المتوسطات المتحركة. مخططك يبدو كقوس قزح متفجر. ومع ذلك تستمر في الخسارة.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/psychology-of-getting-stopped-out/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">سيكولوجية ضرب الستوب (ولماذا يستمر في الحدوث)</h3>
+              <p class="article-card-excerpt">تحليلك كان مثالياً. الدخول كان نظيفاً. ثم لامس السعر بالضبط الستوب الخاص بك وانعكس. يبدو شخصياً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-only-pattern-that-repeats/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">النمط الوحيد الذي يتكرر حقاً في الأسواق</h3>
+              <p class="article-card-excerpt">الرأس والكتفين. القمم المزدوجة. لا تعمل بشكل موثوق. لكن هناك نمط واحد يتكرر حقيقة على كل إطار زمني.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/3-questions-before-every-trade/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">الأسئلة الثلاثة قبل كل صفقة</h3>
+              <p class="article-card-excerpt">مؤشرك يعطي إشارة. إصبعك على زر الشراء. توقف. ثلاثة أسئلة تحتاج للإجابة أولاً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٦ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/position-sizing-101/ar/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">إدارة المخاطر</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">حجم المركز ١٠١: الرياضيات التي تبقيك في اللعبة</h3>
+              <p class="article-card-excerpt">معظم المتداولين مهووسون بالدخول. الذين يعيشون مهووسون بحجم المركز.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/rules-based-vs-discretionary/ar/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">أنظمة التداول</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">التداول القائم على القواعد مقابل التقديري: أيهما يعمل؟</h3>
+              <p class="article-card-excerpt">بعض المتداولين يقسمون بالأنظمة الصارمة. آخرون يثقون بحدسهم. هذا ما يهم حقاً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/candlestick-basics/ar/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">الأساسيات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">أساسيات الشموع: قراءة حركة السعر كمحترف</h3>
+              <p class="article-card-excerpt">الشموع هي لغة السعر. هذه هي طريقة قراءتها - وأي الأنماط تهم حقاً للتداول.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-repainting-problem/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">مشكلة إعادة الرسم: كيف تكذب معظم مؤشرات TradingView</h3>
+              <p class="article-card-excerpt">ذلك المؤشر بالباكتست المثالي؟ الذي يصيب كل قمة وقاع؟ إنه يكذب عليك. هذه طريقة اكتشاف الخداع.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-you-break-trading-rules/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">لماذا تستمر في كسر قواعد التداول الخاصة بك</h3>
+              <p class="article-card-excerpt">لديك خطة تداول. إنها مكتوبة. ومع ذلك أخذت تلك الصفقة التي كنت تعلم أنك لا يجب أن تأخذها. هذا هو علم الأعصاب وراء ذلك.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-smart-money-moves/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">كيف يتحرك الأموال الذكية حقاً (وكيف تراه)</h3>
+              <p class="article-card-excerpt">"اتبع الأموال الذكية." لكن ماذا يعني ذلك حقاً؟ وكيف تفعل ذلك عندما يحاولون الاختباء؟</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/stop-loss-placement/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">وضع وقف الخسارة: لماذا الخاص بك ربما خاطئ</h3>
+              <p class="article-card-excerpt">السعر يلامس بالضبط وقفك، ينعكس، ويصل لهدفك بدونك. ليست مؤامرة. منهجيتك معيبة.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-1-percent-rule/ar/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">إدارة المخاطر</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">قاعدة ال ١٪: لماذا يخاطر المحترفون بهذا القدر الضئيل</h3>
+              <p class="article-card-excerpt">المخاطرة بنسبة ١٪ لكل صفقة يبدو حذراً بشكل مفرط. هذا هو السبب في أنه في الواقع النهج الأكثر عدوانية الذي لا يزال يعمل.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٦ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-your-first-system/ar/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">أنظمة التداول</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">بناء نظام التداول الأول الخاص بك: دليل خطوة بخطوة</h3>
+              <p class="article-card-excerpt">معظم المتداولين يقفزون من إعداد لآخر. المتداولون المنهجيون يبنون مرة واحدة وينفذون للأبد.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٩ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/support-and-resistance-explained/ar/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">الأساسيات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">الدعم والمقاومة: أساس كل صفقة</h3>
+              <p class="article-card-excerpt">الدعم والمقاومة هما أساس التحليل الفني. هكذا تحدد المستويات الحقيقية وتتداولها دون الوقوع في الفخ.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-backtesting-results-are-worthless/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">لماذا نتائج الباكتست عديمة القيمة (وماذا تفعل)</h3>
+              <p class="article-card-excerpt">وجدت مؤشراً بنسبة نجاح ٧٨٪. سنتان من الباكتست. ثم تتداول مباشرة وكل شيء ينهار.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-traders-blow-first-account/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">السبب الحقيقي وراء خسارة معظم الناس حسابهم الأول</h3>
+              <p class="article-card-excerpt">أرباح أولية، ثقة متزايدة، زيادة الحجم، ثم خسارة كل شيء. التسلسل قابل للتنبؤ.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-markets-move-in-cycles/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">لماذا تتحرك الأسواق في دورات (وكيف تربح منها)</h3>
+              <p class="article-card-excerpt">الأسواق في اتجاه ٢٠-٣٠٪ من الوقت فقط. الباقي؟ دورات. فهم السبب يغير طريقة تداولك لكل شيء.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/timeframe-selection/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">اختيار الإطار الزمني: لماذا هو أهم من مؤشرك</h3>
+              <p class="article-card-excerpt">مخطط ٥ دقائق يقول اشترِ. مخطط ٤ ساعات يقول بِع. اليومي يقول انتظر. من على حق؟</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-cut-losses-early/ar/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">إدارة المخاطر</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">متى تقطع الخسائر مبكراً (قبل ضرب الستوب)</h3>
+              <p class="article-card-excerpt">وقف خسارتك هو أقصى مخاطرك. لكن أحياناً من الذكاء الخروج قبل ذلك. هكذا تعرف الفرق.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/backtesting-without-fooling-yourself/ar/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">أنظمة التداول</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">الباكتست دون خداع نفسك: كيف تختبر الاستراتيجيات بصدق</h3>
+              <p class="article-card-excerpt">الباكتست يُظهر ٨٠٪ نسبة نجاح. تتداول مباشرة وتُدمر. هذا السبب - وكيف تختبر بشكل صحيح.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-is-a-trading-edge/ar/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">الأساسيات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ما هي ميزة التداول؟ (وكيف تعرف إن كان لديك واحدة)</h3>
+              <p class="article-card-excerpt">الجميع يتحدث عن امتلاك "ميزة". لكن ماذا يعني ذلك حقاً؟ هكذا تفهم وتحدد وتطور ميزة حقيقية.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-confirmation-trap/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">فخ التأكيد: لماذا المزيد من المؤشرات يعني نتائج أسوأ</h3>
+              <p class="article-card-excerpt">مخططك يحتوي على أربعة مؤشرات. نادراً ما تتفق. عندما تتفق، تكون الحركة قد انتهت.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-profitable-traders-know/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ما يعرفه المتداولون الرابحون ولا تعرفه أنت</h3>
+              <p class="article-card-excerpt">ليسوا أذكى منك. ليس لديهم مؤشرات أفضل. لكن هناك شيء مختلف في طريقة تعاملهم مع التداول.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/accumulation-vs-distribution/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">التجميع مقابل التوزيع: قراءة ما لا يُظهره المخطط</h3>
+              <p class="article-card-excerpt">مخططان يبدوان متطابقين. واحد يسبق ارتفاعاً ضخماً، والآخر يسبق انهياراً مدمراً. هكذا تفرق بينهما.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/tradingview-free-scripts/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ما لا يخبرك به TradingView عن السكربتات المجانية</h3>
+              <p class="article-card-excerpt">أكثر من ١٠٠,٠٠٠ مؤشر مجاني. مراجعات وإعجابات لإرشادك. ما الذي يمكن أن يسوء؟ الكثير، في الواقع.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/volume-profile-basics/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">ملف الحجم: قراءة هيكل السوق الخفي</h3>
+              <p class="article-card-excerpt">مخططات الأسعار تُظهر أين كان السوق. ملف الحجم يُظهر أين أراد السوق أن يكون حقاً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/revenge-trading-recovery/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">تداول الانتقام: كسر الدورة المدمرة</h3>
+              <p class="article-card-excerpt">كانت لديك خسارة. ثم أخرى محاولاً التعويض. ثم أخرى. الحفرة أصبحت أعمق. هكذا تكسر الدورة.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycle-failures-and-what-they-mean/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">فشل الدورات: عندما ينكسر النمط (وماذا يخبرك)</h3>
+              <p class="article-card-excerpt">توقعت أن تتكشف الدورة. لم تفعل. أكثر من مجرد فشل، ذلك الكسر يخبرك شيئاً مهماً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-a-pre-trade-checklist/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">بناء قائمة تحقق ما قبل التداول التي تعمل</h3>
+              <p class="article-card-excerpt">الطيارون يستخدمون قوائم التحقق. الجراحون يستخدمون قوائم التحقق. أفضل المتداولين يستخدمون قوائم التحقق.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-ignore-divergence/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">متى تتجاهل الدايفرجنس (ومتى يهم حقاً)</h3>
+              <p class="article-card-excerpt">دايفرجنس RSI! دايفرجنس MACD! المؤشر يقول الاتجاه سينعكس. إلا أن... عادة لا ينعكس.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trading-while-emotional/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">التداول العاطفي: قاتل الحسابات الخفي</h3>
+              <p class="article-card-excerpt">خلاف مع شريكك. أخبار سيئة من العمل. لم تنم جيداً. تداولت على أي حال. هذا يكلفك أكثر مما تعتقد.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٦ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/identifying-cycle-length/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">تحديد طول الدورة: كيف تقيس إيقاع السوق</h3>
+              <p class="article-card-excerpt">الدورات تتكرر، لكن ليس بتوقيت مثالي. هكذا تقيس الإيقاع في سوقك المحدد.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trade-journaling-that-works/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">دفتر يوميات التداول الذي يعمل: ماذا تتبع ولماذا</h3>
+              <p class="article-card-excerpt">معظم دفاتر يوميات التداول هي عمل عديم الفائدة. هكذا تبني دفتراً يحسن تداولك حقاً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/multi-timeframe-confirmation/ar/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">المؤشرات</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">تأكيد الإطار الزمني المتعدد: توقف عن التدمير من الإطار الأعلى</h3>
+              <p class="article-card-excerpt">مخطط ٥ دقائق يبدو مثالياً. لكن اليومي يقول شيئاً آخر. هكذا تصف الأطر الزمنية لتعمل معاً.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٨ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-boredom-trap/ar/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">علم النفس</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">فخ الملل: لماذا عدم فعل أي شيء هو الصفقة الأصعب</h3>
+              <p class="article-card-excerpt">لا إعدادات. ساعات من الانتظار. ثم تأخذ صفقة فقط لتشعر بشيء. الملل دمر حسابات أكثر من التحليل السيئ.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٦ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycles-within-cycles/ar/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">دورات السوق</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">دورات داخل دورات: الطبيعة الفراكتالية للأسواق</h3>
+              <p class="article-card-excerpt">كبّر على دورة وستجد دورات أصغر بداخلها. صغّر وستجد دورات أكبر تحتويها. هكذا تستخدم هذه الطبيعة الفراكتالية.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-size-up/ar/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">عملي</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">متى تزيد الحجم: تكبير مركزك بمسؤولية</h3>
+              <p class="article-card-excerpt">كنت متسقاً. حسابك ينمو. متى يحين وقت زيادة حجم المركز - وكيف تفعل ذلك دون أن تنفجر؟</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ٧ دقائق قراءة</span>
+                <span>فريق Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://signalpilot.io">الرئيسية</a>
+        <a href="https://docs.signalpilot.io">التوثيق</a>
+        <a href="https://education.signalpilot.io">مركز التعليم</a>
+        <a href="https://signalpilot.io/#pricing">الأسعار</a>
+        <a href="https://signalpilot.io/affiliates.html">الشركاء</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2025</span> Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        articleCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

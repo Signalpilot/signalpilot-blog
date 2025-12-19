@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Signal Pilot Блог - Обучение Трейдингу и Аналитика Рынка</title>
+  <meta name="description" content="Экспертные знания о трейдинге, анализ индикаторов, психология рынка и практические стратегии. Узнайте, что действительно работает в трейдинге.">
+  <meta name="theme-color" content="#05070d">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+
+  <!-- hreflang tags -->
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="./">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/blog.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Signal Pilot Блог - Обучение Трейдингу">
+  <meta property="og:description" content="Экспертные знания о трейдинге, анализ индикаторов, психология рынка и практические стратегии.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blog.signalpilot.io/ru/">
+  <meta property="og:image" content="https://signalpilot.io/assets/og-image.png">
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-aurora"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+
+        <nav class="nav">
+          <a href="https://signalpilot.io">Главная</a>
+          <a href="https://docs.signalpilot.io">Документация</a>
+          <a href="https://education.signalpilot.io">Обучение</a>
+          <a href="/ru/" class="active">Блог</a>
+        </nav>
+
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="./" class="active"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Бесплатная Проба</a>
+          <button class="mobile-menu-btn" aria-label="Меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Знания о Трейдинге, Которые Действительно Работают</h1>
+        <p class="hero-subtitle">Без воды, без хайпа. Только практическое обучение трейдингу, основанное на структуре рынка и психологии.</p>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="articles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Последние Статьи</h2>
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="product">Signal Pilot</button>
+            <button class="filter-btn" data-filter="indicators">Индикаторы</button>
+            <button class="filter-btn" data-filter="psychology">Психология</button>
+            <button class="filter-btn" data-filter="cycles">Циклы</button>
+            <button class="filter-btn" data-filter="practical">Практика</button>
+            <button class="filter-btn" data-filter="risk">Риск-Менеджмент</button>
+            <button class="filter-btn" data-filter="systems">Системы</button>
+            <button class="filter-btn" data-filter="beginner">Новичкам</button>
+          </div>
+        </div>
+
+        <div class="articles-grid">
+
+          <a href="../articles/inside-signal-pilot/ru/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Внутри Signal Pilot: Как 7 Индикаторов Работают Вместе</h3>
+              <p class="article-card-excerpt">Большинство наборов индикаторов — случайная солянка. 7 индикаторов Signal Pilot были разработаны как интегрированная система.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/free-indicators-vs-professional-tools/ru/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Бесплатные Индикаторы vs Профессиональные Инструменты: Когда Обновляться</h3>
+              <p class="article-card-excerpt">Бесплатные индикаторы помогли вам начать. Сдерживают ли они вас сейчас? Вот как понять, что вы переросли бесплатные инструменты.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-to-trade-cycles-with-pentarch/ru/" class="article-card" data-category="product">
+            <div class="article-card-image">
+              <span class="article-card-category">Signal Pilot</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Как Торговать Циклы с Pentarch: Практическое Руководство</h3>
+              <p class="article-card-excerpt">Пошаговое руководство по использованию Pentarch в циклической торговле. Определение фаз, тайминг входов и комбинирование с остальным набором.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-your-indicators-keep-failing/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Почему Ваши Индикаторы Постоянно Подводят (И Что Действительно Работает)</h3>
+              <p class="article-card-excerpt">У вас есть RSI, MACD, полосы Боллинджера, может пара скользящих средних. Ваш график выглядит как взорвавшаяся радуга. И всё равно вы проигрываете.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/psychology-of-getting-stopped-out/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Психология Выбивания по Стопу (И Почему Это Продолжает Происходить)</h3>
+              <p class="article-card-excerpt">Ваш анализ был идеален. Вход был чистым. Потом цена точно коснулась вашего стопа и развернулась. Это кажется личным.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-only-pattern-that-repeats/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Единственный Паттерн, Который Действительно Повторяется на Рынках</h3>
+              <p class="article-card-excerpt">Голова и плечи. Двойные вершины. Они работают ненадежно. Но есть один паттерн, который действительно повторяется на каждом таймфрейме.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/3-questions-before-every-trade/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">3 Вопроса Перед Каждой Сделкой</h3>
+              <p class="article-card-excerpt">Ваш индикатор дает сигнал. Ваш палец над кнопкой «Купить». Стоп. Три вопроса требуют ответа сначала.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/position-sizing-101/ru/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Риск-Менеджмент</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Размер Позиции 101: Математика, Которая Держит Вас в Игре</h3>
+              <p class="article-card-excerpt">Большинство трейдеров одержимы входами. Те, кто выживает — одержимы размером позиции.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/rules-based-vs-discretionary/ru/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Торговые Системы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Торговля по Правилам vs Дискреционная: Что Работает?</h3>
+              <p class="article-card-excerpt">Некоторые трейдеры клянутся жесткими системами. Другие доверяют интуиции. Вот что действительно важно.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/candlestick-basics/ru/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Основы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Основы Свечей: Читаем Price Action Как Профи</h3>
+              <p class="article-card-excerpt">Свечи — язык цены. Вот как их читать — и какие паттерны действительно важны для торговли.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-repainting-problem/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Проблема Перерисовки: Как Большинство Индикаторов TradingView Обманывают</h3>
+              <p class="article-card-excerpt">Тот индикатор с идеальным бэктестом? Который попадает в каждую вершину и дно? Он вам врёт. Вот как распознать обман.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-you-break-trading-rules/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Почему Вы Постоянно Нарушаете Собственные Правила Торговли</h3>
+              <p class="article-card-excerpt">У вас есть торговый план. Он записан. И всё равно вы совершили ту сделку, которую знали, что не должны. Вот нейронаука за этим.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/how-smart-money-moves/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Как На Самом Деле Движутся Умные Деньги (И Как Это Увидеть)</h3>
+              <p class="article-card-excerpt">«Следуйте за умными деньгами». Но что это на самом деле значит? И как это делать, когда они пытаются скрыться?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/stop-loss-placement/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Размещение Стоп-Лосса: Почему Ваш Вероятно Неправильный</h3>
+              <p class="article-card-excerpt">Цена точно касается вашего стопа, разворачивается и достигает вашей цели без вас. Это не заговор. Ваша методология ошибочна.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-1-percent-rule/ru/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Риск-Менеджмент</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Правило 1%: Почему Профессионалы Рискуют Так Мало</h3>
+              <p class="article-card-excerpt">Рисковать 1% за сделку звучит излишне осторожно. Вот почему это на самом деле самый агрессивный подход, который всё ещё работает.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-your-first-system/ru/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Торговые Системы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Создание Вашей Первой Торговой Системы: Пошаговое Руководство</h3>
+              <p class="article-card-excerpt">Большинство трейдеров прыгают от сетапа к сетапу. Системные трейдеры строят один раз и исполняют вечно.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/support-and-resistance-explained/ru/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Основы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Поддержка и Сопротивление: Основа Каждой Сделки</h3>
+              <p class="article-card-excerpt">Поддержка и сопротивление — фундамент технического анализа. Вот как определять реальные уровни и торговать их, не попадая в ловушку.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-backtesting-results-are-worthless/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Почему Результаты Бэктестинга Бесполезны (И Что Делать)</h3>
+              <p class="article-card-excerpt">Вы нашли индикатор с 78% успеха. Два года бэктеста. Потом вы торгуете вживую и всё рушится.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-traders-blow-first-account/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Настоящая Причина, Почему Большинство Сливают Первый Счёт</h3>
+              <p class="article-card-excerpt">Первые прибыли, растущая уверенность, увеличение размера, потом всё потеряно. Последовательность предсказуема.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/why-markets-move-in-cycles/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Почему Рынки Движутся Циклами (И Как На Этом Заработать)</h3>
+              <p class="article-card-excerpt">Рынки в тренде 20-30% времени. Остальное? Циклы. Понимание почему меняет то, как вы торгуете всё.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/timeframe-selection/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Выбор Таймфрейма: Почему Это Важнее Вашего Индикатора</h3>
+              <p class="article-card-excerpt">5-минутный график говорит покупать. 4-часовой говорит продавать. Дневной говорит ждать. Кто прав?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-cut-losses-early/ru/" class="article-card" data-category="risk">
+            <div class="article-card-image">
+              <span class="article-card-category">Риск-Менеджмент</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Когда Резать Убытки Рано (До Того, Как Сработает Ваш Стоп)</h3>
+              <p class="article-card-excerpt">Ваш стоп-лосс — ваш максимальный риск. Но иногда разумно выйти раньше. Вот как понять разницу.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/backtesting-without-fooling-yourself/ru/" class="article-card" data-category="systems">
+            <div class="article-card-image">
+              <span class="article-card-category">Торговые Системы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Бэктестинг Без Самообмана: Как Честно Тестировать Стратегии</h3>
+              <p class="article-card-excerpt">Ваш бэктест показывает 80% успеха. Вы торгуете вживую и вас уничтожают. Вот почему — и как тестировать правильно.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-is-a-trading-edge/ru/" class="article-card" data-category="beginner">
+            <div class="article-card-image">
+              <span class="article-card-category">Основы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Что Такое Торговое Преимущество? (И Как Понять, Есть Ли Оно У Вас)</h3>
+              <p class="article-card-excerpt">Все говорят о «преимуществе». Но что это на самом деле значит? Вот как понять, определить и развить настоящее преимущество.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-confirmation-trap/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ловушка Подтверждения: Почему Больше Индикаторов Означает Худшие Результаты</h3>
+              <p class="article-card-excerpt">На вашем графике четыре индикатора. Они редко соглашаются. Когда соглашаются — движение уже закончилось.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/what-profitable-traders-know/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Что Знают Прибыльные Трейдеры, Чего Не Знаете Вы</h3>
+              <p class="article-card-excerpt">Они не умнее вас. У них нет лучших индикаторов. Но что-то отличается в их подходе к трейдингу.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/accumulation-vs-distribution/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Накопление vs Распределение: Читаем То, Что График Не Показывает</h3>
+              <p class="article-card-excerpt">Два графика выглядят идентично. Один предшествует массивному ралли, другой — разрушительному падению. Вот как их различить.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/tradingview-free-scripts/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Что TradingView Не Говорит Вам о Бесплатных Скриптах</h3>
+              <p class="article-card-excerpt">100 000+ бесплатных индикаторов. Отзывы и лайки для ориентира. Что может пойти не так? Многое, на самом деле.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/volume-profile-basics/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Профиль Объёма: Читаем Скрытую Структуру Рынка</h3>
+              <p class="article-card-excerpt">Ценовые графики показывают, где был рынок. Профиль объёма показывает, где он действительно хотел быть.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/revenge-trading-recovery/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Торговля Из Мести: Разрываем Разрушительный Цикл</h3>
+              <p class="article-card-excerpt">У вас был убыток. Потом ещё один, пытаясь отыграться. Потом ещё. Яма становилась глубже. Вот как разорвать цикл.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycle-failures-and-what-they-mean/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Сбои Циклов: Когда Паттерн Ломается (И Что Это Вам Говорит)</h3>
+              <p class="article-card-excerpt">Вы ожидали, что цикл развернётся. Не развернулся. Больше чем неудача — этот пробой говорит вам что-то важное.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/building-a-pre-trade-checklist/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Создание Работающего Чек-листа Перед Сделкой</h3>
+              <p class="article-card-excerpt">Пилоты используют чек-листы. Хирурги используют чек-листы. Лучшие трейдеры используют чек-листы.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-ignore-divergence/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Когда Игнорировать Дивергенцию (И Когда Она Действительно Важна)</h3>
+              <p class="article-card-excerpt">Дивергенция RSI! Дивергенция MACD! Индикатор говорит, что тренд развернётся. Только... обычно нет.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trading-while-emotional/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Торговля На Эмоциях: Скрытый Убийца Счетов</h3>
+              <p class="article-card-excerpt">Ссора с партнёром. Плохие новости с работы. Плохо спали. Всё равно торговали. Это стоит вам больше, чем вы думаете.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/identifying-cycle-length/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Определение Длины Цикла: Как Измерить Ритм Рынка</h3>
+              <p class="article-card-excerpt">Циклы повторяются, но не по идеальному расписанию. Вот как измерить ритм на вашем конкретном рынке.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/trade-journaling-that-works/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Торговый Дневник, Который Работает: Что Отслеживать и Почему</h3>
+              <p class="article-card-excerpt">Большинство торговых дневников — бесполезная работа. Вот как создать дневник, который реально улучшит вашу торговлю.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/multi-timeframe-confirmation/ru/" class="article-card" data-category="indicators">
+            <div class="article-card-image">
+              <span class="article-card-category">Индикаторы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Мульти-Таймфрейм Подтверждение: Перестаньте Быть Уничтоженными Старшим Таймфреймом</h3>
+              <p class="article-card-excerpt">Ваш 5-минутный график выглядит идеально. Но дневной говорит другое. Вот как выровнять таймфреймы для совместной работы.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/the-boredom-trap/ru/" class="article-card" data-category="psychology">
+            <div class="article-card-image">
+              <span class="article-card-category">Психология</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Ловушка Скуки: Почему Ничего Не Делать — Самая Сложная Сделка</h3>
+              <p class="article-card-excerpt">Нет сетапов. Часы ожидания. Потом вы совершаете сделку просто чтобы что-то почувствовать. Скука уничтожила больше счетов, чем плохой анализ.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/cycles-within-cycles/ru/" class="article-card" data-category="cycles">
+            <div class="article-card-image">
+              <span class="article-card-category">Рыночные Циклы</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Циклы Внутри Циклов: Фрактальная Природа Рынков</h3>
+              <p class="article-card-excerpt">Приблизьте цикл — найдёте меньшие внутри. Отдалите — найдёте большие, содержащие его. Вот как использовать эту фрактальную природу.</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="../articles/when-to-size-up/ru/" class="article-card" data-category="practical">
+            <div class="article-card-image">
+              <span class="article-card-category">Практика</span>
+            </div>
+            <div class="article-card-content">
+              <h3 class="article-card-title">Когда Увеличивать Размер: Масштабирование Позиции Ответственно</h3>
+              <p class="article-card-excerpt">Вы были стабильны. Ваш счёт растёт. Когда пора увеличивать размер позиции — и как это сделать, не взорвавшись?</p>
+              <div class="article-card-meta">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 мин чтения</span>
+                <span>Команда Signal Pilot</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://signalpilot.io">Главная</a>
+        <a href="https://docs.signalpilot.io">Документация</a>
+        <a href="https://education.signalpilot.io">Учебный Центр</a>
+        <a href="https://signalpilot.io/#pricing">Цены</a>
+        <a href="https://signalpilot.io/affiliates.html">Партнёрам</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2025</span> Signal Pilot. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        articleCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
