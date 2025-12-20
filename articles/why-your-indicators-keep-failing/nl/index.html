@@ -73,17 +73,59 @@
       <p>Deze is kritiek, en het is waarom veel traders denken dat ze een perfect systeem hebben gevonden - tot ze het live traden.</p>
       <p>Repainting betekent dat een indicator zijn historische signalen achteraf verandert. Dat "perfecte" koopsignaal dat je op de chart ziet? Het was er misschien niet toen de candle zich daadwerkelijk vormde. De indicator wachtte om te zien wat er gebeurde, en schilderde het signaal dan retroactief.</p>
       <p>Je backtesting wordt waardeloos. Elk historisch signaal ziet er perfect uit omdat de indicator vals speelde - hij kende het resultaat al.</p>
-      <p><strong>Wat echt werkt:</strong> Sta erop dat indicatoren hun signalen bij candle close finaliseren. Het signaal verschijnt of niet. Geen revisies. Wat je in de geschiedenis ziet is precies wat je live zou hebben gezien.</p>
+      <p><strong>Hoe je test op repainting:</strong></p>
+      <ol>
+        <li>Open een chart en noteer waar huidige signalen verschijnen</li>
+        <li>Wacht tot 10-20 nieuwe candles zich vormen</li>
+        <li>Scroll terug en controleer of die signalen zijn verschoven, verdwenen of veranderd</li>
+      </ol>
+      <p>Als er iets is veranderd, heb je te maken met repainting. Het maakt niet uit hoe goed de backtest eruitziet. Je kunt het niet betrouwbaar traden.</p>
+      <p><strong>Wat echt werkt:</strong> Sta erop dat indicatoren hun signalen bij candle close finaliseren. Het signaal verschijnt of niet. Geen revisies. Wat je in de geschiedenis ziet is precies wat je live zou hebben gezien. Dit is niet onderhandelbaar voor serieus traden.</p>
+      <hr>
+      <h2>Leading vs Lagging: Het Verkeerde Debat</h2>
+      <p>Traders zijn geobsedeerd door het vinden van "leading" indicatoren - tools die de toekomst voorspellen. Hier is de ongemakkelijke waarheid: geen enkele indicator voorspelt iets. Ze verwerken allemaal verleden data.</p>
+      <p>De echte vraag is niet leading vs lagging. Het is: <em>wat meet deze indicator eigenlijk?</em></p>
+      <p>Moving averages meten gemiddelde prijs over tijd. Ze zijn opzettelijk traag - dat is het punt. Een 200 MA gebruiken en klagen dat het "lagging" is, is als klagen dat een kalender traag is omdat het de datum van gisteren toont.</p>
+      <p>RSI meet recent momentum. Het is sneller, maar zegt niets over trendrichting. Het blijft vrolijk overbought terwijl de prijs verdubbelt.</p>
+      <p><strong>Wat echt werkt:</strong> Stop met vragen "is het leading of lagging?" Begin te vragen:</p>
+      <ul>
+        <li>Welke specifieke vraag beantwoordt deze indicator?</li>
+        <li>Op welk punt in een beweging geeft het nuttige informatie?</li>
+        <li>Wat negeert het volledig?</li>
+      </ul>
+      <p>Elke indicator heeft een taak. Gebruik het voor die taak. Verwachten dat RSI je iets vertelt over trendstructuur is als verwachten dat je snelheidsmeter je routebeschrijving geeft.</p>
       <hr>
       <h2>Het Cyclus Framework</h2>
-      <p>Markten bewegen niet willekeurig. Ze cyclen door vijf fasen: accumulatie, markup, climax, distributie en decline. Dit patroon herhaalt zich in elk tijdsframe, elke activaklasse.</p>
+      <p>Markten bewegen niet willekeurig. Ze cyclen door vijf fasen: accumulatie, markup, climax, distributie en decline. Dit patroon herhaalt zich in elk tijdsframe, elke activaklasse, om een simpele reden - het weerspiegelt menselijke psychologie. Hebzucht, angst, hoop en capitulatie laten voetafdrukken achter.</p>
       <p>De meeste indicatoren houden hier geen rekening mee. Ze behandelen elk moment als onafhankelijk, daarom genereren ze signalen midden in een trend die nog ruimte heeft, of aan het begin van een chop zone die je herhaaldelijk zal uitstoppen.</p>
       <p><strong>Wat echt werkt:</strong> Voordat je vraagt "moet ik kopen of verkopen?", vraag "waar zitten we in de cyclus?"</p>
+      <ul>
+        <li><em>Accumulatie (TD):</em> Na uitgebreide verkoop, zoek naar uitputtingssignalen. Smart money accumuleert hier.</li>
+        <li><em>Markup (IGN):</em> Vroeg in een uptrend, momentum bevestiging is belangrijk. Is deze beweging echt?</li>
+        <li><em>Climax (CAP):</em> Na uitgebreide aankoop, zoek naar climax signalen. De menigte is all-in. Tijd om voorzichtig te zijn.</li>
+        <li><em>Distributie (WRN):</em> Zwakte verschijnt. Smart money stapt uit. Wees defensief.</li>
+        <li><em>Decline (BDN):</em> Breakdown bevestigd. Vermijd longs, overweeg shorts of blijf flat.</li>
+      </ul>
+      <p>Deze context verandert alles. Een "koopsignaal" tijdens accumulatie heeft compleet andere kansen dan hetzelfde signaal tijdens distributie. De indicator kent het verschil niet. Jij moet het kennen.</p>
+      <hr>
+      <h2>Waar Je Op Moet Letten Bij Elke Indicator</h2>
+      <p>Voordat je een tool aan je chart toevoegt, doorloop deze checklist:</p>
+      <p><strong>1. Repaint het?</strong><br>Test het zelf. Marketing kan misleidend zijn.</p>
+      <p><strong>2. Welke specifieke vraag beantwoordt het?</strong><br>Als je dit niet in één zin kunt articuleren, sla het over.</p>
+      <p><strong>3. Geeft het context of alleen signalen?</strong><br>Signalen zonder context is gokken. Je moet begrijpen waarom het signaal verscheen.</p>
+      <p><strong>4. Kun je uitleggen hoe het werkt?</strong><br>Je hoeft de code niet te begrijpen, maar je zou de logica moeten begrijpen. Black boxes creëren afhankelijkheid, geen vaardigheid.</p>
+      <p><strong>5. Helpt het je de markt te zien, of probeert het voor je te denken?</strong><br>De beste tools verbeteren je analyse. De slechtste vervangen het. Je wilt een betere trader worden, niet meer afhankelijk van software.</p>
       <hr>
       <h2>De Conclusie</h2>
       <p>Indicatoren zijn niet het probleem. Hoe traders ze gebruiken wel.</p>
       <p>Stop met signalen stapelen. Begin context te bouwen. Begrijp waar je in de marktcyclus bent voordat je vraagt of je moet kopen of verkopen. En voor alles wat je op je chart zet, zorg er absoluut voor dat het niet repaint.</p>
       <p>De edge zit niet in meer zien. Het zit in zien wat ertoe doet.</p>
+      <hr>
+      <h2>Een Andere Aanpak</h2>
+      <p>Wat als je in plaats van 6 conflicterende indicatoren, 7 had die daadwerkelijk met elkaar communiceren?</p>
+      <p>Dat is wat geïntegreerde systemen doen. Cyclus analyse vertelt je waar je in de structuur bent. Volume regime detectie bevestigt of instituties accumuleren of distribueren. Oscillator voting aggregeert momentum uit meerdere bronnen. Level confluence toont waar prijs waarschijnlijk zal reageren.</p>
+      <p>De indicatoren doen hun werk intern. Jij ziet de gesynthetiseerde output - niet twaalf conflicterende meningen, maar één coherent beeld van de markt.</p>
+      <p>Signal Pilot is gebouwd op dit principe: zeven indicatoren, elk beantwoordt een andere vraag, allemaal ontworpen om samen te werken. Cyclus fase van Pentarch. Volume regime van Volume Oracle. Key levels van Janus Atlas. Confluence score van OmniDeck. De suite geeft je context, niet alleen signalen.</p>
       <hr>
       <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
         <a href="../../the-repainting-problem/nl/" class="related-card"><span class="related-category">Indicatoren</span><h4>Het Repaint Probleem</h4></a>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيفية التداول حول الأحداث الإخبارية دون التعرض للدمار - Signal Pilot Blog</title>
+  <meta name="description" content="يمكن للأحداث الإخبارية أن تصنع أو تدمر حساب التداول الخاص بك. تعلم متى تتداول حول الأخبار، ومتى تبقى خارجاً، وكيف تدير المخاطر أثناء الإصدارات عالية التقلب.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">التعليم</a><a href="/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=practical">عملي</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">مقال</span>
+          </nav>
+          <span class="article-category">عملي</span>
+          <h1 class="article-title">كيفية التداول حول الأحداث الإخبارية دون التعرض للدمار</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 دقائق قراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="مشاركة على تويتر">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="مشاركة على لينكد إن">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تصور التداول على الأخبار" data-ai-prompt="Dark themed visualization of an economic calendar with major news events highlighted.">
+        <figcaption class="ai-prompt">تصور بموضوع داكن للتقويم الاقتصادي مع إبراز الأحداث الإخبارية الرئيسية.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>الأحداث الإخبارية هي ألغام أرضية. NFP، CPI، إعلانات الفيد، تقارير الأرباح - هذه الانفجارات المجدولة يمكن أن تمحو أرباح أسبوع في ثوانٍ أو تخلق فرصاً تظهر فقط بضع مرات في الشهر.</p>
+          <p>معظم المتداولين يخطئون. إما يتجنبون الأخبار تماماً (يفوتون الفرص) أو يتداولون مباشرة عليها (مقامرة). النهج الصحيح أكثر دقة.</p>
+          <p>إليك كيفية التنقل في الأخبار دون أن تدمر حسابك.</p>
+
+          <hr>
+
+          <h2>فهم مستويات تأثير الأخبار</h2>
+          <p>ليست كل الأخبار متساوية. فكر في الأحداث في ثلاثة مستويات:</p>
+          <p><strong>المستوى 1: أحداث تحرك السوق</strong></p>
+          <ul>
+            <li>قرارات أسعار الفائدة والبيانات من الاحتياطي الفيدرالي</li>
+            <li>الوظائف غير الزراعية (NFP)</li>
+            <li>بيانات CPI / التضخم</li>
+            <li>الأحداث الجيوسياسية الكبرى</li>
+            <li>الأرباح الرئيسية (FAANG، قادة السوق)</li>
+          </ul>
+          <p>هذه تحرك الأسواق بقوة. السبريد يتسع، الانزلاق يزيد، والسعر يمكن أن يقفز عبر وقف خسارتك في أجزاء من الثانية.</p>
+          <p><strong>المستوى 2: تأثير معتدل</strong></p>
+          <ul>
+            <li>بيانات الناتج المحلي الإجمالي</li>
+            <li>مبيعات التجزئة</li>
+            <li>بيانات الإسكان</li>
+            <li>مؤشرات التصنيع</li>
+            <li>تقارير الأرباح الثانوية</li>
+          </ul>
+          <p>هذه تخلق تقلباً لكن عادة ضمن نطاقات يمكن التحكم فيها. لا تزال تتطلب الحذر.</p>
+          <p><strong>المستوى 3: تأثير منخفض</strong></p>
+          <ul>
+            <li>التقارير الاقتصادية الثانوية</li>
+            <li>ظهورات متحدثي الفيد</li>
+            <li>أرباح الشركات الصغيرة</li>
+          </ul>
+          <p>هذه نادراً ما تعطل التداول الطبيعي ما لم تفاجئ بشكل كبير.</p>
+
+          <hr>
+
+          <h2>فخ ما قبل الأخبار</h2>
+          <p>الفترة الأكثر خطورة ليست أثناء الأخبار - إنها الساعة قبلها.</p>
+          <p>إليك ما يحدث: الأسواق تتماسك بينما يقلل المتداولون التعرض. الحجم ينخفض. حركة السعر تصبح متقطعة وغير موثوقة. الإعدادات التي تبدو صالحة تصبح فخاخاً لأن سلوك السوق الطبيعي معلق.</p>
+          <p><strong>الخطوة الذكية:</strong> أغلق أو قلل المراكز قبل أحداث المستوى 1. لا تبدأ صفقات جديدة في غضون 30-60 دقيقة من الإصدارات الرئيسية.</p>
+          <p>تكلفة الفرصة البديلة لتفويت صفقة واحدة لا شيء مقارنة بتكلفة الوقوع في الجانب الخاطئ من حركة 2% في 30 ثانية.</p>
+
+          <hr>
+
+          <h2>أثناء الإصدار: ابق خارجاً أو تقبل الفوضى</h2>
+          <p>التداول مباشرة على إصدارات الأخبار ليس تداولاً - إنه مقامرة. إليك السبب:</p>
+          <ul>
+            <li><strong>السبريد ينفجر:</strong> سبريدك الطبيعي 1 نقطة يصبح 10-20 نقطة</li>
+            <li><strong>الانزلاق مضمون:</strong> وقف خسارتك عند 50 قد ينفذ عند 80</li>
+            <li><strong>السعر يرتفع في كلا الاتجاهين:</strong> ذلك الاتجاه "الواضح" غالباً ينعكس بعنف</li>
+            <li><strong>الخوارزميات تهيمن:</strong> تتفاعل في ميكروثانية - لا يمكنك المنافسة</li>
+          </ul>
+          <p>بعض المتداولين يتخصصون في تداول الأخبار باستراتيجيات محددة، وحجم مراكز، وقبول نتائج جامحة. ما لم تكن واحداً منهم، ابق خارجاً.</p>
+
+          <hr>
+
+          <h2>نافذة ما بعد الأخبار</h2>
+          <p>الفرصة الحقيقية تأتي بعد القفزة الأولية. إليك الجدول الزمني:</p>
+          <p><strong>0-5 دقائق بعد الإصدار:</strong> فوضى خالصة. رد الفعل الأولي، غالباً خاطئ. تجنب.</p>
+          <p><strong>5-15 دقيقة:</strong> السوق يهضم البيانات. غالباً يرى انعكاساً للحركة الأولية. خطير لكن قابل للتداول للمتداولين ذوي الخبرة.</p>
+          <p><strong>15-60 دقيقة:</strong> الاتجاه الحقيقي يظهر. هنا يمكن لمتداولي التجزئة المشاركة. ابحث عن:</p>
+          <ul>
+            <li>السعر يقبل المستويات الجديدة (لا يرفضها فوراً)</li>
+            <li>الحجم يؤكد الاتجاه</li>
+            <li>الانعكاسات الفاشلة للحركة الأولية</li>
+          </ul>
+          <p><strong>1-4 ساعات:</strong> تطور حركات ممتدة. إذا كانت الأخبار مهمة بما يكفي لتغيير السرد، فإن الحركة غالباً تستمر طوال الجلسة.</p>
+
+          <hr>
+
+          <h2>إدارة المراكز حول الأخبار</h2>
+          <p>ماذا لو كنت بالفعل في صفقة عندما تأتي الأخبار؟ لديك ثلاثة خيارات:</p>
+          <p><strong>الخيار 1: الإغلاق قبل الحدث</strong></p>
+          <ul>
+            <li>الأفضل لـ: أحداث المستوى 1، المراكز قريبة من التعادل، الصفقات التي لم تصل للهدف بعد</li>
+            <li>الفائدة: يزيل المخاطر تماماً</li>
+            <li>التكلفة: قد تفوت حركة مواتية</li>
+          </ul>
+          <p><strong>الخيار 2: تقليل الحجم</strong></p>
+          <ul>
+            <li>الأفضل لـ: أحداث المستوى 2، المراكز في الربح بالفعل</li>
+            <li>الفائدة: يقلل المخاطر مع الحفاظ على التعرض</li>
+            <li>التكلفة: إمكانية صعود مخفضة إذا كانت الحركة لصالحك</li>
+          </ul>
+          <p><strong>الخيار 3: توسيع وقف الخسارة</strong></p>
+          <ul>
+            <li>الأفضل لـ: صفقات السوينغ مع قناعة قوية ومساحة للتنفس</li>
+            <li>الفائدة: البقاء في الصفقة عبر التقلب</li>
+            <li>التكلفة: خسارة محتملة أكبر إذا تم إيقافك</li>
+          </ul>
+          <p>لا تفعل شيئاً أبداً. وجود خطة يتفوق على الأمل في الأفضل.</p>
+
+          <hr>
+
+          <h2>بناء روتين التقويم الإخباري</h2>
+          <p>كل يوم تداول يجب أن يبدأ بفحص الأخبار:</p>
+          <ul>
+            <li><strong>تحقق من التقويم الاقتصادي:</strong> اعرف ما سيصدر ومتى</li>
+            <li><strong>حدد أحداث المستوى 1:</strong> ضع علامة عليها في الرسم البياني أو اضبط التنبيهات</li>
+            <li><strong>خطط حولها:</strong> قرر مسبقاً إذا كنت ستتداول، أو تقلل، أو تبقى خارجاً</li>
+            <li><strong>تحقق من الأرباح:</strong> اعرف إذا كان لأي أسهم تتداولها تقارير</li>
+          </ul>
+          <p>الموارد المجانية مثل ForexFactory، Investing.com، والتقويم الاقتصادي لـ TradingView هي أدوات أساسية.</p>
+
+          <hr>
+
+          <h2>الأرباح: حالة خاصة</h2>
+          <p>تقارير الأرباح تستحق اهتماماً خاصاً لأنها:</p>
+          <ul>
+            <li>تحدث خارج ساعات السوق (لا يمكن الرد في الوقت الفعلي)</li>
+            <li>الفجوات شائعة ويمكن أن تتخطى وقف خسارتك تماماً</li>
+            <li>رد فعل السوق غالباً يختلف عن النتائج الفعلية</li>
+          </ul>
+          <p><strong>قبل الأرباح:</strong> لا تحتفظ بمراكز ما لم تكن تراهن تحديداً على التقرير. إذا كان يجب عليك الاحتفاظ، تقبل أن وقف خسارتك بلا معنى أساساً - الفجوة ستكون ما ستكون.</p>
+          <p><strong>بعد الأرباح:</strong> انتظر حتى يتأسس نطاق الافتتاح. دع أول 15-30 دقيقة تكشف الاتجاه قبل التفكير في الدخول. القفزة الأولية غالباً هي الإشارة الخاطئة.</p>
+
+          <hr>
+
+          <h2>عندما تخلق الأخبار فرصة</h2>
+          <p>الأخبار ليست فقط خطراً - إنها أيضاً فرصة عندما:</p>
+          <ul>
+            <li><strong>رد الفعل يؤكد تحيزك:</strong> كنت صاعداً بالفعل والبيانات تدعم ذلك</li>
+            <li><strong>المبالغة في رد الفعل تخلق قيمة:</strong> السوق يذعر من انحراف طفيف عن التوقعات</li>
+            <li><strong>المستويات الرئيسية تُختبر:</strong> القفزات المدفوعة بالأخبار إلى الدعم/المقاومة الرئيسية غالباً تنعكس</li>
+            <li><strong>الاتجاهات تتسارع:</strong> الأخبار التي تؤكد الاتجاهات الحالية يمكن أن تخلق حركات ممتدة</li>
+          </ul>
+          <p>المفتاح هو الصبر. انتظر حتى تهدأ الفوضى. دع الآخرين يتداولون بذعر. ادخل عندما تصبح الصورة أوضح.</p>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>الأحداث الإخبارية تتطلب احتراماً، وليس خوفاً. النهج بسيط:</p>
+          <ul>
+            <li>اعرف ما سيأتي (تحقق من التقويم يومياً)</li>
+            <li>قلل أو أغلق المراكز قبل الأحداث الكبرى</li>
+            <li>ابق خارجاً أثناء الإصدار</li>
+            <li>انتظر الوضوح بعد الإصدار قبل الدخول</li>
+            <li>لا تحتفظ أبداً عبر أحداث لا تفهمها</li>
+          </ul>
+          <p>المتداولون الذين يبقون على المدى الطويل ليسوا من يلتقطون كل قفزة إخبارية. هم من يحمون رأس مالهم عندما تكون عدم اليقين في أعلى مستوياتها ويستخدمونه عندما تصبح الصورة واضحة.</p>
+          <p>الأخبار تحرك الأسواق - لكنها لا يجب أن تحرك حسابك في الاتجاه الخاطئ.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../../best-times-to-trade/ar/" class="related-card">
+                <span class="related-category">الأسواق</span>
+                <h4>أفضل أوقات التداول</h4>
+              </a>
+              <a href="../../building-a-pre-trade-checklist/ar/" class="related-card">
+                <span class="related-category">عملي</span>
+                <h4>بناء قائمة فحص ما قبل التداول</h4>
+              </a>
+              <a href="../../stop-loss-placement/ar/" class="related-card">
+                <span class="related-category">الأساسيات</span>
+                <h4>وضع وقف الخسارة</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../best-times-to-trade/ar/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> السابق</span>
+              <span class="article-nav-title">أفضل أوقات التداول</span>
+            </a>
+            <a href="../../tradingview-setup-guide/ar/" class="article-nav-link next">
+              <span class="article-nav-label">التالي <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">دليل إعداد TradingView</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>تحليل دورات Pentarch يساعدك على تحديد ما إذا كان هيكل السوق يدعم حركة - مع أو بدون أخبار.</strong></p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب تحليل الدورات ←</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+    }
+    document.querySelectorAll('.hero-image img').forEach(img => {
+      if (img.complete && img.naturalHeight > 0) { img.classList.add('loaded'); }
+      else { img.addEventListener('load', () => img.classList.add('loaded')); }
+    });
+  </script>
+</body>
+</html>
