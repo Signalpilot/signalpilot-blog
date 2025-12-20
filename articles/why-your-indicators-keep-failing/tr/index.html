@@ -73,17 +73,59 @@
       <p>Bu kritik ve birçok trader'ın mükemmel bir sistem bulduğunu düşünmesinin nedeni - canlı işlem yapana kadar.</p>
       <p>Repaint, bir indikatörün geçmiş sinyallerini gerçekleştikten sonra değiştirmesi demektir. Grafikte gördüğünüz o "mükemmel" al sinyali? Mum oluşurken orada olmamış olabilir. İndikatör ne olduğunu görmek için bekledi, sonra sinyali geriye dönük olarak çizdi.</p>
       <p>Backtestiniz değersiz hale gelir. Her tarihsel sinyal mükemmel görünür çünkü indikatör hile yaptı - sonucu zaten biliyordu.</p>
-      <p><strong>Gerçekten ne işe yarar:</strong> Mum kapanışında sinyallerini kesinleştiren indikatörlerde ısrar edin. Sinyal ya görünür ya görünmez. Revizyonlar yok. Tarihte gördüğünüz, canlı göreceğinizle tamamen aynı.</p>
+      <p><strong>Repaint testi nasıl yapılır:</strong></p>
+      <ol>
+        <li>Bir grafik açın ve mevcut sinyallerin nerede göründüğünü not edin</li>
+        <li>10-20 yeni mumun oluşmasını bekleyin</li>
+        <li>Geri kaydırın ve bu sinyallerin hareket edip etmediğini, kaybolup kaybolmadığını veya değişip değişmediğini kontrol edin</li>
+      </ol>
+      <p>Herhangi bir şey kaydıysa, repaint ile karşı karşıyasınız. Backtestin ne kadar iyi görünürse görünsün fark etmez. Güvenilir şekilde trade edemezsiniz.</p>
+      <p><strong>Gerçekten ne işe yarar:</strong> Mum kapanışında sinyallerini kesinleştiren indikatörlerde ısrar edin. Sinyal ya görünür ya görünmez. Revizyonlar yok. Tarihte gördüğünüz, canlı göreceğinizle tamamen aynı. Bu ciddi trading için pazarlık konusu değil.</p>
+      <hr>
+      <h2>Gecikme vs Öncü: Yanlış Tartışma</h2>
+      <p>Trader'lar "öncü" indikatörler - geleceği tahmin eden araçlar bulmaya takıntılıdır. Rahatsız edici gerçek şu: hiçbir indikatör hiçbir şeyi tahmin etmez. Hepsi geçmiş verileri işler.</p>
+      <p>Asıl soru öncü vs gecikme değil. <em>Bu indikatör gerçekte neyi ölçüyor?</em></p>
+      <p>Hareketli ortalamalar zaman içindeki ortalama fiyatı ölçer. Tasarım gereği yavaştırlar - mesele bu. 200 MA kullanıp "gecikiyor" diye şikayet etmek, takvimin dünün tarihini gösterdiği için yavaş olduğundan şikayet etmek gibidir.</p>
+      <p>RSI son momentumu ölçer. Daha hızlıdır ama trend yönü hakkında hiçbir şey söylemez. Fiyat iki katına çıkarken mutlu bir şekilde aşırı alımda kalır.</p>
+      <p><strong>Gerçekten ne işe yarar:</strong> "Bu öncü mü yoksa gecikmeli mi?" diye sormayı bırakın. Bunları sormaya başlayın:</p>
+      <ul>
+        <li>Bu indikatör hangi spesifik soruyu yanıtlıyor?</li>
+        <li>Bir hareketin hangi noktasında faydalı bilgi veriyor?</li>
+        <li>Neyi tamamen göz ardı ediyor?</li>
+      </ul>
+      <p>Her indikatörün bir işi var. O iş için kullanın. RSI'dan trend yapısı hakkında bilgi vermesini beklemek, hız göstergesinden yol tarifi vermesini beklemek gibidir.</p>
       <hr>
       <h2>Döngü Çerçevesi</h2>
-      <p>Piyasalar rastgele hareket etmez. Beş aşamadan döner: birikim, yükseliş, doruk, dağıtım ve düşüş. Bu kalıp her zaman diliminde, her varlık sınıfında tekrarlanır.</p>
+      <p>Piyasalar rastgele hareket etmez. Beş aşamadan döner: birikim, yükseliş, doruk, dağıtım ve düşüş. Bu kalıp her zaman diliminde, her varlık sınıfında tekrarlanır - basit bir nedenle - insan psikolojisini yansıtır. Açgözlülük, korku, umut ve teslimiyet izler bırakır.</p>
       <p>Çoğu indikatör bunu hesaba katmaz. Her anı bağımsız gibi ele alır, bu yüzden hala yer olan bir trendin ortasında veya sizi tekrar tekrar durduracak bir chop bölgesinin başında sinyal üretir.</p>
       <p><strong>Gerçekten ne işe yarar:</strong> "Almalı mıyım yoksa satmalı mıyım?" diye sormadan önce "döngüde neredeyiz?" diye sorun.</p>
+      <ul>
+        <li><em>Birikim (TD):</em> Uzun satıştan sonra, tükenme sinyalleri arayın. Akıllı para burada biriktirir.</li>
+        <li><em>Yükseliş (IGN):</em> Yükseliş trendinin başlarında, momentum onayı önemlidir. Bu hareket gerçek mi?</li>
+        <li><em>Doruk (CAP):</em> Uzun alımdan sonra, doruk sinyalleri arayın. Kalabalık tamamı içeride. Temkinli olma zamanı.</li>
+        <li><em>Dağıtım (WRN):</em> Zayıflık beliriyor. Akıllı para çıkıyor. Savunmada olun.</li>
+        <li><em>Düşüş (BDN):</em> Kırılma onaylandı. Long'lardan kaçının, short düşünün veya kenarda durun.</li>
+      </ul>
+      <p>Bu bağlam her şeyi değiştirir. Birikim sırasında bir "al sinyali" dağıtım sırasındaki aynı sinyalden tamamen farklı olasılıklara sahiptir. İndikatör farkı bilmez. Siz bilmelisiniz.</p>
+      <hr>
+      <h2>Herhangi Bir İndikatörde Aranacaklar</h2>
+      <p>Grafiğinize herhangi bir araç eklemeden önce, bu kontrol listesinden geçirin:</p>
+      <p><strong>1. Repaint yapıyor mu?</strong><br>Kendiniz test edin. Pazarlama yanıltıcı olabilir.</p>
+      <p><strong>2. Hangi spesifik soruyu yanıtlıyor?</strong><br>Bunu tek cümleyle ifade edemiyorsanız, geçin.</p>
+      <p><strong>3. Bağlam mı veriyor yoksa sadece sinyaller mi?</strong><br>Bağlamsız sinyaller kumardır. Sinyalin neden göründüğünü anlamalısınız.</p>
+      <p><strong>4. Nasıl çalıştığını açıklayabilir misiniz?</strong><br>Kodu anlamanıza gerek yok ama mantığı anlamalısınız. Kara kutular beceri değil, bağımlılık yaratır.</p>
+      <p><strong>5. Piyasayı görmenize mi yardımcı oluyor, yoksa sizin yerinize düşünmeye mi çalışıyor?</strong><br>En iyi araçlar analizinizi geliştirir. En kötüleri onun yerini alır. Daha iyi bir trader olmak istiyorsunuz, yazılıma daha bağımlı değil.</p>
       <hr>
       <h2>Özet</h2>
       <p>İndikatörler sorun değil. Trader'ların onları nasıl kullandığı sorun.</p>
       <p>Sinyal yığmayı bırakın. Bağlam oluşturmaya başlayın. Al mı sat mı diye sormadan önce piyasa döngüsünde nerede olduğunuzu anlayın. Ve grafiğinize koyduğunuz her şey için, repaint yapmadığından kesinlikle emin olun.</p>
       <p>Avantaj daha fazla görmekte değil. Önemli olanı görmekte.</p>
+      <hr>
+      <h2>Farklı Bir Yaklaşım</h2>
+      <p>6 çelişkili indikatör yerine, gerçekten birbiriyle iletişim kuran 7 tane olsaydı?</p>
+      <p>Entegre sistemlerin yaptığı budur. Döngü analizi yapıda nerede olduğunuzu söyler. Hacim rejim tespiti kurumların biriktirip biriktirmediğini veya dağıtıp dağıtmadığını doğrular. Osilatör oylaması birden fazla kaynaktan momentumu toplar. Seviye uyumu fiyatın nerede tepki verebileceğini gösterir.</p>
+      <p>İndikatörler işlerini dahili olarak yapar. Siz sentezlenmiş çıktıyı görürsünüz - on iki çelişkili görüş değil, piyasanın tutarlı bir resmi.</p>
+      <p>Signal Pilot bu prensip üzerine inşa edildi: yedi indikatör, her biri farklı bir soruyu yanıtlıyor, hepsi birlikte çalışmak üzere tasarlandı. Pentarch'tan döngü fazı. Volume Oracle'dan hacim rejimi. Janus Atlas'tan önemli seviyeler. OmniDeck'ten uyum skoru. Paket size sadece sinyaller değil, bağlam verir.</p>
       <hr>
       <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
         <a href="../../the-repainting-problem/tr/" class="related-card"><span class="related-category">İndikatörler</span><h4>Repaint Sorunu</h4></a>
