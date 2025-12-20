@@ -37,7 +37,6 @@
         </a>
         <nav class="nav"><a href="https://signalpilot.io/ja">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/ja/" class="active">ブログ</a></nav>
         <div class="header-controls">
-          
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ切替">
             <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -72,7 +71,7 @@
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読了</span>
             <span>Signal Pilot チーム</span>
           </div>
-        <div class="share-buttons">
+          <div class="share-buttons">
             <span class="share-label">共有:</span>
             <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitterで共有">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -88,8 +87,8 @@
       </header>
 
       <figure class="hero-image">
-        <img src="../hero.png" alt="感情的なトレードの視覚化">
-        <figcaption class="ai-prompt">トレーダーの頭部のダークテーマの視覚化で、様々な感情が内部で渦巻いている。</figcaption>
+        <img src="../hero.png" alt="感情的なトレードの視覚化" data-ai-prompt="Dark themed visualization of a trader's head/silhouette with various emotions swirling inside - fear, greed, excitement, anxiety shown as different colored abstract shapes. Each emotion distorts the trading chart they're viewing. The disconnect between feeling and reality. Deep navy background with emotion colors (red fear, green greed, yellow excitement).">
+        <figcaption class="ai-prompt">Dark themed visualization of a trader's head/silhouette with various emotions swirling inside - fear, greed, excitement, anxiety shown as different colored abstract shapes. Each emotion distorts the trading chart they're viewing. The disconnect between feeling and reality. Deep navy background with emotion colors (red fear, green greed, yellow excitement).</figcaption>
       </figure>
 
       <div class="article-content">
@@ -103,46 +102,86 @@
 
           <h2>なぜ感情は誤解を招くのか</h2>
           <p>あなたの脳は生存のために進化したのであって、トレードのためではありません。私たちの祖先を生かし続けた感情的反応は、市場では積極的に有害です。</p>
-          <p><strong>損失への恐怖は利益への欲求より強い。</strong>研究によると、損失は同等の利益が良く感じられるよりも約2倍痛く感じられます。これにより、負けトレードを長く持ちすぎ、勝ちトレードを早く切りすぎます。</p>
-          <p><strong>最近の出来事が支配する。</strong>最後の数回のトレードは統計的な関連性に関係なく重く響きます。3回勝った後は無敵に感じます。3回負けた後は打ちのめされた気分になります。両方の感情は間違っています。</p>
-          <p><strong>興奮は判断を損なう。</strong>ポジティブでもネガティブでも、感情的興奮は注意を狭め、衝動的な決定を増やします。穏やかで中立的な状態がより良いトレードを生み出します。</p>
+          <p><strong>損失への恐怖は利益への欲求より強い。</strong>研究によると、損失は同等の利益が良く感じられるよりも約2倍痛く感じられます。これにより、負けトレードを長く持ちすぎ（損失を実現する痛みを避け）、勝ちトレードを早く切りすぎます（利益を手放す痛みを避け）。</p>
+          <p><strong>最近の出来事が支配する。</strong>最後の数回のトレードは統計的な関連性に関係なく重く響きます。3回勝った後は無敵に感じます。3回負けた後は打ちのめされた気分になります。両方の感情は間違っています—3回のトレードはほとんど何も教えてくれません。</p>
+          <p><strong>興奮は判断を損なう。</strong>ポジティブ（興奮、自信）でもネガティブ（恐怖、怒り）でも、感情的興奮は注意を狭め、衝動的な決定を増やします。穏やかで中立的な状態がより良いトレードを生み出します。</p>
 
           <hr>
 
           <h2>感情-決定マップ</h2>
+          <p>各感情状態は予測可能なエラーを生み出します：</p>
           <p><strong>自信/多幸感：</strong></p>
           <ul>
             <li>ポジションサイズの過大化</li>
             <li>警告サインの無視</li>
             <li>限界的なセットアップの採用</li>
+            <li>「余裕を持たせる」ためにストップを動かす</li>
           </ul>
           <p><strong>恐怖/不安：</strong></p>
           <ul>
             <li>有効なセットアップをスキップ</li>
             <li>勝ちトレードを早期に終了</li>
             <li>ポジションサイズの過小化</li>
+            <li>最初の押し目で退出</li>
           </ul>
           <p><strong>怒り/フラストレーション：</strong></p>
           <ul>
             <li>リベンジトレード</li>
             <li>意図的なルール違反</li>
+            <li>外部要因の非難</li>
             <li>トレード計画の放棄</li>
+          </ul>
+          <p><strong>退屈：</strong></p>
+          <ul>
+            <li>アクションのためにトレード</li>
+            <li>存在しないセットアップを見つける</li>
+            <li>オーバートレード</li>
+            <li>低い時間軸を執拗に監視</li>
+          </ul>
+          <p><strong>希望：</strong></p>
+          <ul>
+            <li>負けトレードを長く持ちすぎる</li>
+            <li>負けポジションに追加</li>
+            <li>自分に対してストップを動かす</li>
+            <li>明確な無効化を無視</li>
           </ul>
 
           <hr>
 
           <h2>自分の状態を認識する</h2>
           <p>どのトレードの前にも、感情的なチェックインを行います：</p>
-          <p><strong>身体スキャン：</strong>どこに緊張がありますか？心拍が速い？呼吸が浅い？</p>
-          <p><strong>言語チェック：</strong>自分に問いかけます：「今何を感じているか？」</p>
+          <p><strong>身体スキャン：</strong>どこに緊張がありますか？心拍が速い？呼吸が浅い？身体的症状は意識的な心が見逃すかもしれない感情状態を明らかにします。</p>
+          <p><strong>言語チェック：</strong>自分に問いかけます：「今何を感じているか？」感情に名前をつけるだけでその力が減少します。</p>
           <p><strong>スケール化：</strong>1-10のスケールで、どれくらい感情的に興奮していますか？3-4以上なら、待つかサイズを減らすべきです。</p>
+          <p><strong>思考を確認：</strong>「〜しなければ...」や「〜する必要がある...」と考えていますか？これらは合理的分析ではなく感情的プレッシャーを示唆します。</p>
 
           <hr>
 
           <h2>感情的距離を作る</h2>
+          <p>目標は感情をなくすことではありません—それは不可能です。目標は、感情が制御するのではなく情報を提供するのに十分な距離を作ることです。</p>
           <p><strong>決定を遅らせる。</strong>セットアップを認識してから買いをクリックするまでの間に、待ちます。30秒の休止でも感情的な脳が静まることができます。</p>
-          <p><strong>チェックリストを使用する。</strong>書かれたチェックリストは合理的な関与を強制します。</p>
-          <p><strong>感情的な期間中は小さくトレードする。</strong>理想的な状態ではないと認識しているがそれでもトレードしたい場合、サイズを大幅に減らします。</p>
+          <p><strong>チェックリストを使用する。</strong>書かれたチェックリストは合理的な関与を強制します。チェックする各項目は分析的思考の瞬間であり、感情的反応ではありません。</p>
+          <p><strong>感情的な期間中は小さくトレードする。</strong>理想的な状態ではないと認識しているがそれでもトレードしたい場合、サイズを大幅に減らします。これにより練習しながらダメージを制限します。</p>
+          <p><strong>できることを自動化する。</strong>事前に注文を設定します。条件付き注文を使用します。事前にコミットするほど、リアルタイムの感情が干渉することが少なくなります。</p>
+
+          <hr>
+
+          <h2>トレード以外の感情的干渉</h2>
+          <p>トレード以外の生活からの感情状態も重要です：</p>
+          <p><strong>睡眠不足：</strong>睡眠不足はアルコールと同じくらい判断を損なわせます。疲れ切った状態でのトレードはうまくいくことはめったにありません。</p>
+          <p><strong>個人的なストレス：</strong>人間関係の問題、仕事のストレス、健康問題—すべてが認知帯域を減少させます。小さくトレードするか、まったくトレードしないでください。</p>
+          <p><strong>財政的プレッシャー：</strong>失う余裕のないお金でトレードすることは常に恐怖を生み出します。プレッシャーは客観性を破壊します。</p>
+          <p><strong>人生の大きなイベント：</strong>引っ越し、新しい仕事、新しい赤ちゃん、離婚—これらすべてが精神的リソースを消費します。物事が落ち着くまで傍観することを検討してください。</p>
+          <p>最高のトレーダーは、感情的な状況が適切でないとき「トレードしない」ことが有効な決定であることを認識しています。</p>
+
+          <hr>
+
+          <h2>感情的レジリエンスの構築</h2>
+          <p>長期的には、感情的に反応しにくくなりたいものです：</p>
+          <p><strong>瞑想。</strong>定期的な瞑想練習—毎日10分でも—は感情的反応性を減らし、プレッシャー下での意思決定を改善します。</p>
+          <p><strong>判断なしでレビュー。</strong>負けトレードをレビューするとき、結果ではなくプロセスに焦点を当てます。ルールに従いましたか？それが重要です。自己批判は次回の感情的干渉を増やします。</p>
+          <p><strong>損失を正常化する。</strong>統計を保管します。負けトレードは正常で、予想され、プロセスの一部であることを見てください。慣れ親しむことで感情的な負担が減少します。</p>
+          <p><strong>休憩後はペーパートレード。</strong>休暇やライフイベントから戻りますか？財務的なリスクなしで再調整するために1〜2日ペーパートレードします。</p>
 
           <hr>
 
@@ -154,28 +193,30 @@
             <li>自信はあるが謙虚</li>
             <li>行動する準備はあるが焦らない</li>
           </ul>
-          <p>このゾーンにいない場合、トレードは待てます。市場は明日もあります。</p>
+          <p>このゾーンにいない場合—興奮しすぎ、怖すぎ、怒りすぎ、退屈すぎる場合—トレードは待てます。市場は明日もあります。</p>
 
           <hr>
 
           <h2>結論</h2>
           <p>あなたの感情は嘘をつきます。自信は下落の前に来ます。恐怖は逃した機会の前に来ます。興奮は悪いエントリーの前に来ます。</p>
-          <p>自分の感情状態を認識することを学びましょう。感情的衝動を無効にするシステムを作成しましょう。ゾーンにいないときは小さくトレードしましょう。</p>
+          <p>自分の感情状態を認識することを学びましょう。感情的衝動を無効にするシステムを作成しましょう。ゾーンにいないときは小さくトレードしましょう。トレードしないことが有効な決定であることを受け入れましょう。</p>
+          <p>目標は何も感じないことではありません。感情にもかかわらず、衝動ではなくプロセスに導かれてトレードすることです。</p>
+          <p>客観的な分析システムは外部のリアリティチェックとして機能できます。自信を感じているとき、コンフルエンススコアは実際に何と言っていますか？恐怖を感じているとき、サイクルフェーズは実際に蓄積を示していますか？興奮が襲ってきたとき、ボリュームレジームは分配を示していますか？データは感情に対抗します。それがその仕事です。</p>
 
           <hr>
 
           <section class="related-articles">
             <h3>関連記事</h3>
             <div class="related-grid">
-              <a href="../../revenge-trading-recovery/ja/" class="related-card">
+              <a href="../revenge-trading-recovery/" class="related-card">
                 <span class="related-category">心理学</span>
-                <h4>リベンジトレードからの回復</h4>
+                <h4>リベンジトレードからの回復：サイクルを断ち切る</h4>
               </a>
-              <a href="../../why-you-break-trading-rules/ja/" class="related-card">
+              <a href="../why-you-break-trading-rules/" class="related-card">
                 <span class="related-category">心理学</span>
                 <h4>なぜトレードルールを破り続けるのか</h4>
               </a>
-              <a href="../../3-questions-before-every-trade/ja/" class="related-card">
+              <a href="../3-questions-before-every-trade/" class="related-card">
                 <span class="related-category">実践的</span>
                 <h4>すべてのトレード前に問うべき3つの質問</h4>
               </a>
@@ -183,13 +224,19 @@
           </section>
 
           <nav class="article-nav">
-            <a href="../../when-to-ignore-divergence/ja/" class="article-nav-link prev">
-              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>前へ</span>
+            <a href="../when-to-ignore-divergence/ja/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                前へ
+              </span>
               <span class="article-nav-title">ダイバージェンスを無視すべきとき</span>
             </a>
-            <a href="../../identifying-cycle-length/ja/" class="article-nav-link next">
-              <span class="article-nav-label">次へ<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-              <span class="article-nav-title">サイクルの長さを識別する</span>
+            <a href="../identifying-cycle-length/ja/" class="article-nav-link next">
+              <span class="article-nav-label">
+                次へ
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">サイクルの長さを識別する：次のターンをいつ期待するか</span>
             </a>
           </nav>
 
@@ -216,17 +263,27 @@
     const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
     window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
     document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
     if (mobileMenuBtn && nav) {
       mobileMenuBtn.addEventListener('click', () => {
         nav.classList.toggle('open');
         const isOpen = nav.classList.contains('open');
-        mobileMenuBtn.innerHTML = isOpen ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
       });
     }
 
-    // Hero image loading - show image if it loads, keep prompt visible if not
+    // Hero image loading
     document.querySelectorAll('.hero-image img').forEach(img => {
       if (img.complete && img.naturalHeight > 0) {
         img.classList.add('loaded');
