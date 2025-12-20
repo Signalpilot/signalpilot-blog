@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Trading Que Funciona: Qué Registrar y Por Qué - Signal Pilot Blog</title>
+  <meta name="description" content="La mayoría de los diarios de trading son trabajo inútil. Así es como construir un diario que realmente mejore tu trading - y qué métricas importan más.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traducir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="./" class="active"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+      <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=practical">Práctico</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
+      <span class="article-category">Práctico</span>
+      <h1 class="article-title">Diario de Trading Que Funciona: Qué Registrar y Por Qué</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span><span>Equipo Signal Pilot</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualización de diario de trading"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Todos los libros de trading dicen que mantengas un diario. Así que empiezas uno. Fecha, ticker, entrada, salida, P&L. Después de un mes, tienes una hoja de cálculo llena de números que nunca miras.</p>
+      <p>Eso no es llevar un diario. Eso es introducir datos.</p>
+      <p>El verdadero diario de trading transforma tu trading. Así es como hacerlo de una manera que realmente funcione.</p>
+      <hr>
+      <h2>Por Qué Fallan la Mayoría de los Diarios</h2>
+      <p>Los traders abandonan sus diarios por razones predecibles:</p>
+      <p><strong>Demasiado complicado.</strong> Cincuenta columnas de datos por operación. Lleva más tiempo registrar que operar. Así que no se hace.</p>
+      <p><strong>Sin análisis.</strong> Registrar datos sin revisarlos no tiene sentido. Un diario que nunca lees no te enseña nada.</p>
+      <p><strong>Enfoque equivocado.</strong> Rastrear solo P&L no capta el punto. Puedes ganar dinero en malas operaciones y perder dinero en buenas operaciones. Los resultados solos no te dicen qué mejorar.</p>
+      <p><strong>Sin proceso.</strong> Hacer el diario cuando te apetece significa hacerlo raramente. Necesita ser parte de tu rutina, no algo secundario.</p>
+      <hr>
+      <h2>Los Campos Esenciales</h2>
+      <p>Mantenlo simple. Estos campos capturan lo que importa:</p>
+      <p><strong>1. Fecha y Hora</strong></p>
+      <p>¿Cuándo entraste? Esto te permite analizar rendimiento por hora del día, día de la semana y sesión de mercado.</p>
+      <p><strong>2. Instrumento</strong></p>
+      <p>¿Qué operaste? Rastrea si rindes mejor con ciertos instrumentos.</p>
+      <p><strong>3. Tipo de Setup</strong></p>
+      <p>¿Cuál era el setup? Nombra tus setups consistentemente. "Ruptura," "Retroceso," "Reversión" - como sea que tu estrategia los llame. Esto te permite comparar rendimiento entre tipos de setup.</p>
+      <p><strong>4. Precios de Entrada y Salida</strong></p>
+      <p>¿Dónde entraste y saliste? Compara con dónde planeabas entrar y salir.</p>
+      <p><strong>5. Tamaño de Posición</strong></p>
+      <p>¿Qué tan grande fue la operación? Rastrea si estás siguiendo tus reglas de tamaño.</p>
+      <p><strong>6. P&L (Puntos y Dólares)</strong></p>
+      <p>¿Cuál fue el resultado? Rastrea tanto el movimiento (puntos/pips) como los dólares reales. Un ganador de 10 puntos en 1 contrato es diferente de 10 puntos en 10 contratos.</p>
+      <p><strong>7. Múltiplo R</strong></p>
+      <p>¿Cuántas R ganaste o perdiste? Si arriesgaste $100 y ganaste $250, eso es +2.5R. Esto normaliza resultados independientemente del tamaño de posición.</p>
+      <hr>
+      <h2>La Adición Crítica: Notas de Proceso</h2>
+      <p>Los números solos no mejoran el trading. Necesitas capturar la historia detrás de la operación.</p>
+      <p><strong>Antes de la operación:</strong></p>
+      <ul>
+        <li>¿Por qué tomaste esta operación? (¿Cuál era la tesis?)</li>
+        <li>¿Cuál era el contexto del mercado?</li>
+        <li>¿Cómo te sentías? (¿Confiado, ansioso, aburrido, con sed de venganza?)</li>
+      </ul>
+      <p><strong>Después de la operación:</strong></p>
+      <ul>
+        <li>¿Seguiste tus reglas?</li>
+        <li>¿Qué harías diferente?</li>
+        <li>¿Fue esta una buena operación independientemente del resultado?</li>
+      </ul>
+      <p>El "por qué" importa más que el "qué". Dos operaciones con P&L idéntico pueden ser completamente diferentes - una una ejecución perfecta de tu plan, la otra un escape afortunado de una regla rota.</p>
+      <hr>
+      <h2>Capturas de Pantalla: Tu Memoria Visual</h2>
+      <p>Toma una captura de pantalla de cada operación. Anótala:</p>
+      <ul>
+        <li>Marca tu entrada y salida</li>
+        <li>Marca tu stop planeado</li>
+        <li>Nota el setup que viste</li>
+        <li>Muestra cualquier indicador que usaste</li>
+      </ul>
+      <p>Cuando revises después, verás exactamente lo que viste en el momento. Esto es invaluable para el reconocimiento de patrones - tanto en el mercado como en tu propio comportamiento.</p>
+      <p>En un mes, no recordarás cómo se veía el gráfico. La captura de pantalla lo recuerda por ti.</p>
+      <hr>
+      <h2>La Revisión Semanal</h2>
+      <p>Datos sin análisis es solo almacenamiento. Programa una revisión semanal:</p>
+      <p><strong>1. Verificación de métricas</strong></p>
+      <ul>
+        <li>¿Tasa de aciertos esta semana?</li>
+        <li>¿Ganador promedio vs. perdedor promedio?</li>
+        <li>¿Total de R ganadas o perdidas?</li>
+        <li>¿Seguiste tu tamaño de posición?</li>
+      </ul>
+      <p><strong>2. Análisis de setups</strong></p>
+      <ul>
+        <li>¿Qué tipos de setup rindieron mejor?</li>
+        <li>¿Cuáles rindieron menos?</li>
+        <li>¿Deberías tomar más de algún setup? ¿Menos?</li>
+      </ul>
+      <p><strong>3. Identificación de errores</strong></p>
+      <ul>
+        <li>¿Qué reglas rompiste?</li>
+        <li>¿Qué patrones ves en tus errores?</li>
+        <li>¿El mismo error repetido? Esa es tu prioridad a arreglar.</li>
+      </ul>
+      <p><strong>4. Acciones a tomar</strong></p>
+      <ul>
+        <li>¿Qué harás diferente la próxima semana?</li>
+        <li>Un enfoque específico para mejorar.</li>
+      </ul>
+      <hr>
+      <h2>Rastreando las Métricas Correctas</h2>
+      <p>Después de acumular datos, estas métricas revelan más sobre tu trading:</p>
+      <p><strong>Esperanza matemática:</strong> (Tasa de Aciertos × Ganancia Promedio) - (Tasa de Pérdidas × Pérdida Promedio). Esta es tu ventaja expresada en dólares por operación.</p>
+      <p><strong>Mayor ganador vs. mayor perdedor:</strong> Tu mayor perdedor nunca debería ser más grande que tu mayor ganador. Si lo es, tienes un problema de gestión de riesgo.</p>
+      <p><strong>Tasa de aciertos por setup:</strong> ¿Qué setups realmente funcionan para ti? Los datos superan a los sentimientos.</p>
+      <p><strong>Rendimiento por hora:</strong> ¿Operas mejor por la mañana o por la tarde? Algunos traders tienen patrones claros según la hora del día.</p>
+      <p><strong>Rendimiento después de ganancias/pérdidas:</strong> ¿Te vuelves imprudente después de ganancias? ¿Tímido después de pérdidas? Esto revela patrones psicológicos.</p>
+      <p><strong>Adherencia a reglas:</strong> ¿Qué porcentaje de operaciones siguió todas tus reglas? Esto podría ser más importante que el P&L.</p>
+      <hr>
+      <h2>Herramientas y Sistemas</h2>
+      <p>Puedes hacer el diario en:</p>
+      <p><strong>Hoja de cálculo (Excel/Google Sheets):</strong> Gratis, personalizable, bueno para análisis cuantitativo. Débil para capturas de pantalla y notas.</p>
+      <p><strong>Notion/Evernote:</strong> Bueno para combinar capturas de pantalla, notas y datos. Más débil para análisis estadístico.</p>
+      <p><strong>Diarios de trading dedicados (Tradervue, Edgewonk, etc.):</strong> Construidos específicamente para trading. Mejores analíticas. Usualmente de pago.</p>
+      <p><strong>Cuaderno de papel:</strong> Para notas cualitativas y seguimiento emocional. No para análisis de datos.</p>
+      <p>El mejor sistema es el que realmente usarás. Empieza simple. Añade complejidad solo si lo necesitas.</p>
+      <hr>
+      <h2>Haciéndolo un Hábito</h2>
+      <p>El hábito importa más que el formato:</p>
+      <p><strong>Haz el diario inmediatamente después de cada operación.</strong> Esperar hasta el final del día significa que olvidarás detalles y saltarás operaciones.</p>
+      <p><strong>Hazlo parte de tu proceso de trading.</strong> La operación no está completa hasta que está registrada. Sin entrada en el diario, la siguiente operación no sucede.</p>
+      <p><strong>Programa tu revisión.</strong> Misma hora cada semana. Ponlo en tu calendario. Protege ese tiempo.</p>
+      <p><strong>Mantenlo sostenible.</strong> Una entrada de diario de 2 minutos hecha consistentemente supera una entrada de 20 minutos hecha ocasionalmente.</p>
+      <hr>
+      <h2>Conclusión</h2>
+      <p>Un diario de trading es un espejo. Te muestra lo que realmente estás haciendo versus lo que crees que estás haciendo.</p>
+      <p>Mantenlo lo suficientemente simple para mantener. Revísalo lo suficientemente regular para aprender. Enfócate en el proceso, no solo en los resultados.</p>
+      <p>Los traders que mejoran más rápido son los que aprenden de cada operación - no solo de las dolorosas. Un diario hace ese aprendizaje sistemático.</p>
+      <p>Algunas herramientas analíticas reducen la carga manual capturando contexto automáticamente: qué fase del ciclo estaba activa cuando entraste, si el régimen mostraba acumulación o distribución, cuál era la puntuación de confluencia en ese momento. Cuando estos datos ya están registrados, tu diario puede enfocarse en los elementos psicológicos y de proceso que realmente requieren reflexión humana.</p>
+      <hr>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
+        <a href="../../building-a-pre-trade-checklist/es/" class="related-card"><span class="related-category">Práctico</span><h4>Construyendo una Lista de Verificación Pre-Operación</h4></a>
+        <a href="../../what-profitable-traders-know/es/" class="related-card"><span class="related-category">Psicología</span><h4>Lo Que Saben los Traders Rentables</h4></a>
+      </div></section>
+      <div class="cta-box"><p>Volume Oracle rastrea acumulación y distribución institucional en tiempo real, mientras Pentarch registra en qué fase del ciclo ocurrió cada operación. Tus entradas de diario se escriben solas cuando los datos ya están capturados.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ve el kit completo de herramientas →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro Educativo</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
