@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>機能するトレード日誌：何を記録し、なぜ記録するか - Signal Pilot Blog</title>
+  <meta name="description" content="ほとんどのトレード日誌は無駄な作業です。実際にトレードを改善する日誌の作り方 - そして最も重要な指標とは。">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="./">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/ja/" class="active">ブログ</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="翻訳"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="./" class="active"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料で試す</a>
+      <button class="mobile-menu-btn" aria-label="メニュー"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=practical">実践</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
+      <span class="article-category">実践</span>
+      <h1 class="article-title">機能するトレード日誌：何を記録し、なぜ記録するか</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span><span>Signal Pilot チーム</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="トレード日誌の可視化"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>すべてのトレーディング本は日誌をつけるように言います。だから始めます。日付、ティッカー、エントリー、エグジット、P&L。一ヶ月後、見もしない数字だらけのスプレッドシートがあります。</p>
+      <p>それは日誌をつけることではありません。それはデータ入力です。</p>
+      <p>本当のトレード日誌はあなたのトレードを変革します。実際に機能する方法を紹介します。</p>
+      <hr>
+      <h2>なぜほとんどの日誌は失敗するのか</h2>
+      <p>トレーダーが日誌を放棄する理由は予測可能です：</p>
+      <p><strong>複雑すぎる。</strong>トレードごとに50列のデータ。記録するのにトレードするより時間がかかる。だからやらない。</p>
+      <p><strong>分析がない。</strong>データを記録しても見返さなければ無意味です。読まない日誌は何も教えてくれません。</p>
+      <p><strong>間違ったフォーカス。</strong>P&Lだけを追跡するのはポイントを外しています。悪いトレードで儲け、良いトレードで損することがあります。結果だけでは何を改善すべきか分かりません。</p>
+      <p><strong>プロセスがない。</strong>気が向いたときだけ日誌をつけることは、ほとんどつけないことを意味します。ルーティンの一部でなければなりません。</p>
+      <hr>
+      <h2>必須フィールド</h2>
+      <p>シンプルに保ちましょう。これらのフィールドが重要なことを捉えます：</p>
+      <p><strong>1. 日付と時間</strong></p>
+      <p>いつエントリーしましたか？これにより時間帯、曜日、市場セッション別のパフォーマンスを分析できます。</p>
+      <p><strong>2. 銘柄</strong></p>
+      <p>何をトレードしましたか？特定の銘柄でより良いパフォーマンスを発揮するかを追跡します。</p>
+      <p><strong>3. セットアップタイプ</strong></p>
+      <p>セットアップは何でしたか？セットアップに一貫した名前をつけます。「ブレイクアウト」「プルバック」「リバーサル」- 戦略での呼び方で。これによりセットアップタイプ間のパフォーマンスを比較できます。</p>
+      <p><strong>4. エントリーとエグジット価格</strong></p>
+      <p>どこで入り、どこで出ましたか？計画していた場所と比較します。</p>
+      <p><strong>5. ポジションサイズ</strong></p>
+      <p>トレードの大きさは？サイジングルールに従っているか追跡します。</p>
+      <p><strong>6. P&L（ポイントとドル）</strong></p>
+      <p>結果は？動き（ポイント/ピップス）と実際のドル両方を追跡します。1契約での10ポイント勝ちは10契約での10ポイントとは異なります。</p>
+      <p><strong>7. Rマルチプル</strong></p>
+      <p>何R得た、または失いましたか？$100リスクして$250稼いだなら、+2.5Rです。これによりポジションサイズに関係なく結果を正規化できます。</p>
+      <hr>
+      <h2>重要な追加：プロセスノート</h2>
+      <p>数字だけではトレーディングは改善しません。トレードの背景にあるストーリーを捉える必要があります。</p>
+      <p><strong>トレード前：</strong></p>
+      <ul>
+        <li>なぜこのトレードを取りましたか？（テーゼは何でしたか？）</li>
+        <li>市場のコンテキストは？</li>
+        <li>どんな気持ちでしたか？（自信、不安、退屈、復讐心？）</li>
+      </ul>
+      <p><strong>トレード後：</strong></p>
+      <ul>
+        <li>ルールに従いましたか？</li>
+        <li>何を違うようにしますか？</li>
+        <li>結果に関係なく良いトレードでしたか？</li>
+      </ul>
+      <p>「なぜ」は「何」より重要です。同じP&Lの2つのトレードが完全に異なることがあります - 一つは計画の完璧な実行、もう一つは破ったルールからの幸運な脱出。</p>
+      <hr>
+      <h2>スクリーンショット：あなたのビジュアルメモリー</h2>
+      <p>すべてのトレードのスクリーンショットを撮ります。注釈をつけます：</p>
+      <ul>
+        <li>エントリーとエグジットをマーク</li>
+        <li>計画したストップをマーク</li>
+        <li>見たセットアップをメモ</li>
+        <li>使用したインジケーターを表示</li>
+      </ul>
+      <p>後でレビューするとき、その瞬間に見たものを正確に見ることができます。これはパターン認識に非常に価値があります - 市場でも自分の行動でも。</p>
+      <p>一ヶ月後、チャートがどう見えたか覚えていないでしょう。スクリーンショットがあなたのために覚えています。</p>
+      <hr>
+      <h2>週次レビュー</h2>
+      <p>分析なしのデータは単なる保管です。週次レビューを予定します：</p>
+      <p><strong>1. メトリクスチェック</strong></p>
+      <ul>
+        <li>今週の勝率は？</li>
+        <li>平均勝ちトレード vs 平均負けトレード？</li>
+        <li>合計獲得または損失R？</li>
+        <li>ポジションサイジングに従いましたか？</li>
+      </ul>
+      <p><strong>2. セットアップ分析</strong></p>
+      <ul>
+        <li>どのセットアップタイプが最も良いパフォーマンスでしたか？</li>
+        <li>どれがアンダーパフォームでしたか？</li>
+        <li>あるセットアップをもっと取るべき？少なく？</li>
+      </ul>
+      <p><strong>3. ミス特定</strong></p>
+      <ul>
+        <li>どのルールを破りましたか？</li>
+        <li>ミスにどんなパターンが見えますか？</li>
+        <li>同じミスを繰り返した？それが修正の優先事項です。</li>
+      </ul>
+      <p><strong>4. アクションアイテム</strong></p>
+      <ul>
+        <li>来週何を違うようにしますか？</li>
+        <li>改善のための具体的なフォーカス一つ。</li>
+      </ul>
+      <hr>
+      <h2>正しいメトリクスを追跡する</h2>
+      <p>データを蓄積した後、これらのメトリクスがトレーディングについて最も多くを明らかにします：</p>
+      <p><strong>期待値：</strong>（勝率 × 平均勝ち）-（負け率 × 平均負け）。これはトレードあたりのドルで表されたあなたのエッジです。</p>
+      <p><strong>最大勝ち vs 最大負け：</strong>最大の負けは最大の勝ちより大きくあるべきではありません。そうなら、リスク管理の問題があります。</p>
+      <p><strong>セットアップ別勝率：</strong>どのセットアップが実際に機能していますか？データは感情に勝ります。</p>
+      <p><strong>時間別パフォーマンス：</strong>午前と午後、どちらがより良くトレードしますか？時間帯パターンがはっきりしているトレーダーもいます。</p>
+      <p><strong>勝ち/負け後のパフォーマンス：</strong>勝ちトレード後に無謀になりますか？負けトレード後に臆病になりますか？これは心理的パターンを明らかにします。</p>
+      <p><strong>ルール遵守：</strong>トレードの何パーセントがすべてのルールに従いましたか？これはP&Lより重要かもしれません。</p>
+      <hr>
+      <h2>ツールとシステム</h2>
+      <p>日誌は以下でつけられます：</p>
+      <p><strong>スプレッドシート（Excel/Googleシート）：</strong>無料、カスタマイズ可能、定量分析に良い。スクリーンショットとメモには弱い。</p>
+      <p><strong>Notion/Evernote：</strong>スクリーンショット、メモ、データの組み合わせに良い。統計分析には弱い。</p>
+      <p><strong>専用トレーディング日誌（Tradervue、Edgewonkなど）：</strong>トレーディング用に設計。最高のアナリティクス。通常有料。</p>
+      <p><strong>紙のノート：</strong>定性的なメモと感情追跡用。データ分析には向かない。</p>
+      <p>最高のシステムは実際に使うものです。シンプルに始めましょう。必要な場合にのみ複雑さを追加します。</p>
+      <hr>
+      <h2>習慣を定着させる</h2>
+      <p>習慣はフォーマットより重要です：</p>
+      <p><strong>各トレード直後に日誌をつける。</strong>一日の終わりまで待つと、詳細を忘れ、トレードを飛ばすことになります。</p>
+      <p><strong>トレーディングプロセスの一部にする。</strong>日誌に記録するまでトレードは完了しません。日誌エントリーなし、次のトレードなし。</p>
+      <p><strong>レビューを予定する。</strong>毎週同じ時間。カレンダーに入れる。その時間を守る。</p>
+      <p><strong>持続可能に保つ。</strong>一貫して行う2分の日誌エントリーは、時々行う20分のエントリーに勝ります。</p>
+      <hr>
+      <h2>結論</h2>
+      <p>トレード日誌は鏡です。あなたが実際に何をしているかを、あなたが何をしていると思っているかと対比して見せてくれます。</p>
+      <p>維持できるほどシンプルに保ちましょう。学ぶのに十分な頻度でレビューしましょう。結果だけでなくプロセスにフォーカスしましょう。</p>
+      <p>最も早く上達するトレーダーは、痛いトレードだけでなく、すべてのトレードから学ぶ人です。日誌はその学習を体系的にします。</p>
+      <p>一部の分析ツールは、コンテキストを自動的にキャプチャすることで手動の負担を軽減します：エントリー時にどのサイクルフェーズがアクティブだったか、レジームがアキュムレーションかディストリビューションを示していたか、その時のコンフルエンススコアは何だったか。これらのデータがすでに記録されている場合、日誌は本当に人間の振り返りを必要とする心理的およびプロセス要素に集中できます。</p>
+      <hr>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+        <a href="../../building-a-pre-trade-checklist/ja/" class="related-card"><span class="related-category">実践</span><h4>プレトレードチェックリストを作る</h4></a>
+        <a href="../../what-profitable-traders-know/ja/" class="related-card"><span class="related-category">心理学</span><h4>利益を出すトレーダーが知っていること</h4></a>
+      </div></section>
+      <div class="cta-box"><p>Volume Oracleは機関投資家のアキュムレーションとディストリビューションをリアルタイムで追跡し、Pentarchは各トレードがどのサイクルフェーズで発生したかを記録します。データがすでにキャプチャされているとき、日誌エントリーは自動的に書かれます。</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">完全なツールキットを見る →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/ja/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育ハブ</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="トップへ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

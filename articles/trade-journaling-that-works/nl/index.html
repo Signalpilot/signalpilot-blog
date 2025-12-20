@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Journaal Dat Werkt: Wat Te Volgen en Waarom - Signal Pilot Blog</title>
+  <meta name="description" content="De meeste trade journalen zijn nutteloos werk. Hier lees je hoe je een journaal bouwt dat je trading daadwerkelijk verbetert - en welke metrics het meest tellen.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="./">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educatie</a><a href="/nl/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Vertalen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="./" class="active"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Gratis Proberen</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/nl/">Blog</a><span class="breadcrumb-sep">›</span><a href="/nl/?filter=practical">Praktisch</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
+      <span class="article-category">Praktisch</span>
+      <h1 class="article-title">Trade Journaal Dat Werkt: Wat Te Volgen en Waarom</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min leestijd</span><span>Signal Pilot Team</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Trade journaal visualisatie"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Elk trading boek zegt dat je een journaal moet bijhouden. Dus je begint er een. Datum, ticker, entry, exit, P&L. Na een maand heb je een spreadsheet vol met cijfers waar je nooit naar kijkt.</p>
+      <p>Dat is geen journaal bijhouden. Dat is data invoeren.</p>
+      <p>Echt trade journaal bijhouden transformeert je trading. Hier is hoe je het doet op een manier die echt werkt.</p>
+      <hr>
+      <h2>Waarom De Meeste Journalen Falen</h2>
+      <p>Traders geven hun journalen op om voorspelbare redenen:</p>
+      <p><strong>Te ingewikkeld.</strong> Vijftig kolommen data per trade. Het duurt langer om te journalen dan om te traden. Dus het wordt niet gedaan.</p>
+      <p><strong>Geen analyse.</strong> Data vastleggen zonder het te reviewen is zinloos. Een journaal dat je nooit leest leert je niets.</p>
+      <p><strong>Verkeerde focus.</strong> Alleen P&L volgen mist het punt. Je kunt geld verdienen op slechte trades en geld verliezen op goede trades. Resultaten alleen vertellen je niet wat je moet verbeteren.</p>
+      <p><strong>Geen proces.</strong> Journalen wanneer je er zin in hebt betekent zelden journalen. Het moet deel uitmaken van je routine, geen bijzaak.</p>
+      <hr>
+      <h2>De Essentiële Velden</h2>
+      <p>Houd het simpel. Deze velden vangen wat belangrijk is:</p>
+      <p><strong>1. Datum en Tijd</strong></p>
+      <p>Wanneer stapte je in? Dit laat je performance analyseren per tijd van de dag, dag van de week en marktsessie.</p>
+      <p><strong>2. Instrument</strong></p>
+      <p>Wat tradede je? Volg of je beter presteert met bepaalde instrumenten.</p>
+      <p><strong>3. Setup Type</strong></p>
+      <p>Wat was de setup? Benoem je setups consistent. "Breakout," "Pullback," "Reversal" - hoe je strategie ze ook noemt. Dit laat je performance vergelijken over setup types.</p>
+      <p><strong>4. Entry en Exit Prijzen</strong></p>
+      <p>Waar stapte je in en uit? Vergelijk met waar je plande in en uit te stappen.</p>
+      <p><strong>5. Positie Grootte</strong></p>
+      <p>Hoe groot was de trade? Volg of je je sizing regels volgt.</p>
+      <p><strong>6. P&L (Punten en Dollars)</strong></p>
+      <p>Wat was het resultaat? Volg zowel de beweging (punten/pips) als daadwerkelijke dollars. Een 10-punten winnaar op 1 contract is anders dan 10 punten op 10 contracten.</p>
+      <p><strong>7. R-Multiple</strong></p>
+      <p>Hoeveel R maakte of verloor je? Als je $100 riskeerde en $250 maakte, is dat +2.5R. Dit normaliseert resultaten ongeacht positie grootte.</p>
+      <hr>
+      <h2>De Kritieke Toevoeging: Proces Notities</h2>
+      <p>Cijfers alleen verbeteren trading niet. Je moet het verhaal achter de trade vastleggen.</p>
+      <p><strong>Voor de trade:</strong></p>
+      <ul>
+        <li>Waarom nam je deze trade? (Wat was de thesis?)</li>
+        <li>Wat was de marktcontext?</li>
+        <li>Hoe voelde je je? (Zelfverzekerd, angstig, verveeld, wraakzuchtig?)</li>
+      </ul>
+      <p><strong>Na de trade:</strong></p>
+      <ul>
+        <li>Volgde je je regels?</li>
+        <li>Wat zou je anders doen?</li>
+        <li>Was dit een goede trade ongeacht het resultaat?</li>
+      </ul>
+      <p>Het "waarom" telt meer dan het "wat". Twee trades met identieke P&L kunnen compleet verschillend zijn - de ene een perfecte uitvoering van je plan, de andere een gelukkige ontsnapping aan een gebroken regel.</p>
+      <hr>
+      <h2>Screenshots: Je Visueel Geheugen</h2>
+      <p>Maak een screenshot van elke trade. Annoteer het:</p>
+      <ul>
+        <li>Markeer je entry en exit</li>
+        <li>Markeer je geplande stop</li>
+        <li>Noteer de setup die je zag</li>
+        <li>Toon alle indicatoren die je gebruikte</li>
+      </ul>
+      <p>Wanneer je later reviewt, zie je precies wat je op dat moment zag. Dit is van onschatbare waarde voor patroonherkenning - zowel in de markt als in je eigen gedrag.</p>
+      <p>Over een maand zul je je niet herinneren hoe de grafiek eruitzag. De screenshot onthoudt het voor je.</p>
+      <hr>
+      <h2>De Wekelijkse Review</h2>
+      <p>Data zonder analyse is gewoon opslag. Plan een wekelijkse review:</p>
+      <p><strong>1. Metrics check</strong></p>
+      <ul>
+        <li>Winrate deze week?</li>
+        <li>Gemiddelde winnaar vs. gemiddelde verliezer?</li>
+        <li>Totaal R gewonnen of verloren?</li>
+        <li>Volgde je je positie sizing?</li>
+      </ul>
+      <p><strong>2. Setup analyse</strong></p>
+      <ul>
+        <li>Welke setup types presteerden het best?</li>
+        <li>Welke onderpresteerden?</li>
+        <li>Moet je meer van een setup nemen? Minder?</li>
+      </ul>
+      <p><strong>3. Fout identificatie</strong></p>
+      <ul>
+        <li>Welke regels brak je?</li>
+        <li>Welke patronen zie je in je fouten?</li>
+        <li>Dezelfde fout herhaald? Dat is je prioriteit om te fixen.</li>
+      </ul>
+      <p><strong>4. Actiepunten</strong></p>
+      <ul>
+        <li>Wat ga je volgende week anders doen?</li>
+        <li>Eén specifieke focus voor verbetering.</li>
+      </ul>
+      <hr>
+      <h2>De Juiste Metrics Volgen</h2>
+      <p>Na het verzamelen van data onthullen deze metrics het meest over je trading:</p>
+      <p><strong>Verwachting:</strong> (Winrate × Gem. Winst) - (Verliesrate × Gem. Verlies). Dit is je edge uitgedrukt in dollars per trade.</p>
+      <p><strong>Grootste winnaar vs. grootste verliezer:</strong> Je grootste verliezer zou nooit groter moeten zijn dan je grootste winnaar. Als dat zo is, heb je een risicomanagement probleem.</p>
+      <p><strong>Winrate per setup:</strong> Welke setups werken echt voor jou? Data klopt gevoelens.</p>
+      <p><strong>Performance per tijd:</strong> Trade je beter 's ochtends of 's middags? Sommige traders hebben duidelijke tijd-van-de-dag patronen.</p>
+      <p><strong>Performance na winsten/verliezen:</strong> Word je roekeloos na winnaars? Terughoudend na verliezers? Dit onthult psychologische patronen.</p>
+      <p><strong>Regel naleving:</strong> Welk percentage trades volgde al je regels? Dit is misschien belangrijker dan P&L.</p>
+      <hr>
+      <h2>Tools en Systemen</h2>
+      <p>Je kunt journalen in:</p>
+      <p><strong>Spreadsheet (Excel/Google Sheets):</strong> Gratis, aanpasbaar, goed voor kwantitatieve analyse. Zwak voor screenshots en notities.</p>
+      <p><strong>Notion/Evernote:</strong> Goed voor het combineren van screenshots, notities en data. Zwakker voor statistische analyse.</p>
+      <p><strong>Dedicated trading journalen (Tradervue, Edgewonk, etc.):</strong> Speciaal gebouwd voor trading. Beste analytics. Meestal betaald.</p>
+      <p><strong>Papieren notitieboek:</strong> Voor kwalitatieve notities en emotionele tracking. Niet voor data analyse.</p>
+      <p>Het beste systeem is degene die je daadwerkelijk zult gebruiken. Begin simpel. Voeg complexiteit alleen toe als je het nodig hebt.</p>
+      <hr>
+      <h2>Het Laten Beklijven</h2>
+      <p>De gewoonte telt meer dan het formaat:</p>
+      <p><strong>Journal direct na elke trade.</strong> Wachten tot het einde van de dag betekent dat je details vergeet en trades overslaat.</p>
+      <p><strong>Maak het deel van je trading proces.</strong> De trade is niet compleet totdat die is gejournald. Geen journaal entry, geen volgende trade.</p>
+      <p><strong>Plan je review.</strong> Dezelfde tijd elke week. Zet het in je agenda. Bescherm die tijd.</p>
+      <p><strong>Houd het volhoudbaar.</strong> Een 2-minuten journaal entry consistent gedaan verslaat een 20-minuten entry af en toe gedaan.</p>
+      <hr>
+      <h2>Conclusie</h2>
+      <p>Een trade journaal is een spiegel. Het toont je wat je daadwerkelijk doet versus wat je denkt te doen.</p>
+      <p>Houd het simpel genoeg om bij te houden. Review het regelmatig genoeg om te leren. Focus op proces, niet alleen resultaten.</p>
+      <p>De traders die het snelst verbeteren zijn degenen die van elke trade leren - niet alleen de pijnlijke. Een journaal maakt dat leren systematisch.</p>
+      <p>Sommige analytische tools verminderen de handmatige last door context automatisch vast te leggen: welke cyclusfase actief was toen je instapte, of het regime accumulatie of distributie toonde, wat de confluentiesco re was op dat moment. Wanneer deze data al is vastgelegd, kan je journaal focussen op de psychologische en proceselementen die echt menselijke reflectie vereisen.</p>
+      <hr>
+      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
+        <a href="../../building-a-pre-trade-checklist/nl/" class="related-card"><span class="related-category">Praktisch</span><h4>Een Pre-Trade Checklist Bouwen</h4></a>
+        <a href="../../what-profitable-traders-know/nl/" class="related-card"><span class="related-category">Psychologie</span><h4>Wat Winstgevende Traders Weten</h4></a>
+      </div></section>
+      <div class="cta-box"><p>Volume Oracle volgt institutionele accumulatie en distributie in real-time, terwijl Pentarch logt in welke cyclusfase elke trade plaatsvond. Je journaal entries schrijven zichzelf wanneer de data al is vastgelegd.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Bekijk de volledige toolkit →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/nl/">← Terug naar Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatie Hub</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Alle rechten voorbehouden.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
