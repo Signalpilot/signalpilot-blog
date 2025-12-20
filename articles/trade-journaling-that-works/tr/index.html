@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İşe Yarayan Trade Günlüğü: Ne Takip Etmeli ve Neden - Signal Pilot Blog</title>
+  <meta name="description" content="Çoğu trade günlüğü işe yaramaz meşguliyettir. İşte trading'inizi gerçekten geliştiren bir günlük nasıl oluşturulur - ve en önemli metrikler nelerdir.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/tr/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Temayı değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/tr/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/tr/?filter=practical">Pratik</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">Pratik</span>
+          <h1 class="article-title">İşe Yarayan Trade Günlüğü: Ne Takip Etmeli ve Neden</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Paylaş:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitter'da Paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedIn'de Paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Linki Kopyala">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Trade günlüğü görselleştirmesi">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Her trading kitabı günlük tutmayı söyler. Siz de bir tane başlatırsınız. Tarih, sembol, giriş, çıkış, K/Z. Bir ay sonra elinizde hiç bakmadığınız rakamlarla dolu bir tablo olur.</p>
+          <p>Bu günlük tutmak değil. Bu veri girişi.</p>
+          <p>Gerçek trade günlüğü tutma, trading'inizi dönüştürür. İşte gerçekten işe yarayan şekilde nasıl yapılır.</p>
+
+          <hr>
+
+          <h2>Çoğu Günlük Neden Başarısız Olur</h2>
+          <p>Trader'lar günlüklerini öngörülebilir nedenlerle terk eder:</p>
+          <p><strong>Çok karmaşık.</strong> Trade başına elli sütun veri. Günlük tutmak trading'den daha uzun sürer. Bu yüzden yapılmaz.</p>
+          <p><strong>Analiz yok.</strong> Veri kaydetmek onu incelemeden anlamsızdır. Hiç okumadığınız bir günlük size hiçbir şey öğretmez.</p>
+          <p><strong>Yanlış odak.</strong> Sadece K/Z takip etmek konuyu kaçırır. Kötü trade'lerde para kazanabilir, iyi trade'lerde para kaybedebilirsiniz. Sonuçlar tek başına neyi geliştireceğinizi söylemez.</p>
+          <p><strong>Süreç yok.</strong> Canınız istediğinde günlük tutmak nadiren tutmak demektir. Sonradan akla gelen bir şey değil, rutininizin parçası olmalı.</p>
+
+          <hr>
+
+          <h2>Temel Alanlar</h2>
+          <p>Basit tutun. Bu alanlar önemli olanı yakalar:</p>
+          <p><strong>1. Tarih ve Saat</strong></p>
+          <p>Ne zaman girdiniz? Bu, günün saatine, haftanın gününe ve piyasa seansına göre performansı analiz etmenizi sağlar.</p>
+          <p><strong>2. Enstrüman</strong></p>
+          <p>Ne trade ettiniz? Belirli enstrümanlarda daha iyi performans gösterip göstermediğinizi takip edin.</p>
+          <p><strong>3. Setup Tipi</strong></p>
+          <p>Setup neydi? Setup'larınızı tutarlı şekilde adlandırın. "Breakout," "Pullback," "Dönüş" - stratejiniz bunlara ne diyorsa. Bu, setup tipleri arasında performansı karşılaştırmanızı sağlar.</p>
+          <p><strong>4. Giriş ve Çıkış Fiyatları</strong></p>
+          <p>Nereden girip nereden çıktınız? Planladığınız giriş ve çıkış noktalarıyla karşılaştırın.</p>
+          <p><strong>5. Pozisyon Büyüklüğü</strong></p>
+          <p>Trade ne kadar büyüktü? Boyutlandırma kurallarınıza uyup uymadığınızı takip edin.</p>
+          <p><strong>6. K/Z (Puan ve Dolar)</strong></p>
+          <p>Sonuç neydi? Hem hareketi (puan/pip) hem de gerçek dolarları takip edin. 1 kontraktta 10 puanlık kazanç, 10 kontraktta 10 puandan farklıdır.</p>
+          <p><strong>7. R-Çarpanı</strong></p>
+          <p>Kaç R kazandınız veya kaybettiniz? 100$ risk aldınız ve 250$ kazandınız ise bu +2.5R'dir. Bu, pozisyon büyüklüğünden bağımsız olarak sonuçları normalleştirir.</p>
+
+          <hr>
+
+          <h2>Kritik Ekleme: Süreç Notları</h2>
+          <p>Tek başına rakamlar trading'i geliştirmez. Trade'in arkasındaki hikayeyi yakalamanız gerekir.</p>
+          <p><strong>Trade'den önce:</strong></p>
+          <ul>
+            <li>Bu trade'i neden aldınız? (Teziniz neydi?)</li>
+            <li>Piyasa bağlamı neydi?</li>
+            <li>Nasıl hissediyordunuz? (Güvenli, endişeli, sıkılmış, intikam modunda?)</li>
+          </ul>
+          <p><strong>Trade'den sonra:</strong></p>
+          <ul>
+            <li>Kurallarınıza uydunuz mu?</li>
+            <li>Farklı ne yapardınız?</li>
+            <li>Sonuç ne olursa olsun bu iyi bir trade miydi?</li>
+          </ul>
+          <p>"Neden" "ne"den daha önemlidir. Aynı K/Z'ye sahip iki trade tamamen farklı olabilir - biri planınızın mükemmel uygulaması, diğeri kırılmış bir kuraldan şanslı bir kaçış.</p>
+
+          <hr>
+
+          <h2>Ekran Görüntüleri: Görsel Hafızanız</h2>
+          <p>Her trade'in ekran görüntüsünü alın. Açıklama ekleyin:</p>
+          <ul>
+            <li>Giriş ve çıkışınızı işaretleyin</li>
+            <li>Planladığınız stop'u işaretleyin</li>
+            <li>Gördüğünüz setup'u not edin</li>
+            <li>Kullandığınız göstergeleri gösterin</li>
+          </ul>
+          <p>Daha sonra incelediğinizde, o anda tam olarak ne gördüğünüzü göreceksiniz. Bu, desen tanıma için paha biçilmezdir - hem piyasada hem de kendi davranışınızda.</p>
+          <p>Bir ay sonra grafiğin nasıl göründüğünü hatırlamayacaksınız. Ekran görüntüsü sizin için hatırlar.</p>
+
+          <hr>
+
+          <h2>Haftalık İnceleme</h2>
+          <p>Analizsiz veri sadece depolamadır. Haftalık bir inceleme planlayın:</p>
+          <p><strong>1. Metrik kontrolü</strong></p>
+          <ul>
+            <li>Bu hafta kazanma oranı?</li>
+            <li>Ortalama kazançlı vs. ortalama kayıplı?</li>
+            <li>Toplam kazanılan veya kaybedilen R?</li>
+            <li>Pozisyon boyutlandırmanıza uydunuz mu?</li>
+          </ul>
+          <p><strong>2. Setup analizi</strong></p>
+          <ul>
+            <li>Hangi setup tipleri en iyi performans gösterdi?</li>
+            <li>Hangisi düşük performans gösterdi?</li>
+            <li>Herhangi bir setup'tan daha fazla mı almalısınız? Daha az mı?</li>
+          </ul>
+          <p><strong>3. Hata tespiti</strong></p>
+          <ul>
+            <li>Hangi kuralları ihlal ettiniz?</li>
+            <li>Hatalarınızda hangi kalıpları görüyorsunuz?</li>
+            <li>Aynı hata tekrarlandı mı? Bu, düzeltme önceliğiniz.</li>
+          </ul>
+          <p><strong>4. Eylem maddeleri</strong></p>
+          <ul>
+            <li>Önümüzdeki hafta neyi farklı yapacaksınız?</li>
+            <li>İyileştirme için tek belirli odak.</li>
+          </ul>
+
+          <hr>
+
+          <h2>Doğru Metrikleri Takip Etme</h2>
+          <p>Veri biriktirdikten sonra, bu metrikler trading'iniz hakkında en çok şeyi ortaya koyar:</p>
+          <p><strong>Beklenti:</strong> (Kazanma Oranı × Ort. Kazanç) - (Kayıp Oranı × Ort. Kayıp). Bu, trade başına dolar olarak ifade edilen avantajınızdır.</p>
+          <p><strong>En büyük kazançlı vs. en büyük kayıplı:</strong> En büyük kaybınız asla en büyük kazancınızdan büyük olmamalı. Eğer öyleyse, risk yönetimi sorununuz var demektir.</p>
+          <p><strong>Setup'a göre kazanma oranı:</strong> Hangi setup'lar sizin için gerçekten işe yarıyor? Veri duyguları yener.</p>
+          <p><strong>Zamana göre performans:</strong> Sabah mı öğleden sonra mı daha iyi trade yapıyorsunuz? Bazı trader'ların net zaman-içinde-gün kalıpları var.</p>
+          <p><strong>Kazançlar/kayıplar sonrası performans:</strong> Kazançlardan sonra pervasızlaşıyor musunuz? Kayıplardan sonra çekingen mi oluyorsunuz? Bu, psikolojik kalıpları ortaya koyar.</p>
+          <p><strong>Kural uyumu:</strong> Trade'lerin yüzde kaçı tüm kurallarınıza uydu? Bu, K/Z'den daha önemli olabilir.</p>
+
+          <hr>
+
+          <h2>Araçlar ve Sistemler</h2>
+          <p>Şunlarla günlük tutabilirsiniz:</p>
+          <p><strong>Tablo (Excel/Google Sheets):</strong> Ücretsiz, özelleştirilebilir, nicel analiz için iyi. Ekran görüntüleri ve notlar için zayıf.</p>
+          <p><strong>Notion/Evernote:</strong> Ekran görüntülerini, notları ve verileri birleştirmek için iyi. İstatistiksel analiz için daha zayıf.</p>
+          <p><strong>Özel trading günlükleri (Tradervue, Edgewonk, vb.):</strong> Trading için özel olarak tasarlanmış. En iyi analitik. Genellikle ücretli.</p>
+          <p><strong>Kağıt defter:</strong> Nitel notlar ve duygusal takip için. Veri analizi için değil.</p>
+          <p>En iyi sistem, gerçekten kullanacağınız sistemdir. Basit başlayın. Karmaşıklık sadece ihtiyacınız varsa ekleyin.</p>
+
+          <hr>
+
+          <h2>Alışkanlığı Sürdürme</h2>
+          <p>Alışkanlık formattan daha önemlidir:</p>
+          <p><strong>Her trade'den hemen sonra günlük tutun.</strong> Gün sonuna kadar beklemek detayları unutacağınız ve trade'leri atlayacağınız anlamına gelir.</p>
+          <p><strong>Trading sürecinizin parçası yapın.</strong> Günlüğe yazılana kadar trade tamamlanmış sayılmaz. Günlük girişi yoksa, sonraki trade olmaz.</p>
+          <p><strong>İncelemenizi planlayın.</strong> Her hafta aynı saatte. Takviminize koyun. O zamanı koruyun.</p>
+          <p><strong>Sürdürülebilir tutun.</strong> Tutarlı yapılan 2 dakikalık günlük girişi, ara sıra yapılan 20 dakikalık girişi yener.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>Trade günlüğü bir aynadır. Size gerçekte ne yaptığınızı, düşündüğünüzün aksine gösterir.</p>
+          <p>Sürdürebileceğiniz kadar basit tutun. Öğrenebileceğiniz kadar düzenli inceleyin. Sadece sonuçlara değil, sürece odaklanın.</p>
+          <p>En hızlı gelişen trader'lar her trade'den öğrenenlerdir - sadece acı verenlerden değil. Günlük, bu öğrenmeyi sistematik hale getirir.</p>
+          <p>Bazı analitik araçlar, bağlamı otomatik olarak kaydederek manuel yükü azaltır: girdiğinizde hangi döngü fazının aktif olduğunu, rejimin birikim mi dağıtım mı gösterdiğini, o andaki konfluans skorunun ne olduğunu. Bu veriler zaten kaydedildiğinde, günlüğünüz gerçekten insan düşüncesi gerektiren psikolojik ve süreç unsurlarına odaklanabilir.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../../building-a-pre-trade-checklist/tr/" class="related-card">
+                <span class="related-category">Pratik</span>
+                <h4>Trade Öncesi Kontrol Listesi Oluşturma</h4>
+              </a>
+              <a href="../../what-profitable-traders-know/tr/" class="related-card">
+                <span class="related-category">Psikoloji</span>
+                <h4>Kârlı Trader'ların Bildiği Şeyler</h4>
+              </a>
+              <a href="../../rules-based-vs-discretionary/tr/" class="related-card">
+                <span class="related-category">Sistemler</span>
+                <h4>Kural Tabanlı vs İhtiyari Trading</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../identifying-cycle-length/tr/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Önceki
+              </span>
+              <span class="article-nav-title">Döngü Uzunluğunu Belirleme: Bir Sonraki Dönüşü Ne Zaman Beklemeli</span>
+            </a>
+            <a href="../../multi-timeframe-confirmation/tr/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Sonraki
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Çoklu Zaman Dilimi Onayı: Trende Karşı Koymayı Nasıl Bırakılır</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Volume Oracle kurumsal birikim ve dağıtımı gerçek zamanlı takip ederken, Pentarch her trade'in hangi döngü fazında gerçekleştiğini kaydeder. Veriler zaten yakalandığında günlük girişleriniz kendini yazar.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Tüm araç setini gör →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/tr/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı dön"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
