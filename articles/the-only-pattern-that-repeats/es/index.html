@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Único Patrón Que Realmente Se Repite en los Mercados - Signal Pilot Blog</title>
+  <meta name="description" content="Hombro cabeza hombro. Dobles techos. No funcionan de forma fiable. Pero hay un patrón que genuinamente se repite en cada marco temporal, en cada mercado.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traducir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="./" class="active"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+      <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=cycles">Ciclos de Mercado</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
+      <span class="article-category">Ciclos de Mercado</span>
+      <h1 class="article-title">El Único Patrón Que Realmente Se Repite en los Mercados</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span><span>Equipo Signal Pilot</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="El único patrón que se repite"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Hombro cabeza hombro. Dobles techos. Banderas alcistas. Cuñas. Los libros de trading están llenos de patrones que supuestamente se repiten.</p>
+      <p>Aquí está el problema: no lo hacen. Al menos, no lo suficientemente fiable para operar.</p>
+      <p>Pero hay un patrón que genuinamente se repite. Aparece en cada marco temporal, en cada mercado, en cada época. Y a diferencia de los patrones gráficos, hay una razón fundamental por la que debe repetirse.</p>
+      <hr>
+      <h2>El Patrón del Ciclo</h2>
+      <p>Los mercados se mueven en ciclos a través de cinco fases distintas: acumulación, avance, clímax, distribución y declive.</p>
+      <p>Esto no es místico. Es estructural. Aquí está por qué:</p>
+      <p><strong>Acumulación (TD)</strong> sucede cuando el dinero inteligente está comprando. Pero no pueden comprar todo de una vez - su tamaño movería el mercado en su contra. Así que compran lentamente.</p>
+      <p><strong>Avance (IGN)</strong> sucede cuando la acumulación está completa. La oferta se seca. El precio sube, atrayendo más compradores.</p>
+      <p><strong>Clímax (CAP)</strong> es el punto de agotamiento. Las compras alcanzan un pico febril. Todos los que querían comprar han comprado.</p>
+      <p><strong>Distribución (WRN)</strong> sucede cuando el dinero inteligente está vendiendo. Venden lentamente en la fortaleza.</p>
+      <p><strong>Declive (BDN)</strong> sucede cuando la distribución está completa. El precio cae hasta que se vuelve obviamente sobrevendido.</p>
+      <p>Luego la acumulación comienza de nuevo.</p>
+      <hr>
+      <h2>Por Qué los Patrones Gráficos No Funcionan (Pero Este Sí)</h2>
+      <p>Los patrones gráficos clásicos intentan predecir el movimiento del precio a partir de formas geométricas. Pero las formas son observaciones superficiales. No explican por qué debería moverse el precio.</p>
+      <p>Los patrones de ciclos son diferentes. No se tratan de formas. Se tratan de la realidad subyacente del flujo de dinero.</p>
+      <hr>
+      <h2>Fractales de Marco Temporal</h2>
+      <p>Aquí es donde se pone interesante: los ciclos se anidan unos dentro de otros.</p>
+      <p>Un gráfico diario podría mostrar distribución, pero el gráfico de 4 horas muestra una mini acumulación dentro de esa distribución.</p>
+      <p>Cada marco temporal tiene su propio ciclo. Interactúan. Los ciclos de marcos temporales superiores dominan los movimientos de marcos temporales inferiores.</p>
+      <hr>
+      <h2>Conclusión</h2>
+      <p>Olvida el hombro cabeza hombro. Olvida los triángulos y las cuñas.</p>
+      <p>El patrón que realmente se repite es el ciclo de cinco fases: acumulación (TD), avance (IGN), clímax (CAP), distribución (WRN) y declive (BDN).</p>
+      <p>Aprende a ver los ciclos, y aprendes a ver el mercado. Todo lo demás es solo ruido.</p>
+      <hr>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
+        <a href="../../why-markets-move-in-cycles/es/" class="related-card"><span class="related-category">Ciclos</span><h4>Por Qué los Mercados Se Mueven en Ciclos</h4></a>
+        <a href="../../why-your-indicators-keep-failing/es/" class="related-card"><span class="related-category">Indicadores</span><h4>Por Qué Tus Indicadores Siguen Fallando</h4></a>
+      </div></section>
+      <div class="cta-box"><p>Pentarch mapea las fases del ciclo en tiempo real, mostrándote exactamente dónde estás en el ritmo estructural del mercado.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ve el ciclo por ti mismo →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro Educativo</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

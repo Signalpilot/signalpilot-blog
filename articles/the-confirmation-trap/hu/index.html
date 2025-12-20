@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Megerősítés Csapdája: Miért Jelent Több Indikátor Rosszabb Eredményeket - Signal Pilot Blog</title>
+  <meta name="description" content="A grafikonodon négy indikátor van. Ritkán egyeznek. Itt van, miért teszi több eszköz a kereskedést nehezebbé, nem könnyebbé.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/hu/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+      <button class="mobile-menu-btn" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=indicators">Indikátorok</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
+      <span class="article-category">Indikátorok</span>
+      <h1 class="article-title">A Megerősítés Csapdája: Miért Jelent Több Indikátor Rosszabb Eredményeket</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span><span>Signal Pilot Csapat</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Megerősítési csapda - elemzési bénulás"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>A grafikonodon négy indikátor van. Ritkán egyeznek. Amikor egyeznek, a mozgás már véget ért. Amikor nem, te meg vagy bénulva.</p>
+      <p>Ismerősen hangzik?</p>
+      <p>Ezeket az eszközöket "megerősítésre" adtad hozzá. Ehelyett zavart kaptál. És valahogy, mindezzel az információval, rosszabbul teljesítesz, mint amikor csupasz grafikonnal kereskedtél.</p>
+      <p>Ez nem balszerencse. Ez a megerősítés csapdája - és csendben elpusztítja azokat a kereskedőket, akik azt hiszik, óvatosak.</p>
+      <hr>
+      <h2>Hogyan Alakul Ki a Csapda</h2>
+      <p>Általában egy veszteséggel kezdődik.</p>
+      <p>Egy indikátor alapján nyitottál egy trade-et. Nem jött be. A természetes következtetés: több megerősítésre volt szükséged. Tehát hozzáadtál még egy indikátort. Most mindkettőnek egyeznie kell a belépés előtt.</p>
+      <p>Ez biztonságosabbnak tűnik. Alaposabbnak tűnik. Egy ideig akár működhet is.</p>
+      <p>Aztán veszteséget szenvedsz, ahol mindkét indikátor egyezett. Tehát hozzáadsz egy harmadikat. Aztán egy negyediket. Minden veszteség több megerősítés iránti igényt teremt.</p>
+      <p>Amíg rá nem jössz, hogy már nem tudsz kereskedni.</p>
+      <hr>
+      <h2>A Matematikai Probléma</h2>
+      <p>Ezt a legtöbb kereskedő nem veszi figyelembe: minden hozzáadott indikátor nem csak a bizalmat növeli. Csökkenti a lehetőségeket.</p>
+      <p>Tegyük fel, hogy minden indikátor önmagában az idő 30%-ában ad érvényes jelet.</p>
+      <ul>
+        <li>Egy indikátor: Az idő 30%-ában kereskedhetsz</li>
+        <li>Két indikátor egyezik: 30% × 30% = Az idő 9%-a</li>
+        <li>Három indikátor egyezik: 30% × 30% × 30% = Az idő 2,7%-a</li>
+        <li>Négy indikátor egyezik: Az idő kevesebb mint 1%-a</li>
+      </ul>
+      <p>És amikor mind a négy végre összeáll? A mozgás valószínűleg már megtörtént.</p>
+      <hr>
+      <h2>A Redundancia Probléma</h2>
+      <p>Még rosszabb. A legtöbb népszerű indikátor matematikailag összefügg. Ugyanazokból a bemenetekből származnak - árfolyam és néha volumen.</p>
+      <p><strong>MACD:</strong> Az ár mozgóátlaga mínusz az ár egy másik mozgóátlaga.</p>
+      <p><strong>RSI:</strong> A legutóbbi felfelé irányuló mozgások aránya a lefelé irányuló mozgásokhoz képest.</p>
+      <p><strong>Sztochasztikus:</strong> Hol van a jelenlegi ár a közelmúltbeli ártartományhoz képest.</p>
+      <p>Ezek nem független nézőpontok. Ugyanazok az adatok, különböző jelmezekben.</p>
+      <hr>
+      <h2>Mi Működik Valójában</h2>
+      <p>A megoldás nem több indikátor hozzáadása. Hanem annak megértése, milyen információra van valóban szükséged.</p>
+      <p>Minden kereskedési döntés négy kérdés megválaszolását igényli:</p>
+      <p><strong>1. Mi a trend iránya?</strong><br>Egy trendkövető eszköz válaszol erre.</p>
+      <p><strong>2. Mi a momentum?</strong><br>Egy momentum eszköz válaszol erre.</p>
+      <p><strong>3. Szélsőséges helyzetben vagyunk?</strong><br>Egy átlaghoz visszatérő eszköz válaszol erre.</p>
+      <p><strong>4. Mi a struktúra?</strong><br>Maga az árstruktúra válaszol erre.</p>
+      <p>Négy kérdés. Maximum három indikátor. Általában kettő elég.</p>
+      <hr>
+      <h2>Lényeg</h2>
+      <p>Ha háromnál több indikátort használsz, valószínűleg a megerősítés csapdájában vagy.</p>
+      <p>A megoldás nem a megfelelő indikátorkombináció megtalálása. Hanem hátrálépni és megkérdezni: milyen információra van valóban szükségem?</p>
+      <p>Trend. Momentum. Szélsőségek. Struktúra. Ennyi.</p>
+      <hr>
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
+        <a href="../../why-your-indicators-keep-failing/hu/" class="related-card"><span class="related-category">Indikátorok</span><h4>Miért Kudarcot Vallanak Folyton az Indikátorjaid</h4></a>
+        <a href="../../why-you-break-trading-rules/hu/" class="related-card"><span class="related-category">Pszichológia</span><h4>Miért Szeged Folyton a Kereskedési Szabályaidat</h4></a>
+      </div></section>
+      <div class="cta-box"><p><strong>Elegem van az egymással harcoló indikátorokból?</strong></p><p>A Signal Pilot csomag integrált rendszerként lett tervezve. Az indikátorok belsőleg vitáznak - te csak a választ látod.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld Ki a Teljes Csomagot Ingyen →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/hu/">← Vissza a Blogra</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
