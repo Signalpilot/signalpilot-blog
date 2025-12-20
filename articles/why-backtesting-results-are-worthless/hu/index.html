@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miért Értéktelenek a Backtesting Eredmények (És Mit Csinálj Helyette) - Signal Pilot Blog</title>
+  <meta name="description" content="Találtál egy indikátort 78%-os nyerési aránnyal. Aztán élőben kezdesz kereskedni és minden összeomlik. Íme, miért.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/hu/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltás">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ingyenes Próba</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/hu/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/hu/?filter=indicators">Indikátorok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Indikátorok</span>
+          <h1 class="article-title">Miért Értéktelenek a Backtesting Eredmények (És Mit Csinálj Helyette)</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Megosztás:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Megosztás Twitteren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Megosztás LinkedInen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link másolása">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Értéktelen backtesting eredmények vizualizációja" data-ai-prompt="Dark themed visualization of backtesting deception - a beautiful upward-trending equity curve on paper that crumbles or dissolves when transitioning to live trading. The gap between backtested results and reality. Paper profits vs real losses. Deep navy background with gold paper curve disintegrating into red reality.">
+        <figcaption class="ai-prompt">Dark themed visualization of backtesting deception - a beautiful upward-trending equity curve on paper that crumbles or dissolves when transitioning to live trading. The gap between backtested results and reality. Paper profits vs real losses. Deep navy background with gold paper curve disintegrating into red reality.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Találtál egy indikátort 78%-os nyerési aránnyal. Két éven át backtesztelve. 500 kereskedésnek kitéve. Az equity görbe felfelé és jobbra megy, mint egy álom.</p>
+          <p>Élőben kezdesz kereskedni. Két héten belül visszaadtad egy hónap nyereségét.</p>
+          <p>Mi történt?</p>
+          <p>A backtest hazudott. Nem azért, mert a számok hamisak voltak - hanem mert maga a backtesting alapvetően hibás olyan módokon, amelyekre a legtöbb kereskedő soha nem gondol.</p>
+
+          <hr>
+
+          <h2>A Backtesting Alapvető Problémája</h2>
+          <p>A backtesting erre a kérdésre válaszol: "Hogyan teljesített volna ez a stratégia a történelmi adatokon?"</p>
+          <p>De ez nem az a kérdés, amire választ kell kapnod. A valódi kérdés: "Hogyan fog teljesíteni ez a stratégia olyan adatokon, amelyeket még soha nem látott?"</p>
+          <p>Ezek teljesen különböző kérdések. És a köztük lévő rés az, ahol a kereskedők pénzt veszítenek.</p>
+
+          <hr>
+
+          <h2>1. Probléma: Görbéhez Illesztés</h2>
+          <p>Minden piacnak vannak mintázatai. Néhány valódi és tartós. A legtöbb véletlenszerű zaj, ami mintázatnak tűnt.</p>
+          <p>Amikor stratégiát építesz vagy optimalizálsz történelmi adatokon, mindkettőhöz illeszted - a valódi mintázatokhoz és a zajhoz. Minél többet optimalizálsz, annál tökéletesebben ragadja meg a stratégiád a zajt. A múltban történt véletlenszerűség tökéletes térképévé válik.</p>
+          <p>Aztán jön a jövő más véletlenszerűséggel. A tökéletesen optimalizált stratégiád, ami soha nem valódi mintázatok megragadására volt hangolva, összeomlik.</p>
+          <p><strong>Hogyan ismerd fel a görbéhez illesztést:</strong></p>
+          <ul>
+            <li>A stratégiának sok specifikus paramétere van (az RSI-nek pontosan 67-nek kell lennie, nem 65 vagy 70)</li>
+            <li>A teljesítmény jelentősen romlik kis paraméterváltozásoknál</li>
+            <li>A stratégia hihetetlenül működik egy eszközön, de hasonló eszközökön kudarcot vall</li>
+            <li>Túl sok szabály és feltétel</li>
+          </ul>
+          <p>Minél specifikusabbak a szabályok, annál valószínűbb, hogy zajt ragadnak meg jel helyett.</p>
+
+          <hr>
+
+          <h2>2. Probléma: Előretekintési Torzítás</h2>
+          <p>Ez finom és pusztító.</p>
+          <p>Az előretekintési torzítás akkor lép fel, amikor a backtested olyan információt használ, ami a kereskedés időpontjában nem lett volna elérhető. A leggyakoribb forrás? Újrarajzoló indikátorok.</p>
+          <p>De ennél mélyebbre megy. Gondold végig:</p>
+          <ul>
+            <li>Nap végi adatok használata olyan stratégiákhoz, amelyek napközben végrehajtódnának</li>
+            <li>Indikátorok, amelyek jövőbeli gyertyákat használnak a számításaikban</li>
+            <li>Stratégia szabályok, amelyeket az eredmények megtekintése után hoztak létre</li>
+            <li>Bizonyos időszakok "elkerülése", mert tudod, mi történt</li>
+          </ul>
+          <p>Még a becsületes backtesteknek is lehet beépített előretekintési torzítása. A fejlesztő tudja, hogy 2020-ban összeomlás volt, ezért a stratégiának van egy szabálya, ami "véletlenül" csökkenti a kitettséget 2020 elején. Zseniális kockázatkezelésnek tűnik. Valójában csak előrelátásnak álcázott utólagos bölcsesség.</p>
+
+          <hr>
+
+          <h2>3. Probléma: Túlélési Torzítás</h2>
+          <p>A backtested tartalmazza a ma létező eszközöket. Nem tartalmazza azokat, amelyek csődbe mentek, kilistázták őket, vagy nullára omlottak.</p>
+          <p>Ez fontosabb, mint gondolnád.</p>
+          <p>Ha egy momentum stratégiát backtesztelsz, ami erőt vásárol, a történelmi tested csak a túlélő erőt vásárolja. Azok a részvények, amelyek ugyanazokat az erő mintázatokat mutatták, de aztán összeomlottak, nincsenek az adathalmazodban.</p>
+          <p>A backtested jobbnak tűnik a valóságnál, mert csak a nyerteseket kereskedik - utólag.</p>
+
+          <hr>
+
+          <h2>4. Probléma: Piaci Rezsim Változások</h2>
+          <p>A 2010-es piacok nem a 2020-as piacok. Az algoritmusok, amelyek alig léteztek, ma a forgalom 70%-át teszik ki. A kiskereskedők más eszközökkel és viselkedéssel rendelkeznek. A monetáris politika drámaian megváltozott.</p>
+          <p>Egy 2015-2020-ra backtesztelt stratégia történelmileg szokatlan, alacsony volatilitású és konzisztens jegybanki támogatású időszakban működött. Aztán jött 2022 inflációval, kamatemelésekkel és teljesen más rezsimmel.</p>
+          <p>A stratégia nem "hagyta abba a működést". Soha nem tesztelték azon a piactípuson, amellyel valójában szembesülni fog.</p>
+
+          <hr>
+
+          <h2>5. Probléma: Végrehajtási Valóság</h2>
+          <p>A backtestek feltételezik:</p>
+          <ul>
+            <li>Pontosan azt az árat kaptad, amit akartál</li>
+            <li>Nem volt csúszás</li>
+            <li>A megbízásod nem mozgatta a piacot</li>
+            <li>Mindig be tudtál lépni és ki tudtál lépni, amikor a jel megszólalt</li>
+            <li>A spreadek állandóak voltak</li>
+          </ul>
+          <p>Ezek közül semmi sem igaz az élő kereskedésben.</p>
+          <p>Az az scalping stratégia 55%-os nyerési aránnyal és 1:1 kockázat-hozammal? Realisztikus csúszás és spread költségek után veszteséges. A backtest soha nem tudta.</p>
+
+          <hr>
+
+          <h2>Tehát Mit Csinálj Helyette?</h2>
+          <p>Ha a hagyományos backtesting ennyire hibás, van mód a stratégiák őszinte tesztelésére?</p>
+          <p>Igen - de alapvetően más megközelítéseket igényel. Előretesztelés nem látott adatokon. Mintán kívüli validáció. Walk-forward elemzés. Monte Carlo stressztesztelés. Ezek a módszerek azért léteznek, mert a kutatók felismerték, hogy az egyszerű backtesting az előny illúzióját kelti ott, ahol nincs.</p>
+          <p>A cél áthelyeződik a "bizonyítani, hogy egy stratégia működik"-ről a "megpróbálni megtörni, mielőtt a piac megtenné".</p>
+
+          <hr>
+
+          <h2>A Lényeg</h2>
+          <p>Hagyd abba a backtestekben való bízást. Kezdd el megkérdőjelezni őket.</p>
+          <p>Amikor valaki elképesztő történelmi eredményeket mutat, kérdezd meg:</p>
+          <ul>
+            <li>Ez mintán kívül tesztelve volt?</li>
+            <li>Mi a logikai alapja ennek az előnynek?</li>
+            <li>Hogyan teljesít más paraméterekkel?</li>
+            <li>Működik több eszközön?</li>
+            <li>Az indikátor újrarajzol?</li>
+          </ul>
+          <p>Ha nem tudják megválaszolni ezeket a kérdéseket, a backtest értéktelen - bármilyen jól néz is ki az equity görbe.</p>
+
+          <hr>
+
+          <h2>Hogyan Néz Ki Valójában az Őszinte Előny</h2>
+          <p>A legerősebb stratégiák nincsenek történelmi zajhoz illesztve. A piaci struktúra logikájára épülnek, amit meg tudsz fogalmazni:</p>
+          <p><strong>Miért ismétlődnek a ciklusok:</strong> Az intézményi felhalmozás és elosztás visszatérő mintázatokat hoz létre. Az okos pénz a ciklus mélypontjain vásárol, a csúcsokon ad el. Ez a viselkedés strukturális, nem véletlenszerű - rezsimeken át fennmarad.</p>
+          <p><strong>Miért erősíti meg a volumen az irányt:</strong> A pénzáramlás felfedi a szándékot. Az ár hazudhat (hamis kitörések, stop vadászat), de a volumen megmutatja, hova mozog valójában a tőke. A felhalmozás másképp néz ki, mint az elosztás.</p>
+          <p><strong>Miért számít a konfluencia:</strong> Amikor több független rendszer egyetért, a hamis jelek csökkennek. Egy indikátor tévedhet. Öt indikátor ugyanabba az irányba mutat - ez jelentős.</p>
+          <p>A piaci struktúra logikájára épülő előny túléli a rezsimváltozásokat. Az "RSI-nek pontosan 67-nek kell lennie"-re épülő előny nem. A kérdés nem az, hogy "működött ez a múltban?" Hanem: "van logikus ok arra, hogy ez továbbra is működjön?"</p>
+          <p>Ez az az alap, amire érdemes építeni.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../../the-repainting-problem/hu/" class="related-card">
+                <span class="related-category">Indikátorok</span>
+                <h4>Az Újrarajzolási Probléma: Miért Hazudott Neked a Backtested</h4>
+              </a>
+              <a href="../../backtesting-without-fooling-yourself/hu/" class="related-card">
+                <span class="related-category">Rendszerek</span>
+                <h4>Backtesting Anélkül, Hogy Becsapnád Magad</h4>
+              </a>
+              <a href="../../rules-based-vs-discretionary/hu/" class="related-card">
+                <span class="related-category">Rendszerek</span>
+                <h4>Szabály Alapú vs Diszkrecionális Kereskedés</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../support-and-resistance-explained/hu/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Előző
+              </span>
+              <span class="article-nav-title">Támasz és Ellenállás Elmagyarázva: Minden Trade Alapja</span>
+            </a>
+            <a href="../../why-traders-blow-first-account/hu/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Következő
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">A Valódi Ok, Amiért a Legtöbb Kereskedő Felrobbantja az Első Számláját</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>Logikára épülő indikátorokat akarsz, nem görbéhez illesztést?</strong></p>
+            <p>A Signal Pilot 7 indikátoros csomagja a piaci struktúrán alapul: intézményi viselkedés miatt ismétlődő ciklusok, pénzáramlást feltáró volumen, zajt szűrő konfluencia. A nem újrarajzoló jelek azt jelentik, hogy amit a történelemben látsz, az az, amit élőben láttál volna.</p>
+            <p>Nincs optimalizált baromság. Nincs "tökéletesen működik ezen az egy eszközön ezekkel a pontos beállításokkal". Csak logikus alapok, amiket meg tudsz fogalmazni.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld Ki a Logika Alapú Elemzést Ingyen →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/hu/">← Vissza a Blogra</a><a href="https://signalpilot.io">Főoldal</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
