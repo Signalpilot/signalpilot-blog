@@ -28,83 +28,252 @@
 <body>
   <div class="bg-aurora"></div>
   <div class="reading-progress" id="progress"></div>
-  <header class="header"><div class="container"><div class="header-inner">
-    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
-    <nav class="nav"><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Обучение</a><a href="/ru/" class="active">Блог</a></nav>
-    <div class="header-controls">
-      
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Тема"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Бесплатная Проба</a>
-      <button class="mobile-menu-btn" aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Обучение</a><a href="/ru/" class="active">Блог</a></nav>
+        <div class="header-controls">
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Бесплатная Проба</a>
+          <button class="mobile-menu-btn" aria-label="Меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-  </div></div></header>
+  </header>
 
-  <main><article>
-    <header class="article-header"><div class="container-narrow">
-      <nav class="breadcrumbs"><a href="/ru/">Блог</a><span class="breadcrumb-sep">›</span><a href="/ru/?filter=indicators">Индикаторы</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Статья</span></nav>
-      <span class="article-category">Индикаторы</span>
-      <h1 class="article-title">Мульти-таймфрейм подтверждение: Как перестать бороться против тренда</h1>
-      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span><span>Команда Signal Pilot</span></div>
-    </div></header>
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/ru/">Блог</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/ru/?filter=indicators">Индикаторы</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Статья</span>
+          </nav>
+          <span class="article-category">Индикаторы</span>
+          <h1 class="article-title">Мульти-таймфрейм подтверждение: Как перестать бороться против тренда</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
+            <span>Команда Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Поделиться:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Поделиться в Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Поделиться в LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Скопировать ссылку">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Визуализация мульти-таймфрейм подтверждения"></figure>
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Визуализация мульти-таймфрейм подтверждения" data-ai-prompt="Визуализация в тёмной теме, показывающая три наложенных графика, представляющих разные таймфреймы (дневной, часовой, 15-минутный) с индикаторами выравнивания. Когда все три выравниваются в одном направлении, их соединяет светящийся луч подтверждения. Показывает концепцию иерархии трендов. Старший таймфрейм доминирует над младшим. Глубокий тёмно-синий фон с голубыми и золотыми индикаторами выравнивания.">
+        <figcaption class="ai-prompt">Визуализация в тёмной теме, показывающая три наложенных графика, представляющих разные таймфреймы (дневной, часовой, 15-минутный) с индикаторами выравнивания. Когда все три выравниваются в одном направлении, их соединяет светящийся луч подтверждения. Показывает концепцию иерархии трендов. Старший таймфрейм доминирует над младшим. Глубокий тёмно-синий фон с голубыми и золотыми индикаторами выравнивания.</figcaption>
+      </figure>
 
-    <div class="article-content"><div class="container-narrow">
-      <p>Вы видите красивый сетап на 15-минутном графике. Все ваши индикаторы выстроились. Вы открываете лонг. Через два часа вас выбивает по стопу, пока цена падает. Что произошло?</p>
-      <p>Вы покупали в дневном нисходящем тренде. Ваш 15-минутный сетап был лишь небольшим откатом в более крупном падении.</p>
-      <hr>
-      <h2>Иерархия таймфреймов</h2>
-      <p>Старшие таймфреймы всегда побеждают. Всегда.</p>
-      <p>5-минутный восходящий тренд внутри дневного нисходящего — это просто откат. Дневной тренд в конечном итоге возобладает.</p>
-      <p>Думайте об этом как о цепочке командования:</p>
-      <ul>
-        <li><strong>Стратегический таймфрейм:</strong> Определяет общее направление</li>
-        <li><strong>Тактический таймфрейм:</strong> Идентифицирует торговые сетапы в направлении стратегического уклона</li>
-        <li><strong>Исполнительный таймфрейм:</strong> Уточняет входы и стопы</li>
-      </ul>
-      <hr>
-      <h2>Трёхтаймфреймовый подход</h2>
-      <p><strong>Дейтрейдинг:</strong> Дневной (стратегический) → 1 час (тактический) → 15 минут (исполнение)</p>
-      <p><strong>Свинг-трейдинг:</strong> Недельный (стратегический) → Дневной (тактический) → 4 часа (исполнение)</p>
-      <hr>
-      <h2>Как применять</h2>
-      <p><strong>Шаг 1:</strong> Проверьте стратегический таймфрейм. Какой тренд? Это определяет ваше направление.</p>
-      <p><strong>Шаг 2:</strong> Найдите сетап на тактическом таймфрейме. Только в направлении стратегического уклона.</p>
-      <p><strong>Шаг 3:</strong> Исполняйте на младшем таймфрейме. Для точного входа.</p>
-      <hr>
-      <h2>Когда таймфреймы конфликтуют</h2>
-      <p><strong>Правило 1:</strong> Старший таймфрейм побеждает.</p>
-      <p><strong>Правило 2:</strong> Конфликтующие таймфреймы = уменьшенный размер позиции.</p>
-      <p><strong>Правило 3:</strong> Ждите выравнивания. Лучшие сделки происходят, когда все таймфреймы согласны.</p>
-      <hr>
-      <h2>Суть</h2>
-      <p>Мульти-таймфрейм анализ несложен: старшие таймфреймы задают направление, младшие дают входы. Используйте три таймфрейма. Начинайте сверху вниз. Торгуйте только при выравнивании.</p>
-      <hr>
-      <section class="related-articles"><h3>Похожие статьи</h3><div class="related-grid">
-        <a href="../../timeframe-selection/ru/" class="related-card"><span class="related-category">Практика</span><h4>Выбор таймфрейма</h4></a>
-        <a href="../../the-confirmation-trap/ru/" class="related-card"><span class="related-category">Индикаторы</span><h4>Ловушка подтверждения</h4></a>
-        <a href="../../cycle-failures-and-what-they-mean/ru/" class="related-card"><span class="related-category">Циклы</span><h4>Провалы циклов и их значение</h4></a>
-      </div></section>
-      <nav class="article-nav">
-        <a href="../../trade-journaling-that-works/ru/" class="article-nav-link prev">
-          <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Предыдущая</span>
-          <span class="article-nav-title">Торговый Дневник Который Работает: Что Записывать и Почему</span>
-        </a>
-        <a href="../../the-boredom-trap/ru/" class="article-nav-link next">
-          <span class="article-nav-label">Следующая <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          <span class="article-nav-title">Ловушка Скуки: Почему Хорошие Трейдеры Ждут</span>
-        </a>
-      </nav>
-      <div class="cta-box"><p><strong>Volume Oracle включает HTF подтверждение, показывающее совпадают ли дневной/недельный режимы с сигналом вашего торгового таймфрейма.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Посмотреть выравнивание таймфреймов →</a></div>
-    </div></div>
-  </article></main>
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Вы видите красивый сетап на 15-минутном графике. Все ваши индикаторы выстроились. Вы открываете лонг.</p>
+          <p>Через два часа вас выбивает по стопу, пока цена падает. Что произошло?</p>
+          <p>Вы покупали в дневном нисходящем тренде. Ваш 15-минутный сетап был лишь небольшим откатом в более крупном падении. Вы торговали против доминирующего потока.</p>
+          <p>Мульти-таймфрейм анализ предотвращает это. Вот как делать это правильно.</p>
 
-  <footer class="footer"><div class="container">
-    <div class="footer-links"><a href="/ru/">← Назад к блогу</a><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Обучающий центр</a></div>
-    <p class="footer-copy">&copy; 2025 Signal Pilot. Все права защищены.</p>
-  </div></footer>
+          <hr>
+
+          <h2>Иерархия таймфреймов</h2>
+          <p>Старшие таймфреймы всегда побеждают. Всегда.</p>
+          <p>5-минутный восходящий тренд внутри дневного нисходящего — это просто откат. Дневной тренд в конечном итоге возобладает. Торговля на 5-минутке против дневного — это плавание против течения.</p>
+          <p>Это не значит, что младшие таймфреймы бесполезны — именно там вы находите точные входы. Но они должны быть согласованы с, а не против, направления старшего таймфрейма.</p>
+          <p>Думайте об этом как о цепочке командования:</p>
+          <ul>
+            <li><strong>Стратегический таймфрейм:</strong> Определяет общее направление (дневной/недельный для свинг-трейдеров, 4Ч/дневной для дейтрейдеров)</li>
+            <li><strong>Тактический таймфрейм:</strong> Идентифицирует торговые сетапы в направлении стратегического уклона</li>
+            <li><strong>Исполнительный таймфрейм:</strong> Уточняет входы и стопы</li>
+          </ul>
+
+          <hr>
+
+          <h2>Трёхтаймфреймовый подход</h2>
+          <p>Большинство трейдеров хорошо работают с тремя таймфреймами в соотношении примерно 4-6x каждый:</p>
+          <p><strong>Пример 1 - Свинг-трейдинг:</strong></p>
+          <ul>
+            <li>Недельный (стратегический) - общее направление тренда</li>
+            <li>Дневной (тактический) - торговые сетапы</li>
+            <li>4-часовой (исполнение) - тайминг входа</li>
+          </ul>
+          <p><strong>Пример 2 - Дейтрейдинг:</strong></p>
+          <ul>
+            <li>Дневной (стратегический) - общее направление тренда</li>
+            <li>1-часовой (тактический) - торговые сетапы</li>
+            <li>15-минутный (исполнение) - тайминг входа</li>
+          </ul>
+          <p><strong>Пример 3 - Скальпинг:</strong></p>
+          <ul>
+            <li>1-часовой (стратегический) - общее направление тренда</li>
+            <li>15-минутный (тактический) - торговые сетапы</li>
+            <li>5-минутный (исполнение) - тайминг входа</li>
+          </ul>
+
+          <hr>
+
+          <h2>Как применять</h2>
+          <p><strong>Шаг 1: Проверьте стратегический таймфрейм.</strong> Какой тренд? Вверх, вниз или боковик? Это определяет ваше направление. Открывайте сделки только в этом направлении.</p>
+          <p><strong>Шаг 2: Найдите сетап на тактическом таймфрейме.</strong> Ищите ваши критерии входа — сигналы индикаторов, завершения паттернов, тесты уровней — но только в направлении стратегического уклона.</p>
+          <p><strong>Шаг 3: Исполняйте на младшем таймфрейме.</strong> Когда у вас есть сетап, переходите на исполнительный таймфрейм для точного входа. Это оптимизирует риск/прибыль без изменения торговой идеи.</p>
+          <p><strong>Пример:</strong> Дневной — восходящий тренд. 4-часовой показывает откат к поддержке с бычьей дивергенцией. 1-часовой показывает разворотную свечу на этой поддержке. Входите в лонг по сигналу 1-часового, с дневным трендом за спиной.</p>
+
+          <hr>
+
+          <h2>Когда таймфреймы конфликтуют</h2>
+          <p>Иногда таймфреймы не согласны. Дневной вверх, недельный вниз. 4-часовой бычий, дневной медвежий.</p>
+          <p><strong>Правило 1:</strong> Старший таймфрейм побеждает. Если недельный вниз, а дневной вверх, дневное движение — вероятно, коррекция в недельном нисходящем тренде. Торгуйте осторожно или не торгуйте вообще.</p>
+          <p><strong>Правило 2:</strong> Конфликтующие таймфреймы = уменьшенный размер позиции. Если приходится торговать при конфликте, уменьшите размер позиции. Неопределённость реальна.</p>
+          <p><strong>Правило 3:</strong> Ждите выравнивания. Лучшие сделки происходят, когда все таймфреймы согласны. Терпение окупается.</p>
+          <p><strong>Правило 4:</strong> Боковик считается конфликтом. Если старший таймфрейм в диапазоне, у вас нет чёткого направления. Торгуйте диапазон или ждите разрешения.</p>
+
+          <hr>
+
+          <h2>Распространённые ошибки</h2>
+          <p><strong>Прыгание между таймфреймами.</strong> Вы планируете торговать на 4-часовом, но переходите на 5-минутный, когда нервничаете. Внезапно вы управляете шумом, а не торгуете по плану. Выберите свои таймфреймы и придерживайтесь их.</p>
+          <p><strong>Слишком много таймфреймов.</strong> Проверка 7 разных графиков создаёт путаницу, а не ясность. Три обычно оптимально. Больше — это шум.</p>
+          <p><strong>Игнорирование стратегического уровня.</strong> Так сосредоточиться на входном таймфрейме, что забываете об общем контексте. Всегда знайте, что говорит большая картина.</p>
+          <p><strong>Борьба с трендом.</strong> Видеть сигнал разворота на младшем таймфрейме и принимать его против тренда старшего таймфрейма. Эти сделки имеют низкую вероятность, даже если выглядят идеально на входном таймфрейме.</p>
+
+          <hr>
+
+          <h2>Практические советы</h2>
+          <p><strong>Начинайте сверху вниз.</strong> Анализируйте от старшего таймфрейма к младшему, не наоборот. Контекст перед входом.</p>
+          <p><strong>Отмечайте ключевые уровни со старших таймфреймов.</strong> Дневные поддержка/сопротивление должны быть видны на ваших интрадей-графиках. Эти уровни важнее интрадей-уровней.</p>
+          <p><strong>Записывайте состояние тренда старшего таймфрейма.</strong> Перед каждой сессией запишите: "Дневной тренд: [вверх/вниз/боковик]. Только [лонги/шорты/оба]."</p>
+          <p><strong>Используйте одинаковые настройки индикаторов на всех таймфреймах.</strong> Если используете RSI(14) на дневном, используйте RSI(14) на 4-часовом и 1-часовом тоже. Последовательность помогает распознаванию паттернов.</p>
+
+          <hr>
+
+          <h2>Сладкая точка выравнивания</h2>
+          <p>Сделки с наивысшей вероятностью происходят, когда:</p>
+          <ul>
+            <li>Стратегический таймфрейм показывает чёткий тренд</li>
+            <li>Тактический таймфрейм показывает откат к поддержке/сопротивлению в направлении тренда</li>
+            <li>Исполнительный таймфрейм показывает сигнал разворота</li>
+          </ul>
+          <p>Это сладкая точка: вы торгуете с трендом, по хорошей цене, с точным таймингом входа.</p>
+          <p>Ждите этих выравниваний. Они случаются не каждый день, но стоят ожидания.</p>
+
+          <hr>
+
+          <h2>Суть</h2>
+          <p>Мульти-таймфрейм анализ несложен: старшие таймфреймы задают направление, младшие дают входы. Тренд на большем графике в итоге всегда побеждает.</p>
+          <p>Используйте три таймфрейма. Начинайте сверху вниз. Торгуйте только при выравнивании. Ваш процент прибыльных сделок улучшится просто потому, что вы перестанете бороться с доминирующим потоком.</p>
+          <p>Некоторые системы встраивают HTF подтверждение прямо в свои сигналы — проверяя, выровнен ли дневной или недельный режим, прежде чем генерировать алерт на вашем торговом таймфрейме. Другие отображают пивоты старших таймфреймов, уровни сессий и VWAP разных периодов одновременно, чтобы вы могли видеть, происходит ли ваш вход на уровне, который важен на большей картине. Принцип тот же: контекст перед входом.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Похожие статьи</h3>
+            <div class="related-grid">
+              <a href="../../timeframe-selection/ru/" class="related-card">
+                <span class="related-category">Практика</span>
+                <h4>Выбор таймфрейма: Найдите свой стиль</h4>
+              </a>
+              <a href="../../the-confirmation-trap/ru/" class="related-card">
+                <span class="related-category">Индикаторы</span>
+                <h4>Ловушка подтверждения: Когда больше индикаторов делает вас хуже</h4>
+              </a>
+              <a href="../../cycle-failures-and-what-they-mean/ru/" class="related-card">
+                <span class="related-category">Циклы</span>
+                <h4>Провалы циклов и что они означают</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../trade-journaling-that-works/ru/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Предыдущая
+              </span>
+              <span class="article-nav-title">Торговый Дневник Который Работает: Что Записывать и Почему</span>
+            </a>
+            <a href="../../the-boredom-trap/ru/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Следующая
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Ловушка Скуки: Почему Ничегонеделание Часто Правильная Сделка</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Volume Oracle включает HTF подтверждение, показывающее совпадают ли дневной/недельный режимы с сигналом вашего входного таймфрейма. Janus Atlas отображает пивоты старших таймфреймов, уровни сессий и VWAP разных периодов одновременно. 5-балльная оценка Augury Grid включает HTF выравнивание как фильтр валидации.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Посмотреть выравнивание таймфреймов →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/ru/">← Назад к блогу</a><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Обучающий центр</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Все права защищены.</p>
+    </div>
+  </footer>
 
   <button class="back-to-top" id="backToTop" aria-label="Наверх"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    document.querySelectorAll('.hero-image img').forEach(img => {
+      if (img.complete && img.naturalHeight > 0) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => img.classList.add('loaded'));
+      }
+    });
+  </script>
 </body>
 </html>
