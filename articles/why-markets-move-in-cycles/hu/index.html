@@ -274,6 +274,7 @@
         });
       });
     }
+    document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
   </script>
 </body>
 </html>
