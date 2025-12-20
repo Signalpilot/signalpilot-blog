@@ -28,90 +28,365 @@
 <body>
   <div class="bg-aurora"></div>
   <div class="reading-progress" id="progress"></div>
-  <header class="header"><div class="container"><div class="header-inner">
-    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
-    <nav class="nav"><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Обучение</a><a href="/ru/" class="active">Блог</a></nav>
-    <div class="header-controls">
-      
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Тема"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Попробовать</a>
-      <button class="mobile-menu-btn" aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    </div>
-  </div></div></header>
 
-  <main><article>
-    <header class="article-header"><div class="container-narrow">
-      <nav class="breadcrumbs"><a href="/ru/">Блог</a><span class="breadcrumb-sep">›</span><a href="/ru/?filter=product">Продукт</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Статья</span></nav>
-      <span class="article-category">Продукт</span>
-      <h1 class="article-title">Внутри Signal Pilot: Как 7 Индикаторов Работают Вместе</h1>
-      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 мин чтения</span><span>Команда Signal Pilot</span></div>
-    </div></header>
-
-    <figure class="hero-image"><img src="../hero.png" alt="Семь интегрированных индикаторов Signal Pilot"></figure>
-
-    <div class="article-content"><div class="container-narrow">
-      <p>Большинство наборов индикаторов - это коллекции несвязанных инструментов. Каждый индикатор работает независимо.</p>
-      <p>Signal Pilot другой. Семь индикаторов разработаны как интегрированная система. Каждый инструмент отвечает на конкретный вопрос, и ответы объединяются в полную картину рынка.</p>
-      <hr>
-      <h2>Вопрос, на Который Отвечает Каждый Индикатор</h2>
-      <ul>
-        <li><strong>Pentarch:</strong> "Где мы в рыночном цикле?"</li>
-        <li><strong>Volume Oracle:</strong> "Что на самом деле делают институты?"</li>
-        <li><strong>Janus Atlas:</strong> "Где ключевые уровни?"</li>
-        <li><strong>OmniDeck:</strong> "Сколько конфлюэнса существует сейчас?"</li>
-        <li><strong>Augury Grid:</strong> "Какие символы имеют лучшие сетапы?"</li>
-        <li><strong>Harmonic Oscillator:</strong> "Что говорит импульс?"</li>
-        <li><strong>Plutus Flow:</strong> "Куда текут деньги?"</li>
-      </ul>
-      <p>Без перекрытия. Без избыточности. Семь вопросов, семь ответов, одна полная картина.</p>
-      <hr>
-      <h2>Pentarch: Основа Цикла</h2>
-      <p>Определяет пять фаз цикла: Touchdown (TD), Ignition (IGN), Climax (CAP), Warning (WRN) и Breakdown (BDN).</p>
-      <p>Обнаруживает фазы на 4 уровнях одновременно. Без перерисовки: сигналы финализируются при закрытии свечи.</p>
-      <hr>
-      <h2>Volume Oracle: Следы Институтов</h2>
-      <p>Классифицирует рыночные режимы: Накопление (зелёный), Распределение (красный), или Ослабление (золотой). Обнаруживает институциональное поведение через анализ объёма.</p>
-      <hr>
-      <h2>Janus Atlas: Архитектура Уровней</h2>
-      <p>Картирует ключевые ценовые уровни: 50+ уровней включая пивоты, Фибоначчи, Volume Profile с POC, VAH, VAL и множественные VWAP.</p>
-      <hr>
-      <h2>OmniDeck: Движок Конфлюэнса</h2>
-      <p>Синтезирует 10 различных систем анализа в оценку конфлюэнса от 1-10. Выше оценка = больше конфлюэнса.</p>
-      <hr>
-      <h2>Augury Grid: Сканер</h2>
-      <p>Сканирует до 40 символов одновременно, оценивая каждый по 5-фильтровой системе.</p>
-      <hr>
-      <h2>Harmonic Oscillator: Консенсус Импульса</h2>
-      <p>Объединяет 5 разных осцилляторов (RSI, Стохастик, CCI, Williams %R, MFI) в систему голосования.</p>
-      <hr>
-      <h2>Plutus Flow: След Денег</h2>
-      <p>Продвинутый OBV с трендовыми лентами и автоматическим обнаружением дивергенций.</p>
-      <hr>
-      <h2>Без Перерисовки, Без Компромиссов</h2>
-      <p>Каждый индикатор финализирует сигналы при закрытии свечи. То что вы видите в истории - именно то, что появилось в реальном времени. Никакой ретроактивной оптимизации.</p>
-      <hr>
-      <section class="related-articles"><h3>Похожие Статьи</h3><div class="related-grid">
-        <a href="../../the-repainting-problem/ru/" class="related-card"><span class="related-category">Индикаторы</span><h4>Проблема Перерисовки</h4></a>
-        <a href="../../the-only-pattern-that-repeats/ru/" class="related-card"><span class="related-category">Циклы</span><h4>Единственный Паттерн Который Повторяется</h4></a>
-        <a href="../../accumulation-vs-distribution/ru/" class="related-card"><span class="related-category">Циклы</span><h4>Накопление vs Распределение</h4></a>
-      </div></section>
-      <nav class="article-nav">
-        <div class="article-nav-link placeholder"></div>
-        <a href="../../free-indicators-vs-professional-tools/ru/" class="article-nav-link next">
-          <span class="article-nav-label">Следующая <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          <span class="article-nav-title">Бесплатные Индикаторы vs Профессиональные Инструменты: Когда Обновляться</span>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
         </a>
-      </nav>
-      <div class="cta-box"><p><strong>Увидьте разницу, которую создаёт интегрированный анализ.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Начать Бесплатную Пробную Версию →</a></div>
-    </div></div>
-  </article></main>
+        <nav class="nav">
+          <a href="https://signalpilot.io">Главная</a>
+          <a href="https://docs.signalpilot.io">Docs</a>
+          <a href="https://education.signalpilot.io">Обучение</a>
+          <a href="/ru/" class="active">Блог</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-dropdown">
+            <button class="lang-toggle" aria-label="Выбрать язык">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              RU
+            </button>
+            <div class="lang-menu">
+              <a href="../">English</a>
+              <a href="../es/">Español</a>
+              <a href="../de/">Deutsch</a>
+              <a href="../fr/">Français</a>
+              <a href="../it/">Italiano</a>
+              <a href="../pt/">Português</a>
+              <a href="../nl/">Nederlands</a>
+              <a href="./" class="active">Русский</a>
+              <a href="../ja/">日本語</a>
+              <a href="../ar/">العربية</a>
+              <a href="../tr/">Türkçe</a>
+              <a href="../hu/">Magyar</a>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Попробовать</a>
+          <button class="mobile-menu-btn" aria-label="Меню">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <footer class="footer"><div class="container">
-    <div class="footer-links"><a href="/ru/">← Назад к Блогу</a><a href="https://signalpilot.io">Главная</a><a href="https://docs.signalpilot.io">Документация</a><a href="https://education.signalpilot.io">Центр Обучения</a></div>
-    <p class="footer-copy">&copy; 2025 Signal Pilot. Все права защищены.</p>
-  </div></footer>
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Навигация">
+            <a href="/ru/">Блог</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/ru/?filter=product">Продукт</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Статья</span>
+          </nav>
+          <span class="article-category">Продукт</span>
+          <h1 class="article-title">Внутри Signal Pilot: Как 7 Индикаторов Работают Вместе</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 мин чтения</span>
+            <span>Команда Signal Pilot</span>
+          </div>
+          <div class="share-buttons">
+            <span class="share-label">Поделиться:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Поделиться в Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Поделиться в LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Копировать ссылку">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
 
-  <button class="back-to-top" id="backToTop" aria-label="Наверх"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Семь интегрированных индикаторов Signal Pilot" data-ai-prompt="Футуристическая панель в тёмной теме с 7 взаимосвязанными светящимися узлами в гексагональном узоре, каждый узел разного оттенка голубого и синего представляет разные индикаторы.">
+        <figcaption class="ai-prompt">Футуристическая панель в тёмной теме с 7 взаимосвязанными светящимися узлами в гексагональном узоре, каждый узел разного оттенка голубого и синего представляет разные индикаторы. Светящиеся линии связи между узлами пульсируют потоком данных. Центральный хаб синтезирует все входы. Профессиональная торговая эстетика с глубоким тёмно-синим и фиолетовым фоном авроры, голографические элементы UI.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Большинство наборов индикаторов - это коллекции несвязанных инструментов, которые случайно носят одно имя. Каждый индикатор работает независимо, оставляя вам разбираться, как (или если) они связаны.</p>
+          <p>Signal Pilot другой. Семь индикаторов разработаны как интегрированная система. Каждый инструмент отвечает на конкретный вопрос, и ответы объединяются в полную картину рынка.</p>
+          <p>Вот как это работает на самом деле.</p>
+
+          <hr>
+
+          <h2>Ключевой Вопрос, на Который Отвечает Каждый Индикатор</h2>
+          <p>Прежде чем погружаться в функции, поймите фреймворк. Каждый индикатор в наборе отвечает на один важный вопрос:</p>
+          <ul>
+            <li><strong>Pentarch:</strong> "Где мы в рыночном цикле?"</li>
+            <li><strong>Volume Oracle:</strong> "Что на самом деле делают институты?"</li>
+            <li><strong>Janus Atlas:</strong> "Где ключевые уровни?"</li>
+            <li><strong>OmniDeck:</strong> "Сколько конфлюэнса существует сейчас?"</li>
+            <li><strong>Augury Grid:</strong> "Какие символы имеют лучшие сетапы?"</li>
+            <li><strong>Harmonic Oscillator:</strong> "Что говорит импульс?"</li>
+            <li><strong>Plutus Flow:</strong> "Куда на самом деле текут деньги?"</li>
+          </ul>
+          <p>Без перекрытия. Без избыточности. Семь вопросов, семь ответов, одна полная картина.</p>
+
+          <hr>
+
+          <h2>Pentarch: Основа Цикла</h2>
+          <p>Pentarch определяет пять фаз каждого рыночного цикла: Touchdown (TD), Ignition (IGN), Climax (CAP), Warning (WRN) и Breakdown (BDN).</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>Обнаруживает фазы цикла на 4 уровнях одновременно</li>
+            <li>Определяет переходы фаз по мере их возникновения</li>
+            <li>Показывает, где вы находитесь в структуре - не где были</li>
+            <li>Без перерисовки: сигналы финализируются при закрытии свечи</li>
+          </ul>
+          <p><strong>Как связан:</strong> Pentarch обеспечивает структурный контекст, на котором строятся все остальные индикаторы. Обнаружение режима Volume Oracle имеет больше смысла, когда вы знаете фазу цикла. Оценка конфлюэнса OmniDeck учитывает выравнивание цикла. Без знания того, где вы находитесь в цикле, другие сигналы лишены контекста.</p>
+
+          <hr>
+
+          <h2>Volume Oracle: Следы Институтов</h2>
+          <p>Volume Oracle классифицирует рыночные режимы и обнаруживает институциональное поведение через анализ объёма.</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>Обнаружение режима: Накопление (зелёный), Распределение (красный), или Ослабление (золотой)</li>
+            <li>Сигналы BULL/BEAR с оценкой качества и процентами силы</li>
+            <li>Подтверждение HTF, показывающее выравнивание с дневным/недельным</li>
+            <li>Обнаружение дивергенции между ценой и объёмом</li>
+          </ul>
+          <p><strong>Как связан:</strong> Volume Oracle подтверждает то, что предполагает Pentarch. Если Pentarch показывает фазу Touchdown (накопление), Volume Oracle должен показывать зелёный режим с институциональным поглощением. Когда они выравниваются, уверенность возрастает. Когда расходятся, требуется осторожность.</p>
+
+          <hr>
+
+          <h2>Janus Atlas: Архитектура Уровней</h2>
+          <p>Janus Atlas картирует ключевые ценовые уровни, где происходят решения - поддержка, сопротивление, зоны стоимости и институциональные точки отсчёта.</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>50+ уровней включая пивоты, Фибоначчи, маркеры сессий</li>
+            <li>Volume Profile с POC (Point of Control), VAH (Value Area High), VAL (Value Area Low)</li>
+            <li>Мультипериодный VWAP с полосами стандартного отклонения</li>
+            <li>High/low/close предыдущего дня/недели/месяца</li>
+          </ul>
+          <p><strong>Как связан:</strong> Janus Atlas отвечает "где", в то время как Pentarch и Volume Oracle отвечают "когда" и "что". Минимум цикла (Pentarch), происходящий на важной поддержке (Janus Atlas) с объёмом накопления (Volume Oracle) - это сетап высокой убеждённости. Уровни обеспечивают точность входа и точки инвалидации.</p>
+
+          <hr>
+
+          <h2>OmniDeck: Движок Конфлюэнса</h2>
+          <p>OmniDeck синтезирует 10 различных систем анализа в единую оценку конфлюэнса от 1 до 10.</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>Объединяет анализ тренда, импульса, объёма, волатильности и цикла</li>
+            <li>Выдаёт простую оценку 1-10 (выше = больше конфлюэнса)</li>
+            <li>Отмечает Liquidity Sweeps (охота за стопами) метками LL и HH</li>
+            <li>Показывает, когда несколько независимых систем согласны</li>
+          </ul>
+          <p><strong>Как связан:</strong> OmniDeck - это слой интеграции. Вместо ручной проверки семи индикаторов, оценка конфлюэнса сразу говорит вам, выровнены ли условия. Оценка 8+ означает, что большинство систем согласны. Оценка 3 означает конфликтующие сигналы - время подождать.</p>
+
+          <hr>
+
+          <h2>Augury Grid: Сканер</h2>
+          <p>Augury Grid сканирует до 40 символов одновременно, оценивая каждый по 5-фильтровой системе.</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>Мультисимвольный скрининг в одном виде</li>
+            <li>5-балльная система оценки качества сетапа</li>
+            <li>Фильтрует по тренду, импульсу, объёму, волатильности и структуре</li>
+            <li>Выделяет лучшие возможности в вашем списке наблюдения</li>
+          </ul>
+          <p><strong>Как связан:</strong> В то время как другие индикаторы анализируют глубину (один символ, множество факторов), Augury Grid анализирует ширину (много символов, ключевые факторы). Отвечает "на чём мне сосредоточиться?" прежде чем вы погрузитесь в детальный анализ с другими инструментами.</p>
+
+          <hr>
+
+          <h2>Harmonic Oscillator: Консенсус Импульса</h2>
+          <p>Harmonic Oscillator объединяет 5 разных осцилляторов в систему голосования для импульса.</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>Агрегирует RSI, Стохастик, CCI, Williams %R и MFI</li>
+            <li>Система голосования: 3+ осциллятора согласны = сигнал</li>
+            <li>Уменьшает ложные сигналы от любого отдельного осциллятора</li>
+            <li>Чистый визуальный вывод без загромождения графика</li>
+          </ul>
+          <p><strong>Как связан:</strong> Harmonic Oscillator добавляет подтверждение импульса к анализу цикла и объёма. Переход Pentarch (цикл разворачивается) с подтверждением Volume Oracle (смена режима) и согласием Harmonic Oscillator (импульс меняется) создаёт тройную валидацию, которую отдельные индикаторы не могут обеспечить.</p>
+
+          <hr>
+
+          <h2>Plutus Flow: След Денег</h2>
+          <p>Plutus Flow - это продвинутый OBV (On-Balance Volume) с трендовыми лентами и автоматическим обнаружением дивергенций.</p>
+          <p><strong>Что делает:</strong></p>
+          <ul>
+            <li>Продвинутый расчёт OBV со сглаживанием</li>
+            <li>Трендовые ленты, показывающие направление денежного потока</li>
+            <li>Автоматическое обнаружение дивергенции (цена vs объём)</li>
+            <li>Раннее предупреждение, когда цена и объём расходятся</li>
+          </ul>
+          <p><strong>Как связан:</strong> Plutus Flow и Volume Oracle оба анализируют объём, но по-разному. Volume Oracle классифицирует режим (накопление/распределение). Plutus Flow отслеживает кумулятивный поток и обнаруживает дивергенции. Вместе они раскрывают как текущее состояние, так и формирующиеся изменения.</p>
+
+          <hr>
+
+          <h2>Интеграция на Практике</h2>
+          <p>Вот как проходит типичный анализ:</p>
+          <ol>
+            <li><strong>Сканирование Augury Grid:</strong> Какие символы получают наивысший балл в 5-фильтровой системе?</li>
+            <li><strong>Проверка Pentarch:</strong> В какой фазе цикла находится символ? Ранний цикл = возможность. Поздний цикл = осторожность.</li>
+            <li><strong>Подтверждение Volume Oracle:</strong> Соответствует ли режим циклу? Накопление в Touchdown? Распределение в Warning?</li>
+            <li><strong>Уровни Janus Atlas:</strong> Где ключевые точки входа и уровни инвалидации?</li>
+            <li><strong>Оценка OmniDeck:</strong> Сколько конфлюэнса существует? 7+ для продолжения.</li>
+            <li><strong>Harmonic Oscillator:</strong> Импульс выровнен с тезисом?</li>
+            <li><strong>Plutus Flow:</strong> Есть ли дивергенции, предупреждающие о ловушке?</li>
+          </ol>
+          <p>Это не семь индикаторов, борющихся за внимание. Это семь вопросов, выстраивающихся к решению.</p>
+
+          <hr>
+
+          <h2>Что Делает Это Другим</h2>
+          <p>Большинство трейдеров:</p>
+          <ul>
+            <li>Используют один индикатор и теряют контекст</li>
+            <li>Используют много индикаторов, которые противоречат друг другу</li>
+            <li>Накапливают избыточные инструменты (три осциллятора импульса, никакого анализа цикла)</li>
+          </ul>
+          <p>Signal Pilot решает это по дизайну. Каждый индикатор имеет чёткую роль. Выходы логически связаны. Конфлюэнс измеряется, а не угадывается.</p>
+          <p>Результат: более ясные решения с меньшим шумом.</p>
+
+          <hr>
+
+          <h2>Без Перерисовки, Без Компромиссов</h2>
+          <p>Каждый индикатор Signal Pilot финализирует сигналы при закрытии свечи. То что вы видите в истории - именно то, что появилось в реальном времени. Никакой ретроактивной "оптимизации". Никаких исчезающих сигналов.</p>
+          <p>Это важно, потому что доверие важно. Если вы не можете доверять своему историческому анализу, вы не можете доверять своему будущему анализу. Signal Pilot создан для трейдеров, которым нужна надёжность, а не для трейдеров, которым нужны красивые бэктесты.</p>
+
+          <hr>
+
+          <h2>Частые Вопросы</h2>
+          <p><strong>"У меня уже есть индикаторы. Зачем мне переключаться?"</strong></p>
+          <p>Вопрос не в том, есть ли у вас индикаторы - а в том, работают ли они вместе. Большинство трейдеров имеют 4-6 инструментов, которые никогда не были разработаны для интеграции. Они противоречат друг другу. Они измеряют одни и те же вещи по-разному. Signal Pilot был спроектирован как система с первого дня. Разница видна в ясности, а не только в функциях.</p>
+          <p><strong>"Потребуется ли это кривая обучения?"</strong></p>
+          <p>Да, но меньше, чем вы думаете. Большинство трейдеров сообщают, что после недели наблюдения метки фаз и оценки конфлюэнса становятся интуитивными. Документация полная. И поскольку набор синтезирует сложность в простые выводы (названия фаз, оценки 1-10), вы не расшифровываете спагетти-графики.</p>
+          <p><strong>"Как я узнаю, что не перерисовывает?"</strong></p>
+          <p>Протестируйте. Во время вашего пробного периода делайте скриншоты. Подождите формирования новых свечей. Проверьте, сдвинулось ли что-то. Мы поощряем это, потому что знаем, что вы найдёте: сигналы финализируются при закрытии свечи и никогда не меняются. Бэктест соответствует живой торговле.</p>
+          <p><strong>"Что если это не работает для моего рынка/таймфрейма?"</strong></p>
+          <p>Циклы происходят на каждом ликвидном рынке на каждом таймфрейме - такова природа того, как течёт капитал. Пробный период позволяет тестировать на ваших конкретных символах и таймфреймах. Если не подходит вашему стилю, вы потратили только время.</p>
+
+          <hr>
+
+          <h2>Попробуйте Сами</h2>
+          <p>Лучший способ понять, как работает набор - использовать его. Бесплатный пробный период даёт вам доступ ко всем семи индикаторам на TradingView - без кредитной карты, без обязательств.</p>
+          <p>Запустите Augury Grid на вашем списке наблюдения. Проверьте Pentarch на вашем любимом символе. Посмотрите, как Volume Oracle и Plutus Flow раскрывают то, что цена одна показать не может. Наблюдайте, как оценка конфлюэнса OmniDeck меняется по мере эволюции условий.</p>
+          <p>Большинство трейдеров знают в течение первой недели, подходит ли набор их подходу. Одна неделя. Никакого риска. Только ясность.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Похожие Статьи</h3>
+            <div class="related-grid">
+              <a href="../../the-repainting-problem/ru/" class="related-card">
+                <span class="related-category">Индикаторы</span>
+                <h4>Проблема Перерисовки: Как Большинство Индикаторов Обманывают</h4>
+              </a>
+              <a href="../../the-only-pattern-that-repeats/ru/" class="related-card">
+                <span class="related-category">Циклы</span>
+                <h4>Единственный Паттерн, Который Действительно Повторяется</h4>
+              </a>
+              <a href="../../accumulation-vs-distribution/ru/" class="related-card">
+                <span class="related-category">Циклы</span>
+                <h4>Накопление vs Распределение: Читая То, Что Графики Не Говорят</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <div class="article-nav-link placeholder"></div>
+            <a href="../../free-indicators-vs-professional-tools/ru/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Следующая
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Бесплатные Индикаторы vs Профессиональные Инструменты: Когда Обновляться</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>Увидьте разницу, которую создаёт интегрированный анализ.</strong></p>
+            <p>Начните бесплатный пробный период - все 7 индикаторов, полная функциональность, кредитная карта не требуется. Добавьте их на ваши графики сегодня. Смотрите, как фаза цикла, режим объёма, ключевые уровни и оценка конфлюэнса работают вместе, создавая полную картину.</p>
+            <p>Одна неделя наблюдения. Нулевой риск. Потом решите.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Начать Бесплатную Пробную Версию Сейчас →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/ru/">← Назад к Блогу</a>
+        <a href="https://signalpilot.io">Главная</a>
+        <a href="https://docs.signalpilot.io">Документация</a>
+        <a href="https://education.signalpilot.io">Центр Обучения</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress').style.width = progress + '%';
+      const btn = document.getElementById('backToTop');
+      if (window.scrollY > 500) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    });
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    document.querySelectorAll('.hero-image img').forEach(img => {
+      if (img.complete && img.naturalHeight > 0) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => img.classList.add('loaded'));
+      }
+    });
+  </script>
 </body>
 </html>
