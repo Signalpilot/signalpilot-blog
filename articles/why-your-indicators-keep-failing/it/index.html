@@ -73,17 +73,59 @@
       <p>Questo è critico, ed è il motivo per cui molti trader pensano di aver trovato un sistema perfetto - finché non lo tradano dal vivo.</p>
       <p>Repainting significa che un indicatore cambia i suoi segnali storici dopo il fatto. Quel segnale di acquisto "perfetto" che vedi sul grafico? Potrebbe non essere stato lì quando la candela si stava effettivamente formando. L'indicatore ha aspettato di vedere cosa succedeva, poi ha dipinto il segnale retroattivamente.</p>
       <p>Il tuo backtesting diventa inutile. Ogni segnale storico sembra perfetto perché l'indicatore ha barato - conosceva già il risultato.</p>
-      <p><strong>Cosa funziona davvero:</strong> Insisti su indicatori che finalizzano i loro segnali alla chiusura della candela. Il segnale appare o no. Nessuna revisione. Quello che vedi nella storia è esattamente quello che avresti visto dal vivo.</p>
+      <p><strong>Come testare il repainting:</strong></p>
+      <ol>
+        <li>Apri un grafico e nota dove appaiono i segnali attuali</li>
+        <li>Aspetta che si formino 10-20 nuove candele</li>
+        <li>Torna indietro e verifica se quei segnali si sono spostati, scomparsi o cambiati</li>
+      </ol>
+      <p>Se qualcosa è cambiato, stai trattando con il repainting. Non importa quanto sia bello il backtest. Non puoi tradarlo in modo affidabile.</p>
+      <p><strong>Cosa funziona davvero:</strong> Insisti su indicatori che finalizzano i loro segnali alla chiusura della candela. Il segnale appare o no. Nessuna revisione. Quello che vedi nella storia è esattamente quello che avresti visto dal vivo. Questo non è negoziabile per il trading serio.</p>
+      <hr>
+      <h2>Leading vs Lagging: Il Dibattito Sbagliato</h2>
+      <p>I trader sono ossessionati dal trovare indicatori "leading" - strumenti che predicono il futuro. Ecco la verità scomoda: nessun indicatore predice nulla. Tutti elaborano dati passati.</p>
+      <p>La vera domanda non è leading vs lagging. È: <em>cosa sta effettivamente misurando questo indicatore?</em></p>
+      <p>Le medie mobili misurano il prezzo medio nel tempo. Sono lente per design - questo è il punto. Usare una MA 200 e lamentarsi che è "lagging" è come lamentarsi che un calendario è lento perché mostra la data di ieri.</p>
+      <p>L'RSI misura il momentum recente. È più veloce, ma non dice nulla sulla direzione del trend. Rimarrà felicemente in ipercomprato mentre il prezzo raddoppia.</p>
+      <p><strong>Cosa funziona davvero:</strong> Smetti di chiedere "è leading o lagging?" Inizia a chiedere:</p>
+      <ul>
+        <li>A quale domanda specifica risponde questo indicatore?</li>
+        <li>In quale punto di un movimento fornisce informazioni utili?</li>
+        <li>Cosa ignora completamente?</li>
+      </ul>
+      <p>Ogni indicatore ha un lavoro. Usalo per quel lavoro. Aspettarsi che l'RSI ti dica della struttura del trend è come aspettarsi che il tachimetro ti dia indicazioni stradali.</p>
       <hr>
       <h2>Il Framework dei Cicli</h2>
-      <p>I mercati non si muovono casualmente. Ciclano attraverso cinque fasi: accumulazione, markup, climax, distribuzione e declino. Questo pattern si ripete in ogni timeframe, ogni classe di asset.</p>
+      <p>I mercati non si muovono casualmente. Ciclano attraverso cinque fasi: accumulazione, markup, climax, distribuzione e declino. Questo pattern si ripete in ogni timeframe, ogni classe di asset, per una semplice ragione - riflette la psicologia umana. Avidità, paura, speranza e capitolazione lasciano impronte.</p>
       <p>La maggior parte degli indicatori non ne tiene conto. Trattano ogni momento come indipendente, ecco perché generano segnali nel mezzo di un trend che ha ancora spazio, o all'inizio di una zona di chop che ti stopperà ripetutamente.</p>
       <p><strong>Cosa funziona davvero:</strong> Prima di chiedere "dovrei comprare o vendere?", chiedi "dove siamo nel ciclo?"</p>
+      <ul>
+        <li><em>Accumulazione (TD):</em> Dopo vendite estese, cerca segnali di esaurimento. Lo smart money accumula qui.</li>
+        <li><em>Markup (IGN):</em> All'inizio di un uptrend, la conferma del momentum conta. Questo movimento è reale?</li>
+        <li><em>Climax (CAP):</em> Dopo acquisti estesi, cerca segnali di climax. La folla è all-in. Tempo di essere cauti.</li>
+        <li><em>Distribuzione (WRN):</em> La debolezza appare. Lo smart money sta uscendo. Sii difensivo.</li>
+        <li><em>Declino (BDN):</em> Breakdown confermato. Evita i long, considera gli short o resta flat.</li>
+      </ul>
+      <p>Questo contesto cambia tutto. Un "segnale di acquisto" durante l'accumulazione ha probabilità completamente diverse dello stesso segnale durante la distribuzione. L'indicatore non conosce la differenza. Tu devi conoscerla.</p>
+      <hr>
+      <h2>Cosa Cercare in Qualsiasi Indicatore</h2>
+      <p>Prima di aggiungere qualsiasi strumento al tuo grafico, passalo attraverso questa checklist:</p>
+      <p><strong>1. Repinta?</strong><br>Testalo tu stesso. Il marketing può essere fuorviante.</p>
+      <p><strong>2. A quale domanda specifica risponde?</strong><br>Se non puoi articolarlo in una frase, salta.</p>
+      <p><strong>3. Dà contesto o solo segnali?</strong><br>Segnali senza contesto è gioco d'azzardo. Devi capire perché il segnale è apparso.</p>
+      <p><strong>4. Puoi spiegare come funziona?</strong><br>Non devi capire il codice, ma dovresti capire la logica. Le scatole nere creano dipendenza, non competenza.</p>
+      <p><strong>5. Ti aiuta a vedere il mercato, o cerca di pensare per te?</strong><br>I migliori strumenti migliorano la tua analisi. I peggiori la sostituiscono. Vuoi diventare un trader migliore, non più dipendente dal software.</p>
       <hr>
       <h2>La Conclusione</h2>
       <p>Gli indicatori non sono il problema. Come li usano i trader lo è.</p>
       <p>Smetti di impilare segnali. Inizia a costruire contesto. Capisci dove sei nel ciclo del mercato prima di chiedere se comprare o vendere. E per tutto ciò che metti sul tuo grafico, assicurati assolutamente che non repinti.</p>
       <p>L'edge non sta nel vedere di più. Sta nel vedere ciò che conta.</p>
+      <hr>
+      <h2>Un Approccio Diverso</h2>
+      <p>E se invece di 6 indicatori in conflitto, ne avessi 7 che comunicano davvero tra loro?</p>
+      <p>Questo è ciò che fanno i sistemi integrati. L'analisi dei cicli ti dice dove sei nella struttura. Il rilevamento del regime di volume conferma se le istituzioni stanno accumulando o distribuendo. Il voto degli oscillatori aggrega il momentum da più fonti. La confluenza dei livelli mostra dove il prezzo è probabile che reagisca.</p>
+      <p>Gli indicatori fanno il loro lavoro internamente. Tu vedi l'output sintetizzato - non dodici opinioni in conflitto, ma un'immagine coerente del mercato.</p>
+      <p>Signal Pilot è stato costruito su questo principio: sette indicatori, ognuno che risponde a una domanda diversa, tutti progettati per lavorare insieme. Fase del ciclo da Pentarch. Regime di volume da Volume Oracle. Livelli chiave da Janus Atlas. Punteggio di confluenza da OmniDeck. La suite ti dà contesto, non solo segnali.</p>
       <hr>
       <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
         <a href="../../the-repainting-problem/it/" class="related-card"><span class="related-category">Indicatori</span><h4>Il Problema del Repainting</h4></a>
