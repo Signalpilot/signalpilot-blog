@@ -319,34 +319,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* Hide Google Translate UI but keep select accessible for JS */
-#google_translate_element {
-  position: absolute !important;
-  left: -9999px !important;
-  top: -9999px !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-.goog-te-banner-frame,
-.goog-te-gadget-icon,
-#goog-gt-tt,
-.goog-te-balloon-frame,
-.goog-te-menu-frame {
-  display: none !important;
-}
-
-body {
-  top: 0 !important;
-}
-
-.skiptranslate:not(#google_translate_element) {
-  display: none !important;
-}
-
-iframe.goog-te-banner-frame {
-  display: none !important;
-}
 
 /* Theme Toggle */
 .theme-toggle {
