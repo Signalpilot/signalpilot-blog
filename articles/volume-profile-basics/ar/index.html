@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أساسيات ملف حجم التداول: شاهد أين يحدث الحدث الحقيقي - Signal Pilot Blog</title>
+  <meta name="description" content="معظم المتداولين يراقبون أعمدة الحجم. المتداولون الأذكياء يراقبون ملف الحجم. إليك كيفية قراءة أين تداولت الأموال المؤسسية فعلياً.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">المستندات</a><a href="https://education.signalpilot.io">التعليم</a><a href="/ar/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="ترجمة">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="./" class="active"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/ar/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/ar/?filter=indicators">المؤشرات</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">مقال</span>
+          </nav>
+          <span class="article-category">المؤشرات</span>
+          <h1 class="article-title">أساسيات ملف حجم التداول: شاهد أين يحدث الحدث الحقيقي</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 دقائق للقراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="شارك على تويتر">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="شارك على لينكد إن">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تصور أساسيات ملف الحجم">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>أعمدة الحجم القياسية تخبرك بكمية ما تم تداوله خلال فترة زمنية. هذا مفيد، لكنه محدود.</p>
+          <p>ملف الحجم يخبرك بكمية ما تم تداوله عند كل مستوى سعري. هذه معلومة مختلفة تماماً - وأكثر قابلية للتطبيق بكثير.</p>
+          <p>إليك كيفية قراءته ولماذا هو مهم.</p>
+
+          <hr>
+
+          <h2>ما يظهره ملف الحجم</h2>
+          <p>بدلاً من الأعمدة العمودية التي تظهر الحجم لكل شمعة، يعرض ملف الحجم أعمدة أفقية تظهر الحجم لكل مستوى سعري.</p>
+          <p>فكر في الأمر هكذا: إذا أخذت كل حجم جلسة تداول ونظمته حسب السعر بدلاً من الوقت، سترى أين حدثت معظم المعاملات فعلياً.</p>
+          <p>بعض الأسعار ترى حجماً ضخماً - هذه هي المستويات التي وجد فيها المشترون والبائعون اتفاقاً وتداولوا بكثافة. أسعار أخرى لا ترى أي حجم تقريباً - تحرك السعر بسرعة لأنه لم يكن هناك اهتمام.</p>
+          <p>هذا التمييز قوي لأنه يكشف أين بنت المؤسسات مراكزها فعلياً.</p>
+
+          <hr>
+
+          <h2>مفاهيم ملف الحجم الرئيسية</h2>
+          <p><strong>نقطة التحكم (POC):</strong> مستوى السعر ذو أعلى حجم. هنا حدث أكبر قدر من التداول - السعر "الأكثر عدالة" حيث وصل المشترون والبائعون إلى أقصى اتفاق. غالباً ما يعمل POC كمغناطيس؛ يميل السعر للعودة إليه.</p>
+          <p><strong>منطقة القيمة:</strong> النطاق الذي يحتوي على 70% من إجمالي الحجم (عادةً). هذا يمثل أين حدث معظم النشاط. السعر داخل منطقة القيمة "عادل". السعر خارجها يستكشف.</p>
+          <p><strong>أعلى منطقة القيمة (VAH):</strong> الحد الأعلى لمنطقة القيمة. غالباً يعمل كمقاومة عند الاقتراب من الأسفل.</p>
+          <p><strong>أدنى منطقة القيمة (VAL):</strong> الحد الأدنى لمنطقة القيمة. غالباً يعمل كدعم عند الاقتراب من الأعلى.</p>
+          <p><strong>عقد الحجم العالي (HVN):</strong> مستويات سعرية ذات تراكم حجم كبير. تعمل كدعم/مقاومة لأن العديد من المراكز أُنشئت هناك.</p>
+          <p><strong>عقد الحجم المنخفض (LVN):</strong> مستويات سعرية ذات حجم أدنى. يميل السعر للتحرك بسرعة خلالها - لا "ذاكرة" هناك، لا مراكز للدفاع عنها.</p>
+
+          <hr>
+
+          <h2>كيفية التداول باستخدام ملف الحجم</h2>
+          <p><strong>الدعم والمقاومة:</strong> HVN وPOC يعملان كمستويات دعم/مقاومة. على عكس الخطوط العشوائية المرسومة على الرسوم البيانية، هذه المستويات لها دليل معاملات حقيقي وراءها.</p>
+          <p><strong>أهداف الاختراق:</strong> عندما يخترق السعر LVN، غالباً يتحرك بسرعة إلى HVN التالي. مناطق الحجم المنخفض تقدم مقاومة قليلة - ينزلق السعر حتى يصطدم بمراكز متراكمة.</p>
+          <p><strong>الارتداد للمتوسط:</strong> السعر البعيد عن POC يميل للرجوع. يمثل POC "القيمة العادلة" حيث تمت معظم الأعمال. التحركات الممتدة بعيداً عنه غالباً غير مستدامة.</p>
+          <p><strong>تأكيد الاتجاه:</strong> في الاتجاهات الصحية، ينتقل POC في اتجاه الاتجاه. إذا كان السعر يحقق قمم أعلى لكن POC لا يتحرك للأعلى، قد يضعف الاتجاه - الحجم لا يؤكد حركة السعر.</p>
+
+          <hr>
+
+          <h2>أنواع ملف الحجم</h2>
+          <p><strong>ملف حجم الجلسة:</strong> يظهر توزيع الحجم لجلسة تداول واحدة. مفيد للمتداولين اليوميين لتحديد المستويات خلال اليوم.</p>
+          <p><strong>النطاق المرئي (VPVR):</strong> يظهر توزيع الحجم لما هو مرئي على الرسم البياني. يتعدل عند التكبير/التصغير. جيد لرؤية الصورة الكبيرة.</p>
+          <p><strong>النطاق الثابت:</strong> يظهر توزيع الحجم لنطاق سعر/وقت محدد تحدده أنت. مفيد لتحليل تحركات أو تجميعات محددة.</p>
+          <p><strong>دوري:</strong> يظهر ملفات منفصلة لكل يوم/أسبوع/شهر. يساعد في تحديد كيف تتغير مناطق القيمة بمرور الوقت.</p>
+
+          <hr>
+
+          <h2>إعدادات ملف الحجم الشائعة</h2>
+          <p><strong>رفض منطقة القيمة:</strong> يدخل السعر منطقة القيمة، يختبر POC، ويُرفض. تداول في اتجاه الرفض مع وقف خلف POC.</p>
+          <p><strong>اختراق منطقة القيمة:</strong> يخترق السعر فوق VAH أو تحت VAL مع حجم قوي. ادخل على الاختراق أو عند إعادة اختبار المستوى المكسور. الهدف: HVN التالي.</p>
+          <p><strong>مغناطيس POC:</strong> السعر البعيد عن POC يميل للعودة. إذا كان السعر أعلى/أدنى بكثير من POC والزخم يتلاشى، فكر في الارتداد للمتوسط نحو POC.</p>
+          <p><strong>الانطلاق السريع LVN:</strong> عندما يدخل السعر LVN، توقع حركة سريعة إلى HVN التالي. هذه مناطق مقاومة منخفضة حيث نادراً ما يتوقف السعر.</p>
+
+          <hr>
+
+          <h2>قيود ملف الحجم</h2>
+          <p>ملف الحجم ليس سحراً. كن واعياً لهذه القيود:</p>
+          <p><strong>جودة البيانات مهمة:</strong> ملف الحجم جيد بقدر جودة بياناتك. تدفقات بيانات مختلفة تظهر أحجاماً مختلفة. استخدم مصادر متسقة وعالية الجودة.</p>
+          <p><strong>السياق لا يزال مهماً:</strong> POC من ستة أشهر مضت أقل أهمية من واحد من الأمس. الملفات الحديثة أكثر صلة من القديمة.</p>
+          <p><strong>ليس تنبؤياً:</strong> ملف الحجم يظهر أين كان الحجم، ليس أين سيكون. إنه خريطة للماضي، ليس كرة بلورية.</p>
+          <p><strong>قد يكون مربكاً:</strong> الكثير من الملفات على رسم بياني واحد تخلق ضوضاء. استخدم باعتدال وبهدف.</p>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>ملف الحجم يكشف ما تخفيه الرسوم البيانية القياسية: أين تداولت الأموال المؤسسية فعلياً. POC يظهر القيمة العادلة. HVN تظهر المستويات المهمة. LVN تظهر مناطق السفر السريع.</p>
+          <p>يصبح ملف الحجم أكثر قوة عند دمجه مع الوعي بالدورات. POC خلال التجميع (عندما تبني الأموال الذكية مراكز) يتصرف بشكل مختلف عن واحد خلال التوزيع. مستويات VWAP مع نطاقات الانحراف المعياري تضيف بعداً آخر - تظهر ليس فقط أين تداول الحجم، بل أين أُدركت القيمة عبر آفاق زمنية مختلفة.</p>
+          <p>استخدم ملف الحجم لتحديد الدعم/المقاومة الحقيقية، تحديد أهداف واقعية، وفهم هيكل السوق على مستوى أعمق مما يكشفه السعر وحده.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../../support-and-resistance-explained/ar/" class="related-card">
+                <span class="related-category">للمبتدئين</span>
+                <h4>شرح الدعم والمقاومة</h4>
+              </a>
+              <a href="../../accumulation-vs-distribution/ar/" class="related-card">
+                <span class="related-category">الدورات</span>
+                <h4>التجميع مقابل التوزيع: اكتشاف الفرق</h4>
+              </a>
+              <a href="../../how-smart-money-moves/ar/" class="related-card">
+                <span class="related-category">الدورات</span>
+                <h4>كيف تحرك الأموال الذكية الأسواق فعلياً</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../tradingview-free-scripts/ar/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                السابق
+              </span>
+              <span class="article-nav-title">ما لا يخبرك به TradingView عن السكربتات المجانية</span>
+            </a>
+            <a href="../../revenge-trading-recovery/ar/" class="article-nav-link next">
+              <span class="article-nav-label">
+                التالي
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">التداول الانتقامي: كيف تتوقف وتتعافى</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>يحسب Janus Atlas ملف الحجم عبر الفترات اليومية والأسبوعية والشهرية والربع سنوية والسنوية - يعرض POC (نقطة التحكم) وVAH (أعلى منطقة القيمة) وVAL (أدنى منطقة القيمة) لكل منها. لا حاجة لإعداد يدوي. تتحدث المستويات عند إغلاق الشمعة وتراكب ذاكرة السعر المؤسسية عبر الأطر الزمنية.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">شاهد هيكل الحجم ←</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/ar/">→ العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
