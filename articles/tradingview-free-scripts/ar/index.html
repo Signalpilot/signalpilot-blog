@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ما لا يخبرك به TradingView عن السكربتات المجانية - مدونة Signal Pilot</title>
+  <meta name="description" content="أكثر من 100,000 مؤشر مجاني. مراجعات وإعجابات لتوجيه اختيارك. ما الذي يمكن أن يسوء؟ الكثير في الواقع.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">التعليم</a><a href="/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+          <div class="translate-dropdown">
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-menu">
+                <a href="../"><span class="flag">🇬🇧</span> English</a>
+                <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                <a href="./" class="active"><span class="flag">🇸🇦</span> العربية</a>
+                <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل المظهر">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="مسار التنقل">
+            <a href="/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=practical">عملي</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">المقال</span>
+          </nav>
+          <span class="article-category">عملي</span>
+          <h1 class="article-title">ما لا يخبرك به TradingView عن السكربتات المجانية</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 دقائق للقراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="شارك على Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="شارك على LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تحذير من سكربتات TradingView المجانية" data-ai-prompt="Dark themed visualization of the TradingView script library as a treasure chest mixed with traps - some scripts shown as golden gems (good tools) while others are shown as red warning symbols or broken code (dangerous scripts). The challenge of separating good from bad. Deep navy background with contrasting good/bad elements.">
+        <figcaption class="ai-prompt">Dark themed visualization of the TradingView script library as a treasure chest mixed with traps - some scripts shown as golden gems (good tools) while others are shown as red warning symbols or broken code (dangerous scripts). The challenge of separating good from bad. Deep navy background with contrasting good/bad elements.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>أكثر من 100,000 مؤشر في مكتبة TradingView العامة. مجانية. وصول فوري. مراجعات وإعجابات لتوجيه اختيارك.</p>
+          <p>ما الذي يمكن أن يسوء؟</p>
+          <p>الكثير في الواقع. نظام السكربتات المجانية يحتوي على بعض الأدوات الممتازة. لكنه يحتوي أيضاً على فخاخ ستكلفك أموالاً حقيقية.</p>
+
+          <hr>
+
+          <h2>طيف الجودة</h2>
+          <p>لنكن منصفين: بعض السكربتات المجانية ممتازة حقاً. المطورون الموهوبون يساهمون بأدوات تنافس أو تتفوق على البدائل المدفوعة.</p>
+          <p>لكن مقابل كل مؤشر مجاني عالي الجودة، هناك عشرات:</p>
+          <ul>
+            <li>مبرمجة بشكل سيء (بها أخطاء، بطيئة، تستهلك الموارد)</li>
+            <li>معيبة مفاهيمياً (المنطق لا يعمل)</li>
+            <li>خادعة عمداً (مصممة لتبدو جيدة، لا للعمل)</li>
+            <li>مهجورة (لم تُحدَّث منذ سنوات)</li>
+          </ul>
+          <p>المشكلة هي التمييز بين الجيد والسيء قبل أن تتداول بأموال حقيقية.</p>
+
+          <hr>
+
+          <h2>وباء إعادة الرسم</h2>
+          <p>ما تحتاج لمعرفته عن السكربتات المجانية تحديداً: معدل إعادة الرسم فلكي.</p>
+          <p>كثير من المطورين لا يعرفون حتى أن مؤشرهم يعيد الرسم. كتبوا الكود، رأوا نتائج تاريخية رائعة، ونشروا. لم يختبروا أبداً بشكل حي.</p>
+          <p>آخرون يعرفون بالضبط ما يفعلون. المؤشرات التي تعيد الرسم تحصل على تحميلات أكثر لأنها تبدو أكثر إثارة للإعجاب.</p>
+          <p>نظام مراجعات TradingView لا يفلتر إعادة الرسم. يمكن أن يكون لديك مؤشر بأكثر من 1,000 إعجاب يعيد الرسم بالكامل. المراجعات من أشخاص حملوه، رأوا إشارات تاريخية مثالية، وضغطوا "إعجاب" دون أن يختبروا بشكل حي.</p>
+          <p>قبل استخدام أي سكربت مجاني للتداول الحقيقي:</p>
+          <ol>
+            <li><strong>راقبه مباشرة</strong> لجلسة واحدة على الأقل</li>
+            <li><strong>التقط لقطات شاشة</strong> وقارنها بالتاريخ لاحقاً</li>
+            <li><strong>اسأل المطور مباشرة</strong> — ردهم يخبرك الكثير</li>
+            <li><strong>افترض أنه يعيد الرسم</strong> حتى يثبت العكس</li>
+          </ol>
+
+          <hr>
+
+          <h2>مشكلة الصندوق الأسود</h2>
+          <p>TradingView يسمح للمطورين بنشر مؤشرات "محمية" حيث يمكنك استخدامها لكن لا يمكنك رؤية الكود المصدري.</p>
+          <p>هذه مشكلة:</p>
+          <ul>
+            <li><strong>لا يمكنك التحقق من المنطق.</strong> قد يكون مجرد تقاطع متوسطات متحركة بسيط باسم فاخر.</li>
+            <li><strong>لا يمكنك اكتشاف المشاكل.</strong> الكود المخفي قد يستخدم بيانات مستقبلية أو يحتوي على أخطاء منطقية.</li>
+            <li><strong>لا يمكنك فهمه.</strong> عندما يتوقف عن العمل، لن تعرف لماذا.</li>
+          </ul>
+          <p>كقاعدة: السكربتات مفتوحة المصدر التي تُظهر كودها أكثر جدارة بالثقة من السكربتات المحمية. ليس لأنها دائماً أفضل، لكن لأنها قابلة للتحقق.</p>
+
+          <hr>
+
+          <h2>مشكلة الحوافز</h2>
+          <p>لماذا ينشر الناس سكربتات مجانية؟</p>
+          <p>بعضهم يساهم حقاً للمجتمع. لكن الكثيرين لديهم حوافز أخرى:</p>
+          <ul>
+            <li><strong>بناء الجمهور.</strong> السكربت هو مغناطيس للعملاء المحتملين. اجذب اهتمام المستخدمين، ثم بِع النسخ المميزة أو الدورات.</li>
+            <li><strong>تعزيز السمعة.</strong> السكربت المجاني الشائع يعطي مصداقية.</li>
+            <li><strong>التلاعب بالخوارزمية.</strong> المزيد من المؤشرات = المزيد من الظهور.</li>
+          </ul>
+          <p>لا أي من هذه الحوافز سيء بطبيعته. لكنها تعني أن الغرض الأساسي للسكربت قد لا يكون جعلك مربحاً.</p>
+
+          <hr>
+
+          <h2>ما يجب البحث عنه</h2>
+          <p>ليست كل السكربتات المجانية سيئة. إليك كيفية إيجاد الجيدة:</p>
+          <ul>
+            <li><strong>مفتوحة المصدر.</strong> يمكنك رؤية الكود. تحقق من أن المنطق منطقي.</li>
+            <li><strong>مطور نشط.</strong> يرد على الأسئلة. يحدث السكربت.</li>
+            <li><strong>ادعاءات واقعية.</strong> لا لغة "الكأس المقدسة". صادق حول القيود.</li>
+            <li><strong>توثيق واضح.</strong> ماذا يقيس؟ متى يجب عدم استخدامه؟</li>
+          </ul>
+
+          <hr>
+
+          <h2>بروتوكول الاختبار</h2>
+          <p>لأي سكربت مجاني تفكر فيه:</p>
+          <p><strong>الأسبوع 1: المراقبة فقط.</strong> أضفه للرسوم البيانية. راقب دون تداول.</p>
+          <p><strong>الأسبوع 2: اختبار إعادة الرسم المباشر.</strong> التقط لقطات شاشة يومياً. قارن بالتاريخ. أي تغييرات = ارفض.</p>
+          <p><strong>الأسبوع 3: التداول الورقي.</strong> تصرف وكأنك تتداول على الإشارات. تتبع النتائج.</p>
+          <p><strong>الأسبوع 4: اختبار حي بحجم صغير.</strong> إذا نجح في الأسابيع 1-3، تداول بحجم مركز أدنى.</p>
+          <p>فقط بعد هذه العملية التي تستغرق شهراً يجب أن تفكر في الوثوق بسكربت مجاني برأس مال حقيقي.</p>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>مكتبة TradingView المجانية هي منجم ذهب به ألغام أرضية. الأدوات عالية الجودة موجودة، لكنها مختلطة بنفايات تعيد الرسم، وصناديق سوداء، ومشاريع مهجورة.</p>
+          <p>قبل الوثوق بأي سكربت مجاني:</p>
+          <ul>
+            <li>تحقق من أنه لا يعيد الرسم (لا تثق بأي شيء، اختبر كل شيء)</li>
+            <li>فضّل المصدر المفتوح على الكود المحمي</li>
+            <li>تحقق من التطوير والدعم النشط</li>
+            <li>نفّذ بروتوكول اختبار لمدة شهر قبل الأموال الحقيقية</li>
+          </ul>
+          <p>المجاني ليس مجانياً إذا كلفك حسابك.</p>
+
+          <hr>
+
+          <h2>البديل: أنظمة مبنية للعمل معاً</h2>
+          <p>هذا ما تقدمه مجموعات المؤشرات الاحترافية والتي لا تستطيع السكربتات المجانية تقديمها:</p>
+          <p><strong>بنية متكاملة.</strong> ليست سبعة مؤشرات عشوائية — سبع أدوات مصممة للإجابة على أسئلة متكاملة. كشف الدورات يخبرك أين أنت في الهيكل. تحليل الحجم يؤكد السلوك المؤسسي. تسجيل التقاء يجمع كل شيء في تقييمات قابلة للتنفيذ. كل مكون يُعلم الآخرين.</p>
+          <p><strong>ضمان عدم إعادة الرسم.</strong> ليس "ربما لا يعيد الرسم" أو "لا يعيد الرسم باستثناء الشمعة الحالية". الإشارات تُنهى عند إغلاق الشمعة. نقطة. ما تراه في التاريخ هو ما ظهر في الوقت الفعلي.</p>
+          <p><strong>تطوير نشط.</strong> الأسواق تتطور. الأدوات التي عملت في 2020 قد لا تعمل في 2025. المجموعات الاحترافية تُصان وتُحدَّث وتُحسَّن. عندما ينكسر شيء، يُصلح. عندما تتغير الأسواق، تتكيف الأدوات.</p>
+          <p><strong>دعم حقيقي.</strong> الأسئلة تحصل على إجابات. المشاكل تُحل. أنت لا تصرخ في الفراغ آملاً أن يتحقق المطور من إشعارات TradingView الخاصة به.</p>
+          <p>بروتوكول الاختبار لمدة شهر أعلاه؟ لا يجب أن تحتاجه. الأدوات الاحترافية يجب أن تعمل من الصندوق — وإذا لم تفعل، الفترة التجريبية المجانية تخبرك قبل الدفع.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../../the-repainting-problem/ar/" class="related-card">
+                <span class="related-category">المؤشرات</span>
+                <h4>مشكلة إعادة الرسم: لماذا كذب عليك الباكتست</h4>
+              </a>
+              <a href="../../why-your-indicators-keep-failing/ar/" class="related-card">
+                <span class="related-category">المؤشرات</span>
+                <h4>لماذا تستمر مؤشراتك في الفشل</h4>
+              </a>
+              <a href="../../backtesting-without-fooling-yourself/ar/" class="related-card">
+                <span class="related-category">الأنظمة</span>
+                <h4>الباكتست دون خداع نفسك</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../accumulation-vs-distribution/ar/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                السابق
+              </span>
+              <span class="article-nav-title">التجميع مقابل التوزيع: قراءة ما لا يخبرك به الرسم البياني</span>
+            </a>
+            <a href="../../volume-profile-basics/ar/" class="article-nav-link next">
+              <span class="article-nav-label">
+                التالي
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">أساسيات ملف الحجم: شاهد أين يحدث الفعل الحقيقي</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>انتهيت من المقامرة على السكربتات المجانية؟</strong></p>
+            <p>مجموعة Signal Pilot المكونة من 7 مؤشرات مبنية على منطق شفاف، وتُصان بنشاط، ومضمونة عدم إعادة الرسم. كل إشارة تُنهى عند إغلاق الشمعة. التوثيق الكامل يشرح كل ميزة. الدعم النشط يجيب على الأسئلة.</p>
+            <p>جرب جميع المؤشرات السبعة مجاناً — بدون بطاقة ائتمان، بدون التزام. إذا لم تتفوق على السكربتات المجانية التي كنت تستخدمها، فلن تخسر شيئاً.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">← ابدأ الفترة التجريبية المجانية</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">العودة للمدونة ←</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
