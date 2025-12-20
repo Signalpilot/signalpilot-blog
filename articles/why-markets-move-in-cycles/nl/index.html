@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waarom markten in cycli bewegen (En hoe je ervan kunt profiteren) - Signal Pilot Blog</title>
+  <meta name="description" content="Markten bewegen het grootste deel van de tijd zijwaarts. Begrijpen waarom cycli ontstaan - en hoe je ze handelt - verandert alles.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="./">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatie</a><a href="/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Vertalen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="./" class="active"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema wisselen">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Probeer gratis</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/nl/?filter=cycles">Marktcycli</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Artikel</span>
+          </nav>
+          <span class="article-category">Marktcycli</span>
+          <h1 class="article-title">Waarom markten in cycli bewegen (En hoe je ervan kunt profiteren)</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span>
+            <span>Signal Pilot Team</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Delen:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Delen op Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Delen op LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link kopiëren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Visualisatie van marktcycli" data-ai-prompt="Dark themed elegant visualization of market cycles - a beautiful sine wave showing the eternal rhythm of markets moving through accumulation, markup, distribution, decline phases. Labels for each phase. The cycle repeats endlessly. Deep navy background with glowing cyan and gold cycle wave, professional trading aesthetic.">
+        <figcaption class="ai-prompt">Dark themed elegant visualization of market cycles - a beautiful sine wave showing the eternal rhythm of markets moving through accumulation, markup, distribution, decline phases. Labels for each phase. The cycle repeats endlessly. Deep navy background with glowing cyan and gold cycle wave, professional trading aesthetic.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Markten bewegen het grootste deel van de tijd zijwaarts. Cycli. Ranges. Consolidaties die traders frustreren die op zoek zijn naar een duidelijke richting.</p>
+          <p>Maar hier is wat de meeste traders missen: die "saaie" fases zijn niet de afwezigheid van kansen. Ze zijn de opzet voor alles wat ertoe doet.</p>
+
+          <hr>
+
+          <h2>De fysica van de prijs</h2>
+          <p>Stel je een elastiek voor.</p>
+          <p>Rek het in één richting uit en de spanning bouwt op. Op een gegeven moment overschrijdt de kracht die nodig is om verder te rekken wat beschikbaar is. Het elastiek schiet terug.</p>
+          <p>Markten werken op dezelfde manier.</p>
+          <p>De prijs beweegt in één richting. Koopdruk drijft hem hoger. Maar koopkracht is eindig. Kopers die wilden kopen hebben gekocht. De pool van nieuwe kopers krimpt. Ondertussen zien houders winsten en beginnen te verkopen.</p>
+          <p>De prijs schiet terug. Of stopt op zijn minst met stijgen.</p>
+          <p>Dit is waarom de prijs niet eeuwig in één richting kan bewegen. Elke trend draagt de zaden van zijn eigen uitputting.</p>
+
+          <hr>
+
+          <h2>Waarom cycli ontstaan</h2>
+          <p>Het cycluspatroon ontstaat uit de interactie van drie groepen:</p>
+          <p><strong>Groep 1: Geïnformeerd geld.</strong> Ze hebben de analyse gedaan. Ze weten wat iets waard is. Ze kopen wanneer de prijs onder de waarde ligt, verkopen wanneer de prijs boven de waarde ligt.</p>
+          <p><strong>Groep 2: Trendvolgers.</strong> Ze geven niet om waarde. Ze kopen wanneer de prijs stijgt, verkopen wanneer de prijs daalt.</p>
+          <p><strong>Groep 3: Emotioneel geld.</strong> Ze kopen wanneer ze opgewonden zijn (meestal op toppen), verkopen wanneer ze bang zijn (meestal op bodems).</p>
+          <p>Op de bodem verkoopt emotioneel geld in paniek. Geïnformeerd geld koopt stilletjes. Dit is accumulatie.</p>
+          <p>Op de top is emotioneel geld eindelijk opgewonden en koopt. Geïnformeerd geld verkoopt aan hen. Dit is distributie.</p>
+          <p>De cyclus herhaalt zich omdat deze groepen altijd bestaan en altijd op dezelfde manier interageren.</p>
+
+          <hr>
+
+          <h2>Profiteren van elke fase</h2>
+          <p><strong>Tijdens accumulatie (TD - Touchdown):</strong></p>
+          <ul>
+            <li>Wat werkt: Kopen nabij range-ondersteuning, strakke stops eronder</li>
+            <li>Wat niet werkt: Trendvolgen (er is geen trend)</li>
+            <li>De uitdaging: Het ziet er dood uit. De meeste traders negeren het.</li>
+          </ul>
+          <p><strong>Tijdens markup (IGN - Ignition):</strong></p>
+          <ul>
+            <li>Wat werkt: Trendvolgen, pullbacks kopen</li>
+            <li>Wat niet werkt: Contra-trend trading</li>
+            <li>De uitdaging: Lang genoeg erin blijven.</li>
+          </ul>
+          <p><strong>Tijdens climax (CAP - Climax):</strong></p>
+          <ul>
+            <li>Wat werkt: Winst nemen, stops aanscherpen, exposure verminderen</li>
+            <li>Wat niet werkt: Posities uitbreiden, de beweging najagen</li>
+            <li>De uitdaging: Maximale FOMO. De beweging lijkt onstuitbaar. Hij staat op het punt te stoppen.</li>
+          </ul>
+          <p><strong>Tijdens distributie (WRN - Warning):</strong></p>
+          <ul>
+            <li>Wat werkt: Verkopen nabij range-weerstand, winst nemen op longs</li>
+            <li>Wat niet werkt: Uitbraken kopen (ze zullen waarschijnlijk falen)</li>
+            <li>De uitdaging: Het ziet er sterk uit. Iedereen is bullish.</li>
+          </ul>
+          <p><strong>Tijdens neergang (BDN - Breakdown):</strong></p>
+          <ul>
+            <li>Wat werkt: Short verkopen, flat blijven</li>
+            <li>Wat niet werkt: Dips kopen (het zijn geen dips, het is de trend)</li>
+            <li>De uitdaging: De emotionele druk om "de dip te kopen" is enorm.</li>
+          </ul>
+
+          <hr>
+
+          <h2>De transitiesignalen</h2>
+          <p>De meest waardevolle momenten zijn fase-overgangen. Richard Wyckoff identificeerde deze patronen meer dan een eeuw geleden - ze werken nog steeds omdat de menselijke psychologie niet is veranderd.</p>
+          <p><strong>Spring (einde van accumulatie):</strong> De prijs breekt kort onder de range, keert dan snel om. De valse doorbraak triggerde stops en stelde smart money in staat om aankopen te voltooien. Vaak volgt een rally.</p>
+          <p><strong>Upthrust (einde van distributie):</strong> De prijs breekt kort boven de range, keert dan snel om. De valse uitbraak triggerde FOMO-aankopen en stelde smart money in staat om verkopen te voltooien. Vaak volgt een daling.</p>
+          <p>Deze transitiepunten bieden de beste risico-rendementverhouding. Je stapt in aan het begin van een beweging, met een duidelijk invalidatiepunt.</p>
+
+          <hr>
+
+          <h2>De kern</h2>
+          <p>Markten bewegen in cycli omdat de interactie van geïnformeerd geld, trendvolgers en emotionele traders voorspelbare patronen creëert. De prijs strekt zich uit, raakt uitgeput en keert om.</p>
+          <p>Trade de fase waarin je zit, niet de fase waarin je wenst te zitten.</p>
+          <p>Volume-analyse bevestigt wat cyclusanalyse suggereert. Tijdens accumulatie, let op regime-detectie die institutionele absorptie toont. Tijdens distributie, let op volume-divergentie wanneer de prijs stijgt maar OBV afvlakt of daalt. De combinatie van prijscyclusfase en volumeregime creëert een duidelijker beeld dan elk afzonderlijk.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Gerelateerde artikelen</h3>
+            <div class="related-grid">
+              <a href="../../the-only-pattern-that-repeats/nl/" class="related-card">
+                <span class="related-category">Cycli</span>
+                <h4>Het enige patroon dat echt herhaalt</h4>
+              </a>
+              <a href="../../identifying-cycle-length/nl/" class="related-card">
+                <span class="related-category">Cycli</span>
+                <h4>Cycluslengte identificeren</h4>
+              </a>
+              <a href="../../what-profitable-traders-know/nl/" class="related-card">
+                <span class="related-category">Psychologie</span>
+                <h4>Wat winstgevende traders weten</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../why-traders-blow-first-account/nl/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Vorige
+              </span>
+              <span class="article-nav-title">De echte reden waarom de meeste traders hun eerste account opblazen</span>
+            </a>
+            <a href="../../timeframe-selection/nl/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Volgende
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Timeframe-selectie: Waarom het belangrijker is dan je indicator</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Pentarch identificeert alle vijf cyclusfases en transities in real-time - TD (accumulatie), IGN (markup), CAP (climax), WRN (distributie) en BDN (neergang) - terwijl ze gebeuren.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Zie de cycli duidelijk →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">← Terug naar Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatiecentrum</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
