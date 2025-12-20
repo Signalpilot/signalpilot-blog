@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tijdframe Selectie: Waarom Het Belangrijker Is Dan Je Indicator - Signal Pilot Blog</title>
+  <meta name="description" content="De 5-minuten grafiek zegt kopen. De 4-uurs zegt verkopen. De dagelijkse zegt wachten. Wie heeft gelijk? Tijdframe selectie verandert alles.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="./">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educatie</a><a href="/nl/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Vertalen"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="./" class="active"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Gratis Proberen</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/nl/">Blog</a><span class="breadcrumb-sep">›</span><a href="/nl/?filter=practical">Praktisch</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
+      <span class="article-category">Praktisch</span>
+      <h1 class="article-title">Tijdframe Selectie: Waarom Het Belangrijker Is Dan Je Indicator</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span><span>Signal Pilot Team</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Tijdframe selectie visualisatie"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Zelfde indicator. Zelfde instellingen. Zelfde asset. Compleet verschillende resultaten op verschillende tijdframes.</p>
+      <p>De 5-minuten grafiek zegt kopen. De 4-uurs grafiek zegt verkopen. De dagelijkse grafiek zegt wachten. Wie heeft gelijk?</p>
+      <p>Tijdframe selectie is een van de meest onderschatte beslissingen in trading. Als je het verkeerd hebt, wordt zelfs de beste indicator ruis.</p>
+      <hr>
+      <h2>De Tijdframe Realiteit</h2>
+      <p>Elk tijdframe toont je echte data. Geen van hen "liegt". Maar ze tonen elk verschillende aspecten van de realiteit - zoals kijken naar hetzelfde gebouw vanaf verschillende afstanden.</p>
+      <p><strong>Hogere tijdframes</strong> tonen je het grote plaatje: grote trends, significante niveaus, institutionele tijdframes. Ze filteren ruis maar reageren langzaam.</p>
+      <p><strong>Lagere tijdframes</strong> tonen je detail: precieze entries, micro-structuur, directe prijsactie. Ze zijn responsief maar luidruchtig.</p>
+      <p>Geen van beide is "beter". Het zijn verschillende gereedschappen voor verschillende taken.</p>
+      <hr>
+      <h2>De Tijdframe Mismatch</h2>
+      <p>De meeste trading frustratie komt van tijdframe mismatch:</p>
+      <p><strong>Hoog analyseren, laag traden.</strong> Je ziet een setup op de dagelijkse grafiek, stapt in op de 5-minuten, wordt uitgestopt door ruis. De dagelijkse setup is misschien nog geldig, maar je tradede op een tijdframe dat te gedetailleerd was voor je thesis.</p>
+      <p><strong>Laag analyseren, hoog vasthouden.</strong> Je neemt een scalp op de 1-minuten grafiek, het gaat tegen je in, je schakelt over naar een "swing trade" mentaliteit om het vasthouden te rechtvaardigen. Nu houd je een micro-structuur trade vast op een macro tijdframe.</p>
+      <p><strong>Hogere tijdframes compleet negeren.</strong> Je vindt een mooie long setup op de 15-minuten zonder de 4-uurs te checken, die in een duidelijke downtrend zit. Je 15-minuten long vecht tegen de grotere stroom.</p>
+      <hr>
+      <h2>Tijdframe Matchen met Trade Type</h2>
+      <p><strong>Scalping (seconden tot minuten):</strong></p>
+      <ul>
+        <li>Primair: 1-minuut, 5-minuten</li>
+        <li>Context: 15-minuten, 30-minuten</li>
+        <li>Doel: kleine bewegingen, veel trades</li>
+      </ul>
+      <p><strong>Day trading (uren):</strong></p>
+      <ul>
+        <li>Primair: 15-minuten, 30-minuten</li>
+        <li>Context: 1-uur, 4-uur</li>
+        <li>Doel: intraday swings</li>
+      </ul>
+      <p><strong>Swing trading (dagen):</strong></p>
+      <ul>
+        <li>Primair: 4-uur, dagelijks</li>
+        <li>Context: wekelijks</li>
+        <li>Doel: meerdaagse bewegingen</li>
+      </ul>
+      <p>Je primaire tijdframe is waar je uitvoert. Je context tijdframe is waar je het grote plaatje begrijpt.</p>
+      <hr>
+      <h2>De Multi-Tijdframe Hiërarchie</h2>
+      <p>Hier is de regel: hogere tijdframes domineren lagere tijdframes.</p>
+      <p>Als de dagelijkse in een downtrend zit, is kopen op de 15-minuten zwemmen tegen de stroom. Je 15-minuten long zou kunnen werken, maar de kans is verminderd.</p>
+      <p>Praktische toepassing:</p>
+      <ol>
+        <li><strong>Begin hoog.</strong> Wat is de wekelijkse trend? Welke fase van de cyclus?</li>
+        <li><strong>Ga een niveau naar beneden.</strong> Bevestigt de dagelijkse?</li>
+        <li><strong>Ga naar het uitvoerings tijdframe.</strong> Is er een entry die overeenstemt met hogere tijdframes?</li>
+      </ol>
+      <p>Wanneer alle tijdframes overeenstemmen, heb je alignment. Wanneer ze conflicteren, wacht je of trade je met verminderde overtuiging.</p>
+      <hr>
+      <h2>Het Tijdframe Drift Probleem</h2>
+      <p>Een subtiele val: je tijdframe veranderen midden in een trade.</p>
+      <p>Je stapt in een day trade op de 15-minuten grafiek. Het gaat tegen je in. In plaats van de stop te nemen, schakel je over naar de 4-uurs grafiek waar de setup "er goed uitziet".</p>
+      <p>Dit is hoe day trades bag-holds worden.</p>
+      <p>Je tijdframe wordt vastgesteld bij entry en verandert niet. Als je op de 15-minuten bent ingestapt, beheer je op de 15-minuten. Als die stop geraakt wordt, ben je eruit.</p>
+      <hr>
+      <h2>Conclusie</h2>
+      <p>Tijdframe selectie bepaalt of je analyse signaal of ruis is.</p>
+      <p>Match je tijdframe met je trade type, je beschikbaarheid en je persoonlijkheid. Check hogere tijdframes voor context. Voer uit op je primaire tijdframe. Van tijdframe wisselen midden in een trade leidt typisch tot verwarring.</p>
+      <p>Een gemiddelde indicator op het juiste tijdframe verslaat een uitstekende indicator op de verkeerde.</p>
+      <p>Sommige systemen bouwen multi-tijdframe bewustzijn direct in: HTF regime bevestiging die toont of dagelijkse of wekelijkse structuur je entry tijdframe signaal ondersteunt, of multi-periode VWAP die toont waar waarde zit over verschillende horizonten. Wanneer de tool tijdframe alignment intern afhandelt, zie je of context je trade ondersteunt zonder handmatig meerdere grafieken te checken.</p>
+      <hr>
+      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
+        <a href="../../multi-timeframe-confirmation/nl/" class="related-card"><span class="related-category">Indicatoren</span><h4>Multi-Tijdframe Bevestiging: Wanneer Het Te Gebruiken</h4></a>
+        <a href="../../cycles-within-cycles/nl/" class="related-card"><span class="related-category">Cycli</span><h4>Cycli Binnen Cycli: Multi-Tijdframe Structuur</h4></a>
+      </div></section>
+      <div class="cta-box"><p>Pentarch's cyclus analyse werkt over tijdframes heen - maar zijn kracht is je te helpen zien waar je bent in de grotere structuur zodat je lagere tijdframe entries overeenstemmen met hogere tijdframe richting.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Krijg de context die ertoe doet →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/nl/">← Terug naar Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentatie</a><a href="https://education.signalpilot.io">Educatie Hub</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Alle rechten voorbehouden.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
