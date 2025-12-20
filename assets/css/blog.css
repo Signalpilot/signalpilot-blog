@@ -693,6 +693,7 @@ iframe.goog-te-banner-frame {
 /* Category Placeholder Images */
 .article-card[data-category="product"] .article-card-image::before {
   background-image: url('/assets/images/categories/product.png');
+  background-position: center 65%;
 }
 
 .article-card[data-category="indicators"] .article-card-image::before {
