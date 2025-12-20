@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmación Multi-Temporalidad: Cómo Dejar de Luchar Contra la Tendencia - Signal Pilot Blog</title>
-  <meta name="description" content="Tu gráfico de 15 minutos dice comprar. El diario dice vender. ¿Quién gana? Así es como alinear temporalidades y dejar de operar contra el flujo dominante.">
+  <title>Confirmación Multi-Temporal: Cómo Dejar de Luchar Contra la Tendencia - Signal Pilot Blog</title>
+  <meta name="description" content="Tu gráfico de 15 minutos dice comprar. El diario dice vender. ¿Quién gana? Así es cómo alinear marcos temporales y dejar de operar contra el flujo dominante.">
   <meta name="theme-color" content="#05070d">
   <link rel="icon" href="https://signalpilot.io/favicon.ico">
   <link rel="alternate" hreflang="en" href="../">
@@ -28,73 +28,185 @@
 <body>
   <div class="bg-aurora"></div>
   <div class="reading-progress" id="progress"></div>
-  <header class="header"><div class="container"><div class="header-inner">
-    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
-    <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
-    <div class="header-controls">
-      
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
-      <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+          <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
     </div>
-  </div></div></header>
+  </header>
 
-  <main><article>
-    <header class="article-header"><div class="container-narrow">
-      <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=indicators">Indicadores</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
-      <span class="article-category">Indicadores</span>
-      <h1 class="article-title">Confirmación Multi-Temporalidad: Cómo Dejar de Luchar Contra la Tendencia</h1>
-      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span><span>Equipo Signal Pilot</span></div>
-    </div></header>
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=indicators">Indicadores</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
+          <span class="article-category">Indicadores</span>
+          <h1 class="article-title">Confirmación Multi-Temporal: Cómo Dejar de Luchar Contra la Tendencia</h1>
+          <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span><span>Equipo Signal Pilot</span></div>
+          <div class="share-buttons">
+            <span class="share-label">Compartir:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Compartir en Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Compartir en LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copiar enlace"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          </div>
+        </div>
+      </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Visualización de confirmación multi-temporalidad"></figure>
+      <figure class="hero-image"><img src="../hero.png" alt="Visualización de confirmación multi-temporal" data-ai-prompt="Visualización con tema oscuro mostrando tres gráficos apilados representando diferentes marcos temporales con indicadores de alineación."><figcaption class="ai-prompt">Visualización con tema oscuro mostrando tres gráficos apilados representando diferentes marcos temporales con indicadores de alineación.</figcaption></figure>
 
-    <div class="article-content"><div class="container-narrow">
-      <p>Ves un setup hermoso en el gráfico de 15 minutos. Todos tus indicadores alinean. Entras largo. Dos horas después, tu stop se activa mientras el precio cae. ¿Qué pasó?</p>
-      <p>Estabas comprando en una tendencia bajista diaria. Tu setup de 15 minutos era un retroceso menor en una caída mayor.</p>
-      <hr>
-      <h2>La Jerarquía de Temporalidades</h2>
-      <p>Las temporalidades mayores siempre ganan. Siempre.</p>
-      <p>Una tendencia alcista de 5 minutos dentro de una tendencia bajista diaria es solo un retroceso. La tendencia diaria eventualmente se reafirmará.</p>
-      <p>Piénsalo como una cadena de mando:</p>
-      <ul>
-        <li><strong>Temporalidad estratégica:</strong> Establece el sesgo general</li>
-        <li><strong>Temporalidad táctica:</strong> Identifica setups de trading en la dirección del sesgo estratégico</li>
-        <li><strong>Temporalidad de ejecución:</strong> Afina entradas y stops</li>
-      </ul>
-      <hr>
-      <h2>El Enfoque de Tres Temporalidades</h2>
-      <p><strong>Day trading:</strong> Diario (estratégico) → 1 hora (táctico) → 15 minutos (ejecución)</p>
-      <p><strong>Swing trading:</strong> Semanal (estratégico) → Diario (táctico) → 4 horas (ejecución)</p>
-      <hr>
-      <h2>Cómo Aplicarlo</h2>
-      <p><strong>Paso 1:</strong> Revisa la temporalidad estratégica. ¿Cuál es la tendencia? Esto establece tu sesgo.</p>
-      <p><strong>Paso 2:</strong> Encuentra setup en la temporalidad táctica. Solo en la dirección de tu sesgo estratégico.</p>
-      <p><strong>Paso 3:</strong> Ejecuta en la temporalidad menor. Para entrada precisa.</p>
-      <hr>
-      <h2>Cuando las Temporalidades Conflictúan</h2>
-      <p><strong>Regla 1:</strong> La temporalidad mayor gana.</p>
-      <p><strong>Regla 2:</strong> Temporalidades en conflicto = tamaño reducido.</p>
-      <p><strong>Regla 3:</strong> Espera la alineación. Las mejores operaciones ocurren cuando todas las temporalidades están de acuerdo.</p>
-      <hr>
-      <h2>Lo Esencial</h2>
-      <p>El análisis multi-temporalidad no es complicado: las temporalidades mayores establecen dirección, las menores proporcionan entradas. Usa tres temporalidades. Comienza de arriba hacia abajo. Solo opera cuando se alinean.</p>
-      <hr>
-      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
-        <a href="../../timeframe-selection/es/" class="related-card"><span class="related-category">Práctico</span><h4>Selección de Temporalidad</h4></a>
-        <a href="../../the-confirmation-trap/es/" class="related-card"><span class="related-category">Indicadores</span><h4>La Trampa de Confirmación</h4></a>
-        <a href="../../cycle-failures-and-what-they-mean/es/" class="related-card"><span class="related-category">Ciclos</span><h4>Fallos de Ciclo y Su Significado</h4></a>
-      </div></section>
-      <div class="cta-box"><p><strong>Volume Oracle incluye Confirmación HTF mostrando si los regímenes diario/semanal se alinean con la señal de tu temporalidad de trading.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver alineación de temporalidades →</a></div>
-    </div></div>
-  </article></main>
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Ves una configuración hermosa en el gráfico de 15 minutos. Todos tus indicadores se alinean. Entras en largo.</p>
+          <p>Dos horas después, te sacan con stop loss mientras el precio se desploma. ¿Qué pasó?</p>
+          <p>Estabas comprando en una tendencia bajista diaria. Tu configuración de 15 minutos era solo un retroceso menor en una caída mayor. Estabas operando contra el flujo dominante.</p>
+          <p>El análisis multi-temporal previene esto. Aquí está cómo hacerlo bien.</p>
 
-  <footer class="footer"><div class="container">
-    <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro de Educación</a></div>
-    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
-  </div></footer>
+          <hr>
+
+          <h2>La Jerarquía de Marcos Temporales</h2>
+          <p>Los marcos temporales mayores siempre ganan. Siempre.</p>
+          <p>Una tendencia alcista de 5 minutos dentro de una tendencia bajista diaria es solo un retroceso. La tendencia diaria eventualmente se reafirmará. Operar en 5 minutos contra el diario es luchar contra la corriente.</p>
+          <p>Esto no significa que los marcos temporales menores sean inútiles - es donde encuentras entradas precisas. Pero deben alinearse con, no oponerse a, la dirección del marco temporal mayor.</p>
+          <p>Piénsalo como una cadena de mando:</p>
+          <ul>
+            <li><strong>Marco temporal estratégico:</strong> Establece el sesgo general (diario/semanal para swing traders, 4H/diario para day traders)</li>
+            <li><strong>Marco temporal táctico:</strong> Identifica configuraciones de trading en la dirección del sesgo estratégico</li>
+            <li><strong>Marco temporal de ejecución:</strong> Afina entradas y stops</li>
+          </ul>
+
+          <hr>
+
+          <h2>El Enfoque de Tres Marcos Temporales</h2>
+          <p>La mayoría de traders obtienen buenos resultados con tres marcos temporales en una proporción de aproximadamente 4-6x cada uno:</p>
+          <p><strong>Ejemplo 1 - Swing trading:</strong></p>
+          <ul>
+            <li>Semanal (estratégico) - dirección general de tendencia</li>
+            <li>Diario (táctico) - configuraciones de trading</li>
+            <li>4 horas (ejecución) - timing de entrada</li>
+          </ul>
+          <p><strong>Ejemplo 2 - Day trading:</strong></p>
+          <ul>
+            <li>Diario (estratégico) - dirección general de tendencia</li>
+            <li>1 hora (táctico) - configuraciones de trading</li>
+            <li>15 minutos (ejecución) - timing de entrada</li>
+          </ul>
+          <p><strong>Ejemplo 3 - Scalping:</strong></p>
+          <ul>
+            <li>1 hora (estratégico) - dirección general de tendencia</li>
+            <li>15 minutos (táctico) - configuraciones de trading</li>
+            <li>5 minutos (ejecución) - timing de entrada</li>
+          </ul>
+
+          <hr>
+
+          <h2>Cómo Aplicarlo</h2>
+          <p><strong>Paso 1: Revisa el marco temporal estratégico.</strong> ¿Cuál es la tendencia? ¿Alcista, bajista o lateral? Esto establece tu sesgo. Solo toma operaciones en esta dirección.</p>
+          <p><strong>Paso 2: Encuentra la configuración en el marco temporal táctico.</strong> Busca tus criterios de entrada - señales de indicadores, completación de patrones, pruebas de niveles - pero solo en la dirección de tu sesgo estratégico.</p>
+          <p><strong>Paso 3: Ejecuta en el marco temporal más bajo.</strong> Una vez que tienes una configuración, baja al marco de ejecución para entrada precisa. Esto optimiza riesgo/recompensa sin cambiar la tesis del trade.</p>
+          <p><strong>Ejemplo:</strong> El diario está en tendencia alcista. El 4 horas muestra retroceso al soporte con divergencia alcista. El 1 hora muestra vela de reversión en ese soporte. Entra largo en la señal de 1 hora, con la tendencia diaria a tu favor.</p>
+
+          <hr>
+
+          <h2>Cuando los Marcos Temporales Entran en Conflicto</h2>
+          <p>A veces los marcos temporales no coinciden. El diario sube, el semanal baja. El 4 horas alcista, el diario bajista.</p>
+          <p><strong>Regla 1:</strong> El marco temporal mayor gana. Si el semanal baja y el diario sube, el movimiento diario probablemente es una corrección en la tendencia bajista semanal. Opera con cautela o no operes.</p>
+          <p><strong>Regla 2:</strong> Marcos temporales en conflicto = tamaño reducido. Si debes operar durante conflicto, reduce el tamaño de posición. La incertidumbre es real.</p>
+          <p><strong>Regla 3:</strong> Espera la alineación. Las mejores operaciones ocurren cuando todos los marcos temporales coinciden. La paciencia paga.</p>
+          <p><strong>Regla 4:</strong> Lateral cuenta como conflicto. Si el marco temporal mayor está en rango, no tienes sesgo claro. Opera el rango o espera resolución.</p>
+
+          <hr>
+
+          <h2>Errores Comunes</h2>
+          <p><strong>Saltar entre marcos temporales.</strong> Planeas operar en 4 horas pero bajas a 5 minutos cuando te pones nervioso. De repente estás gestionando ruido, no operando tu plan. Elige tus marcos temporales y mantente en ellos.</p>
+          <p><strong>Demasiados marcos temporales.</strong> Revisar 7 gráficos diferentes crea confusión, no claridad. Tres es usualmente óptimo. Más es ruido.</p>
+          <p><strong>Ignorar el nivel estratégico.</strong> Tan enfocado en el marco de entrada que olvidas el contexto general. Siempre sabe qué dice el panorama general.</p>
+          <p><strong>Luchar contra la tendencia.</strong> Ver una señal de reversión en el marco menor y tomarla contra la tendencia del marco mayor. Estas operaciones tienen baja probabilidad incluso cuando se ven perfectas en el marco de entrada.</p>
+
+          <hr>
+
+          <h2>Consejos Prácticos</h2>
+          <p><strong>Empieza de arriba hacia abajo.</strong> Analiza del marco temporal más alto al más bajo, no al revés. Contexto antes de entrada.</p>
+          <p><strong>Marca niveles clave de marcos mayores.</strong> Soporte/resistencia diarios deben ser visibles en tus gráficos intradiarios. Estos niveles importan más que los niveles intradiarios.</p>
+          <p><strong>Anota el estado de tendencia del marco mayor.</strong> Antes de cada sesión, escribe: "Tendencia diaria: [alcista/bajista/lateral]. Solo tomo [largos/cortos/ambos]."</p>
+          <p><strong>Usa las mismas configuraciones de indicadores en todos los marcos.</strong> Si usas RSI(14) en el diario, usa RSI(14) en el 4 horas y 1 hora también. La consistencia ayuda al reconocimiento de patrones.</p>
+
+          <hr>
+
+          <h2>El Punto Óptimo de Alineación</h2>
+          <p>Las operaciones de mayor probabilidad ocurren cuando:</p>
+          <ul>
+            <li>El marco temporal estratégico muestra tendencia clara</li>
+            <li>El marco temporal táctico muestra retroceso a soporte/resistencia en dirección de la tendencia</li>
+            <li>El marco temporal de ejecución muestra señal de reversión</li>
+          </ul>
+          <p>Este es el punto óptimo: estás operando con la tendencia, a buen precio, con timing de entrada preciso.</p>
+          <p>Espera estas alineaciones. No ocurren todos los días, pero valen la pena esperar.</p>
+
+          <hr>
+
+          <h2>La Conclusión</h2>
+          <p>El análisis multi-temporal no es complicado: marcos mayores establecen dirección, menores proporcionan entradas. La tendencia en el gráfico mayor siempre gana eventualmente.</p>
+          <p>Usa tres marcos temporales. Empieza de arriba hacia abajo. Solo opera cuando se alinean. Tu tasa de acierto mejorará simplemente porque dejas de luchar contra el flujo dominante.</p>
+          <p>Algunos sistemas incorporan confirmación HTF directamente en sus señales - verificando si el régimen diario o semanal se alinea antes de generar una alerta en tu marco de trading. Otros muestran pivotes de marcos mayores, niveles de sesión y VWAPs multi-período simultáneamente, para que puedas ver si tu entrada está ocurriendo en un nivel que importa en el panorama general. El principio es el mismo: contexto antes de entrada.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Artículos Relacionados</h3>
+            <div class="related-grid">
+              <a href="../../timeframe-selection/es/" class="related-card"><span class="related-category">Práctico</span><h4>Selección de Marco Temporal: Encontrando Tu Estilo</h4></a>
+              <a href="../../the-confirmation-trap/es/" class="related-card"><span class="related-category">Indicadores</span><h4>La Trampa de la Confirmación: Cuando Más Indicadores Te Hacen Peor</h4></a>
+              <a href="../../cycle-failures-and-what-they-mean/es/" class="related-card"><span class="related-category">Ciclos</span><h4>Fallos de Ciclo y Lo Que Significan</h4></a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../trade-journaling-that-works/es/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Anterior</span>
+              <span class="article-nav-title">Diario de Trading Que Funciona: Qué Registrar y Por Qué</span>
+            </a>
+            <a href="../../the-boredom-trap/es/" class="article-nav-link next">
+              <span class="article-nav-label">Siguiente <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">La Trampa del Aburrimiento: Por Qué No Hacer Nada Es A Menudo la Operación Correcta</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Volume Oracle incluye Confirmación HTF mostrando si los regímenes diario/semanal se alinean con la señal de tu marco de trading. Janus Atlas muestra pivotes de marcos mayores, niveles de sesión y VWAPs multi-período simultáneamente. El scoring de 5 puntos de Augury Grid incluye alineación HTF como filtro de validación.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver alineación de marcos temporales →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro de Educación</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
   <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');const isOpen=nav.classList.contains('open');mobileMenuBtn.innerHTML=isOpen?'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>':'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});nav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{nav.classList.remove('open');mobileMenuBtn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});});}
+    document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+  </script>
 </body>
 </html>

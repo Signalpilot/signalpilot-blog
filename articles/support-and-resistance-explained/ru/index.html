@@ -97,12 +97,24 @@
       <hr>
       <h2>Вывод</h2>
       <p>Поддержка и сопротивление - это карта рынка. Они говорят вам, где будут ключевые сражения. Думайте зонами, а не линиями. Уважайте смену ролей. Ищите конфлюенцию.</p>
+      <p>Современные системы построения уровней выходят за рамки ручного черчения, автоматически рассчитывая POC профиля объёма (где прошёл наибольший объём), полосы VWAP за несколько периодов и сессионные пивоты. Уровни, основанные на реально торгуемом объёме, имеют больший вес, чем линии через свинг-точки - они показывают, где реально исполнялись институциональные ордера.</p>
+      <p>Каждая изощрённая торговая стратегия строится на этих основах. Сначала освойте поддержку и сопротивление, и всё остальное станет понятнее.</p>
       <hr>
       <section class="related-articles"><h3>Похожие Статьи</h3><div class="related-grid">
         <a href="../../volume-profile-basics/ru/" class="related-card"><span class="related-category">Индикаторы</span><h4>Основы Профиля Объёма</h4></a>
         <a href="../../stop-loss-placement/ru/" class="related-card"><span class="related-category">Практика</span><h4>Размещение Стоп-Лосса</h4></a>
         <a href="../../candlestick-basics/ru/" class="related-card"><span class="related-category">Начинающим</span><h4>Основы Свечей</h4></a>
       </div></section>
+      <nav class="article-nav">
+        <a href="../../building-your-first-system/ru/" class="article-nav-link prev">
+          <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Предыдущая</span>
+          <span class="article-nav-title">Создание Вашей Первой Торговой Системы</span>
+        </a>
+        <a href="../../why-backtesting-results-are-worthless/ru/" class="article-nav-link next">
+          <span class="article-nav-label">Следующая <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="article-nav-title">Почему Результаты Бэктестинга Ничего Не Стоят</span>
+        </a>
+      </nav>
       <div class="cta-box"><p><strong>Janus Atlas автоматически строит 50+ типов уровней: POC/VAH/VAL профиля объёма, дневной/недельный/месячный VWAP с полосами стандартного отклонения, HTF пивоты, границы сессий и зоны конфлюенции. Уровни на основе реально торгуемого объёма.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Смотрите институциональные уровни →</a></div>
     </div></div>
   </article></main>
@@ -113,6 +125,6 @@
   </div></footer>
 
   <button class="back-to-top" id="backToTop" aria-label="Наверх"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

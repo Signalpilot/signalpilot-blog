@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comment Trader les Cycles avec Pentarch : Un Guide Pratique - Signal Pilot Blog</title>
-  <meta name="description" content="Un guide étape par étape pour utiliser Pentarch pour le trading basé sur les cycles.">
+  <meta name="description" content="Un guide étape par étape pour utiliser Pentarch dans le trading basé sur les cycles. Apprenez à identifier les phases, chronométrer les entrées et combiner l'analyse des cycles avec la suite complète Signal Pilot.">
   <meta name="theme-color" content="#05070d">
   <link rel="icon" href="https://signalpilot.io/favicon.ico">
   <link rel="alternate" hreflang="en" href="../">
@@ -32,7 +32,6 @@
     <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
     <nav class="nav"><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Éducation</a><a href="/fr/" class="active">Blog</a></nav>
     <div class="header-controls">
-      
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thème"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
       <a href="https://signalpilot.io/#trial" class="btn btn-primary">Essai Gratuit</a>
       <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
@@ -45,34 +44,227 @@
       <span class="article-category">Produit</span>
       <h1 class="article-title">Comment Trader les Cycles avec Pentarch : Un Guide Pratique</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 min de lecture</span><span>Équipe Signal Pilot</span></div>
+      <div class="share-buttons"><span class="share-label">Partager :</span>
+        <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Partager sur Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Partager sur LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copier le lien"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+      </div>
     </div></header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Cinq phases du cycle Pentarch"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Cinq phases du cycle Pentarch"><figcaption class="ai-prompt">Visualisation élégante sur fond sombre des 5 phases du cycle de marché.</figcaption></figure>
 
     <div class="article-content"><div class="container-narrow">
-      <p>Les marchés cyclent. Ils accumulent, montent, atteignent leur apogée, distribuent et déclinent.</p>
-      <p>Pentarch a été construit pour rendre ce cycle visible.</p>
+      <p>Les marchés évoluent par cycles. Ils accumulent, montent, atteignent un sommet, distribuent et déclinent. Ce schéma se répète sur toutes les unités de temps, sur tous les marchés, car il reflète la façon dont le capital circule dans le système.</p>
+      <p>Pentarch a été conçu pour rendre ce cycle visible. Non pas pour prédire l'avenir - aucun outil ne peut faire cela - mais pour vous montrer où vous êtes dans la structure afin que vous puissiez prendre des décisions éclairées sur la direction potentielle.</p>
+      <p>Voici comment l'utiliser concrètement.</p>
+
       <hr>
+
       <h2>Comprendre les Cinq Phases</h2>
-      <p><strong>TD (Touchdown) - Accumulation :</strong> Le creux du cycle. L'argent intelligent achète discrètement.</p>
-      <p><strong>IGN (Ignition) - Hausse :</strong> La phase de rally. L'accumulation est terminée.</p>
-      <p><strong>CAP (Climax) - Épuisement :</strong> Le sommet explosif. Les achats deviennent frénétiques.</p>
-      <p><strong>WRN (Warning) - Distribution :</strong> L'argent intelligent vend dans la force.</p>
-      <p><strong>BDN (Breakdown) - Déclin :</strong> La distribution est complète. Le prix chute.</p>
+      <p>Pentarch identifie cinq phases distinctes du cycle, chacune avec des caractéristiques spécifiques :</p>
+      <p><strong>TD (Touchdown) - Accumulation</strong></p>
+      <p>Le creux du cycle. L'argent intelligent achète discrètement pendant que le prix évolue latéralement ou fait des plus bas finaux. Le sentiment est pessimiste. Le volume montre souvent une absorption - la pression vendeuse étant absorbée par des acheteurs informés.</p>
+      <p><em>Implication pour le trading :</em> Cherchez des entrées longues. Le risque est minimal ici car les stops peuvent être placés sous le creux du cycle avec une invalidation claire.</p>
+      <p><strong>IGN (Ignition) - Hausse</strong></p>
+      <p>La phase de rally. L'accumulation est terminée et le prix commence à monter. C'est la phase de "l'argent facile" où les tendances se développent. Le volume confirme généralement avec une participation croissante.</p>
+      <p><em>Implication pour le trading :</em> Conservez vos longs, ajoutez sur les replis. La tendance est votre alliée ici. Évitez de lutter contre la direction.</p>
+      <p><strong>CAP (Climax) - Épuisement</strong></p>
+      <p>Le sommet explosif. Les achats deviennent frénétiques. Le volume explose. Tout le monde est haussier. C'est là que les derniers acheteurs entrent - juste avant le retournement.</p>
+      <p><em>Implication pour le trading :</em> Prenez vos profits sur les longs. Préparez-vous à la distribution. Ce n'est pas l'endroit pour initier de nouvelles positions.</p>
+      <p><strong>WRN (Warning) - Distribution</strong></p>
+      <p>L'argent intelligent vend dans la force. Le prix peut faire de nouveaux plus hauts marginaux ou se maintenir près des sommets pendant que la propriété passe des mains informées aux mains non informées. Le volume montre souvent des patterns de distribution.</p>
+      <p><em>Implication pour le trading :</em> Sortez des longs restants. Surveillez les setups shorts. La tendance vieillit.</p>
+      <p><strong>BDN (Breakdown) - Déclin</strong></p>
+      <p>La distribution est complète. Le prix chute alors que les ventes submergent les achats. Cela peut être brutal et rapide - les déclins sont souvent plus violents que les rallys.</p>
+      <p><em>Implication pour le trading :</em> Opportunités short ou restez flat. Attendez que le cycle revienne en TD.</p>
+
       <hr>
-      <h2>Erreurs Courantes à Éviter</h2>
+
+      <h2>Lire Pentarch sur Votre Graphique</h2>
+      <p>Quand vous ajoutez Pentarch à un graphique, vous verrez :</p>
+      <p><strong>Labels de phase :</strong> La phase actuelle du cycle affichée clairement. Pas besoin de deviner - l'indicateur vous dit où vous êtes.</p>
+      <p><strong>Transitions de phase :</strong> Quand le cycle passe d'une phase à une autre, vous verrez la transition. Ce sont des points de décision clés.</p>
+      <p><strong>Détection multi-couches :</strong> Pentarch analyse 4 couches simultanément, fournissant une confirmation quand plusieurs couches s'accordent sur la phase.</p>
+      <p>L'affichage est intentionnellement simple. Les indicateurs complexes avec des dizaines de lignes créent de la confusion. Pentarch vous donne l'information essentielle : dans quelle phase est le marché ?</p>
+
+      <hr>
+
+      <h2>Stratégies d'Entrée par Phase</h2>
+      <p><strong>Entrer en TD (Accumulation)</strong></p>
+      <p>C'est la zone d'entrée longue à plus haute conviction. Le marché a baissé, l'argent intelligent accumule, et le ratio risque/rendement favorise l'achat.</p>
+      <p>Déclencheurs d'entrée à rechercher :</p>
       <ul>
-        <li>Acheter en CAP ou WRN - ce sont des zones de sortie</li>
-        <li>Shorter en TD - vous luttez contre l'argent intelligent</li>
-        <li>Ignorer les timeframes supérieurs</li>
+        <li>Pentarch montrant la phase TD</li>
+        <li>Volume Oracle confirmant le régime Accumulation (vert)</li>
+        <li>Prix au niveau ou près d'un support Janus Atlas</li>
+        <li>Score de confluence OmniDeck de 7+</li>
+        <li>Harmonic Oscillator montrant survente avec divergence haussière</li>
       </ul>
+      <p>Placement du stop : Sous le creux du cycle ou sous la zone d'accumulation. Si ce niveau casse, la phase TD a échoué.</p>
+      <p><strong>Entrer en IGN (Hausse)</strong></p>
+      <p>Vous avez raté le creux ? Pas de problème. Les replis en IGN offrent d'excellentes entrées.</p>
+      <p>Déclencheurs d'entrée :</p>
+      <ul>
+        <li>Pentarch montrant la phase IGN</li>
+        <li>Prix revenant sur support (ancienne résistance, moyenne mobile, niveau Janus Atlas)</li>
+        <li>Volume Oracle toujours en régime haussier</li>
+        <li>Repli sur volume décroissant (consolidation saine, pas distribution)</li>
+      </ul>
+      <p>Placement du stop : Sous le creux du repli. Si le repli échoue, la phase IGN peut se terminer.</p>
+      <p><strong>Sortir en CAP (Climax)</strong></p>
+      <p>CAP n'est pas une zone d'entrée - c'est une zone de sortie. Quand Pentarch montre CAP :</p>
+      <ul>
+        <li>Prenez vos profits sur les longs existants</li>
+        <li>Resserrez agressivement les stops</li>
+        <li>Évitez les nouvelles positions longues</li>
+        <li>Surveillez la transition vers WRN</li>
+      </ul>
+      <p><strong>Entrées Short en WRN/BDN</strong></p>
+      <p>Pour les traders qui shortent, les phases WRN et BDN offrent des opportunités :</p>
+      <ul>
+        <li>WRN : Cherchez les cassures échouées, les plus hauts plus bas, la divergence de volume</li>
+        <li>BDN : Shortez les rallys vers la résistance avec stops au-dessus du plus haut de distribution</li>
+      </ul>
+      <p>Note : Shorter requiert plus de précision que les longs. Les marchés chutent plus vite mais les tentatives de rally peuvent être brutales. Utilisez les autres indicateurs de la suite pour confirmation.</p>
+
       <hr>
+
+      <h2>Combiner Pentarch avec la Suite</h2>
+      <p>Pentarch fournit le contexte structurel. Les autres indicateurs ajoutent de la précision.</p>
+      <p><strong>Pentarch + Volume Oracle</strong></p>
+      <p>Phase du cycle + régime de volume doivent s'aligner :</p>
+      <ul>
+        <li>TD + Accumulation (vert) = Setup long haute conviction</li>
+        <li>WRN + Distribution (rouge) = Setup sortie/short haute conviction</li>
+        <li>IGN + Affaiblissement (or) = Le rally peut s'essouffler</li>
+      </ul>
+      <p>Quand ils divergent, attendez la clarté. Les signaux mixtes signifient direction incertaine.</p>
+      <p><strong>Pentarch + Janus Atlas</strong></p>
+      <p>Phase du cycle + niveau clé = entrée précise :</p>
+      <ul>
+        <li>Phase TD au POC (Point de Contrôle) = Forte confluence de support</li>
+        <li>Phase WRN au VAH (Value Area High) = Forte confluence de résistance</li>
+        <li>Transitions de phase aux niveaux pivots marquent souvent des retournements significatifs</li>
+      </ul>
+      <p><strong>Pentarch + OmniDeck</strong></p>
+      <p>Phase du cycle + score de confluence = niveau de confiance :</p>
+      <ul>
+        <li>Phase TD avec score OmniDeck 8+ = Entrée très haute conviction</li>
+        <li>Phase TD avec score OmniDeck 4 = Phase correcte mais autres facteurs ne confirment pas - attendez</li>
+      </ul>
+      <p><strong>Pentarch + Augury Grid</strong></p>
+      <p>Utilisez Augury Grid pour trouver les symboles montrant des phases Pentarch favorables :</p>
+      <ul>
+        <li>Scannez votre watchlist pour les symboles en TD ou IGN précoce</li>
+        <li>Évitez les symboles profondément en CAP ou WRN</li>
+        <li>Concentrez votre analyse sur les meilleurs setups de phase</li>
+      </ul>
+
+      <hr>
+
+      <h2>Application Multi-Timeframe</h2>
+      <p>Les cycles existent sur toutes les unités de temps. La clé est l'alignement :</p>
+      <p><strong>L'unité de temps supérieure définit la direction :</strong></p>
+      <ul>
+        <li>Hebdo en IGN = Cherchez les entrées TD/IGN daily (acheter les replis dans une tendance haussière)</li>
+        <li>Hebdo en BDN = Les rallys IGN daily sont contre-tendance et risqués</li>
+      </ul>
+      <p><strong>L'unité de temps inférieure fournit l'entrée :</strong></p>
+      <ul>
+        <li>Daily en TD, 4h montrant pattern de spring = Déclencheur d'entrée</li>
+        <li>Daily en IGN, 4h repli sur support = Ajout à la position</li>
+      </ul>
+      <p><strong>Meilleurs setups :</strong></p>
+      <ul>
+        <li>Plusieurs unités de temps dans la même phase ou des phases consécutives</li>
+        <li>Unité supérieure en IGN, unité inférieure en TD = Haute probabilité</li>
+        <li>Évitez les trades où les unités de temps divergent significativement</li>
+      </ul>
+
+      <hr>
+
+      <h2>Gérer les Positions à Travers le Cycle</h2>
+      <p>Comment gérer un trade de l'entrée à la sortie :</p>
+      <p><strong>Position entrée en TD :</strong></p>
+      <ol>
+        <li>Stop initial sous le creux du cycle</li>
+        <li>Quand le prix entre en IGN, traîner le stop sous le creux TD (maintenant support confirmé)</li>
+        <li>En IGN, ajouter sur les replis si désiré</li>
+        <li>À l'approche de CAP, prendre des profits partiels</li>
+        <li>Quand WRN apparaît, sortir de la position restante ou traîner très serré</li>
+      </ol>
+      <p><strong>Position entrée en IGN (repli) :</strong></p>
+      <ol>
+        <li>Stop initial sous le creux du repli</li>
+        <li>Traîner au fur et à mesure que de nouveaux plus bas plus hauts se forment</li>
+        <li>Sortir à la transition CAP ou aux objectifs prédéterminés</li>
+      </ol>
+      <p>Le cycle fournit une feuille de route. Vous savez approximativement où vous êtes dans la structure et pouvez planifier en conséquence.</p>
+
+      <hr>
+
+      <h2>Erreurs Courantes à Éviter</h2>
+      <p><strong>Acheter en CAP ou WRN :</strong> Ce sont des zones de sortie, pas d'entrée. L'indicateur vous dit que le rally est mature. Écoutez-le.</p>
+      <p><strong>Shorter en TD :</strong> Essayer d'attraper le dernier mouvement baissier quand l'accumulation commence. Le ratio risque/rendement est mauvais et vous luttez contre l'argent intelligent.</p>
+      <p><strong>Ignorer les unités de temps supérieures :</strong> Un TD daily dans un BDN weekly est un setup contre-tendance. Ça peut marcher, mais les probabilités sont plus faibles.</p>
+      <p><strong>S'attendre à la perfection :</strong> Chaque TD ne mène pas à un rally profitable. Chaque CAP ne mène pas à un crash. Les cycles échouent parfois. C'est pourquoi nous utilisons des stops.</p>
+      <p><strong>Utiliser Pentarch seul :</strong> La phase du cycle est un contexte important, mais ce n'est pas le seul facteur. La confirmation de volume, les niveaux clés et la confluence comptent tous. Utilisez la suite complète.</p>
+
+      <hr>
+
+      <h2>Pratiquez Avant de Trader</h2>
+      <p>La meilleure façon d'apprendre Pentarch est de l'observer en temps réel :</p>
+      <ol>
+        <li>Ajoutez-le aux graphiques que vous suivez</li>
+        <li>Observez comment les phases se développent et transitionnent</li>
+        <li>Notez comment le prix se comporte dans chaque phase</li>
+        <li>Regardez ce qui se passe aux transitions de phase</li>
+        <li>Tradez en paper les setups avant de risquer de l'argent réel</li>
+      </ol>
+      <p>L'analyse des cycles n'est pas complexe, mais elle nécessite une calibration. Donnez-vous le temps de voir comment l'indicateur se comporte sur vos marchés et unités de temps préférés.</p>
+
+      <hr>
+
+      <h2>Pourquoi Cette Approche Fonctionne</h2>
+      <p>Le trading basé sur les cycles n'est pas de la magie. Ça fonctionne parce que ça s'aligne avec la structure du marché :</p>
+      <p><strong>Vous tradez avec le flux institutionnel.</strong> L'Accumulation (TD) est là où l'argent intelligent achète. La Distribution (WRN/CAP) est là où ils vendent. En reconnaissant les phases, vous vous positionnez aux côtés du capital qui fait bouger les marchés.</p>
+      <p><strong>Vous avez une invalidation claire.</strong> Quand une phase TD échoue, vous le savez - le prix casse le creux du cycle. Pas d'ambiguïté. Stops clairs. Risque défini.</p>
+      <p><strong>Vous évitez les pires entrées.</strong> La plupart des traders retail achètent en CAP (le sommet) et vendent en TD (le creux). La conscience des cycles inverse cela. Vous entrez où les autres sortent et sortez où les autres entrent.</p>
+      <p><strong>Le contexte améliore tout le reste.</strong> RSI "survendu" en TD est différent de RSI "survendu" en BDN. Pic de volume en IGN est différent de pic de volume en CAP. La phase du cycle fournit le contexte qui transforme des signaux génériques en informations spécifiques et actionnables.</p>
+
+      <hr>
+
+      <h2>Commencez</h2>
+      <p>Pentarch est inclus dans l'essai Signal Pilot avec tous les autres indicateurs. Vous pouvez l'ajouter à n'importe quel graphique TradingView et commencer à observer immédiatement.</p>
+      <p>La plupart des traders trouvent qu'après une semaine d'observation, les phases du cycle deviennent intuitives. Ce qui semblait être une action de prix aléatoire commence à montrer une structure. Les entrées et sorties gagnent en contexte.</p>
+      <p>C'est l'objectif : pas la prédiction, mais la compréhension. Sachez où vous êtes, et les décisions deviennent plus claires.</p>
+      <p><strong>Commencez aujourd'hui.</strong> Ajoutez Pentarch à vos graphiques pendant votre essai gratuit. Regardez un cycle complet se développer. Voyez les phases transitionner. Remarquez comment le prix se comporte à chaque étape. Une semaine d'observation change votre façon de voir les marchés - définitivement.</p>
+
+      <hr>
+
       <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
         <a href="../../the-only-pattern-that-repeats/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Le Seul Pattern Qui Se Répète Vraiment</h4></a>
-        <a href="../../inside-signal-pilot/fr/" class="related-card"><span class="related-category">Produit</span><h4>À l'Intérieur de Signal Pilot</h4></a>
-        <a href="../../accumulation-vs-distribution/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Accumulation vs Distribution</h4></a>
+        <a href="../../inside-signal-pilot/fr/" class="related-card"><span class="related-category">Produit</span><h4>À l'Intérieur de Signal Pilot : Comment les 7 Indicateurs Fonctionnent Ensemble</h4></a>
+        <a href="../../accumulation-vs-distribution/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Accumulation vs Distribution : Lire Ce Que les Graphiques Ne Disent Pas</h4></a>
       </div></section>
-      <div class="cta-box"><p><strong>Prêt à voir la structure du marché clairement ?</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Commencer l'Essai Gratuit →</a></div>
+
+      <nav class="article-nav">
+        <a href="../../free-indicators-vs-professional-tools/fr/" class="article-nav-link prev">
+          <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Précédent</span>
+          <span class="article-nav-title">Indicateurs Gratuits vs Outils Professionnels : Quand Passer au Niveau Supérieur</span>
+        </a>
+        <a href="../../why-your-indicators-keep-failing/fr/" class="article-nav-link next">
+          <span class="article-nav-label">Suivant <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="article-nav-title">Pourquoi Vos Indicateurs Échouent Constamment</span>
+        </a>
+      </nav>
+
+      <div class="cta-box">
+        <p><strong>Prêt à voir la structure du marché clairement ?</strong></p>
+        <p>Commencez votre essai gratuit et ajoutez Pentarch à vos graphiques dès aujourd'hui. Regardez les phases du cycle se développer en temps réel. Combinez avec Volume Oracle, Janus Atlas et OmniDeck pour un contexte complet.</p>
+        <p>Pas de carte bancaire. Pas d'engagement. Une semaine pour voir si le trading basé sur les cycles correspond à votre approche. La plupart des traders le savent en quelques jours.</p>
+        <a href="https://signalpilot.io/#trial" class="btn btn-primary">Commencer Votre Essai Gratuit Maintenant →</a>
+      </div>
     </div></div>
   </article></main>
 

@@ -73,23 +73,75 @@
       <p>Este es crítico, y es por qué muchos traders piensan que han encontrado un sistema perfecto - hasta que lo operan en vivo.</p>
       <p>Repintar significa que un indicador cambia sus señales históricas después del hecho. ¿Esa señal de compra "perfecta" que ves en el gráfico? Puede que no estuviera ahí cuando la vela se estaba formando realmente. El indicador esperó a ver qué pasaba, luego pintó la señal retroactivamente.</p>
       <p>Tu backtesting se vuelve inútil. Cada señal histórica se ve perfecta porque el indicador hizo trampa - ya sabía el resultado.</p>
-      <p><strong>Lo que realmente funciona:</strong> Insiste en indicadores que finalicen sus señales al cierre de la vela. La señal aparece o no aparece. Sin revisiones. Lo que ves en la historia es exactamente lo que habrías visto en vivo.</p>
+      <p><strong>Cómo probar si repinta:</strong></p>
+      <ol>
+        <li>Abre un gráfico y nota dónde aparecen las señales actuales</li>
+        <li>Espera a que se formen 10-20 velas nuevas</li>
+        <li>Vuelve atrás y verifica si esas señales se movieron, desaparecieron o cambiaron</li>
+      </ol>
+      <p>Si algo cambió, estás tratando con repintado. No importa qué tan bien se vea el backtest. No puedes operarlo de manera confiable.</p>
+      <p><strong>Lo que realmente funciona:</strong> Insiste en indicadores que finalicen sus señales al cierre de la vela. La señal aparece o no aparece. Sin revisiones. Lo que ves en la historia es exactamente lo que habrías visto en vivo. Esto no es negociable para trading serio.</p>
+      <hr>
+      <h2>Adelantado vs Retrasado: El Debate Equivocado</h2>
+      <p>Los traders se obsesionan con encontrar indicadores "adelantados" - herramientas que predicen el futuro. Aquí está la verdad incómoda: ningún indicador predice nada. Todos procesan datos pasados.</p>
+      <p>La pregunta real no es adelantado vs retrasado. Es: <em>¿qué está midiendo realmente este indicador?</em></p>
+      <p>Las medias móviles miden el precio promedio a lo largo del tiempo. Son lentas por diseño - ese es el punto. Usar una MA de 200 y quejarse de que es "retrasada" es como quejarse de que un calendario es lento porque muestra la fecha de ayer.</p>
+      <p>El RSI mide momentum reciente. Es más rápido, pero no dice nada sobre la dirección de la tendencia. Se mantendrá felizmente sobrecomprado mientras el precio se duplica.</p>
+      <p><strong>Lo que realmente funciona:</strong> Deja de preguntar "¿es adelantado o retrasado?" Empieza a preguntar:</p>
+      <ul>
+        <li>¿Qué pregunta específica responde este indicador?</li>
+        <li>¿En qué punto de un movimiento da información útil?</li>
+        <li>¿Qué ignora completamente?</li>
+      </ul>
+      <p>Cada indicador tiene un trabajo. Úsalo para ese trabajo. Esperar que el RSI te diga sobre estructura de tendencia es como esperar que tu velocímetro te dé direcciones.</p>
       <hr>
       <h2>El Marco de los Ciclos</h2>
-      <p>Los mercados no se mueven aleatoriamente. Ciclan a través de cinco fases: acumulación, markup, clímax, distribución y declive. Este patrón se repite en cada timeframe, cada clase de activo.</p>
+      <p>Los mercados no se mueven aleatoriamente. Ciclan a través de cinco fases: acumulación, markup, clímax, distribución y declive. Este patrón se repite en cada timeframe, cada clase de activo, por una simple razón - refleja la psicología humana. La codicia, el miedo, la esperanza y la capitulación dejan huellas.</p>
       <p>La mayoría de indicadores no tienen esto en cuenta. Tratan cada momento como independiente, por eso generan señales en medio de una tendencia que aún tiene recorrido, o al inicio de una zona de chopeo que te sacará repetidamente.</p>
       <p><strong>Lo que realmente funciona:</strong> Antes de preguntar "¿debería comprar o vender?", pregunta "¿dónde estamos en el ciclo?"</p>
+      <ul>
+        <li><em>Acumulación (TD):</em> Después de venta extendida, busca señales de agotamiento. El dinero inteligente acumula aquí.</li>
+        <li><em>Markup (IGN):</em> Al inicio de una tendencia alcista, la confirmación de momentum importa. ¿Es real este movimiento?</li>
+        <li><em>Clímax (CAP):</em> Después de compra extendida, busca señales de clímax. La multitud está toda adentro. Hora de ser cauteloso.</li>
+        <li><em>Distribución (WRN):</em> Aparece debilidad. El dinero inteligente está saliendo. Sé defensivo.</li>
+        <li><em>Declive (BDN):</em> Ruptura confirmada. Evita largos, considera cortos o mantente plano.</li>
+      </ul>
+      <p>Este contexto lo cambia todo. Una "señal de compra" durante acumulación tiene probabilidades completamente diferentes que la misma señal durante distribución. El indicador no conoce la diferencia. Tú necesitas conocerla.</p>
+      <hr>
+      <h2>Qué Buscar en Cualquier Indicador</h2>
+      <p>Antes de añadir cualquier herramienta a tu gráfico, pásala por esta lista:</p>
+      <p><strong>1. ¿Repinta?</strong><br>Pruébalo tú mismo. El marketing puede ser engañoso.</p>
+      <p><strong>2. ¿Qué pregunta específica responde?</strong><br>Si no puedes articularlo en una oración, pásalo.</p>
+      <p><strong>3. ¿Da contexto o solo señales?</strong><br>Señales sin contexto es apostar. Necesitas entender por qué apareció la señal.</p>
+      <p><strong>4. ¿Puedes explicar cómo funciona?</strong><br>No necesitas entender el código, pero deberías entender la lógica. Las cajas negras crean dependencia, no habilidad.</p>
+      <p><strong>5. ¿Te ayuda a ver el mercado, o intenta pensar por ti?</strong><br>Las mejores herramientas mejoran tu análisis. Las peores lo reemplazan. Quieres convertirte en mejor trader, no más dependiente del software.</p>
       <hr>
       <h2>La Conclusión</h2>
       <p>Los indicadores no son el problema. Cómo los usan los traders lo es.</p>
       <p>Deja de apilar señales. Empieza a construir contexto. Entiende dónde estás en el ciclo del mercado antes de preguntar si comprar o vender. Y para todo lo que pongas en tu gráfico, asegúrate absolutamente de que no repinte.</p>
       <p>El edge no está en ver más. Está en ver lo que importa.</p>
       <hr>
+      <h2>Un Enfoque Diferente</h2>
+      <p>¿Qué pasaría si en lugar de 6 indicadores en conflicto, tuvieras 7 que realmente se comunican entre sí?</p>
+      <p>Eso es lo que hacen los sistemas integrados. El análisis de ciclos te dice dónde estás en la estructura. La detección de régimen de volumen confirma si las instituciones están acumulando o distribuyendo. La votación de osciladores agrega momentum de múltiples fuentes. La confluencia de niveles muestra dónde es probable que el precio reaccione.</p>
+      <p>Los indicadores hacen su trabajo internamente. Tú ves la salida sintetizada - no doce opiniones conflictivas, sino una imagen coherente del mercado.</p>
+      <p>Signal Pilot fue construido sobre este principio: siete indicadores, cada uno respondiendo una pregunta diferente, todos diseñados para trabajar juntos. Fase de ciclo de Pentarch. Régimen de volumen de Volume Oracle. Niveles clave de Janus Atlas. Puntuación de confluencia de OmniDeck. El conjunto te da contexto, no solo señales.</p>
+      <hr>
       <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
         <a href="../../the-repainting-problem/es/" class="related-card"><span class="related-category">Indicadores</span><h4>El Problema del Repintado</h4></a>
         <a href="../../inside-signal-pilot/es/" class="related-card"><span class="related-category">Signal Pilot</span><h4>Dentro de Signal Pilot</h4></a>
         <a href="../../the-only-pattern-that-repeats/es/" class="related-card"><span class="related-category">Ciclos</span><h4>El Único Patrón que se Repite</h4></a>
       </div></section>
+      <nav class="article-nav">
+        <a href="../../how-to-trade-cycles-with-pentarch/es/" class="article-nav-link prev">
+          <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Anterior</span>
+          <span class="article-nav-title">Cómo Operar Ciclos con Pentarch</span>
+        </a>
+        <a href="../../psychology-of-getting-stopped-out/es/" class="article-nav-link next">
+          <span class="article-nav-label">Siguiente <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="article-nav-title">La Psicología de Ser Sacado por Stop</span>
+        </a>
+      </nav>
       <div class="cta-box"><p><strong>¿Listo para indicadores que realmente funcionen juntos?</strong> El conjunto de 7 indicadores de Signal Pilot fue diseñado como un sistema integrado.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba el Suite Completo Gratis →</a></div>
     </div></div>
   </article></main>

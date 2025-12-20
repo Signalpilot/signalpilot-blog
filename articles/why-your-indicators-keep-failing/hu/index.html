@@ -73,23 +73,75 @@
       <p>Ez kritikus, és ez az oka annak, hogy sok trader azt hiszi, tökéletes rendszert talált - amíg élőben nem kereskedik vele.</p>
       <p>Az újrafestés azt jelenti, hogy egy indikátor megváltoztatja a történelmi jeleit utólag. Az a "tökéletes" vételi jel, amit a grafikonon látsz? Lehet, hogy nem volt ott, amikor a gyertya ténylegesen formálódott. Az indikátor megvárta, mi történik, aztán visszamenőleg festette a jelet.</p>
       <p>A backtested értéktelenné válik. Minden történelmi jel tökéletesnek tűnik, mert az indikátor csalt - már tudta az eredményt.</p>
-      <p><strong>Mi működik valójában:</strong> Ragaszkodj olyan indikátorokhoz, amelyek a gyertya zárásakor véglegesítik jeleiket. A jel vagy megjelenik, vagy nem. Nincs átdolgozás. Amit a történelemben látsz, pontosan az, amit élőben láttál volna.</p>
+      <p><strong>Hogyan teszteld az újrafestést:</strong></p>
+      <ol>
+        <li>Nyiss meg egy grafikont és jegyezd meg, hol jelennek meg a jelenlegi jelek</li>
+        <li>Várj 10-20 új gyertya kialakulására</li>
+        <li>Görgess vissza és ellenőrizd, hogy azok a jelek elmozdultak, eltűntek vagy megváltoztak-e</li>
+      </ol>
+      <p>Ha bármi változott, újrafestéssel van dolgod. Nem számít, milyen jól néz ki a backtest. Nem tudod megbízhatóan kereskedni vele.</p>
+      <p><strong>Mi működik valójában:</strong> Ragaszkodj olyan indikátorokhoz, amelyek a gyertya zárásakor véglegesítik jeleiket. A jel vagy megjelenik, vagy nem. Nincs átdolgozás. Amit a történelemben látsz, pontosan az, amit élőben láttál volna. Ez komoly tradingnél nem alku tárgya.</p>
+      <hr>
+      <h2>Lemaradó vs Előremutató: A Rossz Vita</h2>
+      <p>A traderek megszállottan keresik az „előremutató" indikátorokat - eszközöket, amelyek megjósolják a jövőt. Íme a kényelmetlen igazság: egyetlen indikátor sem jósol semmit. Mind múltbeli adatokat dolgoznak fel.</p>
+      <p>Az igazi kérdés nem előremutató vs lemaradó. Hanem: <em>mit mér valójában ez az indikátor?</em></p>
+      <p>A mozgóátlagok az átlagárat mérik időben. Tervezés szerint lassúak - ez a lényeg. A 200 MA használata és panaszkodás, hogy „lemarad", olyan, mintha panaszkodnál, hogy a naptár lassú, mert a tegnapi dátumot mutatja.</p>
+      <p>Az RSI a közelmúlt lendületét méri. Gyorsabb, de semmit nem mond a trend irányáról. Boldogan marad túlvett állapotban, miközben az ár megduplázódik.</p>
+      <p><strong>Mi működik valójában:</strong> Hagyd abba a „ez előremutató vagy lemaradó?" kérdést. Kezdj el így kérdezni:</p>
+      <ul>
+        <li>Milyen konkrét kérdésre válaszol ez az indikátor?</li>
+        <li>A mozgás melyik pontján ad hasznos információt?</li>
+        <li>Mit hagy teljesen figyelmen kívül?</li>
+      </ul>
+      <p>Minden indikátornak van feladata. Arra a feladatra használd. Elvárni, hogy az RSI a trend struktúrájáról tájékoztasson, olyan, mintha a sebességmérőtől várnál útvonal-útmutatást.</p>
       <hr>
       <h2>A Ciklus Keretrendszer</h2>
-      <p>A piacok nem véletlenszerűen mozognak. Öt fázison mennek keresztül: akkumuláció, markup, csúcs, disztribúció és hanyatlás. Ez a minta minden időkereten, minden eszközosztályban ismétlődik.</p>
+      <p>A piacok nem véletlenszerűen mozognak. Öt fázison mennek keresztül: akkumuláció, markup, csúcs, disztribúció és hanyatlás. Ez a minta minden időkereten, minden eszközosztályban ismétlődik - egyszerű okból - az emberi pszichológiát tükrözi. A kapzsiság, félelem, remény és kapituláció nyomokat hagy.</p>
       <p>A legtöbb indikátor ezt nem veszi figyelembe. Minden pillanatot függetlenként kezel, ezért generál jeleket egy trend közepén, aminek még van tere, vagy egy chop zóna elején, ami ismételten kiüt.</p>
       <p><strong>Mi működik valójában:</strong> Mielőtt azt kérdeznéd "vegyem vagy adjam?", kérdezd meg "hol vagyunk a ciklusban?"</p>
+      <ul>
+        <li><em>Akkumuláció (TD):</em> Hosszabb eladás után keress kimerülési jeleket. Az okos pénz itt gyűjt.</li>
+        <li><em>Markup (IGN):</em> Emelkedő trend elején a lendület megerősítése számít. Valódi ez a mozgás?</li>
+        <li><em>Csúcs (CAP):</em> Hosszabb vásárlás után keress csúcs jeleket. A tömeg teljesen bent van. Ideje óvatosnak lenni.</li>
+        <li><em>Disztribúció (WRN):</em> Gyengeség jelenik meg. Az okos pénz kilép. Légy védekezésben.</li>
+        <li><em>Hanyatlás (BDN):</em> Kitörés megerősítve. Kerüld a longokat, fontold meg a shortot vagy maradj kívül.</li>
+      </ul>
+      <p>Ez a kontextus mindent megváltoztat. Egy „vételi jel" akkumuláció alatt teljesen más esélyekkel rendelkezik, mint ugyanaz a jel disztribúció alatt. Az indikátor nem tudja a különbséget. Neked tudnod kell.</p>
+      <hr>
+      <h2>Mit Keress Bármely Indikátorban</h2>
+      <p>Mielőtt bármilyen eszközt hozzáadnál a grafikonodhoz, vezesd át ezen az ellenőrző listán:</p>
+      <p><strong>1. Újrafest?</strong><br>Teszteld magad. A marketing félrevezető lehet.</p>
+      <p><strong>2. Milyen konkrét kérdésre válaszol?</strong><br>Ha nem tudod ezt egy mondatban megfogalmazni, hagyd ki.</p>
+      <p><strong>3. Kontextust ad vagy csak jeleket?</strong><br>A kontextus nélküli jelek szerencsejáték. Meg kell értened, miért jelent meg a jel.</p>
+      <p><strong>4. El tudod magyarázni, hogyan működik?</strong><br>Nem kell értened a kódot, de értened kell a logikát. A fekete dobozok függőséget teremtenek, nem készséget.</p>
+      <p><strong>5. Segít látni a piacot, vagy megpróbál helyetted gondolkodni?</strong><br>A legjobb eszközök javítják az elemzésedet. A legrosszabbak helyettesítik. Jobb trader akarsz lenni, nem szoftvertől függőbb.</p>
       <hr>
       <h2>A Lényeg</h2>
       <p>Az indikátorok nem a probléma. Az, ahogy a traderek használják őket, az a probléma.</p>
       <p>Hagyd abba a jelek halmozását. Kezdj el kontextust építeni. Értsd meg, hol vagy a piaci ciklusban, mielőtt megkérdeznéd, hogy vegyél vagy adj el. És mindenre, amit a grafikonodra teszel, abszolút győződj meg róla, hogy nem fest újra.</p>
       <p>Az előny nem abban van, hogy többet látsz. Abban van, hogy azt látod, ami számít.</p>
       <hr>
+      <h2>Egy Másik Megközelítés</h2>
+      <p>Mi lenne, ha 6 ellentmondó indikátor helyett 7 lenne, amelyek valóban kommunikálnak egymással?</p>
+      <p>Ezt teszik az integrált rendszerek. A ciklus elemzés megmondja, hol vagy a struktúrában. A volumen rezsim felismerés megerősíti, hogy az intézmények gyűjtenek vagy osztanak. Az oszcillátor szavazás több forrásból gyűjti össze a lendületet. A szint összhang megmutatja, hol valószínű, hogy az ár reagáljon.</p>
+      <p>Az indikátorok belsőleg végzik a munkájukat. Te a szintetizált kimenetet látod - nem tizenkét ellentmondó véleményt, hanem egy koherens piaci képet.</p>
+      <p>A Signal Pilot erre az elvre épült: hét indikátor, mindegyik más kérdésre válaszol, mind együttműködésre tervezve. Ciklus fázis a Pentarch-tól. Volumen rezsim a Volume Oracle-tól. Kulcsszintek a Janus Atlas-tól. Konfluencia pontszám az OmniDeck-től. A csomag kontextust ad, nem csak jeleket.</p>
+      <hr>
       <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
         <a href="../../the-repainting-problem/hu/" class="related-card"><span class="related-category">Indikátorok</span><h4>Az Újrafestés Probléma</h4></a>
         <a href="../../inside-signal-pilot/hu/" class="related-card"><span class="related-category">Signal Pilot</span><h4>A Signal Pilot Belülről</h4></a>
         <a href="../../the-only-pattern-that-repeats/hu/" class="related-card"><span class="related-category">Ciklusok</span><h4>Az Egyetlen Minta, Ami Ismétlődik</h4></a>
       </div></section>
+      <nav class="article-nav">
+        <a href="../../how-to-trade-cycles-with-pentarch/hu/" class="article-nav-link prev">
+          <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Előző</span>
+          <span class="article-nav-title">Hogyan Kereskedj Ciklusokkal a Pentarch-hal</span>
+        </a>
+        <a href="../../psychology-of-getting-stopped-out/hu/" class="article-nav-link next">
+          <span class="article-nav-label">Következő <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="article-nav-title">A Kistoppolás Pszichológiája</span>
+        </a>
+      </nav>
       <div class="cta-box"><p><strong>Készen állsz indikátorokra, amik tényleg együtt működnek?</strong> A Signal Pilot 7 indikátoros csomagját integrált rendszerként tervezték.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld Ki a Teljes Csomagot Ingyen →</a></div>
     </div></div>
   </article></main>

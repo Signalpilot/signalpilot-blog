@@ -28,45 +28,33 @@
 <body>
   <div class="bg-aurora"></div>
   <div class="reading-progress" id="progress"></div>
+
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
         <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educazione</a><a href="/it/" class="active">Blog</a></nav>
         <div class="header-controls">
-          <div class="translate-wrapper">
-            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduci">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </button>
-            <div class="translate-dropdown">
-              <div class="lang-dropdown" id="langDropdown">
-                <div class="lang-menu">
-                  <a href="../"><span class="flag">🇬🇧</span> English</a>
-                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
-                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
-                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
-                  <a href="./" class="active"><span class="flag">🇮🇹</span> Italiano</a>
-                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
-                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
-                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
-                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
-                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
-                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
-                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambia tema">
             <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
           <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prova Gratuita</a>
-          <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </header>
+
   <main>
     <article>
       <header class="article-header">
@@ -84,22 +72,35 @@
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min di lettura</span>
             <span>Team Signal Pilot</span>
           </div>
-          <div class="share-buttons">
+        <div class="share-buttons">
             <span class="share-label">Condividi:</span>
-            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Condividi su Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Condividi su LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copia link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Condividi su Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Condividi su LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Copia link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
           </div>
         </div>
       </header>
-      <figure class="hero-image"><img src="../hero.png" alt="Visualizzazione della scalabilità della dimensione della posizione"></figure>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Visualizzazione della scalabilità della dimensione della posizione" data-ai-prompt="Visualizzazione a tema scuro di un aumento responsabile della dimensione della posizione - una scala di dimensioni crescenti, ogni gradino guadagnato attraverso performance costanti. Traiettoria di crescita da posizioni piccole a più grandi. Indicatori di avvertimento nei punti di dimensionamento prematuro. Sfondo blu navy profondo con scale dorate ascendenti e indicatori di crescita verdi.">
+        <figcaption class="ai-prompt">Visualizzazione a tema scuro di un aumento responsabile della dimensione della posizione - una scala di dimensioni crescenti, ogni gradino guadagnato attraverso performance costanti. Traiettoria di crescita da posizioni piccole a più grandi. Indicatori di avvertimento nei punti di dimensionamento prematuro. Sfondo blu navy profondo con scale dorate ascendenti e indicatori di crescita verdi.</figcaption>
+      </figure>
+
       <div class="article-content">
         <div class="container-narrow">
           <p>Hai fatto trading bene. Profitti costanti. Buona disciplina. Il tuo conto sta crescendo costantemente.</p>
           <p>Ora la domanda: quando aumenti la dimensione della tua posizione?</p>
           <p>Questo è uno dei momenti più pericolosi nel percorso di un trader. Aumenta troppo velocemente e puoi cancellare mesi di guadagni in giorni. Aumenta troppo lentamente e lasci profitti significativi sul tavolo.</p>
           <p>Ecco come navigare questa transizione senza esplodere.</p>
+
           <hr>
+
           <h2>Le Ragioni Sbagliate per Aumentare</h2>
           <p>Prima, eliminiamo le cattive motivazioni:</p>
           <p><strong>"Mi sento sicuro."</strong> La sicurezza raggiunge spesso il picco proprio prima del disastro. Sentirsi bene non è una ragione per rischiare di più.</p>
@@ -107,26 +108,104 @@
           <p><strong>"Ho bisogno di guadagnare più soldi."</strong> Il dimensionamento basato sul bisogno porta a decisioni emotive. Fai trading basandoti su ciò che il mercato offre, non su ciò che le tue bollette richiedono.</p>
           <p><strong>"Sono annoiato dai piccoli guadagni."</strong> La noia non è un segnale di trading. Se i profitti di $200 ti annoiano, hai un problema psicologico, non di dimensionamento.</p>
           <p><strong>"Questo setup è perfetto."</strong> Ogni conto esploso ha un "setup perfetto" che non lo era. Il setup che sembra perfetto è spesso dove l'eccesso di sicurezza ti uccide.</p>
+
           <hr>
+
           <h2>Le Ragioni Giuste per Aumentare</h2>
           <p>Queste sono ragioni legittime per aumentare la dimensione della posizione:</p>
           <p><strong>Il tuo conto è cresciuto.</strong> Se rischi l'1% per trade e il tuo conto va da $10.000 a $15.000, il tuo rischio per trade aumenta naturalmente da $100 a $150. Questo è solo mantenere una percentuale di rischio costante.</p>
           <p><strong>Hai prove statistiche di vantaggio.</strong> Dopo 100+ trade, la tua aspettativa è chiaramente positiva. Non "mi sento profittevole" - numeri reali che lo provano.</p>
           <p><strong>Il tuo processo è costante.</strong> Stai seguendo le tue regole sul 90%+ dei trade. Non stai giocando d'azzardo, sperando o improvvisando. Il sistema funziona e lo stai eseguendo.</p>
           <p><strong>I drawdown sono gestibili.</strong> Il tuo peggior drawdown è entro la tua tolleranza psicologica. Se aumentassi del 50%, potresti gestire drawdown del 50% più grandi?</p>
+
           <hr>
+
           <h2>L'Approccio Graduale</h2>
           <p>Evita di raddoppiare la tua dimensione. L'impatto psicologico è troppo grande. Invece, scala gradualmente:</p>
           <p><strong>La regola del 25%:</strong> Aumenta la dimensione di non più del 25% alla volta. Se fai trading con 1 contratto, vai a 1,25 (arrotonda se necessario). Se rischi $100 per trade, vai a $125.</p>
           <p><strong>Guadagna ogni aumento:</strong> Richiedi prove prima di ogni incremento. Per esempio: "Dopo 20 trade profittevoli a questa dimensione, aumenterò del 25%."</p>
           <p><strong>Buffer temporale:</strong> Evita di aumentare durante le serie vincenti. Aspetta un periodo normale - alcune vincite, alcune perdite - per assicurarti di non stare solo cavalcando la fortuna.</p>
           <p><strong>Tieni traccia:</strong> Monitora la tua psicologia a ogni livello di dimensione. Alcuni trader performano identicamente a qualsiasi dimensione. Altri crollano quando i numeri diventano "reali".</p>
+
           <hr>
+
+          <h2>La Barriera Psicologica</h2>
+          <p>Ecco cosa nessuno ti avverte: una dimensione maggiore cambia tutto psicologicamente.</p>
+          <p>Quando rischiavi $50 per trade, una perdita era niente. A $500 per trade, la stessa percentuale di perdita colpisce diversamente. Il tuo conto sta bene - hai seguito le regole - ma il tuo cervello urla che hai appena perso $500.</p>
+          <p>Questo impatto psicologico causa problemi reali:</p>
+          <ul>
+            <li>Chiudere i vincitori troppo presto (paura di restituire i guadagni)</li>
+            <li>Spostare gli stop al pareggio troppo presto</li>
+            <li>Esitare su entrate valide</li>
+            <li>Overtrading per "recuperare" le perdite</li>
+          </ul>
+          <p>La soluzione è l'esposizione graduale. Lascia che ogni livello di dimensione diventi noioso prima di passare al successivo. Quando le perdite di $500 sembrano come le vecchie perdite di $50, sei pronto per $600.</p>
+
+          <hr>
+
+          <h2>Traguardi del Conto</h2>
+          <p>Alcuni trader usano traguardi del conto come trigger per il dimensionamento:</p>
+          <p><strong>Approccio semplice:</strong> Ricalcola la dimensione della posizione ad ogni crescita del conto del 25%. Inizia con $10.000 rischiando l'1% ($100). A $12.500, il rischio diventa $125. A $15.625, il rischio diventa $156.</p>
+          <p><strong>Approccio conservativo:</strong> Aumenta solo dopo nuovi massimi di equity che hanno tenuto per 30 giorni. Questo assicura che non stai aumentando in un picco fortunato.</p>
+          <p><strong>Approccio aggressivo:</strong> Ricalcola il rischio giornalmente basandoti sull'equity corrente. Questo capitalizza più velocemente ma accelera anche i drawdown.</p>
+          <p>La maggior parte dei trader ottiene i migliori risultati con l'approccio semplice o conservativo. L'approccio aggressivo richiede una disciplina eccezionale che pochi hanno.</p>
+
+          <hr>
+
+          <h2>Quando Ridurre</h2>
+          <p>Altrettanto importante quanto sapere quando aumentare è sapere quando ridurre:</p>
+          <p><strong>Dopo i drawdown:</strong> Se il tuo conto scende del 15-20%, riduci la dimensione. Devi proteggere il capitale rimanente, e la tua psicologia è probabilmente compromessa.</p>
+          <p><strong>Durante i cambiamenti di mercato:</strong> Se la tua strategia smette di funzionare - forse la volatilità è cambiata, forse le correlazioni si sono spostate - riduci la dimensione mentre capisci cosa sta succedendo.</p>
+          <p><strong>Durante lo stress personale:</strong> I grandi eventi della vita influenzano il trading. Durante divorzio, malattia, perdita del lavoro - fai trading più piccolo o non farlo affatto.</p>
+          <p><strong>Dopo grandi vincite:</strong> Controintuitivamente, questo è quando molti trader esplodono. Si sentono invincibili e aumentano aggressivamente. Considera di ridurre dopo serie eccezionali finché la psicologia non si normalizza.</p>
+
+          <hr>
+
+          <h2>Il Pericolo del Mediare al Rialzo</h2>
+          <p>C'è una differenza tra aumentare la dimensione della tua strategia e aumentare in un trade.</p>
+          <p><strong>Buono:</strong> Dopo 6 mesi di trading costante con 1 contratto, passare a 1,25 contratti per trade.</p>
+          <p><strong>Pericoloso:</strong> Aggiungere a una posizione vincente perché sta funzionando. Questo può funzionare ma richiede regole specifiche e disciplina che la maggior parte dei trader non ha.</p>
+          <p>Se intendi aggiungere ai vincitori, abbi regole esplicite: dove aggiungerai, quanto, e dove sarà lo stop combinato. Improvvisare nel momento tende a ritorcersi.</p>
+
+          <hr>
+
+          <h2>Un Framework per il Dimensionamento</h2>
+          <p>Ecco un framework pratico per scalare:</p>
+          <p><strong>Fase 1: Dimostra che funziona</strong></p>
+          <ul>
+            <li>Fai trading con dimensione minima per 50-100 trade</li>
+            <li>Concentrati puramente sull'esecuzione, non sui profitti</li>
+            <li>Documenta tutto</li>
+          </ul>
+          <p><strong>Fase 2: Costruisci costanza</strong></p>
+          <ul>
+            <li>Fai trading al 50% della tua dimensione target</li>
+            <li>Richiedi 3 mesi di profittabilità</li>
+            <li>Monitora l'aderenza alle regole (punta al 90%+)</li>
+          </ul>
+          <p><strong>Fase 3: Scala gradualmente</strong></p>
+          <ul>
+            <li>Aumenta del 25% dopo ogni mese di profittabilità</li>
+            <li>Metti in pausa gli aumenti dopo qualsiasi mese in perdita</li>
+            <li>Riduci la dimensione dopo drawdown del 15%</li>
+          </ul>
+          <p><strong>Fase 4: Mantieni</strong></p>
+          <ul>
+            <li>Ricalcola la dimensione base trimestralmente</li>
+            <li>Resta sotto il 2% di rischio per trade indipendentemente dalla sicurezza</li>
+            <li>Continua a monitorare e aggiustare</li>
+          </ul>
+
+          <hr>
+
           <h2>La Conclusione</h2>
           <p>Aumentare è dove i conti di trading vengono fatti o distrutti. Fallo troppo velocemente e distruggi mesi di progresso. Fallo incautamente basandoti sui sentimenti e stai giocando d'azzardo, non facendo trading.</p>
           <p>Aumenta gradualmente. Aumenta basandoti su prove, non sentimenti. Riduci quando le condizioni lo richiedono. E ricorda sempre: l'obiettivo non è la dimensione massima. Sono i rendimenti aggiustati per il rischio massimi nel tempo.</p>
           <p>Rimani umile. Al mercato non importa quanto ti senti sicuro.</p>
+          <p>I sistemi di quality scoring possono informare le decisioni di dimensionamento oggettivamente. Se uno screener valuta un setup 4/5 basandosi sulla fase del ciclo, allineamento HTF e conferma del volume, è diverso da un setup che punta 2/5. Il dimensionamento guidato dai dati rimuove la componente emotiva: dimensione piena sui setup di alta qualità, dimensione ridotta su quelli marginali.</p>
+
           <hr>
+
           <section class="related-articles">
             <h3>Articoli Correlati</h3>
             <div class="related-grid">
@@ -144,13 +223,25 @@
               </a>
             </div>
           </section>
+
+
           <nav class="article-nav">
             <a href="../../cycles-within-cycles/it/" class="article-nav-link prev">
-              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Precedente</span>
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Precedente
+              </span>
               <span class="article-nav-title">Cicli Nei Cicli: La Natura Frattale dei Mercati</span>
             </a>
-            <div class="article-nav-link placeholder"></div>
+            <a href="../../drawdown-management/it/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Successivo
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Gestione del Drawdown: Come Sopravvivere alle Serie Perdenti</span>
+            </a>
           </nav>
+
           <div class="cta-box">
             <p>La fase IGN di Pentarch (markup dopo accumulo) è strutturalmente diversa dalla sua fase CAP (esaurimento del climax). I punteggi di qualità di Augury Grid quantificano quali setup giustificano dimensione piena versus esposizione ridotta. I dati sostituiscono l'intuito.</p>
             <a href="https://signalpilot.io/#trial" class="btn btn-primary">Vedi fasi del ciclo e punteggi di qualità →</a>
@@ -159,24 +250,47 @@
       </div>
     </article>
   </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-links"><a href="/it/">← Torna al Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentazione</a><a href="https://education.signalpilot.io">Centro Educazione</a></div>
       <p class="footer-copy">&copy; 2025 Signal Pilot. Tutti i diritti riservati.</p>
     </div>
   </footer>
+
   <button class="back-to-top" id="backToTop" aria-label="Torna su"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
   <script>
     function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
     const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
     window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
     document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
     if (mobileMenuBtn && nav) {
-      mobileMenuBtn.addEventListener('click', () => {nav.classList.toggle('open');const isOpen = nav.classList.contains('open');mobileMenuBtn.innerHTML = isOpen ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});
-      nav.querySelectorAll('a').forEach(link => {link.addEventListener('click', () => {nav.classList.remove('open');mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});});
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
     }
+
+    document.querySelectorAll('.hero-image img').forEach(img => {
+      if (img.complete && img.naturalHeight > 0) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => img.classList.add('loaded'));
+      }
+    });
   </script>
 </body>
 </html>
