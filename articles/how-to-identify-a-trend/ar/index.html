@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيفية تحديد الاتجاه (ومتى ينتهي) - Signal Pilot Blog</title>
+  <meta name="description" content="تحديد الاتجاه هو أساس التحليل الفني. إليك كيفية اكتشاف الاتجاهات وتأكيدها ومعرفة متى تنتهي - دون تعقيد الأمور.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="./">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">المستندات</a><a href="https://education.signalpilot.io">التعليم</a><a href="/" class="active">المدونة</a></nav>
+        <div class="header-controls">
+
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">جرب مجاناً</a>
+          <button class="mobile-menu-btn" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="مسار التنقل">
+            <a href="/">المدونة</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/?filter=technical analysis">التحليل الفني</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">مقال</span>
+          </nav>
+          <span class="article-category">التحليل الفني</span>
+          <h1 class="article-title">كيفية تحديد الاتجاه (ومتى ينتهي)</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 دقائق للقراءة</span>
+            <span>فريق Signal Pilot</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">مشاركة:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="مشاركة على تويتر">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="مشاركة على لينكد إن">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Image Placeholder -->
+      <figure class="hero-image">
+        <img src="../hero.png" alt="تصور تحديد الاتجاه" data-ai-prompt="Dark themed visualization of market structure showing clear higher highs and higher lows connected by trend lines, with arrows indicating the upward progression. A secondary downtrend example below showing lower highs and lower lows. Clean geometric lines on deep navy background with subtle gradient accents.">
+        <figcaption class="ai-prompt">Dark themed visualization of market structure showing clear higher highs and higher lows connected by trend lines, with arrows indicating the upward progression. A secondary downtrend example below showing lower highs and lower lows. Clean geometric lines on deep navy background with subtle gradient accents.</figcaption>
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>"الاتجاه صديقك." لقد سمعت هذا ألف مرة. لكن عندما تنظر إلى الرسم البياني، هل تستطيع فعلاً تحديد ما هو الاتجاه؟</p>
+          <p>معظم المتداولين لا يستطيعون. يعتقدون أنهم يرون اتجاهاً صاعداً، يشترون، ويشاهدون السعر ينعكس فوراً. أو يعلنون اتجاهاً هابطاً، يبيعون على المكشوف، ويتعرضون للضغط.</p>
+          <p>تحديد الاتجاه ليس معقداً. يتطلب فقط فهم ما هو الاتجاه حقاً - وما ليس كذلك.</p>
+
+          <hr>
+
+          <h2>تعريف الاتجاه</h2>
+          <p>انسَ المؤشرات المعقدة للحظة. الاتجاه له تعريف بسيط واحد:</p>
+          <p><strong>الاتجاه الصاعد:</strong> سلسلة من القمم الأعلى والقيعان الأعلى.</p>
+          <p><strong>الاتجاه الهابط:</strong> سلسلة من القمم الأدنى والقيعان الأدنى.</p>
+          <p>هذا كل شيء. كل قمة سوينغ أعلى من قمة السوينغ السابقة. كل قاع سوينغ أعلى من قاع السوينغ السابق. طالما هذا الهيكل قائم، فالاتجاه سليم.</p>
+          <p>عندما ينكسر الهيكل - عندما يصنع الاتجاه الصاعد قاعاً أدنى أو الاتجاه الهابط يصنع قمة أعلى - هذا تحذيرك الأول أن الاتجاه قد يتغير.</p>
+
+          <hr>
+
+          <h2>كيفية تحديد نقاط السوينغ</h2>
+          <p>قمم السوينغ وقيعان السوينغ هي القمم والوديان في حركة السعر. لتحديدها:</p>
+          <p><strong>قمة السوينغ:</strong> شمعة (أو مجموعة شموع) حيث القمة أعلى من الشموع على الجانبين. السعر ارتفع، ثم انعكس للأسفل.</p>
+          <p><strong>قاع السوينغ:</strong> شمعة (أو مجموعة شموع) حيث القاع أدنى من الشموع على الجانبين. السعر انخفض، ثم انعكس للأعلى.</p>
+          <p>ليس كل قمة صغيرة هي قمة سوينغ. أنت تبحث عن انعكاسات مهمة - تلك التي تصنع هيكل الحركة.</p>
+          <p>قاعدة جيدة: إذا كانت واضحة على الرسم البياني، فهي نقطة سوينغ. إذا كان عليك التحديق والمناقشة، فربما ليست كذلك.</p>
+
+          <hr>
+
+          <h2>حالات السوق الثلاث</h2>
+          <p>في أي لحظة، يكون السوق في إحدى ثلاث حالات:</p>
+          <p><strong>1. اتجاه صاعد</strong></p>
+          <ul>
+            <li>قمم أعلى وقيعان أعلى</li>
+            <li>السعر فوق المتوسطات المتحركة الرئيسية</li>
+            <li>المتوسطات المتحركة منحدرة للأعلى</li>
+            <li>الاستراتيجية: شراء التراجعات، الاحتفاظ مع الاتجاه</li>
+          </ul>
+          <p><strong>2. اتجاه هابط</strong></p>
+          <ul>
+            <li>قمم أدنى وقيعان أدنى</li>
+            <li>السعر تحت المتوسطات المتحركة الرئيسية</li>
+            <li>المتوسطات المتحركة منحدرة للأسفل</li>
+            <li>الاستراتيجية: بيع الارتفاعات، الاحتفاظ مع الاتجاه</li>
+          </ul>
+          <p><strong>3. نطاق (لا اتجاه)</strong></p>
+          <ul>
+            <li>لا نمط واضح لقمم/قيعان أعلى أو أدنى</li>
+            <li>السعر يتذبذب حول متوسطات متحركة مسطحة</li>
+            <li>المتوسطات المتحركة متشابكة</li>
+            <li>الاستراتيجية: الشراء عند الدعم، البيع عند المقاومة - أو البقاء خارجاً</li>
+          </ul>
+          <p>أغلى خطأ في التداول هو تطبيق استراتيجيات الاتجاه على أسواق النطاق، أو استراتيجيات النطاق على الأسواق المتجهة.</p>
+
+          <hr>
+
+          <h2>تأكيد الاتجاه</h2>
+          <p>الهيكل وحده يخبرك بالاتجاه. لكن التأكيد يضيف الثقة. إليك ما تبحث عنه:</p>
+          <p><strong>محاذاة المتوسطات المتحركة:</strong></p>
+          <ul>
+            <li>في الاتجاه الصاعد: السعر > EMA 20 > SMA 50 > SMA 200</li>
+            <li>في الاتجاه الهابط: السعر < EMA 20 < SMA 50 < SMA 200</li>
+            <li>عندما تكون مرتبة، الاتجاه قوي. عندما تكون متشابكة، الاتجاه ضعيف أو غائب.</li>
+          </ul>
+          <p><strong>سلوك التراجعات:</strong></p>
+          <ul>
+            <li>في اتجاه صاعد صحي، التراجعات ضحلة وقصيرة الأمد</li>
+            <li>غالباً ترتد من المتوسط المتحرك 20 أو 50</li>
+            <li>التراجعات العميقة التي تخترق المتوسطات المتحركة تشير إلى ضعف الاتجاه</li>
+          </ul>
+          <p><strong>الحجم:</strong></p>
+          <ul>
+            <li>الاتجاهات الصحية لها حجم متزايد في التحركات باتجاه الاتجاه</li>
+            <li>الحجم ينكمش في التراجعات ضد الاتجاه</li>
+            <li>عندما ينعكس هذا - حجم عالي في التراجعات - قد ينتهي الاتجاه</li>
+          </ul>
+
+          <hr>
+
+          <h2>متى ينتهي الاتجاه</h2>
+          <p>كل الاتجاهات تنتهي. السؤال هو هل تستطيع رصد علامات التحذير قبل فوات الأوان.</p>
+          <p><strong>التحذير الأول: كسر الهيكل</strong></p>
+          <p>أول علامة على المشكلة هي عندما ينكسر الهيكل. في الاتجاه الصاعد، هذا يعني قاعاً أدنى. السوق لم يستطع صنع قاع أعلى - البائعون تغلبوا على المشترين.</p>
+          <p>هذا لا يعني أن الاتجاه انتهى بالتأكيد. لكنها علم أصفر. وقت تضييق وقف الخسارة أو تقليل حجم المركز.</p>
+          <p><strong>التحذير الثاني: فشل الاستمرار</strong></p>
+          <p>بعد القاع الأدنى، راقب قمة السوينغ التالية. إذا كانت أدنى من القمة السابقة، لديك الآن قمة أدنى وقاع أدنى. الهيكل انعكس.</p>
+          <p><strong>التحذير الثالث: اختراق المتوسط المتحرك</strong></p>
+          <p>عندما يخترق السعر المتوسط المتحرك 50 أو 200 ولا يستطيع استعادته، الاتجاه ربما انتهى. هذه المستويات تعمل كـ "خط في الرمال" للكثير من المتداولين.</p>
+          <p><strong>قائمة علامات التحذير:</strong></p>
+          <ul>
+            <li>الزخم يتباطأ (نطاق أصغر في تحركات الاتجاه)</li>
+            <li>تراجعات أعمق مما كانت في بداية الاتجاه</li>
+            <li>الحجم يجف في التحركات باتجاه الاتجاه</li>
+            <li>الفشل في صنع قمم جديدة (في الصاعد) أو قيعان جديدة (في الهابط)</li>
+            <li>تغير الاتجاه في الإطار الزمني الأقل</li>
+          </ul>
+
+          <hr>
+
+          <h2>منظور الأطر الزمنية المتعددة</h2>
+          <p>هذا ما يربك معظم المتداولين: الاتجاه يعتمد على إطارك الزمني.</p>
+          <p>الرسم البياني اليومي قد يظهر اتجاهاً صاعداً واضحاً. رسم 15 دقيقة قد يظهر اتجاهاً هابطاً (تراجع ضمن الاتجاه الصاعد الأكبر). الرسم الأسبوعي قد يظهر نطاقاً.</p>
+          <p>أيهم "الاتجاه"؟ كلهم، في أطرهم الزمنية المختلفة.</p>
+          <p>الحل: اختر إطارك الزمني بناءً على أسلوب تداولك، ثم انظر إطاراً زمنياً أعلى للسياق.</p>
+          <ul>
+            <li><strong>متداولو اليوم:</strong> تداول اتجاه 5-15 دقيقة، استخدم ساعة للسياق</li>
+            <li><strong>متداولو السوينغ:</strong> تداول اتجاه 4 ساعات/يومي، استخدم الأسبوعي للسياق</li>
+            <li><strong>متداولو المراكز:</strong> تداول الاتجاه الأسبوعي، استخدم الشهري للسياق</li>
+          </ul>
+          <p>أفضل الصفقات تحدث عندما تتوافق عدة أطر زمنية. تراجع على رسم 15 دقيقة إلى مستوى دعم، بينما اليومي والأسبوعي في اتجاه صاعد - هذا هو التقاء.</p>
+
+          <hr>
+
+          <h2>الخلاصة</h2>
+          <p>تحديد الاتجاه بسيط: قمم أعلى وقيعان أعلى = اتجاه صاعد. قمم أدنى وقيعان أدنى = اتجاه هابط. لا شيء = نطاق.</p>
+          <p>استخدم المتوسطات المتحركة للتأكيد. راقب كسور الهيكل كتحذيرات مبكرة. اعرف دائماً أي إطار زمني تتداول.</p>
+          <p>الاتجاه صديقك - لكن فقط إذا استطعت تحديده فعلاً. معظم المتداولين يعتقدون أنهم يتداولون مع الاتجاه بينما هم في الحقيقة يحاربونه. الآن تعرف الفرق.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>مقالات ذات صلة</h3>
+            <div class="related-grid">
+              <a href="../../moving-averages-explained/ar/" class="related-card">
+                <span class="related-category">التحليل الفني</span>
+                <h4>شرح المتوسطات المتحركة: EMA مقابل SMA</h4>
+              </a>
+              <a href="../../multi-timeframe-confirmation/ar/" class="related-card">
+                <span class="related-category">المؤشرات</span>
+                <h4>تأكيد الأطر الزمنية المتعددة</h4>
+              </a>
+              <a href="../../support-and-resistance-explained/ar/" class="related-card">
+                <span class="related-category">المبتدئين</span>
+                <h4>شرح الدعم والمقاومة</h4>
+              </a>
+            </div>
+          </section>
+
+
+          <nav class="article-nav">
+            <a href="../../moving-averages-explained/ar/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                السابق
+              </span>
+              <span class="article-nav-title">شرح المتوسطات المتحركة: EMA مقابل SMA</span>
+            </a>
+            <a href="../../chart-patterns-that-work/ar/" class="article-nav-link next">
+              <span class="article-nav-label">
+                التالي
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">أنماط الرسم البياني التي تعمل فعلاً</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>تحديد الاتجاه هو الخطوة الأولى. معرفة أين أنت في الدورة هي الخطوة الثانية.</strong></p>
+            <p>مؤشر Pentarch من Signal Pilot يرسم بالضبط أين يقع السعر ضمن هيكل الدورة الأكبر - التراكم، الارتفاع، التوزيع، أو الانخفاض. بالاقتران مع تحليل الاتجاه، ستعرف ليس فقط الاتجاه، ولكن المدة والقوة المحتملة للحركة.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">شاهد سياق الاتجاه في العمل ←</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/">→ العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+
+    // Hero image loading
+    document.querySelectorAll('.hero-image img').forEach(img => {
+      if (img.complete && img.naturalHeight > 0) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => img.classList.add('loaded'));
+      }
+    });
+  </script>
+</body>
+</html>
