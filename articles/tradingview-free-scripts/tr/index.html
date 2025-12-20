@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradingView'ın Ücretsiz Scriptler Hakkında Söylemedikleri - Signal Pilot Blog</title>
+  <meta name="description" content="100.000'den fazla ücretsiz indikatör. Seçiminizi yönlendirmek için yorumlar ve beğeniler. Ne ters gidebilir ki? Aslında çok şey.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/tr/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Temayı değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/tr/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/tr/?filter=practical">Pratik</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">Pratik</span>
+          <h1 class="article-title">TradingView'ın Ücretsiz Scriptler Hakkında Söylemedikleri</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Paylaş:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitter'da Paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedIn'de Paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Linki Kopyala">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="TradingView ücretsiz script uyarısı">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>TradingView'ın halka açık kütüphanesinde 100.000'den fazla indikatör. Ücretsiz. Anında erişim. Seçiminizi yönlendirmek için yorumlar ve beğeniler.</p>
+          <p>Ne ters gidebilir ki?</p>
+          <p>Aslında çok şey. Ücretsiz script ekosistemi mükemmel araçlara sahip. Aynı zamanda gerçek paraya mal olacak tuzaklar da var.</p>
+
+          <hr>
+
+          <h2>Kalite Spektrumu</h2>
+          <p>Adil olalım: bazı ücretsiz scriptler gerçekten mükemmel. Yetenekli geliştiriciler ücretli alternatiflere rakip olan veya onları aşan araçlar sunuyor.</p>
+          <p>Ancak her kaliteli ücretsiz indikatör için düzinelercesi var ki:</p>
+          <ul>
+            <li>Kötü kodlanmış (hatalı, yavaş, kaynak yoğun)</li>
+            <li>Kavramsal olarak hatalı (mantık çalışmıyor)</li>
+            <li>Aktif olarak yanıltıcı (iyi görünmek için tasarlanmış, çalışmak için değil)</li>
+            <li>Terk edilmiş (yıllardır güncellenmemiş)</li>
+          </ul>
+          <p>Sorun, gerçek parayla işlem yapmadan önce hangisinin hangisi olduğunu ayırt etmek.</p>
+
+          <hr>
+
+          <h2>Repaint Salgını</h2>
+          <p>Ücretsiz scriptler hakkında özellikle bilmeniz gereken: repaint oranı astronomik.</p>
+          <p>Birçok geliştirici indikatörlerinin repaint yaptığını bile bilmiyor. Kodladılar, harika geçmiş sonuçlar gördüler ve yayınladılar. Hiç canlı test etmediler.</p>
+          <p>Diğerleri tam olarak ne yaptıklarını biliyor. Repaint yapan indikatörler daha etkileyici göründükleri için daha fazla indirme alıyor.</p>
+          <p>TradingView'ın yorum sistemi repaint için filtreleme yapmıyor. 1.000'den fazla beğenisi olan ve tamamen repaint yapan bir indikatör bulabilirsiniz. Yorumlar, yükleyen, mükemmel geçmiş sinyaller gören ve canlı test etmeden "beğen"e basan kişilerden.</p>
+          <p>Gerçek trading için herhangi bir ücretsiz script kullanmadan önce:</p>
+          <ol>
+            <li><strong>Canlı izleyin</strong> en az bir seans boyunca</li>
+            <li><strong>Ekran görüntüsü alın</strong> ve sonra geçmişle karşılaştırın</li>
+            <li><strong>Geliştiriciye doğrudan sorun</strong> - cevabı çok şey söyler</li>
+            <li><strong>Repaint yaptığını varsayın</strong> aksi kanıtlanana kadar</li>
+          </ol>
+
+          <hr>
+
+          <h2>Kara Kutu Problemi</h2>
+          <p>TradingView, geliştiricilerin kullanabileceğiniz ama kaynak kodunu göremeyeceğiniz "korumalı" indikatörler yayınlamasına izin veriyor.</p>
+          <p>Bu bir problem:</p>
+          <ul>
+            <li><strong>Mantığı doğrulayamazsınız.</strong> Süslü bir isimle basit bir hareketli ortalama kesişimi olabilir.</li>
+            <li><strong>Sorunları tespit edemezsiniz.</strong> Gizli kod gelecek verileri kullanıyor veya mantık hataları içeriyor olabilir.</li>
+            <li><strong>Anlayamazsınız.</strong> Çalışmayı bıraktığında, nedenini bilemezsiniz.</li>
+          </ul>
+          <p>Kural olarak: kodlarını gösteren açık kaynak scriptler, korumalı scriptlerden daha güvenilir. Her zaman daha iyi oldukları için değil, doğrulanabilir oldukları için.</p>
+
+          <hr>
+
+          <h2>Teşvik Problemi</h2>
+          <p>İnsanlar neden ücretsiz scriptler yayınlıyor?</p>
+          <p>Bazıları gerçekten topluluğa katkıda bulunuyor. Ancak birçoğunun başka teşvikleri var:</p>
+          <ul>
+            <li><strong>Kitle oluşturma.</strong> Script bir potansiyel müşteri mıknatısı. Kullanıcıları ilgilendirip, sonra premium sürümler veya kurslar satmak.</li>
+            <li><strong>İtibar artırma.</strong> Popüler bir ücretsiz script güvenilirlik sağlar.</li>
+            <li><strong>Algoritmayı manipüle etme.</strong> Daha fazla indikatör = daha fazla görünürlük.</li>
+          </ul>
+          <p>Bu teşviklerin hiçbiri doğası gereği kötü değil. Ancak scriptin asıl amacının sizi karlı yapmak olmayabileceği anlamına geliyor.</p>
+
+          <hr>
+
+          <h2>Nelere Bakmalı</h2>
+          <p>Tüm ücretsiz scriptler kötü değil. İşte iyileri nasıl bulursunuz:</p>
+          <ul>
+            <li><strong>Açık kaynak.</strong> Kodu görebilirsiniz. Mantığın anlamlı olduğunu doğrulayın.</li>
+            <li><strong>Aktif geliştirici.</strong> Sorulara cevap veriyor. Scripti güncelliyor.</li>
+            <li><strong>Gerçekçi iddialar.</strong> "Kutsal kase" dili yok. Sınırlamalar konusunda dürüst.</li>
+            <li><strong>Net dokümantasyon.</strong> Ne ölçüyor? Ne zaman KULLANILMAMALI?</li>
+          </ul>
+
+          <hr>
+
+          <h2>Test Protokolü</h2>
+          <p>Düşündüğünüz herhangi bir ücretsiz script için:</p>
+          <p><strong>Hafta 1: Sadece izleyin.</strong> Grafiklere ekleyin. İşlem yapmadan gözlemleyin.</p>
+          <p><strong>Hafta 2: Canlı repaint testi.</strong> Günlük ekran görüntüsü alın. Geçmişle karşılaştırın. Herhangi bir değişiklik = reddet.</p>
+          <p><strong>Hafta 3: Kağıt üzerinde işlem.</strong> Sinyallere göre işlem yapıyormuş gibi davranın. Sonuçları takip edin.</p>
+          <p><strong>Hafta 4: Küçük boyutla canlı test.</strong> 1-3 haftaları geçtiyse, minimum pozisyon boyutuyla işlem yapın.</p>
+          <p>Ancak bu bir aylık süreçten sonra ücretsiz bir scripte gerçek sermaye emanet etmeyi düşünmelisiniz.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>TradingView'ın ücretsiz kütüphanesi mayınlı bir altın madeni. Kaliteli araçlar var, ancak repaint yapan çöpler, kara kutular ve terk edilmiş projelerle karışık.</p>
+          <p>Herhangi bir ücretsiz scripte güvenmeden önce:</p>
+          <ul>
+            <li>Repaint yapmadığını doğrulayın (hiçbir şeye güvenmeyin, her şeyi test edin)</li>
+            <li>Korumalı kod yerine açık kaynağı tercih edin</li>
+            <li>Aktif geliştirme ve desteği kontrol edin</li>
+            <li>Gerçek paradan önce bir aylık test protokolü uygulayın</li>
+          </ul>
+          <p>Ücretsiz, hesabınıza mal oluyorsa ücretsiz değildir.</p>
+
+          <hr>
+
+          <h2>Alternatif: Birlikte Çalışmak İçin Tasarlanmış Sistemler</h2>
+          <p>İşte profesyonel düzeyde indikatör paketlerinin ücretsiz scriptlerin sağlayamadığı şeyler:</p>
+          <p><strong>Entegre mimari.</strong> Yedi rastgele indikatör değil - tamamlayıcı soruları yanıtlamak için tasarlanmış yedi araç. Döngü tespiti yapıda nerede olduğunuzu söyler. Hacim analizi kurumsal davranışı doğrular. Konfluans skorlaması her şeyi uygulanabilir derecelendirmelere sentezler. Her bileşen diğerlerini bilgilendirir.</p>
+          <p><strong>Repaint yapmama garantisi.</strong> "Muhtemelen repaint yapmaz" veya "mevcut bar hariç repaint yapmaz" değil. Sinyaller mum kapanışında kesinleşir. Nokta. Geçmişte gördüğünüz, gerçek zamanda görünendir.</p>
+          <p><strong>Aktif geliştirme.</strong> Piyasalar evrilir. 2020'de çalışan araçlar 2025'te çalışmayabilir. Profesyonel paketler bakımdan geçirilir, güncellenir ve geliştirilir. Bir şey bozulduğunda düzeltilir. Piyasalar değiştiğinde araçlar uyum sağlar.</p>
+          <p><strong>Gerçek destek.</strong> Sorular cevap alır. Problemler çözülür. Geliştiricinin TradingView bildirimlerini kontrol etmesini umarak boşluğa bağırmıyorsunuz.</p>
+          <p>Yukarıdaki bir aylık test protokolü? İhtiyacınız olmamalı. Profesyonel araçlar hemen çalışmalı - çalışmazlarsa, ücretsiz deneme ödemeden önce söyler.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../../the-repainting-problem/tr/" class="related-card">
+                <span class="related-category">İndikatörler</span>
+                <h4>Repaint Problemi: Backtest'iniz Neden Yalan Söyledi</h4>
+              </a>
+              <a href="../../why-your-indicators-keep-failing/tr/" class="related-card">
+                <span class="related-category">İndikatörler</span>
+                <h4>İndikatörleriniz Neden Başarısız Olmaya Devam Ediyor</h4>
+              </a>
+              <a href="../../backtesting-without-fooling-yourself/tr/" class="related-card">
+                <span class="related-category">Sistemler</span>
+                <h4>Kendinizi Kandırmadan Backtesting</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../accumulation-vs-distribution/tr/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Önceki
+              </span>
+              <span class="article-nav-title">Birikim vs Dağıtım: Grafiğin Söylemediklerini Okumak</span>
+            </a>
+            <a href="../../volume-profile-basics/tr/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Sonraki
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Hacim Profili Temelleri: Gerçek Aksiyonun Nerede Olduğunu Görün</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p><strong>Ücretsiz scriptlerle kumar oynamayı bıraktınız mı?</strong></p>
+            <p>Signal Pilot'ın 7 indikatörlü paketi şeffaf mantık üzerine kurulu, aktif olarak bakımdan geçiriliyor ve repaint yapmayacağı garanti. Her sinyal mum kapanışında kesinleşir. Tam dokümantasyon her özelliği açıklar. Aktif destek sorulara cevap verir.</p>
+            <p>7 indikatörün tamamını ücretsiz deneyin - kredi kartı yok, taahhüt yok. Kullandığınız ücretsiz scriptleri geçmezlerse, hiçbir şey kaybetmediniz.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Denemeyi Başlat →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/tr/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı dön"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
