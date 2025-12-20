@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacim Profili Temelleri: Gerçek Aksiyonun Nerede Olduğunu Görün - Signal Pilot Blog</title>
+  <meta name="description" content="Çoğu trader hacim çubuklarını izler. Akıllı traderlar hacim profilini izler. Kurumsal paranın gerçekte nerede işlem gördüğünü nasıl okuyacağınızı öğrenin.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="./">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dökümanlar</a><a href="https://education.signalpilot.io">Eğitim</a><a href="/tr/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Çevir">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="./" class="active"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Temayı değiştir">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Ücretsiz Dene</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/tr/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/tr/?filter=indicators">İndikatörler</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Makale</span>
+          </nav>
+          <span class="article-category">İndikatörler</span>
+          <h1 class="article-title">Hacim Profili Temelleri: Gerçek Aksiyonun Nerede Olduğunu Görün</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
+            <span>Signal Pilot Ekibi</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Paylaş:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitter'da paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedIn'de paylaş">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Linki kopyala">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Hacim profili temelleri görselleştirmesi">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>Standart hacim çubukları size bir zaman diliminde ne kadar işlem yapıldığını söyler. Bu faydalıdır, ancak sınırlıdır.</p>
+          <p>Hacim profili size her fiyat seviyesinde ne kadar işlem yapıldığını söyler. Bu tamamen farklı - ve çok daha uygulanabilir - bir bilgidir.</p>
+          <p>İşte nasıl okunacağı ve neden önemli olduğu.</p>
+
+          <hr>
+
+          <h2>Hacim Profilinin Gösterdiği</h2>
+          <p>Mum başına hacmi gösteren dikey çubuklar yerine, hacim profili fiyat seviyesi başına hacmi gösteren yatay çubuklar gösterir.</p>
+          <p>Şöyle düşünün: bir işlem seansının tüm hacmini alıp zamana göre değil fiyata göre organize etseydiniz, işlemlerin çoğunun gerçekte nerede gerçekleştiğini görürdünüz.</p>
+          <p>Bazı fiyatlar devasa hacim görür - bunlar alıcıların ve satıcıların anlaşmaya vardığı ve yoğun şekilde işlem yaptığı seviyelerdir. Diğer fiyatlar neredeyse hiç hacim görmez - fiyat hızla geçti çünkü orada ilgi yoktu.</p>
+          <p>Bu ayrım güçlüdür çünkü kurumların gerçekte nerede pozisyon oluşturduğunu ortaya çıkarır.</p>
+
+          <hr>
+
+          <h2>Temel Hacim Profili Kavramları</h2>
+          <p><strong>Kontrol Noktası (POC):</strong> En yüksek hacme sahip fiyat seviyesi. Burası en çok işlemin gerçekleştiği yerdir - alıcıların ve satıcıların maksimum anlaşmaya ulaştığı "en adil" fiyat. POC genellikle mıknatıs gibi çalışır; fiyat ona dönme eğilimindedir.</p>
+          <p><strong>Değer Alanı:</strong> Tüm hacmin %70'ini içeren aralık (tipik olarak). Bu, aksiyonun çoğunun nerede olduğunu temsil eder. Değer alanı içindeki fiyat "adil"dir. Dışarıdaki fiyat keşiftedir.</p>
+          <p><strong>Değer Alanı Yüksek (VAH):</strong> Değer alanının üst sınırı. Aşağıdan yaklaşıldığında genellikle direnç olarak çalışır.</p>
+          <p><strong>Değer Alanı Düşük (VAL):</strong> Değer alanının alt sınırı. Yukarıdan yaklaşıldığında genellikle destek olarak çalışır.</p>
+          <p><strong>Yüksek Hacim Düğümleri (HVN):</strong> Önemli hacim birikimi olan fiyat seviyeleri. Bunlar destek/direnç olarak çalışır çünkü orada birçok pozisyon oluşturulmuştur.</p>
+          <p><strong>Düşük Hacim Düğümleri (LVN):</strong> Minimum hacme sahip fiyat seviyeleri. Fiyat bunlardan hızla geçme eğilimindedir - orada "hafıza" yok, savunulacak pozisyon yok.</p>
+
+          <hr>
+
+          <h2>Hacim Profili ile Nasıl Trade Edilir</h2>
+          <p><strong>Destek ve Direnç:</strong> HVN'ler ve POC destek/direnç seviyeleri olarak çalışır. Grafiklere çizilen keyfi çizgilerin aksine, bu seviyelerin arkasında gerçek işlem kanıtı vardır.</p>
+          <p><strong>Kırılım Hedefleri:</strong> Fiyat bir LVN'yi kırdığında, genellikle bir sonraki HVN'ye hızla hareket eder. Düşük hacimli alanlar az direnç sunar - fiyat birikmiş pozisyonlara çarpana kadar kayar.</p>
+          <p><strong>Ortalamaya Dönüş:</strong> POC'tan uzaktaki fiyat geri dönme eğilimindedir. POC, en çok işin yapıldığı "adil değer"i temsil eder. Ondan uzaktaki genişletilmiş hareketler genellikle sürdürülebilir değildir.</p>
+          <p><strong>Trend Onayı:</strong> Sağlıklı trendlerde POC trend yönünde hareket eder. Fiyat daha yüksek zirveler yapıyorsa ama POC yukarı hareket etmiyorsa, trend zayıflıyor olabilir - hacim fiyat hareketini onaylamıyor.</p>
+
+          <hr>
+
+          <h2>Hacim Profili Türleri</h2>
+          <p><strong>Seans Hacim Profili:</strong> Tek bir işlem seansı için hacim dağılımını gösterir. Gün içi traderlar için gün içi seviyeleri belirlemede kullanışlıdır.</p>
+          <p><strong>Görünür Aralık (VPVR):</strong> Grafiğinizde görünen her şey için hacim dağılımını gösterir. Yakınlaştırma/uzaklaştırma yaptığınızda ayarlanır. Büyük resmi görmek için iyidir.</p>
+          <p><strong>Sabit Aralık:</strong> Tanımladığınız belirli bir fiyat/zaman aralığı için hacim dağılımını gösterir. Belirli hareketleri veya konsolidasyonları analiz etmek için kullanışlıdır.</p>
+          <p><strong>Periyodik:</strong> Her gün/hafta/ay için ayrı profiller gösterir. Değer alanlarının zamanla nasıl değiştiğini belirlemeye yardımcı olur.</p>
+
+          <hr>
+
+          <h2>Yaygın Hacim Profili Kurulumları</h2>
+          <p><strong>Değer Alanı Reddi:</strong> Fiyat değer alanına girer, POC'u test eder ve reddedilir. Red yönünde trade yapın, stopları POC'un ötesine koyun.</p>
+          <p><strong>Değer Alanı Kırılımı:</strong> Fiyat güçlü hacimle VAH'ın üzerine veya VAL'ın altına kırılır. Kırılımda veya kırılan seviyenin yeniden testinde giriş yapın. Hedef: bir sonraki HVN.</p>
+          <p><strong>POC Mıknatısı:</strong> POC'tan uzaktaki fiyat dönme eğilimindedir. Fiyat POC'un önemli ölçüde üstünde/altındaysa ve momentum zayıflıyorsa, POC'a doğru ortalamaya dönüşü düşünün.</p>
+          <p><strong>LVN Hızlı Koşu:</strong> Fiyat bir LVN'ye girdiğinde, bir sonraki HVN'ye hızlı hareket bekleyin. Bunlar fiyatın nadiren durduğu düşük direnç bölgeleridir.</p>
+
+          <hr>
+
+          <h2>Hacim Profili Sınırlamaları</h2>
+          <p>Hacim profili sihir değildir. Bu sınırlamaların farkında olun:</p>
+          <p><strong>Veri kalitesi önemlidir:</strong> Hacim profili verileriniz kadar iyidir. Farklı veri akışları farklı hacimler gösterir. Tutarlı, kaliteli kaynaklar kullanın.</p>
+          <p><strong>Bağlam hala önemlidir:</strong> Altı ay önceki bir POC, dünkünden daha az önemlidir. Son profiller eskilerden daha alakalıdır.</p>
+          <p><strong>Tahmin edici değildir:</strong> Hacim profili hacmin nerede OLDUĞUNU gösterir, nerede OLACAĞINI değil. Geçmişin bir haritasıdır, kristal küre değil.</p>
+          <p><strong>Bunaltıcı olabilir:</strong> Bir grafikte çok fazla profil gürültü oluşturur. İdareli ve amaçlı kullanın.</p>
+
+          <hr>
+
+          <h2>Sonuç</h2>
+          <p>Hacim profili, standart grafiklerin gizlediğini ortaya çıkarır: kurumsal paranın gerçekte nerede işlem gördüğünü. POC adil değeri gösterir. HVN'ler önemli seviyeleri gösterir. LVN'ler hızlı hareket bölgelerini gösterir.</p>
+          <p>Hacim profili döngü farkındalığı ile birleştirildiğinde daha da güçlü hale gelir. Birikim sırasındaki (akıllı para pozisyon oluştururken) bir POC, dağıtım sırasındakinden farklı davranır. Standart sapma bantları ile VWAP seviyeleri başka bir boyut ekler - sadece hacmin nerede işlem gördüğünü değil, değerin farklı zaman ufuklarında nerede algılandığını da gösterir.</p>
+          <p>Hacim profilini gerçek destek/direnci belirlemek, gerçekçi hedefler koymak ve piyasa yapısını fiyatın tek başına ortaya çıkardığından daha derin bir seviyede anlamak için kullanın.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>İlgili Makaleler</h3>
+            <div class="related-grid">
+              <a href="../../support-and-resistance-explained/tr/" class="related-card">
+                <span class="related-category">Başlangıç</span>
+                <h4>Destek ve Direnç Açıklandı</h4>
+              </a>
+              <a href="../../accumulation-vs-distribution/tr/" class="related-card">
+                <span class="related-category">Döngüler</span>
+                <h4>Birikim vs Dağıtım: Farkı Belirleme</h4>
+              </a>
+              <a href="../../how-smart-money-moves/tr/" class="related-card">
+                <span class="related-category">Döngüler</span>
+                <h4>Akıllı Para Piyasaları Gerçekte Nasıl Hareket Ettirir</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../tradingview-free-scripts/tr/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Önceki
+              </span>
+              <span class="article-nav-title">TradingView'ın Ücretsiz Scriptler Hakkında Söylemedikleri</span>
+            </a>
+            <a href="../../revenge-trading-recovery/tr/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Sonraki
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">İntikam Tradingı: Nasıl Durulur ve Toparlanılır</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Janus Atlas, günlük, haftalık, aylık, üç aylık ve yıllık dönemler boyunca Hacim Profilini hesaplar - her biri için POC (Kontrol Noktası), VAH (Değer Alanı Yüksek) ve VAL (Değer Alanı Düşük) gösterir. Manuel kurulum gerekmez. Seviyeler bar kapanışında güncellenir ve zaman dilimleri boyunca kurumsal fiyat hafızasını katmanlar.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Hacim yapısını gör →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/tr/">← Blog'a Dön</a><a href="https://signalpilot.io">Ana Sayfa</a><a href="https://docs.signalpilot.io">Dokümantasyon</a><a href="https://education.signalpilot.io">Eğitim Merkezi</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı dön"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume Profile Alapok: Lásd, Hol Történik az Igazi Akció - Signal Pilot Blog</title>
+  <meta name="description" content="A legtöbb kereskedő a volumen oszlopokat figyeli. Az okos kereskedők a volume profile-t figyelik. Így olvashatod le, hol kereskedett valójában az intézményi pénz.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="./">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo">
+          <span class="logo-text">SIGNAL PILOT</span>
+        </a>
+        <nav class="nav"><a href="https://signalpilot.io">Kezdőlap</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatás</a><a href="/hu/" class="active">Blog</a></nav>
+        <div class="header-controls">
+          <div class="translate-wrapper">
+            <button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Fordítás">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div class="translate-dropdown">
+              <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-menu">
+                  <a href="../"><span class="flag">🇬🇧</span> English</a>
+                  <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+                  <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+                  <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+                  <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+                  <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+                  <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+                  <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+                  <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+                  <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+                  <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+                  <a href="./" class="active"><span class="flag">🇭🇺</span> Magyar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Téma váltás">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">Próbáld Ki Ingyen</a>
+          <button class="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/hu/">Blog</a>
+            <span class="breadcrumb-sep">›</span>
+            <a href="/hu/?filter=indicators">Indikátorok</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="breadcrumb-current">Cikk</span>
+          </nav>
+          <span class="article-category">Indikátorok</span>
+          <h1 class="article-title">Volume Profile Alapok: Lásd, Hol Történik az Igazi Akció</h1>
+          <div class="article-meta">
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span>
+            <span>Signal Pilot Csapat</span>
+          </div>
+        <div class="share-buttons">
+            <span class="share-label">Megosztás:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Megosztás Twitteren">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="Megosztás LinkedInen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="Link másolása">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <figure class="hero-image">
+        <img src="../hero.png" alt="Volume profile alapok vizualizáció">
+      </figure>
+
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>A standard volumen oszlopok megmondják, mennyi kereskedés történt egy időszakban. Ez hasznos, de korlátozott.</p>
+          <p>A volume profile megmondja, mennyi kereskedés történt minden egyes árszinten. Ez egy teljesen más - és sokkal gyakorlatiasabb - információ.</p>
+          <p>Így kell olvasni és miért fontos.</p>
+
+          <hr>
+
+          <h2>Mit Mutat a Volume Profile</h2>
+          <p>A gyertyánkénti volumenet mutató függőleges oszlopok helyett a volume profile vízszintes oszlopokat jelenít meg, amelyek az árszintenkénti volumenet mutatják.</p>
+          <p>Gondolj így rá: ha vennéd egy kereskedési munkamenet összes volumenét és ár szerint rendeznéd idő helyett, látnád, hol történt valójában a legtöbb tranzakció.</p>
+          <p>Egyes árak hatalmas volumenet látnak - ezek azok a szintek, ahol a vevők és eladók megegyezésre jutottak és intenzíven kereskedtek. Más árak szinte semmi volumenet nem látnak - az ár gyorsan átment, mert nem volt ott érdeklődés.</p>
+          <p>Ez a megkülönböztetés azért erős, mert felfedi, hol építettek valójában pozíciókat az intézmények.</p>
+
+          <hr>
+
+          <h2>Kulcsfontosságú Volume Profile Fogalmak</h2>
+          <p><strong>Kontroll Pont (POC):</strong> A legmagasabb volumenű árszint. Itt történt a legtöbb kereskedés - a "legigazságosabb" ár, ahol a vevők és eladók maximális megegyezésre jutottak. A POC gyakran mágnesként működik; az ár hajlamos visszatérni hozzá.</p>
+          <p><strong>Értékzóna:</strong> A teljes volumen 70%-át tartalmazó tartomány (tipikusan). Ez képviseli, hol történt az akció nagy része. Az értékzónán belüli ár "fair". A kívül lévő ár felfedezőben van.</p>
+          <p><strong>Értékzóna Magas (VAH):</strong> Az értékzóna felső határa. Gyakran ellenállásként működik, ha alulról közelítik meg.</p>
+          <p><strong>Értékzóna Alacsony (VAL):</strong> Az értékzóna alsó határa. Gyakran támaszként működik, ha felülről közelítik meg.</p>
+          <p><strong>Magas Volumen Csomópontok (HVN):</strong> Jelentős volumen akkumulációval rendelkező árszintek. Ezek támasz/ellenállásként működnek, mert ott sok pozíció lett létrehozva.</p>
+          <p><strong>Alacsony Volumen Csomópontok (LVN):</strong> Minimális volumenű árszintek. Az ár hajlamos gyorsan átmenni ezeken - nincs ott "memória", nincs megvédendő pozíció.</p>
+
+          <hr>
+
+          <h2>Hogyan Kereskedj Volume Profile-lal</h2>
+          <p><strong>Támasz és Ellenállás:</strong> A HVN-ek és a POC támasz/ellenállás szintekként működnek. A chartokra rajzolt önkényes vonalakkal ellentétben ezeknek a szinteknek valódi tranzakciós bizonyíték van mögöttük.</p>
+          <p><strong>Kitörési Célok:</strong> Amikor az ár áttör egy LVN-en, gyakran gyorsan mozog a következő HVN-hez. Az alacsony volumenű területek kevés ellenállást kínálnak - az ár átsiklik, amíg akkumulált pozíciókba nem ütközik.</p>
+          <p><strong>Átlaghoz Visszatérés:</strong> A POC-tól távoli ár hajlamos visszapattanni. A POC a "fair értéket" képviseli, ahol a legtöbb üzlet köttetett. Az onnan távoli kiterjesztett mozgások gyakran fenntarthatatlanok.</p>
+          <p><strong>Trend Megerősítés:</strong> Egészséges trendekben a POC a trend irányába migrál. Ha az ár magasabb csúcsokat ér el, de a POC nem mozog felfelé, a trend gyengülhet - a volumen nem erősíti meg az ármozgást.</p>
+
+          <hr>
+
+          <h2>Volume Profile Típusok</h2>
+          <p><strong>Munkamenet Volume Profile:</strong> Egyetlen kereskedési munkamenet volumeneloszlását mutatja. Napon belüli kereskedőknek hasznos a napközbeni szintek azonosításához.</p>
+          <p><strong>Látható Tartomány (VPVR):</strong> A chartodon látható dolgok volumeneloszlását mutatja. Igazodik, amikor nagyítasz/kicsinyítesz. Jó a nagy kép megtekintéséhez.</p>
+          <p><strong>Fix Tartomány:</strong> Egy általad meghatározott specifikus ár/idő tartomány volumeneloszlását mutatja. Hasznos specifikus mozgások vagy konszolidációk elemzéséhez.</p>
+          <p><strong>Periodikus:</strong> Minden nap/hét/hónap számára külön profilokat mutat. Segít azonosítani, hogyan változnak az értékzónák idővel.</p>
+
+          <hr>
+
+          <h2>Gyakori Volume Profile Felállások</h2>
+          <p><strong>Értékzóna Elutasítás:</strong> Az ár belép az értékzónába, teszteli a POC-ot, és elutasításra kerül. Kereskedj az elutasítás irányában, stopokkal a POC mögött.</p>
+          <p><strong>Értékzóna Kitörés:</strong> Az ár erős volumennel áttöri a VAH fölé vagy a VAL alá. Lépj be a kitörésnél vagy a megtört szint újratesztelésénél. Cél: a következő HVN.</p>
+          <p><strong>POC Mágnes:</strong> A POC-tól távoli ár hajlamos visszatérni. Ha az ár jelentősen a POC felett/alatt van és a momentum gyengül, fontold meg az átlaghoz visszatérést a POC felé.</p>
+          <p><strong>LVN Gyors Futás:</strong> Amikor az ár belép egy LVN-be, várj gyors mozgást a következő HVN-hez. Ezek alacsony ellenállású zónák, ahol az ár ritkán áll meg.</p>
+
+          <hr>
+
+          <h2>Volume Profile Korlátai</h2>
+          <p>A volume profile nem varázslat. Legyél tudatában ezeknek a korlátoknak:</p>
+          <p><strong>Az adatminőség számít:</strong> A volume profile olyan jó, mint az adataid. Különböző adatfolyamok különböző volumeneket mutatnak. Használj konzisztens, minőségi forrásokat.</p>
+          <p><strong>A kontextus még mindig számít:</strong> Egy hat hónappal ezelőtti POC kevésbé fontos, mint a tegnapi. A friss profilok relevánsabbak, mint a régiek.</p>
+          <p><strong>Nem prediktív:</strong> A volume profile megmutatja, hol VOLT a volumen, nem azt, hol LESZ. A múlt térképe, nem kristálygömb.</p>
+          <p><strong>Túlterhelő lehet:</strong> Túl sok profil egy charton zajt hoz létre. Takarékosan és célzottan használd.</p>
+
+          <hr>
+
+          <h2>A Lényeg</h2>
+          <p>A volume profile felfedi, amit a standard chartok elrejtenek: hol kereskedett valójában az intézményi pénz. A POC a fair értéket mutatja. A HVN-ek jelentős szinteket mutatnak. Az LVN-ek gyors utazási zónákat mutatnak.</p>
+          <p>A volume profile még erősebb lesz ciklus tudatossággal kombinálva. Egy POC akkumuláció alatt (amikor a smart money pozíciókat épít) másként viselkedik, mint egy disztribúció alatt. A VWAP szintek szórási sávokkal még egy dimenziót adnak hozzá - nemcsak azt mutatva, hol kereskedett a volumen, hanem hol érzékelték az értéket különböző időhorizontokon.</p>
+          <p>Használd a volume profile-t valódi támasz/ellenállás azonosítására, reális célok kitűzésére és a piac struktúrájának mélyebb szinten való megértésére, mint amit az ár önmagában felfed.</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>Kapcsolódó Cikkek</h3>
+            <div class="related-grid">
+              <a href="../../support-and-resistance-explained/hu/" class="related-card">
+                <span class="related-category">Kezdő</span>
+                <h4>Támasz és Ellenállás Elmagyarázva</h4>
+              </a>
+              <a href="../../accumulation-vs-distribution/hu/" class="related-card">
+                <span class="related-category">Ciklusok</span>
+                <h4>Akkumuláció vs Disztribúció: A Különbség Felismerése</h4>
+              </a>
+              <a href="../../how-smart-money-moves/hu/" class="related-card">
+                <span class="related-category">Ciklusok</span>
+                <h4>Hogyan Mozgatja Valójában a Smart Money a Piacokat</h4>
+              </a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../tradingview-free-scripts/hu/" class="article-nav-link prev">
+              <span class="article-nav-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Előző
+              </span>
+              <span class="article-nav-title">Amit a TradingView Nem Mond El az Ingyenes Scriptekről</span>
+            </a>
+            <a href="../../revenge-trading-recovery/hu/" class="article-nav-link next">
+              <span class="article-nav-label">
+                Következő
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <span class="article-nav-title">Bosszú Kereskedés: Hogyan Állj Le és Épülj Fel</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>A Janus Atlas kiszámítja a Volume Profile-t napi, heti, havi, negyedéves és éves időszakokra - megjelenítve a POC-ot (Kontroll Pont), VAH-t (Értékzóna Magas), és VAL-t (Értékzóna Alacsony) mindegyikhez. Nincs szükség manuális beállításra. A szintek gyertya zárásakor frissülnek és intézményi ármemóriát rétegeznek az időkereteken keresztül.</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">Nézd meg a volumen struktúrát →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/hu/">← Vissza a Bloghoz</a><a href="https://signalpilot.io">Kezdőlap</a><a href="https://docs.signalpilot.io">Dokumentáció</a><a href="https://education.signalpilot.io">Oktatási Központ</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Vissza a tetejére"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn && nav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const isOpen = nav.classList.contains('open');
+        mobileMenuBtn.innerHTML = isOpen
+          ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+          : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
