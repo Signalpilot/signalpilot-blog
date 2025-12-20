@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Marco Temporal: Por Qué Importa Más Que Tu Indicador - Signal Pilot Blog</title>
+  <meta name="description" content="El gráfico de 5 minutos dice comprar. El de 4 horas dice vender. El diario dice esperar. ¿Quién tiene razón? La selección de marco temporal lo cambia todo.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="./">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educación</a><a href="/es/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traducir"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="./" class="active"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prueba Gratis</a>
+      <button class="mobile-menu-btn" aria-label="Menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=practical">Práctico</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
+      <span class="article-category">Práctico</span>
+      <h1 class="article-title">Selección de Marco Temporal: Por Qué Importa Más Que Tu Indicador</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lectura</span><span>Equipo Signal Pilot</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualización de selección de marco temporal"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Mismo indicador. Mismos ajustes. Mismo activo. Resultados completamente diferentes en diferentes marcos temporales.</p>
+      <p>El gráfico de 5 minutos dice comprar. El gráfico de 4 horas dice vender. El gráfico diario dice esperar. ¿Quién tiene razón?</p>
+      <p>La selección de marco temporal es una de las decisiones más subestimadas en el trading. Si te equivocas, incluso el mejor indicador se convierte en ruido.</p>
+      <hr>
+      <h2>La Realidad del Marco Temporal</h2>
+      <p>Cada marco temporal te muestra datos reales. Ninguno está "mintiendo". Pero cada uno muestra diferentes aspectos de la realidad - como mirar el mismo edificio desde diferentes distancias.</p>
+      <p><strong>Los marcos temporales superiores</strong> te muestran el panorama general: tendencias principales, niveles significativos, marcos temporales institucionales. Filtran el ruido pero reaccionan lentamente.</p>
+      <p><strong>Los marcos temporales inferiores</strong> te muestran el detalle: entradas precisas, micro-estructura, acción del precio inmediata. Son responsivos pero ruidosos.</p>
+      <p>Ninguno es "mejor". Son herramientas diferentes para trabajos diferentes.</p>
+      <hr>
+      <h2>El Desajuste de Marco Temporal</h2>
+      <p>La mayor frustración en trading viene del desajuste de marco temporal:</p>
+      <p><strong>Analizar alto, operar bajo.</strong> Ves un setup en el gráfico diario, entras en el de 5 minutos, te sacan por ruido. El setup diario podría seguir siendo válido, pero operaste en un marco temporal demasiado granular para tu tesis.</p>
+      <p><strong>Analizar bajo, mantener alto.</strong> Tomas un scalp en el gráfico de 1 minuto, va en tu contra, cambias a mentalidad de "swing trade" para justificar mantener. Ahora estás manteniendo una operación de micro-estructura en un marco temporal macro.</p>
+      <p><strong>Ignorar los marcos temporales superiores completamente.</strong> Encuentras un hermoso setup largo en el de 15 minutos sin verificar el de 4 horas, que está en una clara tendencia bajista. Tu largo de 15 minutos está luchando contra la corriente mayor.</p>
+      <hr>
+      <h2>Emparejar Marco Temporal con Tipo de Operación</h2>
+      <p><strong>Scalping (segundos a minutos):</strong></p>
+      <ul>
+        <li>Principal: 1 minuto, 5 minutos</li>
+        <li>Contexto: 15 minutos, 30 minutos</li>
+        <li>Objetivo: movimientos pequeños, muchas operaciones</li>
+      </ul>
+      <p><strong>Day trading (horas):</strong></p>
+      <ul>
+        <li>Principal: 15 minutos, 30 minutos</li>
+        <li>Contexto: 1 hora, 4 horas</li>
+        <li>Objetivo: swings intradía</li>
+      </ul>
+      <p><strong>Swing trading (días):</strong></p>
+      <ul>
+        <li>Principal: 4 horas, diario</li>
+        <li>Contexto: semanal</li>
+        <li>Objetivo: movimientos de varios días</li>
+      </ul>
+      <p>Tu marco temporal principal es donde ejecutas. Tu marco temporal de contexto es donde entiendes el panorama general.</p>
+      <hr>
+      <h2>La Jerarquía Multi-Marco Temporal</h2>
+      <p>Aquí está la regla: los marcos temporales superiores dominan a los inferiores.</p>
+      <p>Si el diario está en tendencia bajista, comprar en el de 15 minutos es luchar contra la corriente. Tu largo de 15 minutos podría funcionar, pero la probabilidad está reducida.</p>
+      <p>Aplicación práctica:</p>
+      <ol>
+        <li><strong>Empieza alto.</strong> ¿Cuál es la tendencia semanal? ¿En qué fase del ciclo?</li>
+        <li><strong>Baja un nivel.</strong> ¿El diario confirma?</li>
+        <li><strong>Ve al marco temporal de ejecución.</strong> ¿Hay una entrada que se alinee con los marcos temporales superiores?</li>
+      </ol>
+      <p>Cuando todos los marcos temporales coinciden, tienes alineación. Cuando entran en conflicto, o esperas o operas con convicción reducida.</p>
+      <hr>
+      <h2>El Problema del Deslizamiento de Marco Temporal</h2>
+      <p>Una trampa sutil: cambiar tu marco temporal a mitad de operación.</p>
+      <p>Entras en un day trade en el gráfico de 15 minutos. Va en tu contra. En lugar de tomar el stop, cambias al gráfico de 4 horas donde el setup "se ve bien".</p>
+      <p>Así es como los day trades se convierten en bolsas pesadas.</p>
+      <p>Tu marco temporal se establece en la entrada y no cambia. Si entraste en el de 15 minutos, gestionas en el de 15 minutos. Si ese stop se activa, sales.</p>
+      <hr>
+      <h2>Conclusión</h2>
+      <p>La selección de marco temporal determina si tu análisis es señal o ruido.</p>
+      <p>Empareja tu marco temporal con tu tipo de operación, tu disponibilidad y tu personalidad. Verifica los marcos temporales superiores para contexto. Ejecuta en tu marco temporal principal. Cambiar de marco temporal a mitad de operación típicamente lleva a confusión.</p>
+      <p>Un indicador promedio en el marco temporal correcto supera a un indicador excelente en el equivocado.</p>
+      <p>Algunos sistemas incorporan la consciencia multi-marco temporal directamente: confirmación de régimen HTF que muestra si la estructura diaria o semanal apoya tu señal de marco temporal de entrada, o VWAP multi-período que muestra dónde está el valor en diferentes horizontes. Cuando la herramienta maneja la alineación de marcos temporales internamente, ves si el contexto apoya tu operación sin verificar manualmente múltiples gráficos.</p>
+      <hr>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
+        <a href="../../multi-timeframe-confirmation/es/" class="related-card"><span class="related-category">Indicadores</span><h4>Confirmación Multi-Marco Temporal: Cuándo Usarla</h4></a>
+        <a href="../../cycles-within-cycles/es/" class="related-card"><span class="related-category">Ciclos</span><h4>Ciclos Dentro de Ciclos: Estructura Multi-Marco Temporal</h4></a>
+      </div></section>
+      <div class="cta-box"><p>El análisis de ciclos de Pentarch funciona en múltiples marcos temporales - pero su fortaleza es ayudarte a ver dónde estás en la estructura mayor para que tus entradas en marcos temporales inferiores se alineen con la dirección de marcos temporales superiores.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Obtén el contexto que importa →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/es/">← Volver al Blog</a><a href="https://signalpilot.io">Inicio</a><a href="https://docs.signalpilot.io">Documentación</a><a href="https://education.signalpilot.io">Centro Educativo</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Todos los derechos reservados.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

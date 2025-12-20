@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selezione del Timeframe: Perché Conta Più del Tuo Indicatore - Signal Pilot Blog</title>
+  <meta name="description" content="Il grafico a 5 minuti dice compra. Il 4 ore dice vendi. Il giornaliero dice aspetta. Chi ha ragione? La selezione del timeframe cambia tutto.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="../fr/">
+  <link rel="alternate" hreflang="it" href="./">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Educazione</a><a href="/it/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="../fr/"><span class="flag">🇫🇷</span> Français</a>
+          <a href="./" class="active"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Prova Gratis</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=practical">Pratico</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
+      <span class="article-category">Pratico</span>
+      <h1 class="article-title">Selezione del Timeframe: Perché Conta Più del Tuo Indicatore</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min di lettura</span><span>Team Signal Pilot</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualizzazione selezione timeframe"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Stesso indicatore. Stesse impostazioni. Stesso asset. Risultati completamente diversi su timeframe diversi.</p>
+      <p>Il grafico a 5 minuti dice compra. Il grafico a 4 ore dice vendi. Il grafico giornaliero dice aspetta. Chi ha ragione?</p>
+      <p>La selezione del timeframe è una delle decisioni più sottovalutate nel trading. Se sbagli, anche il miglior indicatore diventa rumore.</p>
+      <hr>
+      <h2>La Realtà del Timeframe</h2>
+      <p>Ogni timeframe ti mostra dati reali. Nessuno sta "mentendo". Ma ognuno mostra aspetti diversi della realtà - come guardare lo stesso edificio da distanze diverse.</p>
+      <p><strong>I timeframe superiori</strong> ti mostrano il quadro generale: trend principali, livelli significativi, timeframe istituzionali. Filtrano il rumore ma reagiscono lentamente.</p>
+      <p><strong>I timeframe inferiori</strong> ti mostrano i dettagli: entrate precise, micro-struttura, price action immediata. Sono reattivi ma rumorosi.</p>
+      <p>Nessuno è "migliore". Sono strumenti diversi per lavori diversi.</p>
+      <hr>
+      <h2>Il Disallineamento del Timeframe</h2>
+      <p>La maggior parte della frustrazione nel trading viene dal disallineamento del timeframe:</p>
+      <p><strong>Analizzare alto, tradare basso.</strong> Vedi un setup sul grafico giornaliero, entri sul 5 minuti, vieni stoppato dal rumore. Il setup giornaliero potrebbe essere ancora valido, ma hai tradato su un timeframe troppo granulare per la tua tesi.</p>
+      <p><strong>Analizzare basso, tenere alto.</strong> Prendi uno scalp sul grafico a 1 minuto, va contro di te, passi a una mentalità da "swing trade" per giustificare il mantenimento. Ora stai tenendo un trade di micro-struttura su un timeframe macro.</p>
+      <p><strong>Ignorare completamente i timeframe superiori.</strong> Trovi un bel setup long sul 15 minuti senza controllare il 4 ore, che è in un chiaro downtrend. Il tuo long sul 15 minuti sta combattendo contro la corrente maggiore.</p>
+      <hr>
+      <h2>Abbinare il Timeframe al Tipo di Trade</h2>
+      <p><strong>Scalping (secondi a minuti):</strong></p>
+      <ul>
+        <li>Principale: 1 minuto, 5 minuti</li>
+        <li>Contesto: 15 minuti, 30 minuti</li>
+        <li>Obiettivo: movimenti piccoli, molti trade</li>
+      </ul>
+      <p><strong>Day trading (ore):</strong></p>
+      <ul>
+        <li>Principale: 15 minuti, 30 minuti</li>
+        <li>Contesto: 1 ora, 4 ore</li>
+        <li>Obiettivo: swing intraday</li>
+      </ul>
+      <p><strong>Swing trading (giorni):</strong></p>
+      <ul>
+        <li>Principale: 4 ore, giornaliero</li>
+        <li>Contesto: settimanale</li>
+        <li>Obiettivo: movimenti multi-giorno</li>
+      </ul>
+      <p>Il tuo timeframe principale è dove esegui. Il tuo timeframe di contesto è dove comprendi il quadro generale.</p>
+      <hr>
+      <h2>La Gerarchia Multi-Timeframe</h2>
+      <p>Ecco la regola: i timeframe superiori dominano i timeframe inferiori.</p>
+      <p>Se il giornaliero è in downtrend, comprare sul 15 minuti è nuotare contro corrente. Il tuo long sul 15 minuti potrebbe funzionare, ma la probabilità è ridotta.</p>
+      <p>Applicazione pratica:</p>
+      <ol>
+        <li><strong>Inizia alto.</strong> Qual è il trend settimanale? Che fase del ciclo?</li>
+        <li><strong>Scendi di un livello.</strong> Il giornaliero conferma?</li>
+        <li><strong>Vai al timeframe di esecuzione.</strong> C'è un'entrata che si allinea con i timeframe superiori?</li>
+      </ol>
+      <p>Quando tutti i timeframe concordano, hai allineamento. Quando sono in conflitto, o aspetti o tradi con convinzione ridotta.</p>
+      <hr>
+      <h2>Il Problema dello Slittamento del Timeframe</h2>
+      <p>Una trappola sottile: cambiare il tuo timeframe a metà trade.</p>
+      <p>Entri in un day trade sul grafico a 15 minuti. Va contro di te. Invece di prendere lo stop, passi al grafico a 4 ore dove il setup "sembra buono".</p>
+      <p>È così che i day trade diventano posizioni bloccate.</p>
+      <p>Il tuo timeframe viene fissato all'entrata e non cambia. Se sei entrato sul 15 minuti, gestisci sul 15 minuti. Se quello stop viene colpito, esci.</p>
+      <hr>
+      <h2>Conclusione</h2>
+      <p>La selezione del timeframe determina se la tua analisi è segnale o rumore.</p>
+      <p>Abbina il tuo timeframe al tipo di trade, alla tua disponibilità e alla tua personalità. Controlla i timeframe superiori per il contesto. Esegui sul tuo timeframe principale. Cambiare timeframe a metà trade tipicamente porta a confusione.</p>
+      <p>Un indicatore medio sul timeframe giusto batte un indicatore eccellente su quello sbagliato.</p>
+      <p>Alcuni sistemi integrano direttamente la consapevolezza multi-timeframe: conferma del regime HTF che mostra se la struttura giornaliera o settimanale supporta il tuo segnale del timeframe di entrata, o VWAP multi-periodo che mostra dove si trova il valore su diversi orizzonti. Quando lo strumento gestisce l'allineamento dei timeframe internamente, vedi se il contesto supporta il tuo trade senza controllare manualmente più grafici.</p>
+      <hr>
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
+        <a href="../../multi-timeframe-confirmation/it/" class="related-card"><span class="related-category">Indicatori</span><h4>Conferma Multi-Timeframe: Quando Usarla</h4></a>
+        <a href="../../cycles-within-cycles/it/" class="related-card"><span class="related-category">Cicli</span><h4>Cicli nei Cicli: Struttura Multi-Timeframe</h4></a>
+      </div></section>
+      <div class="cta-box"><p>L'analisi dei cicli di Pentarch funziona su più timeframe - ma la sua forza è aiutarti a vedere dove sei nella struttura più ampia così che le tue entrate su timeframe inferiori si allineino con la direzione dei timeframe superiori.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ottieni il contesto che conta →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/it/">← Torna al Blog</a><a href="https://signalpilot.io">Home</a><a href="https://docs.signalpilot.io">Documentazione</a><a href="https://education.signalpilot.io">Centro Educativo</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Tutti i diritti riservati.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Torna su"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>

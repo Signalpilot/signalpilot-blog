@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sélection de l'Unité de Temps : Pourquoi C'est Plus Important Que Votre Indicateur - Signal Pilot Blog</title>
+  <meta name="description" content="Le graphique 5 minutes dit acheter. Le 4 heures dit vendre. Le journalier dit attendre. Qui a raison ? La sélection de l'unité de temps change tout.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="https://signalpilot.io/favicon.ico">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="fr" href="./">
+  <link rel="alternate" hreflang="it" href="../it/">
+  <link rel="alternate" hreflang="pt" href="../pt/">
+  <link rel="alternate" hreflang="nl" href="../nl/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="ja" href="../ja/">
+  <link rel="alternate" hreflang="ar" href="../ar/">
+  <link rel="alternate" hreflang="tr" href="../tr/">
+  <link rel="alternate" hreflang="hu" href="../hu/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/blog.css">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <div class="reading-progress" id="progress"></div>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+    <nav class="nav"><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Docs</a><a href="https://education.signalpilot.io">Éducation</a><a href="/fr/" class="active">Blog</a></nav>
+    <div class="header-controls">
+      <div class="translate-wrapper"><button class="translate-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Traduire"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <div class="translate-dropdown"><div class="lang-dropdown"><div class="lang-menu">
+          <a href="../"><span class="flag">🇬🇧</span> English</a>
+          <a href="../es/"><span class="flag">🇪🇸</span> Español</a>
+          <a href="../de/"><span class="flag">🇩🇪</span> Deutsch</a>
+          <a href="./" class="active"><span class="flag">🇫🇷</span> Français</a>
+          <a href="../it/"><span class="flag">🇮🇹</span> Italiano</a>
+          <a href="../pt/"><span class="flag">🇧🇷</span> Português</a>
+          <a href="../nl/"><span class="flag">🇳🇱</span> Nederlands</a>
+          <a href="../ru/"><span class="flag">🇷🇺</span> Русский</a>
+          <a href="../ja/"><span class="flag">🇯🇵</span> 日本語</a>
+          <a href="../ar/"><span class="flag">🇸🇦</span> العربية</a>
+          <a href="../tr/"><span class="flag">🇹🇷</span> Türkçe</a>
+          <a href="../hu/"><span class="flag">🇭🇺</span> Magyar</a>
+        </div></div></div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Thème"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="https://signalpilot.io/#trial" class="btn btn-primary">Essai Gratuit</a>
+      <button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div></div></header>
+  <main><article>
+    <header class="article-header"><div class="container-narrow">
+      <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=practical">Pratique</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
+      <span class="article-category">Pratique</span>
+      <h1 class="article-title">Sélection de l'Unité de Temps : Pourquoi C'est Plus Important Que Votre Indicateur</h1>
+      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lecture</span><span>Équipe Signal Pilot</span></div>
+    </div></header>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualisation de la sélection d'unité de temps"></figure>
+    <div class="article-content"><div class="container-narrow">
+      <p>Même indicateur. Mêmes paramètres. Même actif. Résultats complètement différents sur différentes unités de temps.</p>
+      <p>Le graphique 5 minutes dit acheter. Le graphique 4 heures dit vendre. Le graphique journalier dit attendre. Qui a raison ?</p>
+      <p>La sélection de l'unité de temps est l'une des décisions les plus sous-estimées en trading. Si vous vous trompez, même le meilleur indicateur devient du bruit.</p>
+      <hr>
+      <h2>La Réalité des Unités de Temps</h2>
+      <p>Chaque unité de temps vous montre des données réelles. Aucune ne "ment". Mais chacune montre différents aspects de la réalité - comme regarder le même bâtiment depuis différentes distances.</p>
+      <p><strong>Les unités de temps supérieures</strong> vous montrent la vue d'ensemble : tendances majeures, niveaux significatifs, unités de temps institutionnelles. Elles filtrent le bruit mais réagissent lentement.</p>
+      <p><strong>Les unités de temps inférieures</strong> vous montrent le détail : entrées précises, micro-structure, action du prix immédiate. Elles sont réactives mais bruyantes.</p>
+      <p>Aucune n'est "meilleure". Ce sont des outils différents pour des tâches différentes.</p>
+      <hr>
+      <h2>Le Décalage d'Unité de Temps</h2>
+      <p>La plupart des frustrations en trading viennent du décalage d'unité de temps :</p>
+      <p><strong>Analyser haut, trader bas.</strong> Vous voyez un setup sur le graphique journalier, entrez sur le 5 minutes, vous faites sortir par le bruit. Le setup journalier pourrait encore être valide, mais vous avez tradé sur une unité de temps trop granulaire pour votre thèse.</p>
+      <p><strong>Analyser bas, tenir haut.</strong> Vous prenez un scalp sur le graphique 1 minute, ça va contre vous, vous passez à une mentalité de "swing trade" pour justifier de tenir. Maintenant vous tenez un trade de micro-structure sur une unité de temps macro.</p>
+      <p><strong>Ignorer complètement les unités de temps supérieures.</strong> Vous trouvez un beau setup long sur le 15 minutes sans vérifier le 4 heures, qui est dans une tendance baissière claire. Votre long 15 minutes lutte contre le courant plus large.</p>
+      <hr>
+      <h2>Faire Correspondre l'Unité de Temps au Type de Trade</h2>
+      <p><strong>Scalping (secondes à minutes) :</strong></p>
+      <ul>
+        <li>Principal : 1 minute, 5 minutes</li>
+        <li>Contexte : 15 minutes, 30 minutes</li>
+        <li>Objectif : petits mouvements, beaucoup de trades</li>
+      </ul>
+      <p><strong>Day trading (heures) :</strong></p>
+      <ul>
+        <li>Principal : 15 minutes, 30 minutes</li>
+        <li>Contexte : 1 heure, 4 heures</li>
+        <li>Objectif : swings intraday</li>
+      </ul>
+      <p><strong>Swing trading (jours) :</strong></p>
+      <ul>
+        <li>Principal : 4 heures, journalier</li>
+        <li>Contexte : hebdomadaire</li>
+        <li>Objectif : mouvements sur plusieurs jours</li>
+      </ul>
+      <p>Votre unité de temps principale est celle où vous exécutez. Votre unité de temps de contexte est celle où vous comprenez la vue d'ensemble.</p>
+      <hr>
+      <h2>La Hiérarchie Multi-Unités de Temps</h2>
+      <p>Voici la règle : les unités de temps supérieures dominent les unités de temps inférieures.</p>
+      <p>Si le journalier est en tendance baissière, acheter sur le 15 minutes c'est nager contre le courant. Votre long 15 minutes pourrait fonctionner, mais la probabilité est réduite.</p>
+      <p>Application pratique :</p>
+      <ol>
+        <li><strong>Commencez haut.</strong> Quelle est la tendance hebdomadaire ? Quelle phase du cycle ?</li>
+        <li><strong>Descendez d'un niveau.</strong> Le journalier confirme-t-il ?</li>
+        <li><strong>Allez à l'unité de temps d'exécution.</strong> Y a-t-il une entrée qui s'aligne avec les unités de temps supérieures ?</li>
+      </ol>
+      <p>Quand toutes les unités de temps sont d'accord, vous avez un alignement. Quand elles sont en conflit, soit vous attendez, soit vous tradez avec une conviction réduite.</p>
+      <hr>
+      <h2>Le Problème de Glissement d'Unité de Temps</h2>
+      <p>Un piège subtil : changer votre unité de temps en cours de trade.</p>
+      <p>Vous entrez dans un day trade sur le graphique 15 minutes. Ça va contre vous. Au lieu de prendre le stop, vous passez au graphique 4 heures où le setup "a l'air bien".</p>
+      <p>C'est comme ça que les day trades deviennent des positions coincées.</p>
+      <p>Votre unité de temps est fixée à l'entrée et ne change pas. Si vous êtes entré sur le 15 minutes, vous gérez sur le 15 minutes. Si ce stop est touché, vous sortez.</p>
+      <hr>
+      <h2>Conclusion</h2>
+      <p>La sélection de l'unité de temps détermine si votre analyse est signal ou bruit.</p>
+      <p>Faites correspondre votre unité de temps à votre type de trade, votre disponibilité et votre personnalité. Vérifiez les unités de temps supérieures pour le contexte. Exécutez sur votre unité de temps principale. Changer d'unité de temps en cours de trade mène typiquement à la confusion.</p>
+      <p>Un indicateur moyen sur la bonne unité de temps bat un excellent indicateur sur la mauvaise.</p>
+      <p>Certains systèmes intègrent directement la conscience multi-unités de temps : confirmation de régime HTF montrant si la structure journalière ou hebdomadaire soutient votre signal d'unité de temps d'entrée, ou VWAP multi-périodes affichant où se situe la valeur sur différents horizons. Quand l'outil gère l'alignement des unités de temps en interne, vous voyez si le contexte soutient votre trade sans vérifier manuellement plusieurs graphiques.</p>
+      <hr>
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
+        <a href="../../multi-timeframe-confirmation/fr/" class="related-card"><span class="related-category">Indicateurs</span><h4>Confirmation Multi-Unités de Temps : Quand l'Utiliser</h4></a>
+        <a href="../../cycles-within-cycles/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Cycles dans les Cycles : Structure Multi-Unités de Temps</h4></a>
+      </div></section>
+      <div class="cta-box"><p>L'analyse de cycles de Pentarch fonctionne sur plusieurs unités de temps - mais sa force est de vous aider à voir où vous êtes dans la structure plus large pour que vos entrées sur des unités de temps inférieures s'alignent avec la direction des unités de temps supérieures.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Obtenez le contexte qui compte →</a></div>
+    </div></div>
+  </article></main>
+  <footer class="footer"><div class="container">
+    <div class="footer-links"><a href="/fr/">← Retour au Blog</a><a href="https://signalpilot.io">Accueil</a><a href="https://docs.signalpilot.io">Documentation</a><a href="https://education.signalpilot.io">Centre Éducatif</a></div>
+    <p class="footer-copy">&copy; 2025 Signal Pilot. Tous droits réservés.</p>
+  </div></footer>
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}</script>
+</body>
+</html>
