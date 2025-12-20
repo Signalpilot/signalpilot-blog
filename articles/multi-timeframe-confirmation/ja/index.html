@@ -28,83 +28,185 @@
 <body>
   <div class="bg-aurora"></div>
   <div class="reading-progress" id="progress"></div>
-  <header class="header"><div class="container"><div class="header-inner">
-    <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
-    <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/ja/" class="active">ブログ</a></nav>
-    <div class="header-controls">
-      
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料お試し</a>
-      <button class="mobile-menu-btn" aria-label="メニュー"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
+        <nav class="nav"><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育</a><a href="/ja/" class="active">ブログ</a></nav>
+        <div class="header-controls">
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="テーマ切替">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="https://signalpilot.io/#trial" class="btn btn-primary">無料お試し</a>
+          <button class="mobile-menu-btn" aria-label="メニュー"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+      </div>
     </div>
-  </div></div></header>
+  </header>
 
-  <main><article>
-    <header class="article-header"><div class="container-narrow">
-      <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=indicators">インジケーター</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category">インジケーター</span>
-      <h1 class="article-title">マルチタイムフレーム確認：トレンドと戦うのをやめる方法</h1>
-      <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span><span>Signal Pilot チーム</span></div>
-    </div></header>
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container-narrow">
+          <nav class="breadcrumbs" aria-label="パンくず"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=indicators">インジケーター</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
+          <span class="article-category">インジケーター</span>
+          <h1 class="article-title">マルチタイムフレーム確認：トレンドと戦うのをやめる方法</h1>
+          <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span><span>Signal Pilot チーム</span></div>
+          <div class="share-buttons">
+            <span class="share-label">共有:</span>
+            <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitterで共有"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="LinkedInで共有"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="リンクをコピー"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          </div>
+        </div>
+      </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="マルチタイムフレーム確認の視覚化"></figure>
+      <figure class="hero-image"><img src="../hero.png" alt="マルチタイムフレーム確認の視覚化" data-ai-prompt="ダークテーマの視覚化で、異なるタイムフレームを表す3つの重なったチャートと整合インジケーター。"><figcaption class="ai-prompt">ダークテーマの視覚化で、異なるタイムフレームを表す3つの重なったチャートと整合インジケーター。</figcaption></figure>
 
-    <div class="article-content"><div class="container-narrow">
-      <p>15分足で素敵なセットアップが見えます。すべてのインジケーターが揃っています。ロングでエントリー。2時間後、価格が急落する中でストップアウト。何が起きたのでしょうか？</p>
-      <p>日足の下降トレンドの中で買っていたのです。15分足のセットアップは、より大きな下落の中の小さな押し目に過ぎませんでした。</p>
-      <hr>
-      <h2>タイムフレームの階層</h2>
-      <p>上位タイムフレームは常に勝ちます。常に。</p>
-      <p>日足の下降トレンド内の5分足の上昇トレンドは、単なる押し目です。日足のトレンドは最終的に再び主張します。</p>
-      <p>これを指揮系統として考えてください：</p>
-      <ul>
-        <li><strong>戦略的タイムフレーム：</strong> 全体的なバイアスを設定</li>
-        <li><strong>戦術的タイムフレーム：</strong> 戦略的バイアスの方向でトレードセットアップを特定</li>
-        <li><strong>執行タイムフレーム：</strong> エントリーとストップを精緻化</li>
-      </ul>
-      <hr>
-      <h2>3タイムフレームアプローチ</h2>
-      <p><strong>デイトレード：</strong> 日足（戦略的）→ 1時間足（戦術的）→ 15分足（執行）</p>
-      <p><strong>スイングトレード：</strong> 週足（戦略的）→ 日足（戦術的）→ 4時間足（執行）</p>
-      <hr>
-      <h2>適用方法</h2>
-      <p><strong>ステップ1：</strong> 戦略的タイムフレームを確認。トレンドは何か？これがバイアスを決定します。</p>
-      <p><strong>ステップ2：</strong> 戦術的タイムフレームでセットアップを見つける。戦略的バイアスの方向のみ。</p>
-      <p><strong>ステップ3：</strong> 下位タイムフレームで執行。精密なエントリーのために。</p>
-      <hr>
-      <h2>タイムフレームが矛盾する時</h2>
-      <p><strong>ルール1：</strong> 上位タイムフレームが勝つ。</p>
-      <p><strong>ルール2：</strong> 矛盾するタイムフレーム = サイズを縮小。</p>
-      <p><strong>ルール3：</strong> 整合を待つ。最高のトレードはすべてのタイムフレームが一致した時に起こる。</p>
-      <hr>
-      <h2>要点</h2>
-      <p>マルチタイムフレーム分析は複雑ではありません：上位タイムフレームが方向を決め、下位がエントリーを提供します。3つのタイムフレームを使用。上から下へ分析。整合した時だけトレード。</p>
-      <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
-        <a href="../../timeframe-selection/ja/" class="related-card"><span class="related-category">実践</span><h4>タイムフレーム選択</h4></a>
-        <a href="../../the-confirmation-trap/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>確認の罠</h4></a>
-        <a href="../../cycle-failures-and-what-they-mean/ja/" class="related-card"><span class="related-category">サイクル</span><h4>サイクル失敗とその意味</h4></a>
-      </div></section>
-      <nav class="article-nav">
-        <a href="../../trade-journaling-that-works/ja/" class="article-nav-link prev">
-          <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 前へ</span>
-          <span class="article-nav-title">機能するトレード日誌：何を記録し、なぜか</span>
-        </a>
-        <a href="../../the-boredom-trap/ja/" class="article-nav-link next">
-          <span class="article-nav-label">次へ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          <span class="article-nav-title">退屈の罠：優れたトレーダーが待つ理由</span>
-        </a>
-      </nav>
-      <div class="cta-box"><p><strong>Volume OracleにはHTF確認機能があり、日足/週足のレジームがトレーディングタイムフレームのシグナルと一致しているかを表示します。</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">タイムフレーム整合を見る →</a></div>
-    </div></div>
-  </article></main>
+      <div class="article-content">
+        <div class="container-narrow">
+          <p>15分足で素敵なセットアップが見えます。すべてのインジケーターが揃っています。ロングでエントリー。</p>
+          <p>2時間後、価格が急落する中でストップアウト。何が起きたのでしょうか？</p>
+          <p>日足の下降トレンドの中で買っていたのです。15分足のセットアップは、より大きな下落の中の小さな押し目に過ぎませんでした。支配的な流れに逆らってトレードしていたのです。</p>
+          <p>マルチタイムフレーム分析がこれを防ぎます。正しいやり方を紹介します。</p>
 
-  <footer class="footer"><div class="container">
-    <div class="footer-links"><a href="/ja/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育センター</a></div>
-    <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
-  </div></footer>
+          <hr>
+
+          <h2>タイムフレームの階層</h2>
+          <p>上位タイムフレームは常に勝ちます。常に。</p>
+          <p>日足の下降トレンド内の5分足の上昇トレンドは、単なる押し目です。日足のトレンドは最終的に再び主張します。5分足で日足に逆らってトレードするのは、流れに逆らって泳ぐようなものです。</p>
+          <p>これは下位タイムフレームが役に立たないという意味ではありません - 精密なエントリーを見つける場所です。しかし、上位タイムフレームの方向と一致する必要があり、それに逆らってはいけません。</p>
+          <p>これを指揮系統として考えてください：</p>
+          <ul>
+            <li><strong>戦略的タイムフレーム：</strong> 全体的なバイアスを設定（スイングトレーダーは日足/週足、デイトレーダーは4時間/日足）</li>
+            <li><strong>戦術的タイムフレーム：</strong> 戦略的バイアスの方向でトレードセットアップを特定</li>
+            <li><strong>執行タイムフレーム：</strong> エントリーとストップを精緻化</li>
+          </ul>
+
+          <hr>
+
+          <h2>3タイムフレームアプローチ</h2>
+          <p>ほとんどのトレーダーは、約4-6倍の比率の3つのタイムフレームで良い結果を得ています：</p>
+          <p><strong>例1 - スイングトレード：</strong></p>
+          <ul>
+            <li>週足（戦略的）- 全体的なトレンド方向</li>
+            <li>日足（戦術的）- トレードセットアップ</li>
+            <li>4時間足（執行）- エントリータイミング</li>
+          </ul>
+          <p><strong>例2 - デイトレード：</strong></p>
+          <ul>
+            <li>日足（戦略的）- 全体的なトレンド方向</li>
+            <li>1時間足（戦術的）- トレードセットアップ</li>
+            <li>15分足（執行）- エントリータイミング</li>
+          </ul>
+          <p><strong>例3 - スキャルピング：</strong></p>
+          <ul>
+            <li>1時間足（戦略的）- 全体的なトレンド方向</li>
+            <li>15分足（戦術的）- トレードセットアップ</li>
+            <li>5分足（執行）- エントリータイミング</li>
+          </ul>
+
+          <hr>
+
+          <h2>適用方法</h2>
+          <p><strong>ステップ1：戦略的タイムフレームを確認。</strong> トレンドは何か？上昇、下降、それともレンジ？これがバイアスを決定します。この方向でのみトレードを取ります。</p>
+          <p><strong>ステップ2：戦術的タイムフレームでセットアップを見つける。</strong> エントリー基準を探します - インジケーターシグナル、パターン完成、レベルテスト - ただし戦略的バイアスの方向のみ。</p>
+          <p><strong>ステップ3：下位タイムフレームで執行。</strong> セットアップができたら、執行タイムフレームに降りて精密なエントリーを行います。これはトレードの前提を変えずにリスク/リワードを最適化します。</p>
+          <p><strong>例：</strong> 日足が上昇トレンド。4時間足はサポートへの押し目と強気のダイバージェンスを示す。1時間足はそのサポートで反転ローソクを示す。1時間のシグナルでロングエントリー、日足トレンドを味方につけて。</p>
+
+          <hr>
+
+          <h2>タイムフレームが矛盾する時</h2>
+          <p>時々、タイムフレームは一致しません。日足は上昇、週足は下降。4時間は強気、日足は弱気。</p>
+          <p><strong>ルール1：</strong> 上位タイムフレームが勝つ。週足が下降で日足が上昇なら、日足の動きは週足の下降トレンドの中の調整である可能性が高い。慎重にトレードするか、まったくトレードしない。</p>
+          <p><strong>ルール2：</strong> 矛盾するタイムフレーム = サイズを縮小。矛盾中にトレードしなければならない場合は、ポジションサイズを縮小。不確実性は現実です。</p>
+          <p><strong>ルール3：</strong> 整合を待つ。最高のトレードはすべてのタイムフレームが一致した時に起こります。忍耐は報われます。</p>
+          <p><strong>ルール4：</strong> レンジは矛盾とみなす。上位タイムフレームがレンジ内なら、明確なバイアスはありません。レンジをトレードするか、解決を待ちます。</p>
+
+          <hr>
+
+          <h2>よくある間違い</h2>
+          <p><strong>タイムフレーム間を飛び回る。</strong> 4時間足でトレードする予定が、緊張すると5分足に降りてしまう。突然、ノイズを管理していて、計画に従っていない。タイムフレームを選んで守りましょう。</p>
+          <p><strong>タイムフレームが多すぎる。</strong> 7つの異なるチャートを確認すると、明確さではなく混乱が生まれます。3つが通常最適です。それ以上はノイズ。</p>
+          <p><strong>戦略的レベルを無視する。</strong> エントリータイムフレームに集中しすぎて、全体的なコンテキストを忘れる。大局が何を言っているか常に把握しましょう。</p>
+          <p><strong>トレンドと戦う。</strong> 下位タイムフレームで反転シグナルを見て、上位タイムフレームのトレンドに逆らってそれを取る。これらのトレードは、エントリータイムフレームで完璧に見えても低確率です。</p>
+
+          <hr>
+
+          <h2>実践的なヒント</h2>
+          <p><strong>上から下へ始める。</strong> 最高のタイムフレームから最低へ分析、逆ではなく。エントリーの前にコンテキスト。</p>
+          <p><strong>上位タイムフレームの主要レベルをマークする。</strong> 日足のサポート/レジスタンスはイントラデイチャートで見えるべき。これらのレベルはイントラデイレベルより重要。</p>
+          <p><strong>上位タイムフレームのトレンド状態を記録する。</strong> 各セッションの前に書く：「日足トレンド：[上昇/下降/レンジ]。[ロング/ショート/両方]のみ取る。」</p>
+          <p><strong>すべてのタイムフレームで同じインジケーター設定を使う。</strong> 日足でRSI(14)を使うなら、4時間と1時間でもRSI(14)を使う。一貫性がパターン認識を助けます。</p>
+
+          <hr>
+
+          <h2>整合のスイートスポット</h2>
+          <p>最も確率の高いトレードは次の時に起こります：</p>
+          <ul>
+            <li>戦略的タイムフレームが明確なトレンドを示す</li>
+            <li>戦術的タイムフレームがトレンド方向のサポート/レジスタンスへの押し目を示す</li>
+            <li>執行タイムフレームが反転シグナルを示す</li>
+          </ul>
+          <p>これがスイートスポットです：トレンドに沿って、良い価格で、精密なエントリータイミングでトレードしています。</p>
+          <p>これらの整合を待ちましょう。毎日起こるわけではありませんが、待つ価値があります。</p>
+
+          <hr>
+
+          <h2>要点</h2>
+          <p>マルチタイムフレーム分析は複雑ではありません：上位タイムフレームが方向を決め、下位がエントリーを提供します。大きなチャートのトレンドは最終的に常に勝ちます。</p>
+          <p>3つのタイムフレームを使用。上から下へ分析。整合した時だけトレード。支配的な流れと戦うのをやめるだけで、勝率は向上します。</p>
+          <p>一部のシステムは、HTF確認を直接シグナルに組み込んでいます - トレーディングタイムフレームでアラートを生成する前に、日足または週足のレジームが一致しているか確認します。他のシステムは、上位タイムフレームのピボット、セッションレベル、マルチピリオドVWAPを同時に表示し、エントリーが大局で重要なレベルで起こっているかどうかを確認できます。原則は同じです：エントリーの前にコンテキスト。</p>
+
+          <hr>
+
+          <section class="related-articles">
+            <h3>関連記事</h3>
+            <div class="related-grid">
+              <a href="../../timeframe-selection/ja/" class="related-card"><span class="related-category">実践</span><h4>タイムフレーム選択：あなたのスタイルを見つける</h4></a>
+              <a href="../../the-confirmation-trap/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>確認の罠：より多くのインジケーターがあなたを悪化させる時</h4></a>
+              <a href="../../cycle-failures-and-what-they-mean/ja/" class="related-card"><span class="related-category">サイクル</span><h4>サイクル失敗とその意味</h4></a>
+            </div>
+          </section>
+
+          <nav class="article-nav">
+            <a href="../../trade-journaling-that-works/ja/" class="article-nav-link prev">
+              <span class="article-nav-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> 前へ</span>
+              <span class="article-nav-title">機能するトレード日誌：何を記録し、なぜか</span>
+            </a>
+            <a href="../../the-boredom-trap/ja/" class="article-nav-link next">
+              <span class="article-nav-label">次へ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <span class="article-nav-title">退屈の罠：何もしないことがしばしば正しいトレードである理由</span>
+            </a>
+          </nav>
+
+          <div class="cta-box">
+            <p>Volume OracleにはHTF確認機能があり、日足/週足のレジームがトレーディングタイムフレームのシグナルと一致しているかを表示します。Janus Atlasは上位タイムフレームのピボット、セッションレベル、マルチピリオドVWAPを同時に表示します。Augury Gridの5ポイントスコアリングには、検証フィルターとしてHTF整合が含まれています。</p>
+            <a href="https://signalpilot.io/#trial" class="btn btn-primary">タイムフレーム整合を見る →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links"><a href="/ja/">← ブログに戻る</a><a href="https://signalpilot.io">ホーム</a><a href="https://docs.signalpilot.io">ドキュメント</a><a href="https://education.signalpilot.io">教育センター</a></div>
+      <p class="footer-copy">&copy; 2025 Signal Pilot. All rights reserved.</p>
+    </div>
+  </footer>
 
   <button class="back-to-top" id="backToTop" aria-label="トップへ戻る"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+
+  <script>
+    function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}
+    const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
+    window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
+    document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+    const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');const isOpen=nav.classList.contains('open');mobileMenuBtn.innerHTML=isOpen?'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>':'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});nav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{nav.classList.remove('open');mobileMenuBtn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});});}
+    document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+  </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>كيفية تداول الدورات مع Pentarch: دليل عملي - Signal Pilot Blog</title>
-  <meta name="description" content="دليل خطوة بخطوة لاستخدام Pentarch في التداول القائم على الدورات.">
+  <meta name="description" content="دليل خطوة بخطوة لاستخدام Pentarch في التداول القائم على الدورات. تعلم تحديد المراحل، توقيت الدخول، ودمج تحليل الدورات مع مجموعة Signal Pilot الكاملة.">
   <meta name="theme-color" content="#05070d">
   <link rel="icon" href="https://signalpilot.io/favicon.ico">
   <link rel="alternate" hreflang="en" href="../">
@@ -32,8 +32,7 @@
     <a href="https://signalpilot.io" class="logo"><span class="logo-text">SIGNAL PILOT</span></a>
     <nav class="nav"><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">المستندات</a><a href="https://education.signalpilot.io">التعليم</a><a href="/ar/" class="active">المدونة</a></nav>
     <div class="header-controls">
-      
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="السمة"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل السمة"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
       <a href="https://signalpilot.io/#trial" class="btn btn-primary">تجربة مجانية</a>
       <button class="mobile-menu-btn" aria-label="القائمة"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     </div>
@@ -45,32 +44,187 @@
       <span class="article-category">المنتج</span>
       <h1 class="article-title">كيفية تداول الدورات مع Pentarch: دليل عملي</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 دقائق للقراءة</span><span>فريق Signal Pilot</span></div>
+      <div class="share-buttons">
+        <span class="share-label">مشاركة:</span>
+        <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="مشاركة على Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;" aria-label="مشاركة على LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),2000);return false;" aria-label="نسخ الرابط"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+      </div>
     </div></header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="خمس مراحل دورة Pentarch"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="مراحل دورة Pentarch الخمس"><figcaption>تصور أنيق لمراحل دورة السوق الخمس</figcaption></figure>
 
     <div class="article-content"><div class="container-narrow">
-      <p>الأسواق تدور. تتراكم، ترتفع، تصل للذروة، توزع، وتنخفض.</p>
-      <p>تم بناء Pentarch لجعل هذه الدورة مرئية.</p>
+      <p>الأسواق تدور في دورات. تتراكم، ترتفع، تصل للذروة، توزع، وتنخفض. هذا النمط يتكرر في كل إطار زمني، في كل سوق، لأنه يعكس كيفية تدفق رأس المال عبر النظام.</p>
+      <p>تم بناء Pentarch لجعل هذه الدورة مرئية. ليس للتنبؤ بالمستقبل - لا يمكن لأي أداة فعل ذلك - ولكن ليُظهر لك أين أنت في الهيكل حتى تتمكن من اتخاذ قرارات مستنيرة حول المكان الذي قد تتجه إليه.</p>
+      <p>إليك كيفية استخدامه فعلياً.</p>
       <hr>
       <h2>فهم المراحل الخمس</h2>
-      <p><strong>TD (Touchdown) - التراكم:</strong> قاع الدورة. الأموال الذكية تشتري بهدوء.</p>
-      <p><strong>IGN (Ignition) - الصعود:</strong> مرحلة الارتفاع. التراكم اكتمل.</p>
-      <p><strong>CAP (Climax) - الإنهاك:</strong> القمة المتفجرة. الشراء يصبح محموماً.</p>
-      <p><strong>WRN (Warning) - التوزيع:</strong> الأموال الذكية تبيع.</p>
-      <p><strong>BDN (Breakdown) - الانخفاض:</strong> التوزيع اكتمل. السعر يهبط.</p>
+      <p>يحدد Pentarch خمس مراحل دورة متميزة، كل منها بخصائص محددة:</p>
+      <p><strong>TD (Touchdown) - التراكم</strong></p>
+      <p>قاع الدورة. الأموال الذكية تشتري بهدوء بينما يتحرك السعر بشكل جانبي أو يصنع قيعان نهائية. المشاعر متشائمة. الحجم غالباً ما يُظهر امتصاصاً - ضغط البيع يتم امتصاصه من قبل المشترين المطلعين.</p>
+      <p><em>الدلالة التداولية:</em> ابحث عن دخول صفقات شراء. المخاطرة في أدنى مستوياتها هنا لأن وقف الخسارة يمكن وضعه تحت قاع الدورة مع إبطال واضح.</p>
+      <p><strong>IGN (Ignition) - الصعود</strong></p>
+      <p>مرحلة الارتفاع. التراكم اكتمل، والسعر يبدأ في الاتجاه للأعلى. هذه مرحلة "المال السهل" حيث تسير الاتجاهات. الحجم عادة يؤكد مع زيادة المشاركة.</p>
+      <p><em>الدلالة التداولية:</em> احتفظ بصفقات الشراء، أضف عند التراجعات. الاتجاه صديقك هنا. تجنب محاربة الاتجاه.</p>
+      <p><strong>CAP (Climax) - الإنهاك</strong></p>
+      <p>القمة المتفجرة. الشراء يصبح محموماً. الحجم يرتفع بشكل حاد. الجميع متفائل. هذا هو المكان الذي يدخل فيه آخر المشترين - قبل الانعكاس مباشرة.</p>
+      <p><em>الدلالة التداولية:</em> جني الأرباح على صفقات الشراء. استعد للتوزيع. هذا ليس المكان المناسب لفتح صفقات جديدة.</p>
+      <p><strong>WRN (Warning) - التوزيع</strong></p>
+      <p>الأموال الذكية تبيع في القوة. قد يصنع السعر قمماً هامشية جديدة أو يبقى بالقرب من القمم بينما تنتقل الملكية من الأيدي المطلعة إلى غير المطلعة. الحجم غالباً ما يُظهر أنماط التوزيع.</p>
+      <p><em>الدلالة التداولية:</em> اخرج من صفقات الشراء المتبقية. راقب فرص البيع على المكشوف. الاتجاه يشيخ.</p>
+      <p><strong>BDN (Breakdown) - الانهيار</strong></p>
+      <p>التوزيع اكتمل. السعر يهبط مع غلبة البيع على الشراء. يمكن أن يكون هذا حاداً وسريعاً - الانخفاضات غالباً أكثر عنفاً من الارتفاعات.</p>
+      <p><em>الدلالة التداولية:</em> فرص البيع على المكشوف أو البقاء خارج السوق. انتظر الدورة لتكتمل وتعود إلى TD.</p>
+      <hr>
+      <h2>قراءة Pentarch على الرسم البياني</h2>
+      <p>عند إضافة Pentarch إلى الرسم البياني، سترى:</p>
+      <p><strong>تسميات المراحل:</strong> مرحلة الدورة الحالية معروضة بوضوح. لا تخمين مطلوب - المؤشر يخبرك أين أنت.</p>
+      <p><strong>انتقالات المراحل:</strong> عندما تنتقل الدورة من مرحلة إلى أخرى، سترى الانتقال. هذه نقاط قرار رئيسية.</p>
+      <p><strong>كشف متعدد الطبقات:</strong> Pentarch يحلل 4 طبقات في وقت واحد، مما يوفر تأكيداً عندما تتفق طبقات متعددة على المرحلة.</p>
+      <p>العرض بسيط عمداً. المؤشرات المعقدة مع عشرات الخطوط تخلق ارتباكاً. Pentarch يعطيك المعلومات الأساسية: في أي مرحلة يقع السوق؟</p>
+      <hr>
+      <h2>استراتيجيات الدخول حسب المرحلة</h2>
+      <p><strong>الدخول في TD (التراكم)</strong></p>
+      <p>هذه منطقة الدخول الطويل بأعلى قناعة. السوق انخفض، الأموال الذكية تتراكم، ونسبة المخاطرة/العائد تفضل الشراء.</p>
+      <p>محفزات الدخول التي يجب البحث عنها:</p>
+      <ul>
+        <li>Pentarch يظهر مرحلة TD</li>
+        <li>Volume Oracle يؤكد نظام التراكم (أخضر)</li>
+        <li>السعر عند أو بالقرب من مستوى دعم Janus Atlas</li>
+        <li>درجة التوافق في OmniDeck 7+</li>
+        <li>Harmonic Oscillator يظهر ذروة البيع مع انحراف صعودي</li>
+      </ul>
+      <p>وضع وقف الخسارة: تحت قاع الدورة أو تحت نطاق التراكم. إذا كُسر هذا المستوى، فإن مرحلة TD قد فشلت.</p>
+      <p><strong>الدخول في IGN (الصعود)</strong></p>
+      <p>فاتك القاع؟ لا بأس. تراجعات IGN تقدم دخولات ممتازة.</p>
+      <p>محفزات الدخول:</p>
+      <ul>
+        <li>Pentarch يظهر مرحلة IGN</li>
+        <li>السعر يتراجع إلى الدعم (المقاومة السابقة، المتوسط المتحرك، مستوى Janus Atlas)</li>
+        <li>Volume Oracle لا يزال يظهر نظاماً صعودياً</li>
+        <li>التراجع على حجم متناقص (توطيد صحي، ليس توزيعاً)</li>
+      </ul>
+      <p>وضع وقف الخسارة: تحت قاع التراجع. إذا فشل التراجع، قد تنتهي مرحلة IGN.</p>
+      <p><strong>الخروج في CAP (الذروة)</strong></p>
+      <p>CAP ليست منطقة دخول - إنها منطقة خروج. عندما يظهر Pentarch CAP:</p>
+      <ul>
+        <li>جني الأرباح على صفقات الشراء الحالية</li>
+        <li>شد وقف الخسارة بشكل عدواني</li>
+        <li>تجنب صفقات الشراء الجديدة</li>
+        <li>راقب انتقال WRN</li>
+      </ul>
+      <p><strong>دخول البيع على المكشوف في WRN/BDN</strong></p>
+      <p>للمتداولين الذين يبيعون على المكشوف، مراحل WRN و BDN توفر فرصاً:</p>
+      <ul>
+        <li>WRN: ابحث عن الاختراقات الفاشلة، القمم المنخفضة، انحراف الحجم</li>
+        <li>BDN: بيع على المكشوف عند ارتداد السعر إلى المقاومة مع وقف خسارة فوق قمة التوزيع</li>
+      </ul>
+      <p>ملاحظة: البيع على المكشوف يتطلب دقة أكثر من الشراء. الأسواق تهبط أسرع لكن محاولات الارتداد يمكن أن تكون حادة. استخدم مؤشرات المجموعة الأخرى للتأكيد.</p>
+      <hr>
+      <h2>دمج Pentarch مع المجموعة</h2>
+      <p>Pentarch يوفر السياق الهيكلي. المؤشرات الأخرى تضيف الدقة.</p>
+      <p><strong>Pentarch + Volume Oracle</strong></p>
+      <p>مرحلة الدورة + نظام الحجم يجب أن يتطابقا:</p>
+      <ul>
+        <li>TD + تراكم (أخضر) = إعداد شراء بقناعة عالية</li>
+        <li>WRN + توزيع (أحمر) = إعداد خروج/بيع بقناعة عالية</li>
+        <li>IGN + ضعف (ذهبي) = الارتفاع قد يفقد الزخم</li>
+      </ul>
+      <p>عندما يتباعدان، انتظر الوضوح. الإشارات المختلطة تعني اتجاهاً غير مؤكد.</p>
+      <p><strong>Pentarch + Janus Atlas</strong></p>
+      <p>مرحلة الدورة + المستوى الرئيسي = دخول دقيق:</p>
+      <ul>
+        <li>مرحلة TD عند POC (نقطة التحكم) = توافق دعم قوي</li>
+        <li>مرحلة WRN عند VAH (أعلى منطقة القيمة) = توافق مقاومة قوي</li>
+        <li>انتقالات المراحل عند مستويات المحور غالباً ما تحدد انعطافات مهمة</li>
+      </ul>
+      <p><strong>Pentarch + OmniDeck</strong></p>
+      <p>مرحلة الدورة + درجة التوافق = مستوى الثقة:</p>
+      <ul>
+        <li>مرحلة TD مع درجة OmniDeck 8+ = دخول بقناعة عالية جداً</li>
+        <li>مرحلة TD مع درجة OmniDeck 4 = المرحلة صحيحة، لكن العوامل الأخرى لا تؤكد - انتظر</li>
+      </ul>
+      <p><strong>Pentarch + Augury Grid</strong></p>
+      <p>استخدم Augury Grid للعثور على الرموز التي تظهر مراحل Pentarch مواتية:</p>
+      <ul>
+        <li>افحص قائمة مراقبتك بحثاً عن رموز في TD أو بداية IGN</li>
+        <li>تجنب الرموز العميقة في CAP أو WRN</li>
+        <li>ركز تحليلك على أفضل إعدادات المراحل</li>
+      </ul>
+      <hr>
+      <h2>التطبيق متعدد الأطر الزمنية</h2>
+      <p>الدورات موجودة في كل إطار زمني. المفتاح هو المحاذاة:</p>
+      <p><strong>الإطار الزمني الأعلى يحدد الاتجاه:</strong></p>
+      <ul>
+        <li>الأسبوعي في IGN = ابحث عن دخولات TD/IGN اليومية (شراء التراجعات في اتجاه صاعد)</li>
+        <li>الأسبوعي في BDN = ارتفاعات IGN اليومية هي ضد الاتجاه ومحفوفة بالمخاطر</li>
+      </ul>
+      <p><strong>الإطار الزمني الأدنى يوفر الدخول:</strong></p>
+      <ul>
+        <li>اليومي في TD، 4 ساعات يظهر نمط الزنبرك = محفز الدخول</li>
+        <li>اليومي في IGN، تراجع 4 ساعات إلى الدعم = أضف إلى الصفقة</li>
+      </ul>
+      <p><strong>أفضل الإعدادات:</strong></p>
+      <ul>
+        <li>أطر زمنية متعددة في نفس المراحل أو مراحل متتالية</li>
+        <li>الإطار الأعلى في IGN، الإطار الأدنى في TD = احتمالية عالية</li>
+        <li>تجنب الصفقات حيث تتعارض الأطر الزمنية بشكل كبير</li>
+      </ul>
+      <hr>
+      <h2>إدارة الصفقات عبر الدورة</h2>
+      <p>كيفية إدارة صفقة من الدخول إلى الخروج:</p>
+      <p><strong>صفقة تم فتحها في TD:</strong></p>
+      <ol>
+        <li>وقف الخسارة الأولي تحت قاع الدورة</li>
+        <li>عندما يتحرك السعر إلى IGN، انقل وقف الخسارة إلى تحت قاع TD (أصبح الآن دعماً مؤكداً)</li>
+        <li>في IGN، أضف عند التراجعات إذا رغبت</li>
+        <li>مع اقتراب CAP، خذ أرباحاً جزئية</li>
+        <li>عندما يظهر WRN، اخرج من الصفقة المتبقية أو اجعل وقف الخسارة ضيقاً جداً</li>
+      </ol>
+      <p><strong>صفقة تم فتحها في IGN (تراجع):</strong></p>
+      <ol>
+        <li>وقف الخسارة الأولي تحت قاع التراجع</li>
+        <li>انقل الوقف مع تشكل قيعان أعلى جديدة</li>
+        <li>اخرج عند انتقال CAP أو عند أهداف محددة مسبقاً</li>
+      </ol>
+      <p>الدورة توفر خريطة طريق. أنت تعرف تقريباً أين أنت في الهيكل ويمكنك التخطيط وفقاً لذلك.</p>
       <hr>
       <h2>أخطاء شائعة يجب تجنبها</h2>
-      <ul>
-        <li>الشراء في CAP أو WRN - هذه مناطق خروج</li>
-        <li>البيع على المكشوف في TD - أنت تقاتل الأموال الذكية</li>
-        <li>تجاهل الأطر الزمنية الأعلى</li>
-      </ul>
+      <p><strong>الشراء في CAP أو WRN:</strong> هذه مناطق خروج، ليست مناطق دخول. المؤشر يخبرك أن الارتفاع ناضج. استمع إليه.</p>
+      <p><strong>البيع على المكشوف في TD:</strong> محاولة اللحاق بآخر حركة هبوطية عندما يبدأ التراكم. نسبة المخاطرة/العائد ضعيفة وأنت تقاتل الأموال الذكية.</p>
+      <p><strong>تجاهل الأطر الزمنية الأعلى:</strong> TD يومي في BDN أسبوعي هو إعداد ضد الاتجاه. يمكن أن ينجح، لكن الاحتمالات أقل.</p>
+      <p><strong>توقع الكمال:</strong> ليس كل TD يؤدي إلى ارتفاع مربح. ليس كل CAP يؤدي إلى انهيار. الدورات تفشل أحياناً. لهذا السبب نستخدم وقف الخسارة.</p>
+      <p><strong>استخدام Pentarch بمفرده:</strong> مرحلة الدورة سياق مهم، لكنها ليست العامل الوحيد. تأكيد الحجم، المستويات الرئيسية، والتوافق كلها مهمة. استخدم المجموعة الكاملة.</p>
+      <hr>
+      <h2>تدرب قبل أن تتداول</h2>
+      <p>أفضل طريقة لتعلم Pentarch هي مشاهدته في الوقت الفعلي:</p>
+      <ol>
+        <li>أضفه إلى الرسوم البيانية التي تتابعها</li>
+        <li>راقب كيف تتطور المراحل وتنتقل</li>
+        <li>لاحظ كيف يتصرف السعر في كل مرحلة</li>
+        <li>شاهد ما يحدث عند انتقالات المراحل</li>
+        <li>تداول ورقياً الإعدادات قبل المخاطرة بأموال حقيقية</li>
+      </ol>
+      <p>تحليل الدورات ليس معقداً، لكنه يتطلب معايرة. امنح نفسك وقتاً لترى كيف يتصرف المؤشر على الأسواق والأطر الزمنية المفضلة لديك.</p>
+      <hr>
+      <h2>لماذا يعمل هذا النهج</h2>
+      <p>التداول القائم على الدورات ليس سحراً. إنه يعمل لأنه يتماشى مع هيكل السوق:</p>
+      <p><strong>أنت تتداول مع تدفق المؤسسات.</strong> التراكم (TD) هو حيث تشتري الأموال الذكية. التوزيع (WRN/CAP) هو حيث تبيع. من خلال التعرف على المراحل، أنت تضع نفسك جنباً إلى جنب مع رأس المال الذي يحرك الأسواق.</p>
+      <p><strong>لديك إبطال واضح.</strong> عندما تفشل مرحلة TD، تعرف ذلك - السعر يكسر قاع الدورة. لا غموض. وقف خسارة واضح. مخاطرة محددة.</p>
+      <p><strong>تتجنب أسوأ الدخولات.</strong> معظم المتداولين الأفراد يشترون في CAP (القمة) ويبيعون في TD (القاع). الوعي بالدورة يعكس هذا. أنت تدخل حيث يخرج الآخرون وتخرج حيث يدخل الآخرون.</p>
+      <p><strong>السياق يحسن كل شيء آخر.</strong> RSI "في ذروة البيع" في TD مختلف عن RSI "في ذروة البيع" في BDN. ارتفاع الحجم في IGN مختلف عن ارتفاع الحجم في CAP. مرحلة الدورة توفر السياق الذي يحول الإشارات العامة إلى معلومات محددة وقابلة للتنفيذ.</p>
+      <hr>
+      <h2>ابدأ الآن</h2>
+      <p>Pentarch مضمن في تجربة Signal Pilot مع جميع المؤشرات الأخرى. يمكنك إضافته إلى أي رسم بياني على TradingView والبدء في المراقبة فوراً.</p>
+      <p>معظم المتداولين يجدون أنه بعد أسبوع من المراقبة، تصبح مراحل الدورة بديهية. ما بدا وكأنه حركة سعر عشوائية يبدأ في إظهار الهيكل. الدخولات والخروجات تكتسب سياقاً.</p>
+      <p>هذا هو الهدف: ليس التنبؤ، بل الفهم. اعرف أين أنت، والقرارات تصبح أوضح.</p>
+      <p><strong>ابدأ اليوم.</strong> أضف Pentarch إلى رسوماتك البيانية خلال تجربتك المجانية. شاهد دورة كاملة تتطور. شاهد انتقالات المراحل. لاحظ كيف يتصرف السعر في كل مرحلة. أسبوع واحد من المراقبة يغير كيف ترى الأسواق - بشكل دائم.</p>
       <hr>
       <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid">
         <a href="../../the-only-pattern-that-repeats/ar/" class="related-card"><span class="related-category">الدورات</span><h4>النمط الوحيد الذي يتكرر فعلاً</h4></a>
-        <a href="../../inside-signal-pilot/ar/" class="related-card"><span class="related-category">المنتج</span><h4>داخل Signal Pilot</h4></a>
-        <a href="../../accumulation-vs-distribution/ar/" class="related-card"><span class="related-category">الدورات</span><h4>التراكم مقابل التوزيع</h4></a>
+        <a href="../../inside-signal-pilot/ar/" class="related-card"><span class="related-category">المنتج</span><h4>داخل Signal Pilot: كيف تعمل المؤشرات السبعة معاً</h4></a>
+        <a href="../../accumulation-vs-distribution/ar/" class="related-card"><span class="related-category">الدورات</span><h4>التراكم مقابل التوزيع: قراءة ما لا تخبرك به الرسوم البيانية</h4></a>
       </div></section>
       <nav class="article-nav">
         <a href="../../free-indicators-vs-professional-tools/ar/" class="article-nav-link prev">
@@ -82,16 +236,21 @@
           <span class="article-nav-title">لماذا تستمر مؤشراتك في الفشل</span>
         </a>
       </nav>
-      <div class="cta-box"><p><strong>مستعد لرؤية هيكل السوق بوضوح؟</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">ابدأ التجربة المجانية ←</a></div>
+      <div class="cta-box">
+        <p><strong>مستعد لرؤية هيكل السوق بوضوح؟</strong></p>
+        <p>ابدأ تجربتك المجانية وأضف Pentarch إلى رسوماتك البيانية اليوم. شاهد مراحل الدورة تتطور في الوقت الفعلي. ادمجه مع Volume Oracle و Janus Atlas و OmniDeck للحصول على السياق الكامل.</p>
+        <p>بدون بطاقة ائتمان. بدون التزام. أسبوع واحد لترى إذا كان التداول القائم على الدورات يناسب نهجك. معظم المتداولين يعرفون خلال أيام.</p>
+        <a href="https://signalpilot.io/#trial" class="btn btn-primary">← ابدأ تجربتك المجانية الآن</a>
+      </div>
     </div></div>
   </article></main>
 
   <footer class="footer"><div class="container">
-    <div class="footer-links"><a href="/ar/">← العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
+    <div class="footer-links"><a href="/ar/">→ العودة للمدونة</a><a href="https://signalpilot.io">الرئيسية</a><a href="https://docs.signalpilot.io">التوثيق</a><a href="https://education.signalpilot.io">مركز التعليم</a></div>
     <p class="footer-copy">&copy; 2025 Signal Pilot. جميع الحقوق محفوظة.</p>
   </div></footer>
 
   <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+  <script>function toggleTheme(){const html=document.documentElement;const current=html.getAttribute('data-theme');const next=current==='dark'?'light':'dark';html.setAttribute('data-theme',next);localStorage.setItem('theme',next)}const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');const isOpen=nav.classList.contains('open');mobileMenuBtn.innerHTML=isOpen?'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>':'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});nav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{nav.classList.remove('open');mobileMenuBtn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});});}document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>
