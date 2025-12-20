@@ -87,8 +87,8 @@
       </header>
 
       <figure class="hero-image">
-        <img src="../hero.png" alt="Sistem optimizasyonu görselleştirmesi" data-ai-prompt="Dark themed visualization showing a curve-fitting concept - a smooth wave pattern with a complex, overly fitted curve trying to match every data point exactly.">
-        <figcaption class="ai-prompt">Eğri uydurma kavramını gösteren koyu temalı görselleştirme - her veri noktasını tam olarak eşleştirmeye çalışan karmaşık, aşırı uyumlu bir eğriye karşı düz dalga deseni.</figcaption>
+        <img src="../hero.png" alt="Sistem optimizasyonu görselleştirmesi" data-ai-prompt="Dark themed visualization showing a curve-fitting concept - a smooth wave pattern with a complex, overly fitted curve trying to match every data point exactly. Shows the contrast between simple robust fit vs over-complicated fit. Deep navy background with cyan for simple curve and red for over-fitted curve. Mathematical elements and data points floating.">
+        <figcaption class="ai-prompt">Eğri uydurma kavramını gösteren koyu temalı görselleştirme - her veri noktasını tam olarak eşleştirmeye çalışan karmaşık, aşırı uyumlu bir eğriye karşı düz dalga deseni. Basit sağlam uyum ile aşırı karmaşık uyum arasındaki kontrastı gösterir.</figcaption>
       </figure>
 
       <div class="article-content">
@@ -111,7 +111,7 @@
           <p><strong>Şüpheli derecede iyi sonuçlar:</strong> Gerçek avantajlar mütevazıdır. 1.2-1.5 risk-ödül ile %55-65 kazanma oranları gerçekçidir. Backtestlerde 3:1 R:R ile %80+ kazanma oranları genellikle eğri uydurma gösterir.</p>
           <p><strong>Dar optimal aralıklar:</strong> Sisteminiz sadece RSI tam olarak 23 olduğunda (22 veya 24 değil) çalışıyorsa, bu gürültüye uyumdur. Sağlam sistemler parametre aralıkları boyunca çalışır.</p>
           <p><strong>Performans uçurumları:</strong> Küçük parametre değişiklikleri büyük performans düşüşlerine neden olur. Sağlam sistemler parametreler kaydıkça kademeli olarak bozulur.</p>
-          <p><strong>Döneme özgü performans:</strong> Sistem 2021-2022'de harika çalıştı ama 2023'te başarısız oluyor. Değişmiş belirli bir piyasa rejimine uyum sağlamış olabilirsiniz.</p>
+          <p><strong>Döneme özgü performans:</strong> Sistem 2021-2022'de harika çalıştı ama 2023'te başarısız oldu. Değişmiş belirli bir piyasa rejimine uyum sağlamış olabilirsiniz.</p>
 
           <hr>
 
@@ -133,10 +133,10 @@
           <h2>Sağlam Optimizasyon İlkeleri</h2>
           <p><strong>1. Parametreleri minimize edin</strong></p>
           <p>Her parametrenin gerekçesi olmalı. "Backtestleri iyileştirdiği için ekledim" gerekçe değil. "Belirli bir piyasa davranışını yakaladığı için ekledim" gerekçedir.</p>
-          <p>Mantıklı olan iki parametreli bir sistem, mantıklı olmayan on parametreli bir sistemden daha iyi performans gösterecektir - önemli olan canlı ticarette.</p>
+          <p>Mantıklı olan iki parametreli bir sistem, mantıklı olmayan on parametreli bir sistemi geçecektir—önemli olan canlı ticarette.</p>
           <p><strong>2. Noktalar değil, parametre aralıkları kullanın</strong></p>
           <p>RSI = 23 için optimize etmeyin. Aralıkları test edin: sistem RSI 20-30'da çalışıyor mu? Çalışmıyorsa, belirli değer gürültüdür.</p>
-          <p>Sağlam sistemler makul parametre aralıkları boyunca tutarlı sonuçlar gösterir. Kırılgan sistemler belirli değerlerde performans zirvesi gösterir.</p>
+          <p>Sağlam sistemler makul parametre aralıklarında tutarlı sonuçlar gösterir. Kırılgan sistemler belirli değerlerde performans artışları gösterir.</p>
           <p><strong>3. Örneklem dışında test edin</strong></p>
           <p>Tüm verilerinizde optimize etmeyin. Bölün:</p>
           <ul>
@@ -151,7 +151,7 @@
             <li>Yıl 1-2'de optimize edin, Yıl 3'te test edin</li>
             <li>Yıl 1-3'te optimize edin, Yıl 4'te test edin</li>
           </ul>
-          <p>Bu, geçmiş optimizasyonu gelecek piyasalara uyguladığınız gerçek ticareti simüle eder.</p>
+          <p>Bu, her zaman geçmiş optimizasyonu gelecek piyasalara uyguladığınız gerçek ticareti simüle eder.</p>
 
           <hr>
 
@@ -159,39 +159,39 @@
           <p>Benzer sonuçlara sahip iki sistem verildiğinde, daha basit olanı seçin. Her zaman.</p>
           <p>Karmaşıklık sofistike hissettirir. Sadelik aslında sofistikedir - temel öğeleri belirlediğiniz ve gürültüyü görmezden geldiğiniz anlamına gelir.</p>
           <p><strong>Örnek:</strong></p>
-          <p>Karmaşık sistem: 13 periyotluk RSI 47'nin üzerine çıktığında, 8 günlük EMA 21 günlük EMA'nın üzerindeyken ve hacim 17 günlük ortalamanın 1.3 katıyken ve Cuma öğleden sonra değilken satın alın.</p>
-          <p>Basit sistem: Fiyat ortalamanın üzerinde hacimle 20 günlük tepenin üzerine çıktığında satın alın.</p>
-          <p>Basit sistem muhtemelen backtestlerde daha kötü performans gösterir. Muhtemelen canlı ticarette daha iyi performans gösterecek. Karmaşık sistemin bozulmanın daha fazla yolu var.</p>
+          <p>Karmaşık sistem: 13 periyot RSI 47'nin üzerine geçerken, 8 günlük EMA 21 günlük EMA'nın üzerindeyken, hacim 17 günlük ortalamanın 1.3 katıyken ve Cuma öğleden sonra değilken al.</p>
+          <p>Basit sistem: Fiyat ortalamanın üzerinde hacimle 20 günlük yüksekliğin üzerine çıktığında al.</p>
+          <p>Basit sistem muhtemelen backtestlerde daha kötü performans gösterir. Muhtemelen canlı ticarette daha iyi performans gösterecektir. Karmaşık sistemin bozulmanın daha fazla yolu var.</p>
 
           <hr>
 
           <h2>Optimizasyon Ne Zaman Geçerlidir</h2>
           <p>Optimizasyon doğası gereği kötü değildir. Dikkatsizce uygulandığında kötüdür. Geçerli optimizasyon:</p>
-          <p><strong>Piyasa özelliklerine adapte olur:</strong> Farklı piyasaların farklı volatiliteleri var. Belirli enstrümanlar için ATR çarpanlarını ayarlamak eğri uydurma değil - kalibrasyon.</p>
-          <p><strong>Mantıksal sınırları takip eder:</strong> 50 periyotluk hareketli ortalama 53 periyottan "daha iyi" değil - esasen aynılar. Geçerli optimizasyon mantıksal aralıklar içinde kalır.</p>
+          <p><strong>Piyasa özelliklerine uyum sağlar:</strong> Farklı piyasaların farklı volatiliteleri vardır. Belirli enstrümanlar için ATR çarpanlarını ayarlamak eğri uydurma değildir - kalibrasyondur.</p>
+          <p><strong>Mantıksal sınırları takip eder:</strong> 50 periyotluk hareketli ortalama 53 periyotluktan "daha iyi" değildir - esasen aynıdırlar. Geçerli optimizasyon mantıksal aralıklarda kalır.</p>
           <p><strong>Sağlamlığı korur:</strong> Optimize edilmiş sisteminiz örneklem dışı dönemlerde, farklı ama benzer enstrümanlarda ve çeşitli piyasa koşullarında çalışmalıdır.</p>
-          <p><strong>Yavaş değişir:</strong> Aylık yeniden optimizasyon aşırı uyumdur. Yıllık yeniden optimizasyon (veya piyasa yapısı açıkça değiştiğinde) bakımdır.</p>
+          <p><strong>Yavaş değişir:</strong> Aylık yeniden optimizasyon aşırı uyumdur. Yıllık yeniden optimizasyon (veya piyasa yapısı belirgin şekilde değiştiğinde) bakımdır.</p>
 
           <hr>
 
           <h2>Kurtarma Protokolü</h2>
           <p>Sisteminizin aşırı uyumlu olduğundan şüpheleniyorsanız:</p>
           <ol>
-            <li><strong>Canlı ticareti durdurun:</strong> Teşhis koyarken kayıpları birleştirmeyin</li>
+            <li><strong>Canlı ticareti durdurun:</strong> Teşhis koyarken kayıpları biriktirmeyin</li>
             <li><strong>Parametreleri denetleyin:</strong> Her birini piyasa mantığıyla gerekçelendirebilir misiniz?</li>
             <li><strong>Sağlamlığı test edin:</strong> Sistemi örneklem dışı verilerde, farklı enstrümanlarda, farklı zaman dilimlerinde çalıştırın</li>
-            <li><strong>Sadeleştirin:</strong> Parametreleri birer birer kaldırın. Performans gerçekten düşüyor mu, yoksa sadece backtest sonuçları mı?</li>
-            <li><strong>Paper trade yapın:</strong> Sadeleştirilmiş sistemi tekrar sermaye riske atmadan önce ileri test edin</li>
+            <li><strong>Basitleştirin:</strong> Parametreleri teker teker kaldırın. Performans gerçekten düşüyor mu, yoksa sadece backtest sonuçları mı?</li>
+            <li><strong>Kağıt üzerinde trade yapın:</strong> Sermayeyi tekrar riske atmadan önce basitleştirilmiş sistemi ileri test edin</li>
           </ol>
-          <p>Genellikle, aşırı uyum parametrelerini kaldırmak, backtest sonuçları düşerken bile canlı sonuçları iyileştirir. Amaç bu.</p>
+          <p>Genellikle, aşırı uyum parametrelerini kaldırmak, backtest sonuçları düşerken bile canlı sonuçları iyileştirir. Amaç budur.</p>
 
           <hr>
 
           <h2>Sonuç</h2>
           <p>Sistem geliştirmenin amacı mükemmel backtestler değil. Sağlam ileri performanstır.</p>
-          <p>Eklediğiniz her parametre potansiyel bir aşırı uyum kaynağıdır. Her optimizasyon geçişi gürültü yakalama riski taşır. Sadece tarihsel verilerde görünen her "iyileştirme" gelecek sonuçları bozabilir.</p>
+          <p>Eklediğiniz her parametre potansiyel bir aşırı uyum kaynağıdır. Her optimizasyon geçişi gürültü yakalama riski taşır. Yalnızca tarihsel verilerde görünen her "iyileştirme" gelecekteki sonuçları düşürebilir.</p>
           <p>Basit inşa edin. Örneklem dışında test edin. Koşullar boyunca sağlamlık talep edin. Backtestlerin daha kötü görüneceğini kabul edin - ve canlı sonuçlar daha iyi görünecek.</p>
-          <p>Gerçek piyasa yapısı üzerine inşa edilen sistemler - döngü fazları, hacim davranışı, likidite dinamikleri - doğal olarak aşırı uyuma direnir. Sadece piyasaların tarihsel olarak ne zaman hareket ettiğine değil, neden hareket ettiğine dayanırlar. Bu teorik temel, sağlam sistemleri eğri uydurma kazalarından ayıran şeydir.</p>
+          <p>Gerçek piyasa yapısı üzerine kurulu sistemler—döngü fazları, hacim davranışı, likidite dinamikleri—doğal olarak aşırı uyuma direnir. Piyasaların neden hareket ettiğine dayanırlar, sadece tarihsel olarak ne zaman hareket ettiklerine değil. Bu teorik temel, sağlam sistemleri eğri uydurma kazalarından ayıran şeydir.</p>
 
           <hr>
 
@@ -231,7 +231,7 @@
           </nav>
 
           <div class="cta-box">
-            <p>OmniDeck'in sistemleri piyasa yapısı üzerine kurulu - döngü fazları, hacim rejimleri, likidite dinamikleri - optimize edilmiş parametreler değil. Sinyalleriniz piyasaların neden hareket ettiğine dayandığında, rejim değişikliklerinde hayatta kalan sağlamlık inşa edersiniz.</p>
+            <p>OmniDeck'in sistemleri piyasa yapısı üzerine kurulu—döngü fazları, hacim rejimleri, likidite dinamikleri—optimize edilmiş parametreler değil. Sinyalleriniz piyasaların neden hareket ettiğine dayandığında, rejim değişikliklerinde hayatta kalan sağlamlık inşa edersiniz.</p>
             <a href="https://signalpilot.io/#trial" class="btn btn-primary">Yapı tabanlı sistemleri görün →</a>
           </div>
         </div>
@@ -253,6 +253,8 @@
     const savedTheme=localStorage.getItem('theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme);
     window.addEventListener('scroll',()=>{const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(window.scrollY/docHeight)*100;document.getElementById('progress').style.width=progress+'%';const btn=document.getElementById('backToTop');if(window.scrollY>500)btn.classList.add('visible');else btn.classList.remove('visible')});
     document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
     if (mobileMenuBtn && nav) {
@@ -263,10 +265,21 @@
           ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
           : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
       });
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+      });
     }
+
+    // Hero image loading
     document.querySelectorAll('.hero-image img').forEach(img => {
-      if (img.complete && img.naturalHeight > 0) { img.classList.add('loaded'); }
-      else { img.addEventListener('load', () => img.classList.add('loaded')); }
+      if (img.complete && img.naturalHeight > 0) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => img.classList.add('loaded'));
+      }
     });
   </script>
 </body>
