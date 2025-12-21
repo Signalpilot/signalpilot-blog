@@ -46,6 +46,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -54,6 +55,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Background Effects */
