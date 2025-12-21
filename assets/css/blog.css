@@ -700,6 +700,14 @@ body {
   background-image: url('/assets/images/categories/beginner.png');
 }
 
+.article-card[data-category="markets"] .article-card-image::before {
+  background-image: url('/assets/images/categories/markets.png');
+}
+
+.article-card[data-category="technical analysis"] .article-card-image::before {
+  background-image: url('/assets/images/categories/technical-analysis.png');
+}
+
 .article-card-image img {
   width: 100%;
   height: 100%;
