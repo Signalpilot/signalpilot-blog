@@ -72,6 +72,7 @@
       <p>Fark pozisyon boyutudur.</p>
       <p>Kazançlarınız ortalama 100$ ve kayıplarınız ortalama 300$ ise, %70 kazanma oranı: (0,7 x 100$) - (0,3 x 300$) = 70$ - 90$ = işlem başına -20$.</p>
       <p>İşlemlerin çoğunu kazanırken para kaybediyorsunuz.</p>
+      <p>Pozisyon boyutlandırma denklemin diğer yarısını kontrol eder - sadece ne sıklıkta kazandığınızı değil, kazandığınızda ve kaybettiğinizde ne kadar kazanıp kaybettiğinizi.</p>
       <hr>
       <h2>Sabit Yüzde Yöntemi</h2>
       <p>Gerçekten işe yarayan en basit yaklaşım: her işlemde hesabınızın sabit bir yüzdesini riske atın.</p>
@@ -87,6 +88,7 @@
         <li>Hisse başına risk: 5$</li>
         <li>Pozisyon boyutu: 500$ / 5$ = 100 hisse</li>
       </ul>
+      <p>Stop'a takılırsanız, 500$ kaybedersiniz - hesabınızın tam %1'i. %5 değil, %10 değil. Yüzde bir.</p>
       <hr>
       <h2>Neden %1-2?</h2>
       <p>Rastgele değil. Hayatta kalma matematiği.</p>
@@ -109,20 +111,27 @@
       <h2>Anti-Martingale İlkesi</h2>
       <p>Martingale bahsi kayıplardan sonra katlar. Kumarhaneler paranızı böyle alır.</p>
       <p>Akıllı trading tersini yapar: anti-martingale. Kazanırken daha fazla, kaybederken daha az risk.</p>
-      <p>Sabit yüzde boyutlandırma ile bu otomatik olur.</p>
+      <p>Sabit yüzde boyutlandırma ile bu otomatik olur. 50.000$'ın %1'ini riske atarsanız, bu 500$. Kazanıp 55.000$'a büyüdükten sonra, %1 artık 550$. 45.000$'a düştükten sonra, %1 sadece 450$.</p>
+      <p>Edge'iniz çalışırken doğal olarak yukarı, çalışmadığında aşağı ölçeklenirsiniz. Duygusal karar gerekmez.</p>
       <hr>
       <h2>Ne Zaman Boyut Ayarlanır</h2>
       <p>Sabit yüzde çoğu durumu halleder, ancak şu durumlarda küçültmeyi düşünün:</p>
       <ul>
-        <li><strong>Korelasyon:</strong> İlişkili varlıklarda çoklu pozisyonlar</li>
-        <li><strong>Volatilite zıplamaları:</strong> VIX yüksek olduğunda</li>
-        <li><strong>Belirsizlik:</strong> Kazançlar, Fed toplantıları, seçimler</li>
-        <li><strong>Düşüşler:</strong> Bazı traderlar düşüşlerde küçültür</li>
+        <li><strong>Korelasyon:</strong> Aynı sektörde veya ilişkili varlıklarda çoklu pozisyonlar. Tech çökerse ve 5 tech hissesindeyseniz, beş ayrı değil bir büyük pozisyonunuz var.</li>
+        <li><strong>Volatilite zıplamaları:</strong> VIX yüksek olduğunda veya hisseniz çılgınca gap yapıyorsa, stoplar fiyatınızda dolmayabilir. Slippage riskini hesaba katmak için boyutu küçültün.</li>
+        <li><strong>Belirsizlik:</strong> Kazançlar, Fed toplantıları, seçimler. Sonuçları bilinmeyen bilinen olaylar. Ya atlayın ya da boyutu önemli ölçüde küçültün.</li>
+        <li><strong>Düşüşler:</strong> Bazı traderlar düşüşlerde riski azaltır (diyelim ki %10 düşüş sonrası yarım boyut). Bu kanamayı durdurmaya yardımcı olabilir ama toparlanma hızını da azaltabilir.</li>
       </ul>
       <hr>
       <h2>Özet</h2>
       <p>Pozisyon boyutlandırma, kötü bir işlemin ders olması ile felaket olması arasındaki farktır.</p>
-      <p>Kurallar basit: işlem başına maksimum %1-2 risk, boyutu stopunuzdan hesaplayın, matematiğin maruziyetinizi otomatik ölçeklendirmesine izin verin.</p>
+      <p>Kurallar basit:</p>
+      <ul>
+        <li>İşlem başına maksimum %1-2 risk</li>
+        <li>Boyutu stopunuzdan hesaplayın, tersini değil</li>
+        <li>Matematiğin maruziyetinizi otomatik ölçeklendirmesine izin verin</li>
+        <li>İlişkili pozisyonlarda veya belirsiz ortamlarda boyutu küçültün</li>
+      </ul>
       <p>Yanlıştan kurtulabilirsiniz. İflastan kurtulamazsınız. Buna göre boyutlandırın.</p>
       <p>Kalite puanlama sistemleri boyutlandırma kararlarını daha da bilgilendirebilir. Güçlü birleşimli bir kurulum—döngü fazı hizalaması, hacim onayı, birden fazla gösterge uyumu—tam pozisyon boyutunu haklı çıkarabilir. Çelişkili sinyallerle marjinal bir kurulum yarım boyutu veya pas geçmeyi haklı çıkarabilir. Veri odaklı boyutlandırma denklemden duyguyu kaldırır.</p>
       <hr>
