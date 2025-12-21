@@ -72,6 +72,7 @@
       <p>A diferença é o dimensionamento de posição.</p>
       <p>Se seus vencedores fazem em média $100 e seus perdedores $300, essa taxa de 70% produz: (0,7 x $100) - (0,3 x $300) = $70 - $90 = -$20 por trade.</p>
       <p>Você está perdendo dinheiro enquanto ganha a maioria dos seus trades.</p>
+      <p>O dimensionamento de posição controla a outra metade da equação - não apenas com que frequência você ganha, mas quanto você ganha e perde quando isso acontece.</p>
       <hr>
       <h2>O Método da Porcentagem Fixa</h2>
       <p>A abordagem mais simples que realmente funciona: arriscar uma porcentagem fixa da sua conta em cada trade.</p>
@@ -87,12 +88,14 @@
         <li>Risco por ação: $5</li>
         <li>Tamanho da posição: $500 / $5 = 100 ações</li>
       </ul>
+      <p>Se você for stopado, você perde $500 - exatamente 1% da sua conta. Não 5%, não 10%. Um por cento.</p>
       <hr>
       <h2>Por Que 1-2%?</h2>
       <p>Não é arbitrário. É matemática de sobrevivência.</p>
-      <p>Com 1% de risco por trade, você pode perder 10 trades seguidos e ainda ter 90% do seu capital.</p>
-      <p>Com 5% de risco, 10 perdas te deixam com 60% do capital. Você precisa de 67% de ganho para recuperar.</p>
-      <p>Com 10% de risco, 10 perdas te deixam com 35% do capital. Você precisa de 186% para recuperar.</p>
+      <p>Com 1% de risco por trade, você pode perder 10 trades seguidos e ainda ter 90% do seu capital. Isso é uma sequência ruim, mas você ainda está no jogo.</p>
+      <p>Com 5% de risco por trade, 10 perdas te deixam com apenas 60% do seu capital. Você precisa de um ganho de 67% para recuperar.</p>
+      <p>Com 10% de risco por trade, 10 perdas te deixam com 35% do seu capital. Você precisa de um ganho de 186% para recuperar.</p>
+      <p>A matemática fica brutal rápido. Riscos pequenos se compõem em sobrevivência. Riscos grandes se compõem em ruína.</p>
       <hr>
       <h2>O Critério de Kelly (E Por Que Você Não Deve Usar Kelly Completo)</h2>
       <p>O Critério de Kelly é uma fórmula para dimensionamento ideal de apostas baseado na sua vantagem:</p>
@@ -107,21 +110,28 @@
       <hr>
       <h2>O Princípio Anti-Martingale</h2>
       <p>Apostas Martingale dobram após perdas. É assim que cassinos extraem dinheiro de jogadores.</p>
-      <p>Trading inteligente faz o oposto: anti-martingale. Arriscar mais quando ganha, menos quando perde.</p>
-      <p>Com dimensionamento de porcentagem fixa, isso acontece automaticamente.</p>
+      <p>Trading inteligente faz o oposto: anti-martingale. Arriscar mais quando está ganhando, menos quando está perdendo.</p>
+      <p>Com dimensionamento de porcentagem fixa, isso acontece automaticamente. Se você arrisca 1% de $50.000, são $500. Depois de ganhar e crescer para $55.000, 1% agora são $550. Depois de perder e cair para $45.000, 1% são apenas $450.</p>
+      <p>Você naturalmente escala quando sua vantagem está funcionando e reduz quando não está. Nenhuma decisão emocional necessária.</p>
       <hr>
       <h2>Quando Ajustar o Tamanho</h2>
       <p>A porcentagem fixa lida com a maioria das situações, mas considere reduzir quando:</p>
       <ul>
-        <li><strong>Correlação:</strong> Múltiplas posições em ativos correlacionados</li>
-        <li><strong>Picos de volatilidade:</strong> Quando VIX está elevado</li>
-        <li><strong>Incerteza:</strong> Resultados, reuniões do Fed, eleições</li>
-        <li><strong>Drawdowns:</strong> Alguns traders reduzem durante drawdowns</li>
+        <li><strong>Correlação:</strong> Múltiplas posições no mesmo setor ou ativos correlacionados. Se tech desaba e você está em 5 ações de tech, você tem uma posição grande, não cinco separadas.</li>
+        <li><strong>Picos de volatilidade:</strong> Quando VIX está elevado ou sua ação tem gaps grandes, stops podem não ser executados no seu preço. Reduza o tamanho para compensar o risco de slippage.</li>
+        <li><strong>Incerteza:</strong> Resultados, reuniões do Fed, eleições. Eventos conhecidos com resultados desconhecidos. Ou pule esses ou reduza significativamente o tamanho.</li>
+        <li><strong>Drawdowns:</strong> Alguns traders reduzem o risco durante drawdowns (por exemplo, metade do tamanho após 10% de drawdown). Isso pode ajudar a parar o sangramento mas também pode reduzir a velocidade de recuperação.</li>
       </ul>
       <hr>
       <h2>O Essencial</h2>
       <p>Dimensionamento de posição é a diferença entre um trade ruim ser uma lição e um trade ruim ser um desastre.</p>
-      <p>As regras são simples: arriscar máximo 1-2% por trade, calcular o tamanho a partir do seu stop, deixar a matemática escalar sua exposição automaticamente.</p>
+      <p>As regras são simples:</p>
+      <ul>
+        <li>Arriscar máximo 1-2% por trade</li>
+        <li>Calcular o tamanho a partir do seu stop, não o contrário</li>
+        <li>Deixar a matemática escalar sua exposição automaticamente</li>
+        <li>Reduzir em posições correlacionadas ou ambientes incertos</li>
+      </ul>
       <p>Você pode se recuperar de estar errado. Você não pode se recuperar de estar falido. Dimensione adequadamente.</p>
       <p>Sistemas de pontuação de qualidade podem informar ainda mais as decisões de dimensionamento. Um setup com forte confluência—alinhamento de fase do ciclo, confirmação de volume, múltiplos indicadores em acordo—poderia justificar tamanho completo de posição. Um setup marginal com sinais conflitantes poderia justificar metade do tamanho ou passar. O dimensionamento baseado em dados remove a emoção da equação.</p>
       <hr>
@@ -145,7 +155,7 @@
               <span class="article-nav-title">A Regra do 1%: Por Que Traders Profissionais Arriscam Tão Pouco</span>
             </a>
           </nav>
-      <div class="cta-box"><p><strong>O sistema de pontuação de 5 pontos do Augury Grid avalia a qualidade do setup baseado em fase do ciclo, alinhamento HTF e confirmação de volume.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver pontuações de qualidade →</a></div>
+      <div class="cta-box"><p>O sistema de pontuação de 5 pontos do Augury Grid avalia a qualidade do setup baseado em fase do ciclo, alinhamento HTF e confirmação de volume. Pentarch mostra se você está no início de um ciclo (dimensione normalmente) ou no final em exaustão (preserve capital). O dimensionamento de posição se torna sistemático em vez de emocional.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Ver pontuações de qualidade →</a></div>
     </div></div>
   </article></main>
 

@@ -72,6 +72,7 @@
       <p>A különbség a pozícióméret.</p>
       <p>Ha a nyerőid átlagosan 100$-t, a veszteseid 300$-t hoznak, a 70%-os ráta: (0,7 x 100$) - (0,3 x 300$) = 70$ - 90$ = -20$ tradeenként.</p>
       <p>Pénzt veszítesz miközben a legtöbb tradeet megnyered.</p>
+      <p>A pozícióméretezés kontrollálja az egyenlet másik felét - nem csak azt, hogy milyen gyakran nyersz, hanem azt is, mennyit nyersz és veszítesz amikor ezt teszed.</p>
       <hr>
       <h2>A Fix Százalék Módszer</h2>
       <p>A legegyszerűbb megközelítés ami tényleg működik: kockáztasd a számlád fix százalékát minden tradeen.</p>
@@ -87,12 +88,14 @@
         <li>Részvényenkénti kockázat: 5$</li>
         <li>Pozícióméret: 500$ / 5$ = 100 részvény</li>
       </ul>
+      <p>Ha kiesik a stopod, 500$-t veszítesz - pontosan a számlád 1%-át. Nem 5%-ot, nem 10%-ot. Egy százalékot.</p>
       <hr>
       <h2>Miért 1-2%?</h2>
       <p>Nem önkényes. Túlélési matematika.</p>
-      <p>1% kockázattal 10 tradeet veszíthetsz egymás után és még mindig megvan a tőkéd 90%-a.</p>
-      <p>5% kockázattal 10 veszteség a tőkéd 60%-át hagyja. 67%-os nyereség kell a felépüléshez.</p>
-      <p>10% kockázattal 10 veszteség a tőkéd 35%-át hagyja. 186% kell a felépüléshez.</p>
+      <p>1% kockázattal tradeonként 10 tradeet veszíthetsz egymás után és még mindig megvan a tőkéd 90%-a. Ez rossz szériа, de még játékban vagy.</p>
+      <p>5% kockázattal tradeonként 10 veszteség a tőkéd csak 60%-át hagyja. 67%-os nyereség kell a felépüléshez.</p>
+      <p>10% kockázattal tradeonként 10 veszteség a tőkéd 35%-át hagyja. 186%-os nyereség kell a felépüléshez.</p>
+      <p>A matematika gyorsan brutálissá válik. A kis kockázatok túlélésbe kamatoznak. A nagy kockázatok pusztulásba kamatoznak.</p>
       <hr>
       <h2>A Kelly-Kritérium (És Miért Ne Használj Teljes Kelly-t)</h2>
       <p>A Kelly-kritérium egy formula az optimális tétnagysághoz az élényed alapján:</p>
@@ -108,20 +111,27 @@
       <h2>Az Anti-Martingale Elv</h2>
       <p>A martingale fogadás veszteség után duplázik. Így szedik ki a kaszinók a pénzt a szerencsejátékosokból.</p>
       <p>Az okos kereskedés az ellenkezőjét csinálja: anti-martingale. Több kockázat nyeréskor, kevesebb veszítéskor.</p>
-      <p>Fix százalékos méretezéssel ez automatikusan történik.</p>
+      <p>Fix százalékos méretezéssel ez automatikusan történik. Ha 50.000$ 1%-át kockáztatod, az 500$. Nyerés és 55.000$-ra növekedés után az 1% most 550$. Veszteség és 45.000$-ra csökkenés után az 1% csak 450$.</p>
+      <p>Természetesen felfelé skálázol amikor az élényed működik és lefelé amikor nem. Nincs szükség érzelmi döntésekre.</p>
       <hr>
       <h2>Mikor Kell Méret Állítani</h2>
       <p>A fix százalék a legtöbb helyzetet kezeli, de fontold meg a csökkentést:</p>
       <ul>
-        <li><strong>Korreláció:</strong> Több pozíció korrelált eszközökben</li>
-        <li><strong>Volatilitás kiugrások:</strong> Amikor a VIX magas</li>
-        <li><strong>Bizonytalanság:</strong> Eredmények, Fed ülések, választások</li>
-        <li><strong>Visszaesések:</strong> Néhány trader csökkent visszaeséskor</li>
+        <li><strong>Korreláció:</strong> Több pozíció ugyanabban a szektorban vagy korrelált eszközökben. Ha a tech összeomlik és 5 tech részvényed van, egy nagy pozíciód van, nem öt külön.</li>
+        <li><strong>Volatilitás kiugrások:</strong> Amikor a VIX magas vagy a részvényed vadul gapel, a stopok nem biztos hogy az áradon teljesülnek. Csökkentsd a méretet a slippage kockázat figyelembevételével.</li>
+        <li><strong>Bizonytalanság:</strong> Eredmények, Fed ülések, választások. Ismert események ismeretlen kimenetellel. Hagyd ki őket vagy jelentősen csökkentsd a méretet.</li>
+        <li><strong>Visszaesések:</strong> Néhány trader csökkenti a kockázatot visszaeséskor (pl. fél méret 10% drawdown után). Ez segíthet megállítani a vérzést, de a felépülési sebességet is csökkentheti.</li>
       </ul>
       <hr>
       <h2>A Lényeg</h2>
       <p>A pozícióméretezés a különbség aközött, hogy egy rossz trade lecke vagy katasztrófa.</p>
-      <p>A szabályok egyszerűek: maximum 1-2% kockázat tradeonként, számold ki a méretet a stopodból, hagyd hogy a matematika automatikusan skálázza a kitettséged.</p>
+      <p>A szabályok egyszerűek:</p>
+      <ul>
+        <li>Maximum 1-2% kockázat tradeonként</li>
+        <li>Számold ki a méretet a stopodból, nem fordítva</li>
+        <li>Hagyd hogy a matematika automatikusan skálázza a kitettséged</li>
+        <li>Csökkentsd korrelált pozíciókban vagy bizonytalan környezetekben</li>
+      </ul>
       <p>A tévedésből felépülhetsz. A csődből nem tudsz felépülni. Ennek megfelelően méretezz.</p>
       <p>A minőségpontozási rendszerek tovább informálhatják a méretezési döntéseket. Erős összefolyású setup—ciklusfázis illeszkedés, volumen megerősítés, több indikátor egyezése—teljes pozícióméretet indokolhat. Marginális setup ellentmondó jelekkel fél méretet vagy kihagyást indokolhat. Az adatvezérelt méretezés eltávolítja az érzelmet az egyenletből.</p>
       <hr>
@@ -145,7 +155,7 @@
               <span class="article-nav-title">Az 1%-os Szabály: Miért Kockáztatnak Ilyen Keveset a Profi Kereskedők</span>
             </a>
           </nav>
-      <div class="cta-box"><p><strong>Az Augury Grid 5 pontos értékelő rendszere a setup minőségét a ciklusfázis, HTF összehangolás és volumen megerősítés alapján értékeli.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Nézd meg a minőségi pontszámokat →</a></div>
+      <div class="cta-box"><p>Az Augury Grid 5 pontos értékelő rendszere a setup minőségét a ciklusfázis, HTF összehangolás és volumen megerősítés alapján értékeli. A Pentarch megmutatja, hogy a ciklus elején vagy (normális méretezés) vagy a kimerülés végén (tőke megőrzés) vagy. A pozícióméretezés rendszeressé válik az érzelmi helyett.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Nézd meg a minőségi pontszámokat →</a></div>
     </div></div>
   </article></main>
 
