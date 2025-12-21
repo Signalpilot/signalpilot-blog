@@ -1035,6 +1035,70 @@ body {
   border-bottom-color: var(--brand);
 }
 
+/* Continue Learning Box */
+.continue-learning {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.continue-learning h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.continue-learning > p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.continue-learning-links {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.continue-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.continue-link:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.continue-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.continue-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.continue-text strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.continue-text span:last-child {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
 /* CTA Box */
 .cta-box {
   margin: 3rem 0;
