@@ -72,6 +72,7 @@
       <p>Het verschil is positiegrootte.</p>
       <p>Als je winnaars gemiddeld $100 en je verliezers gemiddeld $300 opbrengen, produceert die 70% winratio: (0,7 x $100) - (0,3 x $300) = $70 - $90 = -$20 per trade.</p>
       <p>Je verliest geld terwijl je de meeste van je trades wint.</p>
+      <p>Positiegrootte controleert de andere helft van de vergelijking - niet alleen hoe vaak je wint, maar hoeveel je wint en verliest als je dat doet.</p>
       <hr>
       <h2>De Vaste Percentage Methode</h2>
       <p>De eenvoudigste aanpak die echt werkt: riskeer een vast percentage van je account op elke trade.</p>
@@ -87,12 +88,14 @@
         <li>Risico per aandeel: $5</li>
         <li>Positiegrootte: $500 / $5 = 100 aandelen</li>
       </ul>
+      <p>Als je gestopt wordt, verlies je $500 - precies 1% van je account. Niet 5%, niet 10%. Een procent.</p>
       <hr>
       <h2>Waarom 1-2%?</h2>
       <p>Het is niet willekeurig. Het is overlevingswiskunde.</p>
-      <p>Bij 1% risico per trade kun je 10 trades op rij verliezen en nog steeds 90% van je kapitaal hebben.</p>
-      <p>Bij 5% risico laten 10 verliezen je achter met 60% van je kapitaal. Je hebt 67% winst nodig om te herstellen.</p>
-      <p>Bij 10% risico laten 10 verliezen je achter met 35% van je kapitaal. Je hebt 186% nodig om te herstellen.</p>
+      <p>Bij 1% risico per trade kun je 10 trades op rij verliezen en nog steeds 90% van je kapitaal hebben. Dat is een slechte reeks, maar je bent nog in het spel.</p>
+      <p>Bij 5% risico per trade laten 10 verliezen je achter met slechts 60% van je kapitaal. Je hebt een winst van 67% nodig om te herstellen.</p>
+      <p>Bij 10% risico per trade laten 10 verliezen je achter met 35% van je kapitaal. Je hebt een winst van 186% nodig om te herstellen.</p>
+      <p>De wiskunde wordt snel brutaal. Kleine risico's cumuleren tot overleving. Grote risico's cumuleren tot ondergang.</p>
       <hr>
       <h2>Het Kelly Criterium (En Waarom Je Geen Volledige Kelly Zou Moeten Gebruiken)</h2>
       <p>Het Kelly Criterium is een formule voor optimale inzetgrootte gebaseerd op je edge:</p>
@@ -108,20 +111,27 @@
       <h2>Het Anti-Martingale Principe</h2>
       <p>Martingale wedden verdubbelt na verliezen. Zo halen casino's geld uit gokkers.</p>
       <p>Slim traden doet het tegenovergestelde: anti-martingale. Meer riskeren als je wint, minder als je verliest.</p>
-      <p>Met vaste percentage sizing gebeurt dit automatisch.</p>
+      <p>Met vaste percentage sizing gebeurt dit automatisch. Als je 1% van $50.000 riskeert, is dat $500. Na winnen en groeien naar $55.000, is 1% nu $550. Na verliezen en dalen naar $45.000, is 1% slechts $450.</p>
+      <p>Je schaalt natuurlijk op als je edge werkt en schaalt af als het niet werkt. Geen emotionele beslissingen nodig.</p>
       <hr>
       <h2>Wanneer de Grootte Aanpassen</h2>
       <p>Het vaste percentage behandelt de meeste situaties, maar overweeg te verkleinen bij:</p>
       <ul>
-        <li><strong>Correlatie:</strong> Meerdere posities in gecorreleerde assets</li>
-        <li><strong>Volatiliteitspikes:</strong> Als VIX verhoogd is</li>
-        <li><strong>Onzekerheid:</strong> Earnings, Fed meetings, verkiezingen</li>
-        <li><strong>Drawdowns:</strong> Sommige traders verkleinen tijdens drawdowns</li>
+        <li><strong>Correlatie:</strong> Meerdere posities in dezelfde sector of gecorreleerde assets. Als tech crasht en je zit in 5 tech aandelen, heb je één grote positie, niet vijf aparte.</li>
+        <li><strong>Volatiliteitspikes:</strong> Als VIX verhoogd is of je aandeel wild gapt, worden stops mogelijk niet op jouw prijs uitgevoerd. Verklein de grootte om rekening te houden met slippage risico.</li>
+        <li><strong>Onzekerheid:</strong> Earnings, Fed meetings, verkiezingen. Bekende gebeurtenissen met onbekende uitkomsten. Sla ze over of verklein aanzienlijk.</li>
+        <li><strong>Drawdowns:</strong> Sommige traders verlagen risico tijdens drawdowns (bijvoorbeeld halve grootte na 10% drawdown). Dit kan helpen het bloeden te stoppen maar kan ook herstelsnelheid verminderen.</li>
       </ul>
       <hr>
       <h2>De Kern</h2>
       <p>Positiegrootte is het verschil tussen een slechte trade als les en een slechte trade als ramp.</p>
-      <p>De regels zijn simpel: riskeer maximaal 1-2% per trade, bereken grootte vanaf je stop, laat de wiskunde je exposure automatisch schalen.</p>
+      <p>De regels zijn simpel:</p>
+      <ul>
+        <li>Riskeer maximaal 1-2% per trade</li>
+        <li>Bereken grootte vanuit je stop, niet andersom</li>
+        <li>Laat de wiskunde je exposure automatisch schalen</li>
+        <li>Verklein bij gecorreleerde posities of onzekere omgevingen</li>
+      </ul>
       <p>Je kunt herstellen van ongelijk hebben. Je kunt niet herstellen van blut zijn. Schaal dienovereenkomstig.</p>
       <p>Kwaliteitsscoresystemen kunnen beslissingen over grootte verder informeren. Een setup met sterke confluentie—cyclusfase-uitlijning, volumebevestiging, meerdere indicatoren in overeenstemming—zou volledige positiegrootte kunnen rechtvaardigen. Een marginale setup met conflicterende signalen zou halve grootte of passen kunnen rechtvaardigen. Datagestuurde groottebepaling verwijdert emotie uit de vergelijking.</p>
       <hr>
@@ -145,7 +155,7 @@
               <span class="article-nav-title">De 1% Regel: Waarom Professionele Traders Zo Weinig Riskeren</span>
             </a>
           </nav>
-      <div class="cta-box"><p><strong>Augury Grid's 5-punts scoringssysteem beoordeelt setup-kwaliteit op basis van cyclusfase, HTF-uitlijning en volumebevestiging.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Bekijk kwaliteitsscores →</a></div>
+      <div class="cta-box"><p>Augury Grid's 5-punts scoringssysteem beoordeelt setup-kwaliteit op basis van cyclusfase, HTF-uitlijning en volumebevestiging. Pentarch toont of je vroeg in een cyclus bent (schaal normaal) of laat in uitputting (behoud kapitaal). Positiebepaling wordt systematisch in plaats van emotioneel.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Bekijk kwaliteitsscores →</a></div>
     </div></div>
   </article></main>
 
