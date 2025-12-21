@@ -1109,6 +1109,10 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .header {
+    z-index: 1000;
+  }
+
   .nav {
     position: fixed;
     top: 0;
@@ -1116,7 +1120,7 @@ body {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #05070d;
     flex-direction: column;
     align-items: center;
@@ -1127,7 +1131,7 @@ body {
     pointer-events: none;
     display: flex;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 999;
+    z-index: 1;
   }
 
   [data-theme="light"] .nav {
@@ -1138,6 +1142,10 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  }
+
+  .mobile-menu-btn {
+    z-index: 2;
   }
 
   .nav a {
@@ -1167,8 +1175,6 @@ body {
   color: var(--text);
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1000;
-  position: relative;
 }
 
 @media (max-width: 768px) {
