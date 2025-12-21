@@ -5,7 +5,8 @@
       "url": "https://blog.signalpilot.io/articles/your-first-trade/",
       "description": "Ready to place your first trade? Here's everything you need to do before, during, and after - a step-by-step guide for complete beginners.",
       "tags": ["beginner", "risk-management"],
-      "date": "2024-12-25"
+      "date": "2024-12-25",
+      "featured": true
     },
     {
       "title": "Order Types Explained: Market, Limit, and Stop Orders",
@@ -47,14 +48,16 @@
       "url": "https://blog.signalpilot.io/articles/why-your-indicators-keep-failing/",
       "description": "You've got RSI, MACD, Bollinger Bands, maybe a few moving averages. Your chart looks like a rainbow exploded on it. And somehow, you're still getting chopped up.",
       "tags": ["indicators", "rsi", "beginner", "tradingview"],
-      "date": "2024-12-19"
+      "date": "2024-12-19",
+      "featured": true
     },
     {
       "title": "The Repainting Problem: How Most TradingView Indicators Cheat",
       "url": "https://blog.signalpilot.io/articles/the-repainting-problem/",
       "description": "That indicator with the perfect backtest? The one that nails every top and bottom? It's lying to you. Here's how to spot the deception.",
       "tags": ["indicators", "repainting", "tradingview", "backtesting"],
-      "date": "2024-12-18"
+      "date": "2024-12-18",
+      "featured": true
     },
     {
       "title": "Why Backtesting Results Are Worthless (And What to Do Instead)",
@@ -159,7 +162,8 @@
       "url": "https://blog.signalpilot.io/articles/position-sizing-101/",
       "description": "Most traders obsess over entries. The ones who survive obsess over position sizing. Here's the math that separates them.",
       "tags": ["risk-management", "beginner"],
-      "date": "2024-12-03"
+      "date": "2024-12-03",
+      "featured": true
     },
     {
       "title": "The 1% Rule: Why Professional Traders Risk So Little",
@@ -299,7 +303,8 @@
       "url": "https://blog.signalpilot.io/articles/inside-signal-pilot/",
       "description": "A complete breakdown of Signal Pilot's 7-indicator suite: what each tool does, how they connect, and why the combination matters more than any single indicator.",
       "tags": ["product", "indicators"],
-      "date": "2024-11-13"
+      "date": "2024-11-13",
+      "featured": true
     },
     {
       "title": "Identifying Cycle Length: When to Expect the Next Turn",
@@ -313,7 +318,8 @@
       "url": "https://blog.signalpilot.io/articles/how-to-trade-cycles-with-pentarch/",
       "description": "A step-by-step guide to using Pentarch for cycle-based trading. Learn to identify phases, time entries, and combine cycle analysis with the full Signal Pilot suite.",
       "tags": ["product", "cycles", "practical"],
-      "date": "2024-11-11"
+      "date": "2024-11-11",
+      "featured": true
     },
     {
       "title": "How to Identify a Trend (And When It's Over)",
