@@ -180,6 +180,19 @@
 
           <hr>
 
+          <h2>Order Duur: GTC vs Dag</h2>
+          <p>Naast ordertype moet je specificeren hoe lang de order actief blijft.</p>
+          <p><strong>Dag order:</strong> Verloopt bij marktsluit als niet gevuld. Morgen zou je hem opnieuw moeten plaatsen.</p>
+          <p><strong>GTC (Good Till Cancelled):</strong> Blijft actief totdat gevuld of je annuleert. Kan dagen, weken, maanden duren.</p>
+          <p><strong>Wanneer elk te gebruiken:</strong></p>
+          <ul>
+            <li><strong>Dag orders:</strong> Voor entries waar de setup van vandaag morgen misschien niet meer geldig is</li>
+            <li><strong>GTC:</strong> Voor stop losses (je wilt altijd bescherming) en langere termijn limit orders</li>
+          </ul>
+          <p>Wees voorzichtig met GTC orders - je zou een limit order van weken geleden kunnen vergeten die plotseling vult in veranderde marktomstandigheden.</p>
+
+          <hr>
+
           <h2>Gecombineerde Orders</h2>
           <p>Moderne platforms laten je meerdere orders combineren:</p>
           <p><strong>OCO (One-Cancels-Other):</strong> Plaats een target en een stop loss. Wanneer één gevuld wordt, wordt de andere automatisch geannuleerd.</p>
