@@ -82,33 +82,44 @@
       <p>Kamp bir: "Sistemi takip et. İstisna yok. Duyguyu kaldır. Robot gibi uygula."</p>
       <p>Kamp iki: "Piyasalar dinamik. Yargıya ihtiyacın var. Sistemler her şeyi yakalayamaz."</p>
       <p>Her iki kampın da başarılı traderları var. Her ikisinin de muhteşem başarısızlıkları var. Peki hangi yaklaşım gerçekten çalışır?</p>
+      <p>Cevap her iki tarafın da kabul ettiğinden daha nüanslı.</p>
       <hr>
       <h2>Kural Tabanlı Trading İçin Argüman</h2>
-      <p><strong>Tutarlılık.</strong> Bir sistem her seferinde aynı şeyi yapar. Kayıplardan sonra korkmaz. Kazançlardan sonra kibirli olmaz.</p>
-      <p><strong>Test edilebilirlik.</strong> Kural tabanlı bir sistemi backtest edebilirsiniz.</p>
-      <p><strong>Ölçeklenebilirlik.</strong> Kurallar otomatize edilebilir.</p>
-      <p><strong>Duyguların kaldırılması.</strong> Çoğu trader için en büyük avantaj basitçe duygusal hatalar yapmamaktır.</p>
+      <p>Kural tabanlı sistemlerin ikna edici avantajları var:</p>
+      <p><strong>Tutarlılık.</strong> Bir sistem her seferinde aynı şeyi yapar. Kayıplardan sonra korkmaz. Kazançlardan sonra kibirli olmaz. İntikam trade yapmaz. Yavaş günlerde fazla trade yapmaz.</p>
+      <p><strong>Test edilebilirlik.</strong> Kural tabanlı bir sistemi backtest edebilirsiniz. Mükemmel değil—geçmiş performans gelecek sonuçları garanti etmez—ama en azından nasıl performans göstereceğini görebilirsiniz. Takdiri yargı backtest edilemez.</p>
+      <p><strong>Ölçeklenebilirlik.</strong> Kurallar otomatize edilebilir. Takdire dayalı bir trader dikkat süresine bağlıdır. Bir sistem sınırsız piyasayı 24/7 izleyebilir.</p>
+      <p><strong>Duyguların kaldırılması.</strong> Çoğu trader için en büyük avantaj basitçe duygusal hatalar yapmamaktır. Bir kural "Y olduğunda X yap" der. "Piyasanın... olabileceğini hissediyorum"a yer yok.</p>
       <hr>
       <h2>Takdire Bağlı Trading İçin Argüman</h2>
-      <p><strong>Bağlam farkındalığı.</strong> Bir kural bugünün FOMC günü olduğunu, CEO'nun yeni istifa ettiğini bilemez.</p>
-      <p><strong>Uyarlanabilirlik.</strong> Piyasalar evrilir. 2020'de işe yarayan 2025'te çalışmayabilir.</p>
-      <p><strong>Desen tanıma.</strong> Deneyimli traderlar kodlaması zor şeyleri görür.</p>
+      <p>Ama takdire dayalı traderların da geçerli noktaları var:</p>
+      <p><strong>Bağlam farkındalığı.</strong> Bir kural bugünün FOMC günü olduğunu, CEO'nun yeni istifa ettiğini, sektörün krizde olduğunu bilemez. Bağlam önemlidir ve bağlam değişir.</p>
+      <p><strong>Uyarlanabilirlik.</strong> Piyasalar evrilir. 2020'de işe yarayan 2025'te çalışmayabilir. Takdire dayalı bir trader gerçek zamanlı uyum sağlar. Bir sistem biri güncelleyene kadar programlandığı şeyi yapmaya devam eder.</p>
+      <p><strong>Desen tanıma.</strong> Deneyimli traderlar kodlaması zor şeyleri görür. Bir piyasanın "hissi" mistik değildir—binlerce saat boyunca oluşturulmuş desen tanımadır. Bunu kurallara dönüştürmek genellikle imkansızdır.</p>
+      <p><strong>Eğri uydurma tuzağından kaçınma.</strong> Birçok "sistematik" trader sadece kuralları geçmiş verilere uydurur. Backtest harika görünür. İleri performans rastgeledir. Akıllıca uygulanan takdir bu tuzaktan kaçınabilir.</p>
       <hr>
       <h2>Gerçek Cevap: Yapılandırılmış Takdir</h2>
-      <p>En iyi traderlar her iki yaklaşımı birleştirir.</p>
-      <p><strong>Kurallar kurulumu tanımlar.</strong> Tradable bir fırsatı neyin oluşturduğuna dair açık, spesifik kriterleriniz var.</p>
-      <p><strong>Takdir tradeleri filtreler.</strong> Geçerli kurulumlar evreninde, hangilerini alacağınıza dair yargı kullanırsınız.</p>
-      <p><strong>Kurallar uygulamayı yönetir.</strong> İçeri girdikten sonra kurallar tekrar devralır.</p>
+      <p>En iyi traderlar her iki yaklaşımı birleştirir. "Yapılandırılmış takdir" veya "sistematik takdire dayalı" trading denilen şeyi kullanırlar.</p>
+      <p>İşte nasıl çalışır:</p>
+      <p><strong>Kurallar kurulumu tanımlar.</strong> Tradable bir fırsatı neyin oluşturduğuna dair açık, spesifik kriterleriniz var. Bu kısım sistematik. Kriterler karşılanmazsa, trade yok.</p>
+      <p><strong>Takdir tradeleri filtreler.</strong> Geçerli kurulumlar evreninde, hangilerini alacağınıza dair yargı kullanırsınız. Bağlam, his ve deneyim bu filtreyi bilgilendirir.</p>
+      <p><strong>Kurallar uygulamayı yönetir.</strong> İçeri girdikten sonra kurallar tekrar devralır. Giriş fiyatı, stop yerleşimi, pozisyon büyüklüğü, çıkış kriterleri—hepsi önceden tanımlı. Trade içi takdir yok.</p>
+      <p>Bu her iki yaklaşımın faydalarını yakalar. Kurallar duygusal kısımları (uygulama, risk yönetimi) yönetir. Takdir insan yargısının değer kattığı kısımları (bağlam, filtreleme) yönetir.</p>
       <hr>
       <h2>Kuralların Mutlak Olması Gereken Yerler</h2>
-      <p><strong>Pozisyon büyüklüğü.</strong> Her seferinde aynı şekilde hesaplanır.</p>
-      <p><strong>Stop losslar.</strong> Girişten önce belirlenir, istisnasız uyulur.</p>
-      <p><strong>Maksimum günlük kayıp.</strong> Kapanmayı tetikleyen sert bir limit.</p>
+      <p>Bazı alanlar asla takdire dayalı olmamalı:</p>
+      <p><strong>Pozisyon büyüklüğü.</strong> Her seferinde aynı şekilde hesaplanır. "Kendimden emin olduğum için büyütüyorum" değil.</p>
+      <p><strong>Stop losslar.</strong> Girişten önce belirlenir, istisnasız uyulur. "Biraz daha alan vereyim" değil.</p>
+      <p><strong>Maksimum günlük kayıp.</strong> Kapanmayı tetikleyen sert bir cap. İstisna yok.</p>
+      <p><strong>Yasaklı eylemler.</strong> Kaybedenlere ekleme yok. Bu kuralınızsa haberler sırasında trading yok. İstisna yok.</p>
+      <p>Bunlar takdirin kumara dönüşmesini önleyen bariyerler. Bariyer içinde takdir yargıdır. Bariyersiz takdir kılık değiştirmiş duygusal karar vermedir.</p>
       <hr>
       <h2>Takdirin Değer Kattığı Yerler</h2>
-      <p><strong>Kurulum kalitesi.</strong> Tüm geçerli kurulumlar eşit değildir.</p>
-      <p><strong>Piyasa rejimi.</strong> Bu trend mi yoksa dalgalı bir piyasa mı?</p>
-      <p><strong>Olağandışı koşullar.</strong> Sisteminiz al diyor ama şirket az önce dolandırıcılık soruşturması açıkladı.</p>
+      <p>Takdir bu alanlarda meşru olarak yardımcı olur:</p>
+      <p><strong>Kurulum kalitesi.</strong> Tüm geçerli kurulumlar eşit değildir. Deneyim A+ kurulumları B kurulumlarından ayırt etmeye yardımcı olur.</p>
+      <p><strong>Piyasa rejimi.</strong> Bu trend mi yoksa dalgalı bir piyasa mı? Sistematik kurallarınız bilmeyebilir, ama siz farkı hissedebilirsiniz.</p>
+      <p><strong>Olağandışı koşullar.</strong> Sisteminiz al diyor ama şirket az önce dolandırıcılık soruşturması açıkladı. Bir kural her senaryoyu öngöremez.</p>
+      <p><strong>Kısmi kârlar.</strong> Önemli bir seviyede biraz almak kurallarınızda olmayabilir, ama bazen bağlam bunu haykırır.</p>
       <hr>
       <h2>Gelişim Yolu</h2>
       <p>Çoğu trader için optimal yol şöyle görünür:</p>
@@ -144,7 +155,7 @@
               <span class="article-nav-title">Kârlı Trader'ların Bildiği ve Sizin Bilmediğiniz</span>
             </a>
           </nav>
-      <div class="cta-box"><p><strong>OmniDeck bağımsız olarak değiştirilebilir on sistemi birleştirir. Hangi kuralların geçerli olduğunu seçin.</strong></p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Modüler yaklaşımı gör →</a></div>
+      <div class="cta-box"><p>OmniDeck bağımsız olarak değiştirilebilir on sistemi birleştirir—TD Sequential, Squeeze tespiti, SuperTrend, Arz/Talep bölgeleri ve daha fazlası. Hangi kuralların geçerli olduğunu seçin. Augury Grid'in 5 filtreli puanlama sistemi (ADX, HTF, OBV, RSI, Mesafe) giriş kriterlerinizin ne kadar katı olması gerektiğine karar vermenizi sağlar. Sistematik temel, takdire dayalı katmanlar.</p><a href="https://signalpilot.io/#trial" class="btn btn-primary">Modüler yaklaşımı gör →</a></div>
     </div></div>
   </article></main>
 
