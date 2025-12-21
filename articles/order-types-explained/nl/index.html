@@ -161,6 +161,31 @@
           <p><strong>Primaire gebruiken voor stops:</strong></p>
           <p><strong>1. Stop losses (bescherming):</strong> Plaats een sell stop onder je entry om verlies te beperken als de trade tegen je keert.</p>
           <p><strong>2. Breakout entries:</strong> Plaats een buy stop boven weerstand om een breakout te betreden als het gebeurt.</p>
+          <p><strong>3. Winst beschermen:</strong> Trailing stops die prijs omhoog volgen.</p>
+          <p><strong>Het risico - gaps en slippage:</strong></p>
+          <p>Stop orders worden market orders wanneer getriggerd. In snelle bewegingen of gaps kan je fill ver van je stop prijs liggen.</p>
+          <p>Voorbeeld: Je stop staat op €95. Aandeel gapt overnight naar €90. Je stop triggert en vult op €90, niet €95. Je verloor €5 meer per aandeel dan gepland.</p>
+
+          <hr>
+
+          <h2>Stop-Limit Orders: Trigger met Voorwaarden</h2>
+          <p>Een stop-limit order zegt: "Wanneer prijs mijn trigger bereikt, plaats een limit order op mijn gespecificeerde prijs."</p>
+          <p><strong>Hoe het werkt:</strong></p>
+          <ul>
+            <li>Je stelt zowel een stop prijs (trigger) als een limit prijs in</li>
+            <li>Wanneer de stop triggert, wordt een limit order geplaatst</li>
+            <li>De limit order vult alleen bij je limit prijs of beter</li>
+          </ul>
+          <p><strong>Voorbeeld:</strong> Stop op €95, limit op €94,50. Wanneer prijs €95 raakt, wordt een limit sell op €94,50 geplaatst. Je verkoopt op €94,50 of hoger, maar niet lager.</p>
+          <p><strong>Wanneer stop-limit orders te gebruiken:</strong></p>
+          <ul>
+            <li>Je wilt worst-case slippage beperken</li>
+            <li>Je handelt instrumenten die vaak gappen</li>
+            <li>Je bent ok met mogelijk niet gevuld worden</li>
+          </ul>
+          <p><strong>Het risico - helemaal niet gevuld worden:</strong></p>
+          <p>Als prijs door zowel je stop ALS je limit gapt, word je niet gevuld. Je stop-loss faalt om je verlies te stoppen.</p>
+          <p>Voorbeeld: Stop op €95, limit op €94,50. Aandeel gapt naar €93. Je limit op €94,50 vult nooit omdat prijs al eronder is. Je zit nog steeds in een verliezende positie.</p>
 
           <hr>
 
@@ -193,32 +218,40 @@
 
           <hr>
 
-          <h2>Gecombineerde Orders</h2>
-          <p>Moderne platforms laten je meerdere orders combineren:</p>
-          <p><strong>OCO (One-Cancels-Other):</strong> Plaats een target en een stop loss. Wanneer één gevuld wordt, wordt de andere automatisch geannuleerd.</p>
-          <p><strong>Bracket Orders:</strong> Entry order plus gekoppelde stop loss en take profit. Alles ingesteld in één commando.</p>
-          <p><strong>Trailing Stops:</strong> Een stop die beweegt met de markt. Als prijs in je voordeel beweegt, beweegt je stop mee terwijl winst beschermd blijft.</p>
-          <p>Deze tools automatiseren uitvoering zodat je niet elke tick hoeft te monitoren. Stel ze in wanneer je de trade plaatst, niet nadat de markt beweegt.</p>
+          <h2>Praktische Order Combinaties</h2>
+          <p><strong>Basis trade setup:</strong></p>
+          <ol>
+            <li>Limit order om in te stappen op je gewenste prijs</li>
+            <li>Stop order voor je stop loss (GTC)</li>
+            <li>Limit order voor je profit target (GTC)</li>
+          </ol>
+          <p><strong>Breakout trade setup:</strong></p>
+          <ol>
+            <li>Buy stop boven weerstand om op breakout in te stappen</li>
+            <li>Sell stop onder entry voor stop loss</li>
+            <li>Sell limit op target voor winst nemen</li>
+          </ol>
+          <p><strong>Veel brokers bieden bracket orders</strong> die entry, stop loss en profit target tegelijk plaatsen. Wanneer één vult, worden de anderen automatisch geactiveerd of geannuleerd.</p>
 
           <hr>
 
           <h2>Veel Voorkomende Beginners Fouten</h2>
-          <p><strong>Market orders gebruiken in volatiele markten:</strong> Nieuws breekt, je wilt snel erin/eruit, je krijgt verschrikkelijke fills. Gebruik limits of wacht tot volatiliteit afneemt.</p>
-          <p><strong>Stops te strak zetten:</strong> Je stop is 0,5% van entry. Normale marktflutuatie stopt je uit voordat de echte move begint. Geef trades ruimte om te ademen.</p>
-          <p><strong>Stop-limits gebruiken voor stop losses:</strong> Markt gapt door je limit in een selloff. Je stop-limit wordt nooit gevuld. Je blijft in een stortende positie zitten. Gebruik stop-markets voor bescherming.</p>
-          <p><strong>Orders openen laten zonder stops:</strong> "Ik kom snel terug." Markt crasht terwijl je weg bent. Heb altijd stops actief wanneer je niet kijkt.</p>
-          <p><strong>Orders vergeten te annuleren:</strong> Je limit buy van een week geleden vult plotseling. Je bent nu in een trade die je niet meer wilt. Annuleer of update achtergebleven orders.</p>
+          <p><strong>Market orders gebruiken in illiquide markten:</strong> Wijde spreads en dunne orderbooks betekenen enorme slippage. Gebruik altijd limits in laag-volume instrumenten.</p>
+          <p><strong>Stop-limits op stop losses:</strong> Je stop loss bestaat om je te beschermen. Een stop-limit gebruiken riskeert dat de bescherming faalt. Voor echte stop losses zijn gewone stop orders meestal beter.</p>
+          <p><strong>GTC orders vergeten:</strong> Die limit order van drie weken geleden? Die kan vullen wanneer je hem vergeten bent en de setup niet meer geldig is.</p>
+          <p><strong>Achtervolgen met market orders:</strong> Aandeel rent, je wilt er NU in, je ramt een market order. Je wordt gevuld op de high, het keert direct om. Discipline betekent limits gebruiken zelfs wanneer je opgewonden bent.</p>
 
           <hr>
 
           <h2>De Conclusie</h2>
-          <p>Order types zijn de mechanica van trading. Begrijpen hoe elk werkt geeft je controle over uitvoering.</p>
+          <p>Order types zijn tools. De juiste tool hangt af van wat je probeert te bereiken.</p>
           <ul>
-            <li><strong>Market orders:</strong> Directe uitvoering, prijsonzekerheid</li>
-            <li><strong>Limit orders:</strong> Prijscontrole, geen fill garantie</li>
-            <li><strong>Stop orders:</strong> Triggers bij prijsniveau, dan converteert naar market of limit</li>
+            <li><strong>Zekerheid van fill nodig?</strong> Market order</li>
+            <li><strong>Zekerheid van prijs nodig?</strong> Limit order</li>
+            <li><strong>Automatische triggers nodig?</strong> Stop order</li>
+            <li><strong>Zowel trigger als prijscontrole nodig?</strong> Stop-limit (met zijn risico's)</li>
           </ul>
-          <p>Gebruik voor de meeste trades: limit orders voor entry (prijscontrole), stop-market orders voor stop losses (gegarandeerde exit), en limit orders voor targets (gegarandeerde winstprijs).</p>
+          <p>Beheers deze basis voordat je complexere order types aanraakt. Elke professionele trader is hier begonnen.</p>
           <p>Oefen met kleine posities totdat order uitvoering instinctief aanvoelt. De beste analyse ter wereld doet er niet toe als je de trade verkeerd uitvoert.</p>
 
           <hr>
