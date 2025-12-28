@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artigo</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Psicologia</span>
-          <h1 class="article-title" data-reveal="up">Trading com Emoções: Por Que Seus Sentimentos Mentem Para Você</h1>
+          <span class="article-category">Psicologia</span>
+          <h1 class="article-title">Trading com Emoções: Por Que Seus Sentimentos Mentem Para Você</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de leitura</span>
             <span>Equipe Signal Pilot</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Visualização do trading emocional" data-ai-prompt="Dark themed visualization of a trader's head/silhouette with various emotions swirling inside - fear, greed, excitement, anxiety shown as different colored abstract shapes. Each emotion distorts the trading chart they're viewing. The disconnect between feeling and reality. Deep navy background with emotion colors (red fear, green greed, yellow excitement).">
         <figcaption class="ai-prompt">Visualização em tema escuro da cabeça/silhueta de um trader com várias emoções girando dentro - medo, ganância, excitação, ansiedade mostradas como formas abstratas de cores diferentes.</figcaption>
       </figure>
@@ -217,7 +217,7 @@
 
           <section class="related-articles">
             <h3>Artigos Relacionados</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../revenge-trading-recovery/pt/" class="related-card">
                 <span class="related-category">Psicologia</span>
                 <h4>Recuperação do Trading de Vingança: Quebrando o Ciclo</h4>
@@ -301,19 +301,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

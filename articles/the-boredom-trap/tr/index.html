@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=psychology">Psikoloji</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
-      <span class="article-category" data-reveal="fade">Psikoloji</span>
-      <h1 class="article-title" data-reveal="up">Sıkılma Tuzağı: Neden Hiçbir Şey Yapmamak Genellikle Doğru Trade'dir</h1>
+      <span class="article-category">Psikoloji</span>
+      <h1 class="article-title">Sıkılma Tuzağı: Neden Hiçbir Şey Yapmamak Genellikle Doğru Trade'dir</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 dk okuma</span><span>Signal Pilot Ekibi</span></div>
           <div class="share-buttons">
             <span class="share-label">Paylaş:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Sıkılma tuzağı görselleştirmesi"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Sıkılma tuzağı görselleştirmesi"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>İki saattir grafik izliyorsun. Hiçbir şey. Fiyat dar bir aralıkta dolanıyor. Hiçbir setup tetiklemiyor. Net bir yön yok.</p>
       <p>Sıkıldın. Ve o sıkılma sana bir şeyler yapman için bağırıyor. Bir trade al. Herhangi bir trade. Sadece trader gibi hissetmek için.</p>
@@ -147,7 +147,7 @@
       <p>En iyi trader'lar zamanlarının çoğunu hiçbir şey yapmayarak geçirir. Ve tam da bu yüzden kârlılar.</p>
       <p>Döngü farkındalığı verimli beklemeyi boşa harcanan zamandan ayırmaya yardımcı olur. Mevcut aşama net yön olmadan mid-cycle chop ise, beklemek doğrudur. Birden fazla sistemde confluence düşükse, beklemek doğrudur. Ama döngü geçişleri olduğunda, confluence yükseldiğinde, hacim rejimi değiştiğinde—orada olmaya değer anlar bunlar. Veri sana sabrın ne zaman işe yaradığını ve fırsatın ne zaman geldiğini söyler.</p>
       <hr>
-      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
         <a href="../../why-you-break-trading-rules/tr/" class="related-card"><span class="related-category">Psikoloji</span><h4>Neden Trading Kurallarını Kırmaya Devam Ediyorsun</h4></a>
         <a href="../../the-confirmation-trap/tr/" class="related-card"><span class="related-category">Göstergeler</span><h4>Onay Tuzağı</h4></a>
         <a href="../../building-a-pre-trade-checklist/tr/" class="related-card"><span class="related-category">Pratik</span><h4>Trade Öncesi Kontrol Listesi Oluşturma</h4></a>
@@ -191,20 +191,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

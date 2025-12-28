@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=psychology">Psicologia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
-      <span class="article-category" data-reveal="fade">Psicologia</span>
-      <h1 class="article-title" data-reveal="up">Trading di Vendetta: Come Fermarsi e Recuperare</h1>
+      <span class="article-category">Psicologia</span>
+      <h1 class="article-title">Trading di Vendetta: Come Fermarsi e Recuperare</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min di lettura</span><span>Team Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Condividi:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualizzazione del trading di vendetta"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualizzazione del trading di vendetta"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Sei appena stato stoppato. La tua analisi era giusta, ma il mercato si è mosso contro di te comunque. Sei frustrato. Arrabbiato. E vedi un altro setup che si forma.</p>
@@ -161,7 +161,7 @@
       <p>Se i dati dicono "aspetta", hai il permesso esterno di allontanarti. Lo strumento non sa del tuo ultimo trade. Non gli interessa il tuo ego. Riporta solo quello che sta realmente accadendo nel mercato.</p>
       <p>Quando le tue emozioni dicono "trada" e i dati dicono "aspetta" - fidati dei dati. Quel conflitto è il tuo segnale per allontanarti.</p>
       <hr>
-      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
         <a href="../../trading-while-emotional/it/" class="related-card"><span class="related-category">Psicologia</span><h4>Tradare Sotto Emozione</h4></a>
         <a href="../../psychology-of-getting-stopped-out/it/" class="related-card"><span class="related-category">Psicologia</span><h4>La Psicologia dello Stop Attivato</h4></a>
         <a href="../../when-to-cut-losses-early/it/" class="related-card"><span class="related-category">Rischio</span><h4>Quando Tagliare le Perdite Presto</h4></a>
@@ -212,20 +212,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

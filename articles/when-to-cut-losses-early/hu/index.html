@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=risk">Kockázatkezelés</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
-      <span class="article-category" data-reveal="fade">Kockázatkezelés</span>
-      <h1 class="article-title" data-reveal="up">Mikor Vágjuk a Veszteségeket Korán (Mielőtt a Stop Beüt)</h1>
+      <span class="article-category">Kockázatkezelés</span>
+      <h1 class="article-title">Mikor Vágjuk a Veszteségeket Korán (Mielőtt a Stop Beüt)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span><span>Signal Pilot Csapat</span></div>
           <div class="share-buttons">
             <span class="share-label">Megosztás:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Korai veszteségvágás vizualizáció"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Korai veszteségvágás vizualizáció"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Minden kereskedési könyv azt mondja, hogy tiszteld a stop lossodat. Állítsd be és felejtsd el. Hagyd a kereskedést működni.</p>
@@ -138,7 +138,7 @@
       <p>A készség az elemzés és az érzelem megkülönböztetése. Az egyik megvédi a tőkét. A másik elvérzik ezer félelemteli vágással.</p>
       <p>Az objektív ciklus követés segít itt. Ha markup alatt léptél be és a rendszer most azt mutatja, hogy a disztribúció elkezdődik, az analitikus tézis érvénytelenítés - nem félelem. Ha a volumen rezsim akkumulációról gyengülésre váltott, a kontextus mérhetően megváltozott. Az adatvezérelt kilépések eltávolítják a pszichológiai kétértelműséget, ami a korai vágásokat ilyen nehézzé teszi.</p>
       <hr>
-      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
         <a href="../../stop-loss-placement/hu/" class="related-card"><span class="related-category">Gyakorlati</span><h4>Stop Loss Elhelyezés</h4></a>
         <a href="../../cycle-failures-and-what-they-mean/hu/" class="related-card"><span class="related-category">Ciklusok</span><h4>Ciklus Kudarcok és Mit Jelentenek</h4></a>
         <a href="../../revenge-trading-recovery/hu/" class="related-card"><span class="related-category">Pszichológia</span><h4>Bosszú Kereskedésből Felépülés</h4></a>
@@ -184,20 +184,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

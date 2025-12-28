@@ -61,8 +61,8 @@
           <nav class="breadcrumbs" aria-label="Breadcrumb">
             <a href="/">Blog</a><span class="breadcrumb-sep">›</span><a href="/?filter=markets">Mercados</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Mercados</span>
-          <h1 class="article-title" data-reveal="up">Cripto vs Forex vs Ações: Qual mercado você deveria operar?</h1>
+          <span class="article-category">Mercados</span>
+          <h1 class="article-title">Cripto vs Forex vs Ações: Qual mercado você deveria operar?</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 min de leitura</span>
             <span>Equipe Signal Pilot</span>
@@ -76,7 +76,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Visualização de comparação de mercados" data-ai-prompt="Dark themed triptych visualization comparing three markets - crypto (Bitcoin symbol with volatile chart), forex (currency pairs with smooth waves), and stocks (NYSE building with steady growth line). Each panel distinct but unified by the same dark navy aesthetic with market-specific accent colors: orange for crypto, blue for forex, green for stocks.">
         <figcaption class="ai-prompt">Dark themed triptych visualization comparing three markets - crypto (Bitcoin symbol with volatile chart), forex (currency pairs with smooth waves), and stocks (NYSE building with steady growth line). Each panel distinct but unified by the same dark navy aesthetic with market-specific accent colors: orange for crypto, blue for forex, green for stocks.</figcaption>
       </figure>
@@ -253,7 +253,7 @@
 
           <section class="related-articles">
             <h3>Artigos relacionados</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../best-times-to-trade/pt/" class="related-card">
                 <span class="related-category">Mercados</span>
                 <h4>Melhores horários para operar cada mercado</h4>
@@ -311,20 +311,6 @@
     document.getElementById('backToTop').addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
     const mobileMenuBtn=document.querySelector('.mobile-menu-btn');const nav=document.querySelector('.nav');if(mobileMenuBtn&&nav){mobileMenuBtn.addEventListener('click',()=>{nav.classList.toggle('open');const isOpen=nav.classList.contains('open');mobileMenuBtn.innerHTML=isOpen?'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>':'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'});nav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{nav.classList.remove('open');mobileMenuBtn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'})})};
     document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-  
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

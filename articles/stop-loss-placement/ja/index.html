@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=practical">実践</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category" data-reveal="fade">実践</span>
-      <h1 class="article-title" data-reveal="up">ストップロスの配置：なぜあなたのは間違っているのか</h1>
+      <span class="article-category">実践</span>
+      <h1 class="article-title">ストップロスの配置：なぜあなたのは間違っているのか</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="ストップロス配置戦略"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="ストップロス配置戦略"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>ストップロスが必要なことは分かっている。すべてのトレーディング本がそう言っている。だから設定する。</p>
@@ -138,7 +138,7 @@
       <p>ストップは一つの質問に答えるべきだ：「どこで私のテーゼは証明可能に間違っているか？」そこにストップを置く。その損失を許容できるサイズでトレードする。</p>
       <p>ボリュームベースのレベルはより良いストップ配置に役立つ。実際のボリュームがどこで取引されたかを見られる時 - ボリュームプロファイルPOC、バリューエリア境界、VWAPバンド - 恣意的なスイングポイントではなく、実際の機関活動に対してストップを配置している。意味のあるボリュームが発生したレベルを超えたストップは、ノイズによりよく耐える傾向がある。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
         <a href="../../psychology-of-getting-stopped-out/ja/" class="related-card"><span class="related-category">心理学</span><h4>ストップアウトの心理学</h4></a>
         <a href="../../position-sizing-101/ja/" class="related-card"><span class="related-category">リスク</span><h4>ポジションサイジング101</h4></a>
         <a href="../../support-and-resistance-explained/ja/" class="related-card"><span class="related-category">初心者</span><h4>サポートとレジスタンスの解説</h4></a>
@@ -184,20 +184,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

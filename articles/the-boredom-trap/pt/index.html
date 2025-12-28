@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=psychology">Psicologia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category" data-reveal="fade">Psicologia</span>
-      <h1 class="article-title" data-reveal="up">A Armadilha do Tédio: Por Que Não Fazer Nada É Frequentemente a Operação Certa</h1>
+      <span class="article-category">Psicologia</span>
+      <h1 class="article-title">A Armadilha do Tédio: Por Que Não Fazer Nada É Frequentemente a Operação Certa</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 min de leitura</span><span>Equipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartilhar:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualização da armadilha do tédio no trading"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualização da armadilha do tédio no trading"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Você está olhando gráficos há duas horas. Nada. O preço está oscilando em uma faixa estreita. Nenhum setup disparando. Sem direção clara.</p>
@@ -151,7 +151,7 @@
       <p>Os melhores traders passam a maior parte do tempo não fazendo nada. E é exatamente por isso que são lucrativos.</p>
       <p>A consciência de ciclos ajuda a distinguir espera produtiva de tempo desperdiçado. Se a fase atual é um chop de meio de ciclo sem direção clara, esperar é correto. Se a confluência é baixa em múltiplos sistemas, esperar é correto. Mas quando transições de ciclo ocorrem, quando a confluência aumenta, quando o regime de volume muda - esses são os momentos que valem a pena estar presente. Os dados te dizem quando a paciência te serve e quando a oportunidade chega.</p>
       <hr>
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
         <a href="../../why-you-break-trading-rules/pt/" class="related-card"><span class="related-category">Psicologia</span><h4>Por Que Você Continua Quebrando Suas Regras de Trading</h4></a>
         <a href="../../the-confirmation-trap/pt/" class="related-card"><span class="related-category">Indicadores</span><h4>A Armadilha da Confirmação</h4></a>
         <a href="../../building-a-pre-trade-checklist/pt/" class="related-card"><span class="related-category">Prático</span><h4>Construindo uma Checklist Pré-Operação</h4></a>
@@ -197,20 +197,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

@@ -73,8 +73,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">مقال</span>
           </nav>
-          <span class="article-category" data-reveal="fade">المؤشرات</span>
-          <h1 class="article-title" data-reveal="up">تأكيد الأطر الزمنية المتعددة: كيف تتوقف عن محاربة الاتجاه</h1>
+          <span class="article-category">المؤشرات</span>
+          <h1 class="article-title">تأكيد الأطر الزمنية المتعددة: كيف تتوقف عن محاربة الاتجاه</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 دقائق للقراءة</span>
             <span>فريق Signal Pilot</span>
@@ -94,7 +94,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="تصور تأكيد الأطر الزمنية المتعددة" data-ai-prompt="تصور بسمة داكنة يُظهر ثلاثة رسوم بيانية متراكبة تمثل أطر زمنية مختلفة (يومي، ساعي، 15 دقيقة) مع مؤشرات محاذاة. عندما تتوافق الثلاثة في نفس الاتجاه، يربط بينها شعاع تأكيد متوهج.">
         <figcaption class="ai-prompt">تصور بسمة داكنة يُظهر ثلاثة رسوم بيانية متراكبة تمثل أطر زمنية مختلفة (يومي، ساعي، 15 دقيقة) مع مؤشرات محاذاة. عندما تتوافق الثلاثة في نفس الاتجاه، يربط بينها شعاع تأكيد متوهج.</figcaption>
       </figure>
@@ -198,7 +198,7 @@
 
           <section class="related-articles">
             <h3>مقالات ذات صلة</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../timeframe-selection/ar/" class="related-card">
                 <span class="related-category">عملي</span>
                 <h4>اختيار الإطار الزمني: إيجاد ما يناسبك</h4>
@@ -279,19 +279,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

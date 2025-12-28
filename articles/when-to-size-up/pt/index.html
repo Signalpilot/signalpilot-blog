@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artigo</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Prático</span>
-          <h1 class="article-title" data-reveal="up">Quando Aumentar: Escalando o Tamanho da Posição de Forma Responsável</h1>
+          <span class="article-category">Prático</span>
+          <h1 class="article-title">Quando Aumentar: Escalando o Tamanho da Posição de Forma Responsável</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de leitura</span>
             <span>Equipe Signal Pilot</span>
@@ -95,7 +95,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Visualização de escalonamento de tamanho de posição" data-ai-prompt="Visualização com tema escuro de escalonamento responsável de tamanho de posição - uma escada de tamanhos de posição crescentes, cada degrau conquistado através de desempenho consistente. Trajetória de crescimento de posições pequenas para maiores. Indicadores de alerta em pontos de dimensionamento prematuro. Fundo azul marinho profundo com escadas douradas ascendentes e indicadores de crescimento verdes.">
         <figcaption class="ai-prompt">Visualização com tema escuro de escalonamento responsável de tamanho de posição - uma escada de tamanhos de posição crescentes, cada degrau conquistado através de desempenho consistente. Trajetória de crescimento de posições pequenas para maiores. Indicadores de alerta em pontos de dimensionamento prematuro. Fundo azul marinho profundo com escadas douradas ascendentes e indicadores de crescimento verdes.</figcaption>
       </figure>
@@ -216,7 +216,7 @@
 
           <section class="related-articles">
             <h3>Artigos Relacionados</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../position-sizing-101/pt/" class="related-card">
                 <span class="related-category">Risco</span>
                 <h4>Tamanho de Posição 101: A Base da Gestão de Risco</h4>
@@ -298,19 +298,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

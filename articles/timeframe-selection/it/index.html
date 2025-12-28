@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=practical">Pratico</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
-      <span class="article-category" data-reveal="fade">Pratico</span>
-      <h1 class="article-title" data-reveal="up">Selezione del Timeframe: Perché Conta Più del Tuo Indicatore</h1>
+      <span class="article-category">Pratico</span>
+      <h1 class="article-title">Selezione del Timeframe: Perché Conta Più del Tuo Indicatore</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min di lettura</span><span>Team Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Condividi:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualizzazione selezione timeframe"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualizzazione selezione timeframe"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Stesso indicatore. Stesse impostazioni. Stesso asset. Risultati completamente diversi su timeframe diversi.</p>
       <p>Il grafico a 5 minuti dice compra. Il grafico a 4 ore dice vendi. Il grafico giornaliero dice aspetta. Chi ha ragione?</p>
@@ -143,7 +143,7 @@
       <p>Un indicatore medio sul timeframe giusto batte un indicatore eccellente su quello sbagliato.</p>
       <p>Alcuni sistemi integrano direttamente la consapevolezza multi-timeframe: conferma del regime HTF che mostra se la struttura giornaliera o settimanale supporta il tuo segnale del timeframe di entrata, o VWAP multi-periodo che mostra dove si trova il valore su diversi orizzonti. Quando lo strumento gestisce l'allineamento dei timeframe internamente, vedi se il contesto supporta il tuo trade senza controllare manualmente più grafici.</p>
       <hr>
-      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
         <a href="../../multi-timeframe-confirmation/it/" class="related-card"><span class="related-category">Indicatori</span><h4>Conferma Multi-Timeframe: Quando Usarla</h4></a>
         <a href="../../cycles-within-cycles/it/" class="related-card"><span class="related-category">Cicli</span><h4>Cicli nei Cicli: Struttura Multi-Timeframe</h4></a>
         <a href="../../identifying-cycle-length/it/" class="related-card"><span class="related-category">Cicli</span><h4>Identificare la Lunghezza del Ciclo</h4></a>
@@ -187,20 +187,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

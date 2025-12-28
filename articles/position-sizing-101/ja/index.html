@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=risk">リスク管理</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category" data-reveal="fade">リスク管理</span>
-      <h1 class="article-title" data-reveal="up">ポジションサイジング101：ゲームに残り続ける数学</h1>
+      <span class="article-category">リスク管理</span>
+      <h1 class="article-title">ポジションサイジング101：ゲームに残り続ける数学</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="ポジションサイジング基礎の視覚化"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="ポジションサイジング基礎の視覚化"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>素晴らしいセットアップを見つけました。高確率、明確な無効化ポイント、完璧なエントリー。自信があるのでサイズを大きくします。</p>
@@ -143,7 +143,7 @@
       <p>間違いから回復することはできる。破産から回復することはできない。それに応じてサイズを決めよう。</p>
       <p>品質スコアリングシステムはサイジングの決定をさらに知らせることができる。強いコンフルエンスを持つセットアップ—サイクルフェーズの整列、ボリューム確認、複数のインジケーターの一致—はフルポジションサイズを正当化するかもしれない。相反するシグナルを持つマージナルなセットアップはハーフサイズまたはパスを正当化するかもしれない。データドリブンのサイジングは方程式から感情を取り除く。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
         <a href="../../the-1-percent-rule/ja/" class="related-card"><span class="related-category">リスク</span><h4>1%ルール</h4></a>
         <a href="../../when-to-size-up/ja/" class="related-card"><span class="related-category">実践</span><h4>サイズアップのタイミング</h4></a>
         <a href="../../stop-loss-placement/ja/" class="related-card"><span class="related-category">実践</span><h4>ストップロスの配置</h4></a>
@@ -189,20 +189,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

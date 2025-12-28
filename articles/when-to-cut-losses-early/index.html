@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Article</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Risk Management</span>
-          <h1 class="article-title" data-reveal="up">When to Cut Losses Early (Before Your Stop Gets Hit)</h1>
+          <span class="article-category">Risk Management</span>
+          <h1 class="article-title">When to Cut Losses Early (Before Your Stop Gets Hit)</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min read</span>
             <span>Signal Pilot Team</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="hero.png" alt="Cutting losses early visualization" data-ai-prompt="Dark themed visualization of early exit decision - a trade in progress where the thesis is failing before the stop is hit. Decision fork: wait for stop (larger loss) vs exit early (smaller loss). Shows the wisdom of recognizing when a trade is already dead. Deep navy background with decision paths in gold and red.">
         <figcaption class="ai-prompt">Dark themed visualization of early exit decision - a trade in progress where the thesis is failing before the stop is hit. Decision fork: wait for stop (larger loss) vs exit early (smaller loss). Shows the wisdom of recognizing when a trade is already dead. Deep navy background with decision paths in gold and red.</figcaption>
       </figure>
@@ -188,7 +188,7 @@
 
           <section class="related-articles">
             <h3>Related Articles</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../stop-loss-placement/" class="related-card">
                 <span class="related-category">Practical</span>
                 <h4>Stop Loss Placement: Where and Why</h4>
@@ -272,19 +272,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

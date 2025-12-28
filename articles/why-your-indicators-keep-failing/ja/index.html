@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=indicators">インジケーター</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category" data-reveal="fade">インジケーター</span>
-      <h1 class="article-title" data-reveal="up">なぜあなたのインジケーターは失敗し続けるのか（そして本当に効果があること）</h1>
+      <span class="article-category">インジケーター</span>
+      <h1 class="article-title">なぜあなたのインジケーターは失敗し続けるのか（そして本当に効果があること）</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="矛盾するインジケーターシグナル"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="矛盾するインジケーターシグナル"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>RSI、MACD、ボリンジャーバンド、いくつかの移動平均線があります。チャートは虹が爆発したように見えます。それでもまだやられ続けています。</p>
@@ -148,7 +148,7 @@
       <p>インジケーターは内部で作業を行います。あなたは合成された出力を見ます - 12の矛盾する意見ではなく、市場の一貫した絵です。</p>
       <p>Signal Pilotはこの原則に基づいて構築されました：7つのインジケーター、それぞれが異なる質問に答え、すべてが連携するよう設計されています。Pentarchからのサイクルフェーズ。Volume Oracleからのボリュームレジーム。Janus Atlasからの重要レベル。OmniDeckからのコンフルエンススコア。スイートはシグナルだけでなく、コンテキストを提供します。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
         <a href="../../the-repainting-problem/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>リペイント問題</h4></a>
         <a href="../../inside-signal-pilot/ja/" class="related-card"><span class="related-category">Signal Pilot</span><h4>Signal Pilotの内部</h4></a>
         <a href="../../the-only-pattern-that-repeats/ja/" class="related-card"><span class="related-category">サイクル</span><h4>唯一繰り返すパターン</h4></a>
@@ -194,20 +194,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

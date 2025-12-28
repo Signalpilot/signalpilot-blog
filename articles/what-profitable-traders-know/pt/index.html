@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=psychology">Psicologia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category" data-reveal="fade">Psicologia</span>
-      <h1 class="article-title" data-reveal="up">O Que Traders Lucrativos Sabem Que Você Não Sabe</h1>
+      <span class="article-category">Psicologia</span>
+      <h1 class="article-title">O Que Traders Lucrativos Sabem Que Você Não Sabe</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de leitura</span><span>Equipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartilhar:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualização da mentalidade do trader lucrativo"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualização da mentalidade do trader lucrativo"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Eles não são mais inteligentes que você. Não têm indicadores melhores. Não têm informações privilegiadas.</p>
@@ -130,7 +130,7 @@
       <p>Nada disso é segredo. Tudo é subestimado. A lacuna entre saber e fazer permanece a mais larga no trading.</p>
       <p>Algumas ferramentas ajudam a preencher essa lacuna tornando a edge explícita em vez de intuitiva: a detecção de fase do ciclo te diz onde você está na estrutura do mercado, a pontuação de confluência quantifica quantos fatores se alinham, e a classificação de regime revela se as instituições estão acumulando ou distribuindo. A edge se torna definível - e mensurável.</p>
       <hr>
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
         <a href="../../what-is-a-trading-edge/pt/" class="related-card"><span class="related-category">Iniciante</span><h4>O Que É um Edge no Trading?</h4></a>
         <a href="../../why-you-break-trading-rules/pt/" class="related-card"><span class="related-category">Psicologia</span><h4>Por Que Você Quebra Suas Regras de Trading</h4></a>
         <a href="../../trade-journaling-that-works/pt/" class="related-card"><span class="related-category">Prático</span><h4>Diário de Trading que Funciona</h4></a>
@@ -176,20 +176,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

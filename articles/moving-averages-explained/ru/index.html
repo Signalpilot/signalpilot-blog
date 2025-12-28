@@ -73,8 +73,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Статья</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Технический Анализ</span>
-          <h1 class="article-title" data-reveal="up">Скользящие Средние: EMA против SMA и Когда Использовать Каждую</h1>
+          <span class="article-category">Технический Анализ</span>
+          <h1 class="article-title">Скользящие Средние: EMA против SMA и Когда Использовать Каждую</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
             <span>Команда Signal Pilot</span>
@@ -94,7 +94,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Визуализация скользящих средних" data-ai-prompt="Dark themed visualization of multiple moving average lines flowing across a price chart - smooth curves in different colors (blue EMA, orange SMA) weaving through candlesticks. The lines cross at key points with subtle glow effects. Professional trading aesthetic with deep navy background and gradient highlights.">
         <figcaption class="ai-prompt">Dark themed visualization of multiple moving average lines flowing across a price chart - smooth curves in different colors (blue EMA, orange SMA) weaving through candlesticks. The lines cross at key points with subtle glow effects. Professional trading aesthetic with deep navy background and gradient highlights.</figcaption>
       </figure>
@@ -229,7 +229,7 @@
 
           <section class="related-articles">
             <h3>Похожие Статьи</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../support-and-resistance-explained/" class="related-card">
                 <span class="related-category">Начинающим</span>
                 <h4>Поддержка и Сопротивление</h4>
@@ -311,19 +311,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

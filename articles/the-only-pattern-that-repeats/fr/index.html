@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=cycles">Cycles de Marché</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
-      <span class="article-category" data-reveal="fade">Cycles de Marché</span>
-      <h1 class="article-title" data-reveal="up">Le Seul Pattern Qui Se Répète Vraiment sur les Marchés</h1>
+      <span class="article-category">Cycles de Marché</span>
+      <h1 class="article-title">Le Seul Pattern Qui Se Répète Vraiment sur les Marchés</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lecture</span><span>Équipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Partager:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Le seul pattern qui se répète"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Le seul pattern qui se répète"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Épaule-tête-épaule. Doubles sommets. Drapeaux haussiers. Triangles. Les livres de trading sont remplis de patterns qui sont censés se répéter.</p>
       <p>Voici le problème : ils ne le font pas. Du moins, pas assez fiablement pour trader.</p>
@@ -145,7 +145,7 @@
       <p>Apprenez à voir les cycles, et vous apprenez à voir le marché. Tout le reste n'est que du bruit.</p>
       <p>L'analyse du volume renforce l'identification du cycle. La détection de régime montrant accumulation vs distribution confirme la phase du cycle. Les rubans de tendance OBV révèlent si l'argent entre ou sort. Le scoring de confluence vous dit quand plusieurs systèmes s'accordent sur la phase. Le pattern du cycle devient plus clair quand le volume confirme ce que le prix suggère.</p>
       <hr>
-      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
         <a href="../../why-markets-move-in-cycles/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Pourquoi les Marchés Évoluent en Cycles</h4></a>
         <a href="../../cycles-within-cycles/fr/" class="related-card"><span class="related-category">Cycles</span><h4>Cycles dans les Cycles : Structure Multi-Temporelle</h4></a>
         <a href="../../why-your-indicators-keep-failing/fr/" class="related-card"><span class="related-category">Indicateurs</span><h4>Pourquoi Vos Indicateurs Échouent Constamment</h4></a>
@@ -189,20 +189,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

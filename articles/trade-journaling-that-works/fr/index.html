@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=practical">Pratique</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
-      <span class="article-category" data-reveal="fade">Pratique</span>
-      <h1 class="article-title" data-reveal="up">Journal de Trading Qui Fonctionne : Quoi Suivre et Pourquoi</h1>
+      <span class="article-category">Pratique</span>
+      <h1 class="article-title">Journal de Trading Qui Fonctionne : Quoi Suivre et Pourquoi</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lecture</span><span>Équipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Partager:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualisation journal de trading"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualisation journal de trading"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Tous les livres de trading disent de tenir un journal. Alors vous en commencez un. Date, ticker, entrée, sortie, P&L. Après un mois, vous avez un tableur plein de chiffres que vous ne regardez jamais.</p>
       <p>Ce n'est pas tenir un journal. C'est de la saisie de données.</p>
@@ -195,7 +195,7 @@
       <p>Les traders qui s'améliorent le plus vite sont ceux qui apprennent de chaque trade - pas seulement des douloureux. Un journal rend cet apprentissage systématique.</p>
       <p>Certains outils analytiques réduisent la charge manuelle en capturant le contexte automatiquement : quelle phase de cycle était active quand vous êtes entré, si le régime montrait accumulation ou distribution, quel était le score de confluence à ce moment. Quand ces données sont déjà enregistrées, votre journal peut se concentrer sur les éléments psychologiques et de processus qui nécessitent vraiment une réflexion humaine.</p>
       <hr>
-      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
         <a href="../../building-a-pre-trade-checklist/fr/" class="related-card"><span class="related-category">Pratique</span><h4>Construire une Checklist Pré-Trade</h4></a>
         <a href="../../what-profitable-traders-know/fr/" class="related-card"><span class="related-category">Psychologie</span><h4>Ce Que Savent les Traders Rentables</h4></a>
         <a href="../../rules-based-vs-discretionary/fr/" class="related-card"><span class="related-category">Systèmes</span><h4>Trading Basé sur les Règles vs Discrétionnaire</h4></a>
@@ -239,20 +239,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

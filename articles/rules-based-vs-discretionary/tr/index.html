@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=systems">Trading Sistemleri</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
-      <span class="article-category" data-reveal="fade">Trading Sistemleri</span>
-      <h1 class="article-title" data-reveal="up">Kural Tabanlı vs Takdire Bağlı Trading: Hangisi Gerçekten Çalışır?</h1>
+      <span class="article-category">Trading Sistemleri</span>
+      <h1 class="article-title">Kural Tabanlı vs Takdire Bağlı Trading: Hangisi Gerçekten Çalışır?</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span><span>Signal Pilot Ekibi</span></div>
           <div class="share-buttons">
             <span class="share-label">Paylaş:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Kural tabanlı vs takdire bağlı trading"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Kural tabanlı vs takdire bağlı trading"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Trading dünyası iki kampa ayrılmış.</p>
@@ -143,7 +143,7 @@
       <p>Kurallar kendinize güvenemeyeceğiniz şeyleri yönetir. Takdir, kuralların yakalayamadığını yönetir. Kazanan yapı budur.</p>
       <p>Modüler gösterge sistemleri bu felsefeyi somutlaştırır. Bireysel bileşenleri açıp kapatabildiğinizde—döngü tespiti, sıkışma uyarıları, SuperTrend, arz/talep bölgeleri, trend filtreleri—hala mevcut koşullara hangi kuralların uygulanacağının takdiri seçimine izin veren sistematik bir temel inşa ediyorsunuz. Sistem seçenekler sunar; yargı bunlar arasından seçer.</p>
       <hr>
-      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
         <a href="../../building-your-first-system/tr/" class="related-card"><span class="related-category">Sistemler</span><h4>İlk Trading Sisteminizi Kurmak</h4></a>
         <a href="../../why-you-break-trading-rules/tr/" class="related-card"><span class="related-category">Psikoloji</span><h4>Neden Trading Kurallarınızı Bozuyorsunuz</h4></a>
         <a href="../../building-a-pre-trade-checklist/tr/" class="related-card"><span class="related-category">Pratik</span><h4>Trade Öncesi Kontrol Listesi Oluşturma</h4></a>
@@ -189,20 +189,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

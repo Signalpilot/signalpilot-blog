@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=psychology">Psychologie</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
-      <span class="article-category" data-reveal="fade">Psychologie</span>
-      <h1 class="article-title" data-reveal="up">Ce Que Savent les Traders Rentables Que Vous Ignorez</h1>
+      <span class="article-category">Psychologie</span>
+      <h1 class="article-title">Ce Que Savent les Traders Rentables Que Vous Ignorez</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lecture</span><span>Équipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Partager:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualisation de la mentalité du trader rentable"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualisation de la mentalité du trader rentable"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Ils ne sont pas plus intelligents que vous. Ils n'ont pas de meilleurs indicateurs. Ils n'ont pas d'informations privilégiées.</p>
@@ -130,7 +130,7 @@
       <p>Rien de cela n'est secret. Tout est sous-évalué. L'écart entre savoir et faire reste le plus large en trading.</p>
       <p>Certains outils aident à combler cet écart en rendant l'edge explicite plutôt qu'intuitif : la détection de phase de cycle vous dit où vous êtes dans la structure du marché, le scoring de confluence quantifie combien de facteurs s'alignent, et la classification de régime révèle si les institutions accumulent ou distribuent. L'edge devient définissable - et mesurable.</p>
       <hr>
-      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
         <a href="../../what-is-a-trading-edge/fr/" class="related-card"><span class="related-category">Débutant</span><h4>Qu'est-ce Qu'un Edge en Trading?</h4></a>
         <a href="../../why-you-break-trading-rules/fr/" class="related-card"><span class="related-category">Psychologie</span><h4>Pourquoi Vous Violez Vos Règles de Trading</h4></a>
         <a href="../../trade-journaling-that-works/fr/" class="related-card"><span class="related-category">Pratique</span><h4>Journal de Trading Qui Fonctionne</h4></a>
@@ -176,20 +176,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

@@ -98,8 +98,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artikel</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Product</span>
-          <h1 class="article-title" data-reveal="up">Binnen Signal Pilot: Hoe de 7 Indicatoren Samenwerken</h1>
+          <span class="article-category">Product</span>
+          <h1 class="article-title">Binnen Signal Pilot: Hoe de 7 Indicatoren Samenwerken</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 min leestijd</span>
             <span>Signal Pilot Team</span>
@@ -119,7 +119,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Zeven geïntegreerde Signal Pilot indicatoren" data-ai-prompt="Donker thema futuristisch dashboard met 7 onderling verbonden gloeiende knooppunten in een hexagonaal patroon, elk knooppunt een andere tint cyaan en blauw die verschillende indicatoren vertegenwoordigt.">
         <figcaption class="ai-prompt">Donker thema futuristisch dashboard met 7 onderling verbonden gloeiende knooppunten in een hexagonaal patroon, elk knooppunt een andere tint cyaan en blauw die verschillende indicatoren vertegenwoordigt. Gloeiende verbindingslijnen tussen knooppunten pulseren met datastroom. Centrale hub synthetiseert alle inputs. Professionele trading-esthetiek met diepe navy en paarse aurora-achtergrond, holografische UI-elementen.</figcaption>
       </figure>
@@ -292,7 +292,7 @@
 
           <section class="related-articles">
             <h3>Gerelateerde Artikelen</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../the-repainting-problem/nl/" class="related-card">
                 <span class="related-category">Indicatoren</span>
                 <h4>Het Repainting Probleem: Hoe de Meeste Indicatoren Vals Spelen</h4>
@@ -421,19 +421,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

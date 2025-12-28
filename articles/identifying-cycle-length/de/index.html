@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artikel</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Marktzyklen</span>
-          <h1 class="article-title" data-reveal="up">Zykluslänge Identifizieren: Wann die Nächste Wende zu Erwarten Ist</h1>
+          <span class="article-category">Marktzyklen</span>
+          <h1 class="article-title">Zykluslänge Identifizieren: Wann die Nächste Wende zu Erwarten Ist</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 Min. Lesezeit</span>
             <span>Signal Pilot Team</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Zykluslänge Visualisierung" data-ai-prompt="Dark themed visualization of market cycles with measuring tools - a sine wave with ruler/measuring tape overlaid showing cycle duration. Clock or time markers at cycle peaks and troughs. Anticipating the next turn point highlighted with glowing prediction zone. Purple, cyan, and gold color scheme against deep navy background. Professional trading aesthetic.">
         <figcaption class="ai-prompt">Dunkle Visualisierung von Marktzyklen mit Messwerkzeugen - eine Sinuswelle mit Lineal/Maßband überlagert, die Zyklusdauer zeigt. Uhr oder Zeitmarker bei Zyklusspitzen und -tälern. Vorwegnahme des nächsten Wendepunkts hervorgehoben mit leuchtender Vorhersagezone. Violettes, cyan- und goldfarbenes Schema vor tiefblauem Hintergrund. Professionelle Trading-Ästhetik.</figcaption>
       </figure>
@@ -191,7 +191,7 @@
 
           <section class="related-articles">
             <h3>Verwandte Artikel</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../why-markets-move-in-cycles/de/" class="related-card">
                 <span class="related-category">Zyklen</span>
                 <h4>Warum Märkte sich in Zyklen Bewegen</h4>
@@ -275,19 +275,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

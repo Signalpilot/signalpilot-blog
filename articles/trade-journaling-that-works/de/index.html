@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/de/">Blog</a><span class="breadcrumb-sep">›</span><a href="/de/?filter=practical">Praktisch</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category" data-reveal="fade">Praktisch</span>
-      <h1 class="article-title" data-reveal="up">Trading-Tagebuch Das Funktioniert: Was Aufzeichnen und Warum</h1>
+      <span class="article-category">Praktisch</span>
+      <h1 class="article-title">Trading-Tagebuch Das Funktioniert: Was Aufzeichnen und Warum</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 Min. Lesezeit</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Teilen:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Trading-Tagebuch Visualisierung"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Trading-Tagebuch Visualisierung"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Jedes Trading-Buch sagt, Sie sollen ein Tagebuch führen. Also starten Sie eins. Datum, Ticker, Einstieg, Ausstieg, P&L. Nach einem Monat haben Sie eine Tabelle voller Zahlen, die Sie nie ansehen.</p>
       <p>Das ist kein Tagebuchführen. Das ist Dateneingabe.</p>
@@ -195,7 +195,7 @@
       <p>Die Trader, die am schnellsten verbessern, sind die, die von jedem Trade lernen - nicht nur den schmerzhaften. Ein Tagebuch macht dieses Lernen systematisch.</p>
       <p>Einige analytische Tools reduzieren die manuelle Belastung durch automatische Kontexterfassung: welche Zyklusphase aktiv war als Sie einstiegen, ob das Regime Akkumulation oder Distribution zeigte, was der Konfluenz-Score zu der Zeit war. Wenn diese Daten bereits erfasst sind, kann sich Ihr Tagebuch auf die psychologischen und Prozesselemente konzentrieren, die wirklich menschliche Reflexion erfordern.</p>
       <hr>
-      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid">
         <a href="../../building-a-pre-trade-checklist/de/" class="related-card"><span class="related-category">Praktisch</span><h4>Eine Pre-Trade-Checkliste Erstellen</h4></a>
         <a href="../../what-profitable-traders-know/de/" class="related-card"><span class="related-category">Psychologie</span><h4>Was Profitable Trader Wissen</h4></a>
         <a href="../../rules-based-vs-discretionary/de/" class="related-card"><span class="related-category">Systeme</span><h4>Regelbasiertes vs Diskretionäres Trading</h4></a>
@@ -239,20 +239,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

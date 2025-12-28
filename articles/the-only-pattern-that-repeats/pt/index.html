@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=cycles">Ciclos de Mercado</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category" data-reveal="fade">Ciclos de Mercado</span>
-      <h1 class="article-title" data-reveal="up">O Único Padrão Que Realmente Se Repete nos Mercados</h1>
+      <span class="article-category">Ciclos de Mercado</span>
+      <h1 class="article-title">O Único Padrão Que Realmente Se Repete nos Mercados</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de leitura</span><span>Equipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartilhar:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="O único padrão que se repete"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="O único padrão que se repete"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Ombro-cabeça-ombro. Topos duplos. Bandeiras de alta. Cunhas. Os livros de trading estão cheios de padrões que supostamente se repetem.</p>
       <p>Aqui está o problema: eles não se repetem. Pelo menos, não de forma confiável o suficiente para operar.</p>
@@ -145,7 +145,7 @@
       <p>Aprenda a ver ciclos, e você aprende a ver o mercado. Todo o resto é apenas ruído.</p>
       <p>A análise de volume fortalece a identificação do ciclo. A detecção de regime mostrando acumulação vs distribuição confirma a fase do ciclo. As fitas de tendência OBV revelam se o dinheiro está entrando ou saindo. A pontuação de confluência diz quando múltiplos sistemas concordam na fase. O padrão do ciclo fica mais claro quando o volume confirma o que o preço sugere.</p>
       <hr>
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
         <a href="../../why-markets-move-in-cycles/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>Por Que os Mercados Se Movem em Ciclos</h4></a>
         <a href="../../cycles-within-cycles/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>Ciclos Dentro de Ciclos: Estrutura Multi-Timeframe</h4></a>
         <a href="../../why-your-indicators-keep-failing/pt/" class="related-card"><span class="related-category">Indicadores</span><h4>Por Que Seus Indicadores Continuam Falhando</h4></a>
@@ -189,20 +189,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Cikk</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Technikai Elemzés</span>
-          <h1 class="article-title" data-reveal="up">Ténylegesen Működő Chartminták (És Amelyek Nem)</h1>
+          <span class="article-category">Technikai Elemzés</span>
+          <h1 class="article-title">Ténylegesen Működő Chartminták (És Amelyek Nem)</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 perc olvasás</span>
             <span>Signal Pilot Csapat</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Chartminták vizualizáció" data-ai-prompt="Dark themed visualization showing classic chart patterns - a head and shoulders formation, a triangle consolidation, and a double bottom - rendered as glowing geometric shapes on a price chart. Clean lines with subtle gradient fills. Deep navy background with cyan and purple accent colors.">
         <figcaption class="ai-prompt">Sötét témájú vizualizáció klasszikus chartmintákkal - fej és vállak formáció, háromszög konszolidáció és dupla mélypont - izzó geometriai formákként ábrázolva egy árgrafikonon.</figcaption>
       </figure>
@@ -203,7 +203,7 @@
 
           <section class="related-articles">
             <h3>Kapcsolódó Cikkek</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../how-to-identify-a-trend/hu/" class="related-card">
                 <span class="related-category">Technikai Elemzés</span>
                 <h4>Hogyan Azonosítsunk Trendet</h4>
@@ -288,19 +288,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

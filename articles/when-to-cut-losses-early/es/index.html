@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=risk">Gestión de Riesgo</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
-      <span class="article-category" data-reveal="fade">Gestión de Riesgo</span>
-      <h1 class="article-title" data-reveal="up">Cuándo Cortar Pérdidas Antes (Antes de Que Tu Stop Sea Tocado)</h1>
+      <span class="article-category">Gestión de Riesgo</span>
+      <h1 class="article-title">Cuándo Cortar Pérdidas Antes (Antes de Que Tu Stop Sea Tocado)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lectura</span><span>Equipo Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartir:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualización de cortar pérdidas temprano"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualización de cortar pérdidas temprano"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Cada libro de trading te dice que respetes tu stop loss. Ponlo y olvídalo. Deja que la operación funcione.</p>
@@ -138,7 +138,7 @@
       <p>La habilidad está en distinguir análisis de emoción. Uno protege capital. El otro lo desangra a través de mil cortes miedosos.</p>
       <p>El seguimiento objetivo de ciclos ayuda aquí. Si entraste durante el markup y el sistema ahora muestra que la distribución está comenzando, eso es invalidación analítica de tesis - no miedo. Si el régimen de volumen cambió de acumulación a debilitamiento, el contexto cambió mediblemente. Las salidas basadas en datos eliminan la ambigüedad psicológica que hace tan difíciles los cortes tempranos.</p>
       <hr>
-      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
         <a href="../../stop-loss-placement/es/" class="related-card"><span class="related-category">Práctico</span><h4>Colocación de Stop Loss</h4></a>
         <a href="../../cycle-failures-and-what-they-mean/es/" class="related-card"><span class="related-category">Ciclos</span><h4>Fallos de Ciclo y Qué Significan</h4></a>
         <a href="../../revenge-trading-recovery/es/" class="related-card"><span class="related-category">Psicología</span><h4>Recuperación del Trading de Venganza</h4></a>
@@ -184,20 +184,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

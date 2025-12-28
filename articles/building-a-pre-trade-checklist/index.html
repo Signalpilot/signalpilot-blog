@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Article</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Practical</span>
-          <h1 class="article-title" data-reveal="up">Building a Pre-Trade Checklist That Actually Works</h1>
+          <span class="article-category">Practical</span>
+          <h1 class="article-title">Building a Pre-Trade Checklist That Actually Works</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min read</span>
             <span>Signal Pilot Team</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="hero.png" alt="Pre-trade checklist visualization" data-ai-prompt="Dark themed image of a glowing holographic checklist floating above a trading desk, with checkmarks appearing one by one. Trading screens in the background showing charts. Professional aesthetic with cyan and gold glowing elements against deep navy background.">
         <figcaption class="ai-prompt">Dark themed image of a glowing holographic checklist floating above a trading desk, with checkmarks appearing one by one. Trading screens in the background showing charts. Professional aesthetic with cyan and gold glowing elements against deep navy background.</figcaption>
       </figure>
@@ -230,7 +230,7 @@
 
           <section class="related-articles">
             <h3>Related Articles</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../3-questions-before-every-trade/" class="related-card">
                 <span class="related-category">Practical</span>
                 <h4>3 Questions to Ask Before Every Trade</h4>
@@ -314,19 +314,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

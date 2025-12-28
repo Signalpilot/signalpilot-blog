@@ -71,8 +71,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artikel</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Praktisch</span>
-          <h1 class="article-title" data-reveal="up">Hoe Te Handelen Rondom Nieuwsevents Zonder Vernietigd Te Worden</h1>
+          <span class="article-category">Praktisch</span>
+          <h1 class="article-title">Hoe Te Handelen Rondom Nieuwsevents Zonder Vernietigd Te Worden</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min leestijd</span>
             <span>Signal Pilot Team</span>
@@ -92,7 +92,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Nieuwshandel visualisatie" data-ai-prompt="Dark themed visualization of an economic calendar with major news events highlighted.">
         <figcaption class="ai-prompt">Donker thema visualisatie van een economische kalender met belangrijke nieuwsevents gemarkeerd.</figcaption>
       </figure>
@@ -245,7 +245,7 @@
 
           <section class="related-articles">
             <h3>Gerelateerde Artikelen</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../best-times-to-trade/nl/" class="related-card">
                 <span class="related-category">Markten</span>
                 <h4>Beste Tijden om te Handelen</h4>
@@ -313,19 +313,6 @@
       if (img.complete && img.naturalHeight > 0) { img.classList.add('loaded'); }
       else { img.addEventListener('load', () => img.classList.add('loaded')); }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

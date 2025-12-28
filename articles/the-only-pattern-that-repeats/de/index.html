@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/de/">Blog</a><span class="breadcrumb-sep">›</span><a href="/de/?filter=cycles">Marktzyklen</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category" data-reveal="fade">Marktzyklen</span>
-      <h1 class="article-title" data-reveal="up">Das Einzige Muster Das Sich Wirklich in den Märkten Wiederholt</h1>
+      <span class="article-category">Marktzyklen</span>
+      <h1 class="article-title">Das Einzige Muster Das Sich Wirklich in den Märkten Wiederholt</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 Min. Lesezeit</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Teilen:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Das einzige sich wiederholende Muster"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Das einzige sich wiederholende Muster"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Schulter-Kopf-Schulter. Doppelte Hochs. Bull-Flags. Keile. Trading-Bücher sind voll von Mustern, die sich angeblich wiederholen.</p>
       <p>Hier ist das Problem: Sie tun es nicht. Zumindest nicht zuverlässig genug zum Handeln.</p>
@@ -145,7 +145,7 @@
       <p>Lerne Zyklen zu sehen, und du lernst den Markt zu sehen. Alles andere ist nur Lärm.</p>
       <p>Volumenanalyse stärkt die Zyklus-Identifizierung. Regime-Erkennung, die Akkumulation vs Distribution zeigt, bestätigt die Zyklusphase. OBV-Trendbänder enthüllen, ob Geld hinein- oder herausfließt. Konfluenz-Scoring sagt dir, wann mehrere Systeme sich auf die Phase einigen. Das Zyklusmuster wird klarer, wenn das Volumen bestätigt, was der Preis suggeriert.</p>
       <hr>
-      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid">
         <a href="../../why-markets-move-in-cycles/de/" class="related-card"><span class="related-category">Zyklen</span><h4>Warum Sich Märkte in Zyklen Bewegen</h4></a>
         <a href="../../cycles-within-cycles/de/" class="related-card"><span class="related-category">Zyklen</span><h4>Zyklen in Zyklen: Multi-Zeitrahmen-Struktur</h4></a>
         <a href="../../why-your-indicators-keep-failing/de/" class="related-card"><span class="related-category">Indikatoren</span><h4>Warum Deine Indikatoren Ständig Versagen</h4></a>
@@ -189,20 +189,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

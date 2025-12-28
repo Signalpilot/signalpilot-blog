@@ -100,8 +100,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">記事</span>
           </nav>
-          <span class="article-category" data-reveal="fade">マーケットサイクル</span>
-          <h1 class="article-title" data-reveal="up">なぜ市場はサイクルで動くのか（そしてどう利益を得るか）</h1>
+          <span class="article-category">マーケットサイクル</span>
+          <h1 class="article-title">なぜ市場はサイクルで動くのか（そしてどう利益を得るか）</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読めます</span>
             <span>Signal Pilot チーム</span>
@@ -122,7 +122,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="マーケットサイクルの可視化" data-ai-prompt="Dark themed elegant visualization of market cycles - a beautiful sine wave showing the eternal rhythm of markets moving through accumulation, markup, distribution, decline phases. Labels for each phase. The cycle repeats endlessly. Deep navy background with glowing cyan and gold cycle wave, professional trading aesthetic.">
         <figcaption class="ai-prompt">Dark themed elegant visualization of market cycles - a beautiful sine wave showing the eternal rhythm of markets moving through accumulation, markup, distribution, decline phases. Labels for each phase. The cycle repeats endlessly. Deep navy background with glowing cyan and gold cycle wave, professional trading aesthetic.</figcaption>
       </figure>
@@ -206,7 +206,7 @@
 
           <section class="related-articles">
             <h3>関連記事</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../the-only-pattern-that-repeats/ja/" class="related-card">
                 <span class="related-category">サイクル</span>
                 <h4>本当に繰り返される唯一のパターン</h4>
@@ -282,20 +282,6 @@
       });
     }
     document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-  
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

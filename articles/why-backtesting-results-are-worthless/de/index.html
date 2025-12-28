@@ -91,8 +91,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artikel</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Indikatoren</span>
-          <h1 class="article-title" data-reveal="up">Warum Backtesting-Ergebnisse Wertlos Sind (Und Was Stattdessen Zu Tun Ist)</h1>
+          <span class="article-category">Indikatoren</span>
+          <h1 class="article-title">Warum Backtesting-Ergebnisse Wertlos Sind (Und Was Stattdessen Zu Tun Ist)</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 Min. Lesezeit</span>
             <span>Signal Pilot Team</span>
@@ -113,7 +113,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Visualisierung wertloser Backtesting-Ergebnisse" data-ai-prompt="Dark themed visualization of backtesting deception - a beautiful upward-trending equity curve on paper that crumbles or dissolves when transitioning to live trading. The gap between backtested results and reality. Paper profits vs real losses. Deep navy background with gold paper curve disintegrating into red reality.">
         <figcaption class="ai-prompt">Dark themed visualization of backtesting deception - a beautiful upward-trending equity curve on paper that crumbles or dissolves when transitioning to live trading. The gap between backtested results and reality. Paper profits vs real losses. Deep navy background with gold paper curve disintegrating into red reality.</figcaption>
       </figure>
@@ -225,7 +225,7 @@
 
           <section class="related-articles">
             <h3>Verwandte Artikel</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../the-repainting-problem/de/" class="related-card">
                 <span class="related-category">Indikatoren</span>
                 <h4>Das Repainting-Problem: Warum Dein Backtest Dich Belogen Hat</h4>
@@ -303,20 +303,6 @@
       });
     }
     document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-  
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

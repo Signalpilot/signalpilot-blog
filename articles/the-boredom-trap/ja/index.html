@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=psychology">心理学</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category" data-reveal="fade">心理学</span>
-      <h1 class="article-title" data-reveal="up">退屈の罠：何もしないことがしばしば正しいトレードである理由</h1>
+      <span class="article-category">心理学</span>
+      <h1 class="article-title">退屈の罠：何もしないことがしばしば正しいトレードである理由</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="退屈の罠の視覚化"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="退屈の罠の視覚化"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>2時間チャートを見ています。何もありません。価格は狭いレンジで揉み合っています。セットアップがトリガーしません。明確な方向性もありません。</p>
       <p>退屈しています。そしてその退屈さが何かをするよう叫んでいます。トレードをする。どんなトレードでも。ただトレーダーであることを感じたいだけ。</p>
@@ -147,7 +147,7 @@
       <p>最高のトレーダーは時間のほとんどを何もしないで過ごします。そしてそれがまさに彼らが利益を上げる理由です。</p>
       <p>サイクル認識は生産的な待機と無駄な時間を区別するのに役立ちます。現在のフェーズが明確な方向性のないミッドサイクルのチョップなら、待つのは正しい。複数のシステムでコンフルエンスが低いなら、待つのは正しい。しかしサイクルの移行が起こるとき、コンフルエンスが上昇するとき、ボリュームレジームがシフトするとき—それらは存在する価値のある瞬間です。データはいつ忍耐があなたに役立ち、いつ機会が到来するかを教えてくれます。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
         <a href="../../why-you-break-trading-rules/ja/" class="related-card"><span class="related-category">心理学</span><h4>なぜあなたはトレーディングルールを破り続けるのか</h4></a>
         <a href="../../the-confirmation-trap/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>確認の罠</h4></a>
         <a href="../../building-a-pre-trade-checklist/ja/" class="related-card"><span class="related-category">実践</span><h4>トレード前チェックリストの作成</h4></a>
@@ -191,20 +191,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ar/">المدونة</a><span class="breadcrumb-sep">›</span><a href="/ar/?filter=risk">إدارة المخاطر</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">مقال</span></nav>
-      <span class="article-category" data-reveal="fade">إدارة المخاطر</span>
-      <h1 class="article-title" data-reveal="up">حجم المركز 101: الرياضيات التي تبقيك في اللعبة</h1>
+      <span class="article-category">إدارة المخاطر</span>
+      <h1 class="article-title">حجم المركز 101: الرياضيات التي تبقيك في اللعبة</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 دقائق للقراءة</span><span>فريق Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">مشاركة:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="تصور أساسيات حجم المركز"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="تصور أساسيات حجم المركز"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>وجدت إعداداً رائعاً. احتمالية عالية، إبطال واضح، دخول مثالي. تزيد الحجم لأنك واثق.</p>
@@ -142,7 +142,7 @@
       <p>يمكنك التعافي من الخطأ. لا يمكنك التعافي من الإفلاس. حجّم وفقاً لذلك.</p>
       <p>يمكن لأنظمة تقييم الجودة أن تُعلم قرارات التحجيم بشكل أكبر. إعداد بتوافق قوي—محاذاة مرحلة الدورة، تأكيد الحجم، عدة مؤشرات متفقة—قد يبرر حجم المركز الكامل. إعداد هامشي بإشارات متضاربة قد يبرر نصف الحجم أو التجاوز. التحجيم القائم على البيانات يزيل العاطفة من المعادلة.</p>
       <hr>
-      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid">
         <a href="../../the-1-percent-rule/ar/" class="related-card"><span class="related-category">المخاطر</span><h4>قاعدة 1%</h4></a>
         <a href="../../when-to-size-up/ar/" class="related-card"><span class="related-category">عملي</span><h4>متى تزيد الحجم</h4></a>
         <a href="../../stop-loss-placement/ar/" class="related-card"><span class="related-category">عملي</span><h4>وضع وقف الخسارة</h4></a>
@@ -188,20 +188,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

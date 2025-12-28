@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ar/">المدونة</a><span class="breadcrumb-sep">›</span><a href="/ar/?filter=systems">أنظمة التداول</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">مقال</span></nav>
-      <span class="article-category" data-reveal="fade">أنظمة التداول</span>
-      <h1 class="article-title" data-reveal="up">التداول القائم على القواعد vs التقديري: أيهما يعمل فعلاً؟</h1>
+      <span class="article-category">أنظمة التداول</span>
+      <h1 class="article-title">التداول القائم على القواعد vs التقديري: أيهما يعمل فعلاً؟</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 دقائق للقراءة</span><span>فريق Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">مشاركة:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="التداول القائم على القواعد vs التقديري"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="التداول القائم على القواعد vs التقديري"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>عالم التداول مقسم إلى معسكرين.</p>
@@ -143,7 +143,7 @@
       <p>القواعد تتعامل مع ما لا يمكنك الوثوق به بنفسك. التقدير يتعامل مع ما لا تستطيع القواعد التقاطه. هذا هو الهيكل الذي يفوز.</p>
       <p>أنظمة المؤشرات المعيارية تجسد هذه الفلسفة. عندما يمكنك تشغيل أو إيقاف المكونات الفردية—اكتشاف الدورة، تنبيهات الضغط، SuperTrend، مناطق العرض/الطلب، مرشحات الاتجاه—فأنت تبني أساساً منهجياً لا يزال يسمح بالاختيار التقديري لأي القواعد تنطبق على الظروف الحالية. النظام يوفر الخيارات؛ الحكم يختار من بينها.</p>
       <hr>
-      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid">
         <a href="../../building-your-first-system/ar/" class="related-card"><span class="related-category">الأنظمة</span><h4>بناء نظام التداول الأول</h4></a>
         <a href="../../why-you-break-trading-rules/ar/" class="related-card"><span class="related-category">علم النفس</span><h4>لماذا تكسر قواعد التداول</h4></a>
         <a href="../../building-a-pre-trade-checklist/ar/" class="related-card"><span class="related-category">عملي</span><h4>بناء قائمة فحص ما قبل الصفقة</h4></a>
@@ -189,20 +189,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

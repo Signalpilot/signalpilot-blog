@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ru/">Блог</a><span class="breadcrumb-sep">›</span><a href="/ru/?filter=risk">Управление Рисками</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Статья</span></nav>
-      <span class="article-category" data-reveal="fade">Управление Рисками</span>
-      <h1 class="article-title" data-reveal="up">Правило 1%: Почему Профессиональные Трейдеры Рискуют Так Мало</h1>
+      <span class="article-category">Управление Рисками</span>
+      <h1 class="article-title">Правило 1%: Почему Профессиональные Трейдеры Рискуют Так Мало</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 мин чтения</span><span>Команда Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Поделиться:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Визуализация правила 1%"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Визуализация правила 1%"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>"Никогда не рискуйте более 1% вашего счёта на одной сделке."</p>
@@ -152,7 +152,7 @@
       <p>Трейдеры, которые игнорируют этот совет — те, кто финансирует счета трейдеров, которые ему следуют.</p>
       <p>Правило 1% работает лучше всего в сочетании с качественной фильтрацией. Если вы размещаете капитал в сетапах, где фаза цикла, объёмный режим и несколько осцилляторов выстраиваются в линию, ваш 1% идёт к более вероятным возможностям. Скоринг конфлюенции может помочь определить, какие сетапы заслуживают полного распределения, а какие стоит пропустить.</p>
       <hr>
-      <section class="related-articles"><h3>Похожие Статьи</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Похожие Статьи</h3><div class="related-grid">
         <a href="../../position-sizing-101/ru/" class="related-card"><span class="related-category">Риск</span><h4>Основы Размера Позиции 101</h4></a>
         <a href="../../when-to-cut-losses-early/ru/" class="related-card"><span class="related-category">Риск</span><h4>Когда Фиксировать Убытки Рано</h4></a>
         <a href="../../psychology-of-getting-stopped-out/ru/" class="related-card"><span class="related-category">Психология</span><h4>Психология Выбивания по Стопу</h4></a>
@@ -198,20 +198,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/nl/">Blog</a><span class="breadcrumb-sep">›</span><a href="/nl/?filter=practical">Praktisch</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category" data-reveal="fade">Praktisch</span>
-      <h1 class="article-title" data-reveal="up">Stop Loss Plaatsing: Waarom Die Van Jou Waarschijnlijk Verkeerd Is</h1>
+      <span class="article-category">Praktisch</span>
+      <h1 class="article-title">Stop Loss Plaatsing: Waarom Die Van Jou Waarschijnlijk Verkeerd Is</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Delen:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Stop loss plaatsing strategie"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Stop loss plaatsing strategie"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Je weet dat je stop losses nodig hebt. Elk tradingboek zegt het. Dus je plaatst er een.</p>
@@ -138,7 +138,7 @@
       <p>Je stop moet één vraag beantwoorden: "Waar is mijn thesis aantoonbaar fout?" Plaats de stop daar. Trade een grootte die dat verlies acceptabel maakt.</p>
       <p>Volume-gebaseerde niveaus kunnen betere stop plaatsing informeren. Wanneer je kunt zien waar daadwerkelijk volume is verhandeld - Volume Profile POC, Value Area grenzen, VWAP banden - plaats je stops relatief aan echte institutionele activiteit in plaats van willekeurige swing punten. Stops voorbij niveaus waar betekenisvol volume plaatsvond overleven ruis meestal beter.</p>
       <hr>
-      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
         <a href="../../psychology-of-getting-stopped-out/nl/" class="related-card"><span class="related-category">Psychologie</span><h4>De Psychologie van Uitgestopt Worden</h4></a>
         <a href="../../position-sizing-101/nl/" class="related-card"><span class="related-category">Risico</span><h4>Positiegrootte 101</h4></a>
         <a href="../../support-and-resistance-explained/nl/" class="related-card"><span class="related-category">Beginner</span><h4>Support en Resistance Uitgelegd</h4></a>
@@ -184,20 +184,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

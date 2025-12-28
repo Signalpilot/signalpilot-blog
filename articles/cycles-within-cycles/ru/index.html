@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Статья</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Рыночные Циклы</span>
-          <h1 class="article-title" data-reveal="up">Циклы Внутри Циклов: Фрактальная Природа Рынков</h1>
+          <span class="article-category">Рыночные Циклы</span>
+          <h1 class="article-title">Циклы Внутри Циклов: Фрактальная Природа Рынков</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
             <span>Команда Signal Pilot</span>
@@ -95,7 +95,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Визуализация циклов внутри циклов">
       </figure>
 
@@ -198,7 +198,7 @@
 
           <section class="related-articles">
             <h3>Связанные Статьи</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../multi-timeframe-confirmation/" class="related-card">
                 <span class="related-category">Индикаторы</span>
                 <h4>Мульти-Таймфреймовое Подтверждение: Когда Использовать</h4>
@@ -270,20 +270,6 @@
         });
       });
     }
-    document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

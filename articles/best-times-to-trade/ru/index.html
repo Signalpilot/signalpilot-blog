@@ -71,8 +71,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Статья</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Рынки</span>
-          <h1 class="article-title" data-reveal="up">Лучшее Время для Торговли: Сессии, Перекрытия и Когда Оставаться в Стороне</h1>
+          <span class="article-category">Рынки</span>
+          <h1 class="article-title">Лучшее Время для Торговли: Сессии, Перекрытия и Когда Оставаться в Стороне</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 мин чтения</span>
             <span>Команда Signal Pilot</span>
@@ -92,7 +92,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Визуализация торговых сессий" data-ai-prompt="Dark themed world map visualization showing three trading session zones.">
         <figcaption class="ai-prompt">Визуализация мировой карты в тёмной теме с тремя зонами торговых сессий.</figcaption>
       </figure>
@@ -227,7 +227,7 @@
 
           <section class="related-articles">
             <h3>Связанные Статьи</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../crypto-vs-forex-vs-stocks/ru/" class="related-card">
                 <span class="related-category">Рынки</span>
                 <h4>Крипто vs Форекс vs Акции</h4>
@@ -296,19 +296,6 @@
       if (img.complete && img.naturalHeight > 0) { img.classList.add('loaded'); }
       else { img.addEventListener('load', () => img.classList.add('loaded')); }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

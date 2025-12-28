@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=beginner foundations">Fondamenti</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
-      <span class="article-category" data-reveal="fade">Fondamenti per Principianti</span>
-      <h1 class="article-title" data-reveal="up">Supporto e Resistenza Spiegati: La Base di Ogni Trade</h1>
+      <span class="article-category">Fondamenti per Principianti</span>
+      <h1 class="article-title">Supporto e Resistenza Spiegati: La Base di Ogni Trade</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min di lettura</span><span>Team Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Condividi:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualizzazione dei livelli di supporto e resistenza"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Visualizzazione dei livelli di supporto e resistenza"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Ogni strategia di trading, non importa quanto complessa, si riduce in definitiva a una domanda: dove è probabile che entrino i compratori, e dove è probabile che appaiano i venditori?</p>
@@ -160,7 +160,7 @@
       <p>I moderni sistemi di plotting dei livelli vanno oltre il charting manuale calcolando automaticamente POC del Volume Profile (dove più volume è stato scambiato), bande VWAP su più periodi, e pivot basati sulle sessioni. I livelli basati sul volume realmente scambiato hanno più peso delle linee tracciate attraverso i punti di swing - rappresentano dove gli ordini istituzionali sono stati realmente eseguiti.</p>
       <p>Ogni strategia di trading sofisticata si costruisce su queste basi. Padroneggia prima supporto e resistenza, e tutto il resto diventa più chiaro.</p>
       <hr>
-      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
         <a href="../../volume-profile-basics/it/" class="related-card"><span class="related-category">Indicatori</span><h4>Basi del Volume Profile</h4></a>
         <a href="../../stop-loss-placement/it/" class="related-card"><span class="related-category">Pratico</span><h4>Posizionamento dello Stop Loss</h4></a>
         <a href="../../candlestick-basics/it/" class="related-card"><span class="related-category">Principiante</span><h4>Basi delle Candele</h4></a>
@@ -206,20 +206,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

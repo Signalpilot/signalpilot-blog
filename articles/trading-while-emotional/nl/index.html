@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artikel</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Psychologie</span>
-          <h1 class="article-title" data-reveal="up">Traden met Emoties: Waarom Je Gevoelens Je Misleiden</h1>
+          <span class="article-category">Psychologie</span>
+          <h1 class="article-title">Traden met Emoties: Waarom Je Gevoelens Je Misleiden</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min leestijd</span>
             <span>Signal Pilot Team</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Visualisatie van emotioneel traden" data-ai-prompt="Dark themed visualization of a trader's head/silhouette with various emotions swirling inside - fear, greed, excitement, anxiety shown as different colored abstract shapes. Each emotion distorts the trading chart they're viewing. The disconnect between feeling and reality. Deep navy background with emotion colors (red fear, green greed, yellow excitement).">
         <figcaption class="ai-prompt">Donker gethematiseerde visualisatie van het hoofd/silhouet van een trader met verschillende emoties die binnenin rondwervelen - angst, hebzucht, opwinding, bezorgdheid weergegeven als abstracte vormen in verschillende kleuren.</figcaption>
       </figure>
@@ -217,7 +217,7 @@
 
           <section class="related-articles">
             <h3>Gerelateerde Artikelen</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../revenge-trading-recovery/nl/" class="related-card">
                 <span class="related-category">Psychologie</span>
                 <h4>Herstel van Wraak-Trading: De Cyclus Doorbreken</h4>
@@ -301,19 +301,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

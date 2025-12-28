@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artikel</span>
           </nav>
-          <span class="article-category" data-reveal="fade">Praktisch</span>
-          <h1 class="article-title" data-reveal="up">Wanneer Opschalen: Verantwoord Je Positiegrootte Vergroten</h1>
+          <span class="article-category">Praktisch</span>
+          <h1 class="article-title">Wanneer Opschalen: Verantwoord Je Positiegrootte Vergroten</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span>
             <span>Signal Pilot Team</span>
@@ -95,7 +95,7 @@
         </div>
       </header>
 
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="Visualisatie van positiegrootte-opschaling" data-ai-prompt="Donker thema visualisatie van verantwoord opschalen van positiegrootte - een trap van toenemende positiegroottes, elke stap verdiend door consistente prestaties. Groeitraject van kleine naar grotere posities. Waarschuwingsindicatoren bij punten van te vroeg opschalen. Diep marineblauw achtergrond met gouden opstijgende trappen en groene groei-indicatoren.">
         <figcaption class="ai-prompt">Donker thema visualisatie van verantwoord opschalen van positiegrootte - een trap van toenemende positiegroottes, elke stap verdiend door consistente prestaties. Groeitraject van kleine naar grotere posities. Waarschuwingsindicatoren bij punten van te vroeg opschalen. Diep marineblauw achtergrond met gouden opstijgende trappen en groene groei-indicatoren.</figcaption>
       </figure>
@@ -216,7 +216,7 @@
 
           <section class="related-articles">
             <h3>Gerelateerde Artikelen</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../position-sizing-101/nl/" class="related-card">
                 <span class="related-category">Risico</span>
                 <h4>Positiegrootte 101: De Basis van Risicobeheer</h4>
@@ -298,19 +298,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

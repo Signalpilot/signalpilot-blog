@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=psychology">Pszichológia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
-      <span class="article-category" data-reveal="fade">Pszichológia</span>
-      <h1 class="article-title" data-reveal="up">Az Unalom Csapdája: Miért Gyakran a Helyes Trade a Semmittevés</h1>
+      <span class="article-category">Pszichológia</span>
+      <h1 class="article-title">Az Unalom Csapdája: Miért Gyakran a Helyes Trade a Semmittevés</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 perc olvasás</span><span>Signal Pilot Csapat</span></div>
           <div class="share-buttons">
             <span class="share-label">Megosztás:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Az unalom csapdájának vizualizációja"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Az unalom csapdájának vizualizációja"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Két órája grafikonokat nézel. Semmi. Az ár szűk tartományban ingadozik. Egyetlen setup sem triggerel. Nincs egyértelmű irány.</p>
       <p>Unatkozol. És ez az unalom ordít veled, hogy csinálj valamit. Vegyél fel egy trade-et. Bármelyiket. Csak hogy kereskedőnek érezd magad.</p>
@@ -147,7 +147,7 @@
       <p>A legjobb kereskedők idejük nagy részét semmittevéssel töltik. És pontosan ezért nyereségesek.</p>
       <p>A ciklus-tudatosság segít megkülönböztetni a produktív várakozást az elvesztegetett időtől. Ha a jelenlegi fázis egyértelmű irány nélküli mid-cycle chop, a várakozás helyes. Ha a confluence alacsony több rendszeren keresztül, a várakozás helyes. De amikor ciklus átmenetek történnek, amikor a confluence kiugrik, amikor a volumen rezsim változik—ezek azok a pillanatok, amikor érdemes jelen lenni. Az adatok megmondják, mikor szolgál a türelem és mikor érkezik a lehetőség.</p>
       <hr>
-      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
         <a href="../../why-you-break-trading-rules/hu/" class="related-card"><span class="related-category">Pszichológia</span><h4>Miért Szeged Folyton a Kereskedési Szabályaidat</h4></a>
         <a href="../../the-confirmation-trap/hu/" class="related-card"><span class="related-category">Indikátorok</span><h4>A Megerősítés Csapdája</h4></a>
         <a href="../../building-a-pre-trade-checklist/hu/" class="related-card"><span class="related-category">Gyakorlat</span><h4>Kereskedés Előtti Ellenőrzőlista Készítése</h4></a>
@@ -191,20 +191,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>

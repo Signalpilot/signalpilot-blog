@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">المقال</span>
           </nav>
-          <span class="article-category" data-reveal="fade">دورات السوق</span>
-          <h1 class="article-title" data-reveal="up">تحديد طول الدورة: متى تتوقع الانعكاس التالي</h1>
+          <span class="article-category">دورات السوق</span>
+          <h1 class="article-title">تحديد طول الدورة: متى تتوقع الانعكاس التالي</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 دقائق للقراءة</span>
             <span>فريق Signal Pilot</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image" data-reveal="scale-up">
+      <figure class="hero-image">
         <img src="../hero.png" alt="تصور تحديد طول الدورة" data-ai-prompt="Dark themed visualization of market cycles with measuring tools - a sine wave with ruler/measuring tape overlaid showing cycle duration. Clock or time markers at cycle peaks and troughs. Anticipating the next turn point highlighted with glowing prediction zone. Purple, cyan, and gold color scheme against deep navy background. Professional trading aesthetic.">
         <figcaption class="ai-prompt">تصور بسمة داكنة لدورات السوق مع أدوات القياس - موجة جيبية مع مسطرة/شريط قياس يظهر مدة الدورة. ساعة أو علامات زمنية عند قمم وقيعان الدورة. توقع نقطة الانعكاس التالية مع منطقة تنبؤ متوهجة. نظام ألوان بنفسجي وسماوي وذهبي على خلفية زرقاء داكنة. جمالية تداول احترافية.</figcaption>
       </figure>
@@ -191,7 +191,7 @@
 
           <section class="related-articles">
             <h3>مقالات ذات صلة</h3>
-            <div class="related-grid" data-reveal-stagger>
+            <div class="related-grid">
               <a href="../../why-markets-move-in-cycles/ar/" class="related-card">
                 <span class="related-category">الدورات</span>
                 <h4>لماذا تتحرك الأسواق في دورات</h4>
@@ -275,19 +275,6 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
   </script>
 </body>
 </html>

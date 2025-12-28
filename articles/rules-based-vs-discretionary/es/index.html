@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=systems">Sistemas de Trading</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
-      <span class="article-category" data-reveal="fade">Sistemas de Trading</span>
-      <h1 class="article-title" data-reveal="up">Trading Basado en Reglas vs Discrecional: ¿Cuál Funciona Realmente?</h1>
+      <span class="article-category">Sistemas de Trading</span>
+      <h1 class="article-title">Trading Basado en Reglas vs Discrecional: ¿Cuál Funciona Realmente?</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span><span>Equipo Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartir:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Trading basado en reglas vs discrecional"></figure>
+    <figure class="hero-image"><img src="../hero.png" alt="Trading basado en reglas vs discrecional"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>El mundo del trading está dividido en dos campos.</p>
@@ -143,7 +143,7 @@
       <p>Las reglas manejan lo que no puedes confiarte a ti mismo. La discreción maneja lo que las reglas no pueden capturar. Esa es la estructura que gana.</p>
       <p>Los sistemas de indicadores modulares encarnan esta filosofía. Cuando puedes activar o desactivar componentes individuales—detección de ciclos, alertas de compresión, SuperTrend, zonas de oferta/demanda, filtros de tendencia—estás construyendo una base sistemática que aún permite la selección discrecional de qué reglas aplicar a las condiciones actuales. El sistema proporciona opciones; el juicio selecciona entre ellas.</p>
       <hr>
-      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid" data-reveal-stagger>
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
         <a href="../../building-your-first-system/es/" class="related-card"><span class="related-category">Sistemas</span><h4>Construyendo Tu Primer Sistema de Trading</h4></a>
         <a href="../../why-you-break-trading-rules/es/" class="related-card"><span class="related-category">Psicología</span><h4>Por Qué Rompes Tus Reglas de Trading</h4></a>
         <a href="../../building-a-pre-trade-checklist/es/" class="related-card"><span class="related-category">Práctico</span><h4>Construyendo una Lista de Verificación Pre-Trade</h4></a>
@@ -192,20 +192,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  </script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
 </body>
 </html>
