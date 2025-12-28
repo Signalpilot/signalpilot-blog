@@ -98,8 +98,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Articolo</span>
           </nav>
-          <span class="article-category">Prodotto</span>
-          <h1 class="article-title">Dentro Signal Pilot: Come i 7 Indicatori Lavorano Insieme</h1>
+          <span class="article-category" data-reveal="fade">Prodotto</span>
+          <h1 class="article-title" data-reveal="up">Dentro Signal Pilot: Come i 7 Indicatori Lavorano Insieme</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 min di lettura</span>
             <span>Team Signal Pilot</span>
@@ -119,7 +119,7 @@
         </div>
       </header>
 
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Sette indicatori Signal Pilot integrati" data-ai-prompt="Dashboard futuristica a tema scuro che mostra 7 nodi interconnessi luminosi disposti in un pattern esagonale, ogni nodo di una diversa tonalità di ciano e blu che rappresenta diversi indicatori.">
         <figcaption class="ai-prompt">Dashboard futuristica a tema scuro che mostra 7 nodi interconnessi luminosi disposti in un pattern esagonale, ogni nodo di una diversa tonalità di ciano e blu che rappresenta diversi indicatori. Linee di connessione luminose tra i nodi pulsano con il flusso di dati. Hub centrale che sintetizza tutti gli input. Estetica di trading professionale con sfondo aurora blu navy scuro e viola, elementi UI olografici.</figcaption>
       </figure>
@@ -421,6 +421,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/es/">Blog</a><span class="breadcrumb-sep">›</span><a href="/es/?filter=beginner foundations">Fundamentos</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artículo</span></nav>
-      <span class="article-category">Fundamentos para Principiantes</span>
-      <h1 class="article-title">Soporte y Resistencia Explicados: La Base de Cada Operación</h1>
+      <span class="article-category" data-reveal="fade">Fundamentos para Principiantes</span>
+      <h1 class="article-title" data-reveal="up">Soporte y Resistencia Explicados: La Base de Cada Operación</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span><span>Equipo Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartir:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Visualización de niveles de soporte y resistencia"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualización de niveles de soporte y resistencia"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Cada estrategia de trading, sin importar cuán compleja sea, finalmente se reduce a una pregunta: ¿dónde es probable que entren los compradores, y dónde es probable que aparezcan los vendedores?</p>
@@ -160,7 +160,7 @@
       <p>Los sistemas modernos de trazado de niveles van más allá del gráfico manual calculando el POC del Perfil de Volumen (donde más volumen se transaccionó), bandas VWAP a través de múltiples períodos, y pivotes basados en sesiones automáticamente. Los niveles basados en volumen real comerciado tienen más peso que líneas dibujadas a través de puntos de swing - representan donde las órdenes institucionales realmente se llenaron.</p>
       <p>Cada estrategia de trading sofisticada se construye sobre estos básicos. Domina el soporte y la resistencia primero, y todo lo demás se vuelve más claro.</p>
       <hr>
-      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid">
+      <section class="related-articles"><h3>Artículos Relacionados</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../volume-profile-basics/es/" class="related-card"><span class="related-category">Indicadores</span><h4>Conceptos Básicos del Perfil de Volumen</h4></a>
         <a href="../../stop-loss-placement/es/" class="related-card"><span class="related-category">Práctico</span><h4>Colocación de Stop Loss</h4></a>
         <a href="../../candlestick-basics/es/" class="related-card"><span class="related-category">Principiante</span><h4>Conceptos Básicos de Velas</h4></a>
@@ -206,6 +206,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

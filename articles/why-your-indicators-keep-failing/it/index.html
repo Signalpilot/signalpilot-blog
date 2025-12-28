@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=indicators">Indicatori</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
-      <span class="article-category">Indicatori</span>
-      <h1 class="article-title">Perché I Tuoi Indicatori Continuano a Fallire (E Cosa Funziona Davvero)</h1>
+      <span class="article-category" data-reveal="fade">Indicatori</span>
+      <h1 class="article-title" data-reveal="up">Perché I Tuoi Indicatori Continuano a Fallire (E Cosa Funziona Davvero)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min lettura</span><span>Team Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Condividi:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Segnali indicatori conflittuali"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Segnali indicatori conflittuali"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Hai RSI, MACD, Bande di Bollinger, forse qualche media mobile. Il tuo grafico sembra che un arcobaleno ci sia esploso sopra. Eppure continui a essere fatto a pezzi.</p>
@@ -148,7 +148,7 @@
       <p>Gli indicatori fanno il loro lavoro internamente. Tu vedi l'output sintetizzato - non dodici opinioni in conflitto, ma un'immagine coerente del mercato.</p>
       <p>Signal Pilot è stato costruito su questo principio: sette indicatori, ognuno che risponde a una domanda diversa, tutti progettati per lavorare insieme. Fase del ciclo da Pentarch. Regime di volume da Volume Oracle. Livelli chiave da Janus Atlas. Punteggio di confluenza da OmniDeck. La suite ti dà contesto, non solo segnali.</p>
       <hr>
-      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../the-repainting-problem/it/" class="related-card"><span class="related-category">Indicatori</span><h4>Il Problema del Repainting</h4></a>
         <a href="../../inside-signal-pilot/it/" class="related-card"><span class="related-category">Signal Pilot</span><h4>Dentro Signal Pilot</h4></a>
         <a href="../../the-only-pattern-that-repeats/it/" class="related-card"><span class="related-category">Cicli</span><h4>L'Unico Pattern Che Si Ripete</h4></a>
@@ -194,6 +194,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

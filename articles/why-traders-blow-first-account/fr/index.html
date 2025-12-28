@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=psychology">Psychologie</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
-      <span class="article-category">Psychologie</span>
-      <h1 class="article-title">La Vraie Raison Pour Laquelle La Plupart des Traders Grillent Leur Premier Compte</h1>
+      <span class="article-category" data-reveal="fade">Psychologie</span>
+      <h1 class="article-title" data-reveal="up">La Vraie Raison Pour Laquelle La Plupart des Traders Grillent Leur Premier Compte</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de lecture</span><span>Équipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Partager:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Spirale de perte de compte"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Spirale de perte de compte"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>C'est presque un rite de passage. Demandez à n'importe quel trader expérimenté son premier compte, et vous entendrez la même histoire : gains précoces, confiance grandissante, taille croissante, puis tout perdu.</p>
@@ -132,7 +132,7 @@
       <p>Maintenant vous avez des données qui disent "attendez" quand les émotions disent "allez-y." Ce conflit crée une pause. Et cette pause pourrait sauver votre compte.</p>
       <p>Les meilleurs traders n'ont pas une discipline surhumaine. Ils ont des systèmes qui signalent quand les conditions ne correspondent pas à leur confiance. Quand les données disent prudence et votre instinct dit agressivité, les données ont généralement raison.</p>
       <hr>
-      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../position-sizing-101/fr/" class="related-card"><span class="related-category">Risque</span><h4>Dimensionnement de Position 101</h4></a>
         <a href="../../revenge-trading-recovery/fr/" class="related-card"><span class="related-category">Psychologie</span><h4>Récupération du Trading de Vengeance</h4></a>
         <a href="../../when-to-size-up/fr/" class="related-card"><span class="related-category">Pratique</span><h4>Quand Augmenter la Taille</h4></a>
@@ -178,6 +178,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

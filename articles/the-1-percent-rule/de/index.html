@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/de/">Blog</a><span class="breadcrumb-sep">›</span><a href="/de/?filter=risk">Risikomanagement</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category">Risikomanagement</span>
-      <h1 class="article-title">Die 1%-Regel: Warum Professionelle Trader So Wenig Riskieren</h1>
+      <span class="article-category" data-reveal="fade">Risikomanagement</span>
+      <h1 class="article-title" data-reveal="up">Die 1%-Regel: Warum Professionelle Trader So Wenig Riskieren</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 Min. Lesezeit</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Teilen:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Visualisierung der 1%-Regel"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualisierung der 1%-Regel"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>"Riskieren Sie nie mehr als 1% Ihres Kontos bei einem einzelnen Trade."</p>
@@ -152,7 +152,7 @@
       <p>Die Trader, die diesen Rat ignorieren, finanzieren die Konten der Trader, die ihm folgen.</p>
       <p>Die 1%-Regel funktioniert am besten in Kombination mit Qualitätsfilterung. Wenn Sie Kapital in Setups einsetzen, bei denen Zyklusphase, Volumenregime und mehrere Oszillatoren übereinstimmen, geht Ihr 1% in Richtung höherer Wahrscheinlichkeits-Chancen. Konfluenz-Scoring kann helfen zu identifizieren, welche Setups volle Allokation verdienen versus welche einen Pass verdienen.</p>
       <hr>
-      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid">
+      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../position-sizing-101/de/" class="related-card"><span class="related-category">Risiko</span><h4>Positionsgrößen-Grundlagen 101</h4></a>
         <a href="../../when-to-cut-losses-early/de/" class="related-card"><span class="related-category">Risiko</span><h4>Wann Verluste Früh Begrenzen</h4></a>
         <a href="../../psychology-of-getting-stopped-out/de/" class="related-card"><span class="related-category">Psychologie</span><h4>Die Psychologie des Ausgestoppt-Werdens</h4></a>
@@ -198,6 +198,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

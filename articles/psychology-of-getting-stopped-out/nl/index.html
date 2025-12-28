@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/nl/">Blog</a><span class="breadcrumb-sep">›</span><a href="/nl/?filter=psychology">Psychologie</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category">Psychologie</span>
-      <h1 class="article-title">De Psychologie van Uitgestopt Worden (En Waarom Het Blijft Gebeuren)</h1>
+      <span class="article-category" data-reveal="fade">Psychologie</span>
+      <h1 class="article-title" data-reveal="up">De Psychologie van Uitgestopt Worden (En Waarom Het Blijft Gebeuren)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min leestijd</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Delen:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Stop loss psychologie visualisatie"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Stop loss psychologie visualisatie"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Je analyse was perfect. De entry was schoon. De stop loss was logisch. Toen raakte de prijs precies je stop, keerde onmiddellijk om en bereikte je target zonder jou.</p>
@@ -111,7 +111,7 @@
       <p>De markt jaagt niet specifiek op jou. Het jaagt op iedereen op dezelfde voor de hand liggende niveaus. Stop met voor de hand liggend zijn. Neem het niet persoonlijk. En stop met het verplaatsen van je stops.</p>
       <p>Volumegebaseerde niveaus kunnen hier helpen. In plaats van stops op voor de hand liggende swing-punten te plaatsen, overweeg niveaus afgeleid van daadwerkelijk verhandeld volume—POC, Value Area grenzen, of VWAP-banden. Deze niveaus hebben institutionele betekenis voorbij visuele voor de hand liggendheid. Stops geplaatst voorbij waar echt volume plaatsvond overleven doorgaans de jachten gericht op willekeurige structuur.</p>
       <hr>
-      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
+      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../stop-loss-placement/nl/" class="related-card"><span class="related-category">Praktisch</span><h4>Stop Loss Plaatsing</h4></a>
         <a href="../../revenge-trading-recovery/nl/" class="related-card"><span class="related-category">Psychologie</span><h4>Wraak Trading Herstel</h4></a>
         <a href="../../the-1-percent-rule/nl/" class="related-card"><span class="related-category">Risico</span><h4>De 1% Regel</h4></a>
@@ -157,6 +157,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

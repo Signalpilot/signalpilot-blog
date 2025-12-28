@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ar/">المدونة</a><span class="breadcrumb-sep">›</span><a href="/ar/?filter=risk">إدارة المخاطر</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">مقال</span></nav>
-      <span class="article-category">إدارة المخاطر</span>
-      <h1 class="article-title">قاعدة 1%: لماذا يخاطر المتداولون المحترفون بهذا القدر القليل</h1>
+      <span class="article-category" data-reveal="fade">إدارة المخاطر</span>
+      <h1 class="article-title" data-reveal="up">قاعدة 1%: لماذا يخاطر المتداولون المحترفون بهذا القدر القليل</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 دقائق للقراءة</span><span>فريق Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">مشاركة:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="تصور قاعدة 1%"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="تصور قاعدة 1%"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>"لا تخاطر أبداً بأكثر من 1% من حسابك في صفقة واحدة."</p>
@@ -152,7 +152,7 @@
       <p>المتداولون الذين يتجاهلون هذه النصيحة هم من يمولون حسابات المتداولين الذين يتبعونها.</p>
       <p>قاعدة 1% تعمل بشكل أفضل عند دمجها مع تصفية الجودة. إذا كنت تنشر رأس المال نحو إعدادات حيث مرحلة الدورة ونظام الحجم ومؤشرات تذبذب متعددة تتوافق، فإن 1% الخاص بك يتجه نحو فرص ذات احتمالية أعلى. تسجيل التقاطع يمكن أن يساعد في تحديد الإعدادات التي تستحق التخصيص الكامل مقابل تلك التي تستحق التجاوز.</p>
       <hr>
-      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid">
+      <section class="related-articles"><h3>مقالات ذات صلة</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../position-sizing-101/ar/" class="related-card"><span class="related-category">المخاطر</span><h4>أساسيات تحديد حجم الصفقة 101</h4></a>
         <a href="../../when-to-cut-losses-early/ar/" class="related-card"><span class="related-category">المخاطر</span><h4>متى تقطع الخسائر مبكراً</h4></a>
         <a href="../../psychology-of-getting-stopped-out/ar/" class="related-card"><span class="related-category">علم النفس</span><h4>سيكولوجية تفعيل وقف الخسارة</h4></a>
@@ -198,6 +198,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

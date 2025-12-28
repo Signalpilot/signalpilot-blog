@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artículo</span>
           </nav>
-          <span class="article-category">Ciclos de Mercado</span>
-          <h1 class="article-title">Acumulación vs Distribución: Leyendo Lo Que el Gráfico No Te Dice</h1>
+          <span class="article-category" data-reveal="fade">Ciclos de Mercado</span>
+          <h1 class="article-title" data-reveal="up">Acumulación vs Distribución: Leyendo Lo Que el Gráfico No Te Dice</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span>
             <span>Equipo Signal Pilot</span>
@@ -95,7 +95,7 @@
         </div>
       </header>
 
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Visualización de Acumulación vs Distribución" data-ai-prompt="Dark themed financial chart showing two contrasting phases - left side showing accumulation with subtle green undertones and volume bars building at bottom, right side showing distribution with red undertones and volume at top of range. Split composition with glowing dividing line. Professional trading aesthetic, deep navy and purple background.">
         <figcaption class="ai-prompt">Dark themed financial chart showing two contrasting phases - left side showing accumulation with subtle green undertones and volume bars building at bottom, right side showing distribution with red undertones and volume at top of range. Split composition with glowing dividing line. Professional trading aesthetic, deep navy and purple background.</figcaption>
       </figure>
@@ -160,7 +160,7 @@
 
           <section class="related-articles">
             <h3>Artículos Relacionados</h3>
-            <div class="related-grid">
+            <div class="related-grid" data-reveal-stagger>
               <a href="../../how-smart-money-moves/es/" class="related-card">
                 <span class="related-category">Ciclos</span>
                 <h4>Cómo el Dinero Inteligente Realmente Mueve los Mercados</h4>
@@ -247,6 +247,20 @@
         langDropdown.classList.remove('active');
       }
     });
-  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

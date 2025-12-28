@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/fr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/fr/?filter=psychology">Psychologie</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Article</span></nav>
-      <span class="article-category">Psychologie</span>
-      <h1 class="article-title">Le Piège de l'Ennui : Pourquoi Ne Rien Faire Est Souvent le Bon Trade</h1>
+      <span class="article-category" data-reveal="fade">Psychologie</span>
+      <h1 class="article-title" data-reveal="up">Le Piège de l'Ennui : Pourquoi Ne Rien Faire Est Souvent le Bon Trade</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 min de lecture</span><span>Équipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Partager:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Visualisation du piège de l'ennui dans le trading"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualisation du piège de l'ennui dans le trading"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Vous regardez des graphiques depuis deux heures. Rien. Le prix oscille dans une fourchette étroite. Aucun setup ne se déclenche. Pas de direction claire.</p>
@@ -151,7 +151,7 @@
       <p>Les meilleurs traders passent la plupart de leur temps à ne rien faire. Et c'est exactement pourquoi ils sont rentables.</p>
       <p>La conscience des cycles aide à distinguer l'attente productive du temps perdu. Si la phase actuelle est un chop de mi-cycle sans direction claire, attendre est correct. Si la confluence est faible sur plusieurs systèmes, attendre est correct. Mais quand les transitions de cycle se produisent, quand la confluence augmente, quand le régime de volume change - ce sont les moments pour lesquels il vaut la peine d'être présent. Les données vous disent quand la patience vous sert et quand l'opportunité arrive.</p>
       <hr>
-      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid">
+      <section class="related-articles"><h3>Articles Connexes</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../why-you-break-trading-rules/fr/" class="related-card"><span class="related-category">Psychologie</span><h4>Pourquoi Vous Brisez Vos Règles de Trading</h4></a>
         <a href="../../the-confirmation-trap/fr/" class="related-card"><span class="related-category">Indicateurs</span><h4>Le Piège de la Confirmation</h4></a>
         <a href="../../building-a-pre-trade-checklist/fr/" class="related-card"><span class="related-category">Pratique</span><h4>Construire une Checklist Pré-Trade</h4></a>
@@ -197,6 +197,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

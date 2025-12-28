@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/de/">Blog</a><span class="breadcrumb-sep">›</span><a href="/de/?filter=psychology">Psychologie</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category">Psychologie</span>
-      <h1 class="article-title">Der Wahre Grund Warum Die Meisten Trader Ihr Erstes Konto Sprengen</h1>
+      <span class="article-category" data-reveal="fade">Psychologie</span>
+      <h1 class="article-title" data-reveal="up">Der Wahre Grund Warum Die Meisten Trader Ihr Erstes Konto Sprengen</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 Min. Lesezeit</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Teilen:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Kontoverlust-Spirale"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Kontoverlust-Spirale"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Es ist fast ein Übergangsritual. Fragen Sie einen erfahrenen Trader nach seinem ersten Konto, und Sie werden dieselbe Geschichte hören: frühe Gewinne, wachsendes Selbstvertrauen, steigende Größe, dann alles weg.</p>
@@ -132,7 +132,7 @@
       <p>Jetzt hast du Daten, die "warte" sagen, wenn Emotionen "los" sagen. Dieser Konflikt erzeugt Pause. Und diese Pause könnte dein Konto retten.</p>
       <p>Die besten Trader haben keine übermenschliche Disziplin. Sie haben Systeme, die signalisieren, wenn die Bedingungen nicht zu ihrem Vertrauen passen. Wenn die Daten Vorsicht sagen und dein Bauchgefühl Aggression, haben die Daten normalerweise recht.</p>
       <hr>
-      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid">
+      <section class="related-articles"><h3>Verwandte Artikel</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../position-sizing-101/de/" class="related-card"><span class="related-category">Risiko</span><h4>Positionsgrößenbestimmung 101</h4></a>
         <a href="../../revenge-trading-recovery/de/" class="related-card"><span class="related-category">Psychologie</span><h4>Erholung vom Rache-Trading</h4></a>
         <a href="../../when-to-size-up/de/" class="related-card"><span class="related-category">Praktisch</span><h4>Wann Man die Größe Erhöht</h4></a>
@@ -178,6 +178,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

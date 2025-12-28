@@ -98,8 +98,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">記事</span>
           </nav>
-          <span class="article-category">製品</span>
-          <h1 class="article-title">Signal Pilotの内部：7つのインジケーターがどう連携するか</h1>
+          <span class="article-category" data-reveal="fade">製品</span>
+          <h1 class="article-title" data-reveal="up">Signal Pilotの内部：7つのインジケーターがどう連携するか</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10分で読了</span>
             <span>Signal Pilot チーム</span>
@@ -119,7 +119,7 @@
         </div>
       </header>
 
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="7つの統合されたSignal Pilotインジケーター" data-ai-prompt="ダークテーマの未来的なダッシュボード、六角形パターンで配置された7つの相互接続された光るノード、各ノードは異なるインジケーターを表すシアンとブルーの異なる色調。">
         <figcaption class="ai-prompt">ダークテーマの未来的なダッシュボード、六角形パターンで配置された7つの相互接続された光るノード、各ノードは異なるインジケーターを表すシアンとブルーの異なる色調。ノード間の光る接続線がデータフローでパルスする。中央ハブがすべての入力を統合。深いネイビーとパープルのオーロラ背景、ホログラフィックUI要素を持つプロフェッショナルなトレーディング美学。</figcaption>
       </figure>
@@ -421,6 +421,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

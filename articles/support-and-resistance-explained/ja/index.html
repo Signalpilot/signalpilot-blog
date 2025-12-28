@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=beginner foundations">初心者基礎</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category">初心者基礎</span>
-      <h1 class="article-title">サポートとレジスタンスの解説：すべてのトレードの基礎</h1>
+      <span class="article-category" data-reveal="fade">初心者基礎</span>
+      <h1 class="article-title" data-reveal="up">サポートとレジスタンスの解説：すべてのトレードの基礎</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="サポートとレジスタンスレベルの視覚化"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="サポートとレジスタンスレベルの視覚化"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>すべてのトレード戦略は、どれほど複雑でも、最終的に一つの質問に帰着する：どこで買い手が参入し、どこで売り手が現れるか？</p>
@@ -158,7 +158,7 @@
       <p>モダンなレベルプロッティングシステムは、手動チャーティングを超えて、ボリュームプロファイルPOC（最も取引が多かった場所）、複数期間にわたるVWAPバンド、セッションベースのピボットを自動計算します。実際の取引ボリュームに基づくレベルは、スイングポイントを通る線よりも重みがあります - それらは機関投資家の注文が実際に約定した場所を表しています。</p>
       <p>すべての洗練されたトレーディング戦略はこれらの基本の上に構築されています。まずサポートとレジスタンスをマスターすれば、他のすべてがより明確になります。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../volume-profile-basics/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>ボリュームプロファイルの基礎</h4></a>
         <a href="../../stop-loss-placement/ja/" class="related-card"><span class="related-category">実践</span><h4>ストップロスの配置</h4></a>
         <a href="../../candlestick-basics/ja/" class="related-card"><span class="related-category">初心者</span><h4>ローソク足の基礎</h4></a>
@@ -204,6 +204,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

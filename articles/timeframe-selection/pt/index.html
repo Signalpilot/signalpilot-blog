@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=practical">Prático</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category">Prático</span>
-      <h1 class="article-title">Seleção de Timeframe: Por Que Importa Mais Que Seu Indicador</h1>
+      <span class="article-category" data-reveal="fade">Prático</span>
+      <h1 class="article-title" data-reveal="up">Seleção de Timeframe: Por Que Importa Mais Que Seu Indicador</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de leitura</span><span>Equipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartilhar:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image"><img src="../hero.png" alt="Visualização de seleção de timeframe"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualização de seleção de timeframe"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Mesmo indicador. Mesmas configurações. Mesmo ativo. Resultados completamente diferentes em timeframes diferentes.</p>
       <p>O gráfico de 5 minutos diz comprar. O gráfico de 4 horas diz vender. O gráfico diário diz esperar. Quem está certo?</p>
@@ -143,7 +143,7 @@
       <p>Um indicador médio no timeframe certo supera um indicador excelente no errado.</p>
       <p>Alguns sistemas incorporam consciência multi-timeframe diretamente: confirmação de regime HTF mostrando se a estrutura diária ou semanal suporta seu sinal de timeframe de entrada, ou VWAP multi-período mostrando onde está o valor em diferentes horizontes. Quando a ferramenta lida com alinhamento de timeframe internamente, você vê se o contexto suporta sua operação sem verificar manualmente múltiplos gráficos.</p>
       <hr>
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../multi-timeframe-confirmation/pt/" class="related-card"><span class="related-category">Indicadores</span><h4>Confirmação Multi-Timeframe: Quando Usar</h4></a>
         <a href="../../cycles-within-cycles/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>Ciclos Dentro de Ciclos: Estrutura Multi-Timeframe</h4></a>
         <a href="../../identifying-cycle-length/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>Identificando a Duração do Ciclo</h4></a>
@@ -187,6 +187,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

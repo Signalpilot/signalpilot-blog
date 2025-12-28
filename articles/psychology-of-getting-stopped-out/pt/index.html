@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=psychology">Psicologia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category">Psicologia</span>
-      <h1 class="article-title">A Psicologia de Ser Estopado (E Por Que Continua Acontecendo)</h1>
+      <span class="article-category" data-reveal="fade">Psicologia</span>
+      <h1 class="article-title" data-reveal="up">A Psicologia de Ser Estopado (E Por Que Continua Acontecendo)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de leitura</span><span>Equipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartilhar:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Visualização psicologia de stop loss"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualização psicologia de stop loss"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Sua análise estava perfeita. A entrada estava limpa. O stop loss era lógico. Então o preço tocou seu stop no tick exato, reverteu imediatamente e atingiu seu alvo sem você.</p>
@@ -111,7 +111,7 @@
       <p>O mercado não está caçando você especificamente. Está caçando todos nos mesmos níveis óbvios. Pare de ser óbvio. Não leve para o lado pessoal. E pare de mover seus stops.</p>
       <p>Níveis baseados em volume podem ajudar aqui. Em vez de colocar stops em pontos de swing óbvios, considere níveis derivados do volume realmente transacionado—POC, limites da Área de Valor, ou bandas VWAP. Esses níveis têm significado institucional além da obviedade visual. Stops colocados além de onde o volume real ocorreu tendem a sobreviver às caçadas visando estrutura arbitrária.</p>
       <hr>
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../stop-loss-placement/pt/" class="related-card"><span class="related-category">Prático</span><h4>Posicionamento de Stop Loss</h4></a>
         <a href="../../revenge-trading-recovery/pt/" class="related-card"><span class="related-category">Psicologia</span><h4>Recuperação do Trading de Vingança</h4></a>
         <a href="../../the-1-percent-rule/pt/" class="related-card"><span class="related-category">Risco</span><h4>A Regra do 1%</h4></a>
@@ -157,6 +157,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

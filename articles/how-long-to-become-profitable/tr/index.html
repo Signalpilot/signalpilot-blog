@@ -71,8 +71,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Makale</span>
           </nav>
-          <span class="article-category">Psikoloji</span>
-          <h1 class="article-title">Kârlı Bir Trader Olmak Gerçekten Ne Kadar Sürer?</h1>
+          <span class="article-category" data-reveal="fade">Psikoloji</span>
+          <h1 class="article-title" data-reveal="up">Kârlı Bir Trader Olmak Gerçekten Ne Kadar Sürer?</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 dk okuma</span>
             <span>Signal Pilot Ekibi</span>
@@ -92,7 +92,7 @@
         </div>
       </header>
 
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Trading yolculuğu görselleştirmesi" data-ai-prompt="Dark themed visualization of a winding path or timeline showing the trading journey from beginner to profitable.">
         <figcaption class="ai-prompt">Başlangıçtan kârlı trader'a giden yolun kilometre taşlarıyla görselleştirilmesi.</figcaption>
       </figure>
@@ -297,6 +297,19 @@
       if (img.complete && img.naturalHeight > 0) { img.classList.add('loaded'); }
       else { img.addEventListener('load', () => img.classList.add('loaded')); }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

@@ -86,8 +86,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Cikk</span>
           </nav>
-          <span class="article-category">Termék</span>
-          <h1 class="article-title">A Signal Pilot Belseje: Hogyan Működik Együtt a 7 Indikátor</h1>
+          <span class="article-category" data-reveal="fade">Termék</span>
+          <h1 class="article-title" data-reveal="up">A Signal Pilot Belseje: Hogyan Működik Együtt a 7 Indikátor</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 perc olvasás</span>
             <span>Signal Pilot Csapat</span>
@@ -100,7 +100,7 @@
           </div>
         </div>
       </header>
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Hét integrált Signal Pilot indikátor" data-ai-prompt="Dark themed futuristic dashboard showing 7 interconnected glowing nodes arranged in a hexagonal pattern, each node a different shade of cyan and blue representing different indicators. Glowing connection lines between nodes pulse with data flow. Central hub synthesizes all inputs. Professional trading aesthetic with deep navy and purple aurora background, holographic UI elements.">
         <figcaption class="ai-prompt">Dark themed futuristic dashboard showing 7 interconnected glowing nodes arranged in a hexagonal pattern, each node a different shade of cyan and blue representing different indicators. Glowing connection lines between nodes pulse with data flow. Central hub synthesizes all inputs. Professional trading aesthetic with deep navy and purple aurora background, holographic UI elements.</figcaption>
       </figure>
@@ -244,7 +244,7 @@
           <hr>
           <section class="related-articles">
             <h3>Kapcsolódó Cikkek</h3>
-            <div class="related-grid">
+            <div class="related-grid" data-reveal-stagger>
               <a href="../../the-repainting-problem/hu/" class="related-card">
                 <span class="related-category">Indikátorok</span>
                 <h4>Az Újrafestés Probléma: Hogyan Csalnak a Legtöbb Indikátorok</h4>
@@ -325,6 +325,20 @@
       nav.querySelectorAll('a').forEach(link => {link.addEventListener('click', () => {nav.classList.remove('open');mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';});});
     }
     document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+  
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

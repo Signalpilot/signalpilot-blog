@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=practical">実践</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category">実践</span>
-      <h1 class="article-title">時間軸の選択：なぜインジケーターより重要なのか</h1>
+      <span class="article-category" data-reveal="fade">実践</span>
+      <h1 class="article-title" data-reveal="up">時間軸の選択：なぜインジケーターより重要なのか</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image"><img src="../hero.png" alt="時間軸選択の可視化"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="時間軸選択の可視化"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>同じインジケーター。同じ設定。同じ資産。異なる時間軸でまったく異なる結果。</p>
       <p>5分足は買いと言う。4時間足は売りと言う。日足は待てと言う。誰が正しいのか？</p>
@@ -143,7 +143,7 @@
       <p>正しい時間軸の平均的なインジケーターは、間違った時間軸の優れたインジケーターに勝ります。</p>
       <p>一部のシステムはマルチタイムフレームの認識を直接組み込んでいます：日足または週足の構造がエントリー時間軸のシグナルをサポートしているかを示すHTFレジーム確認、または異なるホライゾンにわたって価値がどこにあるかを表示するマルチピリオドVWAP。ツールが時間軸のアラインメントを内部で処理すると、複数のチャートを手動で確認せずに、コンテキストがトレードをサポートしているかどうかがわかります。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../multi-timeframe-confirmation/ja/" class="related-card"><span class="related-category">インジケーター</span><h4>マルチタイムフレーム確認：いつ使うか</h4></a>
         <a href="../../cycles-within-cycles/ja/" class="related-card"><span class="related-category">サイクル</span><h4>サイクルの中のサイクル：マルチタイムフレーム構造</h4></a>
         <a href="../../identifying-cycle-length/ja/" class="related-card"><span class="related-category">サイクル</span><h4>サイクルの長さを特定する</h4></a>
@@ -187,6 +187,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

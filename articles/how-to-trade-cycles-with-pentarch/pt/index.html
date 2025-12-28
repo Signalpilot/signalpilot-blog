@@ -49,8 +49,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=product">Produto</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category">Produto</span>
-      <h1 class="article-title">Como Operar Ciclos com Pentarch: Um Guia Prático</h1>
+      <span class="article-category" data-reveal="fade">Produto</span>
+      <h1 class="article-title" data-reveal="up">Como Operar Ciclos com Pentarch: Um Guia Prático</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 min de leitura</span><span>Equipe Signal Pilot</span></div>
       <div class="share-buttons"><span class="share-label">Compartilhar:</span>
         <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Compartilhar no Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
@@ -59,7 +59,7 @@
       </div>
     </div></header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Cinco fases do ciclo Pentarch"><figcaption class="ai-prompt">Visualização elegante em fundo escuro das 5 fases do ciclo de mercado.</figcaption></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Cinco fases do ciclo Pentarch"><figcaption class="ai-prompt">Visualização elegante em fundo escuro das 5 fases do ciclo de mercado.</figcaption></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Os mercados ciclam. Acumulam, sobem, atingem o clímax, distribuem e declinam. Este padrão se repete em todos os timeframes, em todos os mercados, porque reflete como o capital se move pelo sistema.</p>
@@ -250,7 +250,7 @@
 
       <hr>
 
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../the-only-pattern-that-repeats/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>O Único Padrão Que Realmente Se Repete</h4></a>
         <a href="../../inside-signal-pilot/pt/" class="related-card"><span class="related-category">Produto</span><h4>Dentro do Signal Pilot: Como os 7 Indicadores Funcionam Juntos</h4></a>
         <a href="../../accumulation-vs-distribution/pt/" class="related-card"><span class="related-category">Ciclos</span><h4>Acumulação vs Distribuição: Lendo o Que os Gráficos Não Dizem</h4></a>
@@ -324,6 +324,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/hu/">Blog</a><span class="breadcrumb-sep">›</span><a href="/hu/?filter=psychology">Pszichológia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Cikk</span></nav>
-      <span class="article-category">Pszichológia</span>
-      <h1 class="article-title">A Kistoppolás Pszichológiája (És Miért Történik Újra és Újra)</h1>
+      <span class="article-category" data-reveal="fade">Pszichológia</span>
+      <h1 class="article-title" data-reveal="up">A Kistoppolás Pszichológiája (És Miért Történik Újra és Újra)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 perc olvasás</span><span>Signal Pilot Csapat</span></div>
           <div class="share-buttons">
             <span class="share-label">Megosztás:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Stop loss pszichológia vizualizáció"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Stop loss pszichológia vizualizáció"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Az elemzésed tökéletes volt. A belépés tiszta volt. A stop loss logikus volt. Aztán az ár pontosan érintette a stopodat, azonnal megfordult és elérte a célod nélküled.</p>
@@ -111,7 +111,7 @@
       <p>A piac nem téged vadászik konkrétan. Mindenkit ugyanazon a nyilvánvaló szinteken vadászik. Hagyd abba a nyilvánvalóságot. Ne vedd személyesen. És hagyd abba a stopjaid mozgatását.</p>
       <p>A volumen alapú szintek segíthetnek itt. Ahelyett, hogy nyilvánvaló swing pontoknál helyeznéd el a stopokat, fontold meg a ténylegesen kereskedett volumenből származtatott szinteket—POC, Értékterület határok, vagy VWAP sávok. Ezeknek a szinteknek intézményi jelentősége van a vizuális nyilvánvalóságon túl. A valódi volumen előfordulásán túl elhelyezett stopok általában túlélik az önkényes struktúrát célzó vadászatokat.</p>
       <hr>
-      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid">
+      <section class="related-articles"><h3>Kapcsolódó Cikkek</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../stop-loss-placement/hu/" class="related-card"><span class="related-category">Gyakorlati</span><h4>Stop Loss Elhelyezés</h4></a>
         <a href="../../revenge-trading-recovery/hu/" class="related-card"><span class="related-category">Pszichológia</span><h4>Bosszú Trading Felépülés</h4></a>
         <a href="../../the-1-percent-rule/hu/" class="related-card"><span class="related-category">Kockázat</span><h4>Az 1%-os Szabály</h4></a>
@@ -157,6 +157,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

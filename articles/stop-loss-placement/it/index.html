@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=practical">Pratico</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
-      <span class="article-category">Pratico</span>
-      <h1 class="article-title">Posizionamento dello Stop Loss: Perché il Tuo È Probabilmente Sbagliato</h1>
+      <span class="article-category" data-reveal="fade">Pratico</span>
+      <h1 class="article-title" data-reveal="up">Posizionamento dello Stop Loss: Perché il Tuo È Probabilmente Sbagliato</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min di lettura</span><span>Team Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Condividi:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Strategia di posizionamento stop loss"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Strategia di posizionamento stop loss"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Sai che hai bisogno di stop loss. Ogni libro di trading lo dice. Quindi ne metti uno.</p>
@@ -138,7 +138,7 @@
       <p>Il tuo stop dovrebbe rispondere a una domanda: "Dove la mia tesi è dimostrabilmente sbagliata?" Metti lo stop lì. Trada una dimensione che rende quella perdita accettabile.</p>
       <p>I livelli basati sul volume possono informare un miglior posizionamento dello stop. Quando puoi vedere dove il volume reale è stato scambiato - POC del Volume Profile, confini della Value Area, bande VWAP - stai posizionando stop relativi all'attività istituzionale reale piuttosto che punti di swing arbitrari. Gli stop oltre livelli dove è avvenuto volume significativo tendono a sopravvivere meglio al rumore.</p>
       <hr>
-      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../psychology-of-getting-stopped-out/it/" class="related-card"><span class="related-category">Psicologia</span><h4>La Psicologia dell'Essere Stoppato</h4></a>
         <a href="../../position-sizing-101/it/" class="related-card"><span class="related-category">Rischio</span><h4>Dimensionamento Posizione 101</h4></a>
         <a href="../../support-and-resistance-explained/it/" class="related-card"><span class="related-category">Principiante</span><h4>Supporto e Resistenza Spiegati</h4></a>
@@ -184,6 +184,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

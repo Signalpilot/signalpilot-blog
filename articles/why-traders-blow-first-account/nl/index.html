@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/nl/">Blog</a><span class="breadcrumb-sep">›</span><a href="/nl/?filter=psychology">Psychologie</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artikel</span></nav>
-      <span class="article-category">Psychologie</span>
-      <h1 class="article-title">De Echte Reden Waarom De Meeste Traders Hun Eerste Account Opblazen</h1>
+      <span class="article-category" data-reveal="fade">Psychologie</span>
+      <h1 class="article-title" data-reveal="up">De Echte Reden Waarom De Meeste Traders Hun Eerste Account Opblazen</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min leestijd</span><span>Signal Pilot Team</span></div>
           <div class="share-buttons">
             <span class="share-label">Delen:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Account verlies spiraal"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Account verlies spiraal"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Het is bijna een overgangsritueel. Vraag een ervaren trader naar zijn eerste account, en je hoort hetzelfde verhaal: vroege winsten, groeiend zelfvertrouwen, toenemende grootte, dan alles weg.</p>
@@ -132,7 +132,7 @@
       <p>Nu heb je data die "wacht" zegt wanneer emoties "ga" zeggen. Dat conflict creëert pauze. En die pauze kan je account redden.</p>
       <p>De beste traders hebben geen bovenmenselijke discipline. Ze hebben systemen die signaleren wanneer condities niet overeenkomen met hun zelfvertrouwen. Wanneer data voorzichtigheid zegt en je instinct agressie zegt, heeft de data meestal gelijk.</p>
       <hr>
-      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid">
+      <section class="related-articles"><h3>Gerelateerde Artikelen</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../position-sizing-101/nl/" class="related-card"><span class="related-category">Risico</span><h4>Positiegrootte 101</h4></a>
         <a href="../../revenge-trading-recovery/nl/" class="related-card"><span class="related-category">Psychologie</span><h4>Herstel van Wraak Trading</h4></a>
         <a href="../../when-to-size-up/nl/" class="related-card"><span class="related-category">Praktisch</span><h4>Wanneer Groter Te Traden</h4></a>
@@ -178,6 +178,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

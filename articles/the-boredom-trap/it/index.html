@@ -65,8 +65,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/it/">Blog</a><span class="breadcrumb-sep">›</span><a href="/it/?filter=psychology">Psicologia</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Articolo</span></nav>
-      <span class="article-category">Psicologia</span>
-      <h1 class="article-title">La Trappola della Noia: Perché Non Fare Nulla È Spesso il Trade Giusto</h1>
+      <span class="article-category" data-reveal="fade">Psicologia</span>
+      <h1 class="article-title" data-reveal="up">La Trappola della Noia: Perché Non Fare Nulla È Spesso il Trade Giusto</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 min di lettura</span><span>Team Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Condividi:</span>
@@ -83,7 +83,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Visualizzazione della trappola della noia nel trading"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualizzazione della trappola della noia nel trading"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Stai guardando grafici da due ore. Niente. Il prezzo sta oscillando in un range stretto. Nessun setup si attiva. Nessuna direzione chiara.</p>
@@ -151,7 +151,7 @@
       <p>I migliori trader passano la maggior parte del loro tempo a non fare nulla. Ed è esattamente per questo che sono profittevoli.</p>
       <p>La consapevolezza dei cicli aiuta a distinguere l'attesa produttiva dal tempo sprecato. Se la fase attuale è chop di metà ciclo senza direzione chiara, aspettare è corretto. Se la confluenza è bassa su più sistemi, aspettare è corretto. Ma quando si verificano transizioni di ciclo, quando la confluenza aumenta, quando il regime di volume cambia - quelli sono i momenti per cui vale la pena essere presenti. I dati ti dicono quando la pazienza ti serve e quando arriva l'opportunità.</p>
       <hr>
-      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid">
+      <section class="related-articles"><h3>Articoli Correlati</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../why-you-break-trading-rules/it/" class="related-card"><span class="related-category">Psicologia</span><h4>Perché Continui a Rompere le Tue Regole di Trading</h4></a>
         <a href="../../the-confirmation-trap/it/" class="related-card"><span class="related-category">Indicatori</span><h4>La Trappola della Conferma</h4></a>
         <a href="../../building-a-pre-trade-checklist/it/" class="related-card"><span class="related-category">Pratico</span><h4>Costruire una Checklist Pre-Trade</h4></a>
@@ -197,6 +197,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

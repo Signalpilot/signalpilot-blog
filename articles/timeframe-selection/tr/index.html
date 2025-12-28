@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=practical">Pratik</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
-      <span class="article-category">Pratik</span>
-      <h1 class="article-title">Zaman Dilimi Seçimi: Neden İndikatörünüzden Daha Önemli</h1>
+      <span class="article-category" data-reveal="fade">Pratik</span>
+      <h1 class="article-title" data-reveal="up">Zaman Dilimi Seçimi: Neden İndikatörünüzden Daha Önemli</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span><span>Signal Pilot Ekibi</span></div>
           <div class="share-buttons">
             <span class="share-label">Paylaş:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image"><img src="../hero.png" alt="Zaman dilimi seçimi görselleştirmesi"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Zaman dilimi seçimi görselleştirmesi"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Aynı indikatör. Aynı ayarlar. Aynı varlık. Farklı zaman dilimlerinde tamamen farklı sonuçlar.</p>
       <p>5 dakikalık grafik al diyor. 4 saatlik grafik sat diyor. Günlük grafik bekle diyor. Kim haklı?</p>
@@ -143,7 +143,7 @@
       <p>Doğru zaman dilimindeki ortalama bir indikatör, yanlış zaman dilimindeki mükemmel bir indikatörü yener.</p>
       <p>Bazı sistemler çoklu zaman dilimi farkındalığını doğrudan içerir: günlük veya haftalık yapının giriş zaman dilimi sinyalinizi destekleyip desteklemediğini gösteren HTF rejim onayı, veya değerin farklı ufuklarda nerede olduğunu gösteren çok periyotlu VWAP. Araç zaman dilimi hizalamasını dahili olarak işlediğinde, birden fazla grafiği manuel olarak kontrol etmeden bağlamın tradenizi destekleyip desteklemediğini görürsünüz.</p>
       <hr>
-      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../multi-timeframe-confirmation/tr/" class="related-card"><span class="related-category">Göstergeler</span><h4>Çoklu Zaman Dilimi Onayı: Ne Zaman Kullanılır</h4></a>
         <a href="../../cycles-within-cycles/tr/" class="related-card"><span class="related-category">Döngüler</span><h4>Döngüler İçinde Döngüler: Çoklu Zaman Dilimi Yapısı</h4></a>
         <a href="../../identifying-cycle-length/tr/" class="related-card"><span class="related-category">Döngüler</span><h4>Döngü Uzunluğunu Belirleme</h4></a>
@@ -187,6 +187,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

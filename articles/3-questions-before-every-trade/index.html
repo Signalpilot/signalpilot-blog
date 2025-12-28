@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Article</span>
           </nav>
-          <span class="article-category">Practical</span>
-          <h1 class="article-title">The 3 Questions to Ask Before Every Trade</h1>
+          <span class="article-category" data-reveal="fade">Practical</span>
+          <h1 class="article-title" data-reveal="up">The 3 Questions to Ask Before Every Trade</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 min read</span>
             <span>Signal Pilot Team</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="hero.png" alt="Three questions before trading visualization" data-ai-prompt="Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.">
         <figcaption class="ai-prompt">Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.</figcaption>
       </figure>
@@ -262,6 +262,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

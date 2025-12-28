@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=psychology">心理学</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category">心理学</span>
-      <h1 class="article-title">ほとんどのトレーダーが最初の口座を飛ばす本当の理由</h1>
+      <span class="article-category" data-reveal="fade">心理学</span>
+      <h1 class="article-title" data-reveal="up">ほとんどのトレーダーが最初の口座を飛ばす本当の理由</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="口座崩壊のスパイラル"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="口座崩壊のスパイラル"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>これはほぼ通過儀礼です。経験豊富なトレーダーに最初の口座について聞いてみてください。同じ話を聞くでしょう：初期の勝利、自信の増大、サイズ拡大、そしてすべてが消える。</p>
@@ -132,7 +132,7 @@
       <p>感情が「行け」と言っているときに、データは「待て」と言っています。この対立が一時停止を生み出します。その一時停止があなたの口座を救うかもしれません。</p>
       <p>最高のトレーダーは超人的な規律を持っているわけではありません。条件が自信と一致しないときにシグナルを出すシステムを持っています。データが慎重さを示し、本能が攻撃性を示すとき、通常データが正しいのです。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../position-sizing-101/ja/" class="related-card"><span class="related-category">リスク</span><h4>ポジションサイズ101</h4></a>
         <a href="../../revenge-trading-recovery/ja/" class="related-card"><span class="related-category">心理学</span><h4>リベンジトレードからの回復</h4></a>
         <a href="../../when-to-size-up/ja/" class="related-card"><span class="related-category">実践</span><h4>サイズを上げるタイミング</h4></a>
@@ -178,6 +178,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

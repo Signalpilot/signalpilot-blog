@@ -100,8 +100,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Cikk</span>
           </nav>
-          <span class="article-category">Gyakorlati</span>
-          <h1 class="article-title">Amit a TradingView Nem Mond El az Ingyenes Szkriptekről</h1>
+          <span class="article-category" data-reveal="fade">Gyakorlati</span>
+          <h1 class="article-title" data-reveal="up">Amit a TradingView Nem Mond El az Ingyenes Szkriptekről</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 perc olvasás</span>
             <span>Signal Pilot Csapat</span>
@@ -121,7 +121,7 @@
         </div>
       </header>
 
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="TradingView ingyenes szkript figyelmeztetés">
       </figure>
 
@@ -231,7 +231,7 @@
 
           <section class="related-articles">
             <h3>Kapcsolódó Cikkek</h3>
-            <div class="related-grid">
+            <div class="related-grid" data-reveal-stagger>
               <a href="../../the-repainting-problem/hu/" class="related-card">
                 <span class="related-category">Indikátorok</span>
                 <h4>A Repaint Probléma: Miért Hazudott a Backtested</h4>
@@ -305,6 +305,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
+    }
+  
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
     }
   </script>
 </body>

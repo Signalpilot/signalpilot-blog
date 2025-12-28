@@ -73,8 +73,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Makale</span>
           </nav>
-          <span class="article-category">Trading Sistemleri</span>
-          <h1 class="article-title">Trading Günlüğü: Sisteminizin Arkasındaki Sistem</h1>
+          <span class="article-category" data-reveal="fade">Trading Sistemleri</span>
+          <h1 class="article-title" data-reveal="up">Trading Günlüğü: Sisteminizin Arkasındaki Sistem</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 dk okuma</span>
             <span>Signal Pilot Ekibi</span>
@@ -94,7 +94,7 @@
         </div>
       </header>
 
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Trading günlüğü görselleştirmesi" data-ai-prompt="Dark themed visualization of an open trading journal or notebook with charts, statistics, and data entries floating above it. Holographic displays showing trade metrics and performance graphs. Pen or stylus nearby. Deep navy background with cyan and gold data elements glowing. Professional trading aesthetic.">
         <figcaption class="ai-prompt">Dark themed visualization of an open trading journal or notebook with charts, statistics, and data entries floating above it. Holographic displays showing trade metrics and performance graphs. Pen or stylus nearby. Deep navy background with cyan and gold data elements glowing. Professional trading aesthetic.</figcaption>
       </figure>
@@ -350,6 +350,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

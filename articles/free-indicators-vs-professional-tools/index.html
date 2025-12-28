@@ -79,8 +79,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Article</span>
           </nav>
-          <span class="article-category">Product</span>
-          <h1 class="article-title">Free Indicators vs Professional Tools: When to Upgrade Your Trading</h1>
+          <span class="article-category" data-reveal="fade">Product</span>
+          <h1 class="article-title" data-reveal="up">Free Indicators vs Professional Tools: When to Upgrade Your Trading</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 min read</span>
             <span>Signal Pilot Team</span>
@@ -101,7 +101,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="hero.png" alt="Free vs professional trading tools comparison" data-ai-prompt="Dark themed split comparison image - left side showing cluttered chaos of free indicators with conflicting signals, clashing colors, overlapping lines creating visual noise and confusion. Right side showing clean, professional tools with harmonized signals in coordinated cyan, clear actionable information, elegant minimalist design. Sharp dividing line between chaos and clarity. Deep navy background, professional trading aesthetic.">
         <figcaption class="ai-prompt">Dark themed split comparison image - left side showing cluttered chaos of free indicators with conflicting signals, clashing colors, overlapping lines creating visual noise and confusion. Right side showing clean, professional tools with harmonized signals in coordinated cyan, clear actionable information, elegant minimalist design. Sharp dividing line between chaos and clarity. Deep navy background, professional trading aesthetic.</figcaption>
       </figure>
@@ -234,7 +234,7 @@
 
           <section class="related-articles">
             <h3>Related Articles</h3>
-            <div class="related-grid">
+            <div class="related-grid" data-reveal-stagger>
               <a href="../tradingview-free-scripts/" class="related-card">
                 <span class="related-category">Practical</span>
                 <h4>What TradingView Doesn't Tell You About Free Scripts</h4>
@@ -334,6 +334,20 @@
     }
 
 
-  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

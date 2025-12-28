@@ -91,8 +91,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">記事</span>
           </nav>
-          <span class="article-category">実践</span>
-          <h1 class="article-title">TradingViewが無料スクリプトについて語らないこと</h1>
+          <span class="article-category" data-reveal="fade">実践</span>
+          <h1 class="article-title" data-reveal="up">TradingViewが無料スクリプトについて語らないこと</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7分で読めます</span>
             <span>Signal Pilot チーム</span>
@@ -113,7 +113,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="TradingView無料スクリプトの警告" data-ai-prompt="Dark themed visualization of the TradingView script library as a treasure chest mixed with traps - some scripts shown as golden gems (good tools) while others are shown as red warning symbols or broken code (dangerous scripts). The challenge of separating good from bad. Deep navy background with contrasting good/bad elements.">
         <figcaption class="ai-prompt">Dark themed visualization of the TradingView script library as a treasure chest mixed with traps - some scripts shown as golden gems (good tools) while others are shown as red warning symbols or broken code (dangerous scripts). The challenge of separating good from bad. Deep navy background with contrasting good/bad elements.</figcaption>
       </figure>
@@ -310,6 +310,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

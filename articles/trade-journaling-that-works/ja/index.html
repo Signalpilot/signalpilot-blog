@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/ja/">ブログ</a><span class="breadcrumb-sep">›</span><a href="/ja/?filter=practical">実践</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">記事</span></nav>
-      <span class="article-category">実践</span>
-      <h1 class="article-title">機能するトレード日誌：何を記録し、なぜ記録するか</h1>
+      <span class="article-category" data-reveal="fade">実践</span>
+      <h1 class="article-title" data-reveal="up">機能するトレード日誌：何を記録し、なぜ記録するか</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8分で読める</span><span>Signal Pilot チーム</span></div>
           <div class="share-buttons">
             <span class="share-label">共有:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image"><img src="../hero.png" alt="トレード日誌の可視化"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="トレード日誌の可視化"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>すべてのトレーディング本は日誌をつけるように言います。だから始めます。日付、ティッカー、エントリー、エグジット、P&L。一ヶ月後、見もしない数字だらけのスプレッドシートがあります。</p>
       <p>それは日誌をつけることではありません。それはデータ入力です。</p>
@@ -195,7 +195,7 @@
       <p>最も早く上達するトレーダーは、痛いトレードだけでなく、すべてのトレードから学ぶ人です。日誌はその学習を体系的にします。</p>
       <p>一部の分析ツールは、コンテキストを自動的にキャプチャすることで手動の負担を軽減します：エントリー時にどのサイクルフェーズがアクティブだったか、レジームがアキュムレーションかディストリビューションを示していたか、その時のコンフルエンススコアは何だったか。これらのデータがすでに記録されている場合、日誌は本当に人間の振り返りを必要とする心理的およびプロセス要素に集中できます。</p>
       <hr>
-      <section class="related-articles"><h3>関連記事</h3><div class="related-grid">
+      <section class="related-articles"><h3>関連記事</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../building-a-pre-trade-checklist/ja/" class="related-card"><span class="related-category">実践</span><h4>プレトレードチェックリストを作る</h4></a>
         <a href="../../what-profitable-traders-know/ja/" class="related-card"><span class="related-category">心理学</span><h4>利益を出すトレーダーが知っていること</h4></a>
         <a href="../../rules-based-vs-discretionary/ja/" class="related-card"><span class="related-category">システム</span><h4>ルールベース vs 裁量トレード</h4></a>
@@ -239,6 +239,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

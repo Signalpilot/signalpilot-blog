@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Article</span>
           </nav>
-          <span class="article-category">Pratique</span>
-          <h1 class="article-title">Les 3 Questions à Se Poser Avant Chaque Trade</h1>
+          <span class="article-category" data-reveal="fade">Pratique</span>
+          <h1 class="article-title" data-reveal="up">Les 3 Questions à Se Poser Avant Chaque Trade</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 min de lecture</span>
             <span>Équipe Signal Pilot</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Visualisation des trois questions avant le trading" data-ai-prompt="Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.">
         <figcaption class="ai-prompt">Minimalist dark themed image showing three glowing question marks arranged in a triangle formation, hovering above a stylized trading chart. Each question mark has a subtle different color - gold, cyan, and purple. Professional trading aesthetic with deep space-like background and subtle grid lines.</figcaption>
       </figure>
@@ -178,7 +178,7 @@
 
           <section class="related-articles">
             <h3>Articles Connexes</h3>
-            <div class="related-grid">
+            <div class="related-grid" data-reveal-stagger>
               <a href="../../building-a-pre-trade-checklist/fr/" class="related-card">
                 <span class="related-category">Pratique</span>
                 <h4>Construire une Checklist Pré-Trade</h4>
@@ -270,6 +270,20 @@
         langDropdown.classList.remove('active');
       }
     });
-  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+  document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

@@ -74,8 +74,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artículo</span>
           </nav>
-          <span class="article-category">Análisis Técnico</span>
-          <h1 class="article-title">Medias Móviles Explicadas: EMA vs SMA y Cuándo Usar Cada Una</h1>
+          <span class="article-category" data-reveal="fade">Análisis Técnico</span>
+          <h1 class="article-title" data-reveal="up">Medias Móviles Explicadas: EMA vs SMA y Cuándo Usar Cada Una</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de lectura</span>
             <span>Equipo Signal Pilot</span>
@@ -96,7 +96,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Visualización de medias móviles" data-ai-prompt="Dark themed visualization of multiple moving average lines flowing across a price chart - smooth curves in different colors (blue EMA, orange SMA) weaving through candlesticks. The lines cross at key points with subtle glow effects. Professional trading aesthetic with deep navy background and gradient highlights.">
         <figcaption class="ai-prompt">Dark themed visualization of multiple moving average lines flowing across a price chart - smooth curves in different colors (blue EMA, orange SMA) weaving through candlesticks. The lines cross at key points with subtle glow effects. Professional trading aesthetic with deep navy background and gradient highlights.</figcaption>
       </figure>
@@ -316,6 +316,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

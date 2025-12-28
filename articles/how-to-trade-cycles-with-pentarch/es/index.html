@@ -78,8 +78,8 @@
             <span class="breadcrumb-sep">›</span>
             <span class="breadcrumb-current">Artículo</span>
           </nav>
-          <span class="article-category">Producto</span>
-          <h1 class="article-title">Cómo Operar Ciclos con Pentarch: Una Guía Práctica</h1>
+          <span class="article-category" data-reveal="fade">Producto</span>
+          <h1 class="article-title" data-reveal="up">Cómo Operar Ciclos con Pentarch: Una Guía Práctica</h1>
           <div class="article-meta">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 min de lectura</span>
             <span>Equipo Signal Pilot</span>
@@ -100,7 +100,7 @@
       </header>
 
       <!-- Hero Image Placeholder -->
-      <figure class="hero-image">
+      <figure class="hero-image" data-reveal="scale-up">
         <img src="../hero.png" alt="Cinco fases del ciclo de Pentarch" data-ai-prompt="Dark themed elegant visualization of 5 market cycle phases flowing into each other as geometric shapes or wave segments. TD (Touchdown/Accumulation) in green, IGN (Ignition/Markup) in cyan, CAP (Capitulation/Distribution) in gold, WRN (Warning/Decline) in amber, BDN (Breakdown) in red. Smooth transitions between phases showing the natural market rhythm. Professional trading aesthetic, deep navy background with glowing phase indicators.">
         <figcaption class="ai-prompt">Dark themed elegant visualization of 5 market cycle phases flowing into each other as geometric shapes or wave segments. TD (Touchdown/Accumulation) in green, IGN (Ignition/Markup) in cyan, CAP (Capitulation/Distribution) in gold, WRN (Warning/Decline) in amber, BDN (Breakdown) in red. Smooth transitions between phases showing the natural market rhythm. Professional trading aesthetic, deep navy background with glowing phase indicators.</figcaption>
       </figure>
@@ -427,6 +427,19 @@
         img.addEventListener('load', () => img.classList.add('loaded'));
       }
     });
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
   </script>
 </body>
 </html>

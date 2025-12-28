@@ -49,8 +49,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=product">Ürün</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
-      <span class="article-category">Ürün</span>
-      <h1 class="article-title">Pentarch ile Döngüleri Nasıl Trade Edilir: Pratik Bir Rehber</h1>
+      <span class="article-category" data-reveal="fade">Ürün</span>
+      <h1 class="article-title" data-reveal="up">Pentarch ile Döngüleri Nasıl Trade Edilir: Pratik Bir Rehber</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 dk okuma</span><span>Signal Pilot Ekibi</span></div>
       <div class="share-buttons"><span class="share-label">Paylaş:</span>
         <a href="#" class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;" aria-label="Twitter'da Paylaş"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
@@ -59,7 +59,7 @@
       </div>
     </div></header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Pentarch beş döngü fazı"><figcaption class="ai-prompt">Koyu arka planda 5 piyasa döngü fazının zarif görselleştirmesi.</figcaption></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Pentarch beş döngü fazı"><figcaption class="ai-prompt">Koyu arka planda 5 piyasa döngü fazının zarif görselleştirmesi.</figcaption></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>Piyasalar döngü yapar. Birikir, yükselir, zirveye ulaşır, dağıtır ve düşer. Bu desen her zaman diliminde, her piyasada tekrar eder çünkü sermayenin sistemden nasıl geçtiğini yansıtır.</p>
@@ -250,7 +250,7 @@
 
       <hr>
 
-      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../the-only-pattern-that-repeats/tr/" class="related-card"><span class="related-category">Döngüler</span><h4>Gerçekten Tekrar Eden Tek Pattern</h4></a>
         <a href="../../inside-signal-pilot/tr/" class="related-card"><span class="related-category">Ürün</span><h4>Signal Pilot'un İçinde: 7 Gösterge Nasıl Birlikte Çalışıyor</h4></a>
         <a href="../../accumulation-vs-distribution/tr/" class="related-card"><span class="related-category">Döngüler</span><h4>Birikim vs Dağıtım: Grafiklerin Söylemediklerini Okumak</h4></a>
@@ -324,6 +324,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

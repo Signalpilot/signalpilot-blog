@@ -50,8 +50,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/tr/">Blog</a><span class="breadcrumb-sep">›</span><a href="/tr/?filter=beginner">Temel Bilgiler</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Makale</span></nav>
-      <span class="article-category">Başlangıç Temelleri</span>
-      <h1 class="article-title">Trading Avantajı Nedir? (Ve Nasıl Anlarsınız)</h1>
+      <span class="article-category" data-reveal="fade">Başlangıç Temelleri</span>
+      <h1 class="article-title" data-reveal="up">Trading Avantajı Nedir? (Ve Nasıl Anlarsınız)</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 dk okuma</span><span>Signal Pilot Ekibi</span></div>
           <div class="share-buttons">
             <span class="share-label">Paylaş:</span>
@@ -68,7 +68,7 @@
         </div>
       </header>
 
-    <figure class="hero-image"><img src="../hero.png" alt="Trading avantajı konsepti"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Trading avantajı konsepti"></figure>
 
     <div class="article-content"><div class="container-narrow">
       <p>"Trading'de para kazanmak için avantaja ihtiyacınız var."</p>
@@ -147,7 +147,7 @@
       <p>Avantaj olmadan kumar oynuyorsunuz. Avantajla trading yapıyorsunuz. Farkı bilin.</p>
       <p>Yapısal avantajlar sistematize edilebilir. Döngü analizi piyasa fazlarında nerede olduğunuzu ortaya koyar. Hacim rejimi algılama kurumsal davranışı gösterir. Konfluans puanlaması kaç bağımsız faktörün örtüştüğünü nicelleştirir. Bu araçlar davranışsal avantajın yerini almaz—tahmini ortadan kaldıran objektif bağlam sağlayarak onu destekler.</p>
       <hr>
-      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid">
+      <section class="related-articles"><h3>İlgili Makaleler</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../what-profitable-traders-know/tr/" class="related-card"><span class="related-category">Psikoloji</span><h4>Kârlı Trader'ların Bildiği</h4></a>
         <a href="../../building-your-first-system/tr/" class="related-card"><span class="related-category">Sistemler</span><h4>İlk Sisteminizi Oluşturma</h4></a>
         <a href="../../why-backtesting-results-are-worthless/tr/" class="related-card"><span class="related-category">İndikatörler</span><h4>Backtest Sonuçlarınız Neden Değersiz</h4></a>
@@ -187,6 +187,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>

@@ -64,8 +64,8 @@
   <main><article>
     <header class="article-header"><div class="container-narrow">
       <nav class="breadcrumbs"><a href="/pt/">Blog</a><span class="breadcrumb-sep">›</span><a href="/pt/?filter=practical">Prático</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Artigo</span></nav>
-      <span class="article-category">Prático</span>
-      <h1 class="article-title">Diário de Trading Que Funciona: O Que Rastrear e Por Quê</h1>
+      <span class="article-category" data-reveal="fade">Prático</span>
+      <h1 class="article-title" data-reveal="up">Diário de Trading Que Funciona: O Que Rastrear e Por Quê</h1>
       <div class="article-meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 min de leitura</span><span>Equipe Signal Pilot</span></div>
           <div class="share-buttons">
             <span class="share-label">Compartilhar:</span>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </header>
-    <figure class="hero-image"><img src="../hero.png" alt="Visualização diário de trading"></figure>
+    <figure class="hero-image" data-reveal="scale-up"><img src="../hero.png" alt="Visualização diário de trading"></figure>
     <div class="article-content"><div class="container-narrow">
       <p>Todo livro de trading diz para manter um diário. Então você começa um. Data, ticker, entrada, saída, P&L. Depois de um mês, você tem uma planilha cheia de números que nunca olha.</p>
       <p>Isso não é manter um diário. Isso é entrada de dados.</p>
@@ -195,7 +195,7 @@
       <p>Os traders que melhoram mais rápido são os que aprendem de cada operação - não apenas das dolorosas. Um diário torna esse aprendizado sistemático.</p>
       <p>Algumas ferramentas analíticas reduzem a carga manual capturando contexto automaticamente: qual fase do ciclo estava ativa quando você entrou, se o regime mostrava acumulação ou distribuição, qual era o score de confluência no momento. Quando esses dados já estão registrados, seu diário pode focar nos elementos psicológicos e de processo que realmente requerem reflexão humana.</p>
       <hr>
-      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid">
+      <section class="related-articles"><h3>Artigos Relacionados</h3><div class="related-grid" data-reveal-stagger>
         <a href="../../building-a-pre-trade-checklist/pt/" class="related-card"><span class="related-category">Prático</span><h4>Construindo um Checklist Pré-Operação</h4></a>
         <a href="../../what-profitable-traders-know/pt/" class="related-card"><span class="related-category">Psicologia</span><h4>O Que Traders Lucrativos Sabem</h4></a>
         <a href="../../rules-based-vs-discretionary/pt/" class="related-card"><span class="related-category">Sistemas</span><h4>Trading Baseado em Regras vs Discricionário</h4></a>
@@ -239,6 +239,20 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});</script>
+    }document.querySelectorAll('.hero-image img').forEach(img=>{if(img.complete&&img.naturalHeight>0){img.classList.add('loaded')}else{img.addEventListener('load',()=>img.classList.add('loaded'))}});
+    // Scroll Reveal - Intersection Observer
+    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (revealElements.length > 0) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+  </script>
 </body>
 </html>
