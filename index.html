@@ -940,8 +940,14 @@
     // Theme Toggle
     function toggleTheme() {
       const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
       const current = html.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
+
+      // Add animation class
+      btn.classList.add('animate');
+      setTimeout(() => btn.classList.remove('animate'), 500);
+
       html.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
     }
