@@ -83,15 +83,15 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1 class="hero-title" data-reveal="up">Trading Insights That Actually Work</h1>
-        <p class="hero-subtitle" data-reveal="up" data-reveal-delay="1">No fluff, no hype. Just practical trading education backed by market structure and psychology.</p>
+        <h1 class="hero-title">Trading Insights That Actually Work</h1>
+        <p class="hero-subtitle">No fluff, no hype. Just practical trading education backed by market structure and psychology.</p>
       </div>
     </section>
 
     <!-- Articles -->
     <section class="articles-section">
       <div class="container">
-        <div class="section-header" data-reveal="up">
+        <div class="section-header">
           <h2 class="section-title">Latest Articles</h2>
           <div class="category-filters">
             <button class="filter-btn active" data-filter="all">All</button>
@@ -925,14 +925,14 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-links" data-reveal="up">
+      <div class="footer-links">
         <a href="https://signalpilot.io">Home</a>
         <a href="https://docs.signalpilot.io">Documentation</a>
         <a href="https://education.signalpilot.io">Education Hub</a>
         <a href="https://signalpilot.io/#pricing">Pricing</a>
         <a href="https://signalpilot.io/affiliates.html">Affiliates</a>
       </div>
-      <p class="footer-copy" data-reveal="fade" data-reveal-delay="1">&copy; <span id="year">2025</span> Signal Pilot. All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="year">2025</span> Signal Pilot. All rights reserved.</p>
     </div>
   </footer>
 
@@ -1003,25 +1003,6 @@
           mobileMenuBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
         });
       });
-    }
-
-    // Scroll Reveal - Intersection Observer
-    const revealElements = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
-
-    if (revealElements.length > 0) {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      });
-
-      revealElements.forEach(el => revealObserver.observe(el));
     }
   </script>
 </body>
