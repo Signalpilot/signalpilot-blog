@@ -167,7 +167,7 @@ Split image: left chaotic unaligned signals clashing, right clean harmonized sig
 
 "Augury Grid" - Grid of glowing cells, some bright some dim. Heat map of opportunities. Birds-eye view. --ar 16:9 --style raw --no text
 
-"Harmonic Oscillator" - 5 oscillating waves converging or diverging. When aligned form single wave. --ar 16:9 --style raw --no text
+"Harmonic Oscillator" - 7 oscillating waves converging or diverging. When aligned form single wave. --ar 16:9 --style raw --no text
 
 "Plutus Flow" - River of light flowing through candlestick landscape. Money direction visible. --ar 16:9 --style raw --no text
 ```
