@@ -15,4 +15,7 @@ Disallow: /pt/articles/
 Disallow: /ru/articles/
 Disallow: /tr/articles/
 
+# Prevent RSS feed from appearing in search results
+Disallow: /feed.xml
+
 Sitemap: https://blog.signalpilot.io/sitemap.xml
