@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
 
+# Block old URL pattern (/lang/articles/) that returns 404
+# Correct pattern is /articles/slug/lang/
+Disallow: /ar/articles/
+Disallow: /de/articles/
+Disallow: /es/articles/
+Disallow: /fr/articles/
+Disallow: /hu/articles/
+Disallow: /it/articles/
+Disallow: /ja/articles/
+Disallow: /nl/articles/
+Disallow: /pt/articles/
+Disallow: /ru/articles/
+Disallow: /tr/articles/
+
 Sitemap: https://blog.signalpilot.io/sitemap.xml
