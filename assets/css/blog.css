@@ -265,6 +265,19 @@ body {
   animation: nav-fade-in 0.5s ease-out 0.5s both;
 }
 
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  color: var(--brand);
+  transform: scale(1.1);
+}
+
 /* Google Translate Widget */
 .translate-btn {
   display: flex;
