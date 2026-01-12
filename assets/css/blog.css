@@ -265,6 +265,19 @@ body {
   animation: nav-fade-in 0.5s ease-out 0.5s both;
 }
 
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  color: var(--brand);
+  transform: scale(1.1);
+}
+
 /* Google Translate Widget */
 .translate-btn {
   display: flex;
@@ -1241,6 +1254,45 @@ body {
   background: var(--brand);
   font-weight: 600;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Discord CTA */
+.discord-cta {
+  margin: 2rem 0 3rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.15) 0%, rgba(88, 101, 242, 0.05) 100%);
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  border-radius: var(--radius);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.discord-cta p {
+  color: var(--text);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.discord-cta .btn-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #5865F2;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.discord-cta .btn-discord:hover {
+  background: #4752c4;
+  transform: translateY(-2px);
 }
 
 /* Footer */
