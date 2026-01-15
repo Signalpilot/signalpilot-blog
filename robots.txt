@@ -1,21 +1,14 @@
 User-agent: *
 Allow: /
 
-# Block old URL pattern (/lang/articles/) that returns 404
-# Correct pattern is /articles/slug/lang/
-Disallow: /ar/articles/
-Disallow: /de/articles/
-Disallow: /es/articles/
-Disallow: /fr/articles/
-Disallow: /hu/articles/
-Disallow: /it/articles/
-Disallow: /ja/articles/
-Disallow: /nl/articles/
-Disallow: /pt/articles/
-Disallow: /ru/articles/
-Disallow: /tr/articles/
+# Old URL pattern (/lang/articles/) now has redirect pages
+# Allow crawling so Google can follow the meta refresh redirects
 
 # Prevent RSS feed from appearing in search results
 Disallow: /feed.xml
+
+# Block filter parameter URLs (duplicate content)
+Disallow: /*?filter=
+Disallow: /*&filter=
 
 Sitemap: https://blog.signalpilot.io/sitemap.xml
