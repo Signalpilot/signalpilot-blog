@@ -7,8 +7,7 @@ Allow: /
 # Prevent RSS feed from appearing in search results
 Disallow: /feed.xml
 
-# Block filter parameter URLs (duplicate content)
-Disallow: /*?filter=
-Disallow: /*&filter=
+# Filter parameter URLs handled via canonical tags and noindex meta tags
+# (not blocked here so Google can see the canonical/noindex directives)
 
 Sitemap: https://blog.signalpilot.io/sitemap.xml

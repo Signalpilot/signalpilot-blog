@@ -1006,6 +1006,14 @@
   </footer>
 
   <script>
+    // Noindex for filter parameter URLs (prevent duplicate content indexing)
+    if (window.location.search.includes('filter=')) {
+      var meta = document.createElement('meta');
+      meta.name = 'robots';
+      meta.content = 'noindex, follow';
+      document.head.appendChild(meta);
+    }
+
     // Lenis Smooth Scroll
     const lenis = new Lenis({
       duration: 3.5,
