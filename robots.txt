@@ -4,10 +4,8 @@ Allow: /
 # Old URL pattern (/lang/articles/) now has redirect pages
 # Allow crawling so Google can follow the meta refresh redirects
 
-# Prevent RSS feed from appearing in search results
-Disallow: /feed.xml
-
 # Filter parameter URLs handled via canonical tags and noindex meta tags
 # (not blocked here so Google can see the canonical/noindex directives)
 
 Sitemap: https://blog.signalpilot.io/sitemap.xml
+Sitemap: https://blog.signalpilot.io/feed.xml
