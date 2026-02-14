@@ -1,33 +1,36 @@
 # Signal Pilot Blog
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5guVbGEyj8)
+> Trading education, market analysis, and indicator tutorials. Published in 12 languages.
 
-Trading education blog with expert insights on indicators, market psychology, and practical trading strategies.
+## About
+Educational blog covering technical analysis concepts, trading strategies, market cycle theory, and practical guides for using Signal Pilot's TradingView indicators.
 
-## Community
+## Categories
+- [Indicators](https://blog.signalpilot.io/#indicators)
+- [Risk Management](https://blog.signalpilot.io/#risk-management)
+- [Trading Psychology](https://blog.signalpilot.io/#psychology)
+- [Market Structure](https://blog.signalpilot.io/#market-structure)
+- [Cycles](https://blog.signalpilot.io/#cycles)
+- [Backtesting & Systems](https://blog.signalpilot.io/#backtesting)
+- [Practical Guides](https://blog.signalpilot.io/#practical)
+- [Markets](https://blog.signalpilot.io/#markets)
+- [Signal Pilot Product](https://blog.signalpilot.io/#product)
 
-Join our Discord community to discuss trading strategies, share insights, and connect with other traders:
+## Popular Posts
+- [Your First Trade: A Complete Walkthrough](https://blog.signalpilot.io/articles/your-first-trade/)
+- [Why Your Indicators Keep Failing (And What Actually Works)](https://blog.signalpilot.io/articles/why-your-indicators-keep-failing/)
+- [The Repainting Problem: How Most TradingView Indicators Cheat](https://blog.signalpilot.io/articles/the-repainting-problem/)
+- [Position Sizing 101: The Math That Keeps You in the Game](https://blog.signalpilot.io/articles/position-sizing-101/)
+- [Inside Signal Pilot: How the 7 Indicators Work Together](https://blog.signalpilot.io/articles/inside-signal-pilot/)
+- [How to Trade Cycles with Pentarch: A Practical Guide](https://blog.signalpilot.io/articles/how-to-trade-cycles-with-pentarch/)
+- [Why Backtesting Results Are Worthless (And What to Do Instead)](https://blog.signalpilot.io/articles/why-backtesting-results-are-worthless/)
+- [How Smart Money Actually Moves (And How to See It)](https://blog.signalpilot.io/articles/how-smart-money-moves/)
 
-**[Join Signal Pilot Discord](https://discord.gg/5guVbGEyj8)**
+## Ecosystem
+- Main Website: https://www.signalpilot.io
+- Documentation: https://docs.signalpilot.io
+- Education Hub: https://education.signalpilot.io
+- Blog: https://blog.signalpilot.io
 
-## Languages
-
-The blog is available in 12 languages:
-- English (default)
-- Spanish (es/)
-- German (de/)
-- French (fr/)
-- Italian (it/)
-- Portuguese (pt/)
-- Dutch (nl/)
-- Russian (ru/)
-- Japanese (ja/)
-- Arabic (ar/)
-- Turkish (tr/)
-- Hungarian (hu/)
-
-## Links
-
-- [Blog](https://blog.signalpilot.io)
-- [RSS Feed](https://blog.signalpilot.io/feed.xml)
-- [Discord](https://discord.gg/5guVbGEyj8)
+## Contact
+- Email: support@signalpilot.io
