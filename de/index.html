@@ -40,12 +40,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=EB+Garamond:wght@400;500;600&family=Gugi&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="../assets/css/blog.css">
-
-  <!-- Lenis Smooth Scroll -->
-  <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
-
-  <!-- Open Graph -->
+  <link rel="stylesheet" href="../assets/css/blog.css">  <!-- Open Graph -->
   <meta property="og:title" content="Signal Pilot Blog - Trading-Bildung">
   <meta property="og:description" content="Experten-Trading-Wissen, Indikator-Analyse, Marktpsychologie und praktische Strategien.">
   <meta property="og:type" content="website">
@@ -1012,23 +1007,7 @@
       meta.name = 'robots';
       meta.content = 'noindex, follow';
       document.head.appendChild(meta);
-    }
-
-    // Lenis Smooth Scroll
-    const lenis = new Lenis({
-      duration: 3.5,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      smoothWheel: true
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    function toggleTheme() {
+    }    function toggleTheme() {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
